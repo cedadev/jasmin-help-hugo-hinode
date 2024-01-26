@@ -84,7 +84,6 @@
 /article/228-how-to-apply-for-mass-access /docs/mass/how-to-apply-for-mass-access/
 /article/3822-scheduling-automating-transfers /docs/data-transfer/scheduling-automating-transfers/
 /article/192-transfer-servers /docs/interactive-computing/transfer-servers/
-/article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/
 /article/3806-data-transfer-tools-gridftp-ssh-auth /docs/data-transfer/data-transfer-tools-gridftp-ssh-auth/
 /article/219-data-transfer-overview /docs/data-transfer/data-transfer-overview/
 /article/4733-matplotlib /docs/software-on-jasmin/matplotlib/
@@ -117,3 +116,4 @@
 /article/3793-jasmin-conditions-of-use /docs/uncategorized/jasmin-conditions-of-use/
 /article/4732-share-software-envs /docs/software-on-jasmin/share-software-envs/
 /article/4894-lotus-slurm-status /docs/uncategorized/article-under-review/
+/article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/

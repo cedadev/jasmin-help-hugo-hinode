@@ -23,8 +23,8 @@ Backups of your home directory &nbsp; Your home directory is backed up using a d
 Recovering snapshots of your home directory data &nbsp; Users can access snapshots to recover files/directories that have been accidentally deleted. These are stored in /home/users/.snapshot/homeusers.&lt;snapshotid&gt;/&lt;username&gt;
 The most recent backup is the one with the highest snapshot id number.
 Find the ones relevant to your username with a command line this: ( $USERis the environment variable containing your username, so can be copied in this case)
-# ls -ld /home/users/.snapshot/homeusers.*/$USER Within each of these, you can look for your own username to find snapshot directories for your data. File(s) can then be copied (by users themselves) back from one of these directories to their original location.
-# ls -l /home/users/.snapshot/homeusers.45678/joebloggs/ total 1170964 -rw-r--r-- 1 joebloggs users 104857600 Jun 26 2017 100M.dat -rw-r--r-- 1 joebloggs users 1024000000 Feb 1 2017 1G.dat -rw-r--r-- 1 joebloggs users 0 Dec 18 12:09 6181791.err # cp /home/users/.snapshot/homeusers.45678/joebloggs/100M.dat ~/100M.dat Home directories should not be used for storing large amounts of data. See below for guidance on where to write your data.
+ls -ld /home/users/.snapshot/homeusers.*/$USER Within each of these, you can look for your own username to find snapshot directories for your data. File(s) can then be copied (by users themselves) back from one of these directories to their original location.
+ls -l /home/users/.snapshot/homeusers.45678/joebloggs/ total 1170964 -rw-r--r-- 1 joebloggs users 104857600 Jun 26 2017 100M.dat -rw-r--r-- 1 joebloggs users 1024000000 Feb 1 2017 1G.dat -rw-r--r-- 1 joebloggs users 0 Dec 18 12:09 6181791.err cp /home/users/.snapshot/homeusers.45678/joebloggs/100M.dat ~/100M.dat Home directories should not be used for storing large amounts of data. See below for guidance on where to write your data.
 A snapshot backup is also provided for /gws/smfvolumes (small allocations of SSD storage for GWS groups to share): snapshots in this case are made hourly and kept for 10 hours and then daily snapshots are kept for 2 weeks. These can be retrieved in a similar manner to that shown above. In this case the relevant directories should be found at
 /gws/smf/jNN/&lt;gwsname&gt;/.snapshot (where NN = 04 or 07 depending on where the volume is located)
 But note that/gws/smfvolumes are not subject to tape backups and, like other group workspace volumes, are NOT backed up.
@@ -32,12 +32,35 @@ Please note advice on inter-volume symlinks, below: these are to be avoided.
 JASMIN disk mounts &nbsp; There is a common file system layout that underpins most of the JASMIN infrastructure. However, access to different parts of the file system will depend on where you are logged in. Table 1 outlines the key disk mounts, where they are accessible from and the type of access (read and/or write).
 Table 1. List of common disk mounts, types of storage and their availability on JASMIN
 Disk mount
-login sci transfer LOTUS Type Parallel-write /home/users R/W R/W R/W R/W SSD no /group_workspaces/jasmin2 /gws/pw/j05 /gws/nopw/j04 (see note 1 below) /gws/smf/j04, j07 No No No No R/W R/W R/W R/W R/W R/W R/W R/W R/W R/W R/W R/W PFS PFS SOF SSD yes yes (hence &ldquo;pw&rdquo;) no (hence &ldquo;nopw&rdquo;) no /work/xfc/volX (see note 1 below) No R/W R/W R/W SOF no /work/scratch-pw [RO from 22 Nov 2022] /work/scratch-pw2 /work/scratch-pw3 [new] /work/scratch-nopw No No No No RO R/W R/W R/W No No No No RO R/W R/W R/W PFS PFS PFS SSD yes yes yes no /apps/contrib No RO No RO n/a n/a /badc, /neodc (archives) No RO RO RO n/a n/a login = login servers: login[1-4].jasmin.ac.uk
+location login sci transfer LOTUS Type Parallel-write /home/users R/W R/W R/W R/W SSD no /gws/pw/j07
+/gws/nopw/j04 (see note 1 below)
+/gws/smf/j0[4,7] no
+no
+no R/W
+R/W
+R/W R/W
+R/W
+R/W R/W
+R/W
+R/W PFS
+SOF
+SSD yes (hence &ldquo;pw&rdquo;)
+no (hence &ldquo;nopw&rdquo;)
+no /work/xfc/volX (see note 2 below) no
+no R/W R/W R/W PFS yes /work/scratch-pw[2,3]
+/work/scratch-nopw no
+no R/W
+R/W R/W
+R/W R/W
+R/W PFS
+SSD yes
+no /apps/contrib No RO No RO n/a n/a /badc, /neodc (archives) No RO RO RO n/a n/a login = login servers: login[1-4].jasmin.ac.uk
 sci = scientific analysis servers: sci[1-6,8].jasmin.ac.uk
 transfer = data transfer servers: xfer[1-2].jasmin.ac.uk
 LOTUS = LOTUS batch processing cluster (all cluster nodes)
 Disks are mounted read/write (&quot; R/W &ldquo;) or read-only (&rdquo; RO &ldquo;).
 Note 1: Please refer to issues related to writing small files and NetCDF3 to SOF storage here
+Note 2: For details of how to use the Transfer Cache (XFC) service please see here
 Where to write data &nbsp; As indicated in table 1 there are three main disk mounts where data can be written. Please follow these general principles when deciding where to write your data:
 HOME directories (/home/users) are relatively small (100GB as of Phase 4) and should NOT be used for storing large data volumes. Group Workspaces (/group_workspaces/*/&lt;project&gt; and /gws/nopw/*/&lt;project) are usually the correct place to write your data. Please refer to the Group Workspace documentation for details. But please note that Group Workspaces are NOT backed up. 1. /group_workspaces/jasmin2 volumes are parallel-write-capable storage from Phases 2 and 3 of JASMIN. Some of this storage is due for retirement by the end of 2018 with data to be migrated to new volumes on /gws/nopw/j04 2. /gws/pw/j05 volumes are parallel-write-capable storage from Phase 5 of JASMIN 3. /gws/nopw/j04 volumes are &ldquo;Scale out Filesystem&rdquo; (SOF) storage which is not parallel-write-capable. This new naming convention will be used for all new volumes and whenever existing volumes are migrated to SOF storage from now on. The &ldquo;scratch&rdquo; areas (/work/scratch-pw2, /work/scratch-pw3 and /work/scratch-nopw) are available as a temporary file space for jobs running on LOTUS (see next section below). The (/tmp) directory is not an appropriate location to write your data (see next section below). How to use the temporary disk space &nbsp; The scratch areas /work/scratch-pw2, /work/scratch-pw3 and /work/scratch-nopw are a temporary file space shared across the entire LOTUS cluster and the scientific analysis servers.
 These scratch areas are ideal for processes that generate intermediate data files that are consumed by other parts of the processing before being deleted. Please remember that these volumes are resources shared between all users, so consider other users and remember to clean up after your jobs. **** Any data that you wish to keep should be written to a Group Workspace.

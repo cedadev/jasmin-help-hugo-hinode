@@ -46,7 +46,6 @@
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebook-service/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
-/article/3808-data-transfer-tools-gridftp-cert-based-auth /docs/data-transfer/gridftp-cert-based-auth/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/3824-data-transfer-tools-bbcp /docs/data-transfer/bbcp/
 /article/231-external-access-to-mass-faq /docs/mass/external-access-to-mass-faq/
@@ -96,7 +95,6 @@
 /article/4536-install-jasmin-xfc-client /docs/short-term-project-storage/install-xfc-client/
 /article/3835-name-dispersion-model /docs/software-on-jasmin/name-dispersion-model/
 /article/4894-lotus-slurm-status /docs/batch-computing/slurm-status/
-/article/4414-data-transfer-hpxfer /docs/data-transfer/hpxfer-access-role/
 /article/199-introduction-to-group-workspaces /docs/short-term-project-storage/introduction-to-group-workspaces/
 /article/3839-gws-etiquette /docs/short-term-project-storage/gws-etiquette/
 /article/202-share-gws-data-via-http /docs/short-term-project-storage/share-gws-data-via-http/
@@ -116,6 +114,8 @@
 /article/4859-centos7-sci-login-xfer-servers /docs/uncategorized/article-under-review/
 /article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/
 /article/4480-data-transfer-tools-globus-command-line-interface /docs/data-transfer/globus-command-line-interface/
+/article/3808-data-transfer-tools-gridftp-cert-based-auth /docs/data-transfer/gridftp-cert-based-auth/
+/article/4414-data-transfer-hpxfer /docs/data-transfer/hpxfer-access-role/
 /article/221-jasmin-external-connections /docs/data-transfer/jasmin-external-connections/
 /article/3810-data-transfer-tools-rsync-scp-sftp /docs/data-transfer/rsync-scp-sftp/
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/

@@ -4,7 +4,7 @@
 /article/190-check-network-details /docs/interactive-computing/check-network-details/
 /article/185-generate-ssh-key-pair /docs/getting-started/generate-ssh-key-pair/
 /article/4880-batch-scheduler-slurm-overview /docs/batch-computing/slurm-scheduler-overview/
-/article/4435-get-a-jasmin-account /docs/getting-started/get-a-jasmin-account/
+/article/4435-get-a-jasmin-account /docs/getting-started/get-jasmin-portal-account/
 /article/191-login-servers /docs/interactive-computing/login-servers/
 /article/161-get-login-account /docs/getting-started/get-login-account/
 /article/848-login-problems /docs/interactive-computing/login-problems/
@@ -42,7 +42,7 @@
 /article/288-jasmin-cloud-portal /docs/for-cloud-tenants/jasmin-cloud-portal/
 /article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
-/article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebook-service/
+/article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
@@ -95,7 +95,6 @@
 /article/3839-gws-etiquette /docs/short-term-project-storage/gws-etiquette/
 /article/202-share-gws-data-via-http /docs/short-term-project-storage/share-gws-data-via-http/
 /article/4951-gpu-testing /docs/batch-computing/gpu-testing/
-/article/4499-gws-scanner /docs/short-term-project-storage/gws-scanner/
 /article/3847-using-cron /docs/workflow-management/using-cron/
 /article/4917-software-migration-2020 /docs/software-on-jasmin/software-migration-2020/
 /article/4916-quickstart-software-envs /docs/software-on-jasmin/quickstart-software-envs/
@@ -115,6 +114,7 @@
 /article/5106-globus-transfers-with-jasmin /docs/data-transfer/globus-transfers-with-jasmin/
 /article/5008-data-transfer-tools-using-the-globus-web-interface /docs/data-transfer/globus-transfers-with-jasmin/
 /article/3808-data-transfer-tools-gridftp-cert-based-auth /docs/data-transfer/gridftp-cert-based-auth/
+/article/4499-gws-scanner /docs/short-term-project-storage/gws-scanner/
 /article/4414-data-transfer-hpxfer /docs/data-transfer/hpxfer-access-role/
 /article/221-jasmin-external-connections /docs/data-transfer/jasmin-external-connections/
 /article/3810-data-transfer-tools-rsync-scp-sftp /docs/data-transfer/rsync-scp-sftp/

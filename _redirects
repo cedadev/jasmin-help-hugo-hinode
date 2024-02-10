@@ -57,7 +57,6 @@
 /article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
 /article/4448-nag-library /docs/software-on-jasmin/nag-library/
 /article/4445-moose-the-mass-client-user-guide /docs/mass/moose-the-mass-client-user-guide/
-/article/3801-apply-for-access-to-a-gws /docs/short-term-project-storage/apply-for-access-to-a-gws/
 /article/3838-ceda-archive /docs/long-term-archive-storage/ceda-archive/
 /article/203-managing-a-gws /docs/short-term-project-storage/managing-a-gws/
 /article/4489-python-virtual-environments /docs/software-on-jasmin/python-virtual-environments/
@@ -78,7 +77,6 @@
 /article/5037-data-transfer-tools-rclone /docs/data-transfer/rclone/
 /article/3809-data-transfer-tools /docs/data-transfer/data-transfer-tools/
 /article/4469-share-gws-on-jasmin /docs/short-term-project-storage/share-gws-data-on-jasmin/
-/article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/
 /article/4914-jasmin-sci-software /docs/software-on-jasmin/jasmin-sci-software/
 /article/293-running-python-on-jasmin /docs/software-on-jasmin/running-python-on-jasmin/
 /article/3842-secondary-copy-using-elastic-tape /docs/short-term-project-storage/secondary-copy-using-elastic-tape/
@@ -106,10 +104,12 @@
 /article/4842-working-with-many-linux-groups /docs/uncategorized/working-with-many-linux-groups/
 /article/3793-jasmin-conditions-of-use /docs/uncategorized/jasmin-conditions-of-use/
 /article/4732-share-software-envs /docs/software-on-jasmin/share-software-envs/
+/article/3801-apply-for-access-to-a-gws /docs/short-term-project-storage/apply-for-access-to-a-gws/
 /article/4894-lotus-slurm-status /docs/uncategorized/article-under-review/
 /article/221-jasmin-external-connections /docs/uncategorized/article-under-review/
 /article/4856-jasmin-users-guide /docs/uncategorized/article-under-review/
 /article/4859-centos7-sci-login-xfer-servers /docs/uncategorized/article-under-review/
+/article/5131-checksit /docs/software-on-jasmin/community-software-checksit/
 /article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/
 /article/4480-data-transfer-tools-globus-command-line-interface /docs/data-transfer/globus-command-line-interface/
 /article/5106-globus-transfers-with-jasmin /docs/data-transfer/globus-transfers-with-jasmin/
@@ -119,3 +119,4 @@
 /article/221-jasmin-external-connections /docs/data-transfer/jasmin-external-connections/
 /article/3810-data-transfer-tools-rsync-scp-sftp /docs/data-transfer/rsync-scp-sftp/
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/
+/article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/

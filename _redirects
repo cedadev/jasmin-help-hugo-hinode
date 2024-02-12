@@ -78,7 +78,6 @@
 /article/4469-share-gws-on-jasmin /docs/short-term-project-storage/share-gws-data-on-jasmin/
 /article/4914-jasmin-sci-software /docs/software-on-jasmin/jasmin-sci-software/
 /article/293-running-python-on-jasmin /docs/software-on-jasmin/running-python-on-jasmin/
-/article/3842-secondary-copy-using-elastic-tape /docs/short-term-project-storage/secondary-copy-using-elastic-tape/
 /article/5023-processing-requests-for-resources /docs/uncategorized/processing-requests-for-resources/
 /article/228-how-to-apply-for-mass-access /docs/mass/how-to-apply-for-mass-access/
 /article/3806-data-transfer-tools-gridftp-ssh-auth /docs/data-transfer/gridftp-ssh-auth/
@@ -118,5 +117,6 @@
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/3810-data-transfer-tools-rsync-scp-sftp /docs/data-transfer/rsync-scp-sftp/
 /article/3822-scheduling-automating-transfers /docs/data-transfer/scheduling-automating-transfers/
+/article/3842-secondary-copy-using-elastic-tape /docs/short-term-project-storage/secondary-copy-using-elastic-tape/
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/
 /article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/

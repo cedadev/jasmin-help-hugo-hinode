@@ -42,7 +42,6 @@
 /article/288-jasmin-cloud-portal /docs/for-cloud-tenants/jasmin-cloud-portal/
 /article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
-/article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
@@ -117,6 +116,7 @@
 /article/4499-gws-scanner /docs/short-term-project-storage/gws-scanner/
 /article/4414-data-transfer-hpxfer /docs/data-transfer/hpxfer-access-role/
 /article/221-jasmin-external-connections /docs/data-transfer/jasmin-external-connections/
+/article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/3810-data-transfer-tools-rsync-scp-sftp /docs/data-transfer/rsync-scp-sftp/
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/
 /article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/

@@ -38,11 +38,7 @@
 /article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
-/article/5074-conda-environments-and-python-virtual-environments /docs/software-on-jasmin/conda-environments-and-python-virtual-environments/
 /article/4454-elastic-tape-command-line-interface-hints /docs/short-term-project-storage/elastic-tape-command-line-interface-hints/
-/article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
-/article/4448-nag-library /docs/software-on-jasmin/nag-library/
-/article/3838-ceda-archive /docs/long-term-archive-storage/ceda-archive/
 /article/203-managing-a-gws /docs/short-term-project-storage/managing-a-gws/
 /article/4489-python-virtual-environments /docs/software-on-jasmin/python-virtual-environments/
 /article/4896-how-to-submit-an-mpi-parallel-job-to-slurm /docs/batch-computing/how-to-submit-an-mpi-parallel-job/
@@ -92,10 +88,12 @@
 /article/4859-centos7-sci-login-xfer-servers /docs/uncategorized/article-under-review/
 /article/3824-data-transfer-tools-bbcp /docs/data-transfer/bbcp/
 /article/286-best-practice /docs/for-cloud-tenants/best-practice/
+/article/3838-ceda-archive /docs/long-term-archive-storage/ceda-archive/
 /article/4736-cluster-as-a-service-identity-manager /docs/for-cloud-tenants/cluster-as-a-service-identity-manager/
 /article/4798-cluster-as-a-service-shared-storage /docs/for-cloud-tenants/cluster-as-a-service-shared-storage/
 /article/4799-cluster-as-a-service-slurm /docs/for-cloud-tenants/cluster-as-a-service-slurm/
 /article/5131-checksit /docs/software-on-jasmin/community-software-checksit/
+/article/5074-conda-environments-and-python-virtual-environments /docs/software-on-jasmin/conda-environments-and-python-virtual-environments/
 /article/5075-creating-and-using-miniconda-environments /docs/software-on-jasmin/creating-and-using-miniconda-environments/
 /article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/
 /article/231-external-access-to-mass-faq /docs/mass/external-access-to-mass-faq/
@@ -111,6 +109,7 @@
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/4445-moose-the-mass-client-user-guide /docs/mass/moose-the-mass-client-user-guide/
+/article/4448-nag-library /docs/software-on-jasmin/nag-library/
 /article/4702-faqs-storage /docs/short-term-project-storage/faqs-storage/
 /article/4581-tenancy-based-sci-vm-managed-cloud /docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/
 /article/5022-requesting-resources /docs/uncategorized/requesting-resources/
@@ -119,4 +118,5 @@
 /article/3822-scheduling-automating-transfers /docs/data-transfer/scheduling-automating-transfers/
 /article/3842-secondary-copy-using-elastic-tape /docs/short-term-project-storage/secondary-copy-using-elastic-tape/
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/
+/article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
 /article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/

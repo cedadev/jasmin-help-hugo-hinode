@@ -97,7 +97,7 @@ Adding and removing SSH keys &nbsp; The allowed SSH keys for a user can be found
 To grant access to a user, they must first generate an SSH key pair. Once they have done this, they should give you their public key. The private key should never leave the user&rsquo;s local machine. Once you have added this public key as a new line to the authorized_keys file for the target user on your External Cloud VM, the user will be able to SSH to the machine.
 Similarly, to disable access for a user, just remove their public key from the authorized_keys file on the machine.
 IMPORTANT: When replacing an old key with a new one, make sure that you add the new key before removing the old one or you may accidentally lock yourself out of your machine.
-`}).add({id:5,tag:"en",href:"/docs/software-on-jasmin/additional-software/",title:"Additional software packages (under: /apps/jasmin/)",description:"Additional software packages (under: /apps/jasmin/)",content:`This article provides details of additional packages that exist under the /apps/jasmin/ directory which is available on all scientific analysis servers and on the LOTUS batch cluster on JASMIN.
+`}).add({id:5,tag:"en",href:"/docs/software-on-jasmin/additional-software/",title:"Additional software",description:"Additional software packages (under: /apps/jasmin/)",content:`This article provides details of additional packages that exist under the /apps/jasmin/ directory which is available on all scientific analysis servers and on the LOTUS batch cluster on JASMIN.
 The /apps/jasmin/ directory has been provided as a home for additional software packages that are not installed within either Jaspy or &ldquo;jasmin-sci&rdquo; environments. This page details which packages are available along with details of how they are managed and accessed.
 Community packages under: /apps/jasmin/ &nbsp; Software installed as community packages are provided, and maintained, by developers outside the CEDA/JASMIN Team. If you have queries about using community packages on JASMIN then please contact the JASMIN Helpdesk and we will forward them to the team that supports that specific package on JASMIN.
 ESMValTool &nbsp; The Earth System Model Evaluation Tool (ESMValTool) is a community diagnostics and performance metrics tool for the evaluation of Earth System Models (ESMs) that allows for routine comparison of single or multiple models, either against predecessor versions or against observations. See the ESMValTool on JASMIN page for more info.
@@ -874,22 +874,11 @@ idl -rt=foo.sav -args 10 20 30 command_line_args returns a string array, so conv
 Once set up, you don&rsquo;t need to use this client to read/write data to XFC storage itself, but you can use it to interrogate the system to find out what data you have stored and how much of your quota(s) you are using.
 The following steps should be used to create a python virtual environment and pip to install the xfc client:
 NOTE: do these steps on one of the sci (not xfer) servers:
-Log into one of the sci machines: e.g. sci1.jasmin.ac.uk (1 - 8 is available)
-The xfc client can be used either with Python 2.7 or with Python 3 using jaspy.
-Python 2: (now deprecated)
-Setup a virtual environment without site-packages in your home directory: virtualenv ~/xfc_venv
-Python 3: (preferred)
-Load the jaspy module: module load jaspy
-Setup a virtual environment in your home directory: python -m venv ~/xfc_venv
-The following steps for Python 2 and Python 3 are now the same.
-Activate the virtual environment: source ~/xfc_venv/bin/activate
-Download the client software using git to your home directory:
-git clone https://github.com/cedadev/xfc_client.git
-pip install the xfc client pip install -e ~/xfc_client
-Use xfc on the command line xfc -h
-Users who already have a Python virtual environment can skip step 2 and install into an existing virtual environment, for either Python 2.7 or Python 3. The recommendation for users using NLA, XFC and JDMA is to create a single virtual environment to install all 3 client applications into.
+Log into one of the sci machines: e.g. sci1.jasmin.ac.uk (1 - 8 is available) The xfc client can be used with Python 3 using jaspy. module load jaspy Setup a virtual environment in your home directory:
+python -m venv ~/xfc_venv The following steps for Python 2 and Python 3 are now the same. Activate the virtual environment: source ~/xfc_venv/bin/activate Download the client software using git to your home directory: git clone https://github.com/cedadev/xfc_client.git pip install the xfc client pip install -e ~/xfc_client Use xfc on the command line xfc -h Users who already have a Python virtual environment can skip step 2 and install into an existing virtual environment.
+The recommendation for users using NLA, XFC and JDMA is to create a single virtual environment to install all 3 client applications into.
 The xfc client can be used without activating the python virtualenv by adding the path to the xfc client to the $PATH$ environment variable:
-export PATH=&quot;$PATH:~/xfc_venv/bin&quot; echo 'export PATH=&quot;$PATH:~/xfc_venv/bin&quot;' &gt;&gt; &quot;$HOME/.bashrc&quot; The xfc client can now be used by invoking xfc from the command line without activating the virtualenv. Python 3 users will have to load jaspy using the command module load jaspy
+export PATH=&#34;$PATH:~/xfc_venv/bin&#34; \` echo &#39;export PATH=&#34;$PATH:~/xfc_venv/bin&#34;&#39; &gt;&gt; &#34;$HOME/.bashrc&#34; The xfc client can now be used by invoking xfc from the command line without activating the virtualenv. Python 3 users load jaspy using the command module load jaspy
 For instructions on how to use the xfc client, see the article JASMIN Transfer Cache (XFC).
 `}).add({id:57,tag:"en",href:"/docs/interactive-computing/interactive-computing-overview/",title:"Interactive computing overview",description:"Interactive computing overview",content:`This article introduces the resources on JASMIN available for interactive computing (as opposed to batch computing). It covers:
 Login servers Scientific Analysis servers Data Transfer Servers Project Specific Servers Login Severs &nbsp; The login (also known as gateway or bastion) servers provide external* users with access to services inside of JASMIN.
@@ -1823,11 +1812,11 @@ Check for existing lock file to indicate if the script is already running. If th
 `}).add({id:119,tag:"en",href:"/docs/software-on-jasmin/matplotlib/",title:"Using Matplotlib for visualisation on JASMIN",description:"Using Matplotlib for visualisation on JASMIN",content:`This article provides a basic example of using Matplotlib on JASMIN to generate a plot. It also gives an important tip that may stop your code failing when run on the LOTUS cluster.
 Matplotlib - a basic example &nbsp; Matplotlib is a very well documented plotting library for Python. Here is a brief example of generating a line graph on a PNG file using matplotlib.
 Load the Jaspy Python 3 environment, and start a Python session:
-$ module load jaspy $ python In python, set some x-values, y-values, axis labels and a title, and plot:
-import matplotlib matplotlib.use('agg') import matplotlib.pyplot as plt x_values = [1, 5, 3, 9, 14] y_values = [2000, 2005, 2010, 2015, 2020] x_label = 'Temperature (degC)' y_label = 'Year' title = 'Average temperature of garden shed (2000-2020)' plt.plot(y_values, x_values, 'g--') plt.ylabel(y_label) plt.xlabel(x_label) plt.title(title) plt.savefig('output.png') Plotting with matplotlib on LOTUS &nbsp; When using matplotlib on LOTUS hosts please make sure that you are setting the rendering backend to a setting that will definitely work. This must be done before importing matplotlib.pyplot.
+module load jaspy python In python, set some x-values, y-values, axis labels and a title, and plot:
+import matplotlib matplotlib.use(&#39;agg&#39;) import matplotlib.pyplot as plt x_values = [1, 5, 3, 9, 14] y_values = [2000, 2005, 2010, 2015, 2020] x_label = &#39;Temperature (degC)&#39; y_label = &#39;Year&#39; title = &#39;Average temperature of garden shed (2000-2020)&#39; plt.plot(y_values, x_values, &#39;g--&#39;) plt.ylabel(y_label) plt.xlabel(x_label) plt.title(title) plt.savefig(&#39;output.png&#39;) Plotting with matplotlib on LOTUS &nbsp; When using matplotlib on LOTUS hosts please make sure that you are setting the rendering backend to a setting that will definitely work. This must be done before importing matplotlib.pyplot.
 On JASMIN it is safe to use:
-import matplotlib matplotlib.use('agg') import matplotlib.pyplot as plt or alternatively, the MPLBACKEND environment variable can be set in the job script before invoking python:
-export MPLBACKEND=agg If you do not set this option or you choose an alternative backend then you may see failures which include very large dump (error) files being written (up to 56GB per file!). Please remove these files if you accidentally create them, and switch over to selecting an appropriate rendering backend as indicated above.
+import matplotlib matplotlib.use(&#39;agg&#39;) import matplotlib.pyplot as pltor alternatively, the MPLBACKEND environment variable can be set in the job script before invoking python:
+export MPLBACKEND=aggIf you do not set this option or you choose an alternative backend then you may see failures which include very large dump (error) files being written (up to 56GB per file!). Please remove these files if you accidentally create them, and switch over to selecting an appropriate rendering backend as indicated above.
 Note that if you see the following error message, this results from attempting to use the default GTK backend on LOTUS (as GTK is only available in an interactive X-windows environment). The solution is to use agg, as described above.
 ValueError: Namespace Gtk not available for version 3.0 For more information please see the matplotlib back-ends page.
 `}).add({id:120,tag:"en",href:"/docs/short-term-project-storage/using-the-jasmin-object-store/",title:"Using the JASMIN Object Store",description:"Using the JASMIN Object Store",content:`This article describes how to use the JASMIN high-performance object storage.

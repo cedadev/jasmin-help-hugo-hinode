@@ -36,7 +36,6 @@
 /article/4781-cluster-as-a-service-kubernetes /docs/for-cloud-tenants/cluster-as-a-service-kubernetes/
 /article/4735-cluster-as-a-service /docs/for-cloud-tenants/cluster-as-a-service/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
-/article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
 /article/4454-elastic-tape-command-line-interface-hints /docs/short-term-project-storage/elastic-tape-command-line-interface-hints/
@@ -64,6 +63,7 @@
 /article/4856-jasmin-users-guide /docs/uncategorized/article-under-review/
 /article/4859-centos7-sci-login-xfer-servers /docs/uncategorized/article-under-review/
 /article/3844-copy-service /docs/uncategorized/article-under-review/
+/docs/data-transfer/jasmin-external-connections /docs/uncategorized/article-under-review/
 /article/3824-data-transfer-tools-bbcp /docs/data-transfer/bbcp/
 /article/286-best-practice /docs/for-cloud-tenants/best-practice/
 /article/3838-ceda-archive /docs/long-term-archive-storage/ceda-archive/
@@ -91,7 +91,6 @@
 /article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
 /article/288-jasmin-cloud-portal /docs/for-cloud-tenants/jasmin-cloud-portal/
 /article/3793-jasmin-conditions-of-use /docs/uncategorized/jasmin-conditions-of-use/
-/article/221-jasmin-external-connections /docs/data-transfer/jasmin-external-connections/
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/4917-software-migration-2020 /docs/software-on-jasmin/software-migration-2020/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
@@ -119,6 +118,7 @@
 /article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
 /article/4914-jasmin-sci-software /docs/software-on-jasmin/jasmin-sci-software-environment/
 /article/4535-xfc /docs/short-term-project-storage/xfc/
+/article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/
 /article/4733-matplotlib /docs/software-on-jasmin/matplotlib/
 /article/4847-using-the-jasmin-object-store /docs/short-term-project-storage/using-the-jasmin-object-store/
 /article/199-introduction-to-group-workspaces /docs/short-term-project-storage/introduction-to-group-workspaces/

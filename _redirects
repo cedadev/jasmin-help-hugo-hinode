@@ -38,7 +38,6 @@
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
-/article/4454-elastic-tape-command-line-interface-hints /docs/short-term-project-storage/elastic-tape-command-line-interface-hints/
 /article/4918-jasmin-software-faqs /docs/software-on-jasmin/jasmin-software-faqs/
 /article/209-idl-and-midl /docs/software-on-jasmin/idl/
 /article/4698-jdma /docs/short-term-project-storage/jdma/
@@ -75,6 +74,7 @@
 /article/5075-creating-and-using-miniconda-environments /docs/software-on-jasmin/creating-and-using-miniconda-environments/
 /article/219-data-transfer-overview /docs/data-transfer/data-transfer-overview/
 /article/3809-data-transfer-tools /docs/data-transfer/data-transfer-tools/
+/article/4454-elastic-tape-command-line-interface-hints /docs/short-term-project-storage/elastic-tape-command-line-interface-hints/
 /article/3836-example-job-2-calc-md5s /docs/batch-computing/example-job-2-calc-md5s/
 /article/231-external-access-to-mass-faq /docs/mass/external-access-to-mass-faq/
 /article/4480-data-transfer-tools-globus-command-line-interface /docs/data-transfer/globus-command-line-interface/

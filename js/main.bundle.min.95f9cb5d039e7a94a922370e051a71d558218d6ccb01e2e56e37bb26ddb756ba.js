@@ -1351,6 +1351,9 @@ If you wish to deactivate the currently active virtual environment in a particul
 Installing packages into a virtual environment &nbsp; Once you have activated a virtual environment, the pip utility will be available. This allows package installation into the environment using the command:
 pip install your_package pip is quite flexible what you can use for your_package. It can include:
 a package name in the Python Package Index (PyPI) a URL pointing to a package repository the local path of a .tar.gz or .zip file containing the package source the local path of a directory containing the extracted package source the download URL of a .tar.gz or .zip file If the package requires other packages that are not already installed into the virtual environment, then pip will use the package&rsquo;s requirements file to install them automatically from PyPI.
+One thing to consider when doing this, is that some temporary space is needed by the install process. The location of this temporary space may be set by default to /tmp, which is restricted on the sci machines.
+You might see this error, despite having ample free space in your own home directory:
+ERROR: Could not install packages due to an OSError: \\ [Errno 122] Disk quota exceededIn order to avoid encountering this, you are advised to follow this advice to over-ride the TMPDIR environment variable, setting it to the location of somewhere you know have free space. Don&rsquo;t forget to clean up afterwards!
 To upgrade an existing package, use:
 pip install --upgrade your_package If your Python package cannot be installed with pip for any reason, it can also be installed directly from the setup.py file after activating the virtual environment.
 python setup.py install To install a specific version of a package, this can be specified with:

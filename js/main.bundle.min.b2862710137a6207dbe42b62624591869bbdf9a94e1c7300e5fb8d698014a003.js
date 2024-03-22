@@ -313,10 +313,10 @@ key will not be displayed again! Token ID: &lt;The Token for your Domain&gt; S3 
 You can create a new file on your filesystem to store your CORS configuration using the above example as a reference. In the next step, you&rsquo;ll learn how to apply this file to your bucket.
 Applying CORS Settings to a Bucket &nbsp; To apply the CORS XML file you&rsquo;ve created, you can use any S3 compatible client to set the CORS configuration.
 The following example uses s3cmd on a Linux system.
-First,You can confirm that your s3cmd setting are correct by showing info of the bucket.
+First confirm that your s3cmd settings are correct by showing the info of the bucket.
 e.g.
 s3cmd info s3://testbin1 s3://testbin1/ (bucket): Location: objectstore4.jc.rl.ac.uk Payer: none Expiration Rule: none Policy:  &#34;Version&#34;:&#34;2008-10-17&#34;, &#34;Id&#34;:&#34;testbin1 Policy&#34;, &#34;Statement&#34;: [  &#34;Sid&#34;:&#34;1: Full access for Users&#34;, &#34;Effect&#34;:&#34;Allow&#34;, &#34;Principal&#34;:&#34;anonymous&#34;:[&#34;*&#34;], &#34;Action&#34;:[&#34;*&#34;], &#34;Resource&#34;:&#34;*&#34; ,  &#34;Sid&#34;:&#34;2: Read-only access for Everyone&#34;, &#34;Effect&#34;:&#34;Allow&#34;, &#34;Principal&#34;:&#34;anonymous&#34;:[&#34;*&#34;], &#34;Action&#34;:[&#34;GetObject&#34;,&#34;GetBucketCORS&#34;], &#34;Resource&#34;:&#34;*&#34;  ]  CORS: none ACL: ahuggan: FULL_CONTROL This example shows a bucket which currently doesn&rsquo;t have a CORS policy set. Specifically, this is the section we&rsquo;re interested in:
-CORS: none In this example, we&rsquo;ll set a simple &ldquo;allow all&rdquo; CORS configuration. We&rsquo;ve already created a file named test-cors-file which we will be uploading to the bucket:
+CORS: noneIn this example, we&rsquo;ll set a simple &ldquo;allow all&rdquo; CORS configuration. We&rsquo;ve already created a file named test-cors-file which we will be uploading to the bucket:
 &lt;CORSConfiguration&gt; &lt;CORSRule&gt; &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt; &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt; &lt;AllowedMethod&gt;HEAD&lt;/AllowedMethod&gt; &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt; &lt;/CORSRule&gt; &lt;/CORSConfiguration&gt;Using the s3cmd command, we apply the CORS XML file to our S3 bucket:
 s3cmd setcors test-cors-file s3://testbin1 (your S3 address will be different to the one shown here)
 We can now run the info command to confirm that the CORS configuration from our file has been set on the bucket:

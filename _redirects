@@ -40,6 +40,7 @@
 /article/4552-update-a-jasmin-account /docs/getting-started/update-a-jasmin-account/
 /article/4834-updating-your-ssh-key /docs/getting-started/update-a-jasmin-account/
 /article/4434-migrate-jasmin-account-from-ceda /docs/getting-started/migrate-jasmin-account-from-ceda/
+/article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/5068-gpu-cluster-orchid /docs/batch-computing/orchid-gpu-cluster/
 /article/4951-gpu-testing /docs/batch-computing/orchid-gpu-cluster/
 /article/4895-adding-and-removing-ssh-keys-from-an-external-cloud-vm /docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/
@@ -47,7 +48,6 @@
 /article/4781-cluster-as-a-service-kubernetes /docs/for-cloud-tenants/cluster-as-a-service-kubernetes/
 /article/4735-cluster-as-a-service /docs/for-cloud-tenants/cluster-as-a-service/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
-/article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
 /article/4918-jasmin-software-faqs /docs/software-on-jasmin/jasmin-software-faqs/
 /article/209-idl-and-midl /docs/software-on-jasmin/idl/

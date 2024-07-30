@@ -52,7 +52,8 @@
 /article/4918-jasmin-software-faqs /docs/software-on-jasmin/jasmin-software-faqs/
 /article/209-idl-and-midl /docs/software-on-jasmin/idl/
 /article/4698-jdma /docs/short-term-project-storage/jdma/
-/article/4891-lsf-to-slurm-quick-reference /docs/batch-computing/lsf-to-slurm-quick-reference/
+/article/4891-lsf-to-slurm-quick-reference /docs/batch-computing/slurm-quick-reference/
+/docs/batch-computing/lsf-to-slurm-quick-reference/ /docs/batch-computing/slurm-quick-reference/
 /article/3811-data-transfer-tools-ftp-and-lftp /docs/data-transfer/ftp-and-lftp/
 /article/4890-how-to-submit-a-job-to-slurm /docs/batch-computing/how-to-submit-a-job/
 /article/147-cylc-rose-on-jasmin /docs/workflow-management/rose-cylc-on-jasmin/

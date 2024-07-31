@@ -41,8 +41,8 @@ no /work/xfc/volX (see note 2 below) no
 no R/W R/W R/W PFS yes /work/scratch-pw[2,3]
 /work/scratch-nopw no
 no R/W
-R/W R/W
-R/W R/W
+R/W no
+no R/W
 R/W PFS
 SSD yes
 no /apps/contrib No RO No RO n/a n/a /badc, /neodc (archives) No RO RO RO n/a n/a login = login servers: login[1-4].jasmin.ac.uk

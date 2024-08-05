@@ -5,6 +5,23 @@ slug: introduction-to-the-jasmin-cloud
 title: Introduction to the JASMIN Cloud
 ---
 
+- What is the jasmin Cloud
+- features
+  - Where it sits
+  - what functionality
+  - main componets (Azimuth, ... )
+- arcitecture
+  - breif outline of whats there from STFC cloud's slides (not sure how up to date the servers are)
+  - any limitations imitations
+- purpose
+  - what is it for?
+- terms of use
+  - patching policy
+  - T&C
+
+
+{{<alert color="danger">}} NEEDS merging with the sections above {{</alert>}}
+
 In addition to the traditional batch computing (LOTUS) and storage (Group
 Workspaces) services, JASMIN also provides a cloud computing service.
 
@@ -43,7 +60,7 @@ provision VMs as required, within the quota of their tenancy.
 
 {{<image src="img/docs/introduction-to-the-jasmin-cloud/file-rJTVn4CXil.png" caption="jasmin cloud achitecture">}}
 
-The **JASMIN External Cloud** is an Infrastructure-as-a-Service (IaaS)
+The **JASMIN Cloud** is an Infrastructure-as-a-Service (IaaS)
 offering, and sits outside of the main JASMIN firewall. Tenants are allowed
 root access and have complete responsibility for all system administration
 tasks. This means that tenants are able to provision their own infrastructure
@@ -59,9 +76,10 @@ which is a Platform-as-a-Service offering that tenants can use to deploy
 clusters including, an identity cluster, storage cluster (NFS), and a
 Kubernetes cluster.
 
-### External Cloud patching policy
-
 {{<alert type="info">}}
+
+#### Patching Policy
+
 We expect tenants to react in a timely manner to any security vulnerabilities.
 This means critical vulnerabilities are patched within 7 days, and high
 vulnerabilities are patched within 14 days. This is following UKRI security
@@ -69,16 +87,7 @@ policy. Failure to comply may result in tenancy access being revoked and
 machines powered down.
 {{</alert>}}
 
-By contrast, the **JASMIN Managed Cloud** is a Platform-as-a-Service (PaaS)
-offering, sitting inside the main JASMIN firewall, meaning it can reach the
-JASMIN storage. In order to preserve security, this means that tenants are
-_not_ allowed root access, and can only deploy VMs from a limited set of pre-
-approved templates. However, tenants are not responsible for the security of
-these machines, and users on VMs within the tenancy are JASMIN users.
-Currently, only two templates are available - an SSH bastion, or login
-machine, and a Scientific Analysis server with a similar configuration to the
-shared JASMIN Scientific Analysis servers. The Scientific Analysis servers
-have the CEDA Archive and Group Workspaces mounted.
+
 
 Both offerings have a similar network structure. Each tenancy has its own
 local network, where machines have addresses in the `192.168.3.0/24` range -
@@ -90,24 +99,8 @@ coming back into the tenancy are forwarded to the correct machine. These "edge
 devices" also provide a [Network Address Translation
 (NAT)](https://en.wikipedia.org/wiki/Network_address_translation) facility,
 which allows machines to be allocated an IP address that is visible outside of
-the tenancy. In the Managed Cloud, this translates to an IP address that is
-visible on the JASMIN network. In the External Cloud, it translates to an IP
-address that is visible on the _public internet_.
+the tenancy. 
 
-## External vs. Managed - pros and cons
-
-Attribute |  Managed Cloud  |  External Cloud  
----|---|---  
-Self-service provisioning  |  Yes  |  Yes  
-Filesystem level access to JASMIN Storage (PFS, SOF)  |  Yes  |  No  
-Root access  |  No  |  Yes  
-Provision custom infrastructure  |  SSH bastion or Scientific Analysis server only  |  Build from generic Ubuntu or CentOS templates  
-Security and patching  |  Handled by infrastructure team  |  Tenant's responsibility  
-User management  |  JASMIN users  |  Tenant's responsibility  
-Visibility to public internet  |  No  |  Yes (limited number of external IPs)   
-Ability to provision Cluster-as-a-Service  |  No  |  Yes
-{.table .table-striped}
-  
 ## Getting a JASMIN Cloud Tenancy
 
 To start a conversation with us about getting a JASMIN Cloud Tenancy for your

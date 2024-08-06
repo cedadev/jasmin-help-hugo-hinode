@@ -85,14 +85,14 @@ A project can have several Services, such as:
 
 To add the services needed for the project:
 
-- In the panel on the right, click "Add Service"
-- Select the category of service required: in this case, we're making requirements for a group workspace, but the available options are: 
+- in the panel on the right, click "Add Service"
+- select the category of service required: in this case, we're making requirements for a group workspace, but the available options are: 
   - **Group Workspace** (for shared disk storage for a project)
   - **External Tenancy VIO** (for an external cloud tenancy on the VIO cloud platform)
   - **Managed Tenancy VIO** (for a managed cloud tenancy on the VIO cloud platform)
   - (please do not use the "... Tenancy **MCP** " options as these will soon be removed)
-- Provide a short name for the service
-- Click "create".
+- provide a short name for the service
+- click "create".
 
 {{<image src="img/docs/requesting-resources/file-bo7r6lG1NA.png" caption="">}}
 

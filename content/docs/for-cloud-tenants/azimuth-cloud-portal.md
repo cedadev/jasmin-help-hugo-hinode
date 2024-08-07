@@ -6,6 +6,23 @@ title: The Azimuth Cloud Portal
 
 - intro to azimuth
   - what is it
+  - Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC) and   artificial intelligence (AI) applications.
+  - It supports OpenStack clouds and can manage a range of platforms from single-machine workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.
+
+### Key features include:
+
+## Multiple Authentication Methods: 
+Supports username/password, Keystone federation, and application credentials.
+
+## On-demand Platforms: 
+Unified interface for managing Kubernetes and Cluster-as-a-Service (CaaS) platforms.
+
+## Application Proxy: 
+Uses Zenith to expose services without consuming floating IPs or requiring SSH keys.
+
+## Simplified OpenStack Management: 
+Automatic network detection, machine and volume management, and security group configuration.
+
   - what's it's purpose (simplification of Horizon)
 
 ## Usage

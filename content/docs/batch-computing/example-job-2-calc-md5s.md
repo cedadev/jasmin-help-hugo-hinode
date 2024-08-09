@@ -1,6 +1,6 @@
 ---
 aliases: /article/3836-example-job-2-calc-md5s
-description: 'Example Job 2: Calculating MD5 Checksums on many files'
+description: 'Sample workflows for LOTUS'
 slug: example-job-2-calc-md5s
 title: 'Example Job 2: Calculating MD5 Checksums on many files'
 ---
@@ -14,7 +14,7 @@ point for developing their own workflows on LOTUS.
 This is a simple case because:
 
 1. the archive only needs to be read by the code and
-2. the code that we need to run involves only the basic linux commands so there are no issues with picking up dependencies from elsewhere.
+2. the code that we need to run involves only the basic Linux commands so there are no issues with picking up dependencies from elsewhere.
 
 ### Case Description
 
@@ -24,12 +24,12 @@ This is a simple case because:
 ### Solution under LOTUS
 
 - Split the 220,000 lines into 22 files of 10,000 lines.
-- Write a template script to: 
-- Read a text file full of file paths
-- Run the `md5sum` command on each file and log the result.
+- Write a template script to:
+  - Read a text file full of file paths
+  - Run the `md5sum` command on each file and log the result.
 - Write a script to create 22 new scripts (based on the template script), each of which takes one of the input files and works through it.
 
-### And this is how it looks
+### Workflow steps
 
 Log in to the `sci` server (from a `login` server):
 
@@ -37,7 +37,7 @@ Log in to the `sci` server (from a `login` server):
 ssh -A <username>@sci1.jasmin.ac.uk
 {{</command>}}
 
-Split the big file
+Split the big file:
 
 {{<command user="user" host="sci1">}}
 split -l 10000 -d file_list.txt # Produces 22 files called "x00"..."x21"
@@ -71,18 +71,16 @@ Submit all 22 jobs to LOTUS:
 
 ```bash
 for i in `ls /home/users/astephen/sst_cci/to_scan/` ; do      
-    echo $i     
-    sbatch -p short-serial -o /home/users/astephen/sst_cci/output/$i /home/users/astephen/sst_cci/bin/scan_files_${i}.sh  
+    echo $i    
+    cat /home/users/astephen/sst_cci/bin/scan_files_${i}.sh | sbatch -p short-serial -o /home/users/astephen/sst_cci/output/$i   
 done
 ```
 
-Watch the jobs running:
+Monitor the jobs by running:
 
 {{<command user="user" host="sci1">}}
 squeue -u <username>
 {{</command>}}
-
-### And the result
 
 All jobs ran within about an hour.
 
@@ -116,10 +114,11 @@ def submit_job(dataset):
     if not op.exists(path):
         raise Exception('%s does not exist' % path)
     job_name = dataset
-    cmd = ('sbatch -q short-serial -J {job_name} '
-            '-o {job_name}.checksums -e {job_name}.err '
-            "/usr/bin/md5sum '{path}/*/*.nc'").format(job_name=job_name,
-                                                    path=path)
+    cmd = ("echo -e '#!/bin/bash\n"
+            "srun /usr/bin/md5sum {path}/*/*.nc' "
+            "| sbatch -p short-serial -J {job_name} "
+            "-o {job_name}.checksums -e {job_name}.err"
+        ).format(job_name=job_name, path=path)
     
     print(cmd)
     os.system(cmd)
@@ -141,6 +140,8 @@ separate job by invoking the above script as follows:
 
 {{<command user="user" host="sci1">}}
 ./checksum_dataset.py $(cat datasets_to_checksum.dat)
-sbatch -q short-serial -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err /usr/bin/md5sum '/badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc'
-(out)Job <745307> is submitted to queue <lotus>.  ...
+(out)echo -e '#!/bin/bash
+(out)srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc' | sbatch -p short-serial -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err
+(out)Submitted batch job 40898728
+(out)...
 {{</command>}}

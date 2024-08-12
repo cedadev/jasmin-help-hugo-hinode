@@ -63,6 +63,23 @@ Once you have successifully signed in you will land on the JASMIN cloud Dashboar
 
 Here you will see a list of 1 or more projects/tenancies you have been granted access.
 
+{{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="Platform landing page">}}
+
+Sections on the platform landing page above:
+
+  1. Sign out: Displays the currently logged in user
+  2. Platform: Indicates the platform pane header
+  3. Displays the tenancy/Project name.
+  4. Quotas: Show the provisioned resource quotas for the tenancy
+  5. Identity provider: Displays the configured Identity providers and associated settings.
+  6. Advanced: Advanced setting displays some advanced feature settings for the platform and the associated resources
+  7. Machines: Displays the provisioned Machines (Compute resources)
+  8. Volume: Displays the provisioned volumes
+  9. The Switch tenency: used when the currently logged in user needs to switch to another tenancy they area a member of.
+  10. SSH public key: This is where the user can add there public key. Once a key has been added the text box can not be left empty.
+  11. Create Platform: used to select a platform to create.
+  12. New platform: used to create a new platform just like 11. above
+
 ## What is project/tenency?
 
 A project, also known as a cloud tenancy, is an organizational unit in the cloud where users are assigned.
@@ -70,6 +87,54 @@ Users can be part of multiple projects, and all resources within a project are v
 To get a cloud project or access an existing one, you need to contact your GWS manager.
 
 ## Platforms
+
+From the azimuth portal you can deploy platforms such as:
+
+### Linux Workstation:
+
+The Linux Workstation platform offers a flexible Ubuntu 22.04 cloud instance.
+
+### Jupyter Notebook:
+
+A Jupyter notebook created from a compatible repository.
+
+### Jupyter Notebook Overview
+
+- The Jupyter Notebook platform allows you to run an existing notebook repository in a cloud environment, making the code immediately reproducible.
+- You can access the notebook through a web browser.
+- To launch a Jupyter notebook, it must be from a repo2docker-compatible repository hosted on platforms like GitHub, GitLab, Zenodo, Figshare, or Dataverse. 
+- This platform works similarly to Binder and supports any notebook repository that follows the Reproducible Execution Environment Specification (REES).
+- The notebook instance includes a configurable cloud volume at /data, useful for handling large datasets that can’t be included in the repository.
+
+### Launch Configuration
+
+Platform Name: Identifies the Linux Workstation platform.
+Notebook Repository: URL of a REES-compliant Jupyter notebook repository.
+Jupyter Notebook Size: Specifies the cloud instance size, including CPU and RAM, set by the cloud operator.
+Volume Size: Size of the cloud volume at /data.
+Advanced
+
+Platform Monitoring: A Grafana dashboard is available for system monitoring, showing both current and historical system information.
+
+### Slurm Cluster:
+
+A multi-node Slurm batch-compute cluster.
+
+### Kubernetes:
+
+A complete Kubernetes container orchestration cluster. Kubernetes Applications need an existing Kubernetes cluster before you can deploy them.
+
+### JupyterHub:
+
+A multi-user JupyterHub on Kubernetes.
+
+### GPU-enabled Jupyter Notebooks:
+
+Launch a GPU-enabled Jupyter Notebook using JupyterHub.
+
+### DaskHub:
+
+A multi-user DaskHub on Kubernetes for parallel computing in Python.
 
 Introduciton to the platforms and their usage
 

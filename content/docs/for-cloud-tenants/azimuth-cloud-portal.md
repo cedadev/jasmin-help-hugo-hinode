@@ -49,7 +49,7 @@ Overall, Azimuth Science Platforms aim to enhance the efficiency and effectivene
 
 ## Usage
 
-To access azimuth navigate to: [log in](https://cloud.jasmin.ac.uk/). This will take you to the login page shown in the image below.
+To access azimuth navigate to: [log in](https://portal.azimuth.jasmin.ac.uk/). This will take you to the login page shown in the image below.
 
 {{<image src="img/docs/azimuth-images/Azimuth-Login-Page.jpg" caption="Log in">}}
 
@@ -152,17 +152,26 @@ Introduciton to the platforms and their usage
 
 ## Quotas
 
-Explaining quotas
+Azimuth quotas refer to the allocation and management of computing resources within the Azimuth platform,
+which is designed for High Performance Computing (HPC) and Artificial Intelligence (AI) workloads
 
-- What all the quotas are
-- machines
-- volumes
-- external IPs (note that the quota use is for the tenancy, not the IPs attache to machines/ in use by platforms)
-- CPUs
-- RAM
-- volume storage
+Azimuth quotas include: machine, volumes, external IPs, CPUs RAm and Volume Storage as shown below:
+
+{{<image src="img/docs/azimuth-images/Azimuth-quotas-Page.jpg" caption="Quotas page">}}
+
+- machines: indicates the number of allowed machines that can be spinned up in the project/tenancy
+- volumes: indicates the number of volumes that can be created in the tenancy/project
+- external IPs (note that the quota use is for the tenancy, not the IPs attached to machines/ in use by platforms)
+- CPUs: indicates the total number of CPUs that can be defines for all platforms in the current tenancy
+- RAM: indicates the total amount of RAM that can be define for all platforms in the current tenancy.
+- volume storage: indiactes the total size of storage capacity that can be defined for platforms in the current tenancy.
 
 ## Advanced use
+
+In the advanced tab there are two sections, the machine and the volume sections
+
+- To create a machine go: ({{<ref "azimuth-cloud-portal" >}})
+- To create a volume go:
 
 Use of machine and volume tabs
 

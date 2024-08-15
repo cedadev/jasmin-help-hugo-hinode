@@ -1,6 +1,6 @@
 ---
 description: In depth look at the workstation platforms
-slug: platform-in-depth-k8s
+slug: platform-in-depth-workstations
 title: Platforms In Depth - Workstastions
 ---
 
@@ -38,7 +38,7 @@ Feature | Use
 Platform Monitoring | A Grafana dashboard for system monitoring
 EESSI | A software suite which offers various toolkits and modules for research computing.
 Podman | Is included for building and running OCI containers. It is recommended to install software via Podman to avoid issues during image upgrades. The Podman CLI is similar to Docker’s.
-Apptainer | Is another container framework included for HPC applications which supports OCI containers like Podman |
+Apptainer | Is another container framework included for HPC applications which supports OCI containers like Podman
 {.table .table-striped}
 
 To Access the Linux Platform navigate to this link:  ({{<ref "azimuth-cloud-portal" >}})
@@ -62,3 +62,61 @@ Sections on the platform page:
   10. SSH public key: This is where the user can add there public key. Once a key has been added the text box can not be left empty.
   11. Create Platform: used to select a platform to create.
   12. New platform: used to create a new platform just like 11. above
+
+To Create a Linux Work statation Platform follow the following steps:
+
+Click on Create Platform/New Platform. You will land on the page shown below with a list of available platforms.
+
+{{<image src="img/docs/azimuth-images/azimuth-available-platforms.jpg" caption="Platform List">}}
+
+Select the Linux Workstation
+
+{{<image src="img/docs/azimuth-images/azimuth-choose-linux-platform.jpg" caption="Choose Platform">}}
+
+On the Create a new platform window enter:
+
+- The Platform name of your choice. (Note that only lower case and dash (-) are allowed characters)
+- Workstation Size.
+  - Selet from a list of predefined sizes
+    - Note that each resource used reduces the number of resources in the allocated quota for the project/tenancy
+- The data volume size for your workstation which will be available at /data.
+
+{{<image src="img/docs/azimuth-images/azimuth-configure-linux-platform.jpg" caption="Choose Platform">}}
+
+If you need to make changes to the configurations use the back button. Otherwise click on Create Platform.
+
+On the platform scheduling window shown below, review the current requested resource count/size against the projected resouces usage and the tenant resource quota/allocation. 
+
+{{<image src="img/docs/azimuth-images/Azimuth-platform-resource-consumption-Page.jpg" caption="Platform Scheduling">}}
+
+This enables better resource management. To proceed click on confirm
+
+You will see the azimuth platform configuring page show below.
+
+{{<image src="img/docs/azimuth-images/Azimuth-configuring-page.jpg" caption="Configuring">}}
+
+Once the deployment is complete the deployment page indicates the workstation is ready and you can view the details or monitor the workstation.
+
+## Mintoring
+
+When you hover the mouse over the Web console label you can either copy the url for the web interface for workstation or click on the link for webconsole for the workstation.
+
+{{<image src="img/docs/azimuth-images/Azimuth-webconsole-url-Page.jpg" caption="Webconsole">}}
+
+When you hover the mouse over the Monitoring link you can either copy the link or click on the go-to service link to navigate to the grafana monitoring page shown below
+
+{{<image src="img/docs/azimuth-images/Azimuth-monitoring-Page.jpg" caption="Monitoring">}}
+
+When you click the details button you can view the platform details shown below:
+
+{{<image src="img/docs/azimuth-images/Azimuth-platfor-details-Page.jpg" caption="Platform details">}}
+
+The platform details also alows for updating, patching or deleting the platform.
+
+The platform details page allows you navigate to the webconsole service (Apache guacamole) or the monitoring page as indicated above.
+
+The webconsole navigates to the All connections for the platform (Desktop and shell). You will also be able to view any recent desktop or shell sessions
+
+{{<image src="img/docs/azimuth-images/azimuth-all-connections-page.jpg" caption="All connections">}}
+
+from  the all connections you can navigate to a browser based Desktop instance of you Ubuntu desktop or a browser based instance of a shell.

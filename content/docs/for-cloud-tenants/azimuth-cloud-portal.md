@@ -170,8 +170,8 @@ Azimuth quotas include: machine, volumes, external IPs, CPUs RAm and Volume Stor
 
 In the advanced tab there are two sections, the machine and the volume sections
 
-- To create a machine go: ({{<ref "azimuth-cloud-portal" >}})
-- To create a volume go:
+- To create a machine go: ({{<ref "platform-in-depth-workstation" >}})
+- To create a volume go: ({{<ref "platform-in-depth-workstation" >}})
 
 Use of machine and volume tabs
 

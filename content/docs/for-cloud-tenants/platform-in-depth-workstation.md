@@ -1,6 +1,6 @@
 ---
 description: In depth look at the workstation platforms
-slug: platform-in-depth-workstations
+slug: platform-in-depth-workstation
 title: Platforms In Depth - Workstastions
 ---
 
@@ -41,11 +41,10 @@ Podman | Is included for building and running OCI containers. It is recommended 
 Apptainer | Is another container framework included for HPC applications which supports OCI containers like Podman
 {.table .table-striped}
 
-To Access the Linux Platform navigate to this link:  ({{<ref "azimuth-cloud-portal" >}})
-
 To create a Linux platform instance proceed as follows:
 
 From the azimuth tenancy landing page shown below click on Create a Platform.
+
 {{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="Platform landing page">}}
 
 Sections on the platform page:
@@ -63,9 +62,9 @@ Sections on the platform page:
   11. Create Platform: used to select a platform to create.
   12. New platform: used to create a new platform just like 11. above
 
-To Create a Linux Work statation Platform follow the following steps:
+Click on Create Platform/New Platform.
 
-Click on Create Platform/New Platform. You will land on the page shown below with a list of available platforms.
+You will land on the page shown below with a list of available platforms.
 
 {{<image src="img/docs/azimuth-images/azimuth-available-platforms.jpg" caption="Platform List">}}
 
@@ -111,12 +110,22 @@ When you click the details button you can view the platform details shown below:
 
 {{<image src="img/docs/azimuth-images/Azimuth-platfor-details-Page.jpg" caption="Platform details">}}
 
-The platform details also alows for updating, patching or deleting the platform.
+The platform details also allows for updating, patching or deleting the platform.
 
 The platform details page allows you navigate to the webconsole service (Apache guacamole) or the monitoring page as indicated above.
 
-The webconsole navigates to the All connections for the platform (Desktop and shell). You will also be able to view any recent desktop or shell sessions
+The webconsole navigates to the All connections for the platform (Desktop or shell). You will also be able to view any recent desktop or shell sessions
 
 {{<image src="img/docs/azimuth-images/azimuth-all-connections-page.jpg" caption="All connections">}}
 
-from  the all connections you can navigate to a browser based Desktop instance of you Ubuntu desktop or a browser based instance of a shell.
+from the all connections you can navigate to a browser based Desktop instance of your Ubuntu desktop or a browser based instance of a shell.
+
+To create a volume proceed as follows:
+
+- On the Tenancy/project page , in the advanced section click the Volumes button.
+- Click the New volume button shown below:
+  
+  {{<image src="img/docs/azimuth-images/azimuth-all-connections-page.jpg" caption="All connections">}}
+
+- Specify the volume name, size and click on create.
+- Once the volume created you can attach Detach or Delete the volume to a platform.

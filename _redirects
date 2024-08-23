@@ -82,7 +82,8 @@
 /article/5074-conda-environments-and-python-virtual-environments /docs/software-on-jasmin/conda-environments-and-python-virtual-environments/
 /article/5077-configurando-cors-for-object-store /docs/short-term-project-storage/configuring-cors-for-object-storage/
 /article/5077-configuring-cors-for-object-store /docs/short-term-project-storage/configuring-cors-for-object-storage/
-/article/5075-creating-and-using-miniconda-environments /docs/software-on-jasmin/creating-and-using-miniconda-environments/
+/article/5075-creating-and-using-miniconda-environments /docs/software-on-jasmin/creating-and-using-miniforge-environments/
+/docs/software-on-jasmin/creating-and-using-miniconda-environments /docs/software-on-jasmin/creating-and-using-miniforge-environments/
 /article/219-data-transfer-overview /docs/data-transfer/data-transfer-overview/
 /article/3809-data-transfer-tools /docs/data-transfer/data-transfer-tools/
 /article/4454-elastic-tape-command-line-interface-hints /docs/short-term-project-storage/elastic-tape-command-line-interface-hints/

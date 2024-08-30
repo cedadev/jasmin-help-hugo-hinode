@@ -1,6 +1,5 @@
 ---
 aliases: /article/4890-how-to-submit-a-job-to-slurm
-date: 2022-05-19 16:26:09
 description: How to submit a job to Slurm
 slug: how-to-submit-a-job
 title: How to submit a job
@@ -59,7 +58,7 @@ sleep 5m
 ```
 
 For job specification of resources please refer to Table 2 of the help article
-[Slurm quick reference]({{< ref "slurm-quick-reference" >}})
+{{<link "slurm-quick-reference">}}Slurm quick reference{{</link>}}.
 
 ## Method 2: Submit via command-line options
 

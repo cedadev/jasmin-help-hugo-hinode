@@ -1,6 +1,5 @@
 ---
 aliases: /article/209-idl-and-midl
-date: 2022-10-20 15:47:58
 description: IDL
 title: IDL
 ---
@@ -13,13 +12,13 @@ This article explains how to:
 
 ## What is IDL?
 
-[IDL](https://www.nv5geospatialsoftware.com/Products/IDL) stands for
+{{<link "https://www.nv5geospatialsoftware.com/Products/IDL">}}IDL{{</link>}} stands for
 Interactive Data Language. It is a licensed data manipulation toolkit made
 available on JASMIN.
 
 ## Availability of IDL on JASMIN
 
-IDL is available on all [scientific analysis servers]({{< ref "sci-servers">}}) and [LOTUS](http://help.ceda.ac.uk/category/107-batch-computing-on-lotus).
+IDL is available on all {{<link "../interactive-computing/sci-servers">}}scientific analysis servers{{</link>}} and throughout the {{<link "../batch-computing/lotus-overview">}}LOTUS{{</link>}} cluster.
 
 {{<alert type="info">}}
 The related software `MIDL` is no longer available on JASMIN

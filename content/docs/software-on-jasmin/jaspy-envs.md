@@ -1,6 +1,5 @@
 ---
 aliases: /article/4729-jaspy-envs
-date: 2024-04-09 11:01:44
 description: Jaspy Software Environments (Python 3, R and other tools)
 slug: jaspy-envs
 title: Jaspy Software Environments (Python 3, R and other tools)
@@ -24,7 +23,7 @@ reproducibility and continuity.
 
 ## Working with Jaspy environments
 
-#### Quickstart for Python 3 environment
+### Quickstart for Python 3 environment
 
 If you want to get on, you can select a Jaspy environment to "activate". This
 means that once you have run these commands then the various tools and
@@ -34,7 +33,7 @@ libraries will be available in your current session.
 module load jaspy
 {{</command>}}
 
-#### Activating the environment in scripts
+### Activating the environment in scripts
 
 If you want a particular script to activate a Jaspy environment then add the
 "module" command to it, e.g.:
@@ -45,7 +44,7 @@ module load jaspy
 python do-something.py
 ```
 
-#### Setting your profile to always use a Jaspy environment
+### Setting your profile to always use a Jaspy environment
 
 If you want all your JASMIN sessions to use a particular Jaspy environment
 then you can add the `module load jaspy` command to your `$HOME/.bashrc` file.
@@ -73,7 +72,7 @@ module avail jaspy
 
 This lists all jaspy modules (i.e. environments) that can be loaded.
 
-#### Jaspy Python 3.7+ (plus other tools) environments
+### Jaspy Python 3.7+ (plus other tools) environments
 
 The packages available in the Jaspy environments can be found by searching the
 GitHub repository where the Conda environment files are defined. This table
@@ -84,14 +83,14 @@ Jaspy Python 3.7 Environment |  Versioned list of software packages |  Default? 
 ---|---|---|---
 jaspy/3.11/r20240508  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-r20240508/final-spec.yml) | No (will become the default on 22/05/2024) | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_r20240508)
 jaspy/3.11/r20240302  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-r20240302/final-spec.yml) | No | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_r20240302)
-jaspy/3.10/r20220721  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/m3-4.9.2/jaspy3.10-m3-4.9.2-r20220721/final-spec.yml) |  Yes (from: 18/10/2022)  |  NCO and NCL have now been moved to the ["jasmin-sci" packages]({{< ref "jasmin-sci-software" >}}) installation.
+jaspy/3.10/r20220721  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/m3-4.9.2/jaspy3.10-m3-4.9.2-r20220721/final-spec.yml) |  Yes (from: 18/10/2022)  |  NCO and NCL have now been moved to the {{<link "jasmin-sci-software">}}jasmin-sci{{</link>}} installation.
 jaspy/3.8/r20211105  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.8/m3-4.9.2/jaspy3.8-m3-4.9.2-r20211105/final-spec.yml) |  No (was default: 16/11/2021 - 17/102022)  |  Known problem with NCL rendering Shapefiles (see [issue](https://github.com/cedadev/ceda-jaspy-envs/issues/56)). Some packages were removed in this release due to dependency problems: theano, pymc3, pystan, pyngl,pyferret (see[issue](https://github.com/cedadev/ceda-jaspy-envs/issues/81)).
 jaspy/3.7/r20210320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.9.2/jaspy3.7-m3-4.9.2-r20210320/final-spec.yml)  |  No (was default:  20/05/2021 - 16/11/2021)  |  Known problem with NCL rendering Shapefiles (see [issue](https://github.com/cedadev/ceda-jaspy-envs/issues/56))
 jaspy/3.7/r20200606  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.6.14/jaspy3.7-m3-4.6.14-r20200606/packages.txt)|  No  |  |
 jaspy/3.7/r20181219  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.5.11/jaspy3.7-m3-4.5.11-r20181219/packages.txt)|  No  |  |
 {.table .table-striped}
 
-#### Jaspy Python 2.7 (plus other tools) environments
+### Jaspy Python 2.7 (plus other tools) environments
 
 This table lists all the Jaspy Python 2.7 environments provided on JASMIN and
 specifies the current (default) version.
@@ -101,7 +100,7 @@ Jaspy Python 2.7 Environment |  Versioned list of software packages |  Default?
 jaspy/2.7/r20190715 |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py2.7/m2-4.6.14/jaspy2.7-m2-4.6.14-r20190715/packages.txt)  |  Yes
 {.table .table-striped}
 
-#### Jasr R environments
+### Jasr R environments
 Environments for the "R" programming language are packaged into separate
 software environments, known as "Jasr". This table lists all the Jaspy R
 environments provided on JASMIN and specifies the current (default) version.
@@ -174,19 +173,19 @@ Manageability  |  Provide tools to easily construct, test, deploy, document and 
 
 ## Updates and tracking of Jaspy/Jasr environments
 
-#### History of environments on JASMIN
+### History of environments on JASMIN
 
 Please see the [Jaspy Python 3.7+ (and other tools) environments](#jaspy-python-27-plus-other-tools-environments) section
 above for information about releases on JASMIN.
 
-#### Which environment is "current"?
+### Which environment is "current"?
 
 Please refer to the [Jaspy Python 3.7+ (and other tools) environments](#jaspy-python-27-plus-other-tools-environments) section
 above for information about the current release on JASMIN.
 
 ## Citing Jaspy environments
 
-#### Can I cite a jaspy (conda) environment?
+### Can I cite a jaspy (conda) environment?
 
 We do not yet have an agreed approach for citing a Jaspy environment. However,
 you can refer to the environment description URLs given in the table above.

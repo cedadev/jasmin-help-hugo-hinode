@@ -147,7 +147,7 @@ fingerprint, which means the key was saved correctly. The key can be updated
 or deleted at any point in the future if the associated private key is
 compromised or lost:
 
-![](file-o8B0Efprrr.png)
+{{<image src="img/docs/cluster-as-a-service-identity-manager/file-o8B0Efprrr.png" caption="Adding an SSH key (4)">}}
 
 ### Changing a user's password
 

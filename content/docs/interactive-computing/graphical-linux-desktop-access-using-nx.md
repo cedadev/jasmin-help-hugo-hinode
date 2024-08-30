@@ -125,9 +125,9 @@ Instructions for v8.x clients: (older clients may vary but same concept overall)
   3. **Note the instructions for how to reach the NX menu once in the session, and select screen settings from the list of icons: Recommended setting is "Fit to window" (leftmost icon)**
   4. Click OK on this and subsequent screens giving information about the NX and desktop environments.
   5. You should be presented with a linux deskop on the server to which you connected, e.g. `nx-login2.jasmin.ac.uk`
-  6. Click "Activities" (top left menu on desktop) ![](file-XXVsbhxQi8.jpg)
+  6. Click "Activities" (top left menu on desktop) {{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-XXVsbhxQi8.jpg" caption="Activities menu" wrapper="col-5 mx-auto">}}
   7. Open a terminal window by clicking the "Terminal" icon in the menu down the left hand side.  
-  ![](file-chi3HNdvmk.jpg)
+  {{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-chi3HNdvmk.jpg" caption="Activities menu" wrapper="col-5 mx-auto">}}
 
   8. To see the list of sci servers which is normally presented at login (which helps in selected a less-loaded sci server), type the following:  
 {{<command user="user" host="nx-login1">}}
@@ -144,15 +144,15 @@ Once you have set up the environment to your liking, you can
 
   1. Click "Activities" (top left menu on desktop) 
 
-{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-XXVsbhxQi8.jpg" caption="click Activities">}}
+{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-XXVsbhxQi8.jpg" caption="click Activities" wrapper="col-5 mx-auto">}}
 
   2. Click the Firefox icon in the side bar menu to start the Firefox web browser. Use this to access web-based resources only available within JASMIN. Do not use for personal web browsing. To toggle Firefox between taking up the whole of your desktop, and running in a smaller, sizeable window, double-click its title bar (this applies to any windowed application on the desktop).
 
-{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-zykeLBbqgb.jpg" caption="open Firefox browser">}}
+{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-zykeLBbqgb.jpg" caption="open Firefox browser" wrapper="col-5 mx-auto">}}
 
   3. Click the Terminal icon 
 
-{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-RMJ4FzLkUz.jpg" caption="open Terminal application">}}
+{{<image src="img/docs/graphical-linux-desktop-access-using-nx/file-RMJ4FzLkUz.jpg" caption="open Terminal application" wrapper="col-5 mx-auto">}}
 
   4. Try an onward SSH connection, for example to a SCI machine. 
     

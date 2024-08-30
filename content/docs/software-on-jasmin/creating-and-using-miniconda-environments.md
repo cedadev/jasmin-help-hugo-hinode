@@ -5,27 +5,27 @@ slug: creating-and-using-miniconda-environments
 title: Creating and using miniconda environments
 ---
 
-On JASMIN, we provide a wide range of packages via the [Jaspy]({{< ref "jaspy-envs" >}}) environment (which is itself a Conda environment). This page gives
+On JASMIN, we provide a wide range of packages via the {{<link "jaspy-envs">}}Jaspy{{</link>}}
+environment (which is itself a Conda environment). This page gives
 detail on how to create and use your own personal Conda environments via the
 miniconda installer, as an alternative to the use of Jaspy.
 
-To decide whether you should use a _Python virtual enviro_ _nment_ or a _Conda
-environment_ , first see the page: [overview of software environments]({{< ref
-"conda-environments-and-python-virtual-environments" >}}).
+To decide whether you should use a **Python virtual environment** or a
+**Conda environment**_** , first see the page: {{<link "conda-environments-and-python-virtual-environments">}}overview of software environments{{</link>}}.
 
 ## Obtaining miniconda
 
 In order to create your own conda environments, you will first need to
-download the [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+download the {{<link "https://docs.conda.io/en/latest/miniconda.html">}}miniconda{{</link>}}
 installer. It is possible as an alternative to use the full
-[Anaconda](https://www.anaconda.com/products/distribution), but your initial
+{{<link "https://www.anaconda.com/products/distribution">}}Anaconda{{</link>}}, but your initial
 base environment will be much bigger if you do that (at time of writing this
 installs 5GB, compared to 400MB with miniconda) so we suggest the use of
 miniconda.
 
 This can be downloaded using:
 
-``` 
+```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
@@ -43,7 +43,9 @@ module unload jaspy
 
 You can run the installer by typing:
 
-` bash Miniconda3-latest-Linux-x86_64.sh `
+```
+bash Miniconda3-latest-Linux-x86_64.sh
+```
 
 You will be asked to confirm the licence agreement, to choose an installation
 location, and to decide whether it should run "conda init". It is recommended
@@ -128,9 +130,8 @@ Once you have activated a named environment, you can install packages with the
 conda install gcc
 ```
 
-You can also force particular versions to be installed. See the [conda cheat
-sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-
-cheatsheet.pdf) for details.
+You can also force particular versions to be installed. See the {{<link "https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">}}conda cheat
+sheet{{</link>}} for details.
 
 To list the packages installed in the currently activated environment, you can
 type `conda list`.
@@ -185,7 +186,7 @@ environment and/or working with legacy versions of packages, sometimes (in our
 experience with preparing Jaspy environments) the conda installer can be very
 slow and use a lot of memory, and may fail to resolve the environment. In this
 situation, we have tended to find better performance with the
-[mamba](https://github.com/mamba-org/mamba) installer, which uses a different
+{{<link "https://github.com/mamba-org/mamba">}}mamba{{</link>}} installer, which uses a different
 algorithm and is implemented in C++ rather than Python, for speed.
 
 To use mamba, you would first type `conda install mamba`, and then you can use
@@ -251,7 +252,7 @@ location under your home directory. It is possible to change this, but note
 that a conda environment can have tens of thousands of files and that group
 workspaces on JASMIN will generally perform poorly for this use case. If you
 need to make a conda environment which is shared with collaborators, you may
-need to request a [small files GWS]({{< ref "share-software-envs" >}}) as
+need to request a {{<link "share-software-envs">}}small files GWS{{</link>}} as
 these will give better performance.
 
 If you are creating a conda environment for very short-term testing only, you

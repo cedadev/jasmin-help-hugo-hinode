@@ -9,8 +9,7 @@ title: Access to storage
 weight: 150
 ---
 
-**IMPORTANT:** Please see also [Understanding new JASMIN storage]({{< ref
-"understanding-new-jasmin-storage" >}}) which explains more about the
+**IMPORTANT:** Please see also {{<link "understanding-new-jasmin-storage">}}Understanding new JASMIN storage{{</link>}} which explains more about the
 different types of storage as of Phase 4 of JASMIN's history.
 
 ## Home directory
@@ -129,9 +128,9 @@ nodes)
 Disks are mounted read/write (" **R/W** ") or read-only (" **RO** ").
 
 **Note 1:** Please refer to issues related to writing small files and NetCDF3
-to SOF storage [here]({{< ref "faqs-storage" >}})
+to SOF storage {{<link "../short-term-project-storage/faqs-storage">}}here{{</link>}}
 
-**Note 2:** For details of how to use the Transfer Cache (XFC) service please see [here]({{< ref "../short-term-project-storage/xfc" >}})
+**Note 2:** For details of how to use the Transfer Cache (XFC) service please see {{<link "../short-term-project-storage/xfc">}}here{{</link>}}.
 
 ## Where to write data
 
@@ -140,11 +139,11 @@ written. Please follow these general principles when deciding where to write
 your data:
 
 - HOME directories (`/home/users`) are relatively small (100GB) and should NOT be used for storing large data volumes or for sharing data with other users.
-0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{< ref "short-term-project-storage" >}}) documentation for details.
+0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the {{<link "../short-term-project-storage">}}Group Workspace{{</link>}} documentation for details.
   - `/gws/pw/j07` volumes are parallel-write-capable storage from Phase 7 (onwards) of JASMIN
   - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwaards) of JASMIN: this storage is not parallel-write-capable
 - The "scratch" areas (`/work/scratch-pw2`, `/work/scratch-pw3` and `/work/scratch-nopw`) are available as a temporary file space for jobs running on {{<link "../batch-computing/lotus-overview">}}LOTUS{{</link>}} (see next section below).
-- The (`/tmp`) directory is **not usually an appropriate location to write your data (see next section below).**
+- The `/tmp` directory is **not usually an appropriate location to write your data (see next section below).**
 
 ## How to use the temporary disk space
 
@@ -244,8 +243,8 @@ any data in CEDA Archive from within JASMIN, even if file system permissions per
 
 ## Tape access
 
-Group workspace managers also have [access to a tape library (Elastic Tape
-service)]({{< ref "secondary-copy-using-elastic-tape" >}}) for making
+Group workspace managers also have {{<link "../short-term-project-storage/secondary-copy-using-elastic-tape">}}access to a tape library (Elastic Tape
+service){{</link>}} for making
 secondary copies and managing storage between online and near-line storage.
 
 ## Number of files in a single directory

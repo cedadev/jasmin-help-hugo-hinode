@@ -1,6 +1,5 @@
 ---
 aliases: /article/202-share-gws-data-via-http
-date: 2020-12-07 14:50:54
 description: Sharing GWS data via HTTP
 slug: share-gws-data-via-http
 title: Sharing GWS data via HTTP
@@ -14,8 +13,8 @@ HTTP, so that:
 - data can be shared with users who do not have JASMIN accounts
 - common clients such as `wget`, `curl`, client libraries and web browsers can be used to access the data via a commonly-supported protocol.
 
-In this respect, the service should be regarded as another [data transfer
-tool]({{< ref "data-transfer-tools" >}}). However it must be arranged in
+In this respect, the service should be regarded as another {{<link "../data-transfer/data-transfer-tools">}}data transfer
+tool{{</link>}}. However it must be arranged in
 advance between the Group Workspace manager and the JASMIN Helpdesk. It
 involves:
 

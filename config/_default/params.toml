@@ -17,6 +17,7 @@
 [debugging]
     showJS = false
     showSCSS = false
+    purgeHTMLComments = false
 
 [docs]
     github = "https://github.com/cedadev/jasmin-help-hugo-hinode"

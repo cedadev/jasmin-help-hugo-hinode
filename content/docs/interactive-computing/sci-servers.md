@@ -5,6 +5,7 @@ tags:
 - sci
 - arbiter
 title: Scientific analysis servers
+slug: sci-servers
 weight: 60
 ---
 

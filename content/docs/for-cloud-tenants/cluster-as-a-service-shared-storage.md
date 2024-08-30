@@ -15,20 +15,19 @@ provide common storage across all those nodes.
 
 These storage clusters are not intended to be directly consumed by users, but
 are taken as cluster configuration options by other clusters. In particular,
-[Slurm clusters]({{< ref "cluster-as-a-service-slurm" >}}) take a shared
+{{<link "cluster-as-a-service-slurm">}}Slurm clusters{{</link>}} take a shared
 storage cluster as a configuration option - the shared storage is mounted on
 each cluster node for user home directories.
 
 ## NFS
 
-[Network File System (NFS)](https://en.wikipedia.org/wiki/Network_File_System)
+{{<link "https://en.wikipedia.org/wiki/Network_File_System">}}Network File System (NFS){{</link>}}
 is a protocol for accessing remote network-attached storage. NFS is also used
 to refer to the implementation of the protocol in the Linux kernel.
 
 A CaaS NFS shared storage cluster provides a simple
-[NFS](https://en.wikipedia.org/wiki/Network_File_System) server. A volume is
-attached of the specified size, formatted as an [XFS
-filesystem](https://en.wikipedia.org/wiki/XFS), mounted at `/srv` and exported
+NFS server. A volume is
+attached of the specified size, formatted as an {{<link "https://en.wikipedia.org/wiki/XFS">}}XFS filesystem{{</link>}}, mounted at `/srv` and exported
 with no authentication.
 
 NFS servers do not get an external IP, and so are only accessible from the

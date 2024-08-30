@@ -5,6 +5,10 @@ title: Check network details
 weight: 20
 ---
 
+{{<alert type="danger">}}
+DEPRECATED: This article will shortly become obsolete following JASMIN's [migration to the Rocky 9 operating system](../software-on-jasmin/rocky9-migration-2024).
+{{</alert>}}
+
 This article explains how to:
 
 - check that your network domain is able to access JASMIN resources
@@ -83,6 +87,5 @@ of JASMIN you will need to have an IP address that resolves to the domain of
 your institution. For access to graphical desktops, equivalent servers `nx-
 login2.jasmin.ac.uk` and `nx-login3.jasmin.ac.uk` have been provided and for
 transfer tasks, an additional transfer server `xfer3.jasmin.ac.uk` is
-available. See [login servers]({{< ref "login-servers" >}}) and [transfer
-servers]({{< ref "transfer-servers" >}}), but note the additional access role
+available. See {{<link "../interactive-computing/login-servers">}}login servers{{</link>}} and {{<link "../interactive-computing/transfer-servers">}}transfer servers{{</link>}}, but note the additional access role
 required in the case of the transfer server.

@@ -1,6 +1,5 @@
 ---
 aliases: /article/4469-share-gws-on-jasmin
-date: 2022-01-14 10:00:33
 description: Sharing GWS data with other users elsewhere on JASMIN
 slug: share-gws-data-on-jasmin
 title: Sharing GWS data on JASMIN
@@ -12,7 +11,7 @@ This article explains how a GWS Manager can organise for some directories within
 
 **Note:** this only applies to sharing data within the managed environment of the JASMIN platform.
 If you need to share data with users outside JASMIN, or to users of external cloud tenancies, please consider
-the [HTTP option]({{< ref "share-gws-data-via-http" >}}).
+the {{<link "share-gws-data-via-http">}}HTTP option{{</link>}}.
 
 ## How to share specific directories
 

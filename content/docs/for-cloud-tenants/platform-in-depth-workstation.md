@@ -120,12 +120,21 @@ The webconsole navigates to the All connections for the platform (Desktop or she
 
 from the all connections you can navigate to a browser based Desktop instance of your Ubuntu desktop or a browser based instance of a shell.
 
-To create a volume proceed as follows:
+To create a new volume proceed as follows:
 
-- On the Tenancy/project page , in the advanced section click the Volumes button.
-- Click the New volume button shown below:
+- On the Tenancy/project page, in the advanced section click the Volumes button.
   
-  {{<image src="img/docs/azimuth-images/azimuth-all-connections-page.jpg" caption="All connections">}}
+
+- Click the New volume button shown below:
+
+  {{<image src="img/docs/azimuth-images/azimuth-new-volume-page.jpg" caption="New volume">}}
 
 - Specify the volume name, size and click on create.
-- Once the volume created you can attach Detach or Delete the volume to a platform.
+
+{{<image src="img/docs/azimuth-images/azimuth-volume-name-page.jpg" caption="New volume">}}
+
+- Once the volume is created you can attach Detach or Delete the volume to a platform.
+  
+{{<image src="img/docs/azimuth-images/azimuth-attach-volume-page.jpg" caption="New volume">}}
+
+You can also detach or delete an existing volume in your tenancy.

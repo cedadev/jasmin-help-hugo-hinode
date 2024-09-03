@@ -8,40 +8,39 @@ title: The Azimuth Cloud Portal
 
 ## Key features include:
 
-## Multiple Authentication Methods:
+### Multiple Authentication Methods:
 
 Supports username/password, Keystone federation, and application credentials.
 
-## On-demand Platforms:
+### On-demand Platforms:
 
 Unified interface for managing Kubernetes and Cluster-as-a-Service (CaaS) platforms.
 
-## Application Proxy:
+### Application Proxy:
 
 Uses Zenith to expose services without consuming floating IPs or requiring SSH keys.
 
-## Simplified OpenStack Management:
+### Simplified OpenStack Management:
 
 Automatic network detection, machine and volume management, and security group configuration.
 
-- what's it's purpose (simplification of Horizon)
 Azimuth Science Platforms are designed to provide flexible, high-performance computing environments tailored for scientific research.
 
 Here are some key purposes:
 
-## High-Performance Computing (HPC):
+### High-Performance Computing (HPC):
 
 These platforms support large-scale computational tasks, making them ideal for scientific disciplines that require significant processing power.
 
-## Flexibility:
+### Flexibility:
 
 Researchers can configure their computing environments to meet specific needs, such as choosing the operating system, software tools, and hardware specifications.
 
-## Cloud Integration:
+### Cloud Integration:
 
 By leveraging cloud infrastructure, Azimuth Science Platforms offer scalability and accessibility, allowing researchers to access their environments from anywhere.
 
-## Collaboration:
+### Collaboration:
 
 These platforms facilitate collaborative research by providing tools like Jupyter Notebooks for interactive data exploration and analysis.
 
@@ -49,7 +48,9 @@ Overall, Azimuth Science Platforms aim to enhance the efficiency and effectivene
 
 ## Usage
 
-To access azimuth navigate to: [log in](https://portal.azimuth.jasmin.ac.uk/). This will take you to the login page shown in the image below.
+To access azimuth navigate to: [log in](https://portal.azimuth.jasmin.ac.uk/). 
+
+This will take you to the login page shown in the image below.
 
 {{<image src="img/docs/azimuth-images/Azimuth-Login-Page.jpg" caption="Log in">}}
 
@@ -57,7 +58,7 @@ In the top right-hand corner of the login page click on the Sign in button and e
 
 {{<image src="img/docs/azimuth-images/Azimuth-landing-Page.jpg" caption="Dashboard">}}
 
-Once you have successifully signed in you will land on the JASMIN cloud Dashboard as shown below.
+Once you have successifully signed in, you will land on the Azimuth cloud Dashboard as shown below.
 
 {{<image src="img/docs/azimuth-images/Azimuth-list-of-Tenants-Page.jpg" caption="List of Tenants">}}
 
@@ -80,7 +81,7 @@ Sections on the platform landing page above:
   11. Create Platform: used to select a platform to create.
   12. New platform: used to create a new platform just like 11. above
 
-## What is project/tenency?
+### What is project/tenency?
 
 A project, also known as a cloud tenancy, is an organizational unit in the cloud where users are assigned.
 Users can be part of multiple projects, and all resources within a project are visible and editable by its members.
@@ -90,15 +91,15 @@ To get a cloud project or access an existing one, you need to contact your GWS m
 
 From the azimuth portal you can deploy platforms such as:
 
-### Linux Workstation:
+#### Linux Workstation:
 
 The Linux Workstation platform offers a flexible Ubuntu 22.04 cloud instance.
 
-### Jupyter Notebook:
+#### Jupyter Notebook:
 
 A Jupyter notebook created from a compatible repository.
 
-### Jupyter Notebook Overview
+#### Jupyter Notebook Overview
 
 - The Jupyter Notebook platform allows you to run an existing notebook repository in a cloud environment, making the code immediately reproducible.
 - You can access the notebook through a web browser.
@@ -106,7 +107,7 @@ A Jupyter notebook created from a compatible repository.
 - This platform works similarly to Binder and supports any notebook repository that follows the Reproducible Execution Environment Specification (REES).
 - The notebook instance includes a configurable cloud volume at /data, useful for handling large datasets that can’t be included in the repository.
 
-### Launch Configuration
+#### Launch Configuration
 
 Platform Name: Identifies the Linux Workstation platform.
 Notebook Repository: URL of a REES-compliant Jupyter notebook repository.
@@ -116,23 +117,23 @@ Advanced
 
 Platform Monitoring: A Grafana dashboard is available for system monitoring, showing both current and historical system information.
 
-### Slurm Cluster:
+#### Slurm Cluster:
 
 A multi-node Slurm batch-compute cluster.
 
-### Kubernetes:
+#### Kubernetes:
 
 A complete Kubernetes container orchestration cluster. Kubernetes Applications need an existing Kubernetes cluster before you can deploy them.
 
-### JupyterHub:
+#### JupyterHub:
 
 A multi-user JupyterHub on Kubernetes.
 
-### GPU-enabled Jupyter Notebooks:
+#### GPU-enabled Jupyter Notebooks:
 
 Launch a GPU-enabled Jupyter Notebook using JupyterHub.
 
-### DaskHub:
+#### DaskHub:
 
 A multi-user DaskHub on Kubernetes for parallel computing in Python.
 
@@ -141,7 +142,7 @@ Introduciton to the platforms and their usage
 - breif overview of whats available, with links to the main ones in the other articles
 - (some of this can be taken from the azimuth docs)
 
-##  Identity provider
+###  Identity provider
 
 - Explain what the identity provide is
 - what it is for
@@ -150,7 +151,7 @@ Introduciton to the platforms and their usage
 - advantages over host their own ID
 - links into some of the platforms - explicitly say which
 
-## Quotas
+### Quotas
 
 Azimuth quotas refer to the allocation and management of computing resources within the Azimuth platform,
 which is designed for High Performance Computing (HPC) and Artificial Intelligence (AI) workloads
@@ -170,8 +171,9 @@ Azimuth quotas include: machine, volumes, external IPs, CPUs RAm and Volume Stor
 
 In the advanced tab there are two sections, the machine and the volume sections
 
-- To create a machine go: ({{<ref "platform-in-depth-workstation" >}})
-- To create a volume go: ({{<ref "platform-in-depth-workstation" >}})
+- To see how to create a machine go: ([Workstation Platform]{{<ref "platform-in-depth-workstation" >}})
+  
+- To see how to create a volume go: ([Workstation Platform]{{<ref "platform-in-depth-workstation" >}})
 
 Use of machine and volume tabs
 

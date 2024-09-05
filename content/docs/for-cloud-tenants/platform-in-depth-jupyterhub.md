@@ -35,7 +35,7 @@ To create a JupyterHub instance on Azimuth HPC:
 
 ## How to Patch
 
-Patching JupyterHub involves updating the software to fix bugs or vulnerabilities. 
+Patching JupyterHub involves updating the software to fix bugs or vulnerabilities.
 
 This can typically be done by:
 

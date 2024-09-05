@@ -46,8 +46,6 @@ From the list of platforms select the SLURM workload manager platform option
 
 {{<image src="img/docs/azimuth-images/Azimuth-create-slurm-cluster-configuration-Page.jpg" caption="Create SLURM platform">}}
 
-{{<image src="img/docs/azimuth-images/Azimuth-slurm-platform-scheduling-Page.jpg" caption="platform scheduling">}}
-
 ### Updating a SLURM Cluster
 
 ### Patching a SLURM Cluster

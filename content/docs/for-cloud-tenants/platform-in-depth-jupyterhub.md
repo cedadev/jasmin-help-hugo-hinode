@@ -65,11 +65,58 @@ Azimuth HPC offers several Jupyter-based options:
 
 ## DaskHub
 
+Azimuth Daskhub is a cloud-based platform designed to simplify and accelerate distributed data processing tasks using Dask. It provides a user-friendly interface that abstracts away the complexities of setting up and managing Dask clusters, allowing users to focus on their data analysis and machine learning workflows.
+
+### Key Features and Benefits:
+
+- Simplified Cluster Management: Azimuth Daskhub handles the provisioning, scaling, and management of Dask clusters, eliminating the need for users to manually configure and maintain infrastructure.
+- Scalability: The platform can easily scale Dask clusters up or down to accommodate varying workloads, ensuring optimal resource utilization and performance.
+- User-Friendly Interface: Azimuth Daskhub provides a web-based interface that is intuitive and easy to use, even for users who are not familiar with Dask or distributed computing.
+- Integration with Popular Tools: The platform integrates seamlessly with popular data science tools like JupyterLab, allowing users to leverage their existing workflows and libraries.
+- Pre-installed Libraries: Azimuth Daskhub comes pre-installed with a wide range of popular libraries and packages, including NumPy, Pandas, Scikit-learn, and TensorFlow, making it easy to get started with data analysis and machine learning tasks.
+C- ost-Effective: Azimuth Daskhub offers a pay-as-you-go pricing model, allowing users to only pay for the resources they actually use.
+
+### How Azimuth Daskhub Works:
+
+- Create a Cluster: Users can create a Dask cluster with the desired number of workers and memory allocation.
+- Upload Data: Data can be uploaded to the platform or accessed from external storage sources.
+- Run Dask Tasks: Users can submit Dask tasks and workflows to the cluster, which are then executed in parallel across the worker nodes.
+- Monitor and Manage: The platform provides tools to monitor cluster health, task progress, and resource usage. Users can also manage their clusters, such as scaling them up or down as needed.
+
+### Use Cases:
+
+- Data Analysis and Visualization: Azimuth Daskhub can be used to perform large-scale data analysis and visualization tasks, such as exploratory data analysis, feature engineering, and data cleaning.
+- Machine Learning: The platform is well-suited for training and deploying machine learning models on large datasets, including tasks like image classification, natural language processing, and recommendation systems.
+- Scientific Computing: Azimuth Daskhub can be used for various scientific computing tasks, such as simulations, numerical modeling, and data processing.
+
 - overview
 - extra stuff on top of vanilla
 - note that this is the same as pangeo in the old system
 
 ## BinderHub
 
-- overview
-- extra stuff
+Azimuth BinderHub is a cloud-based platform that provides a convenient way to create and share interactive computing environments based on Jupyter Notebooks. It leverages Project Jupyter's Binder technology to dynamically generate Jupyter environments from GitHub repositories, making it easy for users to explore, analyze, and collaborate on data science projects.
+
+### Key Features and Benefits:
+
+- Interactive Notebooks: Azimuth BinderHub allows users to create and share interactive Jupyter Notebooks, which are a powerful tool for data analysis, visualization, and machine learning.
+- GitHub Integration: The platform integrates seamlessly with GitHub, making it easy to create Binder environments from public or private repositories. 
+  Users can simply provide a GitHub repository URL, and Azimuth BinderHub will automatically build the corresponding Jupyter environment.
+- Customizable Environments: Azimuth BinderHub provides a high degree of customization for Jupyter environments. Users can specify the desired Python version, libraries, and other dependencies in their GitHub repository, ensuring that the environment is tailored to their specific needs.
+- Collaboration: Azimuth BinderHub facilitates collaboration among data scientists and researchers. Users can share their Binder environments with colleagues, allowing them to explore and interact with the same data and code.
+- Reproducibility: The platform helps to ensure reproducibility in data science workflows. By sharing Binder environments, users can provide others with a self-contained environment that can be used to replicate their results.
+- Accessibility: Azimuth BinderHub is accessible from any device with an internet connection, making it a convenient tool for users who need to work on data science projects remotely.
+
+### How Azimuth BinderHub Works:
+
+- GitHub Repository: Users create a GitHub repository containing the necessary files for their Jupyter environment, including Jupyter Notebooks, Python scripts, and configuration files.
+- Binder Build: When a user accesses a GitHub repository through Azimuth BinderHub, the platform triggers a Binder build process. This process creates a Docker image based on the specified dependencies and configuration.
+- Interactive Environment: Once the Docker image is built, Azimuth BinderHub launches an interactive Jupyter environment that can be accessed through a web browser. This environment contains all of the files and dependencies defined in the GitHub repository.
+
+### Use Cases:
+
+- Data Science Education: Azimuth BinderHub is a valuable tool for teaching data science and machine learning. Instructors can create interactive Jupyter Notebooks that students can explore and experiment with.
+- Research Collaboration: The platform can be used to facilitate collaboration among researchers, allowing them to share and work on data science projects together.
+- Data Exploration and Analysis: Azimuth BinderHub provides a convenient way to explore and analyze data using Jupyter Notebooks. Users can visualize data, perform statistical analysis, and build machine learning models.
+- Reproducible Research: By sharing Binder environments, researchers can ensure that their work is reproducible and can be verified by others.
+

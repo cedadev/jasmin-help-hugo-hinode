@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rocky9 on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/rocky9/</link><description>Recent content in Rocky9 on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/rocky9/index.xml" rel="self" type="application/rss+xml"/><item><title>Migration to Rocky Linux 9 2024</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</guid><description>&amp;nbsp; Watch this space for further updates about the details and timetable for the migration to Rocky Linux 9 on JASMIN.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rocky9 on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/rocky9/</link><description>Recent content in Rocky9 on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/rocky9/index.xml" rel="self" type="application/rss+xml"/><item><title>Migration to Rocky Linux 9 2024</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Watch this space for further updates about the details and timetable for the migration to Rocky Linux 9 on JASMIN.
+ &lt;/div>
+ &lt;/div>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p></description></item></channel></rss>

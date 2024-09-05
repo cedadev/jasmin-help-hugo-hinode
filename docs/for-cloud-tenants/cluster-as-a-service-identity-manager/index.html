@@ -15,7 +15,7 @@
 <script async src="https://cse.google.com/cse.js?cx=b0a2e1d21b00e4028"></script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.132.0">
+<meta name=generator content="Hugo 0.134.0">
 <meta name=theme content="Hinode 0.11.2">
 <link rel=stylesheet href="/css/main.min.cf15e9b1687b2cdbb0d6695df97d4abae443fd4a604ac1273ce0c0ba62572b8c.css" integrity="sha256-zxXpsWh7LNuw1mld+X1KuuRD/UpgSsEnPODAumJXK4w=" crossorigin=anonymous>
 <link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
@@ -1223,54 +1223,54 @@ reset - these operations must be performed by an admin on behalf of the user.</p
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Variable</th>
-<th>Description</th>
-<th>Required?</th>
-<th>Can be updated?</th>
+<th style=text-align:left>Variable</th>
+<th style=text-align:left>Description</th>
+<th style=text-align:left>Required?</th>
+<th style=text-align:left>Can be updated?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>External IP</td>
-<td>The external IP that will be attached to the gateway host. This is the the IP that can be used as a jump host for SSH access.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>External IP</td>
+<td style=text-align:left>The external IP that will be attached to the gateway host. This is the the IP that can be used as a jump host for SSH access.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Admin password</td>
-<td>The password for the <code>admin</code> account. When the Identity Manager is created, this is the only user that exists. Please make sure you choose a secure password. <strong>WARNING: This password cannot be changed.</strong> Changing the admin password in the FreeIPA web interface will break cluster configuration for all clusters.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Admin password</td>
+<td style=text-align:left>The password for the <code>admin</code> account. When the Identity Manager is created, this is the only user that exists. Please make sure you choose a secure password. <strong>WARNING: This password cannot be changed.</strong> Changing the admin password in the FreeIPA web interface will break cluster configuration for all clusters.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Admin IP ranges</td>
-<td>One or more IP ranges from which admins will access the FreeIPA and Keycloak web interfaces, in <a href=https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation>CIDR notation</a>. Any attempt to access the admin interfaces froman IP address that is not in these ranges will be blocked. FreeIPA and Keycloak allow the creation and modification of users and permissions for all your clusters, so it is recommended that this range be as small as possible. If you are not sure what value to use here, contact your local network administrator to find out the appropriate value for your network.</td>
-<td>Yes</td>
-<td>Yes</td>
+<td style=text-align:left>Admin IP ranges</td>
+<td style=text-align:left>One or more IP ranges from which admins will access the FreeIPA and Keycloak web interfaces, in <a href=https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation>CIDR notation</a>. Any attempt to access the admin interfaces froman IP address that is not in these ranges will be blocked. FreeIPA and Keycloak allow the creation and modification of users and permissions for all your clusters, so it is recommended that this range be as small as possible. If you are not sure what value to use here, contact your local network administrator to find out the appropriate value for your network.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>Yes</td>
 </tr>
 <tr>
-<td>FreeIPA size</td>
-<td>The machine size to use for the FreeIPA server.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>FreeIPA size</td>
+<td style=text-align:left>The machine size to use for the FreeIPA server.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Keycloak size</td>
-<td>The machine size to use for the Keycloak server.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Keycloak size</td>
+<td style=text-align:left>The machine size to use for the Keycloak server.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Gateway size</td>
-<td>The machine size to use for the gateway server.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Gateway size</td>
+<td style=text-align:left>The machine size to use for the gateway server.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Gateway domain</td>
-<td>The domain to use for the gateway server.<br>If left empty, <code>&lt;dashed-gateway-ip>.sslip.io</code> is used (this uses the <a href=https://sslip.io/>sslip.io</a> service). For example, if the selected gateway IP is <code>192.171.139.83</code>, the domain will be <code>192-171-139-83.sslip.io</code>.<br>If given, the domain must already be configured to point to the <strong>External IP</strong> , otherwise configuration will fail. Only use this option if you have control over your own DNS entries - the CaaS system will <strong>not</strong> create a DNS entry for you.</td>
-<td>No</td>
-<td>No</td>
+<td style=text-align:left>Gateway domain</td>
+<td style=text-align:left>The domain to use for the gateway server.<br>If left empty, <code>&lt;dashed-gateway-ip>.sslip.io</code> is used (this uses the <a href=https://sslip.io/>sslip.io</a> service). For example, if the selected gateway IP is <code>192.171.139.83</code>, the domain will be <code>192-171-139-83.sslip.io</code>.<br>If given, the domain must already be configured to point to the <strong>External IP</strong> , otherwise configuration will fail. Only use this option if you have control over your own DNS entries - the CaaS system will <strong>not</strong> create a DNS entry for you.</td>
+<td style=text-align:left>No</td>
+<td style=text-align:left>No</td>
 </tr>
 </tbody>
 </table>
@@ -1671,7 +1671,7 @@ Copyright © 2024 Science and Technology Facilities Council.
 <div class=toast-body>Code copied to clipboard</div>
 </div>
 </div>
-<script src=/js/main.bundle.en.min.3d0c14c04facfb3fb8092f224950f223a3c642302c425a8e2810f771f1c1b058.js integrity="sha256-PQwUwE+s+z+4CS8iSVDyI6PGQjAsQlqOKBD3cfHBsFg=" crossorigin=anonymous async></script>
+<script src=/js/main.bundle.en.min.1923e7fc436148bdb79416a01a88fbcd7b4691b5edb77a58b84f73f91444b7d6.js integrity="sha256-GSPn/ENhSL23lBagGoj7zXtGkbXtt3pYuE9z+RREt9Y=" crossorigin=anonymous async></script>
 <script src=/js/jquery.min.js></script>
 <script src=/js/jquery.cookie-consent.js></script>
 <script type=text/javascript>

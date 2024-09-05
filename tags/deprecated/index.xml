@@ -1,1 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deprecated on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/deprecated/</link><description>Recent content in Deprecated on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/deprecated/index.xml" rel="self" type="application/rss+xml"/><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&amp;nbsp; Deprecated feature documented here to provide information about how to access existing instances. Project-specific servers are no longer provided on request, as most use cases can be satisfied by a tenancy in the JASMIN cloud.</description></item><item><title>Migrate a JASMIN account from CEDA</title><link>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</guid><description>&amp;nbsp; JASMIN accounts created before February 2017 had to be migrated to use the JASMIN accounts portal. It is now no longer possible to do this migration automatically.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deprecated on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/deprecated/</link><description>Recent content in Deprecated on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/deprecated/index.xml" rel="self" type="application/rss+xml"/><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ &lt;strong>Deprecated feature&lt;/strong> documented here to provide information about how to access existing instances.
+Project-specific servers are no longer provided on request, as most use cases can be satisfied by
+a tenancy in the JASMIN cloud.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This article introduces the project specific servers. It covers:&lt;/p></description></item><item><title>Migrate a JASMIN account from CEDA</title><link>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ &lt;p>JASMIN accounts created before February 2017 had to be migrated to use the
+JASMIN accounts portal.
+It is now no longer possible to do this migration automatically.&lt;/p></description></item></channel></rss>

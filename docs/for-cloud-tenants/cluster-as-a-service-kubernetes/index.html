@@ -15,7 +15,7 @@
 <script async src="https://cse.google.com/cse.js?cx=b0a2e1d21b00e4028"></script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.132.0">
+<meta name=generator content="Hugo 0.134.0">
 <meta name=theme content="Hinode 0.11.2">
 <link rel=stylesheet href="/css/main.min.cf15e9b1687b2cdbb0d6695df97d4abae443fd4a604ac1273ce0c0ba62572b8c.css" integrity="sha256-zxXpsWh7LNuw1mld+X1KuuRD/UpgSsEnPODAumJXK4w=" crossorigin=anonymous>
 <link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
@@ -1226,72 +1226,72 @@ later):</p>
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Variable</th>
-<th>Description</th>
-<th>Required?</th>
-<th>Can be updated?</th>
+<th style=text-align:left>Variable</th>
+<th style=text-align:left>Description</th>
+<th style=text-align:left>Required?</th>
+<th style=text-align:left>Can be updated?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Identity manager</td>
-<td>The CaaS Identity Manager that is used to control access to the cluster.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Identity manager</td>
+<td style=text-align:left>The CaaS Identity Manager that is used to control access to the cluster.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Version</td>
-<td>The Kubernetes version to use. The available versions are determined by the RKE version used by the CaaS configuration. This can be changed after initial deployment to upgrade a cluster to a newer Kubernetes version. Before doing this, you should back up your cluster - in particular, you should <a href=https://rancher.com/docs/rke/latest/en/etcd-snapshots/>take a snapshot of the etcd database</a> and make sure any data in persistent volumes is backed up.</td>
-<td>Yes</td>
-<td>Yes</td>
+<td style=text-align:left>Version</td>
+<td style=text-align:left>The Kubernetes version to use. The available versions are determined by the RKE version used by the CaaS configuration. This can be changed after initial deployment to upgrade a cluster to a newer Kubernetes version. Before doing this, you should back up your cluster - in particular, you should <a href=https://rancher.com/docs/rke/latest/en/etcd-snapshots/>take a snapshot of the etcd database</a> and make sure any data in persistent volumes is backed up.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>Yes</td>
 </tr>
 <tr>
-<td>Worker nodes</td>
-<td>The number of worker nodes in the cluster. This can be scaled up or down after deployment. When scaling down, there is currently no effort made to drain the hosts in order to remove them gracefully: we rely on Kubernetes to reschedule terminated pods. This may change in the future.</td>
-<td>Yes</td>
-<td>Yes</td>
+<td style=text-align:left>Worker nodes</td>
+<td style=text-align:left>The number of worker nodes in the cluster. This can be scaled up or down after deployment. When scaling down, there is currently no effort made to drain the hosts in order to remove them gracefully: we rely on Kubernetes to reschedule terminated pods. This may change in the future.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>Yes</td>
 </tr>
 <tr>
-<td>Master size</td>
-<td>The size to use for the master node. The master node is configured to be unschedulable, so no user workloads will run on it (just system workloads).</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Master size</td>
+<td style=text-align:left>The size to use for the master node. The master node is configured to be unschedulable, so no user workloads will run on it (just system workloads).</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Worker size</td>
-<td>The size to use for worker nodes. Consider the workloads that you want to run and pick the size accordingly. The capacity of the cluster can be increased by adding more workers, but the size of each worker <strong>cannot</strong> be changed after the first deployment.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Worker size</td>
+<td style=text-align:left>The size to use for worker nodes. Consider the workloads that you want to run and pick the size accordingly. The capacity of the cluster can be increased by adding more workers, but the size of each worker <strong>cannot</strong> be changed after the first deployment.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Root volume size</td>
-<td>The size of the root volume of cluster nodes, in GB. This volume must be sufficiently large to hold the operating system (~3GB), all the Docker images used by your containers (which can be multiple GBs in size) and all the logs and ephemeral storage for your containers. For reference, <a href=https://cloud.google.com/kubernetes-engine/>Google Kubernetes Engine (GKE)</a> deploys hosts with 100GB root disks by default. At least 40GB is recommended.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>Root volume size</td>
+<td style=text-align:left>The size of the root volume of cluster nodes, in GB. This volume must be sufficiently large to hold the operating system (~3GB), all the Docker images used by your containers (which can be multiple GBs in size) and all the logs and ephemeral storage for your containers. For reference, <a href=https://cloud.google.com/kubernetes-engine/>Google Kubernetes Engine (GKE)</a> deploys hosts with 100GB root disks by default. At least 40GB is recommended.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>External IP</td>
-<td>The external IP that will be attached to the master node. This IP is where the Kubernetes API will be exposed, and can be used for SSH access to the nodes.</td>
-<td>Yes</td>
-<td>No</td>
+<td style=text-align:left>External IP</td>
+<td style=text-align:left>The external IP that will be attached to the master node. This IP is where the Kubernetes API will be exposed, and can be used for SSH access to the nodes.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>No</td>
 </tr>
 <tr>
-<td>Admin IP ranges</td>
-<td>One or more IP ranges from which admins will access the Kubernetes API and dashboard (if enabled), in <a href=https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation>CIDR notation</a>. Any attempt to access the API or dashboard from an IP address that is not in these ranges will be blocked. Access to the Kubernetes API may allow the creation of resources in your cluster, so it is recommended that this range be as small as possible. If you are not sure what value to use here, contact your local network administrator to find out the appropriate value for your network.</td>
-<td>Yes</td>
-<td>Yes</td>
+<td style=text-align:left>Admin IP ranges</td>
+<td style=text-align:left>One or more IP ranges from which admins will access the Kubernetes API and dashboard (if enabled), in <a href=https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation>CIDR notation</a>. Any attempt to access the API or dashboard from an IP address that is not in these ranges will be blocked. Access to the Kubernetes API may allow the creation of resources in your cluster, so it is recommended that this range be as small as possible. If you are not sure what value to use here, contact your local network administrator to find out the appropriate value for your network.</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>Yes</td>
 </tr>
 <tr>
-<td>Kubernetes dashboard</td>
-<td>Indicates whether to deploy the Kubernetes dashboard. If selected, the Kubernetes dashboard will be available at the configured domain (see below).</td>
-<td>Yes</td>
-<td>Yes</td>
+<td style=text-align:left>Kubernetes dashboard</td>
+<td style=text-align:left>Indicates whether to deploy the Kubernetes dashboard. If selected, the Kubernetes dashboard will be available at the configured domain (see below).</td>
+<td style=text-align:left>Yes</td>
+<td style=text-align:left>Yes</td>
 </tr>
 <tr>
-<td>Dashboard domain</td>
-<td>The domain to use for the Kubernetes dashboard. If left empty, <code>dashboard.&lt;dashed-external-ip>.sslip.io</code> is used. For example, if the selected external IP is <code>192.171.139.83</code>, the domain will be <code>dashboard.192-171-139-83.sslip.io</code>. If given, the domain must already be configured to point to the selected <strong>External IP</strong> , otherwise configuration will fail. Only use this option if you have control over your own DNS entries - the CaaS system or Kubernetes will not create a DNS entry for you.</td>
-<td>No</td>
-<td>No</td>
+<td style=text-align:left>Dashboard domain</td>
+<td style=text-align:left>The domain to use for the Kubernetes dashboard. If left empty, <code>dashboard.&lt;dashed-external-ip>.sslip.io</code> is used. For example, if the selected external IP is <code>192.171.139.83</code>, the domain will be <code>dashboard.192-171-139-83.sslip.io</code>. If given, the domain must already be configured to point to the selected <strong>External IP</strong> , otherwise configuration will fail. Only use this option if you have control over your own DNS entries - the CaaS system or Kubernetes will not create a DNS entry for you.</td>
+<td style=text-align:left>No</td>
+<td style=text-align:left>No</td>
 </tr>
 </tbody>
 </table>
@@ -1699,7 +1699,7 @@ Copyright © 2024 Science and Technology Facilities Council.
 <div class=toast-body>Code copied to clipboard</div>
 </div>
 </div>
-<script src=/js/main.bundle.en.min.3d0c14c04facfb3fb8092f224950f223a3c642302c425a8e2810f771f1c1b058.js integrity="sha256-PQwUwE+s+z+4CS8iSVDyI6PGQjAsQlqOKBD3cfHBsFg=" crossorigin=anonymous async></script>
+<script src=/js/main.bundle.en.min.1923e7fc436148bdb79416a01a88fbcd7b4691b5edb77a58b84f73f91444b7d6.js integrity="sha256-GSPn/ENhSL23lBagGoj7zXtGkbXtt3pYuE9z+RREt9Y=" crossorigin=anonymous async></script>
 <script src=/js/jquery.min.js></script>
 <script src=/js/jquery.cookie-consent.js></script>
 <script type=text/javascript>

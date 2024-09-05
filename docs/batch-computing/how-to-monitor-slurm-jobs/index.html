@@ -15,7 +15,7 @@
 <script async src="https://cse.google.com/cse.js?cx=b0a2e1d21b00e4028"></script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.132.0">
+<meta name=generator content="Hugo 0.134.0">
 <meta name=theme content="Hinode 0.11.2">
 <link rel=stylesheet href="/css/main.min.cf15e9b1687b2cdbb0d6695df97d4abae443fd4a604ac1273ce0c0ba62572b8c.css" integrity="sha256-zxXpsWh7LNuw1mld+X1KuuRD/UpgSsEnPODAumJXK4w=" crossorigin=anonymous>
 <link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
@@ -1179,51 +1179,51 @@ typical job states are defined in Table 1</p>
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Symbol</th>
-<th>Job state</th>
-<th>Description</th>
+<th style=text-align:left>Symbol</th>
+<th style=text-align:left>Job state</th>
+<th style=text-align:left>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>PD</td>
-<td>Pending</td>
-<td>The job is waiting in a queue for allocation of resources</td>
+<td style=text-align:left>PD</td>
+<td style=text-align:left>Pending</td>
+<td style=text-align:left>The job is waiting in a queue for allocation of resources</td>
 </tr>
 <tr>
-<td>R</td>
-<td>Running</td>
-<td>The job currently is allocated to a node and is running</td>
+<td style=text-align:left>R</td>
+<td style=text-align:left>Running</td>
+<td style=text-align:left>The job currently is allocated to a node and is running</td>
 </tr>
 <tr>
-<td>CG</td>
-<td>Completing</td>
-<td>The job is finishing but some processes are still active</td>
+<td style=text-align:left>CG</td>
+<td style=text-align:left>Completing</td>
+<td style=text-align:left>The job is finishing but some processes are still active</td>
 </tr>
 <tr>
-<td>CD</td>
-<td>Completed</td>
-<td>The job has completed successfully</td>
+<td style=text-align:left>CD</td>
+<td style=text-align:left>Completed</td>
+<td style=text-align:left>The job has completed successfully</td>
 </tr>
 <tr>
-<td>F</td>
-<td>Failed</td>
-<td>Failed with non-zero exit value</td>
+<td style=text-align:left>F</td>
+<td style=text-align:left>Failed</td>
+<td style=text-align:left>Failed with non-zero exit value</td>
 </tr>
 <tr>
-<td>TO</td>
-<td>Terminated</td>
-<td>Job terminated by Slurm after reaching its runtime limit</td>
+<td style=text-align:left>TO</td>
+<td style=text-align:left>Terminated</td>
+<td style=text-align:left>Job terminated by Slurm after reaching its runtime limit</td>
 </tr>
 <tr>
-<td>S</td>
-<td>Suspended</td>
-<td>A running job has been stopped with its resources released to other jobs</td>
+<td style=text-align:left>S</td>
+<td style=text-align:left>Suspended</td>
+<td style=text-align:left>A running job has been stopped with its resources released to other jobs</td>
 </tr>
 <tr>
-<td>ST</td>
-<td>Stopped</td>
-<td>A running job has been stopped with its resources retained</td>
+<td style=text-align:left>ST</td>
+<td style=text-align:left>Stopped</td>
+<td style=text-align:left>A running job has been stopped with its resources retained</td>
 </tr>
 </tbody>
 </table>
@@ -1238,38 +1238,38 @@ jobs</p>
 <table class="table table-striped">
 <thead>
 <tr>
-<th>Slurm Command</th>
-<th>Description</th>
+<th style=text-align:left>Slurm Command</th>
+<th style=text-align:left>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>squeue</code></td>
-<td>To view information for all jobs running and pending on the cluster</td>
+<td style=text-align:left><code>squeue</code></td>
+<td style=text-align:left>To view information for all jobs running and pending on the cluster</td>
 </tr>
 <tr>
-<td><code>squeue --user=username</code></td>
-<td>Displays running and pending jobs per individual user</td>
+<td style=text-align:left><code>squeue --user=username</code></td>
+<td style=text-align:left>Displays running and pending jobs per individual user</td>
 </tr>
 <tr>
-<td><code>squeue --states=PD</code></td>
-<td>Displays information for pending jobs (PD state) and their reasons</td>
+<td style=text-align:left><code>squeue --states=PD</code></td>
+<td style=text-align:left>Displays information for pending jobs (PD state) and their reasons</td>
 </tr>
 <tr>
-<td><code>squeues --states=all</code></td>
-<td>Shows a summary of the number of jobs in different states</td>
+<td style=text-align:left><code>squeues --states=all</code></td>
+<td style=text-align:left>Shows a summary of the number of jobs in different states</td>
 </tr>
 <tr>
-<td><code>scontrol show job JOBID</code></td>
-<td>Shows detailed information about your job (JOBID = job number) by searching the current event log file</td>
+<td style=text-align:left><code>scontrol show job JOBID</code></td>
+<td style=text-align:left>Shows detailed information about your job (JOBID = job number) by searching the current event log file</td>
 </tr>
 <tr>
-<td><code>sacct -b</code></td>
-<td>Shows a brief listing of past jobs</td>
+<td style=text-align:left><code>sacct -b</code></td>
+<td style=text-align:left>Shows a brief listing of past jobs</td>
 </tr>
 <tr>
-<td><code>sacct -l -j JOBID</code></td>
-<td>Shows detailed historical job information of a past job with jobID</td>
+<td style=text-align:left><code>sacct -l -j JOBID</code></td>
+<td style=text-align:left>Shows detailed historical job information of a past job with jobID</td>
 </tr>
 </tbody>
 </table>
@@ -1469,7 +1469,7 @@ Copyright © 2024 Science and Technology Facilities Council.
 <div class=toast-body>Code copied to clipboard</div>
 </div>
 </div>
-<script src=/js/main.bundle.en.min.3d0c14c04facfb3fb8092f224950f223a3c642302c425a8e2810f771f1c1b058.js integrity="sha256-PQwUwE+s+z+4CS8iSVDyI6PGQjAsQlqOKBD3cfHBsFg=" crossorigin=anonymous async></script>
+<script src=/js/main.bundle.en.min.1923e7fc436148bdb79416a01a88fbcd7b4691b5edb77a58b84f73f91444b7d6.js integrity="sha256-GSPn/ENhSL23lBagGoj7zXtGkbXtt3pYuE9z+RREt9Y=" crossorigin=anonymous async></script>
 <script src=/js/jquery.min.js></script>
 <script src=/js/jquery.cookie-consent.js></script>
 <script type=text/javascript>

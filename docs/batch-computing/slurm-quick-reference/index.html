@@ -15,7 +15,7 @@
 <script async src="https://cse.google.com/cse.js?cx=b0a2e1d21b00e4028"></script>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.132.0">
+<meta name=generator content="Hugo 0.134.0">
 <meta name=theme content="Hinode 0.11.2">
 <link rel=stylesheet href="/css/main.min.cf15e9b1687b2cdbb0d6695df97d4abae443fd4a604ac1273ce0c0ba62572b8c.css" integrity="sha256-zxXpsWh7LNuw1mld+X1KuuRD/UpgSsEnPODAumJXK4w=" crossorigin=anonymous>
 <link rel=preload href=/fonts/inter-v12-latin-regular.woff2 as=font type=font/woff2 crossorigin>
@@ -1223,26 +1223,26 @@ and <a href=https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/>O
 <table class="table table-striped">
 <thead>
 <tr>
-<th><strong>Slurm command</strong></th>
-<th><strong>Description</strong></th>
+<th style=text-align:left><strong>Slurm command</strong></th>
+<th style=text-align:left><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>sbatch <em>script_file</em></td>
-<td>Submit a job script to the scheduler</td>
+<td style=text-align:left>sbatch <em>script_file</em></td>
+<td style=text-align:left>Submit a job script to the scheduler</td>
 </tr>
 <tr>
-<td>sinfo</td>
-<td>Show available scheduling queues</td>
+<td style=text-align:left>sinfo</td>
+<td style=text-align:left>Show available scheduling queues</td>
 </tr>
 <tr>
-<td>squeue -u <em>&lt;username></em></td>
-<td>List user&rsquo;s pending and running jobs</td>
+<td style=text-align:left>squeue -u <em>&lt;username></em></td>
+<td style=text-align:left>List user&rsquo;s pending and running jobs</td>
 </tr>
 <tr>
-<td>srun -n 1 -p test --pty /bin/bash</td>
-<td>Request an interactive session on LOTUS</td>
+<td style=text-align:left>srun -n 1 -p test --pty /bin/bash</td>
+<td style=text-align:left>Request an interactive session on LOTUS</td>
 </tr>
 </tbody>
 </table>
@@ -1383,26 +1383,26 @@ and <a href=https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/>O
 <table class="table table-striped">
 <thead>
 <tr>
-<th><strong>Slurm command</strong></th>
-<th><strong>Description</strong></th>
+<th style=text-align:left><strong>Slurm command</strong></th>
+<th style=text-align:left><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>scancel <em>&lt;jobid></em></td>
-<td>Kill a job</td>
+<td style=text-align:left>scancel <em>&lt;jobid></em></td>
+<td style=text-align:left>Kill a job</td>
 </tr>
 <tr>
-<td>scontrol show job <em>&lt;jobid></em></td>
-<td>Show details job information</td>
+<td style=text-align:left>scontrol show job <em>&lt;jobid></em></td>
+<td style=text-align:left>Show details job information</td>
 </tr>
 <tr>
-<td>scontrol update job <em>&lt;jobid></em></td>
-<td>Modify a pending job</td>
+<td style=text-align:left>scontrol update job <em>&lt;jobid></em></td>
+<td style=text-align:left>Modify a pending job</td>
 </tr>
 <tr>
-<td>scancel --user=<em>&lt;username></em></td>
-<td>Kill all jobs owned by a user</td>
+<td style=text-align:left>scancel --user=<em>&lt;username></em></td>
+<td style=text-align:left>Kill all jobs owned by a user</td>
 </tr>
 </tbody>
 </table>
@@ -1413,30 +1413,30 @@ and <a href=https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/>O
 <table class="table table-striped">
 <thead>
 <tr>
-<th><strong>Slurm variable</strong></th>
-<th><strong>Description</strong></th>
+<th style=text-align:left><strong>Slurm variable</strong></th>
+<th style=text-align:left><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>$SLURM_JOBID</td>
-<td>Job identifier number</td>
+<td style=text-align:left>$SLURM_JOBID</td>
+<td style=text-align:left>Job identifier number</td>
 </tr>
 <tr>
-<td>$SLURM_ARRAY_JOB_ID</td>
-<td>Job array</td>
+<td style=text-align:left>$SLURM_ARRAY_JOB_ID</td>
+<td style=text-align:left>Job array</td>
 </tr>
 <tr>
-<td>$SLURM_ARRAY_TASK_ID</td>
-<td>Job array index</td>
+<td style=text-align:left>$SLURM_ARRAY_TASK_ID</td>
+<td style=text-align:left>Job array index</td>
 </tr>
 <tr>
-<td>$SLURM_ARRAY_TASK_MAX</td>
-<td>Last index number within a job array</td>
+<td style=text-align:left>$SLURM_ARRAY_TASK_MAX</td>
+<td style=text-align:left>Last index number within a job array</td>
 </tr>
 <tr>
-<td>$SLURM_NTASKS</td>
-<td>Number of processors allocated</td>
+<td style=text-align:left>$SLURM_NTASKS</td>
+<td style=text-align:left>Number of processors allocated</td>
 </tr>
 </tbody>
 </table>
@@ -1595,7 +1595,7 @@ Copyright © 2024 Science and Technology Facilities Council.
 <div class=toast-body>Code copied to clipboard</div>
 </div>
 </div>
-<script src=/js/main.bundle.en.min.3d0c14c04facfb3fb8092f224950f223a3c642302c425a8e2810f771f1c1b058.js integrity="sha256-PQwUwE+s+z+4CS8iSVDyI6PGQjAsQlqOKBD3cfHBsFg=" crossorigin=anonymous async></script>
+<script src=/js/main.bundle.en.min.1923e7fc436148bdb79416a01a88fbcd7b4691b5edb77a58b84f73f91444b7d6.js integrity="sha256-GSPn/ENhSL23lBagGoj7zXtGkbXtt3pYuE9z+RREt9Y=" crossorigin=anonymous async></script>
 <script src=/js/jquery.min.js></script>
 <script src=/js/jquery.cookie-consent.js></script>
 <script type=text/javascript>

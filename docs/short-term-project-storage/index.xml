@@ -1,6 +1,376 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Short term project storage on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/</link><description>Recent content in Short term project storage on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/short-term-project-storage/index.xml" rel="self" type="application/rss+xml"/><item><title>GWS Scanner UI</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner-ui/</link><pubDate>Mon, 17 Jul 2023 15:21:46 +0100</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner-ui/</guid><description>The Group Workspace (GWS) Scanner UI is an interactive web application for JASMIN users to view their GWSs.
-Please note this service is under beta-testing and should be used with care (July 2023)</description></item><item><title>Joint-storage Data Migration App (JDMA)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/</link><pubDate>Thu, 20 Oct 2022 11:32:46 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/</guid><description>&amp;nbsp; A new system called NLDS is in development and will eventually replace both Elastic Tape and JDMA. See the JDMA user documentation at:cedadev.</description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 07 Dec 2020 14:50:54 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>What is HTTP data sharing? &amp;nbsp; Specific parts of JASMIN Group Workspaces (GWSs) can be made available via HTTP, so that:</description></item><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>This article explains how to apply for access to a GWS from the JASMIN account portal.
-Step 1 : Sign in into your JASMIN accounts portal.</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>Introduction &amp;nbsp; This article describes how to configure Cross-Origin Resource Sharing (CORS) on a JASMIN Caringo S3 object store.</description></item><item><title>Elastic Tape command-line interface hints</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</guid><description>&amp;nbsp; Information below relates to the Elastic Tape command-line tools. The JDMA system provides a better interface for putting/retrieving data into the Elastic Tape System) A new system called NLDS is coming very shortly (as of Feb 2023) and will eventually replace both of these.</description></item><item><title>GWS Alert System</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-alert-system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-alert-system/</guid><description>The Group Workspace (GWS) Alert system is a python app which alerts the managers/deputies of a GWS when their GWS is reaching full capacity.</description></item><item><title>GWS etiquette</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-etiquette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-etiquette/</guid><description>This article highlights the essential principles of working with group workspaces.
-Keeping informed &amp;nbsp; Please maintain contact throughout the life of the GWS via the following methods:</description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>Introduction &amp;nbsp; This article explains about the process that runs in the background scanning all group workspaces to gather basic information about usage, which are fed into a database to be made available to users via the GWS Scanner User Interface.</description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>XFC client install &amp;nbsp; In order to initiate and manage your usage of the XFC (transfer cache) service, you need to use the XFC client.</description></item><item><title>Managing a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</guid><description>This article explains the responsibilities of the Group Workspace (GWS) manager.
-Role of the GWS Manager &amp;nbsp; When a GWS is created it is important that the designated GWS Manager understands the responsibilities associated with the role.</description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&amp;nbsp; This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage.</description></item><item><title>Secondary copy using Elastic Tape</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</guid><description>&amp;nbsp; Information below relates to the Elastic Tape command-line tools. The JDMA system provides a better interface for putting/retrieving data into the Elastic Tape System) A new system called NLDS is coming very shortly (as of Feb 2023) and will eventually replace both of these.</description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>Introduction &amp;nbsp; This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>What is the XFC? &amp;nbsp; The Transfer Cache (XFC) provides a large area of temporary storage for users of JASMIN to store large files and/or a large volume of files on a short-term basis.</description></item><item><title>Using the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</guid><description>This article describes how to use the JASMIN high-performance object storage.
-What is object storage? &amp;nbsp; An object store&amp;nbsp; is a data storage system that manages data as objects referenced by a globally unique identifier, with attached metadata.</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>Introduction &amp;nbsp; This article describes the way that storage is usually provided to projects on JASMIN: the Group Workspace (GWS).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Short term project storage on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/</link><description>Recent content in Short term project storage on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/short-term-project-storage/index.xml" rel="self" type="application/rss+xml"/><item><title>GWS Scanner UI</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner-ui/</link><pubDate>Mon, 17 Jul 2023 15:21:46 +0100</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner-ui/</guid><description>&lt;p>The &lt;a href="https://gws-scanner.jasmin.ac.uk/">Group Workspace (GWS) Scanner&lt;/a> UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p>
+&lt;p>&lt;strong>&lt;em>Please note this service is under beta-testing and should be used with care (July 2023)&lt;/em>&lt;/strong>&lt;/p></description></item><item><title>Joint-storage Data Migration App (JDMA)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/</link><pubDate>Thu, 20 Oct 2022 11:32:46 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ A new system called &lt;a href="https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html">NLDS&lt;/a> is in development and will eventually replace both Elastic Tape and JDMA.
+ &lt;/div>
+ &lt;/div>
+&lt;p>&lt;strong>See the JDMA user documentation
+at:&lt;a href="https://cedadev.github.io/jdma_client/docs/build/html/index.html">cedadev.github.io/jdma_client&lt;/a>
+for more information about using JDMA.&lt;/strong>&lt;/p></description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 07 Dec 2020 14:50:54 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading">What is HTTP data sharing? &lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>Specific parts of JASMIN Group Workspaces (GWSs) can be made available via
+HTTP, so that:&lt;/p></description></item><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p>This article explains how to apply for access to a GWS from the JASMIN account
+portal.&lt;/p>
+&lt;p>&lt;strong>Step 1&lt;/strong> : Sign in into your &lt;a href="https://accounts.jasmin.ac.uk/">JASMIN accounts
+portal&lt;/a>. Navigate to the JASMIN services tab
+of the portal then select the group workspaces from &amp;ldquo;Discover services&amp;rdquo; menu.
+You can search or browse a list of available GWSs. For example here the search
+for GWS with name containing CEDA, resulted in two GWSs.&lt;/p></description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>This article describes how to configure Cross-Origin Resource Sharing (CORS) on a JASMIN Caringo S3 object store.&lt;/p></description></item><item><title>Elastic Tape command-line interface hints</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ &lt;ul>
+&lt;li>Information below relates to the Elastic Tape command-line tools. The &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/">JDMA&lt;/a> system provides a better interface for putting/retrieving data into the Elastic Tape System)&lt;/li>
+&lt;li>A new system called &lt;a href="https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html">NLDS&lt;/a> is coming very shortly (as of Feb 2023) and will eventually replace both of these.&lt;/li>
+&lt;/ul>
+
+ &lt;/div>
+ &lt;/div>
+&lt;p>This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p></description></item><item><title>GWS Alert System</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-alert-system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-alert-system/</guid><description>&lt;p>The Group Workspace (GWS) Alert system is a python app which alerts the managers/deputies of a GWS when their GWS is reaching full capacity.&lt;/p></description></item><item><title>GWS etiquette</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-etiquette/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-etiquette/</guid><description>&lt;p>This article highlights the essential principles of working with group
+workspaces.&lt;/p>
+
+&lt;h2 id="keeping-informed" class="heading">Keeping informed &lt;a href="#keeping-informed" aria-labelledby="keeping-informed">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>Please maintain contact throughout the life of the GWS via the following
+methods:&lt;/p></description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>This article explains about the process that runs in the background scanning all group workspaces to gather basic information about usage, which are fed into a database to be made available to users via the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner-ui/">GWS Scanner User Interface&lt;/a>.&lt;/p></description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>&lt;h2 id="xfc-client-install" class="heading">XFC client install &lt;a href="#xfc-client-install" aria-labelledby="xfc-client-install">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>In order to initiate and manage your usage of the XFC (transfer cache)
+service, you need to use the XFC client.&lt;/p></description></item><item><title>Managing a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</guid><description>&lt;p>This article explains the responsibilities of the Group Workspace (GWS)
+manager.&lt;/p>
+
+&lt;h2 id="role-of-the-gws-manager" class="heading">Role of the GWS Manager &lt;a href="#role-of-the-gws-manager" aria-labelledby="role-of-the-gws-manager">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>When a GWS is created it is important that the designated GWS Manager
+understands the responsibilities associated with the role. The GWS Manager has
+a duty to:&lt;/p></description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.
+ &lt;/div>
+ &lt;/div>
+&lt;p>Workflows with some of the issues highlighted below will have a knock on
+effect for other users, so please take the time to check and change your code
+to make appropriate use of new storage system. If used correctly, the new
+storage offers us a high performance scalable file system, with the capability
+for object storage as tools and interfaces evolve, and we can continue to
+serve the growing demand for storage in the most cost effective manner.&lt;/p></description></item><item><title>Secondary copy using Elastic Tape</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ &lt;ul>
+&lt;li>Information below relates to the Elastic Tape command-line tools. The &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/">JDMA&lt;/a> system provides a better interface for putting/retrieving data into the Elastic Tape System)&lt;/li>
+&lt;li>A new system called &lt;a href="https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html">NLDS&lt;/a> is coming very shortly (as of Feb 2023) and will eventually replace both of these.&lt;/li>
+&lt;/ul>
+
+ &lt;/div>
+ &lt;/div>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>Elastic Tape is a system developed for use with JASMIN Group Workspaces
+(GWSs), enabling the Group Workspace Manager to:&lt;/p></description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.&lt;/p></description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading">What is the XFC? &lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>The Transfer Cache (XFC) provides a large area of temporary storage for
+users of JASMIN to store large files and/or a large volume of files on a
+short-term basis.&lt;/p></description></item><item><title>Using the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</guid><description>&lt;p>This article describes how to use the JASMIN high-performance object storage.&lt;/p>
+
+&lt;h2 id="what-is-object-storage" class="heading">What is object storage? &lt;a href="#what-is-object-storage" aria-labelledby="what-is-object-storage">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>An 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://en.wikipedia.org/wiki/Object_storage" target="_blank" rel="noopener noreferrer">object store&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> is a data
+storage system that manages data as objects referenced by a globally unique
+identifier, with attached metadata. This is a fundamental change from
+traditional file systems that you may be used to, as there is no directory
+hierarchy - the objects exist in a single flat domain. These semantics allow
+the object store to scale out much more easily than a traditional shared file
+system.&lt;/p></description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>This article describes the way that storage is usually provided to projects on JASMIN: the &lt;strong>Group Workspace (GWS)&lt;/strong>.&lt;/p></description></item></channel></rss>

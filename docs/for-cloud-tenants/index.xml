@@ -1,8 +1,527 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>For Cloud Tenants on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/</link><description>Recent content in For Cloud Tenants on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/for-cloud-tenants/index.xml" rel="self" type="application/rss+xml"/><item><title>Adding and removing SSH keys from an External Cloud VM</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</link><pubDate>Tue, 23 May 2023 14:27:10 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</guid><description>When you create a machine in a JASMIN External Cloud tenancy, the SSH key associated with your JASMIN account is uploaded to the machine to grant you access to the machine as root:</description></item><item><title>Best practice</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</guid><description>External Cloud Tenancy additional notes
-Best practice guides for “server hardening” of Linux machines facing the internet:
-https://www.slideshare.net/myowntelco/centos-linux-server-hardening And particularly for web servers:</description></item><item><title>Cluster-as-a-Service</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</guid><description>Introduction &amp;nbsp; JASMIN Cluster-as-a-Service (CaaS) is a service on the JASMIN Cloud that aims to make it easy to provision and maintain clusters of various types by providing a simple, intuitive interface via the JASMIN Cloud Portal.</description></item><item><title>Cluster-as-a-Service - Identity Manager</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</guid><description>This article describes how to deploy and use the JASMIN Cluster-as-a-Service (CaaS) Identity Manager.
-Introduction &amp;nbsp; The Identity Manager consists of a FreeIPA server, a Keycloak server and a gateway/proxy server that work together to provide a single identity across all cluster types, whether via a web-browser, SSH or custom CLI tools like kubectl.</description></item><item><title>Cluster-as-a-service - Kubernetes</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</guid><description>This article describes how to deploy and use a Kubernetes cluster using JASMIN Cluster-as-a-Service (CaaS).
-Introduction &amp;nbsp; Kubernetes&amp;nbsp; is an open-source system for automating the deployment, scaling and management of containerised applications.</description></item><item><title>Cluster-as-a-Service - Pangeo</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</guid><description>This article describes how to deploy and use a Pangeo cluster using JASMIN Cluster-as-a-Service (CaaS).
-Introduction &amp;nbsp; Pangeo&amp;nbsp; is a community that promotes a philosophy of open, scalable and reproducible science, focusing primarily on the geosciences.</description></item><item><title>Cluster-as-a-Service - Shared storage</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</guid><description>This article describes how to deploy and use shared storage clusters using JASMIN Cluster-as-a-Service (CaaS).
-Introduction &amp;nbsp; CaaS provides shared storage clusters that can be mounted on multiple nodes to provide common storage across all those nodes.</description></item><item><title>Cluster-as-a-Service - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</guid><description>This article describes how to deploy and use a Slurm cluster using JASMIN Cluster-as-a-Service (CaaS).
-&amp;nbsp; CaaS Slurm clusters are currently disabled because of a security problem with the images that were being used.</description></item><item><title>Introduction to the JASMIN Cloud</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</guid><description>In addition to the traditional batch computing (LOTUS) and storage (Group Workspaces) services, JASMIN also provides a cloud computing service.</description></item><item><title>JASMIN Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</guid><description>The JASMIN Cloud Portal&amp;nbsp; is a web interface that enables the self-service provisioning of virtual machines in the JASMIN Cloud.</description></item><item><title>Provisioning a Sci VM in a Managed Cloud Tenancy</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</guid><description>This article is for admins and managers of managed-cloud tenancies and shows how to provision a sci VM within one. It involves the following:</description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>Managing storage &amp;nbsp; When provisioned, a virtual machine gets allocated a small hard disk (the exact size of the disk depends on the selected machine size).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>For Cloud Tenants on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/</link><description>Recent content in For Cloud Tenants on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/for-cloud-tenants/index.xml" rel="self" type="application/rss+xml"/><item><title>Adding and removing SSH keys from an External Cloud VM</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</link><pubDate>Tue, 23 May 2023 14:27:10 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</guid><description>&lt;p>When you create a machine in a JASMIN External Cloud tenancy, the SSH key
+associated with your JASMIN account is uploaded to the machine to grant you
+access to the machine as &lt;code>root&lt;/code>:&lt;/p></description></item><item><title>Best practice</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</guid><description>&lt;p>External Cloud Tenancy additional notes&lt;/p>
+&lt;p>Best practice guides for “server hardening” of Linux machines facing the
+internet:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.slideshare.net/myowntelco/centos-linux-server-hardening">https://www.slideshare.net/myowntelco/centos-linux-server-hardening&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>And particularly for web servers:&lt;/p></description></item><item><title>Cluster-as-a-Service</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>JASMIN Cluster-as-a-Service (CaaS) is a service on the JASMIN Cloud that aims
+to make it easy to provision and maintain clusters of various types by
+providing a simple, intuitive interface via the JASMIN Cloud Portal.&lt;/p></description></item><item><title>Cluster-as-a-Service - Identity Manager</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</guid><description>&lt;p>This article describes how to deploy and use the JASMIN Cluster-as-a-Service
+(CaaS) Identity Manager.&lt;/p>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>The Identity Manager consists of a
+&lt;a href="https://www.freeipa.org/page/Main_Page">FreeIPA&lt;/a> server, a
+&lt;a href="https://www.keycloak.org/">Keycloak&lt;/a> server and a gateway/proxy server that
+work together to provide a single identity across all cluster types, whether
+via a web-browser, SSH or custom CLI tools like &lt;code>kubectl&lt;/code>.&lt;/p></description></item><item><title>Cluster-as-a-service - Kubernetes</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</guid><description>&lt;p>This article describes how to deploy and use a Kubernetes cluster using JASMIN
+Cluster-as-a-Service (CaaS).&lt;/p>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> is an open-source system for automating
+the deployment, scaling and management of containerised applications.&lt;/p></description></item><item><title>Cluster-as-a-Service - Pangeo</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</guid><description>&lt;p>This article describes how to deploy and use a Pangeo cluster using JASMIN
+Cluster-as-a-Service (CaaS).&lt;/p>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://pangeo.io/" target="_blank" rel="noopener noreferrer">Pangeo&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> is a community that promotes a philosophy of
+open, scalable and reproducible science, focusing primarily on the
+geosciences. As part of that effort, the Pangeo community provides a curated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> ecosystem based on popular open-source
+packages like 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="http://xarray.pydata.org" target="_blank" rel="noopener noreferrer">xarray&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a>,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://scitools.org.uk/iris" target="_blank" rel="noopener noreferrer">Iris&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a>, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="http://dask.readthedocs.io" target="_blank" rel="noopener noreferrer">Dask&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> and
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="http://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter notebooks&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a>, along with documentation and recipes
+for deployment on various infrastructures.&lt;/p></description></item><item><title>Cluster-as-a-Service - Shared storage</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</guid><description>&lt;p>This article describes how to deploy and use shared storage clusters using
+JASMIN Cluster-as-a-Service (CaaS).&lt;/p>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>CaaS provides shared storage clusters that can be mounted on multiple nodes to
+provide common storage across all those nodes.&lt;/p></description></item><item><title>Cluster-as-a-Service - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</guid><description>&lt;p>This article describes how to deploy and use a Slurm cluster using JASMIN
+Cluster-as-a-Service (CaaS).&lt;/p>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+ 
+
+&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ CaaS Slurm clusters are currently disabled because of a security problem
+with the images that were being used. We are working on a new system which
+will provide slurm clusters.
+ &lt;/div>
+ &lt;/div>
+
+&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>The &lt;a href="https://slurm.schedmd.com/">Slurm Workload Manager&lt;/a> is a popular open-
+source job scheduler. It provides facilities for executing and monitoring
+workloads across a set of nodes and managing contention for those nodes by
+maintaining a queue of pending jobs.&lt;/p></description></item><item><title>Introduction to the JASMIN Cloud</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</guid><description>&lt;p>In addition to the traditional batch computing (LOTUS) and storage (Group
+Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p></description></item><item><title>JASMIN Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</guid><description>&lt;p>The 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://cloud.jasmin.ac.uk" target="_blank" rel="noopener noreferrer">JASMIN Cloud Portal&amp;nbsp;
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+ 
+&lt;/a> is a web interface that
+enables the self-service provisioning of virtual machines in the JASMIN Cloud.&lt;/p></description></item><item><title>Provisioning a Sci VM in a Managed Cloud Tenancy</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</guid><description>&lt;p>This article is for admins and managers of managed-cloud tenancies
+and shows how to provision a sci VM within one. It involves the following:&lt;/p></description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>&lt;h2 id="managing-storage" class="heading">Managing storage &lt;a href="#managing-storage" aria-labelledby="managing-storage">
+
+
+
+
+
+
+
+
+
+ 
+
+ &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
+
+ &amp;nbsp;
+&lt;/a>&lt;/h2>
+&lt;p>When provisioned, a virtual machine gets allocated a small hard disk (the
+exact size of the disk depends on the selected machine size). This disk is
+intended to run the operating system only. If you require additional storage
+for data, it is possible to add extra volumes to a virtual machine.&lt;/p></description></item></channel></rss>

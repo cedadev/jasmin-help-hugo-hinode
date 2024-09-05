@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Matlab on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/matlab/</link><description>Recent content in Matlab on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><lastBuildDate>Thu, 04 Jan 2024 17:38:34 +0000</lastBuildDate><atom:link href="https://help.jasmin.ac.uk/tags/matlab/index.xml" rel="self" type="application/rss+xml"/><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Fri, 21 Oct 2022 12:10:33 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>Why do I have to load/activate a software environment? We have a range of different users on JASMIN who work on many different projects.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Matlab on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/matlab/</link><description>Recent content in Matlab on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><lastBuildDate>Thu, 04 Jan 2024 17:38:34 +0000</lastBuildDate><atom:link href="https://help.jasmin.ac.uk/tags/matlab/index.xml" rel="self" type="application/rss+xml"/><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Fri, 21 Oct 2022 12:10:33 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ &lt;div class="accordion-item">&lt;h2 class="accordion-header m-0" id="accordion-default-heading-0">
+ &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-default-item-0" aria-expanded="false" aria-controls="accordion-default-item-0">
+ Why do I have to load/activate a software environment?
+ &lt;/button>
+ &lt;/h2>&lt;div id="accordion-default-item-0" class="accordion-collapse collapse" aria-labelledby="accordion-default-heading-0" data-bs-parent="#accordion-default">
+ &lt;div class="accordion-body">&lt;p>We have a range of different users on JASMIN who work on many different
+projects. Each project has its own software requirements and timeline. By
+providing multiple software environments (such as Python2.7 and Python3.7) we
+can support a wider range of users on the same platform. Since we do not
+assume a &amp;ldquo;standard&amp;rdquo; environment it is up to the user to &amp;ldquo;load&amp;rdquo; (or &amp;ldquo;activate&amp;rdquo;)
+a software environment before usage. This is typically done by using:&lt;/p></description></item></channel></rss>

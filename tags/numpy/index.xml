@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numpy on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/numpy/</link><description>Recent content in Numpy on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/numpy/index.xml" rel="self" type="application/rss+xml"/><item><title>Running python on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</guid><description>&lt;p>On the JASMIN analysis machines and on Lotus, we currently support
-Python version 3.10 through &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p>
-&lt;p>When you log in, the default version of Python is &lt;code>2.7.5&lt;/code> which is the used by the
-operating system. You shoud now use a more modern version of Python as v2.x is now deprecated.
-We recomment using the Jaspy environments. In this example, we
-activate the current Jaspy environment before running Python.&lt;/p></description></item></channel></rss>
+Python version 3.10 through 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p></description></item></channel></rss>

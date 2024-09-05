@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Access on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/access/</link><description>Recent content in Access on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/access/index.xml" rel="self" type="application/rss+xml"/><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p>This article explains how to apply for access to a GWS from the JASMIN account
 portal.&lt;/p>
-&lt;p>&lt;strong>Step 1&lt;/strong> : Sign in into your &lt;a href="https://accounts.jasmin.ac.uk/">JASMIN accounts
-portal&lt;/a>. Navigate to the JASMIN services tab
+&lt;p>&lt;strong>Step 1&lt;/strong> : Sign in into your 
+ 
+
+
+
+
+
+
+&lt;a href="https://accounts.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer">JASMIN accounts
+portal&amp;nbsp;
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>. Navigate to the JASMIN services tab
 of the portal then select the group workspaces from &amp;ldquo;Discover services&amp;rdquo; menu.
 You can search or browse a list of available GWSs. For example here the search
 for GWS with name containing CEDA, resulted in two GWSs.&lt;/p></description></item><item><title>Approving requests for access roles</title><link>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</guid><description>&lt;p>Managers of JASMIN resources will also be set up to approve applications from

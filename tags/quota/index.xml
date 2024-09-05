@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quota on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/quota/</link><description>Recent content in Quota on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/quota/index.xml" rel="self" type="application/rss+xml"/><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
-&lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/">Understanding new JASMIN storage&lt;/a>
-which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p></description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading">How projects and resources are managed &lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed">
 
+ 
 
 
 
@@ -11,11 +10,10 @@ which explains more about the different types of storage as of Phase 4 of JASMIN
 
 
  
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/">Understanding new JASMIN storage&lt;/a>
+which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p></description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading">How projects and resources are managed &lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>Resouces on JASMIN, such as storage and compute, are allocated to science
 communities separated into &amp;ldquo;consortia&amp;rdquo;. Each consortium has a manager: a
 representative of that science community who is in touch with its major

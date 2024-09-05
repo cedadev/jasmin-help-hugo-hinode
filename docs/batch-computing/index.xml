@@ -6,27 +6,13 @@ part of JASMIN. It covers:&lt;/p>
 &lt;/ul>
 
 &lt;h2 id="what-is-lotus" class="heading">What is LOTUS &lt;a href="#what-is-lotus" aria-labelledby="what-is-lotus">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>LOTUS is not, in itself, a High-Performance Computing (HPC) facility, but
 provides the batch and parallel processing component of the JASMIN data-
 intensive scientific analysis environment. LOTUS is a cluster of physical
-machines, running the &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/">Slurm workload manager&lt;/a>, enabling efficient scheduling of larger data analysis tasks
-across nodes in the cluster as a single unit -see Figure 1.&lt;/p></description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;h2 id="what-is-a-job-scheduler" class="heading">What is a Job Scheduler? &lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler">
-
+machines, running the 
+ 
 
 
 
@@ -36,14 +22,24 @@ across nodes in the cluster as a single unit -see Figure 1.&lt;/p></description>
 
 
  
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/">Slurm workload manager&lt;/a>, enabling efficient scheduling of larger data analysis tasks
+across nodes in the cluster as a single unit -see Figure 1.&lt;/p></description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;h2 id="what-is-a-job-scheduler" class="heading">What is a Job Scheduler? &lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>A job or batch scheduler, is a tool that manages how user jobs
 are queued and run on a set of compute resources. In the case of LOTUS the
-compute resources are the set of compute nodes that make up the &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/">LOTUS hardware&lt;/a>. Each user can submit
+compute resources are the set of compute nodes that make up the 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/">LOTUS hardware&lt;/a>. Each user can submit
 jobs to the scheduler which then decides which jobs to run and where to
 execute them. The scheduler manages the jobs to ensure that the compute
 resources are being used efficiently and that users get appropriate access to
@@ -51,38 +47,22 @@ those resources.&lt;/p></description></item><item><title>Orchid GPU cluster</tit
 cluster, named &lt;strong>ORCHID&lt;/strong>.&lt;/p>
 
 &lt;h2 id="gpu-cluster-spec" class="heading">GPU cluster spec &lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec">
-
-
-
-
-
-
-
-
-
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p></description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 08 Mar 2021 15:47:16 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p>The 
  
 
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
 
- &amp;nbsp;
-&lt;/a>&lt;/h2>
-&lt;p>The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p></description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 08 Mar 2021 15:47:16 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p>The &lt;a href="https://mon.jasmin.ac.uk/">JASMIN dashboard&lt;/a> includes an overview of:
+
+
+
+
+&lt;a href="https://mon.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer">JASMIN dashboard&amp;nbsp;
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> includes an overview of:
 LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p></description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Wed, 20 May 2020 13:13:23 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading">Job information &lt;a href="#job-information" aria-labelledby="job-information">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>Information on all running and pending batch jobs managed by Slurm can be
 obtained from the Slurm command &lt;code>squeue&lt;/code>. Note that information on completed
 jobs is only retained for a limited period. Information on jobs that ran in
@@ -91,60 +71,21 @@ relatively simple tasks. Others may wish to use these examples as a starting
 point for developing their own workflows on LOTUS.&lt;/p></description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;p>This article explains how to submit a batch job to the new scheduler Slurm.&lt;/p>
 
 &lt;h2 id="what-is-a-batch-job" class="heading">What is a batch job? &lt;a href="#what-is-a-batch-job" aria-labelledby="what-is-a-batch-job">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>A batch job is controlled by a script written by the user who submits the job
 to the batch system Slurm. The batch system then selects the resources for the
 job and decides when to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
 this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p></description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;p>This article explains the submission of an MPI parallel job to Slurm/ LOTUS.&lt;/p>
 
 &lt;h2 id="what-is-an-mpi-parallel-job" class="heading">What is an MPI parallel job? &lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>An MPI parallel job runs on more than one core and more than one host using
 the Message Passing Interface (MPI) library for communication between all
 cores. A simple script, such as the one given below &amp;ldquo;my_script_name.sbatch &amp;quot;&lt;/p></description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading">Current cluster specification &lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>LOTUS is a cluster of over 300 nodes/hosts and 19000 CPU cores. A node/host is
 an individual computer in the cluster with more than 1 processor. Each
 node/host belongs to a specific host group. The number of processors (CPUs or
@@ -153,37 +94,11 @@ and the size of the physical memory RAM available per node/host.&lt;/p></descrip
 submissions to the LOTUS and ORCHID clusters.&lt;/p>
 
 &lt;h2 id="queue-names" class="heading">Queue names &lt;a href="#queue-names" aria-labelledby="queue-names">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>The Slurm queues in the LOTUS cluster are:&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler &lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
-
-
-
-
-
-
-
-
-
- 
-
- &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>&lt;/svg>
-
- &amp;nbsp;
-&lt;/a>&lt;/h2>
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>
 
 
@@ -210,8 +125,12 @@ submissions to the LOTUS and ORCHID clusters.&lt;/p>
 
 
 
+
 &lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer">Slurm&amp;nbsp;
-
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is the job scheduler deployed on JASMIN. It
+allows users to submit, monitor, and control jobs on the 
+ 
 
 
 
@@ -221,10 +140,16 @@ submissions to the LOTUS and ORCHID clusters.&lt;/p>
 
 
  
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a> (CPU)
+and 
+ 
 
- &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->&lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/>&lt;/svg>
+
+
+
+
+
+
 
  
-&lt;/a> is the job scheduler deployed on JASMIN. It
-allows users to submit, monitor, and control jobs on the &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a> (CPU)
-and &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/">ORCHID&lt;/a> (GPU) clusters.&lt;/p></description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/">ORCHID&lt;/a> (GPU) clusters.&lt;/p></description></item></channel></rss>

@@ -8,19 +8,23 @@ title: The Azimuth Cloud Portal
 
 ## Key features include:
 
-### Multiple Authentication Methods:
+#### Multiple Authentication Methods:
 
-Supports username/password, Keystone federation, and application credentials.
+Azimuth supports the following authentication methods:
 
-### On-demand Platforms:
+- username/password
+- Keystone federation, and
+- application credentials.
 
-Unified interface for managing Kubernetes and Cluster-as-a-Service (CaaS) platforms.
+#### On-demand Platforms:
 
-### Application Proxy:
+Azimuth has a unified interface for managing Kubernetes and Cluster-as-a-Service (CaaS) platforms.
 
-Uses Zenith to expose services without consuming floating IPs or requiring SSH keys.
+#### Application Proxy:
 
-### Simplified OpenStack Management:
+Azimuth uses Zenith to expose services without consuming floating IPs or requiring SSH keys.
+
+#### Simplified OpenStack Management:
 
 Automatic network detection, machine and volume management, and security group configuration.
 
@@ -28,19 +32,19 @@ Azimuth Science Platforms are designed to provide flexible, high-performance com
 
 Here are some key purposes:
 
-### High-Performance Computing (HPC):
+#### High-Performance Computing (HPC):
 
 These platforms support large-scale computational tasks, making them ideal for scientific disciplines that require significant processing power.
 
-### Flexibility:
+#### Flexibility:
 
 Researchers can configure their computing environments to meet specific needs, such as choosing the operating system, software tools, and hardware specifications.
 
-### Cloud Integration:
+#### Cloud Integration:
 
 By leveraging cloud infrastructure, Azimuth Science Platforms offer scalability and accessibility, allowing researchers to access their environments from anywhere.
 
-### Collaboration:
+#### Collaboration:
 
 These platforms facilitate collaborative research by providing tools like Jupyter Notebooks for interactive data exploration and analysis.
 
@@ -50,19 +54,19 @@ Overall, Azimuth Science Platforms aim to enhance the efficiency and effectivene
 
 To access azimuth navigate to: [log in](https://portal.azimuth.jasmin.ac.uk/). 
 
-This will take you to the login page shown in the image below.
+This will take you to the landing page shown in the image below.
+
+{{<image src="img/docs/azimuth-images/Azimuth-landing-Page.jpg" caption="Landing page">}}
+
+In the top right-hand corner of the landing page, click on the Sign in button and enter your JASMIN username and password on the login page that appears.
 
 {{<image src="img/docs/azimuth-images/Azimuth-Login-Page.jpg" caption="Log in">}}
-
-In the top right-hand corner of the login page click on the Sign in button and enter your JASMIN username and password and click on sign in.
-
-{{<image src="img/docs/azimuth-images/Azimuth-landing-Page.jpg" caption="Dashboard">}}
 
 Once you have successifully signed in, you will land on the Azimuth cloud Dashboard as shown below.
 
 {{<image src="img/docs/azimuth-images/Azimuth-list-of-Tenants-Page.jpg" caption="List of Tenants">}}
 
-Here you will see a list of 1 or more projects/tenancies you have been granted access.
+Here, you will see a list of 1 or more projects/tenancies you have been granted access to.
 
 {{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="Platform landing page">}}
 
@@ -109,10 +113,11 @@ A Jupyter notebook created from a compatible repository.
 
 #### Launch Configuration
 
-Platform Name: Identifies the Linux Workstation platform.
-Notebook Repository: URL of a REES-compliant Jupyter notebook repository.
-Jupyter Notebook Size: Specifies the cloud instance size, including CPU and RAM, set by the cloud operator.
-Volume Size: Size of the cloud volume at /data.
+- Platform Name: identifies the Linux Workstation platform.
+- Notebook Repository: URL of a REES-compliant Jupyter notebook repository.
+- Jupyter Notebook Size: Specifies the cloud instance size, including CPU and RAM, set by the cloud operator.
+- Volume Size: Size of the cloud volume at /data.
+
 Advanced
 
 Platform Monitoring: A Grafana dashboard is available for system monitoring, showing both current and historical system information.
@@ -144,12 +149,36 @@ Introduciton to the platforms and their usage
 
 ###  Identity provider
 
-- Explain what the identity provide is
-- what it is for
-- how to use it
-- limitations
-- advantages over host their own ID
-- links into some of the platforms - explicitly say which
+Azimuth Identity Provider: It is a Keycloak-Based Realm
+
+#### Overview
+
+Azimuth employs a Keycloak-based identity provider to manage access control for platforms deployed within each tenancy. This identity provider, essentially a Keycloak realm, is specifically tailored to each tenancy, controlling user accounts, roles, and groups for the platforms hosted there.
+
+#### Default Configuration
+
+By default, the realm is configured to allow users with Azimuth tenancy access to administer the realm itself. This grants them full control over the platforms deployed within the tenancy.
+
+#### Customising User Access
+
+To enhance security and control, administrators can use the Keycloak administration console to:
+
+- Create Local Users: Directly add users to the realm without requiring external authentication.
+- Configure Federated Identity Providers: Integrate with external identity providers like GitHub, Google, or institutional identity providers to enable single sign-on (SSO).
+
+#### Platform Access Control
+
+While federated users cannot deploy platforms in Azimuth, they can be granted access to existing platforms provisioned by others. This is achieved through role-based access control (RBAC) mechanisms within the Keycloak realm.
+
+#### Key Points
+
+- Keycloak Foundation: The Azimuth identity provider is built on the open-source Keycloak platform, ensuring a robust and customisable identity management solution.
+- Tenancy-Specific Realms: Each tenancy has its own dedicated Keycloak realm for granular control over user access and permissions.
+- Default Admin Access: Users with Azimuth tenancy access automatically have administrative privileges over the realm.
+- Custom User Management: Administrators can add local users and integrate with external identity providers to meet specific security requirements.
+- RBAC for Platform Access: Role-based access control allows for fine-grained control over which users can access specific platforms within the tenancy.
+
+(- links into some of the platforms - explicitly say which)
 
 ### Quotas
 
@@ -175,9 +204,26 @@ In the advanced tab there are two sections, the machine and the volume sections
   
 - To see how to create a volume go: ([Workstation Platform]{{<ref "platform-in-depth-workstation" >}})
 
-Use of machine and volume tabs
+### Use of machine and volume tabs
 
-- manual creation of machines and volumes
-- actions on machines
-  - especially attaching IPs, firewall, restart
-- attaching volumes
+On the machines tab, users are able to:
+
+- create new machines
+
+#### Actions
+
+- view a list of existing machines
+- edit or delete machines
+- attatch/detatch external IPs
+- define firewall rules
+- Start/Stop/Restart machines
+
+On the volume tab, users are able to:
+
+- view a list of volumes in the project
+- create new volumes
+
+### Actions:
+
+- delete volumes
+- attach/detach volumes

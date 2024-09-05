@@ -124,7 +124,6 @@ To create a new volume proceed as follows:
 
 - On the Tenancy/project page, in the advanced section click the Volumes button.
   
-
 - Click the New volume button shown below:
 
   {{<image src="img/docs/azimuth-images/azimuth-new-volume-page.jpg" caption="New volume">}}

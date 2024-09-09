@@ -120,3 +120,36 @@ Azimuth BinderHub is a cloud-based platform that provides a convenient way to cr
 - Data Exploration and Analysis: Azimuth BinderHub provides a convenient way to explore and analyze data using Jupyter Notebooks. Users can visualize data, perform statistical analysis, and build machine learning models.
 - Reproducible Research: By sharing Binder environments, researchers can ensure that their work is reproducible and can be verified by others.
 
+## Creating a JupyterHub Platform
+
+From Azimuth Project/Tenancy page:
+
+***Any resource RAM, storage, CPU or network resource is allocated based the tenancy Quota***
+
+- Click on New platform
+- Click on the Jupyterhub platform from the Createa neew platform window
+- From the configuration platform Tab
+  - enter
+    - Platform name
+    - Kubernetes cluster:
+      - Choose an existing or
+      - Create one here by clicling the plus sign at the end of the textbox
+    - App version
+    - Notebook CPUs
+    - Notebook RAM and
+    - Notebook storage
+  - Click on the create buitton
+  - Once successfuly deployed you can access the platform from the azimuth tenenacy landing page
+    - click on the details button for the jupyterhub instance deployed above
+  
+    - From the platfor details for your jupyterhub instance window you can be able to:
+      - refresh
+      - update
+      - delete
+      - access the jupyter notebook servcies
+  
+## Updating
+  
+
+
+## patching

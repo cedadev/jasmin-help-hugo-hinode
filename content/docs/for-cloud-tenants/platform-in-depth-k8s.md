@@ -15,7 +15,7 @@ title: Platforms In Depth - Kubernetes
 
 ### Overview
 
-- The Kubernetes platform delivers a complete Kubernetes container orchestration cluster, incorporating tools for monitoring, ingress control, and application management. 
+- The Kubernetes platform delivers a complete Kubernetes container orchestration cluster, incorporating tools for monitoring, ingress control, and application management.
 - It empowers you to run Kubernetes applications seamlessly within Azimuth or implement custom installations using Helm Charts or Kustomize to oversee Kubernetes manifests.
 - Once your platform is up and running, you'll find a kubeconfig file in the platform Details section, ready for use with helm or kubectl.
 

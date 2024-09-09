@@ -149,7 +149,9 @@ From Azimuth Project/Tenancy page:
       - access the jupyter notebook servcies
   
 ## Updating
-  
 
+From the update window you are able to change the:
 
-## patching
+- Notebook CPUs
+- Notebook RAM and
+- Notebook storage

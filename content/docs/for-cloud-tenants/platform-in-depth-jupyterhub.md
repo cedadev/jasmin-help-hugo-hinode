@@ -4,12 +4,6 @@ slug: platform-in-depth-jupyterhub
 title: Platforms In Depth - JupyterHub, DaskHub, BinderHub
 ---
 
-- What is it
-- what is the purpose
-- how to create
-- how to patch
-- any options to update?
-
 ## What is JupyterHub?
 
 JupyterHub is a multi-user platform that allows multiple users to access and run Jupyter notebooks through a web interface. It is designed to provide a standardized computing environment for groups, such as classes or research teams, by launching individual Jupyter notebook instances for each user1.

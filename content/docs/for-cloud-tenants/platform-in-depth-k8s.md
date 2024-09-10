@@ -3,14 +3,6 @@ description: In depth look at the kubernetes platforms
 slug: platform-in-depth-k8s
 title: Platforms In Depth - Kubernetes
 ---
-
-- What is it
-- how to create
-- how to patch
-- how to update options
-- how to update k8s version
-- how to change the size of the machines and the cluster size
-
 ## Kubernetes Platform at a Glance
 
 ### Overview
@@ -71,3 +63,57 @@ Options
 - Auto-Healing: Enable this to let the cluster automatically attempt to fix unhealthy nodes.
 - Kubernetes Ingress: Enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer. You'll need an external IP for the load balancer.
 - cert-manager: Enable this to use cert-manager to manage TLS certificates for your cluster services.
+
+## create Kubernetes
+
+- From the project/Tenancy landing page:
+  - Click the New platform buttom
+  - From the Create a new platform window select Kubernetes
+  - On the Create a new platform window enter
+    - the Cluster name
+    - select a cluster template to use
+    - select a control plabe to use
+    - select or add a new node group
+    - enable or disable cluster addons
+      - Enable Kubernetes Dashboard
+      - Enable cluster monitoring
+    - Advanced options include :
+      - enabling/disabling auto-healing
+      - enable/disable Kubernetes ingress
+      - add an external IP for ingress control
+      - define a metrics and Logs volume size
+    - Once these options a provided click on create platform
+    - on the Platform scheduling window confirm the options selected in the previous section
+    - Once the deployment is complete the cluster is available from the azimuth landing page for the tenancy
+
+From the Cluster details windows you can be able to:
+
+- refresh,
+- view the Kubeconfig,
+- update,
+- upgrade or
+- delete the Kubernetes instance.
+- Navigate to Kubernetes dashboard
+- Monitor the Kubernetes instance
+
+## update options
+
+- Options available include
+  - Changing to a different Control plane size
+  - adding or removing node group(s)
+    - Enable/Disable
+      - Kubernetes Dashboard
+      - cluster monitoring
+      - Enable auto-healing
+      - Enable Kubernetes Ingress
+      - Change the Metrics and logs volumes
+
+## upgrade Kubernetes version
+
+***Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped***
+
+- You can upgrade the Kubernetes version to a newer version.
+
+## change the size of the machines and the cluster size
+
+- You can change the cluster size by defining the node size and count from the node group

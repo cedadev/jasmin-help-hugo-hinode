@@ -3,14 +3,6 @@ description: In depth look at the workstation platforms
 slug: platform-in-depth-workstation
 title: Platforms In Depth - Workstastions
 ---
-
-- What is it
-  - differences between the two
-- what is it's purpose
-- how to create
-- how to patch/update
-- how to use
-  
 ### Linux Workstation:
 
 - The Linux Workstation platform offers a flexible Ubuntu 22.04 cloud instance.

@@ -3,14 +3,6 @@ description: In depth look at the slurm platform
 slug: platform-in-depth-slurm
 title: Platforms In Depth - Slurm
 ---
-
-- what is it
-- what the purpose
-- creating
-- updating
-- patching
-- changing options?
-
 ## Slurm Platform Overview
 
 - The Slurm platform empowers users with a high-performance computing environment, leveraging the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management.

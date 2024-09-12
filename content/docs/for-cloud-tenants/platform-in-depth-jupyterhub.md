@@ -121,31 +121,75 @@ From Azimuth Project/Tenancy page:
 ***Any resource RAM, storage, CPU or network resource is allocated based the tenancy Quota***
 
 - Click on New platform
+
+  {{<image src="img/docs/azimuth-images/azimuth-new-platform-jupyterhub.jpg" caption="New Jupyterhub platform">}}
+
 - Click on the Jupyterhub platform from the Createa neew platform window
+
 - From the configuration platform Tab
-  - enter
-    - Platform name
-    - Kubernetes cluster:
-      - Choose an existing or
-      - Create one here by clicling the plus sign at the end of the textbox
-    - App version
-    - Notebook CPUs
-    - Notebook RAM and
-    - Notebook storage
-  - Click on the create buitton
-  - Once successfuly deployed you can access the platform from the azimuth tenenacy landing page
-    - click on the details button for the jupyterhub instance deployed above
+
+{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-details.jpg" caption="New Jupyterhub platform details">}}
+
+- enter
+  - Platform name
+  - Kubernetes cluster:
+  - Choose an existing if one has bee previously created or
+  - Create one here by clicling the plus sign at the end of the textbox
+  - Provide cluster details:
+        - Name, Template, Version, number of worker nodes, and define auto healing
+
+{{<image src="img/docs/azimuth-images/azimuth-cluster-details.jpg" caption="cluster details">}}
+
+- App version
+- Notebook CPUs
+- Notebook RAM and
+- Notebook storage
+
+- Once cluster deployent is complete as show below complete the jupyter configuration options
+
+{{<image src="img/docs/azimuth-images/azimuth-cluster-deployment-complete.jpg" caption="cluster deployment complete">}}
+
+- Click on the create buitton
+
+- Once successfuly deployed you can access the platform from the azimuth tenenacy landing page
+
+{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-and-cluster-deployed.jpg" caption="jupyterhub deployment complete">}}
+
+- click on the details button for the jupyterhub instance deployed above
   
-    - From the platfor details for your jupyterhub instance window you can be able to:
+- From the platfor details for your jupyterhub instance window you can be able to:
       - refresh
       - update
       - delete
       - access the jupyter notebook servcies
+
+        - From the platform details page you can access the jupyter notebook service from the services section
   
+{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-platform-details-page.jpg" caption="jupyterhub details">}}
+
+Jupyterhub service
+
+{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-service.jpg" caption="jupyterhub services">}}
+
 ## Updating
 
 From the update window you are able to change the:
 
-- Notebook CPUs
-- Notebook RAM and
-- Notebook storage
+{{<image src="img/docs/azimuth-images/azimututh-jupyterhub-update.jpg" caption="jupyterhub update">}}
+
+  - Notebook CPUs
+  - Notebook RAM and
+  - Notebook storage
+
+Once complete click the update platform button
+
+From the Azimuth tenancy page you can access the cluster created above
+
+- From the cluster details page you can:
+  -  view the Kubeconfig
+  -  update the cluster
+  -  upgrade the cluster
+  -  delete the cluster
+     -  deleting a cluster or any resource is not reversible
+  
+***More on cluster platforms later***

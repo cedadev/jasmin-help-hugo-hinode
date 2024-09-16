@@ -87,17 +87,17 @@ Options
   
 {{<image src="img/docs/azimuth-images/azimuth-k8s-advanced-options.jpg" caption="kubernetes advanced options">}}
 
-      - enabling/disabling auto-healing
-      - enable/disable Kubernetes ingress
-      - add an external IP for ingress control
-      - define a metrics and Logs volume size
-    - Once these options a provided click on create platform
+  - enabling/disabling auto-healing
+  - enable/disable Kubernetes ingress
+  - add an external IP for ingress control
+  - define a metrics and Logs volume size
+  - Once these options a provided click on create platform
 
 {{<image src="img/docs/azimuth-images/azimuth-k8es-cluster-scheduling.jpg" caption="kubernetes scheduling">}}
 
-    - on the Platform scheduling window confirm the options selected in the previous section
+  - on the Platform scheduling window confirm the options selected in the previous section
 
-    - Once the deployment is complete the cluster is available from the azimuth landing page for the tenancy
+  - Once the deployment is complete the cluster is available from the azimuth landing page for the tenancy
 
 {{<image src="img/docs/azimuth-images/azimuth-cluster-deployment-details.jpg" caption="kubernetes deployment">}}
 

@@ -69,7 +69,13 @@ Options
 - From the project/Tenancy landing page:
   - Click the New platform buttom
   - From the Create a new platform window select Kubernetes
+  
+    {{<image src="img/docs/azimuth-images/azimuth-new-platform-jupyterhub.jpg" caption="New kubernetes platform">}}
+
   - On the Create a new platform window enter
+
+  {{<image src="img/docs/azimuth-images/azimuth-kubernetes-cluster-details.jpg" caption="kubernetes ">}}
+
     - the Cluster name
     - select a cluster template to use
     - select a control plabe to use
@@ -78,23 +84,31 @@ Options
       - Enable Kubernetes Dashboard
       - Enable cluster monitoring
     - Advanced options include :
+  
+{{<image src="img/docs/azimuth-images/azimuth-k8s-advanced-options.jpg" caption="kubernetes advanced options">}}
+
       - enabling/disabling auto-healing
       - enable/disable Kubernetes ingress
       - add an external IP for ingress control
       - define a metrics and Logs volume size
     - Once these options a provided click on create platform
+
+{{<image src="img/docs/azimuth-images/azimuth-k8es-cluster-scheduling.jpg" caption="kubernetes scheduling">}}
+
     - on the Platform scheduling window confirm the options selected in the previous section
+
     - Once the deployment is complete the cluster is available from the azimuth landing page for the tenancy
+
+{{<image src="img/docs/azimuth-images/azimuth-cluster-deployment-details.jpg" caption="kubernetes deployment">}}
 
 From the Cluster details windows you can be able to:
 
+{{<image src="img/docs/azimuth-images/azimuth-cluster-details-options.jpg" caption="kubernetes details">}}
+
 - refresh,
-- view the Kubeconfig,
-- update,
-- upgrade or
-- delete the Kubernetes instance.
-- Navigate to Kubernetes dashboard
-- Monitor the Kubernetes instance
+- view the Kubeconfig
+
+{{<image src="img/docs/azimuth-images/azimuth-k82-config.jpg" caption="kubernetes config">}}
 
 ## update options
 
@@ -108,11 +122,26 @@ From the Cluster details windows you can be able to:
       - Enable Kubernetes Ingress
       - Change the Metrics and logs volumes
 
+{{<image src="img/docs/azimuth-images/azimuth-k8s-update.jpg" caption="kubernetes update">}}
+
 ## upgrade Kubernetes version
+
+{{<image src="img/docs/azimuth-images/azimuth-k8s-upgrade.jpg" caption="kubernetes upgrade">}}
 
 ***Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped***
 
 - You can upgrade the Kubernetes version to a newer version.
+- delete the Kubernetes instance.
+  
+{{<image src="img/docs/azimuth-images/azimuth-k8s-delete.jpg" caption="kubernetes delete">}}
+
+- Navigate to Kubernetes dashboard
+
+{{<image src="img/docs/azimuth-images/azimuth-k8s-dashboard.jpg" caption="kubernetes dashboard">}}
+
+- Monitor the Kubernetes instance
+
+{{<image src="img/docs/azimuth-images/azimuth-k8s-monitoring.jpg" caption="kubernetes monitoring">}}
 
 ## change the size of the machines and the cluster size
 

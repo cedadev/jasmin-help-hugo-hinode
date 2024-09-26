@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/getting-started/</link><description>Recent content in Getting Started on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2024 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Get Started with JASMIN</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/</guid><description>&lt;p>This article explains the steps involved for most users to gain
 access to the JASMIN environment.&lt;/p>
-&lt;p>The 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-&lt;a href="https://www.jasmin.ac.uk" target="_blank" rel="noopener noreferrer">JASMIN&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> scientific data analysis environment is
-administered by 
-
-
+&lt;h2 id="start-here" class="heading">Start here &lt;a href="#start-here" aria-labelledby="start-here">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>For most users, the &amp;ldquo;front door&amp;rdquo; to JASMIN is via 
 
 
 
@@ -50,17 +22,25 @@ administered by
 
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
+ 
+ 
+ 
+ 
 
 
+ &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0">SSH&lt;/abbr>
 
-
-
-&lt;a href="https://www.ceda.ac.uk" target="_blank" rel="noopener noreferrer">CEDA&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> and supports a wide variety of
-scientific workflows across environmental science domains.&lt;/p></description></item><item><title>Generate an SSH key pair</title><link>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</guid><description>&lt;p>This article explains how to create an SSH key pair for logging in to JASMIN.&lt;/p>
+ access to
+the JASMIN login servers.&lt;/p></description></item><item><title>Generate an SSH key pair</title><link>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</guid><description>&lt;p>This article explains how to create an SSH key pair for logging in to JASMIN.&lt;/p>
 &lt;p>You can also use this procedure to update an existing SSH key pair for JASMIN.
 However, if you are experiencing problems logging in to JASMIN you are advised
 to first check 

@@ -475,13 +475,10 @@ address with Phase 4 were the ever-growing demand for storage space and the
 increasing diversity of scientific workflows. However, we’re aware that some
 aspects of the changes introduced in Phase 4 have presented some challenges in
 themselves. Here, we outline the reasons for the changes and try to summarise
-some of the challenges and what can be done to help deal with them.&lt;/p></description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;p>This article shows you how to update an active JASMIN account on the JASMIN
-accounts portal.&lt;/p>
-
-&lt;h2 id="update-info" class="heading">Update info &lt;a href="#update-info" aria-labelledby="update-info">
+some of the challenges and what can be done to help deal with them.&lt;/p></description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;h2 id="update-info" class="heading">Update info &lt;a href="#update-info" aria-labelledby="update-info">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>&lt;strong>Step 1&lt;/strong> : On your 
+&lt;p>&lt;strong>Step 1&lt;/strong> : Navigate to your 
 
 
 
@@ -510,7 +507,7 @@ accounts portal.&lt;/p>
 
 &lt;a href="https://accounts.jasmin.ac.uk/account/profile/" target="_blank" rel="noopener noreferrer">profile page&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>, select &amp;ldquo;Update info&amp;rdquo;.&lt;/p></description></item><item><title>Migrate a JASMIN account from CEDA</title><link>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> and click on &amp;ldquo;Update info&amp;rdquo;.&lt;/p></description></item><item><title>Migrate a JASMIN account from CEDA</title><link>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/migrate-jasmin-account-from-ceda/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>

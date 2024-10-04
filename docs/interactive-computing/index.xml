@@ -108,10 +108,42 @@ graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, r
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/">login servers&lt;/a> you can then &lt;code>ssh&lt;/code> to a scientific analysis (sci) server to do your work.
-The sci servers are not directly accessible outside the firewall of RAL (JASMIN&amp;rsquo;s host instution) so most users will need to access them via a login server.&lt;/p></description></item><item><title>Tenancy Sci Analysis VMs</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</guid><description>&lt;p>This document explains how to access a tenancy-based sci machine. These are
+The sci servers are not directly accessible outside the firewall of RAL (JASMIN&amp;rsquo;s host instution) so most users will need to access them via a login server.&lt;/p></description></item><item><title>Tenancy Sci Analysis VMs</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ &lt;strong>Deprecated feature&lt;/strong> documented here to provide information about how to access existing instances.
+Tenancy sci analysis machines are no longer part of the JASMIN Cloud service, as most use cases can be
+served by using the shared 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/">sci servers&lt;/a>.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This document explains how to access a tenancy-based sci machine. These are
 normally provisioned by an admin/manager representing a particular community/institution.&lt;/p></description></item><item><title>Transfer servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</guid><description>&lt;p>This article lists the JASMIN data transfer servers and provides links to how
 they can be used.&lt;/p>
-&lt;p>JASMIN provides specific servers for managing data transfers. These are:&lt;/p></description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p>Creating a virtual environment is useful to allow a discrete set of extra
+&lt;p>Please see further articles in the 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/">Data Transfer category&lt;/a> for details on managing your data transfers.&lt;/p></description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p>Creating a virtual environment is useful to allow a discrete set of extra
 packages to be installed to meet specific requirements. This allows a user to
 run multiple environments with different dependencies without conflicts.&lt;/p></description></item><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">

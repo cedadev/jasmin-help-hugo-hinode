@@ -267,7 +267,13 @@ annually.&lt;/strong>&lt;/p></description></item><item><title>Reset JASMIN accou
 access the JASMIN Accounts Portal. On the JASMIN Accounts Portal sign-in page,
 select &amp;ldquo;Forgotten password&amp;rdquo; on the &amp;ldquo;useful links&amp;rdquo; menu:&lt;/p></description></item><item><title>SSH public key authentication</title><link>https://help.jasmin.ac.uk/docs/getting-started/ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/ssh-auth/</guid><description>&lt;p>JASMIN employs SSH public key authentication for login instead of username and
 password. This article provides a basic overview of public key
-authentication.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
+authentication.&lt;/p></description></item><item><title>Present your SSH key</title><link>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</guid><description>&lt;p>There are 2 main ways to present your SSH key when connecting via SSH-based methods:&lt;/p>
+&lt;ol>
+&lt;li>specifying the path to the private key, and entering the passphrase each time&lt;/li>
+&lt;li>&lt;strong>(recommended)&lt;/strong> loading the key into an &lt;code>ssh-agent&lt;/code>, which stores the key ready for any subsequent connections you want to make.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>(2)&lt;/strong> is more convenient, because you don&amp;rsquo;t have to repeat the process each time you want to make a new connection, but &lt;strong>(1)&lt;/strong> is useful to know for
+testing and troubleshooting.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
 
  
 

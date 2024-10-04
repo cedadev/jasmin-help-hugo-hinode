@@ -320,16 +320,9 @@ resolve login problems. It provides information for the following issues:&lt;/p>
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> regularly run hands-on
 interactive training workshops for users of JASMIN. The workshop makes use of
 exercises and tutorials to help users to become familiar with the JASMIN
-environment.&lt;/p></description></item><item><title>Graphical linux desktop using NoMachine NX</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</guid><description>&lt;p>This article explains how to connect to a graphical linux desktop within the
-JASMIN environment using NoMachine NX.&lt;/p>
-
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+environment.&lt;/p></description></item><item><title>Graphical linux desktop using NoMachine NX</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-
-&lt;h3 id="benefits" class="heading">Benefits &lt;a href="#benefits" aria-labelledby="benefits">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h3>
 &lt;ul>
 &lt;li>This service provides a graphical Linux desktop on JASMIN, ideal
 for use with graphics-heavy tasks like interactive work with large images.&lt;/li>
@@ -444,7 +437,13 @@ annually.&lt;/strong>&lt;/p></description></item><item><title>Reset JASMIN accou
 access the JASMIN Accounts Portal. On the JASMIN Accounts Portal sign-in page,
 select &amp;ldquo;Forgotten password&amp;rdquo; on the &amp;ldquo;useful links&amp;rdquo; menu:&lt;/p></description></item><item><title>SSH public key authentication</title><link>https://help.jasmin.ac.uk/docs/getting-started/ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/ssh-auth/</guid><description>&lt;p>JASMIN employs SSH public key authentication for login instead of username and
 password. This article provides a basic overview of public key
-authentication.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
+authentication.&lt;/p></description></item><item><title>Present your SSH key</title><link>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</guid><description>&lt;p>There are 2 main ways to present your SSH key when connecting via SSH-based methods:&lt;/p>
+&lt;ol>
+&lt;li>specifying the path to the private key, and entering the passphrase each time&lt;/li>
+&lt;li>&lt;strong>(recommended)&lt;/strong> loading the key into an &lt;code>ssh-agent&lt;/code>, which stores the key ready for any subsequent connections you want to make.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>(2)&lt;/strong> is more convenient, because you don&amp;rsquo;t have to repeat the process each time you want to make a new connection, but &lt;strong>(1)&lt;/strong> is useful to know for
+testing and troubleshooting.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
 
  
 

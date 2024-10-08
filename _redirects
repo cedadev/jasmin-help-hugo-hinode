@@ -42,13 +42,10 @@
 /article/4552-update-a-jasmin-account /docs/getting-started/update-a-jasmin-account/
 /article/4834-updating-your-ssh-key /docs/getting-started/update-a-jasmin-account/
 /article/4434-migrate-jasmin-account-from-ceda /docs/getting-started/migrate-jasmin-account-from-ceda/
-/article/5068-gpu-cluster-orchid /docs/batch-computing/orchid-gpu-cluster/
-/article/4951-gpu-testing /docs/batch-computing/orchid-gpu-cluster/
 /article/4895-adding-and-removing-ssh-keys-from-an-external-cloud-vm /docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
 /article/4918-jasmin-software-faqs /docs/software-on-jasmin/jasmin-software-faqs/
 /article/4698-jdma /docs/short-term-project-storage/jdma/
-/article/4894-lotus-slurm-status /docs/batch-computing/slurm-status/
 /article/202-share-gws-data-via-http /docs/short-term-project-storage/share-gws-data-via-http/
 /article/3847-using-cron /docs/workflow-management/using-cron/
 /article/4916-quickstart-software-envs /docs/software-on-jasmin/quickstart-software-envs/
@@ -112,6 +109,8 @@
 /article/4445-moose-the-mass-client-user-guide /docs/mass/moose-the-mass-client-user-guide/
 /article/4448-nag-library /docs/software-on-jasmin/nag-library/
 /article/4702-faqs-storage /docs/short-term-project-storage/faqs-storage/
+/article/5068-gpu-cluster-orchid /docs/batch-computing/orchid-gpu-cluster/
+/article/4951-gpu-testing /docs/batch-computing/orchid-gpu-cluster/
 /article/5038-postgres-databases-on-request /docs/software-on-jasmin/postgres-databases-on-request/
 /article/5023-processing-requests-for-resources /docs/uncategorized/processing-requests-for-resources/
 /article/4581-tenancy-based-sci-vm-managed-cloud /docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/
@@ -130,6 +129,7 @@
 /article/4881-lotus-queues /docs/batch-computing/slurm-queues/
 /article/4891-lsf-to-slurm-quick-reference /docs/batch-computing/slurm-quick-reference/
 /docs/batch-computing/lsf-to-slurm-quick-reference/ /docs/batch-computing/slurm-quick-reference/
+/article/4894-lotus-slurm-status /docs/batch-computing/slurm-status/
 /article/273-software-on-jasmin /docs/software-on-jasmin/software-overview/
 /article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
 /article/4914-jasmin-sci-software /docs/software-on-jasmin/jasmin-sci-software-environment/

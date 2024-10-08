@@ -337,7 +337,8 @@ using the help beacon below, but please include the following
 information with your initial query:&lt;/p></description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading">Intro &lt;a href="#intro" aria-labelledby="intro">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>Once you have logged on to one of the 
+&lt;p>The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code>jasmin-login&lt;/code> access role.
+The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most* users will need to access them via a 
  
 
 
@@ -348,8 +349,7 @@ information with your initial query:&lt;/p></description></item><item><title>Sci
 
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/">login servers&lt;/a> you can then &lt;code>ssh&lt;/code> to a scientific analysis (sci) server to do your work.
-The sci servers are not directly accessible outside the firewall of RAL (JASMIN&amp;rsquo;s host instution) so most users will need to access them via a login server.&lt;/p></description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p>This article lists sources of information about the status of JASMIN services.&lt;/p>
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/">login server&lt;/a>.&lt;/p></description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p>This article lists sources of information about the status of JASMIN services.&lt;/p>
 
 &lt;h2 id="ceda-status-page" class="heading">CEDA Status page &lt;a href="#ceda-status-page" aria-labelledby="ceda-status-page">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
@@ -461,7 +461,10 @@ purpose. It covers:&lt;/p>
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>For some time, we have been asked by user communities to cater for legitimate
 use cases where accounts need to be shared by a small, known and pre-arranged
-set of users, or by services or functions.&lt;/p></description></item><item><title>Reconfirm JASMIN account email address</title><link>https://help.jasmin.ac.uk/docs/getting-started/reconfirm-email-address/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/reconfirm-email-address/</guid><description>&lt;p>This article describes how to reconfirm the email address associated with your
+set of users, or by services or functions.&lt;/p></description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>Some text here&lt;/p></description></item><item><title>Reconfirm JASMIN account email address</title><link>https://help.jasmin.ac.uk/docs/getting-started/reconfirm-email-address/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/reconfirm-email-address/</guid><description>&lt;p>This article describes how to reconfirm the email address associated with your
 JASMIN account.&lt;/p>
 &lt;p>For security reasons, this is a process which you will be asked to &lt;strong>repeat
 annually.&lt;/strong>&lt;/p></description></item><item><title>Reset JASMIN account password</title><link>https://help.jasmin.ac.uk/docs/getting-started/reset-jasmin-account-password/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/reset-jasmin-account-password/</guid><description>&lt;p>This article illustrates how to reset the password of your JASMIN account to
@@ -566,13 +569,7 @@ It is now no longer possible to do this migration automatically.&lt;/p></descrip
 
 &lt;a href="https://gws-scanner.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer">Group Workspace (GWS) Scanner&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p></description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Fri, 26 May 2023 14:25:07 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;p>This article provides details on JASMIN&amp;rsquo;s GPU
-cluster, named &lt;strong>ORCHID&lt;/strong>.&lt;/p>
-
-&lt;h2 id="gpu-cluster-spec" class="heading">GPU cluster spec &lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p></description></item><item><title>Adding and removing SSH keys from an External Cloud VM</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</link><pubDate>Tue, 23 May 2023 14:27:10 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</guid><description>&lt;p>When you create a machine in a JASMIN External Cloud tenancy, the SSH key
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p></description></item><item><title>Adding and removing SSH keys from an External Cloud VM</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</link><pubDate>Tue, 23 May 2023 14:27:10 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</guid><description>&lt;p>When you create a machine in a JASMIN External Cloud tenancy, the SSH key
 associated with your JASMIN account is uploaded to the machine to grant you
 access to the machine as &lt;code>root&lt;/code>:&lt;/p></description></item><item><title>Community Software: ESMValTool</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</link><pubDate>Wed, 25 Jan 2023 10:35:13 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</guid><description>&lt;p>ESMValTool is installed on JASMIN as a &lt;em>community package&lt;/em>. This article
 provides:&lt;/p>
@@ -649,18 +646,7 @@ at:
 &lt;a href="https://cedadev.github.io/jdma_client/docs/build/html/index.html" target="_blank" rel="noopener noreferrer">cedadev.github.io/jdma_client&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>
-for more information about using JDMA.&lt;/strong>&lt;/p></description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 08 Mar 2021 15:47:16 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p>The 
- 
-
-
-
-
-
-
-&lt;a href="https://mon.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer">JASMIN dashboard&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> includes an overview of:
-LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p></description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 07 Dec 2020 14:50:54 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading">What is HTTP data sharing? &lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing">
+for more information about using JDMA.&lt;/strong>&lt;/p></description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 07 Dec 2020 14:50:54 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading">What is HTTP data sharing? &lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>Specific parts of JASMIN Group Workspaces (GWSs) can be made available via
@@ -1754,7 +1740,13 @@ effect for other users, so please take the time to check and change your code
 to make appropriate use of new storage system. If used correctly, the new
 storage offers us a high performance scalable file system, with the capability
 for object storage as tools and interfaces evolve, and we can continue to
-serve the growing demand for storage in the most cost effective manner.&lt;/p></description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+serve the growing demand for storage in the most cost effective manner.&lt;/p></description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;p>This article provides details on JASMIN&amp;rsquo;s GPU
+cluster, named &lt;strong>ORCHID&lt;/strong>.&lt;/p>
+
+&lt;h2 id="gpu-cluster-spec" class="heading">GPU cluster spec &lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p></description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>This article explains that users may request access to a PostgreSQL (known as
@@ -2011,7 +2003,18 @@ and
 
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/">ORCHID&lt;/a> (GPU) clusters.&lt;/p></description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p>JASMIN is a large platform where a range of software tools, packages and
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/">ORCHID&lt;/a> (GPU) clusters.&lt;/p></description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p>The 
+ 
+
+
+
+
+
+
+&lt;a href="https://mon.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer">JASMIN dashboard&amp;nbsp;
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> includes an overview of:
+LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p></description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p>JASMIN is a large platform where a range of software tools, packages and
 environments are available. Many users employ software already installed on
 JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p></description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>&lt;h2 id="managing-storage" class="heading">Managing storage &lt;a href="#managing-storage" aria-labelledby="managing-storage">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->

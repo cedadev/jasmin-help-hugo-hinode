@@ -6523,6 +6523,19 @@ function initIndex() {
       {
         id: 1,
         tag: "en",
+        href: "/docs/interactive-computing/access-from-vscode/",
+        title: "Access from VSCode",
+        description: "How to access JASMIN from VSCode",
+        
+        
+        content: "Introduction \u0026nbsp; Some text here"
+      })
+      .add(
+      
+      
+      {
+        id: 2,
+        tag: "en",
         href: "/docs/getting-started/storage/",
         title: "Access to storage",
         description: "This article provides an overview of JASMIN storage.",
@@ -6534,7 +6547,7 @@ function initIndex() {
       
       
       {
-        id: 2,
+        id: 3,
         tag: "en",
         href: "/docs/uncategorized/acknowledging-jasmin/",
         title: "Acknowledging  JASMIN",
@@ -6547,7 +6560,7 @@ function initIndex() {
       
       
       {
-        id: 3,
+        id: 4,
         tag: "en",
         href: "/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/",
         title: "Adding and removing SSH keys from an External Cloud VM",
@@ -6560,7 +6573,7 @@ function initIndex() {
       
       
       {
-        id: 4,
+        id: 5,
         tag: "en",
         href: "/docs/software-on-jasmin/additional-software/",
         title: "Additional software",
@@ -6573,7 +6586,7 @@ function initIndex() {
       
       
       {
-        id: 5,
+        id: 6,
         tag: "en",
         href: "/docs/short-term-project-storage/apply-for-access-to-a-gws/",
         title: "Apply for access to a GWS",
@@ -6586,7 +6599,7 @@ function initIndex() {
       
       
       {
-        id: 6,
+        id: 7,
         tag: "en",
         href: "/docs/uncategorized/approving-requests-for-access/",
         title: "Approving requests for access roles",
@@ -6599,7 +6612,7 @@ function initIndex() {
       
       
       {
-        id: 7,
+        id: 8,
         tag: "en",
         href: "/docs/uncategorized/article-under-review/",
         title: "Article under review",
@@ -6612,7 +6625,7 @@ function initIndex() {
       
       
       {
-        id: 8,
+        id: 9,
         tag: "en",
         href: "/docs/data-transfer/bbcp/",
         title: "bbcp",
@@ -6625,7 +6638,7 @@ function initIndex() {
       
       
       {
-        id: 9,
+        id: 10,
         tag: "en",
         href: "/docs/getting-started/beginners-training-workshop/",
         title: "beginners training workshop - materials",
@@ -6638,7 +6651,7 @@ function initIndex() {
       
       
       {
-        id: 10,
+        id: 11,
         tag: "en",
         href: "/docs/for-cloud-tenants/best-practice/",
         title: "Best practice",
@@ -6651,7 +6664,7 @@ function initIndex() {
       
       
       {
-        id: 11,
+        id: 12,
         tag: "en",
         href: "/docs/long-term-archive-storage/ceda-archive/",
         title: "CEDA Archive",
@@ -6664,7 +6677,7 @@ function initIndex() {
       
       
       {
-        id: 12,
+        id: 13,
         tag: "en",
         href: "/docs/interactive-computing/check-network-details/",
         title: "Check network details",
@@ -6677,7 +6690,7 @@ function initIndex() {
       
       
       {
-        id: 13,
+        id: 14,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service/",
         title: "Cluster-as-a-Service",
@@ -6690,7 +6703,7 @@ function initIndex() {
       
       
       {
-        id: 14,
+        id: 15,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/",
         title: "Cluster-as-a-Service - Identity Manager",
@@ -6703,7 +6716,7 @@ function initIndex() {
       
       
       {
-        id: 15,
+        id: 16,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/",
         title: "Cluster-as-a-service - Kubernetes",
@@ -6716,7 +6729,7 @@ function initIndex() {
       
       
       {
-        id: 16,
+        id: 17,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service-pangeo/",
         title: "Cluster-as-a-Service - Pangeo",
@@ -6729,7 +6742,7 @@ function initIndex() {
       
       
       {
-        id: 17,
+        id: 18,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/",
         title: "Cluster-as-a-Service - Shared storage",
@@ -6742,7 +6755,7 @@ function initIndex() {
       
       
       {
-        id: 18,
+        id: 19,
         tag: "en",
         href: "/docs/for-cloud-tenants/cluster-as-a-service-slurm/",
         title: "Cluster-as-a-Service - Slurm",
@@ -6755,7 +6768,7 @@ function initIndex() {
       
       
       {
-        id: 19,
+        id: 20,
         tag: "en",
         href: "/docs/software-on-jasmin/community-software-checksit/",
         title: "Community Software: checksit",
@@ -6768,7 +6781,7 @@ function initIndex() {
       
       
       {
-        id: 20,
+        id: 21,
         tag: "en",
         href: "/docs/software-on-jasmin/community-software-esmvaltool/",
         title: "Community Software: ESMValTool",
@@ -6781,7 +6794,7 @@ function initIndex() {
       
       
       {
-        id: 21,
+        id: 22,
         tag: "en",
         href: "/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/",
         title: "Conda environments and Python virtual environments",
@@ -6794,7 +6807,7 @@ function initIndex() {
       
       
       {
-        id: 22,
+        id: 23,
         tag: "en",
         href: "/docs/short-term-project-storage/configuring-cors-for-object-storage/",
         title: "Configuring CORS for object storage",
@@ -6807,20 +6820,20 @@ function initIndex() {
       
       
       {
-        id: 23,
+        id: 24,
         tag: "en",
         href: "/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/",
         title: "Creating a virtual environment in the JASMIN Notebooks Service",
         description: "Adding custom Python packages to Jupyter Notebooks",
         
         
-        content: "Creating a virtual environment is useful to allow a discrete set of extra packages to be installed to meet specific requirements. This allows a user to run multiple environments with different dependencies without conflicts.\nThere are a number of ways to create a virtual environment to use with the Notebooks Service. This document outlines the most common and recommended methods, and then some other ways which you might find useful.\nPlease note that environments created for the Notebooks Service will not work on the JASMIN scientific analysis servers or the LOTUS batch processing.\nStep 1: Creating a virtual environment \u0026nbsp; This step creates a Python virtual environment, and allows you to install packages into it.\n\u0026nbsp; These commands are intended for use at the Jupyter Notebooks shell, not on the JASMIN sci machines To get started, open the JASMIN Notebooks Service\u0026nbsp; and in the launcher click the terminal button.\nOpening the terminal Then, type these commands at the bash shell which appears.\nFirst, make a directory in which to store your virtual environments. You can put this wherever you like, as long as you reference the same place later. You could store several virtual environments within this directory, for different purposes. Then, change into that directory.\nmkdir ~/nb_envs cd ~/nb_envs Next, create a new empty virtual environment. We recommended including the --system-site-packages argument which will allow you to add packages on top of jaspy, rather than starting completely from scratch.\npython -m venv name-of-environment --system-site-packages Then, activate the specific virtual environment created above, which will allow you to install packages.\nsource name-of-environment/bin/activate If you want to be able to use your virtual environment as a Jupyter Notebook kernel (recommended), you should install ipykernel using pip.\npip install ipykernel You can then install whatever packages you need in the environment.\npip install pyjokes If you change your mind and need to add more packages in the future, it is simple to activate the virtual environment in the same way as above and use pip to install more packages.\nStep 2: Making the notebooks service recognise your new kernel \u0026nbsp; These steps are also run from the notebooks\u0026rsquo; service shell, as above.\nIf you aren\u0026rsquo;t still there from the last step, cd to the location of your venv.\ncd ~/nb_envs If it isn\u0026rsquo;t already active, activate the virtual environment.\nsource name-of-environment/bin/activate Running the following command will make the Notebooks Service notice your new virtual environment, and include it in the list of kernels which you can run code with. You only have to do this once.\npython -m ipykernel install --user --name=name-of-environment Step 3: Using your new kernel \u0026nbsp; Select kernel, in this case: 'name-of-environment' You can then choose this kernel from the Jupyter Notebook homepage, or from the top right of any open notebook. No changes to the Python code within are required.\nKernel name shown in notebook title tab Other tips \u0026amp; useful knowledge \u0026nbsp; Activating an environment without it being a kernel \u0026nbsp; If you follow Step 1 above to create a virtual environment, it is possible to use the packages from this environment in a Python file without making it a kernel. While this can be useful, it has the very distinct disadvantage of hardcoding the path to your virtual environment in your Python code. For this reason we discourage using this method with a medium level of severity. To do this, simply add the following code to your Python file before any imports. Adjust the venv_path variable to be correct for the venv you created.\nimport sys import pathlib import platform venv_path = \u0026#34;~/nb_envs/name-of-environment\u0026#34; py_version = platform.python_version_tuple() sys.path.append( str( pathlib.Path( f\u0026#34;venv_path/lib/pythonpy_version[0].py_version[1]/site-packages/\u0026#34; ).expanduser() ) )Explanation: this adds the site-packages folder from your venv directly to the path Python uses to search for packages ($PYTHONPATH). This lets Python find them to import.\nCan I install packages from inside my Python code? \u0026nbsp; We very strongly recommend NOT trying to install Python packages from inside notebook code. pip isn\u0026rsquo;t designed for it, and it is almost always easier to activate the venv as above and install things that way.\nIf you wish to record the set of packages inside your venv so you can install them en-masse later, pip has the facility to do this. To export a list of packages that exist inside a venv, from the notebook\u0026rsquo;s bash shell with the virtual environment in question activated:\npip freeze \u0026gt; requirements.txt To install a list of packages which have been exported:\npip install -r requirements.txt Exporting packages in this way is also useful for sharing your environment with others, reinstalling when it breaks etc. It\u0026rsquo;s a good idea to keep the requirements file alongside the code in version control. If your code becomes more complex it is probably more sensible to make it a Python package, and install it as one, but doing that is outside the scope of this document.\nIf you really must, you can call pip from inside your notebook like this: (after first updating the packages variable to be the ones you want to install.)\nimport sys import subprocess as sp packages = [\u0026#39;pyjokes\u0026#39;] sp.check_call([sys.executable, \u0026#39;-m\u0026#39;, \u0026#39;pip\u0026#39;, \u0026#39;install\u0026#39;] + packages) Can I use conda instead of a virtual environment? \u0026nbsp; Yes, no problem.\nTo create a conda environment, simply run the following at the JASMIN Notebook shell:\nconda create --name name-insert-here ipykernel Install any packages you which to use in the environment:\nconda install --name name-insert-here pyjokes Make the Notebooks Service recognise your environment as a kernel:\nconda run --name name-insert-here python -m ipykernel install --user --name name-insert-here Can I get rid of my old kernels from the Notebooks Service? \u0026nbsp; Yes.\nTo list the names of kernels you have installed, run the following at the JASMIN Notebook shell:\njupyter kernelspec list To remove one of them, run:\njupyter kernelspec uninstall insert-name-here"
+        content: "Creating a virtual environment is useful to allow a discrete set of extra packages to be installed to meet specific requirements. This allows a user to run multiple environments with different dependencies without conflicts.\nThere are a number of ways to create a virtual environment to use with the Notebooks Service. This document outlines the most common and recommended methods, and then some other ways which you might find useful.\nPlease note that environments created for the Notebooks Service will not work on the JASMIN scientific analysis servers or the LOTUS batch processing.\nStep 1: Creating a virtual environment \u0026nbsp; This step creates a Python virtual environment, and allows you to install packages into it.\n\u0026nbsp; These commands are intended for use at the Jupyter Notebooks shell, not on the JASMIN sci machines To get started, open the JASMIN Notebooks Service\u0026nbsp; and in the launcher click the terminal button.\nOpening the terminal \u0026nbsp; Don\u0026rsquo;t worry if you see this: this is a known issue but should not cause you a problem.\nid: cannot find name for user ID NNNNN [I have no name!@jupyter-user notebooks-misc]$ Then, type these commands at the bash shell which appears.\nFirst, make a directory in which to store your virtual environments. You can put this wherever you like, as long as you reference the same place later. You could store several virtual environments within this directory, for different purposes. Then, change into that directory.\nmkdir ~/nb_envs cd ~/nb_envs Next, create a new empty virtual environment. We recommended including the --system-site-packages argument which will allow you to add packages on top of jaspy, rather than starting completely from scratch.\npython -m venv name-of-environment --system-site-packages Then, activate the specific virtual environment created above, which will allow you to install packages.\nsource name-of-environment/bin/activate If you want to be able to use your virtual environment as a Jupyter Notebook kernel (recommended), you should install ipykernel using pip.\npip install ipykernel You can then install whatever packages you need in the environment.\npip install pyjokes If you change your mind and need to add more packages in the future, it is simple to activate the virtual environment in the same way as above and use pip to install more packages.\nStep 2: Making the notebooks service recognise your new kernel \u0026nbsp; These steps are also run from the notebooks\u0026rsquo; service shell, as above.\nIf you aren\u0026rsquo;t still there from the last step, cd to the location of your venv.\ncd ~/nb_envs If it isn\u0026rsquo;t already active, activate the virtual environment.\nsource name-of-environment/bin/activate Running the following command will make the Notebooks Service notice your new virtual environment, and include it in the list of kernels which you can run code with. You only have to do this once.\npython -m ipykernel install --user --name=name-of-environment Step 3: Using your new kernel \u0026nbsp; Select kernel, in this case: 'name-of-environment' You can then choose this kernel from the Jupyter Notebook homepage, or from the top right of any open notebook. No changes to the Python code within are required.\nKernel name shown in notebook title tab Other tips \u0026amp; useful knowledge \u0026nbsp; Activating an environment without it being a kernel \u0026nbsp; If you follow Step 1 above to create a virtual environment, it is possible to use the packages from this environment in a Python file without making it a kernel. While this can be useful, it has the very distinct disadvantage of hardcoding the path to your virtual environment in your Python code. For this reason we discourage using this method with a medium level of severity. To do this, simply add the following code to your Python file before any imports. Adjust the venv_path variable to be correct for the venv you created.\nimport sys import pathlib import platform venv_path = \u0026#34;~/nb_envs/name-of-environment\u0026#34; py_version = platform.python_version_tuple() sys.path.append( str( pathlib.Path( f\u0026#34;venv_path/lib/pythonpy_version[0].py_version[1]/site-packages/\u0026#34; ).expanduser() ) )Explanation: this adds the site-packages folder from your venv directly to the path Python uses to search for packages ($PYTHONPATH). This lets Python find them to import.\nCan I install packages from inside my Python code? \u0026nbsp; We very strongly recommend NOT trying to install Python packages from inside notebook code. pip isn\u0026rsquo;t designed for it, and it is almost always easier to activate the venv as above and install things that way.\nIf you wish to record the set of packages inside your venv so you can install them en-masse later, pip has the facility to do this. To export a list of packages that exist inside a venv, from the notebook\u0026rsquo;s bash shell with the virtual environment in question activated:\npip freeze \u0026gt; requirements.txt To install a list of packages which have been exported:\npip install -r requirements.txt Exporting packages in this way is also useful for sharing your environment with others, reinstalling when it breaks etc. It\u0026rsquo;s a good idea to keep the requirements file alongside the code in version control. If your code becomes more complex it is probably more sensible to make it a Python package, and install it as one, but doing that is outside the scope of this document.\nIf you really must, you can call pip from inside your notebook like this: (after first updating the packages variable to be the ones you want to install.)\nimport sys import subprocess as sp packages = [\u0026#39;pyjokes\u0026#39;] sp.check_call([sys.executable, \u0026#39;-m\u0026#39;, \u0026#39;pip\u0026#39;, \u0026#39;install\u0026#39;] + packages) Can I use conda instead of a virtual environment? \u0026nbsp; Yes, no problem.\nTo create a conda environment, simply run the following at the JASMIN Notebook shell:\nconda create --name name-insert-here ipykernel Install any packages you which to use in the environment:\nconda install --name name-insert-here pyjokes Make the Notebooks Service recognise your environment as a kernel:\nconda run --name name-insert-here python -m ipykernel install --user --name name-insert-here Can I get rid of my old kernels from the Notebooks Service? \u0026nbsp; Yes.\nTo list the names of kernels you have installed, run the following at the JASMIN Notebook shell:\njupyter kernelspec list To remove one of them, run:\njupyter kernelspec uninstall insert-name-here"
       })
       .add(
       
       
       {
-        id: 24,
+        id: 25,
         tag: "en",
         href: "/docs/software-on-jasmin/creating-and-using-miniforge-environments/",
         title: "Creating and using miniforge environments",
@@ -6833,20 +6846,20 @@ function initIndex() {
       
       
       {
-        id: 25,
+        id: 26,
         tag: "en",
         href: "/docs/interactive-computing/dask-gateway/",
         title: "Dask Gateway",
         description: "Introduction \u0026nbsp; Dask Gateway\u0026nbsp; is a service which manages Dask\u0026nbsp; clusters for users. On JASMIN, it creates a Dask cluster in LOTUS, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.\n",
         
         
-        content: "Introduction \u0026nbsp; Dask Gateway\u0026nbsp; is a service which manages Dask\u0026nbsp; clusters for users. On JASMIN, it creates a Dask cluster in LOTUS, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.\nPrerequisites \u0026nbsp; Before using Dask Gateway on JASMIN, you will need:\nAn existing JASMIN account and valid jasmin-login access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; Subsequently (once jasmin-login has been approved and completed), the dask access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; The jasmin-login access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the dask role grants access to the special LOTUS partition used by the Dask Gateway service.\nCreating a Dask cluster \u0026nbsp; In the JASMIN Notebooks service \u0026nbsp; In the JASMIN notebooks service\u0026nbsp; , authentication to dask-gateway happens automatically. You can use the snippet below to create a cluster and get a Dask client which you can use:\nimport dask_gateway # Create a connection to dask-gateway. gw = dask_gateway.Gateway(\u0026#34;https://dask-gateway.jasmin.ac.uk\u0026#34;, auth=\u0026#34;jupyterhub\u0026#34;) # Inspect and change the options if required before creating your cluster. options = gw.cluster_options() options.worker_cores = 2 # Create a Dask cluster, or, if one already exists, connect to it. # This stage creates the scheduler job in Slurm, so it may take some # time while your job queues. clusters = gw.list_clusters() if not clusters: cluster = gw.new_cluster(options, shutdown_on_close=False) else: cluster = gw.connect(clusters[0].name) # Create at least one worker, and allow your cluster to scale to three. cluster.adapt(minimum=1, maximum=3) # Get a Dask client. client = cluster.get_client() ######################### ### DO DASK WORK HERE ### ######################### # When you are done and wish to release your cluster: cluster.shutdown() Elsewhere on JASMIN \u0026nbsp; The following explains how to use the Dask Gateway elsewhere on JASMIN, for example, on the sci machines.\n\u0026nbsp; It is not necessary to do this if you only want to use Dask in the JASMIN notebook service. At the current time, it is still necessary to use the notebooks service to generate an API token to allow you to connect to the gateway server.\n\u0026nbsp; It is very important that your API token is not shared between users and remains secret. With it, another user could submit Dask jobs to LOTUS as you, and they could exploit this to see anything in your JASMIN account. Setup \u0026nbsp; Make a Dask configuration folder in your home directory\nmkdir -p ~/.config/dask Create a configuration file for dask-gateway\ntouch ~/.config/dask/gateway.yaml Change the permissions on the file so that only you can read it\nchmod 600 ~/.config/dask/gateway.yaml Head to the API token generator page\u0026nbsp; , put a note in the box to remind yourself what this token is for, press the big orange button, then copy the token.\nPaste the following snippet into ~/.config/dask/gateway.yaml, replace the entry on the final line with the API token you just created.\ngateway: address: https://dask-gateway.jasmin.ac.uk auth: type: jupyterhub kwargs: api_token: replaceWithYourSecretAPIToken You\u0026rsquo;re done. You can now use dask-gateway from the command line.\nAccess the Dask dashboard \u0026nbsp; To get the link to your Dask dashboard, run the following:\nprint(client.dashboard_link)Currently the Dask dashboard is not accessible from a browser outside the JASMIN firewall. If your browser fails to load the dashboard link returned, please use our graphical desktop service to run a Firefox browser inside the firewall to view your dashboard.\nUse a custom Python environment \u0026nbsp; By default the JASMIN Notebooks service and Dask Gateway use the latest version of the jaspy software environment. However, often users would like to use their own software environments.\nUnderstanding the problem \u0026nbsp; When Dask Gateway creates a dask cluster for a user, it runs a setup command to activate a conda environment or python venv. To have Dask use your packages, you need to create a custom environment which you can pass to dask-gateway to activate.\nHowever, for technical reasons, it is not currently possible to use the same virtual environment in both the notebook service and on JASMIN. So you will need to make two environments, one for your notebook to use and one for Dask to use.\n\u0026nbsp; It is VERY important that these environments have the same packages installed in them, and that the packages are exactly the same version in both environments.\nIf you do not keep packages and versions in-sync you can expect many confusing errors.\nIf you use a self-contained conda environment this is not a problem, and you can use this as a kernel in the notebooks service and on the sci machines. You can skip to Putting it all together below.\nCreating a virtual environment for Dask \u0026nbsp; Login to the JASMIN sci machines. Activate jaspy module load jaspy Create your environment in the normal way python -m venv name-of-environment Activate the environment source name-of-environment/bin/activate Install dask and dask gateway and dependencies: without this step your environment will not work with dask. pip install dask-gateway dask lz4 Creating a virtual environment for the notebooks service \u0026nbsp; Follow the instructions here to create a virtual environment. Install Dask and Dask Gateway and dependencies: without this step your environment will not work with Dask. pip install dask-gateway dask lz4 Putting it all together \u0026nbsp; Set your notebook virtual environment as the kernel for the notebook in question as shown in the instructions linked above. Set options.worker_setup to a command which will activate your Dask virtual environment. For example options.worker_setup = \u0026#34;source /home/users/example/name-of-environment/bin/activate\u0026#34; If you have an existing Dask cluster, close it and ensure all LOTUS jobs are stopped before recreating it using the new environment. Code Examples \u0026nbsp; Examples of code and notebooks which can be used to test the JASMIN Dask Gateway service are available on GitHub\u0026nbsp; ."
+        content: "Introduction \u0026nbsp; Dask Gateway\u0026nbsp; is a service which manages Dask\u0026nbsp; clusters for users. On JASMIN, it creates a Dask cluster in LOTUS, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.\nPrerequisites \u0026nbsp; Before using Dask Gateway on JASMIN, you will need:\nAn existing JASMIN account and valid jasmin-login access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; Subsequently (once jasmin-login has been approved and completed), the dask access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; The jasmin-login access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the dask role grants access to the special LOTUS partition used by the Dask Gateway service.\nCreating a Dask cluster \u0026nbsp; In the JASMIN Notebooks service \u0026nbsp; In the JASMIN notebooks service\u0026nbsp; , authentication to dask-gateway happens automatically. You can use the snippet below to create a cluster and get a Dask client which you can use:\nimport dask_gateway # Create a connection to dask-gateway. gw = dask_gateway.Gateway(\u0026#34;https://dask-gateway.jasmin.ac.uk\u0026#34;, auth=\u0026#34;jupyterhub\u0026#34;) # Inspect and change the options if required before creating your cluster. options = gw.cluster_options() options.worker_cores = 2 # Create a Dask cluster, or, if one already exists, connect to it. # This stage creates the scheduler job in Slurm, so it may take some # time while your job queues. clusters = gw.list_clusters() if not clusters: cluster = gw.new_cluster(options, shutdown_on_close=False) else: cluster = gw.connect(clusters[0].name) # Create at least one worker, and allow your cluster to scale to three. cluster.adapt(minimum=1, maximum=3) # Get a Dask client. client = cluster.get_client() ######################### ### DO DASK WORK HERE ### ######################### # When you are done and wish to release your cluster: cluster.shutdown() Elsewhere on JASMIN \u0026nbsp; The following explains how to use the Dask Gateway elsewhere on JASMIN, for example, on the sci machines.\n\u0026nbsp; It is not necessary to do this if you only want to use Dask in the JASMIN notebook service. At the current time, it is still necessary to use the notebooks service to generate an API token to allow you to connect to the gateway server.\n\u0026nbsp; It is very important that your API token is not shared between users and remains secret. With it, another user could submit Dask jobs to LOTUS as you, and they could exploit this to see anything in your JASMIN account. Setup \u0026nbsp; Make a Dask configuration folder in your home directory\nmkdir -p ~/.config/dask Create a configuration file for dask-gateway\ntouch ~/.config/dask/gateway.yaml Change the permissions on the file so that only you can read it\nchmod 600 ~/.config/dask/gateway.yaml Head to the API token generator page\u0026nbsp; , put a note in the box to remind yourself what this token is for, press the big orange button, then copy the token.\nPaste the following snippet into ~/.config/dask/gateway.yaml, replace the entry on the final line with the API token you just created.\ngateway: address: https://dask-gateway.jasmin.ac.uk auth: type: jupyterhub kwargs: api_token: replaceWithYourSecretAPIToken You\u0026rsquo;re done. You can now use dask-gateway from the command line.\nAccess the Dask dashboard \u0026nbsp; To get the link to your Dask dashboard, run the following:\nprint(client.dashboard_link)Currently the Dask dashboard is not accessible from a browser outside the JASMIN firewall. If your browser fails to load the dashboard link returned, please use our graphical desktop service to run a Firefox browser inside the firewall to view your dashboard.\nUse a custom Python environment \u0026nbsp; By default the JASMIN Notebooks service and Dask Gateway use the latest version of the jaspy software environment. However, often users would like to use their own software environments.\nUnderstanding the problem \u0026nbsp; When Dask Gateway creates a dask cluster for a user, it runs a setup command to activate a conda environment or python venv. To have Dask use your packages, you need to create a custom environment which you can pass to dask-gateway to activate.\nHowever, for technical reasons, it is not currently possible to use the same virtual environment in both the notebook service and on JASMIN. So you will need to make two environments, one for your notebook to use and one for Dask to use.\n\u0026nbsp; It is VERY important that these environments have the same packages installed in them, and that the packages are exactly the same version in both environments.\nIf you do not keep packages and versions in-sync you can expect many confusing errors.\nIf you use a self-contained conda environment this is not a problem, and you can use this as a kernel in the notebooks service and on the sci machines. You can skip to Putting it all together below.\nCreating a virtual environment for Dask \u0026nbsp; Login to one of the JASMIN sci machines. Activate jaspy module load jaspy Create your environment in the normal way python -m venv name-of-environment Activate the environment source name-of-environment/bin/activate Install dask and dask gateway and dependencies: without this step your environment will not work with dask. pip install dask-gateway dask lz4 Creating a virtual environment for the notebooks service \u0026nbsp; Follow the instructions here to create a virtual environment. Install Dask and Dask Gateway and dependencies: without this step your environment will not work with Dask. pip install dask-gateway dask lz4 Putting it all together \u0026nbsp; Set your notebook virtual environment as the kernel for the notebook in question as shown in the instructions linked above. Set options.worker_setup to a command which will activate your Dask virtual environment. For example options.worker_setup = \u0026#34;source /home/users/example/name-of-environment/bin/activate\u0026#34; If you have an existing Dask cluster, close it and ensure all LOTUS jobs are stopped before recreating it using the new environment. Code Examples \u0026nbsp; Examples of code and notebooks which can be used to test the JASMIN Dask Gateway service are available on GitHub\u0026nbsp; ."
       })
       .add(
       
       
       {
-        id: 26,
+        id: 27,
         tag: "en",
         href: "/docs/data-transfer/data-transfer-overview/",
         title: "Data transfer overview",
@@ -6859,7 +6872,7 @@ function initIndex() {
       
       
       {
-        id: 27,
+        id: 28,
         tag: "en",
         href: "/docs/data-transfer/data-transfer-tools/",
         title: "Data Transfer Tools",
@@ -6872,7 +6885,7 @@ function initIndex() {
       
       
       {
-        id: 28,
+        id: 29,
         tag: "en",
         href: "/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/",
         title: "Elastic Tape command-line interface hints",
@@ -6885,20 +6898,20 @@ function initIndex() {
       
       
       {
-        id: 29,
+        id: 30,
         tag: "en",
         href: "/docs/batch-computing/example-job-2-calc-md5s/",
         title: "Example Job 2: Calculating MD5 Checksums on many files",
         description: "Sample workflows for LOTUS",
         
         
-        content: "This page records some early CEDA usage of the LOTUS cluster for various relatively simple tasks. Others may wish to use these examples as a starting point for developing their own workflows on LOTUS.\nCase 1: Calculating MD5 Checksums on many files \u0026nbsp; This is a simple case because:\nthe archive only needs to be read by the code and the code that we need to run involves only the basic Linux commands so there are no issues with picking up dependencies from elsewhere. Case Description \u0026nbsp; we want to calculate the MD5 checksums of about 220,000 files. It will take a day or two to run them all in series. we have a text file that contains 220,000 lines - one file per line. Solution under LOTUS \u0026nbsp; Split the 220,000 lines into 22 files of 10,000 lines. Write a template script to: Read a text file full of file paths Run the md5sum command on each file and log the result. Write a script to create 22 new scripts (based on the template script), each of which takes one of the input files and works through it. Workflow steps \u0026nbsp; Log in to the sci server (from a login server):\nssh -A \u0026lt;username\u0026gt;@sci1.jasmin.ac.uk Split the big file:\nsplit -l 10000 -d file_list.txt Produces 22 files called \u0026#34;x00\u0026#34;...\u0026#34;x21\u0026#34; Create the template file: scan_files_template.sh\n#!/bin/bash #SBATCH -e %J.e infile=/home/users/astephen/sst_cci/to_scan/__INSERT_FILE__ while read f ; do /usr/bin/md5sum $f \u0026gt;\u0026gt; /home/users/astephen/sst_cci/output/scanned___INSERT_FILE__.log done \u0026lt; $infileRun a script to generate all the script files:\nfor i in `ls /home/users/astephen/sst_cci/to_scan/` ; do cp scan_files_template.txt bin/scan_files_$i.sh perl -p -i -w -e \u0026#39;s/__INSERT_FILE__/\u0026#39;$i\u0026#39;/g;\u0026#39; bin/scan_files_$i.sh doneSubmit all 22 jobs to LOTUS:\nfor i in `ls /home/users/astephen/sst_cci/to_scan/` ; do echo $i cat /home/users/astephen/sst_cci/bin/scan_files_$i.sh | sbatch -p short-serial -o /home/users/astephen/sst_cci/output/$i doneMonitor the jobs by running:\nsqueue -u \u0026lt;username\u0026gt; All jobs ran within about an hour.\nCase 2: Checksumming CMIP5 Data \u0026nbsp; A variation on Case 2 has been used for checksumming datasets in the CMIP5 archive. The Python code below will find all NetCDF files in a DRS dataset and generate a checksums file and error log. Each dataset is submitted as a separate Slurm job.\n\u0026#34;\u0026#34;\u0026#34; Checksum a CMIP5 dataset usage: checksum_dataset.py dataset_id ... where dataset_id is a full drs id including version e.g. cmip5.output1.MOHC.HadGEM2-ES.historical.6hr.atmos.6hrLev.r1i1p1.v20110921 \u0026#34;\u0026#34;\u0026#34; import os import os.path as op import sys import optparse DRS_ROOT = \u0026#39;/badc/cmip5/data\u0026#39; def submit_job(dataset): # Assume version is in the dataset-id for now parts = dataset.split(\u0026#39;.\u0026#39;) path = op.join(DRS_ROOT, \u0026#39;/\u0026#39;.join(parts)) if not op.exists(path): raise Exception(\u0026#39;%s does not exist\u0026#39; % path) job_name = dataset cmd = (\u0026#34;echo -e \u0026#39;#!/bin/bash\\n\u0026#34; \u0026#34;srun /usr/bin/md5sum path/*/*.nc\u0026#39; \u0026#34; \u0026#34;| sbatch -p short-serial -J job_name \u0026#34; \u0026#34;-o job_name.checksums -e job_name.err\u0026#34; ).format(job_name=job_name, path=path) print(cmd) os.system(cmd) def main(): parser = optparse.OptionParser(description=\u0026#39;Checksum DRS datasets\u0026#39;) (options, args) = parser.parse_args() datasets = args for dataset in datasets: submit_job(dataset) if __name__ == \u0026#39;__main__\u0026#39;: main()If you have a file containing a list of dataset ids you can submit each as a separate job by invoking the above script as follows:\n./checksum_dataset.py $(cat datasets_to_checksum.dat) echo -e \u0026#39;#!/bin/bash srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc\u0026#39; | sbatch -p short-serial -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err Submitted batch job 40898728 ..."
+        content: "This page records some early CEDA usage of the LOTUS cluster for various relatively simple tasks. Others may wish to use these examples as a starting point for developing their own workflows on LOTUS.\nCase 1: Calculating MD5 Checksums on many files \u0026nbsp; This is a simple case because:\nthe archive only needs to be read by the code and the code that we need to run involves only the basic Linux commands so there are no issues with picking up dependencies from elsewhere. Case Description \u0026nbsp; we want to calculate the MD5 checksums of about 220,000 files. It will take a day or two to run them all in series. we have a text file that contains 220,000 lines - one file per line. Solution under LOTUS \u0026nbsp; Split the 220,000 lines into 22 files of 10,000 lines. Write a template script to: Read a text file full of file paths Run the md5sum command on each file and log the result. Write a script to create 22 new scripts (based on the template script), each of which takes one of the input files and works through it. Workflow steps \u0026nbsp; Log in to the sci server (use any of sci-vm-0[1-6], access from a login server):\nssh -A \u0026lt;username\u0026gt;@sci-vm-01.jasmin.ac.uk Split the big file:\nsplit -l 10000 -d file_list.txt Produces 22 files called \u0026#34;x00\u0026#34;...\u0026#34;x21\u0026#34; Create the template file: scan_files_template.sh\n#!/bin/bash #SBATCH -e %J.e infile=/home/users/astephen/sst_cci/to_scan/__INSERT_FILE__ while read f ; do /usr/bin/md5sum $f \u0026gt;\u0026gt; /home/users/astephen/sst_cci/output/scanned___INSERT_FILE__.log done \u0026lt; $infileRun a script to generate all the script files:\nfor i in `ls /home/users/astephen/sst_cci/to_scan/` ; do cp scan_files_template.txt bin/scan_files_$i.sh perl -p -i -w -e \u0026#39;s/__INSERT_FILE__/\u0026#39;$i\u0026#39;/g;\u0026#39; bin/scan_files_$i.sh doneSubmit all 22 jobs to LOTUS:\nfor i in `ls /home/users/astephen/sst_cci/to_scan/` ; do echo $i cat /home/users/astephen/sst_cci/bin/scan_files_$i.sh | sbatch -p short-serial -o /home/users/astephen/sst_cci/output/$i doneMonitor the jobs by running:\nsqueue -u \u0026lt;username\u0026gt; All jobs ran within about an hour.\nCase 2: Checksumming CMIP5 Data \u0026nbsp; A variation on Case 2 has been used for checksumming datasets in the CMIP5 archive. The Python code below will find all NetCDF files in a DRS dataset and generate a checksums file and error log. Each dataset is submitted as a separate Slurm job.\n\u0026#34;\u0026#34;\u0026#34; Checksum a CMIP5 dataset usage: checksum_dataset.py dataset_id ... where dataset_id is a full drs id including version e.g. cmip5.output1.MOHC.HadGEM2-ES.historical.6hr.atmos.6hrLev.r1i1p1.v20110921 \u0026#34;\u0026#34;\u0026#34; import os import os.path as op import sys import optparse DRS_ROOT = \u0026#39;/badc/cmip5/data\u0026#39; def submit_job(dataset): # Assume version is in the dataset-id for now parts = dataset.split(\u0026#39;.\u0026#39;) path = op.join(DRS_ROOT, \u0026#39;/\u0026#39;.join(parts)) if not op.exists(path): raise Exception(\u0026#39;%s does not exist\u0026#39; % path) job_name = dataset cmd = (\u0026#34;echo -e \u0026#39;#!/bin/bash\\n\u0026#34; \u0026#34;srun /usr/bin/md5sum path/*/*.nc\u0026#39; \u0026#34; \u0026#34;| sbatch -p short-serial -J job_name \u0026#34; \u0026#34;-o job_name.checksums -e job_name.err\u0026#34; ).format(job_name=job_name, path=path) print(cmd) os.system(cmd) def main(): parser = optparse.OptionParser(description=\u0026#39;Checksum DRS datasets\u0026#39;) (options, args) = parser.parse_args() datasets = args for dataset in datasets: submit_job(dataset) if __name__ == \u0026#39;__main__\u0026#39;: main()If you have a file containing a list of dataset ids you can submit each as a separate job by invoking the above script as follows:\n./checksum_dataset.py $(cat datasets_to_checksum.dat) echo -e \u0026#39;#!/bin/bash srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc\u0026#39; | sbatch -p short-serial -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err Submitted batch job 40898728 ..."
       })
       .add(
       
       
       {
-        id: 30,
+        id: 31,
         tag: "en",
         href: "/training/advanced/training-exercises-coming-soon/",
         title: "Example training exercise",
@@ -6911,7 +6924,7 @@ function initIndex() {
       
       
       {
-        id: 31,
+        id: 32,
         tag: "en",
         href: "/docs/mass/external-access-to-mass-faq/",
         title: "External Access to MASS FAQ",
@@ -6924,7 +6937,7 @@ function initIndex() {
       
       
       {
-        id: 32,
+        id: 33,
         tag: "en",
         href: "/docs/data-transfer/ftp-and-lftp/",
         title: "ftp and lftp",
@@ -6937,7 +6950,7 @@ function initIndex() {
       
       
       {
-        id: 33,
+        id: 34,
         tag: "en",
         href: "/docs/getting-started/generate-ssh-key-pair/",
         title: "Generate an SSH key pair",
@@ -6950,7 +6963,7 @@ function initIndex() {
       
       
       {
-        id: 34,
+        id: 35,
         tag: "en",
         href: "/docs/software-on-jasmin/geocat-replaces-ncl/",
         title: "Geocat replaces NCL",
@@ -6963,7 +6976,7 @@ function initIndex() {
       
       
       {
-        id: 35,
+        id: 36,
         tag: "en",
         href: "/docs/getting-started/get-jasmin-portal-account/",
         title: "Get a JASMIN portal account",
@@ -6976,7 +6989,7 @@ function initIndex() {
       
       
       {
-        id: 36,
+        id: 37,
         tag: "en",
         href: "/docs/getting-started/get-login-account/",
         title: "Get a login account",
@@ -6989,7 +7002,7 @@ function initIndex() {
       
       
       {
-        id: 37,
+        id: 38,
         tag: "en",
         href: "/docs/getting-started/get-started-with-jasmin/",
         title: "Get Started with JASMIN",
@@ -7002,7 +7015,7 @@ function initIndex() {
       
       
       {
-        id: 38,
+        id: 39,
         tag: "en",
         href: "/docs/data-transfer/globus-command-line-interface/",
         title: "Globus Command-Line Interface",
@@ -7015,7 +7028,7 @@ function initIndex() {
       
       
       {
-        id: 39,
+        id: 40,
         tag: "en",
         href: "/docs/data-transfer/globus-connect-personal/",
         title: "Globus Connect Personal",
@@ -7028,7 +7041,7 @@ function initIndex() {
       
       
       {
-        id: 40,
+        id: 41,
         tag: "en",
         href: "/docs/data-transfer/globus-transfers-with-jasmin/",
         title: "Globus transfers with JASMIN",
@@ -7041,7 +7054,7 @@ function initIndex() {
       
       
       {
-        id: 41,
+        id: 42,
         tag: "en",
         href: "/docs/interactive-computing/graphical-linux-desktop-access-using-nx/",
         title: "Graphical linux desktop using NoMachine NX",
@@ -7054,7 +7067,7 @@ function initIndex() {
       
       
       {
-        id: 42,
+        id: 43,
         tag: "en",
         href: "/docs/data-transfer/gridftp-cert-based-auth/",
         title: "GridFTP (certificate-based authentication)",
@@ -7067,7 +7080,7 @@ function initIndex() {
       
       
       {
-        id: 43,
+        id: 44,
         tag: "en",
         href: "/docs/data-transfer/gridftp-ssh-auth/",
         title: "GridFTP (SSH authentication)",
@@ -7080,7 +7093,7 @@ function initIndex() {
       
       
       {
-        id: 44,
+        id: 45,
         tag: "en",
         href: "/guides/guides-coming-soon/",
         title: "Guides coming soon",
@@ -7093,7 +7106,7 @@ function initIndex() {
       
       
       {
-        id: 45,
+        id: 46,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-alert-system/",
         title: "GWS Alert System",
@@ -7106,7 +7119,7 @@ function initIndex() {
       
       
       {
-        id: 46,
+        id: 47,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-etiquette/",
         title: "GWS etiquette",
@@ -7119,7 +7132,7 @@ function initIndex() {
       
       
       {
-        id: 47,
+        id: 48,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-scanner/",
         title: "GWS Scanner",
@@ -7132,7 +7145,7 @@ function initIndex() {
       
       
       {
-        id: 48,
+        id: 49,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-scanner-ui/",
         title: "GWS Scanner UI",
@@ -7145,7 +7158,7 @@ function initIndex() {
       
       
       {
-        id: 49,
+        id: 50,
         tag: "en",
         href: "/docs/mass/how-to-apply-for-mass-access/",
         title: "How to apply for MASS access",
@@ -7158,7 +7171,7 @@ function initIndex() {
       
       
       {
-        id: 50,
+        id: 51,
         tag: "en",
         href: "/docs/getting-started/how-to-contact-us-about-jasmin-issues/",
         title: "How to contact us about JASMIN issues",
@@ -7171,20 +7184,20 @@ function initIndex() {
       
       
       {
-        id: 51,
+        id: 52,
         tag: "en",
         href: "/docs/getting-started/how-to-login/",
         title: "How to login",
         description: "How to login to JASMIN",
         
         
-        content: "The instructions below cover the process of logging in using a terminal client only. For a graphical linux desktop, please see alternative instructions using NoMachine NX.\nPreparing your credentials: loading your SSH private key \u0026nbsp; In order to log in using SSH, you need to present your SSH private key as your credential (instead of a username and password). Your private key should reside only on your local machine, so this process of loading your key is something that you do on that local machine. Even if you connect via a departmental server, there should be no need to upload your private key to that machine: the process of loading your key and enabling agent forwarding should ensure that the key is available to subsequent host(s) in the chain of SSH \u0026ldquo;hops\u0026rdquo;.\nThe details of how to do this can vary depending on whether your local machine runs Windows, macOS or Linux.\n\u0026nbsp; See presenting your ssh key for recommended methods to present your SSH key, depending on what type of machine you are using. Once you have set that up successfully, return here and continue below.\nThe JASMIN login servers \u0026nbsp; See this article for a description and listing of the login servers.\nLogging in to JASMIN \u0026nbsp; Assuming that you have loaded your SSH private key using one of the methods described above, then you can login to a login server as follows (do this on your own/local machine):\nssh -A \u0026lt;user_id\u0026gt;@\u0026lt;login_server\u0026gt; For example, user jpax might login to a JASMIN login server with:\nssh -A jpax@login-01.jasmin.ac.uk The -A argument is important because it enables \u0026ldquo;agent-forwarding\u0026rdquo;. This means that your the information about your SSH private key is forwarded to your remote session on the login server so that you can use it for further SSH connections.\nCan\u0026rsquo;t login? \u0026nbsp; Check our troubleshooting guide: login problems The login message \u0026nbsp; When you first login you will see a message that provides some useful information (see Figure 1).\nThe login message shown on login-01.jasmin.ac.uk. X-forwarding for graphical applications (within JASMIN only) \u0026nbsp; Some applications involve displaying graphical output from an application or user interface running on a remote server, typically to display or interact with data graphically. You can instruct your SSH connection to enable forwarding of X-server capability by adding the -X argument to the ssh command, as follows:\nssh -X \u0026lt;user\u0026gt;@\u0026lt;hostname\u0026gt; Note that the -X argument can be used in conjunction with the agent-forwarding -A argument. In some cases the -Y option may be needed instead of -X.\nPlease note that this arrangement sends your graphical output back to your desktop machine over the network, so should only be used within JASMIN, not to your local desktop machine. A solution has been put in place for a graphical linux desktop environment within JASMIN using NoMachine NX, removing the need to send X11 graphics over the wide-area network. You are strongly advised to use NX for any situation which involves graphical output on JASMIN. Using X11 graphics over the wide-area network outside of JASMIN is not supported: you will not get good performance and this makes inefficient use of shared resources which can impair performance for other users. Please use NX instead. Of course, you may still need to use X11 graphics to send graphical output back to your JASMIN-side graphical desktop within JASMIN, but this is OK as it is all within the JASMIN network.\nWhere next? \u0026nbsp; Having been through all the steps and made an initial connection to JASMIN (well done!) you will be keen to do some real work. You should try the sci servers to get started. Use the list presented on the login screen to select a sci server which is not under heavy usage.\nFor example, from the JASMIN login server, you might choose to login to sci-vm-01:\nssh \u0026lt;user\u0026gt;@sci-vm-01.jasmin.ac.uk If you are asked for a password when trying to login to this second machine, it indicates that your ssh key is not being forwarded. Please check that you have used the -A option in your initial connection to the login server, or set up agent forwarding permanently in your SSH client configuration on your local machine.\nThere is no point in trying to enter a password (or even the passphrase associated with your key) as only an ssh key presented in the way described above is accepted.\nNote that once you are logged into a login server then you can omit the \u0026lt;user_id\u0026gt;@ prefix before the server name for the onward connection, since your username will be the same on both systems. But there is no harm in including it anyway, to ensure that you connect as the correct user. As shown above, the -A option is not needed for the onward connection, although there is no harm in including it.\nRemember to log out of the login server in addition to the sci server when you have finished your work, to get back to your own (local) machine:\nexit logout Connection to sci-vm-01.jasmin.ac.uk closed. exit logout Connection to login-01.jasmin.ac.uk closed. You are then back on your own machine."
+        content: "The instructions below cover the process of logging in using a terminal client only. For a graphical linux desktop, please see alternative instructions using NoMachine NX.\nPreparing your credentials: loading your SSH private key \u0026nbsp; In order to log in using SSH, you need to present your SSH private key as your credential (instead of a username and password). Your private key should reside only on your local machine, so this process of loading your key is something that you do on that local machine. Even if you connect via a departmental server, there should be no need to upload your private key to that machine: the process of loading your key and enabling agent forwarding should ensure that the key is available to subsequent host(s) in the chain of SSH \u0026ldquo;hops\u0026rdquo;.\nThe details of how to do this can vary depending on whether your local machine runs Windows, macOS or Linux.\n\u0026nbsp; See presenting your ssh key for recommended methods to present your SSH key, depending on what type of machine you are using. Once you have set that up successfully, return here and continue below.\nThe JASMIN login servers \u0026nbsp; See this article for a description and listing of the login servers.\nLogging in to JASMIN \u0026nbsp; Assuming that you have loaded your SSH private key using one of the methods described above, then you can login to a login server as follows (do this on your own/local machine):\nssh -A \u0026lt;user_id\u0026gt;@\u0026lt;login_server\u0026gt; For example, user jpax might login to a JASMIN login server with:\nssh -A jpax@login-01.jasmin.ac.uk The -A argument is important because it enables \u0026ldquo;agent-forwarding\u0026rdquo;. This means that your the information about your SSH private key is forwarded to your remote session on the login server so that you can use it for further SSH connections.\nCan\u0026rsquo;t login? \u0026nbsp; Check our troubleshooting guide: login problems The login message \u0026nbsp; When you first login you will see a message that provides some useful information (see Figure 1).\nThe login message shown on login-01.jasmin.ac.uk. X-forwarding for graphical applications (within JASMIN only) \u0026nbsp; Some applications involve displaying graphical output from an application or user interface running on a remote server, typically to display or interact with data graphically. You can instruct your SSH connection to enable forwarding of X-server capability by adding the -X argument to the ssh command, as follows:\nssh -X \u0026lt;user\u0026gt;@\u0026lt;hostname\u0026gt; Note that the -X argument can be used in conjunction with the agent-forwarding -A argument. In some cases the -Y option may be needed instead of -X.\nPlease note that this arrangement sends your graphical output back to your desktop machine over the network, so should only be used within JASMIN, not to your local desktop machine. A solution has been put in place for a graphical linux desktop environment within JASMIN using NoMachine NX, removing the need to send X11 graphics over the wide-area network. You are strongly advised to use NX for any situation which involves graphical output on JASMIN. Using X11 graphics over the wide-area network outside of JASMIN is not supported: you will not get good performance and this makes inefficient use of shared resources which can impair performance for other users. Please use NX instead. Of course, you may still need to use X11 graphics to send graphical output back to your JASMIN-side graphical desktop within JASMIN, but this is OK as it is all within the JASMIN network.\nWhere next? \u0026nbsp; Having been through all the steps and made an initial connection to JASMIN (well done!) you will be keen to do some real work. You should try the sci servers to get started. Use the list presented on the login screen to select a sci server which is not under heavy usage.\nFor example, from the JASMIN login server, you might choose to login to sci-vm-01:\nssh \u0026lt;user\u0026gt;@sci-vm-01.jasmin.ac.uk If you are asked for a password when trying to login to this second machine, it indicates that your ssh key is not being forwarded. Please check that you have used the -A option in your initial connection to the login server, or set up agent forwarding permanently in your SSH client configuration on your local machine.\nThere is no point in trying to enter a password (or even the passphrase associated with your key) as only an ssh key presented in the way described above is accepted.\nNote that once you are logged into a login server then you can omit the \u0026lt;user_id\u0026gt;@ prefix before the server name for the onward connection, since your username will be the same on both systems. But there is no harm in including it anyway, to ensure that you connect as the correct user. As shown above, the -A option is not needed for the onward connection, although there is no harm in including it.\nRemember to log out of the login server in addition to the sci server when you have finished your work, to get back to your own (local) machine:\nexit logout Connection to sci-vm-01.jasmin.ac.uk closed. exit logout Connection to login-01.jasmin.ac.uk closed. You are then back on your own machine.\nSee also connecting to a sci server via a login server for some options of different methods for connecting to a sci server."
       })
       .add(
       
       
       {
-        id: 52,
+        id: 53,
         tag: "en",
         href: "/docs/batch-computing/how-to-monitor-slurm-jobs/",
         title: "How to monitor Slurm jobs",
@@ -7197,20 +7210,20 @@ function initIndex() {
       
       
       {
-        id: 53,
+        id: 54,
         tag: "en",
         href: "/docs/batch-computing/how-to-submit-a-job/",
         title: "How to submit a job",
         description: "How to submit a job to Slurm",
         
         
-        content: "This article explains how to submit a batch job to the new scheduler Slurm.\nWhat is a batch job? \u0026nbsp; A batch job is controlled by a script written by the user who submits the job to the batch system Slurm. The batch system then selects the resources for the job and decides when to run the job. Note: the term \u0026ldquo;job\u0026rdquo; is used throughout this documentation to mean a \u0026ldquo;batch job\u0026rdquo;.\nThere are two ways of submitting a job to Slurm:\nSubmit via a Slurm job script - create a bash script that includes directives to the Slurm scheduler Submit via command-line options - provide directives to Slurm via command-line arguments Both options are described below.\nWhich servers can you submit jobs from? \u0026nbsp; Jobs can be submitted to Slurm from the following Sci machines:\nsci1.jasmin.ac.uk sci2.jasmin.ac.uk sci3.jasmin.ac.uk sci4.jasmin.ac.uk sci5.jasmin.ac.uk sci6.jasmin.ac.uk sci8.jasmin.ac.uk Method 1: Submit via a Slurm job script \u0026nbsp; The Slurm job submission command is:\nsbatch myjobscript The job script is a Bash script of user\u0026rsquo;s application and includes a list of Slurm directives, prefixed with #SBATCH as shown in this example:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=05:00 # executable sleep 5mFor job specification of resources please refer to Table 2 of the help article Slurm quick reference\nMethod 2: Submit via command-line options \u0026nbsp; If you have an existing script, written in any language, that you wish to submit to LOTUS then you can do so by providing Slurm directives as command- line arguments. For example, if you have a script \u0026ldquo;my-script.py\u0026rdquo; that takes a single argument \u0026ldquo;-f \u0026rdquo;, you can submit it using \u0026ldquo;sbatch\u0026rdquo; as follows:\nsbatch -p short-serial -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txtThis approach allows you to submit jobs without writing additional job scripts to wrap your existing code.\nMethod 3: Submit an interactive session via salloc \u0026nbsp; Testing a job on LOTUS can be carried out in an interactive manner by obtaining a Slurm job allocation or resources (a set of nodes) via the Slurm command salloc . The code/application is executed and the allocation are released after a specific time -default 1 hour - when the testing is finished. There are two ways:\nInteractive execution with pseudo-shell terminal on the compute LOTUS node \u0026nbsp; The job is executed on the LOTUS compute node by invoking the Slurm command srun after allocating resources with salloc. See example below.\nsalloc -p par-single --ntasks-per-node=2 salloc: Pending job allocation 23506 salloc: job 23506 queued and waiting for resources salloc: job 23506 has been allocated resources salloc: Granted job allocation 23506The job allocation ID 23506 has 2 CPUs on the compute node host580 as shown below:\nsqueue -u train001-o\u0026#34;%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R\u0026#34; JOBID PARTITION NAME USER ST TIME NODES CPUS NODELIST(REASON) 23506 par-singl interactive usertest R 1:32 1 2 host580To launch an interactive shell session on the compute node host580, use the following srun command (from a sci server).\nsrun --pty /bin/bash @host580 ~]$ Interactive execution with no shell \u0026nbsp; A code/application can be executed on the LOTUS compute node without a shell session on the node itself. For example the command \u0026lsquo;hostname\u0026rsquo; is executed twice as there are 2 CPUs and this outputs the name of the node\nsrun hostname host580.jc.rl.ac.uk host580.jc.rl.ac.uk Job array submission \u0026nbsp; Job arrays are groups of jobs with the same executable and resource requirements, but different input files. Job arrays can be submitted, controlled, and monitored as a single unit or as individual jobs or groups of jobs. Each job submitted from a job array shares the same job ID as the job array and is uniquely referenced using an array index. This approach is useful for ‘high throughput\u0026rsquo; tasks, for example where you want to run your simulation with different driving data or run the same processing task on multiple data files.\nImportant note: The maximum job array size that Slurm is configured for is MaxArraySize = 10000. If a Job array of size is greater than 10000 is submitted, Slurm will reject the job submission with the following error message: \u0026ldquo;Job array index too large. Job not submitted.\u0026rdquo;\nTaking a simple R submission script as an example:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH --job-name=myRtest #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=30:00 module add jasr Rscript TestRFile.R dataset1.csvIf you want to run the same script TestRFile.R with input file dataset2.csv through to dataset10.csv, you could create and submit a job script for each dataset. However, by setting up an array job, you could create and submit a single job script.\nThe corresponding job array script to process 10 input files in a single job submission would look something like this:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH --job-name=myRarray #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --time=30:00 #SBATCH --array=1-10 module add jasr Rscript TestRFile.R datset$SLURM_ARRAY_TASK_ID.csvHere the important differences are :\nThe array is created by Slurm directive --array=1-10 by including elements numbered [1-10]to represent our 10 variations The error and output file have the array index %a included in the name and %A is the job ID. The environment variable $SLURM_ARRAY_TASK_ID in the Rscript command is expanded to give the job index When the job is submitted, Slurm will create 10 tasks under the single job ID. The job array script is submitted in the usual way:\nsbatch myRarray.sbatchIf you use the squeue -u \u0026lt;username\u0026gt; command to list your active jobs, you will see 10 tasks with the same Job ID. The tasks can be distinguished by the [index] e.g. jobID_index. Note that individual tasks may be allocated to a range of different hosts on LOTUS."
+        content: "This article explains how to submit a batch job to the new scheduler Slurm.\nWhat is a batch job? \u0026nbsp; A batch job is controlled by a script written by the user who submits the job to the batch system Slurm. The batch system then selects the resources for the job and decides when to run the job. Note: the term \u0026ldquo;job\u0026rdquo; is used throughout this documentation to mean a \u0026ldquo;batch job\u0026rdquo;.\nThere are two ways of submitting a job to Slurm:\nSubmit via a Slurm job script - create a bash script that includes directives to the Slurm scheduler Submit via command-line options - provide directives to Slurm via command-line arguments Both options are described below.\nWhich servers can you submit jobs from? \u0026nbsp; Jobs can be submitted to Slurm from any of the sci servers. Check the current list of machines on that page.\nMethod 1: Submit via a Slurm job script \u0026nbsp; The Slurm job submission command is:\nsbatch myjobscript The job script is a Bash script of user\u0026rsquo;s application and includes a list of Slurm directives, prefixed with #SBATCH as shown in this example:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=05:00 # executable sleep 5mFor job specification of resources please refer to Table 2 of the help article Slurm quick reference\nMethod 2: Submit via command-line options \u0026nbsp; If you have an existing script, written in any language, that you wish to submit to LOTUS then you can do so by providing Slurm directives as command- line arguments. For example, if you have a script \u0026ldquo;my-script.py\u0026rdquo; that takes a single argument \u0026ldquo;-f \u0026rdquo;, you can submit it using \u0026ldquo;sbatch\u0026rdquo; as follows:\nsbatch -p short-serial -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txtThis approach allows you to submit jobs without writing additional job scripts to wrap your existing code.\nMethod 3: Submit an interactive session via salloc \u0026nbsp; Testing a job on LOTUS can be carried out in an interactive manner by obtaining a Slurm job allocation or resources (a set of nodes) via the Slurm command salloc . The code/application is executed and the allocation are released after a specific time -default 1 hour - when the testing is finished. There are two ways:\nInteractive execution with pseudo-shell terminal on the compute LOTUS node \u0026nbsp; The job is executed on the LOTUS compute node by invoking the Slurm command srun after allocating resources with salloc. See example below.\nsalloc -p par-single --ntasks-per-node=2 salloc: Pending job allocation 23506 salloc: job 23506 queued and waiting for resources salloc: job 23506 has been allocated resources salloc: Granted job allocation 23506The job allocation ID 23506 has 2 CPUs on the compute node host580 as shown below:\nsqueue -u train001-o\u0026#34;%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R\u0026#34; JOBID PARTITION NAME USER ST TIME NODES CPUS NODELIST(REASON) 23506 par-singl interactive usertest R 1:32 1 2 host580To launch an interactive shell session on the compute node host580, use the following srun command (from a sci server).\nsrun --pty /bin/bash @host580 ~]$ Interactive execution with no shell \u0026nbsp; A code/application can be executed on the LOTUS compute node without a shell session on the node itself. For example the command \u0026lsquo;hostname\u0026rsquo; is executed twice as there are 2 CPUs and this outputs the name of the node\nsrun hostname host580.jc.rl.ac.uk host580.jc.rl.ac.uk Job array submission \u0026nbsp; Job arrays are groups of jobs with the same executable and resource requirements, but different input files. Job arrays can be submitted, controlled, and monitored as a single unit or as individual jobs or groups of jobs. Each job submitted from a job array shares the same job ID as the job array and is uniquely referenced using an array index. This approach is useful for ‘high throughput\u0026rsquo; tasks, for example where you want to run your simulation with different driving data or run the same processing task on multiple data files.\nImportant note: The maximum job array size that Slurm is configured for is MaxArraySize = 10000. If a Job array of size is greater than 10000 is submitted, Slurm will reject the job submission with the following error message: \u0026ldquo;Job array index too large. Job not submitted.\u0026rdquo;\nTaking a simple R submission script as an example:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH --job-name=myRtest #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=30:00 module add jasr Rscript TestRFile.R dataset1.csvIf you want to run the same script TestRFile.R with input file dataset2.csv through to dataset10.csv, you could create and submit a job script for each dataset. However, by setting up an array job, you could create and submit a single job script.\nThe corresponding job array script to process 10 input files in a single job submission would look something like this:\n#!/bin/bash #SBATCH --partition=short-serial #SBATCH --job-name=myRarray #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --time=30:00 #SBATCH --array=1-10 module add jasr Rscript TestRFile.R datset$SLURM_ARRAY_TASK_ID.csvHere the important differences are :\nThe array is created by Slurm directive --array=1-10 by including elements numbered [1-10]to represent our 10 variations The error and output file have the array index %a included in the name and %A is the job ID. The environment variable $SLURM_ARRAY_TASK_ID in the Rscript command is expanded to give the job index When the job is submitted, Slurm will create 10 tasks under the single job ID. The job array script is submitted in the usual way:\nsbatch myRarray.sbatchIf you use the squeue -u \u0026lt;username\u0026gt; command to list your active jobs, you will see 10 tasks with the same Job ID. The tasks can be distinguished by the [index] e.g. jobID_index. Note that individual tasks may be allocated to a range of different hosts on LOTUS."
       })
       .add(
       
       
       {
-        id: 54,
+        id: 55,
         tag: "en",
         href: "/docs/batch-computing/how-to-submit-an-mpi-parallel-job/",
         title: "How to submit an MPI parallel job",
@@ -7223,7 +7236,7 @@ function initIndex() {
       
       
       {
-        id: 55,
+        id: 56,
         tag: "en",
         href: "/docs/data-transfer/hpxfer-access-role/",
         title: "hpxfer access role",
@@ -7236,7 +7249,7 @@ function initIndex() {
       
       
       {
-        id: 56,
+        id: 57,
         tag: "en",
         href: "/docs/software-on-jasmin/idl/",
         title: "IDL",
@@ -7249,7 +7262,7 @@ function initIndex() {
       
       
       {
-        id: 57,
+        id: 58,
         tag: "en",
         href: "/docs/short-term-project-storage/install-xfc-client/",
         title: "Install XFC client",
@@ -7262,7 +7275,7 @@ function initIndex() {
       
       
       {
-        id: 58,
+        id: 59,
         tag: "en",
         href: "/docs/interactive-computing/interactive-computing-overview/",
         title: "Interactive computing overview",
@@ -7275,7 +7288,7 @@ function initIndex() {
       
       
       {
-        id: 59,
+        id: 60,
         tag: "en",
         href: "/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/",
         title: "Introduction to the JASMIN Cloud",
@@ -7288,7 +7301,7 @@ function initIndex() {
       
       
       {
-        id: 60,
+        id: 61,
         tag: "en",
         href: "/docs/for-cloud-tenants/jasmin-cloud-portal/",
         title: "JASMIN Cloud Portal",
@@ -7301,7 +7314,7 @@ function initIndex() {
       
       
       {
-        id: 61,
+        id: 62,
         tag: "en",
         href: "/docs/uncategorized/jasmin-conditions-of-use/",
         title: "JASMIN Conditions of Use",
@@ -7314,7 +7327,7 @@ function initIndex() {
       
       
       {
-        id: 62,
+        id: 63,
         tag: "en",
         href: "/docs/interactive-computing/jasmin-notebooks-service/",
         title: "JASMIN Notebooks Service",
@@ -7327,7 +7340,7 @@ function initIndex() {
       
       
       {
-        id: 63,
+        id: 64,
         tag: "en",
         href: "/docs/software-on-jasmin/software-migration-2020/",
         title: "JASMIN software changes: migration to CentOS7 (2020)",
@@ -7340,7 +7353,7 @@ function initIndex() {
       
       
       {
-        id: 64,
+        id: 65,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-software-faqs/",
         title: "JASMIN software FAQs",
@@ -7353,7 +7366,7 @@ function initIndex() {
       
       
       {
-        id: 65,
+        id: 66,
         tag: "en",
         href: "/docs/getting-started/jasmin-status/",
         title: "JASMIN status",
@@ -7366,7 +7379,7 @@ function initIndex() {
       
       
       {
-        id: 66,
+        id: 67,
         tag: "en",
         href: "/docs/getting-started/jasmin-training-accounts/",
         title: "JASMIN training accounts",
@@ -7379,7 +7392,7 @@ function initIndex() {
       
       
       {
-        id: 67,
+        id: 68,
         tag: "en",
         href: "/docs/software-on-jasmin/jaspy-envs/",
         title: "Jaspy Software Environments (Python 3, R and other tools)",
@@ -7392,7 +7405,7 @@ function initIndex() {
       
       
       {
-        id: 68,
+        id: 69,
         tag: "en",
         href: "/docs/short-term-project-storage/jdma/",
         title: "Joint-storage Data Migration App (JDMA)",
@@ -7405,7 +7418,7 @@ function initIndex() {
       
       
       {
-        id: 69,
+        id: 70,
         tag: "en",
         href: "/docs/interactive-computing/login-problems/",
         title: "Login problems",
@@ -7418,20 +7431,20 @@ function initIndex() {
       
       
       {
-        id: 70,
+        id: 71,
         tag: "en",
         href: "/docs/interactive-computing/login-servers/",
         title: "Login servers",
         description: "Login servers",
         
         
-        content: "Available login servers \u0026nbsp; There are four login servers available to access resources within JASMIN. Users with the jasmin-login access role can access the following servers via SSH .\n\u0026nbsp; All four login servers now have identical configuration and should be accessible from any network. name login-01.jasmin.ac.uk login-02.jasmin.ac.uk login-03.jasmin.ac.uk login-04.jasmin.ac.uk Features of login servers \u0026nbsp; Login servers have minimal resources and software installed. They provide:\na means to access other resources within JASMIN (inside the STFC firewall) access to your home directory (/home/users/\u0026lt;username\u0026gt;) no analysis software no access to group workspaces Recent changes \u0026nbsp; There is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team. This means all users can access all login servers (previously some users could only use particular ones) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. See also How to login and other articles in the Getting started category.\nSee also NoMachine NX service which provides login to a graphical Linux desktop, rather than a single terminal window.\nHow to use the login servers \u0026nbsp; For full details of how to log in, including making onward connections to other machines, please see the article \u0026ldquo;How to login\u0026rdquo;.\n\u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx, sci, xfer and hpxfer machines).\nIn other words, the use of su and sudo is not permitted.\nPlease be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudoon a JASMIN machine: expect some follow-up from the JASMIN team if you do!"
+        content: "Available login servers \u0026nbsp; There are four login servers available to access resources within JASMIN. Users with the jasmin-login access role can access the following servers via SSH .\n\u0026nbsp; All four login servers now have identical configuration and should be accessible from any network. name login-01.jasmin.ac.uk login-02.jasmin.ac.uk login-03.jasmin.ac.uk login-04.jasmin.ac.uk Features of login servers \u0026nbsp; Login servers have minimal resources and software installed. They provide:\na means to access other resources within JASMIN (inside the STFC firewall) access to your home directory (/home/users/\u0026lt;username\u0026gt;) no analysis software no access to group workspaces Recent changes \u0026nbsp; There is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team. This means all users can access all login servers (previously some users could only use particular ones) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. See also How to login and other articles in the Getting started category.\nSee also NoMachine NX service which provides login to a graphical Linux desktop, rather than a single terminal window.\nHow to use the login servers \u0026nbsp; For full details of how to log in, including making onward connections to other machines, please see the article \u0026ldquo;How to login\u0026rdquo;.\n\u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx, sci, xfer and hpxfer machines).\nIn other words, the use of su and sudo is not permitted.\nPlease be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudoon a JASMIN machine: expect some follow-up from the JASMIN team if you do!\nConnecting to a sci server via a login server \u0026nbsp; The connection via a login server can be done either with 2 hops, or using a login server as a Jump Host (-J):\n2 hops method: ssh -A fred@login-01.jasmin.ac.uk ssh fred@sci-vm-01.jasmin.ac.uk # no -A needed for this step, if no onward connections from sci server # now on sci server Jump Host method: ssh -A fred@login-01.jasmin.ac.uk -J fred@login-01.jasmin.ac.uk # now on sci server Alternatively, the same effect can be achieved with a ProxyJump directive in your local ~/.ssh/config file:\nHost Sci1ViaLogin01 User fred ForwardAgent yes HostName sci-vm-01.jasmin.ac.uk ProxyJump fred@login-01.jasmin.ac.ukYou could then simply connect to Sci1ViaLogin01:\nssh Sci1ViaLogin01 # now on sci server This sort of configuration is useful for connections needed by remote editing/development tools such as VSCode. The example above relies on having your key loaded locally in an ssh-agent.\nAn alternative is to include a line specifying the location of your key, so you\u0026rsquo;ll then be prompted for your passphrase whenever you connect:\nHost Sci1ViaLogin01 User fred ForwardAgent yes HostName sci-vm-01.jasmin.ac.uk ProxyJump fred@login-01.jasmin.ac.uk IdentityFile ~/.ssh/id_rsa_jasmin"
       })
       .add(
       
       
       {
-        id: 71,
+        id: 72,
         tag: "en",
         href: "/docs/batch-computing/lotus-cluster-specification/",
         title: "LOTUS cluster specification",
@@ -7444,20 +7457,20 @@ function initIndex() {
       
       
       {
-        id: 72,
+        id: 73,
         tag: "en",
         href: "/docs/batch-computing/lotus-overview/",
         title: "LOTUS overview",
         description: "LOTUS overview",
         
         
-        content: "This article gives an overview of the LOTUS batch computing cluster which is part of JASMIN. It covers:\nWhat LOTUS is and what it can be used for Where LOTUS can be accessed from What is LOTUS \u0026nbsp; LOTUS is not, in itself, a High-Performance Computing (HPC) facility, but provides the batch and parallel processing component of the JASMIN data- intensive scientific analysis environment. LOTUS is a cluster of physical machines, running the Slurm workload manager, enabling efficient scheduling of larger data analysis tasks across nodes in the cluster as a single unit -see Figure 1.\nEach node in the cluster is connected by 10Gbit/s Ethernet to JASMIN\u0026rsquo;s high-performance 40Gbit/s core network. Although not its primary function, LOTUS also facilitates MPI-based parallel processing.\nJASMIN provides both interactive and batch computing environments, recognising that scientists often need to develop and test workflows interactively before running those workflows efficiently at scale. Nodes within LOTUS run the same stack of software and can access the same high- performance storage as the JASMIN Scientific Analysis servers, ensuring a consistent working environment for all phases of users\u0026rsquo; workflows.\nSee LOTUS Hardware for details of the current LOTUS environment summarised in this schematic presentation\nFigure 1 shows a schematic presentation of the LOTUS cluster and its environment\nLOTUS schematic When to use LOTUS \u0026nbsp; LOTUS is ideally suited to workflows which need to process or compare entire datasets, stored either in Group Workspaces or in the CEDA archives. The latter are directly accessible read-only so can be processed in-place without the need to copy files. Intermediate working files (within batch jobs) should be stored temporarily in /work/scratch-pw* and /work/scratch-nopw* volumes which are shared across the cluster, while persistent outputs can be written efficiently to Group Workspaces and shared with collaborators for the duration of a project.\nSee Access to Storage for details about which file systems are appropriate to use and how to access them.\nLOTUS currently has around 19,000 cores, but is heavily used and implements a fair-share scheduling system between users. It is not intended as a substitute for dedicated HPC facilities, rather as a complementary environment in which model outputs can be analyzed and compared with observational data. Users with large-scale compute-heavy requirements (in particular those requiring large- scale parallel processing) should look to access other parts of the national HPC infrastructure such as ARCHER2\u0026nbsp; or MONSooN\u0026nbsp; .\nIn order to maintain a safe and reliable working environment for all within LOTUS and more widely within JASMIN, users are expected to follow the best practice outlined in this documentation.\nHow to gain access to LOTUS \u0026nbsp; LOTUS is accessible via the batch scheduler system Slurm that is running across all JASMIN scientific analysis servers sci[1-8].jasmin.ac.uk.\nFrom the above servers, it is possible to submit, monitor, and control batch jobs using the Slurm commands.\nPlease note that if you have only recently requested access to JASMIN login services and had this approved, there can sometimes be a delay (typically up to a day, but in rare cases can be longer) before the necessary configuration is created for you on LOTUS. You will not be able to submit jobs to LOTUS queues until this has been completed. Typically you would see an error message such as this, in this case after an unsuccessful attempt to submit to the short-serial queue:\nsbatch: error: Batch job submission failed: Invalid account or account/partition combination specifiedIf this occurs, please try again in 24 hours before contacting the JASMIN helpdesk."
+        content: "This article gives an overview of the LOTUS batch computing cluster which is part of JASMIN. It covers:\nWhat LOTUS is and what it can be used for Where LOTUS can be accessed from What is LOTUS \u0026nbsp; LOTUS is not, in itself, a High-Performance Computing (HPC) facility, but provides the batch and parallel processing component of the JASMIN data- intensive scientific analysis environment. LOTUS is a cluster of physical machines, running the Slurm workload manager, enabling efficient scheduling of larger data analysis tasks across nodes in the cluster as a single unit -see Figure 1.\nEach node in the cluster is connected by 10Gbit/s Ethernet to JASMIN\u0026rsquo;s high-performance 40Gbit/s core network. Although not its primary function, LOTUS also facilitates MPI-based parallel processing.\nJASMIN provides both interactive and batch computing environments, recognising that scientists often need to develop and test workflows interactively before running those workflows efficiently at scale. Nodes within LOTUS run the same stack of software and can access the same high- performance storage as the JASMIN Scientific Analysis servers, ensuring a consistent working environment for all phases of users\u0026rsquo; workflows.\nSee LOTUS Hardware for details of the current LOTUS environment summarised in this schematic presentation\nFigure 1 shows a schematic presentation of the LOTUS cluster and its environment\nLOTUS schematic When to use LOTUS \u0026nbsp; LOTUS is ideally suited to workflows which need to process or compare entire datasets, stored either in Group Workspaces or in the CEDA archives. The latter are directly accessible read-only so can be processed in-place without the need to copy files. Intermediate working files (within batch jobs) should be stored temporarily in /work/scratch-pw* and /work/scratch-nopw* volumes which are shared across the cluster, while persistent outputs can be written efficiently to Group Workspaces and shared with collaborators for the duration of a project.\nSee Access to Storage for details about which file systems are appropriate to use and how to access them.\nLOTUS currently has around 19,000 cores, but is heavily used and implements a fair-share scheduling system between users. It is not intended as a substitute for dedicated HPC facilities, rather as a complementary environment in which model outputs can be analyzed and compared with observational data. Users with large-scale compute-heavy requirements (in particular those requiring large- scale parallel processing) should look to access other parts of the national HPC infrastructure such as ARCHER2\u0026nbsp; or MONSooN\u0026nbsp; .\nIn order to maintain a safe and reliable working environment for all within LOTUS and more widely within JASMIN, users are expected to follow the best practice outlined in this documentation.\nHow to gain access to LOTUS \u0026nbsp; LOTUS is accessible via the Slurm batch scheduler that is available to use from all JASMIN scientific analysis servers.\nFrom the above servers, it is possible to submit, monitor, and control batch jobs using the Slurm commands.\nPlease note that if you have only recently requested access to JASMIN login services and had this approved, there can sometimes be a delay (typically up to a day, but in rare cases can be longer) before the necessary configuration is created for you on LOTUS. You will not be able to submit jobs to LOTUS queues until this has been completed. Typically you would see an error message such as this, in this case after an unsuccessful attempt to submit to the short-serial queue:\nsbatch: error: Batch job submission failed: Invalid account or account/partition combination specifiedIf this occurs, please try again in 24 hours before contacting the JASMIN helpdesk."
       })
       .add(
       
       
       {
-        id: 73,
+        id: 74,
         tag: "en",
         href: "/docs/short-term-project-storage/managing-a-gws/",
         title: "Managing a GWS",
@@ -7470,7 +7483,7 @@ function initIndex() {
       
       
       {
-        id: 74,
+        id: 75,
         tag: "en",
         href: "/docs/software-on-jasmin/name-dispersion-model/",
         title: "Met Office NAME Model",
@@ -7483,7 +7496,7 @@ function initIndex() {
       
       
       {
-        id: 75,
+        id: 76,
         tag: "en",
         href: "/docs/getting-started/migrate-jasmin-account-from-ceda/",
         title: "Migrate a JASMIN account from CEDA",
@@ -7496,20 +7509,20 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 77,
         tag: "en",
         href: "/docs/software-on-jasmin/rocky9-migration-2024/",
         title: "Migration to Rocky Linux 9 2024",
         description: "Software and operating system changes - migration to Rocky Linux 9 (Summer 2024)",
         
         
-        content: "\u0026nbsp; Lots of updated information below about the new Rocky Linux 9 environment on JASMIN: please read, and keep checking back here regularly for now. Introduction \u0026nbsp; As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.\nThe current operating system, CentOS7 is officially end-of-life as of the end of June 2024. We will be moving from CentOS7 to Rocky Linux 9, which is supported until May 2032. Rocky 9 should provide a very similar user experience to that provided by CentOS7, but with more recent software packages. Some software may have been removed or replaced during this transition.\nThis change affects JASMIN and CEDA services in several ways, including but not limited to the following:\nComponents of all CEDA Archive and JASMIN web-based services need to be redeployed User-facing service hosts (e.g. login/sci/xfer and LOTUS nodes) all need to be redeployed All of these hosts need appropriate versions of drivers for various hardware and infrastructure components (e.g. storage, network, …) to be configured. The Slurm scheduler used for the LOTUS and ORCHID clusters needs to be adapted to work under Rocky 9, in terms of its own management functions and the worker nodes which it controls. A separate announcement will cover the expansion of LOTUS with new processing nodes: these will be introduced as a new cluster under Slurm, with existing nodes moved from old to new as part of the transition. There will be a limited window in which the 2 clusters will co-exist, during which time the old cluster will shrink in size: the current estimate for this is between July to September 2024, but we will provide updates on this as the new hardware is installed and timescales become clearer. We will endeavour to provide sufficient overlap and temporary arrangements to help users to migrate their workflows. Software made available centrally via the module system and under /apps needs to be made available in versions compatible with Rocky 9. Some software may need to be recompiled. Other software (e.g. run by users or groups, without being centrally managed) may need to be tested and in some cases recompiled in order to work correctly under Rocky 9. Management and monitoring systems need to be updated to operate in the new environment For tenants of the JASMIN Cloud, you should already be aware of our plans to move to use the STFC Cloud as the base platform for the JASMIN Cloud Service. Images are currently in preparation so that new (empty) tenancies will soon be available for tenants to manage the migration of their own virtual machines over to new instances using Rocky 9 images. It is anticipated at this stage that managed tenancies (with tenancy sci machines) will be discontinued as part of this move, so users of those VMs will be advised to use the new Rocky 9 general-use sci servers instead. Much of this work is already underway by teams in CEDA and STFC’s Scientific Computing Department. As a result of extensive work by these teams in recent years to improve the way services are deployed and managed, we are now in a much better position to undertake this kind of migration with as little disruption to users as possible. Some disruption and adaptation by users will be inevitable, however.\nSome services have already been migrated and are already running under Rocky 9, but there is still much work to be done over the coming weeks so please watch this space as we do our best to keep you informed of the progress we’re making, and of any actions you may need to take to minimise disruption to your work on JASMIN.\n\u0026nbsp; Please find below details of the new Rocky 9 environment on JASMIN. We will update other documentation to match this in due course, but the information below will be the most up-to-date source until further notice. Details of the new Rocky Linux 9 environment \u0026nbsp; General \u0026nbsp; The move to Rocky Linux 9 (abbreviated to \u0026ldquo;Rocky 9\u0026rdquo; or \u0026ldquo;R9\u0026rdquo; from here on) involves many changes at lower levels transparent to users, so we will focus here on those most relevant to how services on JASMIN are accessed and used. The reasons for the choice of Rocky 9 itself, and for some of the associated changes to software, machines and services provided, will not be covered in detail, but have been influenced by a number of factors including:\norganisational security and maintenance policies availability of packages and dependencies for the chosen operating system user feedback Login nodes \u0026nbsp; The list of new login nodes is as follows:\nname status login-01.jasmin.ac.uk \u0026nbsp; ready to use login-02.jasmin.ac.uk \u0026nbsp; ready to use login-03.jasmin.ac.uk \u0026nbsp; ready to use login-04.jasmin.ac.uk \u0026nbsp; ready to use Notes:\nThere is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team (exception: hpxfer) This means all users can access all login servers (previously some users could only use login2) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. NX login nodes \u0026nbsp; name status nx1.jasmin.ac.uk \u0026nbsp; New setup steps recommended nx2.jasmin.ac.uk \u0026nbsp; New setup steps recommended nx3.jasmin.ac.uk \u0026nbsp; New setup steps recommended nx4.jasmin.ac.uk \u0026nbsp; Not yet moved to Rocky 9 (works as previously for now) Notes:\nNew steps are recommended for setting up your connection, including a small edit to a config file. New nodes have identical configuration so are accessible from all network locations (no further need for some users use only certain nodes). By keeping the host names as short as possible, we mitigate the issue some users (with long usernames created before the 8-character rule) had with agent forwarding: all should behave the same as the old nx4 in this respect. As before, no filesystems other than the home directory are mounted. Use only with the NoMachine Enterprise Client to get a graphical Linux desktop, from where you can use the Firefox browser on the linux desktop to access web resources only accessible within JASMIN make onward connections to a sci server for using graphics-intensive applications Make sure you are using the most up-to-date version of NoMachine Enterprise Client\u0026nbsp; . sci servers \u0026nbsp; We have introduced a new naming convention which helps identify virtual and physical/high-memory sci servers. The new list is as follows:\nname status specs Virtual servers sci-vm-01.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-02.jasmin.ac.uk \u0026nbsp; Finalising configuration 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-03.jasmin.ac.uk \u0026nbsp; Finalising configuration 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-04.jasmin.ac.uk \u0026nbsp; Finalising configuration 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-05.jasmin.ac.uk \u0026nbsp; Finalising configuration 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-06.jasmin.ac.uk \u0026nbsp; Finalising configuration 8 CPU / 32 GB RAM / 80 GB (virtual disk) Physical servers sci-ph-01.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD sci-ph-02.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD Notes:\nFor users within the STFC network, there is no longer any reverse DNS restriction, so all should be accessible directly within that network without need to go via a login node. Replacements for common tools: lxterminal has been replaced with xfce-terminal\u0026nbsp; for a more richly-featured editor or Integrated Development Environment (IDE), users should consider using the remote editing features of VSCode\u0026nbsp; or PyCharm\u0026nbsp; , since these can be installed and customised locally by the user to their taste rather than needing central installation and management on JASMIN. Watch this space for further advice about how to configure and use VSCode in this way. See jaspy, jasr and jasmin-sci sections below for further information on software. For graphical applications, use the NoMachine NX service rather than sending X11 graphics over the network back to your laptop/desktop, to ensure performance. X11 graphics functionality is still to be added to these machines (coming shortly), but currently this will fail with an error like: xterm: Xt error: Can\u0026#39;t open display: xterm: DISPLAY is not set As before, physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network configuration from the virtual sci servers, with limited outward connectivity. xfer servers \u0026nbsp; name status notes xfer-vm-01.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-02.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-03.jasmin.ac.uk \u0026nbsp; ready to use Virtual server, has cron. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; name status notes hpxfer3.jasmin.ac.uk \u0026nbsp; ready to use Physical server hpxfer4.jasmin.ac.uk \u0026nbsp; ready to use Physical server Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above GridFTP server \u0026nbsp; For users of certificate-based GridFTP only (specifically, gsiftp:// using the globus-url-copy client), there is a new server:\nname status gridftp2.jasmin.ac.uk \u0026nbsp; Not yet ready Notes:\nMake sure you are using slcs.jasmin.ac.uk as the short-lived credentials server, with your JASMIN account credentials. CEDA identities can no longer be used for authentication with this server. We now encourage users of this service to migrate to use the Globus service for data transfers. This older GridFTP service will likely be decommissioned over the next 12 months. Use of globus-url-copy is nothing to do with the Globus service: they are now very separate things. Globus data transfer service \u0026nbsp; Where possible you should now use the Globus data transfer service for any data transfer in or out of JASMIN: this is now the recommended method, which will get you the best performance and has a number of advantages over logging into a server and doing transfers manually.\nAs introduced earlier this year, the following Globus collections are available to all users of JASMIN, with no special access roles required:\nname uuid status notes JASMIN Default Collection a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 \u0026nbsp; Ready to use Best performance, currently has 2 physical Data Transfer Nodes (DTNs). JASMIN STFC Internal Collection 9efc947f-5212-4b5f-8c9d-47b93ae676b7 \u0026nbsp; Ready to use For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection. Notes:\nThese collections can be used with the Globus web interface\u0026nbsp; , command-line interface (CLI)\u0026nbsp; , or its Python software development kit (SDK)\u0026nbsp; , and use the JASMIN accounts portal for authentication Software \u0026nbsp; Please see the table below and accompanying notes which together summarise the upcoming changes to aspects of software on JASMIN:\nSoftware CentOS7 Rocky 9 IDL versions\nIDL licence server\nsee Note 1 8.2, 8.5 (D), 8.5, 8.6\nFlexnet 8.9, 9.0. (8.6?)\nNext generation Cylc\nCylc UI visualisation\nsee Note 2 7.8.14 and 8.3.3-1\nUI functionality integrated 8.3.3-1\nUI via browser: discussion ongoing Jaspy\nJasr\njasmin-sci 2.7, 3.7*, 3.10* (*: all variants)\n3.6, 4.0 (all variants), 4.2\nURL page of the packages 3.11\n4.3\nrpm/Glibc compatibility tba? Intel compilers 12.1.5-20.0.0 (11 variants) Intel oneAPI MPI library/ OpenMPI\nversions/compiler\nsee Note 3 3.1.1/Intel,GNU, 4.0.0\n4.1.[0-1,4-5]/Intel\n4.1.2, 5.0.1, 5.1.2 4.1.5/Intel/gcc \u0026amp; 5.0.4 /intel/gcc\nPossibility to support mpich or IntelMPI NetCDF C library\nNetCDF Fortran binding lib. netcdf/gnu/4.4..7, netcdf/intel/14.0/\nnetcdff/gnu/4.4.7/*, netcdff/intel/4.4.7\nparallel-netcdf/gnu/201411/22\nparallel-netcdf/intel/20141122 A new module env for serial and parallel version GNU and Intel oneAPI build of NetCDF against either OpenMPI and/or Intel MPI GNU compilers 7.2.0 ,8.1.0, 8.2.0\n13.2.0 conda-forge (12.1.0 from legacy JASPY) 11.4.1 (OS)\n13.2.0 conda-forge via JASPY JULES see Note 4 Information to follow Notes \u0026nbsp; IDL: We will not support IDL 8.5 \u0026amp; older versions on Rocky 9 but we might continue to support IDL 8.6 if there is a need from the user community: we are still assessing that. The present version of IDL 8.6 must be migrated from the current \u0026ldquo;Flexnet\u0026rdquo; to the new \u0026ldquo;Next Generation\u0026rdquo; licensing system. We obtained IDL 8.9 and IDL 9 from NV5 and are in the process to setup “Next Generation\u0026quot; licensing to activate the licence. Once this is done on server and client machines and testing is completed, a new module environment will be created users for IDL 8.9 and 9.0 on the new sci machines and a subset of the new LOTUS Rocky 9 nodes. The default module add idl will then load IDL 8.9 instead of IDL 8.6.\nCylc: Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)\nMPI: (further details to follow)\nJULES: (further details to follow)\nUpgraded LOTUS cluster \u0026nbsp; Preliminary node specification: further info to follow.\ntype selector status specs standard tbc \u0026nbsp; Not yet available 190 CPU / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD high-mem tbc \u0026nbsp; Not yet available 190 CPU / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD Notes:\nOverall ~55,000 cores: ~triples current capacity New nodes will form a new cluster, managed separately to the \u0026ldquo;old\u0026rdquo; LOTUS Submission to the new cluster will only be via the new sci machines: sci-vm-[01-06] and sci-ph-[01-02] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Submission to \u0026ldquo;old\u0026rdquo; LOTUS will only be from current CentOS7 sci machines sci[1-8] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Nodes will gradually be removed from the \u0026ldquo;old\u0026rdquo; cluster and retired, timetable TBC once new cluster is up \u0026amp; running. Other services \u0026nbsp; Further information to follow."
+        content: "\u0026nbsp; Lots of updated information below about the new Rocky Linux 9 environment on JASMIN: please read, and keep checking back here regularly for now. Introduction \u0026nbsp; As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.\nThe current operating system, CentOS7 is officially end-of-life as of the end of June 2024. We will be moving from CentOS7 to Rocky Linux 9, which is supported until May 2032. Rocky 9 should provide a very similar user experience to that provided by CentOS7, but with more recent software packages. Some software may have been removed or replaced during this transition.\nThis change affects JASMIN and CEDA services in several ways, including but not limited to the following:\nComponents of all CEDA Archive and JASMIN web-based services need to be redeployed User-facing service hosts (e.g. login/sci/xfer and LOTUS nodes) all need to be redeployed All of these hosts need appropriate versions of drivers for various hardware and infrastructure components (e.g. storage, network, …) to be configured. The Slurm scheduler used for the LOTUS and ORCHID clusters needs to be adapted to work under Rocky 9, in terms of its own management functions and the worker nodes which it controls. A separate announcement will cover the expansion of LOTUS with new processing nodes: these will be introduced as a new cluster under Slurm, with existing nodes moved from old to new as part of the transition. There will be a limited window in which the 2 clusters will co-exist, during which time the old cluster will shrink in size: the current estimate for this is between July to September 2024, but we will provide updates on this as the new hardware is installed and timescales become clearer. We will endeavour to provide sufficient overlap and temporary arrangements to help users to migrate their workflows. Software made available centrally via the module system and under /apps needs to be made available in versions compatible with Rocky 9. Some software may need to be recompiled. Other software (e.g. run by users or groups, without being centrally managed) may need to be tested and in some cases recompiled in order to work correctly under Rocky 9. Management and monitoring systems need to be updated to operate in the new environment For tenants of the JASMIN Cloud, you should already be aware of our plans to move to use the STFC Cloud as the base platform for the JASMIN Cloud Service. Images are currently in preparation so that new (empty) tenancies will soon be available for tenants to manage the migration of their own virtual machines over to new instances using Rocky 9 images. It is anticipated at this stage that managed tenancies (with tenancy sci machines) will be discontinued as part of this move, so users of those VMs will be advised to use the new Rocky 9 general-use sci servers instead. Much of this work is already underway by teams in CEDA and STFC’s Scientific Computing Department. As a result of extensive work by these teams in recent years to improve the way services are deployed and managed, we are now in a much better position to undertake this kind of migration with as little disruption to users as possible. Some disruption and adaptation by users will be inevitable, however.\nSome services have already been migrated and are already running under Rocky 9, but there is still much work to be done over the coming weeks so please watch this space as we do our best to keep you informed of the progress we’re making, and of any actions you may need to take to minimise disruption to your work on JASMIN.\n\u0026nbsp; Please find below details of the new Rocky 9 environment on JASMIN. We will update other documentation to match this in due course, but the information below will be the most up-to-date source until further notice. Details of the new Rocky Linux 9 environment \u0026nbsp; General \u0026nbsp; The move to Rocky Linux 9 (abbreviated to \u0026ldquo;Rocky 9\u0026rdquo; or \u0026ldquo;R9\u0026rdquo; from here on) involves many changes at lower levels transparent to users, so we will focus here on those most relevant to how services on JASMIN are accessed and used. The reasons for the choice of Rocky 9 itself, and for some of the associated changes to software, machines and services provided, will not be covered in detail, but have been influenced by a number of factors including:\norganisational security and maintenance policies availability of packages and dependencies for the chosen operating system user feedback Login nodes \u0026nbsp; The list of new login nodes is as follows:\nname status login-01.jasmin.ac.uk \u0026nbsp; ready to use login-02.jasmin.ac.uk \u0026nbsp; ready to use login-03.jasmin.ac.uk \u0026nbsp; ready to use login-04.jasmin.ac.uk \u0026nbsp; ready to use Notes:\nThere is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team (exception: hpxfer) This means all users can access all login servers (previously some users could only use login2) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. NX login nodes \u0026nbsp; name status nx1.jasmin.ac.uk \u0026nbsp; Ready, but new setup steps recommended nx2.jasmin.ac.uk \u0026nbsp; Ready, but new setup steps recommended nx3.jasmin.ac.uk \u0026nbsp; Ready, but new setup steps recommended nx4.jasmin.ac.uk \u0026nbsp; Not yet moved to Rocky 9 (works as previously for now) Notes:\nNew steps are recommended for setting up your connection, including a small edit to a config file. New nodes have identical configuration so are accessible from all network locations (no further need for some users use only certain nodes). By keeping the host names as short as possible, we mitigate the issue some users (with long usernames created before the 8-character rule) had with agent forwarding: all should behave the same as the old nx4 in this respect. As before, no filesystems other than the home directory are mounted. Use only with the NoMachine Enterprise Client to get a graphical Linux desktop, from where you can use the Firefox browser on the linux desktop to access web resources only accessible within JASMIN make onward connections to a sci server for using graphics-intensive applications Make sure you are using the most up-to-date version of NoMachine Enterprise Client\u0026nbsp; . sci servers \u0026nbsp; We have introduced a new naming convention which helps identify virtual and physical/high-memory sci servers. The new list is as follows:\nname status specs Virtual servers sci-vm-01.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-02.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-03.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-04.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-05.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) sci-vm-06.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) Physical servers sci-ph-01.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD sci-ph-02.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD Notes:\nFor users within the STFC network, there is no longer any reverse DNS restriction, so all should be accessible directly within that network without need to go via a login node. Replacements for common tools: lxterminal has been replaced with xfce-terminal\u0026nbsp; for a more richly-featured editor or Integrated Development Environment (IDE), users should consider using the remote editing features of VSCode\u0026nbsp; or PyCharm\u0026nbsp; , since these can be installed and customised locally by the user to their taste rather than needing central installation and management on JASMIN. Watch this space for further advice about how to configure and use VSCode in this way. See jaspy, jasr and jasmin-sci sections below for further information on software. For graphical applications, use the NoMachine NX service rather than sending X11 graphics over the network back to your laptop/desktop, to ensure performance. X11 graphics functionality is still to be added to these machines (coming shortly), but currently this will fail with an error like: xterm: Xt error: Can\u0026#39;t open display: xterm: DISPLAY is not set As before, physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network configuration from the virtual sci servers, with limited outward connectivity. xfer servers \u0026nbsp; name status notes xfer-vm-01.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-02.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-03.jasmin.ac.uk \u0026nbsp; ready to use Virtual server, has cron. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; name status notes hpxfer3.jasmin.ac.uk \u0026nbsp; ready to use Physical server hpxfer4.jasmin.ac.uk \u0026nbsp; ready to use Physical server Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above GridFTP server \u0026nbsp; For users of certificate-based GridFTP only (specifically, gsiftp:// using the globus-url-copy client), there is a new server:\nname status gridftp2.jasmin.ac.uk \u0026nbsp; Not yet ready Notes:\nMake sure you are using slcs.jasmin.ac.uk as the short-lived credentials server, with your JASMIN account credentials. CEDA identities can no longer be used for authentication with this server. We now encourage users of this service to migrate to use the Globus service for data transfers. This older GridFTP service will likely be decommissioned over the next 12 months. Use of globus-url-copy is nothing to do with the Globus service: they are now very separate things. Globus data transfer service \u0026nbsp; Where possible you should now use the Globus data transfer service for any data transfer in or out of JASMIN: this is now the recommended method, which will get you the best performance and has a number of advantages over logging into a server and doing transfers manually.\nAs introduced earlier this year, the following Globus collections are available to all users of JASMIN, with no special access roles required:\nname uuid status notes JASMIN Default Collection a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 \u0026nbsp; Ready to use Best performance, currently has 2 physical Data Transfer Nodes (DTNs). JASMIN STFC Internal Collection 9efc947f-5212-4b5f-8c9d-47b93ae676b7 \u0026nbsp; Ready to use For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection. Notes:\nThese collections can be used with the Globus web interface\u0026nbsp; , command-line interface (CLI)\u0026nbsp; , or its Python software development kit (SDK)\u0026nbsp; , and use the JASMIN accounts portal for authentication Software \u0026nbsp; Please see the table below and accompanying notes which together summarise the upcoming changes to aspects of software on JASMIN:\nSoftware CentOS7 Rocky 9 IDL versions\nIDL licence server\nsee Note 1 8.2, 8.5 (D), 8.5, 8.6\nFlexnet 8.9, 9.0. (8.6?)\nNext generation Cylc\nCylc UI visualisation\nsee Note 2 7.8.14 and 8.3.3-1\nUI functionality integrated 8.3.3-1\nUI via browser: discussion ongoing Jaspy\nJasr\njasmin-sci 2.7, 3.7*, 3.10* (*: all variants)\n3.6, 4.0 (all variants), 4.2\nURL page of the packages 3.11\n4.3\nrpm/Glibc compatibility tba? Intel compilers 12.1.5-20.0.0 (11 variants) Intel oneAPI MPI library/ OpenMPI\nversions/compiler\nsee Note 3 3.1.1/Intel,GNU, 4.0.0\n4.1.[0-1,4-5]/Intel\n4.1.2, 5.0.1, 5.1.2 4.1.5/Intel/gcc \u0026amp; 5.0.4 /intel/gcc\nPossibility to support mpich or IntelMPI NetCDF C library\nNetCDF Fortran binding lib. netcdf/gnu/4.4..7, netcdf/intel/14.0/\nnetcdff/gnu/4.4.7/*, netcdff/intel/4.4.7\nparallel-netcdf/gnu/201411/22\nparallel-netcdf/intel/20141122 A new module env for serial and parallel version GNU and Intel oneAPI build of NetCDF against either OpenMPI and/or Intel MPI GNU compilers 7.2.0 ,8.1.0, 8.2.0\n13.2.0 conda-forge (12.1.0 from legacy JASPY) 11.4.1 (OS)\n13.2.0 conda-forge via JASPY JULES see Note 4 Information to follow Notes \u0026nbsp; IDL: We will not support IDL 8.5 \u0026amp; older versions on Rocky 9 but we might continue to support IDL 8.6 if there is a need from the user community: we are still assessing that. The present version of IDL 8.6 must be migrated from the current \u0026ldquo;Flexnet\u0026rdquo; to the new \u0026ldquo;Next Generation\u0026rdquo; licensing system. We obtained IDL 8.9 and IDL 9 from NV5 and are in the process to setup “Next Generation\u0026quot; licensing to activate the licence. Once this is done on server and client machines and testing is completed, a new module environment will be created users for IDL 8.9 and 9.0 on the new sci machines and a subset of the new LOTUS Rocky 9 nodes. The default module add idl will then load IDL 8.9 instead of IDL 8.6.\nCylc: Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)\nMPI: (further details to follow)\nJULES: (further details to follow)\nUpgraded LOTUS cluster \u0026nbsp; Preliminary node specification: further info to follow.\ntype selector status specs standard tbc \u0026nbsp; Not yet available 190 CPU / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD high-mem tbc \u0026nbsp; Not yet available 190 CPU / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD Notes:\nOverall ~55,000 cores: ~triples current capacity New nodes will form a new cluster, managed separately to the \u0026ldquo;old\u0026rdquo; LOTUS Submission to the new cluster will only be via the new sci machines: sci-vm-[01-06] and sci-ph-[01-02] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Submission to \u0026ldquo;old\u0026rdquo; LOTUS will only be from current CentOS7 sci machines sci[1-8] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Nodes will gradually be removed from the \u0026ldquo;old\u0026rdquo; cluster and retired, timetable TBC once new cluster is up \u0026amp; running. Other services \u0026nbsp; Further information to follow."
       })
       .add(
       
       
       {
-        id: 77,
+        id: 78,
         tag: "en",
         href: "/docs/uncategorized/mobaxterm/",
         title: "MobaXterm (Windows terminal client)",
@@ -7522,7 +7535,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         tag: "en",
         href: "/docs/mass/moose-the-mass-client-user-guide/",
         title: "MOOSE (the MASS client) User Guide",
@@ -7535,7 +7548,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         tag: "en",
         href: "/docs/getting-started/multiple-account-types/",
         title: "Multiple account types",
@@ -7548,7 +7561,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         tag: "en",
         href: "/docs/software-on-jasmin/nag-library/",
         title: "NAG Library",
@@ -7561,7 +7574,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         tag: "en",
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
@@ -7574,20 +7587,20 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         tag: "en",
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Orchid GPU cluster",
         
         
-        content: "This article provides details on JASMIN\u0026rsquo;s GPU cluster, named ORCHID.\nGPU cluster spec \u0026nbsp; The JASMIN GPU cluster is composed of 16 GPU nodes:\n14 x standard GPU nodes with 4 GPU Nvidia A100 GPU cards each 2 x large GPU nodes with 8 Nvidia A100 GPU cards ORCHID GPU cluster Request access to ORCHID \u0026nbsp; Before using ORCHID on JASMIN, you will need:\nAn existing JASMIN account and valid jasmin-login access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; Subsequently (once jasmin-login has been approved and completed), the orchid access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; The jasmin-login access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the orchid role grants access to the special LOTUS partition used by ORCHID.\nHolding the orchid role also gives access to the GPU interactive node.\nNote: In the supporting info on the orchid request form, please provide details on the software and the workflow that you will use/run on ORCHID.\nTest a GPU job \u0026nbsp; Testing a job on the JASMIN ORCHID GPU cluster can be carried out in an interactive mode by launching a pseudo-shell terminal Slurm job from a JASMIN scientific server e.g. sci2:\nsrun --gres=gpu:1 --partition=orchid --account=orchid --pty /bin/bash srun: job 24096593 queued and waiting for resources srun: job 24096593 has been allocated resources # you are now on gpuhost16 The GPU node gpuhost016 is allocated for this interactive session on LOTUS\nNote that for batch mode, a GPU job is submitted using the Slurm command \u0026lsquo;sbatch\u0026rsquo;:\nsbatch --gres=gpu:1 --partition=orchid --account=orchid gpujobscript.sbatch or by adding the following preamble in the job script file\n#SBATCH --partition=orchid #SBATCH --account=orchid #SBATCH --gres=gpu:1Note 1: gpuhost015 and gpuhost016 are the two largest nodes with 64 CPUs and 8 GPUs.\nNote 2: CUDA Version: 11.6\nNote 3: The Slurm batch partition/queue orchid has a maximum runtime of 24 hours and the default runtime is 1 hour. The maximum number of CPU cores per user is limited to 8 cores. If the limit is exceeded then the job is expected to be in a pending state with the reason being QOSGrpCpuLimit\nGPU interactive node \u0026nbsp; There is an interactive GPU node gpuhost001.jc.rl.ac.uk, with the same spec as other Orchid nodes, that you can access via a login server to prototype and test your GPU code prior to running as a batch job.\nssh -A gpuhost001.jc.rl.ac.uk # you are now on gpuhost001 Software Installed on the GPU cluster (to be updated) \u0026nbsp; CUDA drivers 10.1, and CUDA libraries 10.0, 10.1 and 11.4 CUDA DNN (Deep Neural Network Library) NVIDIA container runtime (see notes below) NGC client (GPU software hub for NVIDIA) Singularity 3.7.0 - which supports NVIDIA/GPU containers SCL Python 3.6"
+        content: "This article provides details on JASMIN\u0026rsquo;s GPU cluster, named ORCHID.\nGPU cluster spec \u0026nbsp; The JASMIN GPU cluster is composed of 16 GPU nodes:\n14 x standard GPU nodes with 4 GPU Nvidia A100 GPU cards each 2 x large GPU nodes with 8 Nvidia A100 GPU cards ORCHID GPU cluster Request access to ORCHID \u0026nbsp; Before using ORCHID on JASMIN, you will need:\nAn existing JASMIN account and valid jasmin-login access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; Subsequently (once jasmin-login has been approved and completed), the orchid access role: Apply here\u0026nbsp; \u0026nbsp; \u0026nbsp; The jasmin-login access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the orchid role grants access to the special LOTUS partition used by ORCHID.\nHolding the orchid role also gives access to the GPU interactive node.\nNote: In the supporting info on the orchid request form, please provide details on the software and the workflow that you will use/run on ORCHID.\nTest a GPU job \u0026nbsp; Testing a job on the JASMIN ORCHID GPU cluster can be carried out in an interactive mode by launching a pseudo-shell terminal Slurm job from a JASMIN scientific server e.g. sci-vm-01:\nsrun --gres=gpu:1 --partition=orchid --account=orchid --pty /bin/bash srun: job 24096593 queued and waiting for resources srun: job 24096593 has been allocated resources # you are now on gpuhost16 The GPU node gpuhost016 is allocated for this interactive session on LOTUS\nNote that for batch mode, a GPU job is submitted using the Slurm command \u0026lsquo;sbatch\u0026rsquo;:\nsbatch --gres=gpu:1 --partition=orchid --account=orchid gpujobscript.sbatch or by adding the following preamble in the job script file\n#SBATCH --partition=orchid #SBATCH --account=orchid #SBATCH --gres=gpu:1Note 1: gpuhost015 and gpuhost016 are the two largest nodes with 64 CPUs and 8 GPUs.\nNote 2: CUDA Version: 11.6\nNote 3: The Slurm batch partition/queue orchid has a maximum runtime of 24 hours and the default runtime is 1 hour. The maximum number of CPU cores per user is limited to 8 cores. If the limit is exceeded then the job is expected to be in a pending state with the reason being QOSGrpCpuLimit\nGPU interactive node \u0026nbsp; There is an interactive GPU node gpuhost001.jc.rl.ac.uk, with the same spec as other Orchid nodes, that you can access via a login server to prototype and test your GPU code prior to running as a batch job.\nssh -A gpuhost001.jc.rl.ac.uk # you are now on gpuhost001 Software Installed on the GPU cluster (to be updated) \u0026nbsp; CUDA drivers 10.1, and CUDA libraries 10.0, 10.1 and 11.4 CUDA DNN (Deep Neural Network Library) NVIDIA container runtime (see notes below) NGC client (GPU software hub for NVIDIA) Singularity 3.7.0 - which supports NVIDIA/GPU containers SCL Python 3.6"
       })
       .add(
       
       
       {
-        id: 83,
+        id: 84,
         tag: "en",
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
@@ -7600,7 +7613,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         tag: "en",
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
@@ -7613,7 +7626,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         tag: "en",
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
@@ -7626,7 +7639,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         tag: "en",
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
@@ -7639,7 +7652,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         tag: "en",
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7652,7 +7665,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         tag: "en",
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
@@ -7665,7 +7678,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         tag: "en",
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
@@ -7678,7 +7691,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         tag: "en",
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
@@ -7691,7 +7704,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         tag: "en",
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
@@ -7704,7 +7717,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         tag: "en",
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
@@ -7717,7 +7730,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         tag: "en",
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
@@ -7730,7 +7743,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         tag: "en",
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
@@ -7743,7 +7756,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         tag: "en",
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
@@ -7756,7 +7769,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         tag: "en",
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
@@ -7769,7 +7782,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         tag: "en",
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
@@ -7782,20 +7795,20 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         tag: "en",
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Scientific analysis servers",
         
         
-        content: "Intro \u0026nbsp; Once you have logged on to one of the login servers you can then ssh to a scientific analysis (sci) server to do your work. The sci servers are not directly accessible outside the firewall of RAL (JASMIN\u0026rsquo;s host instution) so most users will need to access them via a login server.\nAvailable sci servers \u0026nbsp; The following sci servers are available:\nServer name Virtual/Physical (OperatingSystem) Processor model CPU Cores RAM (GB) /tmp (GB) sci1.jasmin.ac.uk V (CentOS7) Xeon(R) Silver 4114 CPU @ 2.20GHz 8 32 N/A [Note 2.] sci2.jasmin.ac.uk V (CentOS7) Xeon(R) E5-2630 @ 2.20GHz 8 32 [Note 2.] sci3.jasmin.ac.uk P (CentOS7) [Note 1.] AMD EPYC 7402 48 1000 25 sci4.jasmin.ac.uk V (CentOS7) Xeon E5-2660 @ 2.20GHz 8 32 N/A [Note 2.] sci5.jasmin.ac.uk V (CentOS7) Intel(R) Xeon(R) CPU E5-2630 v4 @2.20GHz 8 32 N/A [Note 2.] sci6.jasmin.ac.uk P (CentOS7), [Note 1.] AMD EPYC 7402 48 1000 25 sci8.jasmin.ac.uk P (CentOS7), [Note 1.] Intel(R) Xeon(R) Gold 5118CPU @ 2.30GHz 24 383 25 Notes \u0026nbsp; 1. Physical servers \u0026nbsp; Hosts sci[3,6,8].jasmin.ac.uk are physical servers on a private internal network, so outbound internet access (via NAT) is only for HTTP(S), so outbound SSH will not work (to hosts outside of JASMIN) on these machines. If you try to git pull/clone from external repositories e.g. Github, the operation will timeout with error fatal: Could not read from remote repository. The solution in this case is to access git pull/clone over HTTPS instead (check the repo for alternative access details).\n2. /tmp on VMs \u0026nbsp; The local /tmp of the virtual sci servers is not available (N/A) for users as this is used by the VM itself. It also provides no performance advantage as it is not local to the server.\n3. Arbiter \u0026nbsp; A monitoring utility \u0026ldquo;Arbiter\u0026rdquo; is implemented across all sci machines to control CPU and memory usage. This utility records the activity on the node, automatically sets limits on the resources available to each user. Users\u0026rsquo; processes are thus capped from using excessive resources, and can be slowed or have memory reduced in response to repeated violations.\n4. Privileges \u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx-login, sci, xfer and hpxfer machines). In other words, the use of su or sudo is not permitted. Please be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudo on a JASMIN machine: expect some follow-up from the JASMIN team if you do!\nSee also\n\u0026lt;a href=\u0026quot;/docs/interactive-computing/sci-servers#software-installed\u0026quot;\u0026gt;Software installed\u0026lt;/a\u0026gt;, below. Purpose \u0026nbsp; Scientific analysis servers are designed for interactive and ad-hoc analysis of data in group workspaces, the CEDA archive, and users\u0026rsquo; home directories. For long-running and resource-intensive jobs, users are required to use the LOTUS cluster which offers better I/O performance, parallelism, and fair-share scheduling.\nThe following guidelines should be considered when using the scientific analysis servers:\nCheck available resources before your process starts and choose a sci server that is suitable (check average load in the list displayed at the login screen on the login servers, or by using the Linux monitoring commands: top, or free -h ) Execution/processing time should be less than 1 hour Serial jobs only High memory jobs should be executed on the physical servers which have more memory (labelled P in above table). Monitor your process on a sci server using top or ps Linux commands Report if there is a user\u0026rsquo;s process affecting the performance of a scientific server Software installed \u0026nbsp; Each sci server has the following features:\nCentOS7 operating system with development tools. [NB: Rocky9 from summer 2024] Software packages that make up the JASMIN Analysis Platform are all installed - providing commonly-used open-source analysis tools. These packages include NCO, CDO, Python (with netCDF4, matplotlib, numpy etc.,) and R. Access to proprietary tools, e.g. IDL and Intel Fortran, through the module system. Ability to run graphical applications: use the NX graphical desktop service for best performance. Further information on using the software provided on JASMIN can be found here.\nSee [Note 4] above about privileges: you can only install software for yourself if it can be done with user-level privileges.\nAccess to storage \u0026nbsp; Each sci server has:\nAccess to the LOTUS /work/scratch-pw* and /work/scratch-nopw2 volumes. Read access to the CEDA Archive according to permissions on your CEDA account. Read/Write access to Group Workspaces according to membership."
+        content: "Intro \u0026nbsp; The scientific analysis (sci) servers are provided for general purpose use by all users with the jasmin-login access role. The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN\u0026rsquo;s host organisation) so most* users will need to access them via a login server.\nUsers inside the STFC network (e.g. STFC staff on site, or remotely using the STFC VPN) should be able to access them directly.\nAvailable sci servers \u0026nbsp; The following sci servers are available:\nServer name Virtual/Physical Processor model CPU Cores RAM (GB) /tmp (GB) sci-vm-01 virtual tbc 8 32 GB 80 GB virtual disk sci-vm-02 virtual tbc 8 32 GB 80 GB virtual disk sci-vm-03 virtual tbc 8 32 GB 80 GB virtual disk sci-vm-04 virtual tbc 8 32 GB 80 GB virtual disk sci-vm-05 virtual tbc 8 32 GB 80 GB virtual disk sci-vm-06 virtual tbc 8 32 GB 80 GB virtual disk sci-ph-01 physical AMD EPYC 74F3 48 2 TB 2 x 446 GB SATA SSD sci-ph-02 physical AMD EPYC 74F3 48 2 TB 2 x 446 GB SATA SSD Notes \u0026nbsp; 1. Access \u0026nbsp; Sci servers are not exposed outside the STFC network, so from external locations you need to access them via a login server.\nFor users within the STFC network, there is no longer any reverse DNS restriction, so all should be accessible directly within that network without need to go via a login node.\nSee connecting to a sci server via a login server for some alternative methods of connecting.\n2. Physical servers \u0026nbsp; Physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network configuration from the virtual sci servers, with limited outward connectivity.\nOutbound internet access (via NAT) is only for HTTP(S), so outbound SSH will not work (to hosts outside of JASMIN) on these machines. If you try to git pull/clone from external repositories e.g. Github, the operation will timeout with error fatal: Could not read from remote repository. The solution in this case is to access git pull/clone over HTTPS instead (check the repo for alternative access details).\n3. /tmp on VMs \u0026nbsp; The local /tmp of the virtual sci servers is not available (N/A) for users as this is used by the VM itself. It also provides no performance advantage as it is not local to the server.\n4. Arbiter \u0026nbsp; A monitoring utility \u0026ldquo;Arbiter\u0026rdquo; is implemented across all sci machines to control CPU and memory usage. This utility records the activity on the node, automatically sets limits on the resources available to each user. Users\u0026rsquo; processes are thus capped from using excessive resources, and can be slowed or have memory reduced in response to repeated violations.\n5. Privileges \u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx-login, sci, xfer and hpxfer machines). In other words, the use of su or sudo is not permitted. Please be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudo on a JASMIN machine: expect some follow-up from the JASMIN team if you do!\nSee also software installed, below.\nPurpose \u0026nbsp; Scientific analysis servers are designed for interactive and ad-hoc analysis of data in group workspaces, the CEDA archive, and users\u0026rsquo; home directories. For long-running and resource-intensive jobs, users are required to use the LOTUS cluster which offers better I/O performance, parallelism, and fair-share scheduling.\nThe following guidelines should be considered when using the scientific analysis servers:\nCheck available resources before your process starts and choose a sci server that is suitable (check average load in the list displayed at the login screen on the login servers, or by using the Linux monitoring commands: top, or free -h ) Execution/processing time should be less than 1 hour Serial jobs only High memory jobs should be executed on the physical servers which have more memory (labelled P in above table). Monitor your process on a sci server using top or ps Linux commands Report if there is a user\u0026rsquo;s process affecting the performance of a scientific server Software installed \u0026nbsp; Each sci server has the following features:\nRocky 9 operating system with development tools. Software packages that make up the JASMIN Analysis Platform are all installed - providing commonly-used open-source analysis tools. These packages include NCO, CDO, Python (with netCDF4, matplotlib, numpy etc.,) and R. Access to proprietary tools, e.g. IDL and Intel Fortran, through the module system. Editors: emacs, vim, nedit, geany and nano are installed. For a more richly-featured editor or Integrated Development Environment (IDE), consider using a remote editor locally, for example VSCode\u0026nbsp; or PyCharm\u0026nbsp; : these can be installed and customised on your own machine rather than needing central installation and management on JASMIN. Watch this space for further advice about how to configure and use VSCode in this way. Ability to run graphical applications: use the NX graphical desktop service for best performance. See [Note 4] above about privileges: you can only install software for yourself if it can be done with user-level privileges.\nAccess to storage \u0026nbsp; Each sci server has:\nAccess to the LOTUS /work/scratch-pw* and /work/scratch-nopw2 volumes. Read access to the CEDA Archive according to permissions on your CEDA account. Read/Write access to Group Workspaces according to membership."
       })
       .add(
       
       
       {
-        id: 99,
+        id: 100,
         tag: "en",
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
@@ -7808,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         tag: "en",
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
@@ -7821,7 +7834,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
@@ -7834,7 +7847,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
@@ -7847,7 +7860,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         tag: "en",
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
@@ -7860,7 +7873,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         tag: "en",
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
@@ -7873,7 +7886,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         tag: "en",
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
@@ -7886,7 +7899,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         tag: "en",
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
@@ -7899,7 +7912,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         tag: "en",
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
@@ -7912,7 +7925,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         tag: "en",
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
@@ -7925,7 +7938,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         tag: "en",
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
@@ -7938,7 +7951,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         tag: "en",
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
@@ -7951,7 +7964,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         tag: "en",
         href: "/docs/interactive-computing/tenancy-sci-analysis-vms/",
         title: "Tenancy Sci Analysis VMs",
@@ -7964,7 +7977,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
@@ -7977,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         tag: "en",
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
@@ -7990,7 +8003,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         tag: "en",
         href: "/training/basic/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8003,7 +8016,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         tag: "en",
         href: "/training/intermediate/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8016,7 +8029,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         tag: "en",
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
@@ -8029,7 +8042,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         tag: "en",
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
@@ -8042,7 +8055,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         tag: "en",
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
@@ -8055,7 +8068,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         tag: "en",
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
@@ -8068,7 +8081,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         tag: "en",
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
@@ -8081,7 +8094,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         tag: "en",
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
@@ -8094,7 +8107,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         tag: "en",
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
@@ -8107,7 +8120,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         tag: "en",
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
@@ -8120,7 +8133,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         tag: "en",
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
@@ -8133,7 +8146,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         tag: "en",
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
@@ -8146,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         tag: "en",
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",

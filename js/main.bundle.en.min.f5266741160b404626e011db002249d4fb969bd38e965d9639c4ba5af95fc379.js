@@ -6528,7 +6528,7 @@ function initIndex() {
         description: "How to access JASMIN from VSCode",
         
         
-        content: "Introduction \u0026nbsp; Some text here"
+        content: "Introduction \u0026nbsp; Visual Studio Code\u0026nbsp; is a richly-featured editor and Integrated Development Environment which has remote access features that can be used with JASMIN.\nThis arcitle demonstrates how to use VSCode to connect to JASMIN, and shows some of the features.\n(More details coming shorty)"
       })
       .add(
       

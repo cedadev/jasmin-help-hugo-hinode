@@ -7589,6 +7589,19 @@ function initIndex() {
       {
         id: 83,
         tag: "en",
+        href: "/docs/interactive-computing/nx-update-nov24/",
+        title: "NX update November 2024",
+        description: "Update on connecting to NoMachine NX service November 2024",
+        
+        
+        content: "Good news! Connection problems resolved \u0026nbsp; We now have a solution to the issues some users had with connecting to the NoMachine NX (graphical linux desktop) service, especially from Windows.\nThis involves updating your SSH key to a new algorithm, ECDSA (previously RSA). We have updated our accounts system to support these new keys, which can now be used throughout JASMIN. So updating your JASMIN SSH key is the first step, but you then have a choice of connection options. In these notes, ~/ means \u0026ldquo;your home directory\u0026rdquo;. On Windows this is also represented by %USERPROFILE%.\nWe will update the full documentation and videos in due course, at which point this page will be removed and you will be redirected to that page from here.\nKey presentation options \u0026nbsp; The configuration you need depends on how you choose to present your key:\nFile-based method: specify the location of your key file: no admin permission required.\nAgent-based methods: load your key into an ssh-agent which persists and can be used for subsequent connections across multiple applications.\nCompatible agents: Windows 10 or 11: Windows Native OpenSSH client (optional feature, needs admin permissions to enable and start the service for the first time). Pageant (part of the PuTTY suite of SSH tools\u0026nbsp; ). Mac \u0026amp; Linux the built-in ssh-agent should work. Notes:\nMobaXterm\u0026rsquo;s own \u0026ldquo;MobAgent\u0026rdquo; is NOT compatible for use as an agent, but MobaXterm itself can be configured to use Pageant as an external agent. Your environment may also depend on the agent for other applications. PuTTY users will either need to create their new key in the PuTTYgen utility, taking care to select the equivalent options to the command below, or convert their new key into a PuTTY-format *.ppk file, for use with Pageant. NX Configuration \u0026nbsp; You will need to check that the settings in ~/.nx/config/player.cfg match your choice of method. If you modify the file, make sure you do it with the NoMachine application closed, otherwise the file will get overwritten as the application closes.\nusing the file-based method on all platforms requires the default settings, which are:\n\u0026lt;option key=\u0026#34;SSH client mode\u0026#34; value=\u0026#34;library\u0026#34;\u0026gt; \u0026lt;option key=\u0026#34;SSH Client\u0026#34; value=\u0026#34;nxssh.exe\u0026#34;\u0026gt; (\u0026#34;nxssh\u0026#34; on Mac/Linux) using the agent method with Windows Native OpenSSH client requires these lines:\n\u0026lt;option key=\u0026#34;SSH client mode\u0026#34; value=\u0026#34;native\u0026#34; /\u0026gt; \u0026lt;option key=\u0026#34;SSH Client\u0026#34; value=\u0026#34;C:\\Windows\\System32\\OpenSSH\\ssh.exe\u0026#34; /\u0026gt; using the agent method on Mac \u0026amp; Linux requires these lines:\n\u0026lt;option key=\u0026#34;SSH client mode\u0026#34; value=\u0026#34;native\u0026#34; /\u0026gt; \u0026lt;option key=\u0026#34;SSH Client\u0026#34; value=\u0026#34;/usr/bin/ssh\u0026#34; /\u0026gt; If in doubt, uninstall the NoMachine Enterprise Client application and all its associated folders (~/.nx and ~/NoMachine) and re-install before checking the file again.\nUpdating your key \u0026nbsp; For all the above methods, you are now recommended to update your key to ECDSA: most users\u0026rsquo; keys on JASMIN are of an older type, RSA.\nCreate a new key pair using this command. Save the files id_ecdsa_jasmin and id_ecdsa_jasmin.pub to your ~/.ssh directory which is in your home directory on your local machine. Storing in this location avoids permissions problems. Remember, do this command on your local machine: your private key should never leave that machine and must be protected with a strong passphrase. Do not copy your private key to anywhere on JASMIN ssh-keygen -m PEM -t ecdsa -b 521 -f ~/.ssh/id_ecdsa_jasmin The equivalent using PuTTYgen or MobaKeyGen is with these settings: choose these before clicking \u0026ldquo;Generate\u0026rdquo; Settings for ECDSA key in PuTTYgen (same for MobaKeyGen). Choose settings before clicking Generate. If you\u0026rsquo;re using an agent, remember to load your new key into that agent, using your usual method (usually ssh-add \u0026lt;key file\u0026gt; but depends on the agent). IMPORTANT Next, follow these steps to upload your new public key to your JASMIN profile in the accounts portal. This will get propagated around JASMIN which can take around 15 mins, so please wait before trying to connect. Connecting \u0026nbsp; You should now create a new connection profile which uses your new key, or the agent into which you loaded your new key, to connect to one of the JASMIN nx servers. Test the onward connection to one of the sci servers, e.g. sci-vm-01 to ensure it\u0026rsquo;s all working correctly."
+      })
+      .add(
+      
+      
+      {
+        id: 84,
+        tag: "en",
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Orchid GPU cluster",
@@ -7600,7 +7613,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         tag: "en",
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
@@ -7613,7 +7626,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         tag: "en",
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
@@ -7626,7 +7639,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         tag: "en",
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
@@ -7639,7 +7652,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         tag: "en",
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
@@ -7652,7 +7665,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         tag: "en",
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7665,7 +7678,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         tag: "en",
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
@@ -7678,7 +7691,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         tag: "en",
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
@@ -7691,7 +7704,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         tag: "en",
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
@@ -7704,7 +7717,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         tag: "en",
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
@@ -7717,7 +7730,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         tag: "en",
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
@@ -7730,7 +7743,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         tag: "en",
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
@@ -7743,7 +7756,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         tag: "en",
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
@@ -7756,7 +7769,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         tag: "en",
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
@@ -7769,7 +7782,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         tag: "en",
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
@@ -7782,7 +7795,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         tag: "en",
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
@@ -7795,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         tag: "en",
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
@@ -7808,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         tag: "en",
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
@@ -7821,7 +7834,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         tag: "en",
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
@@ -7834,7 +7847,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
@@ -7847,7 +7860,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
@@ -7860,7 +7873,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         tag: "en",
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
@@ -7873,7 +7886,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         tag: "en",
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
@@ -7886,7 +7899,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         tag: "en",
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
@@ -7899,7 +7912,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         tag: "en",
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
@@ -7912,7 +7925,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         tag: "en",
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
@@ -7925,7 +7938,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         tag: "en",
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
@@ -7938,7 +7951,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         tag: "en",
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
@@ -7951,7 +7964,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         tag: "en",
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
@@ -7964,7 +7977,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         tag: "en",
         href: "/docs/interactive-computing/tenancy-sci-analysis-vms/",
         title: "Tenancy Sci Analysis VMs",
@@ -7977,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
@@ -7990,7 +8003,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         tag: "en",
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
@@ -8003,7 +8016,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         tag: "en",
         href: "/training/basic/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8016,7 +8029,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         tag: "en",
         href: "/training/intermediate/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8029,7 +8042,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         tag: "en",
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
@@ -8042,7 +8055,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         tag: "en",
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
@@ -8055,7 +8068,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         tag: "en",
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
@@ -8068,7 +8081,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         tag: "en",
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
@@ -8081,7 +8094,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         tag: "en",
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
@@ -8094,7 +8107,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         tag: "en",
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
@@ -8107,7 +8120,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         tag: "en",
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
@@ -8120,7 +8133,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         tag: "en",
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
@@ -8133,7 +8146,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         tag: "en",
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
@@ -8146,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         tag: "en",
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
@@ -8159,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         tag: "en",
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",

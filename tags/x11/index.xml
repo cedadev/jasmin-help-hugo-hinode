@@ -9,4 +9,7 @@ internal-only web resources.&lt;/li>
 &lt;/ul>
 &lt;p>Using graphical applications over a wide-area network can be very slow, and is
 not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item></channel></rss>
+graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item><item><title>NX update November 2024</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/nx-update-nov24/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/nx-update-nov24/</guid><description>&lt;h2 id="good-news-connection-problems-resolved" class="heading">Good news! Connection problems resolved &lt;a href="#good-news-connection-problems-resolved" aria-labelledby="good-news-connection-problems-resolved">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>We now have a solution to the issues some users had with connecting to the NoMachine NX (graphical linux desktop) service, especially from Windows.&lt;/p></description></item></channel></rss>

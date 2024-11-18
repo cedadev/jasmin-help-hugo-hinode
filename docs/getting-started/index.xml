@@ -75,9 +75,39 @@ to first check
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/">Login problems&lt;/a> before changing your
-key. Once you have created your SSH key pair it will need to be uploaded to
-the JASMIN accounts portal. If this is the first time you have created a key
-pair then this will be done when you create an account on the portal (Step 2
+key. Once you have created your SSH key pair, the public key will need to be uploaded to
+your 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+&lt;a href="https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/" target="_blank" rel="noopener noreferrer">JASMIN profile&amp;nbsp;
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>.
+If this is the first time you have created a key
+pair then this will be done when you create an account on the accounts portal (Step 2
 of 
 
 
@@ -109,39 +139,7 @@ of
 
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/">Get Started with JASMIN&lt;/a>). If you
-are updating your key for an existing account then you will need to update it
-in your
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-&lt;a href="https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/" target="_blank" rel="noopener noreferrer">JASMIN profile&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>.&lt;/p></description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;p>This article explains how to register on the JASMIN accounts portal.&lt;/p>
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/">Get Started with JASMIN&lt;/a>).&lt;/p></description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;p>This article explains how to register on the JASMIN accounts portal.&lt;/p>
 &lt;p>Having a JASMIN portal account does not by itself provide you with any access to JASMIN machines or services.&lt;/p></description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading">Get a login account &lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
@@ -268,11 +266,10 @@ select &amp;ldquo;Forgotten password&amp;rdquo; on the &amp;ldquo;useful links&a
 password. This article provides a basic overview of public key
 authentication.&lt;/p></description></item><item><title>Present your SSH key</title><link>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key/</guid><description>&lt;p>There are 2 main ways to present your SSH key when connecting via SSH-based methods:&lt;/p>
 &lt;ol>
-&lt;li>specifying the path to the private key, and entering the passphrase each time&lt;/li>
-&lt;li>&lt;strong>(recommended)&lt;/strong> loading the key into an &lt;code>ssh-agent&lt;/code>, which stores the key ready for any subsequent connections you want to make.&lt;/li>
+&lt;li>&lt;strong>File method:&lt;/strong> specifying the path to the private key file and entering the passphrase each time&lt;/li>
+&lt;li>&lt;strong>Agent method:&lt;/strong> loading the key into a persistent &lt;code>ssh-agent&lt;/code>, which stores the key ready for any subsequent connections you want to make (sometimes, this works for other applications too).&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>(2)&lt;/strong> is more convenient, because you don&amp;rsquo;t have to repeat the process each time you want to make a new connection, but &lt;strong>(1)&lt;/strong> is useful to know for
-testing and troubleshooting.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
+&lt;p>&lt;strong>(2)&lt;/strong> can be more convenient, because you don&amp;rsquo;t have to repeat the process each time you want to make a new connection, but &lt;strong>(1)&lt;/strong> can be simpler and is useful testing and troubleshooting.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
 
  
 

@@ -269,7 +269,49 @@ authentication.&lt;/p></description></item><item><title>Present your SSH key</ti
 &lt;li>&lt;strong>File method:&lt;/strong> specifying the path to the private key file and entering the passphrase each time&lt;/li>
 &lt;li>&lt;strong>Agent method:&lt;/strong> loading the key into a persistent &lt;code>ssh-agent&lt;/code>, which stores the key ready for any subsequent connections you want to make (sometimes, this works for other applications too).&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>(2)&lt;/strong> can be more convenient, because you don&amp;rsquo;t have to repeat the process each time you want to make a new connection, but &lt;strong>(1)&lt;/strong> can be simpler and is useful testing and troubleshooting.&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
+
+
+
+
+
+
+
+
+
+&lt;table class="table table-striped">
+ &lt;thead>
+ &lt;tr>
+ &lt;th class="text-start">Method&lt;/th>
+ &lt;th class="text-start">pros/cons&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td class="text-start">1. Specify the location of your SSH private key&lt;/td>
+ &lt;td class="text-start">
+&lt;!-- &lt;i class="fas fa-plus text-success">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-plus text-success" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-plus">&lt;/use>&lt;/svg>&amp;nbsp; simple &lt;br>
+&lt;!-- &lt;i class="fas fa-plus text-success">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-plus text-success" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-plus">&lt;/use>&lt;/svg>&amp;nbsp; no admin permissions needed&lt;br>
+&lt;!-- &lt;i class="fas fa-plus text-success">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-plus text-success" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-plus">&lt;/use>&lt;/svg>&amp;nbsp; works for all platforms if you update your key to ECDSA&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td class="text-start">2. Use your key stored in a local ssh-agent&lt;/td>
+ &lt;td class="text-start">
+&lt;!-- &lt;i class="fas fa-plus text-success">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-plus text-success" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-plus">&lt;/use>&lt;/svg>&amp;nbsp; useful if you use many applications which use SSH (e.g. NX, VSCode)&lt;br>
+&lt;!-- &lt;i class="fas fa-minus text-warning">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-minus text-warning" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-minus">&lt;/use>&lt;/svg>&amp;nbsp; may need admin permissions for 1st-time agent setup&lt;br>
+&lt;!-- &lt;i class="fas fa-minus text-warning">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-minus text-warning" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 448 512">&lt;use href="#fas-minus">&lt;/use>&lt;/svg>&amp;nbsp; careful editing of config file required in some cases&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="1-specifying-the-key-location-each-time" class="heading">1. Specifying the key location each time &lt;a href="#1-specifying-the-key-location-each-time" aria-labelledby="1-specifying-the-key-location-each-time">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>This simply involves including the &lt;code>-i&lt;/code> option in the SSH command to specify the location of your private key:&lt;/p></description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
 
  
 

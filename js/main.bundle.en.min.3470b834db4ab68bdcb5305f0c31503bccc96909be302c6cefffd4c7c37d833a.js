@@ -6796,6 +6796,19 @@ function initIndex() {
       {
         id: 22,
         tag: "en",
+        href: "/docs/software-on-jasmin/compiling-and-linking/",
+        title: "Compiling and linking",
+        description: "Compiling and linking code which uses libraries provided on JASMIN",
+        
+        
+        content: "Introduction \u0026nbsp; The Jaspy environment on JASMIN contains the GNU compilers and MPICH\u0026nbsp; , plus a wide range of libraries from conda-forge that will interoperate with these.\nSeparately, we also provide the Intel OneAPI compilers\u0026nbsp; and Intel MPI\u0026nbsp; , and a much more limited set of libraries built with these (currently just the netCDF libraries and their dependencies).\nIn either case, to compile and link software that utilises these libraries, you need to:\nensure that you are using the correct compiler point to the location of the libraries This page provides details on how to do this, first for Jaspy/GNU and then for Intel OneAPI.\nUsing Jaspy and the GNU compilers \u0026nbsp; Loading the compilers \u0026nbsp; To ensure that you are using the correct compilers, simply use the command\nmodule load jaspyto load the Jaspy module or\nmodule load jaspy/3.11/v20240508to load a specific Jaspy version.\nThis will put the directory containing the GNU compilers (gcc, g++, gfortran) into your PATH. That directory also contains the corresponding MPI compiler wrappers (mpicc, mpicxx, mpif77, mpif90) which you can use instead of using gcc etc directly if you want to compile parallel code.\nLoading the module also sets the CONDA_PREFIX environment variable to point to the root of the relevant Jaspy installation, for example /apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0/envs/jaspy3.11-mf3-23.11.0-0-v20240815.\n(The directory which gets added to PATH as described above is equivalent to $CONDA_PREFIX/bin.)\nYou can use the which command to verify that you are using the correct compiler versions, for example, type:\nwhich gfortranThis should report a path that is under the directory mentioned above.\nIf instead you see a compiler path under /usr/bin, then this is a different compiler version (provided by the operating system), and is not compatible with the libraries in Jaspy or supported by the JASMIN helpdesk for running user code. In that case, check your $PATH.\nPointing to the libraries \u0026nbsp; To use the libraries under the Jaspy environment, you need to add the following additional flags to the compiler command line:\nAt the compilation stage, you need to point to the include/ subdirectory containing header files. If making use of the CONDA_PREFIX environment variable, this would mean using this compiler option: -I$CONDA_PREFIX/include At the linking stage, you need to point to the lib/ subdirectory containing the libraries themselves. This will require the following linker option: -L$CONDA_PREFIX/liband is in addition to the relevant -l options for the specific libraries that you want to link to (for example -lfftw3 to use libfftw3.so).\nIf you are compiling and linking in a single step, put both of the above options on the same command line.\nIf you are running the compiler indirectly via an installer for another package, rather than running the compiler commands directly yourself, note that there are environment variables which are commonly used to specify these options, which you would set before invoking the installer. For example:\nexport CFLAGS=\u0026#34;-I$CONDA_PREFIX/include\u0026#34; export LDFLAGS=\u0026#34;-L$CONDA_PREFIX/lib\u0026#34;although the names of these might differ slightly (for example COPTS instead of CFLAGS, maybe FFLAGS or F77FLAGS or F90FLAGS as appropriate), so check the instructions for the package that you are trying to build.\nUsing *-config scripts \u0026nbsp; As an alternative to pointing explicitly to the relevant include and lib directories, some of the software packages provide *-config executables which report the relevant flags to be used during compilation. This includes, for exmple, the netCDF C library and also its Fortran / C++ wrappers; these provide nc-config, nf-config, and ncxx4-config. See ls $CONDA_PREFIX/bin/*-config for a list of other similar executables. Provided that the directory containing these is in your PATH (as will be the case after loading the Jaspy module), the output of these commands can be captured by a script and used to provide the relevant compiler and linker options, without you needing to specify any paths explicitly. For example, a program myprog.c that uses the netCDF C library could be compiled and linked using:\n# first set some variables using the nc-config script cc=$(nc-config --cc) cflags=$(nc-config --cflags) libs=$(nc-config --libs) # now use these variables to construct the relevant commands $cc -c $cflags myprog.c $cc $libs myprog.o -o myprogIf you are building a third-party package that depends on netCDF and which utilises the nc-config script in this way, then after you have loaded the Jaspy module, you should not need to do anything else in order to tell it where the library is located.\n(The nc-config program can also provide other information about the build of the library that you are using; type nc-config --help for more info.)\nUsing the Intel OneAPI compilers \u0026nbsp; Components of the Intel OneAPI\u0026nbsp; are provided for use with the Rocky 9 sci servers and Rocky 9 LOTUS nodes.\nIt is advisable to unload the Jaspy module when using the Intel compilers, to avoid any compatibility issues.\nLoading the compilers \u0026nbsp; If Jaspy is already loaded, start by typing\nmodule unload jaspythen:\nmodule load oneapi/compilersthis will enable the following commands:\nthe Fortran compiler ifx the C compiler icx the C++ compiler icpx (Typing ifort will give a deprecation warning, so use ifx instead.)\nIn addition to these, the OneAPI suite also includes an MPI implementation. You can load this by typing:\nmodule load oneapi/mpiThis provides (amongst other things):\ncompiler wrappers mpif77, mpif90, mpicc, mpicxx the run-time wrapper mpirun (which can also be invoked as mpiexec) NetCDF libraries for use with Intel OpenAPI \u0026nbsp; CEDA has provided an installation of the netCDF C library that uses the OneAPI compilers, together with its dependencies (HDF5, pnetcdf). Fortran and C++ language wrappers are also provided.\nThis installation is built with support for parallel access, although the user code needs to request parallel mode when opening the file in order to utilise this. Parallel netCDF makes use of the Intel MPI library.\nTo use Intel OneAPI, type one (or more) of these module commands:\nFor the C library - also includes associated command-line utilities, ncdump etc: module load netcdf/intel2024.2.0/4.9.2 For the C library and C++ wrappers: module load netcdf/intel2024.2.0/c++/4.3.1 For the C library and Fortran wrappers: module load netcdf/intel2024.2.0/fortran/4.6.1Loading these netCDF modules will also load the relevant compiler and MPI modules, so you do not need to load those explicitly.\nAs in the case of GNU compilers described above, you will have two approaches available for compiling netCDF code: either to point to the libraries explicitly, or to use the *-config scripts. These are described in more detail below.\nPointing to the libraries \u0026nbsp; Once you have loaded these modules, the environment variable NETCDF_ROOT is set for you, and as appropriate, NETCDFF_ROOT (for Fortran) and/or NETCDF_CXX4_ROOT (for C++). These variables are not generally used by the software, but may be useful to you when writing your own scripts in order to refer to the location of the libraries. They can be used analogously to how CONDA_PREFIX is used in the Jaspy/GNU examples above, as follows (assuming again that your program is called myprog):\nC ## compile: cx -c myprog.c -I$NETCDF_ROOT/include ## link: icx -o myprog myprog.o -L$NETCDF_ROOT/lib -lnetcdf Fortran: ## compile: ifx -c myprog.f -I$NETCDFF_ROOT/include ## (also works with F90) ## link: ifx -o myprog myprog.o -L$NETCDFF_ROOT/lib -lnetcdff -L$NETCDF_ROOT/lib -lnetcdf C++: ## compile: icpx -c myprog.cpp -I$NETCDF_ROOT/include -I$NETCDF_CXX4_ROOT/include ## link: icpx -o myprog myprog.o -L$NETCDF_CXX4_ROOT/lib -lnetcdf_c++4 -L$NETCDF_ROOT/lib -lnetcdf Parallel example (Fortran): ## compile and link: mpif90 -o myprog myprog.F90 -I $NETCDFF_ROOT/include -L $NETCDFF_ROOT/lib -lnetcdff ## run: mpirun -np 4 ./myprogA runnable example script that demonstrates these with some test programs from Unidata can be found at:\n/apps/jasmin/supported/libs/netcdf/intel2024.2.0/intel_netcdf_examples.shIf running the parallel test, ensure that you are using a filesystem that supports parallel writes.\nUsing the *-config scripts \u0026nbsp; Just as described above when using Jaspy, you will have the directories containing executables nc-config, nf-config, and ncxx4-config in your $PATH, provided that you have loaded the relevant modules. (In fact, these will be in $NETCDF_ROOT/bin, $NETCDFF_ROOT/bin, $NETCDF_CXX4_ROOT/bin, but you shouldn\u0026rsquo;t need to refer to these paths explicitly.)\nFollow the same approach as described above, capturing the output of these commands when run with the relevant command-line options. (Search for nc-config above in this page.) The build script for your application should then look exactly the same as if you were using Jaspy, apart from loading a different module to start with, even though the actual compiler options will be different."
+      })
+      .add(
+      
+      
+      {
+        id: 23,
+        tag: "en",
         href: "/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/",
         title: "Conda environments and Python virtual environments",
         description: "Conda environments and Python virtual environments",
@@ -6807,7 +6820,7 @@ function initIndex() {
       
       
       {
-        id: 23,
+        id: 24,
         tag: "en",
         href: "/docs/short-term-project-storage/configuring-cors-for-object-storage/",
         title: "Configuring CORS for object storage",
@@ -6820,7 +6833,7 @@ function initIndex() {
       
       
       {
-        id: 24,
+        id: 25,
         tag: "en",
         href: "/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/",
         title: "Creating a virtual environment in the JASMIN Notebooks Service",
@@ -6833,7 +6846,7 @@ function initIndex() {
       
       
       {
-        id: 25,
+        id: 26,
         tag: "en",
         href: "/docs/software-on-jasmin/creating-and-using-miniforge-environments/",
         title: "Creating and using miniforge environments",
@@ -6846,7 +6859,7 @@ function initIndex() {
       
       
       {
-        id: 26,
+        id: 27,
         tag: "en",
         href: "/docs/interactive-computing/dask-gateway/",
         title: "Dask Gateway",
@@ -6859,7 +6872,7 @@ function initIndex() {
       
       
       {
-        id: 27,
+        id: 28,
         tag: "en",
         href: "/docs/data-transfer/data-transfer-overview/",
         title: "Data transfer overview",
@@ -6872,7 +6885,7 @@ function initIndex() {
       
       
       {
-        id: 28,
+        id: 29,
         tag: "en",
         href: "/docs/data-transfer/data-transfer-tools/",
         title: "Data Transfer Tools",
@@ -6885,7 +6898,7 @@ function initIndex() {
       
       
       {
-        id: 29,
+        id: 30,
         tag: "en",
         href: "/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/",
         title: "Elastic Tape command-line interface hints",
@@ -6898,7 +6911,7 @@ function initIndex() {
       
       
       {
-        id: 30,
+        id: 31,
         tag: "en",
         href: "/docs/batch-computing/example-job-2-calc-md5s/",
         title: "Example Job 2: Calculating MD5 Checksums on many files",
@@ -6911,7 +6924,7 @@ function initIndex() {
       
       
       {
-        id: 31,
+        id: 32,
         tag: "en",
         href: "/training/advanced/training-exercises-coming-soon/",
         title: "Example training exercise",
@@ -6924,7 +6937,7 @@ function initIndex() {
       
       
       {
-        id: 32,
+        id: 33,
         tag: "en",
         href: "/docs/mass/external-access-to-mass-faq/",
         title: "External Access to MASS FAQ",
@@ -6937,7 +6950,7 @@ function initIndex() {
       
       
       {
-        id: 33,
+        id: 34,
         tag: "en",
         href: "/docs/data-transfer/ftp-and-lftp/",
         title: "ftp and lftp",
@@ -6950,7 +6963,7 @@ function initIndex() {
       
       
       {
-        id: 34,
+        id: 35,
         tag: "en",
         href: "/docs/getting-started/generate-ssh-key-pair/",
         title: "Generate an SSH key pair",
@@ -6963,7 +6976,7 @@ function initIndex() {
       
       
       {
-        id: 35,
+        id: 36,
         tag: "en",
         href: "/docs/software-on-jasmin/geocat-replaces-ncl/",
         title: "Geocat replaces NCL",
@@ -6976,7 +6989,7 @@ function initIndex() {
       
       
       {
-        id: 36,
+        id: 37,
         tag: "en",
         href: "/docs/getting-started/get-jasmin-portal-account/",
         title: "Get a JASMIN portal account",
@@ -6989,7 +7002,7 @@ function initIndex() {
       
       
       {
-        id: 37,
+        id: 38,
         tag: "en",
         href: "/docs/getting-started/get-login-account/",
         title: "Get a login account",
@@ -7002,7 +7015,7 @@ function initIndex() {
       
       
       {
-        id: 38,
+        id: 39,
         tag: "en",
         href: "/docs/getting-started/get-started-with-jasmin/",
         title: "Get Started with JASMIN",
@@ -7015,7 +7028,7 @@ function initIndex() {
       
       
       {
-        id: 39,
+        id: 40,
         tag: "en",
         href: "/docs/data-transfer/globus-command-line-interface/",
         title: "Globus Command-Line Interface",
@@ -7028,7 +7041,7 @@ function initIndex() {
       
       
       {
-        id: 40,
+        id: 41,
         tag: "en",
         href: "/docs/data-transfer/globus-connect-personal/",
         title: "Globus Connect Personal",
@@ -7041,7 +7054,7 @@ function initIndex() {
       
       
       {
-        id: 41,
+        id: 42,
         tag: "en",
         href: "/docs/data-transfer/globus-transfers-with-jasmin/",
         title: "Globus transfers with JASMIN",
@@ -7054,7 +7067,7 @@ function initIndex() {
       
       
       {
-        id: 42,
+        id: 43,
         tag: "en",
         href: "/docs/interactive-computing/graphical-linux-desktop-access-using-nx/",
         title: "Graphical linux desktop using NoMachine NX",
@@ -7067,7 +7080,7 @@ function initIndex() {
       
       
       {
-        id: 43,
+        id: 44,
         tag: "en",
         href: "/docs/data-transfer/gridftp-cert-based-auth/",
         title: "GridFTP (certificate-based authentication)",
@@ -7080,7 +7093,7 @@ function initIndex() {
       
       
       {
-        id: 44,
+        id: 45,
         tag: "en",
         href: "/docs/data-transfer/gridftp-ssh-auth/",
         title: "GridFTP (SSH authentication)",
@@ -7093,7 +7106,7 @@ function initIndex() {
       
       
       {
-        id: 45,
+        id: 46,
         tag: "en",
         href: "/guides/guides-coming-soon/",
         title: "Guides coming soon",
@@ -7106,7 +7119,7 @@ function initIndex() {
       
       
       {
-        id: 46,
+        id: 47,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-alert-system/",
         title: "GWS Alert System",
@@ -7119,7 +7132,7 @@ function initIndex() {
       
       
       {
-        id: 47,
+        id: 48,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-etiquette/",
         title: "GWS etiquette",
@@ -7132,7 +7145,7 @@ function initIndex() {
       
       
       {
-        id: 48,
+        id: 49,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-scanner/",
         title: "GWS Scanner",
@@ -7145,7 +7158,7 @@ function initIndex() {
       
       
       {
-        id: 49,
+        id: 50,
         tag: "en",
         href: "/docs/short-term-project-storage/gws-scanner-ui/",
         title: "GWS Scanner UI",
@@ -7158,7 +7171,7 @@ function initIndex() {
       
       
       {
-        id: 50,
+        id: 51,
         tag: "en",
         href: "/docs/mass/how-to-apply-for-mass-access/",
         title: "How to apply for MASS access",
@@ -7171,7 +7184,7 @@ function initIndex() {
       
       
       {
-        id: 51,
+        id: 52,
         tag: "en",
         href: "/docs/getting-started/how-to-contact-us-about-jasmin-issues/",
         title: "How to contact us about JASMIN issues",
@@ -7184,7 +7197,7 @@ function initIndex() {
       
       
       {
-        id: 52,
+        id: 53,
         tag: "en",
         href: "/docs/getting-started/how-to-login/",
         title: "How to login",
@@ -7197,7 +7210,7 @@ function initIndex() {
       
       
       {
-        id: 53,
+        id: 54,
         tag: "en",
         href: "/docs/batch-computing/how-to-monitor-slurm-jobs/",
         title: "How to monitor Slurm jobs",
@@ -7210,7 +7223,7 @@ function initIndex() {
       
       
       {
-        id: 54,
+        id: 55,
         tag: "en",
         href: "/docs/batch-computing/how-to-submit-a-job/",
         title: "How to submit a job",
@@ -7223,7 +7236,7 @@ function initIndex() {
       
       
       {
-        id: 55,
+        id: 56,
         tag: "en",
         href: "/docs/batch-computing/how-to-submit-an-mpi-parallel-job/",
         title: "How to submit an MPI parallel job",
@@ -7236,7 +7249,7 @@ function initIndex() {
       
       
       {
-        id: 56,
+        id: 57,
         tag: "en",
         href: "/docs/data-transfer/hpxfer-access-role/",
         title: "hpxfer access role",
@@ -7249,7 +7262,7 @@ function initIndex() {
       
       
       {
-        id: 57,
+        id: 58,
         tag: "en",
         href: "/docs/software-on-jasmin/idl/",
         title: "IDL",
@@ -7262,7 +7275,7 @@ function initIndex() {
       
       
       {
-        id: 58,
+        id: 59,
         tag: "en",
         href: "/docs/short-term-project-storage/install-xfc-client/",
         title: "Install XFC client",
@@ -7275,7 +7288,7 @@ function initIndex() {
       
       
       {
-        id: 59,
+        id: 60,
         tag: "en",
         href: "/docs/interactive-computing/interactive-computing-overview/",
         title: "Interactive computing overview",
@@ -7288,7 +7301,7 @@ function initIndex() {
       
       
       {
-        id: 60,
+        id: 61,
         tag: "en",
         href: "/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/",
         title: "Introduction to the JASMIN Cloud",
@@ -7301,7 +7314,7 @@ function initIndex() {
       
       
       {
-        id: 61,
+        id: 62,
         tag: "en",
         href: "/docs/for-cloud-tenants/jasmin-cloud-portal/",
         title: "JASMIN Cloud Portal",
@@ -7314,7 +7327,7 @@ function initIndex() {
       
       
       {
-        id: 62,
+        id: 63,
         tag: "en",
         href: "/docs/uncategorized/jasmin-conditions-of-use/",
         title: "JASMIN Conditions of Use",
@@ -7327,7 +7340,7 @@ function initIndex() {
       
       
       {
-        id: 63,
+        id: 64,
         tag: "en",
         href: "/docs/interactive-computing/jasmin-notebooks-service/",
         title: "JASMIN Notebooks Service",
@@ -7340,7 +7353,7 @@ function initIndex() {
       
       
       {
-        id: 64,
+        id: 65,
         tag: "en",
         href: "/docs/software-on-jasmin/software-migration-2020/",
         title: "JASMIN software changes: migration to CentOS7 (2020)",
@@ -7353,7 +7366,7 @@ function initIndex() {
       
       
       {
-        id: 65,
+        id: 66,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-software-faqs/",
         title: "JASMIN software FAQs",
@@ -7366,7 +7379,7 @@ function initIndex() {
       
       
       {
-        id: 66,
+        id: 67,
         tag: "en",
         href: "/docs/getting-started/jasmin-status/",
         title: "JASMIN status",
@@ -7379,7 +7392,7 @@ function initIndex() {
       
       
       {
-        id: 67,
+        id: 68,
         tag: "en",
         href: "/docs/getting-started/jasmin-training-accounts/",
         title: "JASMIN training accounts",
@@ -7392,7 +7405,7 @@ function initIndex() {
       
       
       {
-        id: 68,
+        id: 69,
         tag: "en",
         href: "/docs/software-on-jasmin/jaspy-envs/",
         title: "Jaspy Software Environments (Python 3, R and other tools)",
@@ -7405,7 +7418,7 @@ function initIndex() {
       
       
       {
-        id: 69,
+        id: 70,
         tag: "en",
         href: "/docs/short-term-project-storage/jdma/",
         title: "Joint-storage Data Migration App (JDMA)",
@@ -7418,7 +7431,7 @@ function initIndex() {
       
       
       {
-        id: 70,
+        id: 71,
         tag: "en",
         href: "/docs/interactive-computing/login-problems/",
         title: "Login problems",
@@ -7431,7 +7444,7 @@ function initIndex() {
       
       
       {
-        id: 71,
+        id: 72,
         tag: "en",
         href: "/docs/interactive-computing/login-servers/",
         title: "Login servers",
@@ -7444,7 +7457,7 @@ function initIndex() {
       
       
       {
-        id: 72,
+        id: 73,
         tag: "en",
         href: "/docs/batch-computing/lotus-cluster-specification/",
         title: "LOTUS cluster specification",
@@ -7457,7 +7470,7 @@ function initIndex() {
       
       
       {
-        id: 73,
+        id: 74,
         tag: "en",
         href: "/docs/batch-computing/lotus-overview/",
         title: "LOTUS overview",
@@ -7470,7 +7483,7 @@ function initIndex() {
       
       
       {
-        id: 74,
+        id: 75,
         tag: "en",
         href: "/docs/short-term-project-storage/managing-a-gws/",
         title: "Managing a GWS",
@@ -7483,7 +7496,7 @@ function initIndex() {
       
       
       {
-        id: 75,
+        id: 76,
         tag: "en",
         href: "/docs/software-on-jasmin/name-dispersion-model/",
         title: "Met Office NAME Model",
@@ -7496,7 +7509,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 77,
         tag: "en",
         href: "/docs/getting-started/migrate-jasmin-account-from-ceda/",
         title: "Migrate a JASMIN account from CEDA",
@@ -7509,7 +7522,7 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 78,
         tag: "en",
         href: "/docs/software-on-jasmin/rocky9-migration-2024/",
         title: "Migration to Rocky Linux 9 2024",
@@ -7522,7 +7535,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         tag: "en",
         href: "/docs/uncategorized/mobaxterm/",
         title: "MobaXterm (Windows terminal client)",
@@ -7535,7 +7548,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         tag: "en",
         href: "/docs/mass/moose-the-mass-client-user-guide/",
         title: "MOOSE (the MASS client) User Guide",
@@ -7548,7 +7561,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         tag: "en",
         href: "/docs/getting-started/multiple-account-types/",
         title: "Multiple account types",
@@ -7561,7 +7574,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         tag: "en",
         href: "/docs/software-on-jasmin/nag-library/",
         title: "NAG Library",
@@ -7574,7 +7587,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         tag: "en",
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
@@ -7587,7 +7600,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         tag: "en",
         href: "/docs/interactive-computing/nx-update-nov24/",
         title: "NX update November 2024",
@@ -7600,7 +7613,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         tag: "en",
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
@@ -7613,7 +7626,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         tag: "en",
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
@@ -7626,7 +7639,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         tag: "en",
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
@@ -7639,7 +7652,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         tag: "en",
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
@@ -7652,7 +7665,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         tag: "en",
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
@@ -7665,7 +7678,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         tag: "en",
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7678,7 +7691,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         tag: "en",
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
@@ -7691,7 +7704,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         tag: "en",
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
@@ -7704,7 +7717,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         tag: "en",
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
@@ -7717,7 +7730,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         tag: "en",
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
@@ -7730,7 +7743,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         tag: "en",
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
@@ -7743,7 +7756,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         tag: "en",
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
@@ -7756,7 +7769,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         tag: "en",
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
@@ -7769,7 +7782,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         tag: "en",
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
@@ -7782,7 +7795,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         tag: "en",
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
@@ -7795,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         tag: "en",
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
@@ -7808,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         tag: "en",
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
@@ -7821,7 +7834,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         tag: "en",
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
@@ -7834,7 +7847,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         tag: "en",
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
@@ -7847,7 +7860,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
@@ -7860,7 +7873,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
@@ -7873,7 +7886,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         tag: "en",
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
@@ -7886,7 +7899,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         tag: "en",
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
@@ -7899,7 +7912,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         tag: "en",
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
@@ -7912,7 +7925,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         tag: "en",
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
@@ -7925,7 +7938,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         tag: "en",
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
@@ -7938,7 +7951,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         tag: "en",
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
@@ -7951,7 +7964,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         tag: "en",
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
@@ -7964,7 +7977,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         tag: "en",
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
@@ -7977,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         tag: "en",
         href: "/docs/interactive-computing/tenancy-sci-analysis-vms/",
         title: "Tenancy Sci Analysis VMs",
@@ -7990,7 +8003,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
@@ -8003,7 +8016,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         tag: "en",
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
@@ -8016,7 +8029,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         tag: "en",
         href: "/training/basic/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8029,7 +8042,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         tag: "en",
         href: "/training/intermediate/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8042,7 +8055,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         tag: "en",
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
@@ -8055,7 +8068,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         tag: "en",
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
@@ -8068,7 +8081,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         tag: "en",
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
@@ -8081,7 +8094,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         tag: "en",
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
@@ -8094,7 +8107,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         tag: "en",
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
@@ -8107,7 +8120,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         tag: "en",
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
@@ -8120,7 +8133,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         tag: "en",
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
@@ -8133,7 +8146,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         tag: "en",
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
@@ -8146,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         tag: "en",
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
@@ -8159,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         tag: "en",
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
@@ -8172,7 +8185,7 @@ function initIndex() {
       
       
       {
-        id: 128,
+        id: 129,
         tag: "en",
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",

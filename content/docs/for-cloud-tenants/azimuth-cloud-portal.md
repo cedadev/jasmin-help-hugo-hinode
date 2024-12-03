@@ -46,7 +46,7 @@ like GitHub, Google, or institutional identity providers to enable single sign-o
 **Platform Access Control** to control access to resources. Additionally, Federated users cannot deploy platforms in
 Azimuth, however they can be granted access to existing platforms provisioned by others. This is achieved through role-based access control (RBAC) mechanisms within the Keycloak realm.
 
-{{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="platform landing page" wrapper="col-9 mx-auto" wrapper="text-center">}}
+{{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="platform landing page">}}
 The **create platform** page provides two equivalent methods for initiating the platform creation process. When you select the
 **Create Platform / New platform:** on the landing page, you can choose a platform type, based on your project as shown in the image below.
 {{<image src="img/docs/azimuth-images/Azimuth-new-platform.jpg" caption="new platform list page" wrapper="col-6 mx-auto" wrapper="text-center">}}
@@ -69,7 +69,7 @@ of storage capacity that can be defined for platforms in the current tenancy. as
 
 {{<image src="img/docs/azimuth-images/Azimuth-quotas-Page.jpg" caption="Quotas page" wrapper="col-6 mx-auto" wrapper="text-center">}}
 
-In the advanced tab there are two sections, the **machine** and the **volume** sections. Documentation for accessing a machine go to the: 
+In the advanced tab there are two sections, the **machine** and the **volume** sections. Documentation for accessing a machine go to the:
 {{<link "platform-in-depth-workstation">}}**Create a Machine**{{</link>}} section. Some actions you can be able to perform on the machine include **viewing** a list of existing machines, **edit** or **delete** machines, **attatch/detatch** external IPs, **define firewall rules** and **Start/Stop/Restart** machines. On the **volume tab**, users are able to, **view** a list of volumes in the project and **create new** volumes by providing the name and volume size.
 {{<image src="img/docs/azimuth-images/Azimuth-create-volume-Page.jpg" caption="Azimuth New volume" wrapper="col-4 mx-auto" wrapper="text-center">}}
 Additinally users can **delete** and **attach / detach** volumes.

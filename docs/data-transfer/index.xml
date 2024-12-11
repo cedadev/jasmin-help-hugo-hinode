@@ -196,7 +196,7 @@ endpoint (now called a &lt;strong>collection&lt;/strong> ), based on the most re
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
- Not yet updated to work with with new Rocky9 servers, so please continue using CentOS7 equivalents for now, as documented below.
+ Deprecated: please use Globus instead for transfers which previously used this method.
  &lt;/div>
  &lt;/div>
 &lt;p>This article describes how to transfer data using gridftp with certificate-

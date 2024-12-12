@@ -23,15 +23,15 @@ Generating an SSH key pair requires an SSH client, usually an application which 
 a text-based environment where you type commands to make things happen. Linux
 and Mac users can use a standard terminal which is very likely to have SSH
 installed. Windows users are advised to find a suitable SSH client to use or
-install on their machine. Suggestsions are:
+install on their machine. Suggestions are:
 
-- {{<link "../uncategorized/mobaxterm">}}MobaXterm{{</link>}} (requires license), provides a linux-style terminal
+- {{<link "../uncategorized/mobaxterm">}}MobaXterm{{</link>}} (requires license), provides a Linux-style terminal
 with all the relevant command-line and some GUI utilities included. Figures 1 and 2, below, show example
 terminal windows on a Mac, and Windows (using MobaXterm).
 - {{<link "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement">}}Windows OpenSSH client{{</link>}} an optional feature in Windows 10 or 11, but usually installed by default.
 - {{<link "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">}}PuTTY{{</link>}} set of SSH tools (includes PuTTYgen GUI tool for generating keys, and Pageant ssh-agent)
 
-There are many more, but if you stick to one of these 3, which are known to us, then potentially we can help you if you run into difficulties.
+There are many more, but if you stick to one of these three, which are known to us, then potentially we can help you if you run into difficulties.
 
 {{<image src="img/docs/generate-ssh-key-pair/file-QrkL51B5fW.png" caption="Mac terminal" >}}
 
@@ -45,7 +45,7 @@ Please note the updated command and filenames generated.
 {{</alert>}}
 
 The Linux command `ssh-keygen` should be used to generate your SSH key pair.
-Open a terminal and generate your public and private key, as follows (replace the e-mail address with your own):
+Open a terminal and generate your public and private key, as follows:
 
 {{<command user="localuser" host="localhost">}}
 ssh-keygen -m PEM -t ecdsa -b 521 -f ~/.ssh/id_ecdsa_jasmin
@@ -78,9 +78,11 @@ Running `ssh-keygen` will generate two files in your `$HOME/.ssh/` directory:
 - `id_ecdsa_jasmin.pub` - public key file
 
 The **public** key file is the part that you need to share in order to access
-JASMIN. Windows may mistakenly associated the `*.pub` file with "Publisher" so don't try to double-click it. When you need to copy & paste its contents to upload to your JASMIN profile, use a simple text editor (like Notepad).
+JASMIN. Windows may mistakenly associated the `*.pub` file with Microsoft Publisher so don't try to double-click it. When you need to copy & paste its contents to upload to your JASMIN profile, use a simple text editor (like Notepad).
 
 Make sure the file is stored in a directory called `.ssh` in your home directory (`~/.ssh`, `$HOME/.ssh` or `%USERPROFILE%\.ssh` on Windows, or `${env:UserProfile}\.ssh` in PowerShell). Storing it elsewhere sometimes causes problems with permissions, but it's also good to keep keys in one place so that they can be kept securely.
 
+{{<alert color="warning" icon="fas lock">}}
 The **private** key file should be protected and not shared with
-others. It should stay on your local machine: **Do not copy your private key to anywhere on JASMIN**
+others. It should stay on your local machine: **Do not copy your private key to anywhere on JASMIN.**
+{{</alert>}}

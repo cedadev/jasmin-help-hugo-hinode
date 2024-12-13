@@ -50,10 +50,10 @@ Here's what to do:
 ### Download OnlineCA tools
 
 On the machine you intend to use as the transfer client, e.g.
-`xfer1.jasmin.ac.uk`, in your JASMIN home directory, download 2 shell scripts
+`xfer-vm-01.jasmin.ac.uk`, in your JASMIN home directory, download 2 shell scripts
 which will interact with the Online CA for you. Make them executable:
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 wget https://raw.githubusercontent.com/cedadev/online_ca_client/master/contrail/security/onlineca/client/sh/onlineca-get-cert-wget.sh
 wget https://raw.githubusercontent.com/cedadev/online_ca_client/master/contrail/security/onlineca/client/sh/onlineca-get-trustroots-wget.sh
 chmod u+x onlineca-get-*.sh
@@ -61,14 +61,14 @@ chmod u+x onlineca-get-*.sh
 
 View help information for the shell scripts:
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 ./onlineca-get-trustroots-wget.sh -h
 ./onlineca-get-cert-wget.sh -h
 {{</command>}}
 
 Bootstrap trust between your own machine and the JASMIN gridftp server: (First time only)
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 ./onlineca-get-trustroots-wget.sh -U https://slcs.jasmin.ac.uk/trustroots/ -b
 (out)Bootstrapping Short-Lived Credential Service root of trust.
 (out)Trust roots have been installed in /home/users/USERNAME/.globus/certificates.
@@ -77,7 +77,7 @@ Bootstrap trust between your own machine and the JASMIN gridftp server: (First t
 Obtain a credential, to be written to an output file `credfile` using your
 JASMIN Accounts Portal username USERNAME:
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 ./onlineca-get-cert-wget.sh -U https://slcs.jasmin.ac.uk/certificate/ -l USERNAME -o ./cred.jasmin
 {{</command>}}
 
@@ -87,7 +87,7 @@ When prompted, enter the password associated with your **JASMIN** account
 Change the permissions on your newly-created `cred.jasmin` file so that it's
 only readable by you (client software may insist on this):
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 chmod 600 ./cred.jasmin
 {{</command>}}
 
@@ -95,7 +95,7 @@ This credential obtained by this method is valid by default for 720 hours (30
 days), as you can see by inspecting the certificate using the following
 command:
 
-{{<command user="user" host="xfer1">}}
+{{<command user="user" host="xfer-vm-01">}}
 openssl x509 -in cred.jasmin -noout -startdate -enddate
 (out)    notBefore=Mar 11 17:32:59 2022 GMT
 (out)    notAfter=Apr 10 17:32:59 2022 GMT

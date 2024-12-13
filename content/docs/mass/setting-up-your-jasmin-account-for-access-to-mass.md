@@ -80,7 +80,7 @@ by the running of moo install, so this process can be run only once.
 {{< /alert >}}
 
 {{<command user="user" host="localhost">}}
-scp moose <userid>@xfer1.jasmin.ac.uk:~/moose
+scp moose <userid>@xfer-vm-01.jasmin.ac.uk:~/moose
 ssh -A -X <userid>@login-01.jasmin.ac.uk
 {{</command>}}
 {{<command user="user" host="login-01">}}

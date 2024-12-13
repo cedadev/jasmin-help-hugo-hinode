@@ -271,7 +271,7 @@ Again, you need the ssh-agent running locally:
 ```
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/jasmin_id_rsa 
-scp userid@xfer1.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.pp my_local_copy.pp
+scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.pp my_local_copy.pp
 ```
   {{< /accordion-item >}}
   

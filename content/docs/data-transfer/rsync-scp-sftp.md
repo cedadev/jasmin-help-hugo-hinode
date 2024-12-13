@@ -59,7 +59,7 @@ Workspace on JASMIN:
 {{<command user="localuser" host="localhost">}}
 exec ssh-agent $SHELL
 ssh-add ~/.ssh/id_ecdsa_jasmin  ## local path to your private key file
-rsync myfile <username>@xfer1.jasmin.ac.uk:/gws/nopw/j04/myproject/data/
+rsync myfile <username>@xfer-vm-01.jasmin.ac.uk:/gws/nopw/j04/myproject/data/
 {{</command>}}
 
 NOTE: The first two lines are the standard method for setting up the SSH agent
@@ -107,7 +107,7 @@ interrupted transfers, directory listings, and remote file removal.
 For basic transfer of a file on JASMIN to the local machine:
 
 {{<command user="localuser" host="localhost">}}
-sftp remoteuser@xfer1.jasmin.ac.uk:/group_workspaces/jasmin/myproject/data/notes.txt ./
+sftp remoteuser@xfer-vm-01.jasmin.ac.uk:/group_workspaces/jasmin/myproject/data/notes.txt ./
 {{</command>}}
 
 For more information see the

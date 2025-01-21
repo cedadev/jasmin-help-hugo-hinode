@@ -2,6 +2,7 @@
 description: OpenStack
 slug: openstack
 title: OpenStack
+weight: 35
 ---
 
 ## Horizon

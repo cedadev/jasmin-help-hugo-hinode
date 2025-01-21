@@ -2,6 +2,7 @@
 description: Best practice with the cloud
 slug: best-practice
 title: Best Practice
+weight: 90
 ---
 
 ## Security

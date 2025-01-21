@@ -2,6 +2,7 @@
 description: Introduction to the Azimuth cloud portal
 slug: azimuth-cloud-portal
 title: The Azimuth Cloud Portal
+weight: 20
 ---
 Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC)
 and artificial intelligence (AI) applications. It supports OpenStack clouds and can manage a range of platforms from single-machine

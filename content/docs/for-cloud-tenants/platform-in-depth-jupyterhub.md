@@ -2,6 +2,7 @@
 description: In depth look at the jupyterhub platforms
 slug: platform-in-depth-jupyterhub
 title: Platforms In Depth - JupyterHub, DaskHub, BinderHub
+weight: 30
 ---
 **JupyterHub** is a multi-user platform that allows multiple users to access and run **Jupyter notebooks** through a web interface.
 It is designed to provide a standardised computing environment for groups, such as classes or research teams, by launching individual

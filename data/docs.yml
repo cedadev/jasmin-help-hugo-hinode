@@ -139,6 +139,8 @@
     - title: ansible
     - title: terraform
     - title: cluster-api
+    - title: docker
+    - title: k8s
 
 - title: workflow management
   pages:

@@ -2,6 +2,7 @@
 description: In depth look at the workstation platforms
 slug: platform-in-depth-workstation
 title: Platforms In Depth - Workstastions
+weight: 30
 ---
 **The Linux Workstation platform** provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. For external access, an optional public IP address can be configured to enable secure shell (SSH) connections. Each instance includes a dedicated cloud volume mounted at /data for managing large datasets. The capacity of this volume is configurable during instance launch.
 Azimuth offers two distinct **Linux Workstation configurations**, primarily differentiated by **access methods** and **resource utilisation**.

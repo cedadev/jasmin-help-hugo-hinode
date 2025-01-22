@@ -56,6 +56,8 @@ This enables better resource management. Once done click on confirm which will l
 
 {{<image src="img/docs/azimuth-images/Azimuth-configuring-page.jpg" caption="Platform in configuring state" wrapper="col-8 mx-auto" wrapper="text-center">}}
 
+### Platform Usage
+
 Once the deployment is complete the deployment page indicates the workstation is ready and you can use **details** button to navigate to the platform instance or the **monitor** button to monitor the workstation. From the **Web console** label, you can either copy the url for the web interface for the workstation or click on the link for webconsole for the workstation.
 
 {{<image src="img/docs/azimuth-images/Azimuth-webconsole-url-Page.jpg" caption="Platform in ready state" wrapper="col-9 mx-auto" wrapper="text-center">}}

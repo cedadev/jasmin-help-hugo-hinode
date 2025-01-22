@@ -6,19 +6,22 @@ weight: 30
 ---
 The **Slurm platform** empowers users with a high-performance computing environment, leveraging the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.
 
-To setup the platform you need to provide a unique name for your Slurm platform, assign an external IP address to your cloud project's login node if needed, specify the number and size of compute nodes based on your workload requirements and optionally, run post-configuration validation tests for added confidence.
+To setup the platform you need to provide a unique name for your Slurm platform, assign an external IP address to your cloud project's login node if needed, specify the number and size of compute nodes based on your workload requirements, and, optionally, run post-configuration validation tests for added confidence.
 
 Some key Considerations when defining a Slurm cluster inlude the following:
 
-- The platform name will be visible to all members of your cloud project
 - One can monitor system performance and job status using the integrated Grafana dashboard and Open OnDemand's job-specific monitoring.
 - The `azimuth` user has passwordless sudo access. For sudo access on non-login nodes, SSH as `azimuth` from the login node first.
-- To preserve software installations across platform upgrades, consider packaging them for use with 'apptainer', which supports SIF and Docker/OCI container formats.
-- Explore the EESSI pilot repository for additional software options and
+- To preserve software installations across platform upgrades, consider packaging them for use with `apptainer`, which supports SIF and Docker/OCI container formats.
+- Explore the EESSI pilot repository for additional software options.
 - For software with broad applicability, contribute to the Ansible Slurm Appliance repository to enhance the platform's image building and configuration capabilities.
 
+### Platform creation
+
 To create a new Slurm Cluster platform navigate to your Azimuth tenancy/project and select the Create platform / New platform button.
-From the list of platforms select the Slurm workload manager platform option
+From the list of platforms select the Slurm workload manager platform option.
+
+{{<mark>}}Image is a bit blurry - can we get a better one?{{</mark>}}
 
 {{<image src="img/docs/azimuth-images/Azimuth-create-slurm-cluster-configuration-Page.jpg" caption="Create Slurm platform" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
@@ -26,14 +29,18 @@ Once the deployment is complete an instance of a slurm cluster will appear under
 
 {{<image src="img/docs/azimuth-images/Azimuth-slurm-cluster-Page.jpg" caption="Slurm cluster" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
+
+### Platform usage
+
 There are two ways to access the slurm cluster, either by selecting the details button:
 
 {{<image src="img/docs/azimuth-images/slurm-cluster-details.jpg" caption="Slurm cluster Details" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
-Navigating to the Slurm cluster cluster from the details button  provides you with a commandline example to access the slurm cluster, the ability to refersh the page, the ability to update, patch and even delete the cluster. The page also provides details about the cluster such as, when the cluster was created and other meta data about the cluster.
+Navigating to the Slurm cluster cluster from the **details** button provides you with a commandline example to access the slurm cluster,  the ability to **update**, **patch** and **delete** the cluster. The page also provides details about the cluster such as when the cluster was created, and other meta data about the cluster.
 
-There are two services accessible from the details page, the Open onDemand and the Monitoring service.
-From the Open OnDemand button you can access the features offered to access and manage the slurm cluster from a browser
+There are two services accessible from the details page, the **Open onDemand** and the **Monitoring** service.
+
+From the Open OnDemand button you can access the features offered to access and manage the slurm cluster from a browser.
 
 {{<image src="img/docs/azimuth-images/openonDemand.jpg" caption="Slurm open ondemand" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
@@ -68,10 +75,7 @@ Ensure that the disk where the NFS shares are located has enough free space. NFS
 **Verify Network Connectivity:**
 If the NFS shares are on a remote server, verify that network connectivity is working correctly. Check for firewall rules or network configuration issues that might be preventing NFS traffic.
 
-**Consult Documentation:**
-Refer to the documentation for your specific Azimuth SLURM cluster setup and the underlying operating system for more detailed instructions on troubleshooting NFS issues.
-
 **Retry Patching:**
 If the above steps don't resolve the issue, you can try retrying the patching process in Azimuth SLURM. However, make sure to address the underlying NFS problem first to prevent the issue from recurring.
 
-For further details click the link for: [**monitoring Slurm**]({{< ref path="docs/batch-computing/how-to-monitor-slurm-jobs" >}}) | [**submit a Slurm job**]({{< ref path="docs/batch-computing/how-to-submit-a-job-to-slurm" >}}) | [**Slurm queues**]({{< ref path="docs/batch-computing/slurm-queues" >}}) | and the [**Slurm scheduler**]({{< ref path="docs/batch-computing/slurm-scheduler-overview" >}})
+For further details on using slurm visit the JASMIN Slurm Documentation: [**monitoring Slurm**]({{< ref path="docs/batch-computing/how-to-monitor-slurm-jobs" >}}) | [**submit a Slurm job**]({{< ref path="docs/batch-computing/how-to-submit-a-job-to-slurm" >}}) | [**Slurm queues**]({{< ref path="docs/batch-computing/slurm-queues" >}}) | [**Slurm scheduler**]({{< ref path="docs/batch-computing/slurm-scheduler-overview" >}})

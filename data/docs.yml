@@ -136,11 +136,6 @@
     - title: best practice
     - title: linux admin
     - title: openstack
-    - title: ansible
-    - title: terraform
-    - title: cluster-api
-    - title: docker
-    - title: k8s
 
 - title: workflow management
   pages:

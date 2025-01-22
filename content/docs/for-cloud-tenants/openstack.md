@@ -5,6 +5,8 @@ title: OpenStack
 weight: 35
 ---
 
+coming soon...
+
 ## Horizon
 
 ## OpenStack CLI

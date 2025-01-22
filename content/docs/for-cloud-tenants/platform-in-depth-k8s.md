@@ -71,4 +71,4 @@ Monitoring the Kubernetes instance is provided by a Grafana dashboard.
 
 {{<image src="img/docs/azimuth-images/azimuth-k8s-monitoring.jpg" caption="kubernetes monitoring" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
-For links to resources for Kubernetes, see the Best Practice section.
+For links to resources for Kubernetes, see the {{<link "best-practice">}}**Best Practice**{{</link>}} section.

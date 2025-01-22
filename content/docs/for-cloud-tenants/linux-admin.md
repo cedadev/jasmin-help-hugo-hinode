@@ -5,6 +5,8 @@ title: Linux Admin
 weight: 35
 ---
 
+coming soon...
+
 ## Patching
 
 ## Server hardening

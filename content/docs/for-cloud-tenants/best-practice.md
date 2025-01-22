@@ -5,6 +5,9 @@ title: Best Practice
 weight: 90
 ---
 
+Coming soon...
+
+
 ## Security
 
 ## VM life cycle
@@ -13,10 +16,10 @@ weight: 90
 
 ## Infrastructure-as-Code
 
-Brief description of each and purpose with link to IaC article
-
 ### Ansible
 
 ### Terraform
 
 ### Cluster API
+
+### Kubenetes

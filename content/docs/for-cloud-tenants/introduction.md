@@ -120,13 +120,7 @@ command away from being redeployed or updated
 - Azimuth Kubernetes clusters auto-heal and can auto-scale to dynamically create and
 replace worker nodes
 
-More detail on IaC technologies which we suggest are available in the following articles:
-
-- {{<link "./ansible">}}Ansible{{</link>}}
-- {{<link "./terraform">}}Terraform{{</link>}}
-- {{<link "./k8s">}}Kubernetes and Helm{{</link>}}
-- {{<link "./cluster-api">}}Cluster API{{</link>}}
-- {{<link "./docker">}}Docker{{</link>}}
+More detail on IaC technologies which we suggest are available in the {{<link "best-practice">}}**Best Practice**{{</link>}} section.
 
 Documentation pages for some general advice are also availble for
 {{<link "./linux-admin">}}Linux Administration{{</link>}},

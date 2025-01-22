@@ -113,6 +113,7 @@ Kubernetes, and Helm.
 The Azimuth Portal is able to provision {{<link "./platform-in-depth-k8s">}}Kubernetes Clusters{{</link>}}
 which can be used to make machine lifecycles and reproducbile deployments easier,
 including:
+
 - deployments can be deployed and Helm charts, meaning that a deployment is a single 
 command away from being redeployed or updated
 - in event of machine loss, Kubernetes will redeploy the workload to another worker
@@ -120,6 +121,7 @@ command away from being redeployed or updated
 replace worker nodes
 
 More detail on IaC technologies which we suggest are available in the following articles:
+
 - {{<link "./ansible">}}Ansible{{</link>}}
 - {{<link "./terraform">}}Terraform{{</link>}}
 - {{<link "./k8s">}}Kubernetes and Helm{{</link>}}

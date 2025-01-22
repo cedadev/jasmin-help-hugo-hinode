@@ -27,7 +27,7 @@ Platform Monitoring | A Grafana dashboard for system monitoring
 EESSI | A software suite which offers various toolkits and modules for research computing.
 Podman | Is included for building and running OCI containers. It is recommended to install software via Podman to avoid issues during image upgrades. The Podman CLI is similar to Docker’s.
 Apptainer | Is another container framework included for HPC applications which supports OCI containers like Podman
-{.table .table-striped}
+{.table .table-striped}.
 
 To creating a Linux platform instance, from the Azimuth tenancy landing page shown below click on the **Create a Platform** button / **New platform** button.
 

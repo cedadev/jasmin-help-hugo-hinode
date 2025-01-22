@@ -6,7 +6,7 @@ weight: 30
 ---
 The **Slurm platform** empowers users with a high-performance computing environment, leveraging the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.
 
-To setup the platform you need to provide a unique name for your Slurm platform, assign an external IP address to your cloud project's login node if needed, specify the number and size of compute nodes based on your workload requirements and optionally run post-configuration validation tests for added confidence.
+To setup the platform you need to provide a unique name for your Slurm platform, assign an external IP address to your cloud project's login node if needed, specify the number and size of compute nodes based on your workload requirements and optionally, run post-configuration validation tests for added confidence.
 
 Some key Considerations when defining a Slurm cluster inlude the following:
 
@@ -17,29 +17,60 @@ Some key Considerations when defining a Slurm cluster inlude the following:
 - Explore the EESSI pilot repository for additional software options and
 - For software with broad applicability, contribute to the Ansible Slurm Appliance repository to enhance the platform's image building and configuration capabilities.
 
-To create a new SLURM Cluster platform navigate to you Azimuth tenancy/project and select the Create platform button
-From the list of platforms select the SLURM workload manager platform option
-{{<image src="img/docs/azimuth-images/Azimuth-create-slurm-cluster-configuration-Page.jpg" caption="Create SLURM platform" wrapper="col-9 mx-auto" wrapper="text-center">}}>
+To create a new Slurm Cluster platform navigate to your Azimuth tenancy/project and select the Create platform / New platform button.
+From the list of platforms select the Slurm workload manager platform option
 
-If you get an error such as:
+{{<image src="img/docs/azimuth-images/Azimuth-create-slurm-cluster-configuration-Page.jpg" caption="Create Slurm platform" wrapper="col-9 mx-auto" wrapper="text-center">}}
 
-`Azimuth SLURM cluster creation error: Failed to create platform. To retry please click patch. Possible reason for the failure was: Task:'ensure nfs service is running' Error: Unable to start service nfs-server: A dependency job for nfs-server.service failed. See 'journalctl -xe' for details`
+Once the deployment is complete an instance of a slurm cluster will appear under the Platforms Tab.
 
-Here are some steps you can take to resolve the issue:
+{{<image src="img/docs/azimuth-images/Azimuth-slurm-cluster-Page.jpg" caption="Slurm cluster" wrapper="col-9 mx-auto" wrapper="text-center">}}
+
+There are two ways to access the slurm cluster, either by selecting the details button:
+
+{{<image src="img/docs/azimuth-images/slurm-cluster-details.jpg" caption="Slurm cluster Details" wrapper="col-9 mx-auto" wrapper="text-center">}}
+
+Navigating to the Slurm cluster cluster from the details button  provides you with a commandline example to access the slurm cluster, the ability to refersh the page, the ability to update, patch and even delete the cluster. The page also provides details about the cluster such as, when the cluster was created and other meta data about the cluster.
+
+There are two services accessible from the details page, the Open onDemand and the Monitoring service.
+From the Open OnDemand button you can access the features offered to access and manage the slurm cluster from a browser
+
+{{<image src="img/docs/azimuth-images/openonDemand.jpg" caption="Slurm open ondemand" wrapper="col-9 mx-auto" wrapper="text-center">}}
+
+From this web interface one can use the menu items to navigate the file system, create and manage jobs as shown in the image below
+
+{{<image src="img/docs/azimuth-images/managejobs.jpg" caption="Manage jobs" wrapper="col-9 mx-auto" wrapper="text-center">}}
+
+and submit jobs, view active jobs or stop jobs, all from the browsers GUI. To simplify the creation of jobs, Open OnDemand offers templates that reduce the effort associated with job and assciated script creation.
+
+{{<image src="img/docs/azimuth-images/jobcreation.jpg" caption="Create jobs" wrapper="col-9 mx-auto" wrapper="text-center">}}
+
+From the details page you can also monitor your slurm cluster using Grafana.
+
+Using the Open OnDemand button provides an alternative way to navigate to the slurm cluster from the platform landing page.
+
+If you get an error such as: `Azimuth SLURM cluster creation error: Failed to create platform. To retry please click patch. Possible reason for the failure was: Task:'ensure nfs service is running' Error: Unable to start service nfs-server: A dependency job for nfs-server.service failed. See 'journalctl -xe' for details` when creating your Slurm cluster try the following to resolve the issue:
 
 **Check the System Log:**
 Use the command journalctl -xe to view the system log. This will provide more specific details about the dependency job that failed and why. Look for error messages related to NFS.
+
 **Verify NFS Configuration:**
 Ensure that the NFS service is enabled and configured correctly. This might involve checking the /etc/exports file (which specifies which directories are exported for NFS) and the firewall settings to ensure NFS traffic is allowed.
+
 **Check for Dependency Issues:** The error message mentions a dependency job that failed. Identify the dependency and ensure it's running correctly. This could be a network service, a storage subsystem, or another system component.
+
 **Restart NFS Service:**
 If the configuration seems correct and there are no dependency issues, try restarting the NFS service manually. You can do this using the command sudo systemctl restart nfs-server.
+
 **Check for Disk Space:**
 Ensure that the disk where the NFS shares are located has enough free space. NFS services might fail if there's insufficient space.
+
 **Verify Network Connectivity:**
 If the NFS shares are on a remote server, verify that network connectivity is working correctly. Check for firewall rules or network configuration issues that might be preventing NFS traffic.
+
 **Consult Documentation:**
 Refer to the documentation for your specific Azimuth SLURM cluster setup and the underlying operating system for more detailed instructions on troubleshooting NFS issues.
+
 **Retry Patching:**
 If the above steps don't resolve the issue, you can try retrying the patching process in Azimuth SLURM. However, make sure to address the underlying NFS problem first to prevent the issue from recurring.
 

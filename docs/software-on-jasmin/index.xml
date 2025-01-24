@@ -115,7 +115,13 @@ Please read
 
 &lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer">this announcement&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>Creating and using miniforge environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</guid><description>&lt;p>On JASMIN, we provide a wide range of packages via the 
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading">Background &lt;a href="#background" aria-labelledby="background">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+&lt;p>Following a change in the licensing conditions by Anaconda, it is now the case
+that all users of the Anaconda &lt;code>defaults&lt;/code> Conda package channel (repository)
+from organisations of 500 or more employees are potentially liable to pay for
+usage, even if it is for the purpose of academic research.&lt;/p></description></item><item><title>Creating and using miniforge environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</guid><description>&lt;p>On JASMIN, we provide a wide range of packages via the 
 
 
 

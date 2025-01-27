@@ -2,7 +2,7 @@
 description: In depth look at the slurm platform
 slug: platform-in-depth-slurm
 title: Platforms In Depth - Slurm
-weight: 30
+weight: 60
 ---
 The **Slurm platform** empowers users with a high-performance computing environment, leveraging the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.
 

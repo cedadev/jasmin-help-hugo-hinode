@@ -11,7 +11,7 @@ workstations to entire Slurm clusters and Kubernetes-based platforms like Jupyte
 
 **Azimuth Science Platforms** are designed to be flexible and high-performing computing environments tailored for scientific research.
 They offer a unified interface for managing both Kubernetes and Cluster-as-a-Service (CaaS) platforms, supporting multiple authentication
-methods like username/password, Keystone federation, and application credentials.  Azimuth leverages Zenith as an application proxy,
+methods like username/password, Keystone federation, and application credentials.  Azimuth uses Zenith as an application proxy,
 allowing services to be exposed without consuming floating IPs or requiring SSH keys. It simplifies OpenStack management through
 automatic network detection, machine and volume management, and security group configuration.
 

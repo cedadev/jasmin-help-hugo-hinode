@@ -19,7 +19,7 @@ To **create** a JupyterHub instance on Azimuth, you will need an existing {{<lin
 
 To create a **JupyterHub Platform** navigate to Azimuth Project/Tenancy page and click on **New platform**. Then select **Jupyterhub platform** from the **Create a new platform** page.
 
-Enter the **Platform name** and either select an existing **Kubernetes cluster** or create one here by clicking the plus sign at the end of the textbox. Enter the cluster details: **Name** | **Template** | **Version** | **number of worker nodes** and **define auto healing** if needed and deploy the instance creation.
+Enter the **Platform name** and either select an existing **Kubernetes cluster** or create one here by clicking the plus sign at the end of the textbox. Enter the cluster details: **Name** | **Template** | **Version** | **number of worker nodes** and define **auto healing** if needed and deploy the instance creation.
 
 {{<mark>}}Replace with not stretched image{{</mark>}}
 {{<image src="img/docs/azimuth-images/azimuth-jupyterhub-details.jpg" caption="New Jupyterhub platform details" class="w-75" wrapper="col-9 mx-auto" wrapper="text-center">}}

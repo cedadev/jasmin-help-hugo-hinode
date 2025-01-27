@@ -250,6 +250,7 @@
     ncas = "https://www.ncas.ac.uk"
     jasmin = "https://www.jasmin.ac.uk"
     stfc = "https://stfc.ukri.org"
+    scd = "https://www.sc.stfc.ac.uk/"
     nerc = "https://nerc.ukri.org"
     ukri = "https://ukri.org"
     jasmin_site = "https://www.jasmin.ac.uk"

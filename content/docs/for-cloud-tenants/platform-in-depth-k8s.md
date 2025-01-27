@@ -4,6 +4,7 @@ slug: platform-in-depth-k8s
 title: Platforms In Depth - Kubernetes
 weight: 40
 ---
+
 The **Kubernetes platform** delivers a complete Kubernetes container orchestration cluster, incorporating tools for monitoring, ingress control, and application management. It empowers you to run Kubernetes applications seamlessly within Azimuth or implement custom installations using Helm Charts or Kustomize to oversee Kubernetes manifests. Once your platform is up and running, you'll find a `kubeconfig` file in the platform Details section, ready for use with `helm` or `kubectl`.
 
 To configure your cluster, you'll need to provide a unique name and select a cluster template. This template determines the Kubernetes version and any customizations from your cloud operator.  Refer to your cloud operator's documentation for details on available templates and the resources associated with each control plane size option.

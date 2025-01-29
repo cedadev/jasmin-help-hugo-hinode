@@ -1,7 +1,7 @@
 ---
 description: In depth look at the workstation platforms
 slug: platform-in-depth-workstation
-title: Platforms In Depth - Workstastions
+title: Platforms In Depth - Workstations
 weight: 30
 ---
 

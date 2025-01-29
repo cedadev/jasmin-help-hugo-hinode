@@ -24,7 +24,7 @@ aim to enhance the efficiency and effectiveness of scientific research by provid
 
 A **project**, also known as a **cloud tenancy**, is an organizational unit in the cloud where users are assigned.
 Users can be part of multiple tenancies, and all resources within a tenancy are visible and editable by its members or
-if a **external IP** is attched, external users can also access it.
+if a **external IP** is attached, external users can also access it.
 To get a cloud tenancy or access an existing one, you currently need to contact Helpdesk Support, *This may change in the future*.
 
 ## Using the JASMIN Azimuth Cloud Portal
@@ -84,9 +84,9 @@ The **Azimuth portal** allows you to deploy various platforms, these include:
 
 {{<link "platform-in-depth-workstation">}}**Linux Workstation:**{{</link>}} a flexible Ubuntu 22.04 cloud instance with browser based GUI and shell.
 
-{{<link "platform-in-depth-slurm">}}**Slurm Cluster:**{{</link>}} is a high-performance computing cluster utilising Slurm for resource management and job scheduling across multiple nodes. This platform is ideal for batch processing and computationally intensive tasks.
+{{<link "platform-in-depth-slurm">}}**Slurm Cluster:**{{</link>}} is a high-performance computing cluster using Slurm for resource management and job scheduling across multiple nodes. This platform is ideal for batch processing and computationally intensive tasks.
 
-{{<link "platform-in-depth-k8s">}}**Kubernetes:**{{</link>}} is a comprehensive container orchestration platform providing a robust environment for deploying and managing containerised applications. Please note that utilising other platforms may require an existing Kubernetes cluster.
+{{<link "platform-in-depth-k8s">}}**Kubernetes:**{{</link>}} is a comprehensive container orchestration platform providing a robust environment for deploying and managing containerised applications. Please note that using other platforms may require an existing Kubernetes cluster.
 
 {{<link "platform-in-depth-jupyterhub">}}**JupyterHub:**{{</link>}} is a multi-user JupyterHub deployment built upon Kubernetes, enabling collaborative and interactive computing with Jupyter Notebooks.
 
@@ -106,7 +106,7 @@ Azimuth **Quotas** provides a comprehensive overview of resource allocation with
 
 - **machines:** the number of allowed machines that can be created up in the project/tenancy
 - **volumes:** the number of volumes that can be created in the tenancy/project
-- **external IPs:** the number of extranl IPs assigned to the tenancy (note that the quota use is for the tenancy, *not* the IPs attached to machines/in use by platforms)
+- **external IPs:** the number of external IPs assigned to the tenancy (note that the quota use is for the tenancy, *not* the IPs attached to machines/in use by platforms)
 - **CPUs:** the total number of CPUs that can be defined for all platforms in the current tenancy
 - **RAM:** the total amount of RAM that can be defined for all platforms in the current tenancy
 - **volume storage:** the total size of storage capacity that can be defined for platforms in the current tenancy
@@ -117,4 +117,4 @@ as shown below:
 
 ### Advanced
 
-In the advanced tab there are two sections: the **machine** and the **volume** sections. Some actions you can be able to perform on the machines include **viewing** a list of existing machines, **edit** or **delete** machines, **attatch/detatch** external IPs, **define firewall rules** and **Start/Stop/Restart** machines. On the **volume tab**, users are able to, **view** a list of volumes in the project and **create new** volumes by providing the name and volume size. Additinally users can **delete** and **attach / detach** volumes.
+In the advanced tab there are two sections: the **machine** and the **volume** sections. Some actions you can be able to perform on the machines include **viewing** a list of existing machines, **edit** or **delete** machines, **attach/detach** external IPs, **define firewall rules** and **Start/Stop/Restart** machines. On the **volume tab**, users are able to, **view** a list of volumes in the project and **create new** volumes by providing the name and volume size. Additionally users can **delete** and **attach / detach** volumes.

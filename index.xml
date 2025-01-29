@@ -2176,7 +2176,20 @@ for data, it is possible to add extra volumes to a virtual machine.&lt;/p></desc
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>This article describes the &lt;code>jasmin-sci&lt;/code> software environment on JASMIN. It
-covers the following topics:&lt;/p></description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading">What is the XFC? &lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc">
+covers the following topics:&lt;/p></description></item><item><title>The JASMIN Notebooks Service with GPUs enabled</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</guid><description>&lt;p>The 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/">JASMIN Notebook Service&lt;/a> has recently been
+updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
+Learning (ML) workflows in Notebooks. This page outlines:&lt;/p></description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading">What is the XFC? &lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>The Transfer Cache (XFC) provides a large area of temporary storage for

@@ -7,8 +7,8 @@ draft: false
 
 ## Software and template system
 
-The site uses the {{<link "hugo">}}Hugo{{</link>}} static site builder and Hinode template system, which in turn uses Bootstrap 5 styling and
-fontawesome icons.
+The site uses the {{<link "hugo">}}Hugo{{</link>}} static site builder and {{<link "hinode_docs" >}}Hinode{{</link>}} template system, which in turn uses {{<link "https://getbootstrap.com/" >}}Bootstrap{{</link>}} styling and
+{{<link "https://fontawesome.com/" >}}Font Awesome{{</link>}} icons.
 
 Hugo itself and Hinode both offer **shortcodes** which enable sophisticated rendering of simple markup using pre-defined styling elements.
 Hinode provides a set of shortcodes which implement many of the common components of Bootstrap

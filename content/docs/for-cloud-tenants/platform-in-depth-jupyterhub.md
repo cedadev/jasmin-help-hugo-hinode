@@ -11,7 +11,7 @@ weight: 50
 It is designed to provide a standardised computing environment for groups, such as classes or research teams, by launching individual
 Jupyter notebook instances for each user. The primary purpose of JupyterHub is to facilitate collaborative and scalable data science and
 research. It allows users access to a consistent computing environment from any device with a web browser where they can share resources
-efficiently within a team or class. Adminisistrators can manage user authentication and resource allocation centrally.
+efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.
 
 To **create** a JupyterHub instance on Azimuth, you will need an existing {{<link "platform-in-depth-k8s">}}**Kubernetes cluster**{{</link>}}.
 
@@ -24,7 +24,7 @@ Enter the **Platform name** and either select an existing **Kubernetes cluster**
 {{<mark>}}Replace with not stretched image{{</mark>}}
 {{<image src="img/docs/azimuth-images/azimuth-jupyterhub-details.jpg" caption="New Jupyterhub platform details" wrapper="col-6 mx-auto text-center">}}
 
-Once successfuly deployed, you can access the platform from the Azimuth tenenacy landing page.
+Once successfully deployed, you can access the platform from the Azimuth tenancy landing page.
 
 {{<image src="img/docs/azimuth-images/azimuth-jupyterhub-and-cluster-deployed.jpg" caption="jupyterhub deployment complete" wrapper="col-9 mx-auto text-center">}}
 

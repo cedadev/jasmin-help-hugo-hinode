@@ -15,7 +15,7 @@ For external access, an optional public IP address can be configured to enable s
 Azimuth offers two distinct **Linux Workstation configurations**, primarily differentiated by **access methods** and **resource utilisation**.
 
 1. **Linux Workstation (Direct Access)** configuration provides direct access to the Azimuth platform via a graphical user interface (GUI) displayed within the user's web browser.
-Interaction with the platform uses standard mouse and keyboard input. The Azimuth platform uses the processing power, memory, and storage resources of the underlying cloud instance/project. This option is ideal for users who prefer a traditional GUI-driven workflow and whose workload requirements are compatible with the allocated cloud instance resources. Shell access thorugh the browser is also possible.
+Interaction with the platform uses standard mouse and keyboard input. The Azimuth platform uses the processing power, memory, and storage resources of the underlying cloud instance/project. This option is ideal for users who prefer a traditional GUI-driven workflow and whose workload requirements are compatible with the allocated cloud instance resources. Shell access through the browser is also possible.
 
 1. **Linux Workstation (with SSH access)** configuration facilitates remote access to the Azimuth platform through the secure shell (SSH) protocol. Users interact with the platform via a command-line interface (CLI) established from their local workstation. This option is well-suited for users comfortable with command-line operations.
 
@@ -48,12 +48,12 @@ From the Azimuth tenancy landing page shown below click **Create a Platform** or
 A list of available platforms will be shown, where you can choose the **Linux Workstation**.
 
 On the create a new platform window provide a platform name of your choice. ***Note that only lower case and dash (-) are allowed characters*** and Workstation Size.
-From the dropdown list selet from a list of predefined sizes (*note that each resource used reduces the number of resources in the allocated quota for the project/tenancy*) and a select
+From the dropdown list select from a list of predefined sizes (*note that each resource used reduces the number of resources in the allocated quota for the project/tenancy*) and a select
 the data volume size for your workstation which will be available at `/data`. If you want to make changes to the configurations, use the back button, otherwise click on Create Platform.
 
 {{<mark>}}Can we have an image showing the options when creating a workstation here?{{</mark>}}
 
-The platform scheduling window shown below will then enable you to review the current requested resource count/size against the projected resouce usage and the tenant resource quota/allocation.
+The platform scheduling window shown below will then enable you to review the current requested resource count/size against the projected resource usage and the tenant resource quota/allocation.
 
 {{<image src="img/docs/azimuth-images/Azimuth-platform-resource-consumption-Page.jpg" caption="Platform Scheduling" wrapper="col-6 mx-auto text-center">}}
 
@@ -67,7 +67,7 @@ Once the deployment is complete, the deployment page indicates the workstation i
 
 {{<image src="img/docs/azimuth-images/Azimuth-webconsole-url-Page.jpg" caption="Platform in ready state" wrapper="col-3 mx-auto text-center">}}
 
-Additionlly when you hover the mouse over the Monitoring link you can either copy the link or click on the go-to service link to navigate to the Grafana monitoring page shown below.
+Additionally when you hover the mouse over the Monitoring link you can either copy the link or click on the go-to service link to navigate to the Grafana monitoring page shown below.
 
 {{<image src="img/docs/azimuth-images/Azimuth-monitoring-Page.jpg" caption="Monitoring" wrapper="col-12 mx-auto text-center">}}
 
@@ -100,4 +100,4 @@ Once the volume is created you can perform actions like **attach**, **detach** o
   
 {{<image src="img/docs/azimuth-images/azimuth-attach-volume-page.jpg" caption="New volume" wrapper="col-3 mx-auto text-center">}}
 
-You can also detach or delete an existing volume in your tenancy. It is particularly important to note that you should only manually detatch or delete a volume that you manually attached or created, not the ones created with the platform.
+You can also detach or delete an existing volume in your tenancy. It is particularly important to note that you should only manually detach or delete a volume that you manually attached or created, not the ones created with the platform.

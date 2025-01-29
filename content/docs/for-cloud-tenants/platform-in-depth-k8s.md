@@ -18,7 +18,7 @@ The advanced options are pre-set with reasonable defaults.  Proceed cautiously w
 Some configuration options include:
 
 - **autohealing:** enable this to let the cluster automatically attempt to fix unhealthy nodes
-- **Kubernetes Ingress:** enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer (you'll need an external IP availble in your project for the load balancer)
+- **Kubernetes Ingress:** enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer (you'll need an external IP available in your project for the load balancer)
 - **cert-manager:**, enable this to use cert-manager to manage TLS certificates for your cluster services.
 
 ### Platform creation
@@ -50,7 +50,7 @@ From the Cluster details windows you are be able to: view the **Kubeconfig** fil
 
 {{<image src="img/docs/azimuth-images/azimuth-cluster-deployment-details.jpg" caption="Kubernetes deployment details" wrapper="col-9 mx-auto text-center">}}
 
-Once the **Kubeconfig** buttton has been pressed the following window will pop up alowing you to copy or download the kubeconfig file for accessing the cluster using `kubectl` from your local computer.
+Click **Kubeconfig**. You can then copy or download the `kubeconfig` file for accessing the cluster using `kubectl` from your local computer.
 
 {{<image src="img/docs/azimuth-images/azimuth-k82-config.jpg" caption="kubernetes config" wrapper="col-9 mx-auto text-center">}}
 
@@ -69,7 +69,7 @@ You can also permanently **Delete** the cluster.
 {{<mark>}}Can this be smaller?{{</mark>}}
 {{<image src="img/docs/azimuth-images/azimuth-k8s-delete.jpg" caption="Delete a cluster" wrapper="col-6 mx-auto text-center">}}
 
-The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloding the Kubeconfig file. 
+The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloading the Kubeconfig file. 
 
 {{<image src="img/docs/azimuth-images/azimuth-k8s-dashboard.jpg" caption="kubernetes dashboard" wrapper="col-12 mx-auto text-center">}}
 

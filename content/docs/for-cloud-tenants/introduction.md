@@ -76,7 +76,7 @@ Store, OpenDAP, HTTP).
 We expect Tenants to abide by the terms and conditions set out by
 {{<link "jasmin_tcs">}}JASMIN{{</link>}}, {{<link "stfc_cloud_tcs">}}STFC Cloud{{</link>}},
 and {{<link "ukri_tcs">}}UKRI{{</link>}}.
-Importantly, this includes abiding by the {{<link "stfc_cloud_patching">}}patching poicy{{</link>}} set out by UKRI and STFC..
+Importantly, this includes abiding by the {{<link "stfc_cloud_patching">}}patching policy{{</link>}} set out by UKRI and STFC..
 
 {{<alert type="info">}}
 In line with UKRI security policy, we expect tenants to react in a timely manner to any security vulnerabilities.
@@ -85,7 +85,7 @@ vulnerabilities patched within 14 days.  Failure to comply may result in tenancy
 machines powered down.
 {{</alert>}}
 
-We also expect tenants to practice good practices arouns machine lifecycles:
+We also expect tenants to practice good practices around machine lifecycles:
 patching machines and updating clusters regularly, and working in a reproducible
 way i.e. treating machines as "cattle" not "pets".
 
@@ -108,11 +108,11 @@ methods to make deployments easier and faster.
 All services and workflows deployed in the JASMIN cloud should be deployed in a reproducible way.
 That is that the VMs themselves should be considered "cattle" rather than "pets". There are
 a number of methods and technologies to do this which generally are considered
-Infrastructre-as-Code (IaC). These include: Ansible, Terraform, Docker, Cluster API,
+Infrastructure-as-Code (IaC). These include: Ansible, Terraform, Docker, Cluster API,
 Kubernetes, and Helm.
 
 The Azimuth Portal is able to provision {{<link "platform-in-depth-k8s">}}Kubernetes Clusters{{</link>}}
-which can be used to make machine lifecycles and reproducbile deployments easier,
+which can be used to make machine lifecycles and reproducible deployments easier,
 including:
 
 - deployments can be deployed and Helm charts, meaning that a deployment is a single 
@@ -123,7 +123,7 @@ replace worker nodes
 
 More detail on suggested IaC technologies are available in the {{<link "best-practice">}}Best Practice{{</link>}} section.
 
-Documentation pages for some general advice are also availble for
+Documentation pages for some general advice are also available for
 {{<link "linux-admin">}}Linux Administration{{</link>}},
 and {{<link "openstack">}}OpenStack{{</link>}}.
 

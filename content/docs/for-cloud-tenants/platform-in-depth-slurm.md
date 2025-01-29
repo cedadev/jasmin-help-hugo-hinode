@@ -9,7 +9,7 @@ The **Slurm platform** empowers users with a high-performance computing environm
 
 To setup the platform you need to provide a unique name for your Slurm platform, assign an external IP address to your cloud project's login node if needed, specify the number and size of compute nodes based on your workload requirements, and, optionally, run post-configuration validation tests for added confidence.
 
-Some key Considerations when defining a Slurm cluster inlude the following:
+Some key Considerations when defining a Slurm cluster include the following:
 
 - System performance and job status can be monitored using the integrated Grafana dashboard and Open OnDemand's job-specific monitoring.
 - The `azimuth` user has passwordless sudo access. For `sudo` access on non-login nodes, SSH as `azimuth` from the login node first.

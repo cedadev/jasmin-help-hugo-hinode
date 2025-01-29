@@ -2,7 +2,7 @@
 description: Linux Admin
 slug: linux-admin
 title: Linux Admin
-weight: 35
+weight: 80
 ---
 
 coming soon...

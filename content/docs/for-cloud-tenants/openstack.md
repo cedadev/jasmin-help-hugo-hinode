@@ -2,7 +2,7 @@
 description: OpenStack
 slug: openstack
 title: OpenStack
-weight: 35
+weight: 70
 ---
 
 coming soon...

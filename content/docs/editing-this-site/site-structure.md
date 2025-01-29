@@ -18,7 +18,7 @@ The combination of these building blocks makes it easy to achieve a clean, consi
 Other features include:
 
 - a fast search feature (perhaps unexpected on a static site), updated at build time, so that users can perform rapid and up-to-date searches of site content. A custom Google search integration provides a secondary option.
-- a curated "libary" of commonly-used links, which can be updated in one place to take effect across the site
+- a curated "library" of commonly-used links, which can be updated in one place to take effect across the site
 - table-of-contents for each page, auto-generated from markdown heading levels
 - convenient handling of local assets like images
 - responsive design including light/dark modes

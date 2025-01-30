@@ -1,5 +1,5 @@
 ---
-description: Removal of packages from anaconda "defaults" channel in user environments on JASMIN
+description: Removal of packages from Anaconda "defaults" channel in user environments on JASMIN
 slug: conda-removal
 title: Conda removal
 ---
@@ -7,7 +7,7 @@ title: Conda removal
 ## Background
 
 Following a change in the licensing conditions by Anaconda, it is now the case
-that all users of the Anaconda `defaults` Conda package channel (repository)
+that all users of the Anaconda `defaults` conda package channel (repository)
 from organisations of 500 or more employees are potentially liable to pay for
 usage, even if it is for the purpose of academic research.
 
@@ -15,16 +15,16 @@ This does not affect packages from the community channel `conda-forge`, which
 remains free to use, as also does the conda installer program itself.
 
 It has to be assumed that JASMIN users in general would potentially be subject
-to contractual liability if Conda packages from the defaults channel are used,
+to contractual liability if conda packages from the defaults channel are used,
 so it has been decided that these are not to be used on JASMIN.
 
 The JASMIN team have now taken steps to ensure that centrally-provided
-environments including Jaspy make use only of conda-forge, but as regards
+environments including Jaspy make use only of `conda-forge`, but as regards
 packages in users' own directories, the responsibility falls on individual
 users to do the same.
 
 These days, the `miniforge` installer is available to install conda
-environments, and this will install packages from conda-forge by default, but
+environments, and this will install packages from `conda-forge` by default, but
 we have found there to be many user conda environments on JASMIN which contain
 packages from `defaults` -- either because these environments pre-date the use
 of miniforge, or because the channel was specified explicitly during
@@ -33,7 +33,7 @@ installation -- and these need to be addressed.
 Because of the sometimes complex dependencies between packages in conda
 channels, it is difficult to automate the removal of packages from the
 defaults channel, if the desired end result is a usable conda environment
-containing equivalent packages from conda-forge.  Some manual decision-making
+containing equivalent packages from `conda-forge`.  Some manual decision-making
 may be needed, and this document is a guide to help you to do this.
 
 In cases where users take no action, ultimately it might become necessary for
@@ -103,7 +103,7 @@ exist, these *should* show up in the list of channel URLs as being under
 
 However, especially because the `conda list` output does not list a channel
 name where it is `defaults`, the safest approach may be to list everything
-that is *not* from conda-forge, and then remove these packages unless they are
+that is *not* from `conda-forge`, and then remove these packages unless they are
 from known free channels. So after activating the environment, you could type:
 
 {{<command>}}
@@ -230,7 +230,7 @@ small number of packages that are from the defaults channel.
 
   substituting here the names of the relevant packages.  (The installation
   options shown above should make sure that new the packages come from
-  conda-forge, even if there is still some `.condarc` file that says
+  `conda-forge`, even if there is still some `.condarc` file that says
   otherwise.)
   
   You can also use `mamba` instead of `conda` here, to use the `mamba`
@@ -238,7 +238,7 @@ small number of packages that are from the defaults channel.
 
   Once you have done this, remember to recheck the list of packages and
   channels. (For example, if you do `conda list`, do they now all show up as
-  being from conda-forge?)
+  being from `conda-forge`?)
 
 - If the list of dependencies is unacceptably long, then answer no.  You will
   probably have to recreate the environment instead, as shown below.  (You
@@ -257,7 +257,7 @@ It is important to note that although there is a possible procedure for
 obtaining an exact copy of an environment (namely: export a list of packages
 to a file including all the exact version and release numbers, and then use it
 to create the new environment), the aim here is, rather, to produce an
-*equivalent* environment based on packages from conda-forge.  Package releases
+*equivalent* environment based on packages from `conda-forge`.  Package releases
 will differ slightly from what is available in the defaults channel.  So it
 will be best to be avoid constraining the requirements too rigidly, in order
 give the installer the flexibility it needs to choose mutually compatible

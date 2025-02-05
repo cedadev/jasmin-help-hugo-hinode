@@ -264,7 +264,7 @@ give the installer the flexibility it needs to choose mutually compatible
 versions of all of the packages.
 
 The aim, therefore, will be to repeat the *steps* that you used (for example,
-install matplotlib), rather than try to replicate the exact versions that you
+install `matplotlib`), rather than try to replicate the exact versions that you
 ended up with.
 
 You can see what conda install commands you ran previously, by going to the

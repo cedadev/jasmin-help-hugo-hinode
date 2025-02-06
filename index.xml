@@ -338,10 +338,7 @@ internal-only web resources.&lt;/li>
 &lt;/ul>
 &lt;p>Using graphical applications over a wide-area network can be very slow, and is
 not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item><item><title>NX update November 2024</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/nx-update-nov24/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/nx-update-nov24/</guid><description>&lt;h2 id="good-news-connection-problems-resolved" class="heading">Good news! Connection problems resolved &lt;a href="#good-news-connection-problems-resolved" aria-labelledby="good-news-connection-problems-resolved">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>We now have a solution to the issues some users had with connecting to the NoMachine NX (graphical linux desktop) service, especially from Windows.&lt;/p></description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p>If you are experiencing difficulties or slow performance and are unsure why,
+graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p>If you are experiencing difficulties or slow performance and are unsure why,
 please first consult all relevant documentation, then if needed, contact our Helpdesk
 using the help beacon below, but please include the following
 information with your initial query:&lt;/p></description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading">Intro &lt;a href="#intro" aria-labelledby="intro">
@@ -1564,8 +1561,20 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/">Globus transfers with JASMIN&lt;/a> first for a wider introduction to Globus on JASMIN.&lt;/p></description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p></description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p>This article describes how to do data transfers using JASMIN&amp;rsquo;s &lt;strong>new&lt;/strong> Globus
-endpoint (now called a &lt;strong>collection&lt;/strong> ), based on the most recent version of
+&lt;p>This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p></description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p>This article describes how to do data transfers to and from JASMIN using 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
@@ -1574,18 +1583,16 @@ endpoint (now called a &lt;strong>collection&lt;/strong> ), based on the most re
 
 
 
-&lt;a href="https://www.globus.org/globus-connect-server" target="_blank" rel="noopener noreferrer">Globus Connect Server&amp;nbsp;
+
+
+
+
+
+&lt;a href="https://globus.org" target="_blank" rel="noopener noreferrer">Globus&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>.&lt;/p></description></item><item><title>GridFTP (certificate-based authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-cert-based-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-cert-based-auth/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
- &lt;div class="pt-1 pe-2">
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- Deprecated: please use Globus instead for transfers which previously used this method.
- &lt;/div>
- &lt;/div>
-&lt;p>This article describes how to transfer data using gridftp with certificate-
-based authentication.&lt;/p></description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p>This article describes how to transfer data using GridFTP with SSH
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>,
+an online data transfer service designed specifically for moving large datasets
+between research institutions.&lt;/p></description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p>This article describes how to transfer data using GridFTP with SSH
 authentication.&lt;/p>
 
 
@@ -1688,13 +1695,7 @@ this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p></descriptio
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
 &lt;p>An MPI parallel job runs on more than one core and more than one host using
 the Message Passing Interface (MPI) library for communication between all
-cores. A simple script, such as the one given below &amp;ldquo;my_script_name.sbatch &amp;quot;&lt;/p></description></item><item><title>hpxfer access role</title><link>https://help.jasmin.ac.uk/docs/data-transfer/hpxfer-access-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/hpxfer-access-role/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
- &lt;div class="pt-1 pe-2">
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- &lt;p>This article is deprecated, since the &lt;code>hpxfer&lt;/code> is no longer needed for
-the new Rocky 9 services introduced Autumn 2024.&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+cores. A simple script, such as the one given below &amp;ldquo;my_script_name.sbatch &amp;quot;&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
@@ -2214,7 +2215,7 @@ short-term basis.&lt;/p></description></item><item><title>Transfers from ARCHER2
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/">Data Transfer Tools&lt;/a> for general
-details.&lt;/p></description></item><item><title>Using Matplotlib for visualisation on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</guid><description>&lt;p>This article provides a basic example of using Matplotlib on JASMIN to
+information.&lt;/p></description></item><item><title>Using Matplotlib for visualisation on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</guid><description>&lt;p>This article provides a basic example of using Matplotlib on JASMIN to
 generate a plot. It also gives an important tip that may stop your code
 failing when run on the LOTUS cluster.&lt;/p></description></item><item><title>Using the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</guid><description>&lt;p>This article describes how to use the JASMIN high-performance object storage.&lt;/p>
 

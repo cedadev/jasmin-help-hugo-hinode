@@ -179,8 +179,20 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/">Globus transfers with JASMIN&lt;/a> first for a wider introduction to Globus on JASMIN.&lt;/p></description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p></description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p>This article describes how to do data transfers using JASMIN&amp;rsquo;s &lt;strong>new&lt;/strong> Globus
-endpoint (now called a &lt;strong>collection&lt;/strong> ), based on the most recent version of
+&lt;p>This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p></description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p>This article describes how to do data transfers to and from JASMIN using 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
@@ -189,18 +201,16 @@ endpoint (now called a &lt;strong>collection&lt;/strong> ), based on the most re
 
 
 
-&lt;a href="https://www.globus.org/globus-connect-server" target="_blank" rel="noopener noreferrer">Globus Connect Server&amp;nbsp;
+
+
+
+
+
+&lt;a href="https://globus.org" target="_blank" rel="noopener noreferrer">Globus&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>.&lt;/p></description></item><item><title>GridFTP (certificate-based authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-cert-based-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-cert-based-auth/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
- &lt;div class="pt-1 pe-2">
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- Deprecated: please use Globus instead for transfers which previously used this method.
- &lt;/div>
- &lt;/div>
-&lt;p>This article describes how to transfer data using gridftp with certificate-
-based authentication.&lt;/p></description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p>This article describes how to transfer data using GridFTP with SSH
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>,
+an online data transfer service designed specifically for moving large datasets
+between research institutions.&lt;/p></description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p>This article describes how to transfer data using GridFTP with SSH
 authentication.&lt;/p>
 
 
@@ -244,13 +254,7 @@ authentication.&lt;/p>
 &lt;p>GridFTP is the recommended tool for transferring large files or groups of
 files across high-speed Wide-Area Networks (WANs). It is commonly used with
 certificate-based authentication, but can also take place between suitably
-configured* server and client using SSH as the authentication mechanism.&lt;/p></description></item><item><title>hpxfer access role</title><link>https://help.jasmin.ac.uk/docs/data-transfer/hpxfer-access-role/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/hpxfer-access-role/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
- &lt;div class="pt-1 pe-2">
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- &lt;p>This article is deprecated, since the &lt;code>hpxfer&lt;/code> is no longer needed for
-the new Rocky 9 services introduced Autumn 2024.&lt;/p></description></item><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p>This article provides information about the rclone data transfer tool. In
+configured* server and client using SSH as the authentication mechanism.&lt;/p></description></item><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p>This article provides information about the rclone data transfer tool. In
 particular:&lt;/p>
 &lt;ul>
 &lt;li>what is rclone?&lt;/li>
@@ -295,4 +299,4 @@ periodic analysis.&lt;/p></description></item><item><title>Transfers from ARCHER
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/">Data Transfer Tools&lt;/a> for general
-details.&lt;/p></description></item></channel></rss>
+information.&lt;/p></description></item></channel></rss>

@@ -15,6 +15,7 @@
 /article/4981-hands-on-workshop /docs/getting-started/beginners-training-workshop/
 /category/217-data-transfer /docs/data-transfer/
 /article/4810-graphical-linux-desktop-access-using-nx /docs/interactive-computing/graphical-linux-desktop-access-using-nx/
+nx-update-nov24 /docs/interactive-computing/graphical-linux-desktop-access-using-nx/
 /article/4703-how-to-contact-us-about-jasmin-issues /docs/getting-started/how-to-contact-us-about-jasmin-issues/
 /article/121-sci-servers /docs/interactive-computing/sci-servers/
 /category/195-short-term-project-storage /docs/short-term-project-storage/
@@ -86,14 +87,13 @@
 /article/5041-data-transfer-tools-globus-connect-personal /docs/data-transfer/globus-connect-personal/
 /article/5106-globus-transfers-with-jasmin /docs/data-transfer/globus-transfers-with-jasmin/
 /article/5008-data-transfer-tools-using-the-globus-web-interface /docs/data-transfer/globus-transfers-with-jasmin/
-/article/3808-data-transfer-tools-gridftp-cert-based-auth /docs/data-transfer/gridftp-cert-based-auth/
+gridftp-cert-based-auth /docs/data-transfer/globus-transfers-with-jasmin/
 /article/3806-data-transfer-tools-gridftp-ssh-auth /docs/data-transfer/gridftp-ssh-auth/
 /article/3839-gws-etiquette /docs/short-term-project-storage/gws-etiquette/
 /article/4499-gws-scanner /docs/short-term-project-storage/gws-scanner/
 /article/228-how-to-apply-for-mass-access /docs/mass/how-to-apply-for-mass-access/
 /article/4890-how-to-submit-a-job-to-slurm /docs/batch-computing/how-to-submit-a-job/
 /article/4896-how-to-submit-an-mpi-parallel-job-to-slurm /docs/batch-computing/how-to-submit-an-mpi-parallel-job/
-/article/4414-data-transfer-hpxfer /docs/data-transfer/hpxfer-access-role/
 /article/209-idl-and-midl /docs/software-on-jasmin/idl/
 /article/4536-install-jasmin-xfc-client /docs/short-term-project-storage/install-xfc-client/
 /article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
@@ -105,6 +105,7 @@
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/203-managing-a-gws /docs/short-term-project-storage/managing-a-gws/
 /article/3835-name-dispersion-model /docs/software-on-jasmin/name-dispersion-model/
+/docs/interactive-computing/centos7-sci-login-xfer-servers /docs/software-on-jasmin/rocky9-migration-2024/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
 /article/4445-moose-the-mass-client-user-guide /docs/mass/moose-the-mass-client-user-guide/
 /article/4448-nag-library /docs/software-on-jasmin/nag-library/

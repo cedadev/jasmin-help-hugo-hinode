@@ -2,7 +2,11 @@
 description: Best practice with the cloud
 slug: best-practice
 title: Best Practice
+weight: 90
 ---
+
+Coming soon...
+
 
 ## Security
 
@@ -12,10 +16,10 @@ title: Best Practice
 
 ## Infrastructure-as-Code
 
-Brief description of each and purpose with link to IaC article
-
 ### Ansible
 
 ### Terraform
 
 ### Cluster API
+
+### Kubenetes

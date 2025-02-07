@@ -7342,19 +7342,6 @@ function initIndex() {
       {
         id: 64,
         tag: "en",
-        href: "/docs/software-on-jasmin/software-migration-2020/",
-        title: "JASMIN software changes: migration to CentOS7 (2020)",
-        description: "JASMIN software changes: migration to CentOS7 (2020)",
-        
-        
-        content: "\u0026nbsp; This article is now out of date, but a similar exercise is about to get underway for the migration of the JASMIN platform from CentOS7 operating system (end of life June 2024) to Rocky Linux 9. Look out for futher details in due course. Introduction \u0026nbsp; This article explains the changes in the provision of common software on JASMIN (\u0026ldquo;sci\u0026rdquo; servers and LOTUS) when upgrading to main operating system from RedHat Enterprise Linux 6 (RHEL6) to CentOS7. It answers for the following questions:\nWhat is changing? \u0026nbsp; The upgrade from RHEL6 to introduces a new way of working with software environments on JASMIN.\nThe previous system involved installations via RPM using a collection of packages known as the \u0026ldquo;JASMIN Analysis Platform\u0026rdquo; (JAP).\nThe current system uses two approaches to providing software environments and packages:\nJaspy environments – a collection of software environments that you can \u0026ldquo;activate\u0026rdquo; for use. \u0026ldquo;jasmin-sci\u0026rdquo; environment – a single set of software packages installed separately because they were difficult to include in Jaspy. Which systems are affected? \u0026nbsp; This change applies to all generally available JASMIN servers and the LOTUS cluster. These include:\njasmin-sci* cems-sci* jasmin-cylc cron All LOTUS nodes (accessed via LSF) Why is it changing? \u0026nbsp; The reason for moving away from the JAP was to provide a system that could support multiple versions of software packages, and environments, on a single platform. From the perspective of reproducible science, the Jaspy approach is more useful because it:\nkeeps previous environments on the system when a new version of an environment is launched includes a listing of all packages (and their versions) that are provided in each date-stamped software environment From a management point-of-view, Jaspy builds on the packaging tool \u0026ldquo; conda\u0026nbsp; \u0026rdquo; and the community repositories known as \u0026ldquo; conda-forge\u0026nbsp; \u0026rdquo;. These tools are widely used in the scientific community and provide many components that are re-used in Jaspy.\nComparison of packages in old JASMIN Analysis Platform and new Jaspy/\u0026ldquo;jasmin-sci\u0026rdquo; environments \u0026nbsp; Most packages that were previously provided as part of the JASMIN Analysis Platform (JAP) are now included in Jaspy environments or the \u0026ldquo;jasmin-sci\u0026rdquo; environment. Some packages have however been dropped. The treatment of certain packages is documented on the \u0026ldquo; extra-sci- packages\u0026nbsp; \u0026rdquo; GitHub repository. A full table of packages that were in JAP and their mappings to Jaspy/\u0026ldquo;jasmin- sci\u0026rdquo; is provided below.\nHow do I get started (quickly)? \u0026nbsp; If you want to access most of the packages you can find them in the most recent Jaspy environment. This can be activated using:\nmodule load jaspyIf you need packages that are provided in the \u0026ldquo;jasmin-sci\u0026rdquo; environment then you can activate it using:\nmodule load jasmin-sci Full table of packages from JAP \u0026nbsp; Here is a full table of packages that were provided via JAP, and how they are provided for use on CentOS7 machines (as of initial release).\nIn the summary column:\nC - package is provided via Conda environment (i.e. Jaspy) R - package is provided via an RPM (as part of the base OS or via jasmin-sci) CR - package is provided both via Jaspy and via an RPM. The version in Jaspy is recommended for use with user code; the RPM version is also installed in order to satisfy an RPM dependency only, and may be subject to change. N - not provided (mostly these have been deprecated by the third-party sources) NAME (in JAP) Version in Jaspy 3.7 (conda) Version in Jaspy 2.7 (conda) Version in RPMs (base or jasmin-sci SCL) Summary: (C)onda/ (R)PM / (N)one Comments arpack 3.6.3 3.6.3 C atlas 3.8.4 3.10.1 R atlas-devel 3.8.4 3.10.1 R bbcp N deprecated bbcp-config N deprecated blas 1.1 1.0 C boost-devel 1.70.0 C cdo 1.9.5 C cmip6-cmor-tables N groups advised to maintain own CMOR cmor-libs N groups advised to maintain own CMOR coda 0.19_1 C ddd 3.3.12 R diffuse 0.4.8 R dvipng 1.14 R package texlive-dvipng-svn26689 eccodes 2.9.2 C eccodes-devel 2.9.2 C eccodes-fortran 2.9.2 C eccodes-python27 2.9.2 C emacs 26.1 24.3 R emacs is broken in jaspy 2.7 - /usr/bin/emacs may be required to override emacs-common-ess N might provide later emacs-ess N might provide later emacs-ess-el N might provide later emacs-gnuplot 4.6.2 R emos N deprecated esmf 7.1.0r 7.1.0r C esmf-doc N See here\u0026nbsp; and ESMF_refdoc esmf-python27 7.1.0r 7.1.0r C ferret 7.5.0 R fftw 3.3.8 3.3.8 C fftw-devel 3.3.8 3.3.8 C firefox N flex-devel 2.6.4 C gcc-gfortran 4.8.5 R gdal 2.2.4 2.0.0 C gdal-devel N gdal provided as \u0026ldquo;gdal\u0026rdquo; gdal-doc N gdal provided as \u0026ldquo;gdal\u0026rdquo; gdal-java N gdal-javadoc N gdal-libs N gdal-perl N gdal-python27 2.2.4 2.0.0 C geany 1.31 R geos 3.6.2 3.7.1 C geos-devel 3.6.2 3.7.1 3.4.2 R git 2.20.1 2.20.1 C gitk 1.8.3.1 R glibc-static 2.17 R gnuplot 4.6.2 R grads 2.0.2 R GraphicsMagick-c++ 1.3.32 R graphviz 2.38.0 2.38.0 C graphviz-gd N graphviz-python27 2.38.0 2.38.0 C grass 6.4.4 R grass-devel 6.4.4 R grass-libs 6.4.4 R grib_api N deprecated - use eccodes grib_api-devel N deprecated - use eccodes grib_api-fortran N deprecated - use eccodes grib_api-python27 N deprecated - use eccodes gsl 2.2.1 2.5 C gsl-devel 2.2.1 2.5 C gsl-static 2.2.1 2.5 C gtk2 2.24.31 C gtk2-devel 2.24.31 C gv 3.7.4 R hdf 4.2.13 4.2.13 C hdf-devel 4.2.13 4.2.13 C hdf5 1.10.3 1.10.1 C hdf5-devel 1.10.3 1.10.1 C hdfeos2 2.2 2.20 20.1.00 CR hdfeos5 5.1.16 5.1.16 C ImageMagick 7.0.8_16 7.0.8_10 C JAGS N available as \u0026ldquo;rjags\u0026rdquo; jasper-devel 1.900.1 2.0.14 C ksh 20120801 R lapack 3.6.1 3.6.1 C lapack-devel 3.6.1 3.6.1 C leafpad 0.8.18 R libcdms 3.1.0 3.0.1 C libcrayutil 20121128 R libcurl-devel 7.29.0 R libdrs 3.1.0 3.1.0 3.1.2 CR libuuid-devel 2.32.1 2.32.1 2.23.2 CR llvm-devel 3.3 C lxterminal 0.3.2 R mercurial 4.9.1 2.6.2 R mo_unpack 2.0.1 R mtk 1.4.5 R mtk-devel 1.4.5 R mtk-python27 N see build instructions for user ncBrowse N deprecated nccmp 1.8.3.1 R ncl 6.5.0 C nco 4.7.8 C nco-devel 4.7.8 C ncview 2.1.2 R nedit 5.7 R netcdf 4.6.1 4.6.1 4.3.3.1 CR called libnetcdf in conda netcdf-c++ 4.2.1 4.3.0 C called netcdf-cxx4 in conda netcdf-c++-devel 4.2.1 4.3.0 C called netcdf-cxx4 in conda netcdf-devel 4.6.1 4.6.1 4.3.3.1 CR called libnetcdf in conda netcdf-fortran 4.4.4 4.4.4 4.2 CR netcdf-fortran-devel 4.4.4 4.4.4 4.2 CR octave 3.8.2 R octave-devel 3.8.2 R octave-doc N docs are on https://octave.org/doc/\u0026nbsp; octave-netcdf 1.0.6 R octave-octcdf N deprecated p7zip 16.02 R parallel 20190522 C pdftk N discontinued perl-core 5.16.3 R perl-devel 5.16.3 R perl-Image-ExifTool 11.7 R perl-XML-Parser 2.44_01 C postgresql-devel 9.2.24 R proj 4.9.3 5.2.0 4.8.0 CR called proj4 in conda proj-devel 4.9.3 5.2.0 4.8.0 CR called proj4 in conda proj-epsg 4.9.3 5.2.0 4.8.0 CR called proj4 in conda proj-nad 4.9.3 5.2.0 4.8.0 CR called proj4 in conda proj-static 4.9.3 5.2.0 4.8.0 CR called proj4 in conda python27 3.7.1 2.7.15 C python27-alabaster 0.7.12 0.7.12 C python27-astral 1.9.2 C python27-Babel 2.6.0 2.7.0 C python27-backports-common 1.0 C python27-backports-functools_lru_cache 1.5 C python27-backports-ssl_match_hostname 1.0 C python27-basemap 1.2.0 1.2.0 C python27-biggus 0.15.0 C python27-boto3 1.9.67 1.9.188 C python27-botocore 1.12.68 1.12.188 C python27-cartopy 0.17.0 0.16.0 C python27-ccplot P python27-cdat_lite N deprecated python27-cerbere N python27-certifi 2018.11.29 C python27-cf 2.3.6 C called cf-python in conda python27-cf-checker 3.1.1 C python27-cf-plot 2.4.10 C python27-cf-units 2.0.2 2.1.1 C python27-cf-view N no longer supported python27-cftime 1.0.3.4 1.0.1 C python27-chardet 3.0.4 3.0.4 C python27-cis 1.6.0 C python27-cloudpickle 0.6.1 1.2.1 C python27-cmor N groups advised to maintain own CMOR python27-cycler 0.10.0 0.10.0 C python27-Cython 0.29.2 0.29.12 C python27-dask 1.0.0 1.2.2 C python27-dateutil C As \u0026ldquo;dateutil\u0026rdquo; python27-descartes 1.1.0 1.1.0 C python27-docutils 0.14 0.14 C python27-ecmwf-api-client N To be added soon. python27-emcee 2.2.1 2.2.1 C python27-enum34 1.1.6 C python27-eofs 1.3.1 1.4.0 C python27-esgf-pyclient 0.1.8 C python27-filelock 3.0.10 3.0.10 C python27-Fiona 1.7.13 C python27-geopandas 0.4.0 C python27-h5py 2.8.0 2.8.0 C python27-httplib2 0.13.0 C python27-idna 2.8 2.8 C python27-ilamb 2.3.1 C python27-ImageHash 4.0 4.0 C python27-imagesize 1.1.0 1.1.0 C python27-ipython 7.2.0 5.8.0 C python27-iris_sample_data 2.1.0 2.1.0 C python27-iris-grib 0.12.0 C python27-jinja2 2.1 2.10.1 C python27-jmespath 0.9.3 0.9.4 C python27-joblib 0.13.0 0.13.2 C python27-Jug 1.6.7 1.6.8 C python27-kiwisolver 1.0.1 1.1.0 C python27-latexcodec 1.0.5 1.0.7 C python27-locket 0.2.0 0.2.0 C python27-MarkupSafe 1.1.0 1.1.1 C python27-matplotlib 3.0.2 2.2.2 C python27-mo_pack 0.2.0 0.2.0 C python27-mock 2.0.0 3.0.5 C python27-mpi4py-mpich 3.0.1 C python27-mpmath 1.1.0 1.1.0 C python27-nappy 1.1.4 1.2.1 C python27-nc-time-axis 1.1.0 1.1.0 C python27-netCDF4 1.4.2 1.3.1 C python27-nose 1.3.7 1.3.7 C python27-numpy 1.15.4 1.15.4 C python27-packaging 18.0 19.0 C python27-pandas 0.23.4 0.24.2 C python27-partd 0.3.9 1.0.0 C python27-patsy 0.5.1 0.5.1 C python27-pep8 1.7.1 1.7.1 C python27-Pillow 5.3.0 5.2.0 C python27-psutil 5.4.8 5.6.3 C python27-psycopg2 2.7.6.1 2.7.7 C python27-pybtex 0.22.0 0.22.2 C python27-pycairo 1.18.0 1.16.3 C python27-pycodestyle 2.4.0 2.5.0 C python27-Pydap 3.2.2 3.2.2 C python27-pygeode 1.2.2 C python27-Pygments 2.3.1 2.4.2 C python27-pygobject2 3.28.3 C pygobject in conda python27-pygrib 2.0.3 2.0.2 C python27-pygtk2 C python27-pygtk2-libglade N python27-pyhdf 0.9.10 0.10.1 C python27-pyke 1.1.1 1.1.1 C python27-pyparsing 2.3.0 2.4.0 C python27-pyproj 1.9.5.1 1.9.6 C python27-pyshp 2.0.0 2.1.0 C python27-pyside 5.6.0a1 C python27-pyspharm 1.0.9 1.0.9 C python27-pystan 2.17.1.0 2.17.1.0 C python27-pytz 2018.7 2019.1 C python27-pyugrid 0.3.1 0.3.1 C python27-PyYAML 3.13 5.1.1 C python27-pyzmq 17.1.2 18.0.2 C python27-requests 2.21.0 2.22.0 C python27-rpy2 2.9.4 2.8.5 C python27-s3transfer 0.1.13 0.2.1 C python27-ScientificPython N only available in Python2.7 python27-scikit-image 0.14.2 C python27-scikit-learn 0.20.1 0.20.3 C python27-scipy 1.1.0 1.1.0 C python27-scitools-iris 2.2.0 1.13.0 C python27-seaborn 0.9.0 C python27-setuptools 40.6.3 41.0.1 C python27-Shapely 1.6.4 1.6.4 C python27-singledispatch 3.4.0.3 C python27-six 1.12.0 1.12.0 C python27-snowballstemmer 1.2.1 1.9.0 C python27-Sphinx 1.8.2 1.8.5 C python27-sphinxcontrib-websupport 1.1.0 1.1.2 C python27-statsmodels 0.9.0 0.10.0 C python27-sympy 1.3 1.4 C python27-Theano 1.0.3 1.0.4 C python27-toolz 0.9.0 0.10.0 C python27-tornado 5.1.1 5.1.1 C python27-tqdm 4.28.1 4.32.2 C python27-typing 3.7.4 C python27-urllib3 1.24.1 1.25.3 C python27-virtualenv 16.0.0 16.0.0 C python27-WebOb 1.8.4 1.8.5 C python27-windspharm 1.7.0 1.7.0 C python27-wxPython 4.0.3 4.0.3 C python27-xarray 0.11.0 0.11.3 C qt-devel 4.8.7 R R 3.5.1 3.4.1 C R-devel 3.5.1 3.4.1 C R-ncdf4 1.16 1.16 C redhat-lsb 4.1 R rjags 4_6 C sqlite-devel 3.7.17 R subversion 1.8.17 R subversion-devel 1.8.17 R subversion-tools 1.8.17 R tcl-devel 8.5 R tcl-devel 8.5.13 R tcsh 6.18.01 R thea N discontinued tk 8.6.9 8.6.9 8.5.13 CR tk-devel 8.6.9 8.6.9 8.5.13 CR tkdiff 4.3.5 R tmux 2.7 2.7 C tree 1.6.0 R udunits-devel 2.2.27.6 2.2.27.6 2.2.20 R called udunits2-devel umutil 20130102 R umutil-lib 20130102 R uuid 1.6.2 R uuid-devel 1.6.2 R valgrind 3.15.0 C vim-enhanced 7.4.629 R wxGTK-devel 2.8.12 R xconv 1.94 R xemacs 21.5.34 R xorg-x11-util-macros 1.19.0 R xpdf 3.04 R"
-      })
-      .add(
-      
-      
-      {
-        id: 65,
-        tag: "en",
         href: "/docs/software-on-jasmin/jasmin-software-faqs/",
         title: "JASMIN software FAQs",
         description: "JASMIN software FAQs",
@@ -7366,7 +7353,7 @@ function initIndex() {
       
       
       {
-        id: 66,
+        id: 65,
         tag: "en",
         href: "/docs/getting-started/jasmin-status/",
         title: "JASMIN status",
@@ -7379,7 +7366,7 @@ function initIndex() {
       
       
       {
-        id: 67,
+        id: 66,
         tag: "en",
         href: "/docs/getting-started/jasmin-training-accounts/",
         title: "JASMIN training accounts",
@@ -7392,7 +7379,7 @@ function initIndex() {
       
       
       {
-        id: 68,
+        id: 67,
         tag: "en",
         href: "/docs/software-on-jasmin/jaspy-envs/",
         title: "Jaspy Software Environments (Python 3, R and other tools)",
@@ -7405,7 +7392,7 @@ function initIndex() {
       
       
       {
-        id: 69,
+        id: 68,
         tag: "en",
         href: "/docs/short-term-project-storage/jdma/",
         title: "Joint-storage Data Migration App (JDMA)",
@@ -7418,7 +7405,7 @@ function initIndex() {
       
       
       {
-        id: 70,
+        id: 69,
         tag: "en",
         href: "/docs/interactive-computing/login-problems/",
         title: "Login problems",
@@ -7431,7 +7418,7 @@ function initIndex() {
       
       
       {
-        id: 71,
+        id: 70,
         tag: "en",
         href: "/docs/interactive-computing/login-servers/",
         title: "Login servers",
@@ -7444,7 +7431,7 @@ function initIndex() {
       
       
       {
-        id: 72,
+        id: 71,
         tag: "en",
         href: "/docs/batch-computing/lotus-cluster-specification/",
         title: "LOTUS cluster specification",
@@ -7457,7 +7444,7 @@ function initIndex() {
       
       
       {
-        id: 73,
+        id: 72,
         tag: "en",
         href: "/docs/batch-computing/lotus-overview/",
         title: "LOTUS overview",
@@ -7470,7 +7457,7 @@ function initIndex() {
       
       
       {
-        id: 74,
+        id: 73,
         tag: "en",
         href: "/docs/short-term-project-storage/managing-a-gws/",
         title: "Managing a GWS",
@@ -7483,7 +7470,7 @@ function initIndex() {
       
       
       {
-        id: 75,
+        id: 74,
         tag: "en",
         href: "/docs/software-on-jasmin/name-dispersion-model/",
         title: "Met Office NAME Model",
@@ -7496,7 +7483,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 75,
         tag: "en",
         href: "/docs/getting-started/migrate-jasmin-account-from-ceda/",
         title: "Migrate a JASMIN account from CEDA",
@@ -7509,20 +7496,20 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 76,
         tag: "en",
         href: "/docs/software-on-jasmin/rocky9-migration-2024/",
         title: "Migration to Rocky Linux 9 2024",
         description: "Software and operating system changes - migration to Rocky Linux 9 (Summer 2024)",
         
         
-        content: "\u0026nbsp; Lots of updated information below about the new Rocky Linux 9 environment on JASMIN: please read, and keep checking back here regularly for now. Introduction \u0026nbsp; As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.\nThe current operating system, CentOS7 is officially end-of-life as of the end of June 2024. We will be moving from CentOS7 to Rocky Linux 9, which is supported until May 2032. Rocky 9 should provide a very similar user experience to that provided by CentOS7, but with more recent software packages. Some software may have been removed or replaced during this transition.\nThis change affects JASMIN and CEDA services in several ways, including but not limited to the following:\nComponents of all CEDA Archive and JASMIN web-based services need to be redeployed User-facing service hosts (e.g. login/sci/xfer and LOTUS nodes) all need to be redeployed All of these hosts need appropriate versions of drivers for various hardware and infrastructure components (e.g. storage, network, …) to be configured. The Slurm scheduler used for the LOTUS and ORCHID clusters needs to be adapted to work under Rocky 9, in terms of its own management functions and the worker nodes which it controls. A separate announcement will cover the expansion of LOTUS with new processing nodes: these will be introduced as a new cluster under Slurm, with existing nodes moved from old to new as part of the transition. There will be a limited window in which the 2 clusters will co-exist, during which time the old cluster will shrink in size: the current estimate for this is between July to September 2024, but we will provide updates on this as the new hardware is installed and timescales become clearer. We will endeavour to provide sufficient overlap and temporary arrangements to help users to migrate their workflows. Software made available centrally via the module system and under /apps needs to be made available in versions compatible with Rocky 9. Some software may need to be recompiled. Other software (e.g. run by users or groups, without being centrally managed) may need to be tested and in some cases recompiled in order to work correctly under Rocky 9. Management and monitoring systems need to be updated to operate in the new environment For tenants of the JASMIN Cloud, you should already be aware of our plans to move to use the STFC Cloud as the base platform for the JASMIN Cloud Service. Images are currently in preparation so that new (empty) tenancies will soon be available for tenants to manage the migration of their own virtual machines over to new instances using Rocky 9 images. It is anticipated at this stage that managed tenancies (with tenancy sci machines) will be discontinued as part of this move, so users of those VMs will be advised to use the new Rocky 9 general-use sci servers instead. Much of this work is already underway by teams in CEDA and STFC’s Scientific Computing Department. As a result of extensive work by these teams in recent years to improve the way services are deployed and managed, we are now in a much better position to undertake this kind of migration with as little disruption to users as possible. Some disruption and adaptation by users will be inevitable, however.\nSome services have already been migrated and are already running under Rocky 9, but there is still much work to be done over the coming weeks so please watch this space as we do our best to keep you informed of the progress we’re making, and of any actions you may need to take to minimise disruption to your work on JASMIN.\n\u0026nbsp; Please find below details of the new Rocky 9 environment on JASMIN. We will update other documentation to match this in due course, but the information below will be the most up-to-date source until further notice. Details of the new Rocky Linux 9 environment \u0026nbsp; General \u0026nbsp; The move to Rocky Linux 9 (abbreviated to \u0026ldquo;Rocky 9\u0026rdquo; or \u0026ldquo;R9\u0026rdquo; from here on) involves many changes at lower levels transparent to users, so we will focus here on those most relevant to how services on JASMIN are accessed and used. The reasons for the choice of Rocky 9 itself, and for some of the associated changes to software, machines and services provided, will not be covered in detail, but have been influenced by a number of factors including:\norganisational security and maintenance policies availability of packages and dependencies for the chosen operating system user feedback Login nodes \u0026nbsp; The list of new login nodes is as follows:\nname status login-01.jasmin.ac.uk \u0026nbsp; ready to use login-02.jasmin.ac.uk \u0026nbsp; ready to use login-03.jasmin.ac.uk \u0026nbsp; ready to use login-04.jasmin.ac.uk \u0026nbsp; ready to use Notes:\nThere is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team (exception: hpxfer) This means all users can access all login servers (previously some users could only use login2) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. NX login nodes \u0026nbsp; name status nx1.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx2.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx3.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx4.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key Notes:\nUpdated advice for connection, requires updating your SSH key. New nodes have identical configuration so are accessible from all network locations (no further need for some users to use only certain nodes). By keeping the host names as short as possible, we mitigate the issue some users (with long usernames created before the 8-character rule) had with agent forwarding: all should behave the same as the old nx4 in this respect. As before, no filesystems other than the home directory are mounted. Use only with the NoMachine Enterprise Client to get a graphical Linux desktop, from where you can use the Firefox browser on the linux desktop to access web resources only accessible within JASMIN make onward connections to a sci server for using graphics-intensive applications Make sure you are using the most up-to-date version of NoMachine Enterprise Client\u0026nbsp; . sci servers \u0026nbsp; We have introduced a new naming convention which helps identify virtual and physical/high-memory sci servers. The new list is as follows:\nname status specs slurm cluster Virtual servers sci-vm-01.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) old sci-vm-02.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) old sci-vm-03.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) old sci-vm-04.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) old sci-vm-05.jasmin.ac.uk \u0026nbsp; Ready to use 8 CPU / 32 GB RAM / 80 GB (virtual disk) old sci-vm-06.jasmin.ac.uk \u0026nbsp; Not yet available 8 CPU / 32 GB RAM / 80 GB (virtual disk) old Physical servers sci-ph-01.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD new sci-ph-02.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD new sci-ph-03.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD new Notes:\nFor users within the STFC network, there is no longer any reverse DNS restriction. Replacements for common tools: lxterminal has been replaced with xfce-terminal\u0026nbsp; for a more richly-featured editor or Integrated Development Environment (IDE), users should consider using the remote editing features of VSCode\u0026nbsp; or PyCharm\u0026nbsp; , since these can be installed and customised locally by the user to their taste rather than needing central installation and management on JASMIN. Watch this space for further advice about how to configure and use VSCode in this way. See jaspy, jasr and jasmin-sci sections below for further information on software. For graphical applications, use the NoMachine NX service rather than sending X11 graphics over the network back to your laptop/desktop, to ensure performance. X11 graphics functionality is still to be added to these machines (coming shortly), but currently this will fail with an error like: xterm: Xt error: Can\u0026#39;t open display: xterm: DISPLAY is not set As before, physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network configuration from the virtual sci servers, with limited outward connectivity. xfer servers \u0026nbsp; name status notes xfer-vm-01.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-02.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-03.jasmin.ac.uk \u0026nbsp; ready to use Virtual server, has cron. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; name status notes hpxfer3.jasmin.ac.uk \u0026nbsp; ready to use Physical server hpxfer4.jasmin.ac.uk \u0026nbsp; ready to use Physical server Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above hpxfer access role no longer required for these new servers (role will be retired along with the old servers in due course, so no need to renew if you move to the new servers) GridFTP server \u0026nbsp; Due to difficulties installing and configuring the suite of legacy components needed to support \u0026ldquo;old-style\u0026rdquo; gridftp, we will not now be providing a replacement for the old server gridftp1. Please familiarise yourself with using Globus, see below: this provides equivalent (and better) functionality.\nNote this does affect gridftp-over-ssh (sshftp) which is available on the new hpxfer nodes in the same way as their predecessors, see above.\nGlobus data transfer service \u0026nbsp; Where possible you should now use the Globus data transfer service for any data transfer in or out of JASMIN: this is now the recommended method, which will get you the best performance and has a number of advantages over logging into a server and doing transfers manually.\nAs introduced earlier this year, the following Globus collections are available to all users of JASMIN, with no special access roles required:\nname uuid status notes JASMIN Default Collection a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 \u0026nbsp; Ready to use Best performance, currently has 2 physical Data Transfer Nodes (DTNs). JASMIN STFC Internal Collection 9efc947f-5212-4b5f-8c9d-47b93ae676b7 \u0026nbsp; Ready to use For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection. Notes:\nThese collections can be used with the Globus web interface\u0026nbsp; , command-line interface (CLI)\u0026nbsp; , or its Python software development kit (SDK)\u0026nbsp; , and use the JASMIN accounts portal for authentication Software \u0026nbsp; Please see the table below and accompanying notes which together summarise the upcoming changes to aspects of software on JASMIN:\nSoftware CentOS7 Rocky 9 IDL versions\nIDL licence server\nsee Note 1 8.2, 8.5 (D), 8.5, 8.6\nFlexnet 8.9, 9.1(D)\nNext generation Cylc\nCylc UI visualisation\nsee Note 2 7.8.14 and 8.3.3-1\nUI functionality integrated 8.3.3-1\nUI via browser: discussion ongoing Jaspy\nJasr\njasmin-sci 2.7, 3.7*, 3.10* (*: all variants)\n3.6, 4.0 (all variants), 4.2\nURL page of the packages 3.11\n4.3\nrpm/Glibc compatibility tba? Intel compilers 12.1.5-20.0.0 (11 variants) Intel oneAPI MPI library/ OpenMPI\nversions/compiler\nsee Note 3 3.1.1/Intel,GNU, 4.0.0\n4.1.[0-1,4-5]/Intel\n4.1.2, 5.0.1, 5.1.2 4.1.5/Intel/gcc \u0026amp; 5.0.4 /intel/gcc\nPossibility to support mpich or IntelMPI NetCDF C library\nNetCDF Fortran binding lib. netcdf/gnu/4.4..7, netcdf/intel/14.0/\nnetcdff/gnu/4.4.7/*, netcdff/intel/4.4.7\nparallel-netcdf/gnu/201411/22\nparallel-netcdf/intel/20141122 A new module env for serial and parallel version GNU and Intel oneAPI build of NetCDF against either OpenMPI and/or Intel MPI GNU compilers 7.2.0 ,8.1.0, 8.2.0\n13.2.0 conda-forge (12.1.0 from legacy JASPY) 11.4.1 (OS)\n13.2.0 conda-forge via JASPY JULES see Note 4 Information to follow Notes \u0026nbsp; IDL:\nIDL versions 8.9 and 9.1 are now available on the Rocky 9 sci servers. These will also be the versions available on the new cluster, which will be announced in early 2025. Licensing is now in place to enable use of these versions on Rocky 9 servers, in runtime or interactive mode. For the limited remaining time that the existing LOTUS cluster is available (with CentOS7 nodes), 8.5 is the default with other legacy versions still available on those nodes. Cylc: Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)\nMPI: (further details to follow)\nJULES: (further details to follow)\nUpgraded LOTUS cluster \u0026nbsp; Preliminary node specification:\ntype status specs standard \u0026nbsp; Available for testing 190 CPU / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD high-mem \u0026nbsp; Available for testing 190 CPU / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD Notes:\nOverall ~55,000 cores: ~triples current capacity New nodes will form a new cluster, managed separately to the \u0026ldquo;old\u0026rdquo; LOTUS Submission to the new cluster is now via sci-ph-0[1,2,3] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Submission to \u0026ldquo;old\u0026rdquo; LOTUS will only be from current CentOS7 sci machines sci[1-8] until 18 Feb 2025. and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Nodes will gradually be removed from the \u0026ldquo;old\u0026rdquo; cluster and retired, timetable TBC once new cluster is up \u0026amp; running. New LOTUS2 cluster initial submission guide \u0026nbsp; \u0026nbsp; Please see the details below on how to access LOTUS2 and how to submit a job to the new Slurm scheduling partitions.\nThese require a Slurm account, partition and quality of service (QoS) to be specified at job submission time.\nLOTUS2 batch job submission hosts \u0026nbsp; Login to one of the following hosts:\nsci-ph-01.jasmin.ac.uk sci-ph-02.jasmin.ac.uk sci-ph-03.jasmin.ac.uk The hostname will be displayed as hostNNN. This host can be reached in the normal way via a login server.\n(Other submission hosts will be added in due course, see above)\nNew Slurm job accounting hierarchy \u0026nbsp; Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.\nTo find what Slurm accounts and quality of services that you have access to, use the useraccounts command on the job submission host (currently sci-ph-03.jasmin.ac.uk). Output should be similar to one or more of the lines below.\nuseraccounts fred mybiggws debug,highres,long,short,standard fred jules-test jules-test fred no-project debug,highres,long,short,standard fred orchid debug,highres,long,short,standard Users who do not belong to any group workspaces will be assigned the no-project account and should use that in their job submissions.\nPartitions and QoS \u0026nbsp; There are 3 partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:\nPartition Allowed QoS standard standard, short, long highres highres, reservation debug debug, reservation QoS Priority Max CPUs per job Max wall time standard 500 1 24 hours short 550 1 4 hours long 350 1 5 days highres 450 2 days debug 500 1 hour Job submission \u0026nbsp; In order to successfully submit a job to LOTUS2, 3 mandatory fields must be specified. These are a partition, an account, and a QoS. The LOTUS2 configuration has been set to use the standard partition as the default if none is specified. However, users are discouraged from relying on this.\nExample of a batch Script:\nNB: remove any trailing whitespace\n#!/bin/bash #SBATCH --job-name=\u0026#34;Job Name\u0026#34; #SBATCH --time=\u0026lt;wall time required\u0026gt; #SBATCH --mem=\u0026lt;memory required\u0026gt; #SBATCH --cpus=\u0026lt;cpus required for multicore jobs e.g. MPI\u0026gt; #SBATCH --account=\u0026lt;account_name\u0026gt; #SBATCH --partition=\u0026lt;partition_name\u0026gt; #SBATCH --qos=\u0026lt;qos_name\u0026gt; # rest of script hereFor a pseudo-interactive session on a LOTUS2 compute node:\nsrun --account=cedaproc --qos=standard --pty /bin/bash srun: job 586 queued and waiting for resources srun: job 586 has been allocated resources module li Currently Loaded Modules: 1) idl/9.1 Timetable for host retirements \u0026nbsp; Please find below a timetable of planned host retirements in line with our move to Rocky Linux 9.\nPlease start moving your work NOW so that any issues can be resolved and disruption minimized.\nHost retirement date Group A cron1.ceda aka cron.jasmin\nxfer3\nnx-login[2,3] 21/11/2024 16:00 Group B nx4 aka nx-login4 6/12/2024 16:00 Group C xfer1\nhpxfer1 - already shut down due to technical issue\nsci[1,2,4]\nlogin[1,2] 6/12/2024 16:00 Group D xfer2\nhpxfer2\nsci[5,6,8]\nlogin[3,4]\ngridftp1 13/12/2024 16:00 All the hosts listed have new Rocky 9 equivalents described in the document above. Please check back regularly to keep up to date with this schedule."
+        content: "\u0026nbsp; Lots of updated information below about the new Rocky Linux 9 environment on JASMIN: please read, and keep checking back here regularly for now. Introduction \u0026nbsp; As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.\nThe current operating system, CentOS7 is officially end-of-life as of the end of June 2024. We will be moving from CentOS7 to Rocky Linux 9, which is supported until May 2032. Rocky 9 should provide a very similar user experience to that provided by CentOS7, but with more recent software packages. Some software may have been removed or replaced during this transition.\nThis change affects JASMIN and CEDA services in several ways, including but not limited to the following:\nComponents of all CEDA Archive and JASMIN web-based services need to be redeployed User-facing service hosts (e.g. login/sci/xfer and LOTUS nodes) all need to be redeployed All of these hosts need appropriate versions of drivers for various hardware and infrastructure components (e.g. storage, network, …) to be configured. The Slurm scheduler used for the LOTUS and ORCHID clusters needs to be adapted to work under Rocky 9, in terms of its own management functions and the worker nodes which it controls. A separate announcement will cover the expansion of LOTUS with new processing nodes: these will be introduced as a new cluster under Slurm, with existing nodes moved from old to new as part of the transition. There will be a limited window in which the 2 clusters will co-exist, during which time the old cluster will shrink in size: the current estimate for this is between July to September 2024, but we will provide updates on this as the new hardware is installed and timescales become clearer. We will endeavour to provide sufficient overlap and temporary arrangements to help users to migrate their workflows. Software made available centrally via the module system and under /apps needs to be made available in versions compatible with Rocky 9. Some software may need to be recompiled. Other software (e.g. run by users or groups, without being centrally managed) may need to be tested and in some cases recompiled in order to work correctly under Rocky 9. Management and monitoring systems need to be updated to operate in the new environment For tenants of the JASMIN Cloud, you should already be aware of our plans to move to use the STFC Cloud as the base platform for the JASMIN Cloud Service. Images are currently in preparation so that new (empty) tenancies will soon be available for tenants to manage the migration of their own virtual machines over to new instances using Rocky 9 images. It is anticipated at this stage that managed tenancies (with tenancy sci machines) will be discontinued as part of this move, so users of those VMs will be advised to use the new Rocky 9 general-use sci servers instead. Much of this work is already underway by teams in CEDA and STFC’s Scientific Computing Department. As a result of extensive work by these teams in recent years to improve the way services are deployed and managed, we are now in a much better position to undertake this kind of migration with as little disruption to users as possible. Some disruption and adaptation by users will be inevitable, however.\nSome services have already been migrated and are already running under Rocky 9, but there is still much work to be done over the coming weeks so please watch this space as we do our best to keep you informed of the progress we’re making, and of any actions you may need to take to minimise disruption to your work on JASMIN.\n\u0026nbsp; Please find below details of the new Rocky 9 environment on JASMIN. We will update other documentation to match this in due course, but the information below will be the most up-to-date source until further notice. Details of the new Rocky Linux 9 environment \u0026nbsp; General \u0026nbsp; The move to Rocky Linux 9 (abbreviated to \u0026ldquo;Rocky 9\u0026rdquo; or \u0026ldquo;R9\u0026rdquo; from here on) involves many changes at lower levels transparent to users, so we will focus here on those most relevant to how services on JASMIN are accessed and used. The reasons for the choice of Rocky 9 itself, and for some of the associated changes to software, machines and services provided, will not be covered in detail, but have been influenced by a number of factors including:\norganisational security and maintenance policies availability of packages and dependencies for the chosen operating system user feedback Login nodes \u0026nbsp; The list of new login nodes is as follows:\nname status login-01.jasmin.ac.uk \u0026nbsp; ready to use login-02.jasmin.ac.uk \u0026nbsp; ready to use login-03.jasmin.ac.uk \u0026nbsp; ready to use login-04.jasmin.ac.uk \u0026nbsp; ready to use Notes:\nThere is no longer any requirement for forward/reverse DNS lookup or any restriction by institutional domain. You no longer need to register non-*.ac.uk domains with the JASMIN team (exception: hpxfer) This means all users can access all login servers (previously some users could only use login2) As before, no filesystems other than the home directory are mounted. Use only as a \u0026ldquo;hop\u0026rdquo; to reach other servers within JASMIN. Make sure your SSH client is up to date. Check the version with ssh -V. If it\u0026rsquo;s significantly older than OpenSSH_8.7p1, OpenSSL 3.0.7, speak to your local admin team as it may need to be updated before you can connect securely to JASMIN. NX login nodes \u0026nbsp; name status nx1.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx2.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx3.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key nx4.jasmin.ac.uk \u0026nbsp; Ready for use, update your SSH key Notes:\nUpdated advice for connection, requires updating your SSH key. New nodes have identical configuration so are accessible from all network locations (no further need for some users to use only certain nodes). By keeping the host names as short as possible, we mitigate the issue some users (with long usernames created before the 8-character rule) had with agent forwarding: all should behave the same as the old nx4 in this respect. As before, no filesystems other than the home directory are mounted. Use only with the NoMachine Enterprise Client to get a graphical Linux desktop, from where you can use the Firefox browser on the linux desktop to access web resources only accessible within JASMIN make onward connections to a sci server for using graphics-intensive applications Make sure you are using the most up-to-date version of NoMachine Enterprise Client\u0026nbsp; . sci servers \u0026nbsp; We have introduced a new naming convention which helps identify virtual and physical/high-memory sci servers. The new list is as follows:\nname status specs slurm cluster Virtual servers sci-vm-01.jasmin.ac.uk \u0026nbsp; Ready to use 24 CPU / 64 GB RAM / 80 GB (virtual disk) old sci-vm-02.jasmin.ac.uk \u0026nbsp; Ready to use 24 CPU / 64 GB RAM / 80 GB (virtual disk) old sci-vm-03.jasmin.ac.uk \u0026nbsp; Ready to use 24 CPU / 64 GB RAM / 80 GB (virtual disk) old sci-vm-04.jasmin.ac.uk \u0026nbsp; Ready to use 24 CPU / 64 GB RAM / 80 GB (virtual disk) old sci-vm-05.jasmin.ac.uk \u0026nbsp; Ready to use 24 CPU / 64 GB RAM / 80 GB (virtual disk) old Physical servers sci-ph-01.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD new sci-ph-02.jasmin.ac.uk \u0026nbsp; Ready to use 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD new sci-ph-03.jasmin.ac.uk \u0026nbsp; Ready to use 192 CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD new Notes:\nFor users within the STFC network, there is no longer any reverse DNS restriction. Replacements for common tools: lxterminal has been replaced with xfce-terminal\u0026nbsp; for a more richly-featured editor or Integrated Development Environment (IDE), users should consider using the remote editing features of VSCode\u0026nbsp; or PyCharm\u0026nbsp; , since these can be installed and customised locally by the user to their taste rather than needing central installation and management on JASMIN. Watch this space for further advice about how to configure and use VSCode in this way. See jaspy, jasr and jasmin-sci sections below for further information on software. For graphical applications, use the NoMachine NX service rather than sending X11 graphics over the network back to your laptop/desktop, to ensure performance. X11 graphics functionality is still to be added to these machines (coming shortly), but currently this will fail with an error like: xterm: Xt error: Can\u0026#39;t open display: xterm: DISPLAY is not set As before, physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network configuration from the virtual sci servers, with limited outward connectivity. xfer servers \u0026nbsp; name status notes xfer-vm-01.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-02.jasmin.ac.uk \u0026nbsp; ready to use Virtual server xfer-vm-03.jasmin.ac.uk \u0026nbsp; ready to use Virtual server, has cron. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; name status notes hpxfer3.jasmin.ac.uk \u0026nbsp; ready to use Physical server hpxfer4.jasmin.ac.uk \u0026nbsp; ready to use Physical server Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above hpxfer access role no longer required for these new servers (role will be retired along with the old servers in due course, so no need to renew if you move to the new servers) GridFTP server \u0026nbsp; Due to difficulties installing and configuring the suite of legacy components needed to support \u0026ldquo;old-style\u0026rdquo; gridftp, we will not now be providing a replacement for the old server gridftp1. Please familiarise yourself with using Globus, see below: this provides equivalent (and better) functionality.\nNote this does affect gridftp-over-ssh (sshftp) which is available on the new hpxfer nodes in the same way as their predecessors, see above.\nGlobus data transfer service \u0026nbsp; Where possible you should now use the Globus data transfer service for any data transfer in or out of JASMIN: this is now the recommended method, which will get you the best performance and has a number of advantages over logging into a server and doing transfers manually.\nAs introduced earlier this year, the following Globus collections are available to all users of JASMIN, with no special access roles required:\nname uuid status notes JASMIN Default Collection a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 \u0026nbsp; Ready to use Best performance, currently has 2 physical Data Transfer Nodes (DTNs). JASMIN STFC Internal Collection 9efc947f-5212-4b5f-8c9d-47b93ae676b7 \u0026nbsp; Ready to use For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection. Notes:\nThese collections can be used with the Globus web interface\u0026nbsp; , command-line interface (CLI)\u0026nbsp; , or its Python software development kit (SDK)\u0026nbsp; , and use the JASMIN accounts portal for authentication Software \u0026nbsp; Please see the table below and accompanying notes which together summarise the upcoming changes to aspects of software on JASMIN:\nSoftware CentOS7 Rocky 9 IDL versions\nIDL licence server\nsee Note 1 8.2, 8.5 (D), 8.5, 8.6\nFlexnet 8.9, 9.1(D)\nNext generation Cylc\nCylc UI visualisation\nsee Note 2 7.8.14 and 8.3.3-1\nUI functionality integrated 8.3.3-1\nUI via browser: discussion ongoing Jaspy\nJasr\njasmin-sci 2.7, 3.7*, 3.10* (*: all variants)\n3.6, 4.0 (all variants), 4.2\nURL page of the packages 3.11\n4.3\nrpm/Glibc compatibility tba? Intel compilers 12.1.5-20.0.0 (11 variants) Intel oneAPI MPI library/ OpenMPI\nversions/compiler\nsee Note 3 3.1.1/Intel,GNU, 4.0.0\n4.1.[0-1,4-5]/Intel\n4.1.2, 5.0.1, 5.1.2 4.1.5/Intel/gcc \u0026amp; 5.0.4 /intel/gcc\nPossibility to support mpich or IntelMPI NetCDF C library\nNetCDF Fortran binding lib. netcdf/gnu/4.4..7, netcdf/intel/14.0/\nnetcdff/gnu/4.4.7/*, netcdff/intel/4.4.7\nparallel-netcdf/gnu/201411/22\nparallel-netcdf/intel/20141122 A new module env for serial and parallel version GNU and Intel oneAPI build of NetCDF against either OpenMPI and/or Intel MPI GNU compilers 7.2.0 ,8.1.0, 8.2.0\n13.2.0 conda-forge (12.1.0 from legacy JASPY) 11.4.1 (OS)\n13.2.0 conda-forge via JASPY JULES see Note 4 Information to follow Notes \u0026nbsp; IDL:\nIDL versions 8.9 and 9.1 are now available on the Rocky 9 sci servers. These will also be the versions available on the new cluster, which will be announced in early 2025. Licensing is now in place to enable use of these versions on Rocky 9 servers, in runtime or interactive mode. For the limited remaining time that the existing LOTUS cluster is available (with CentOS7 nodes), 8.5 is the default with other legacy versions still available on those nodes. Cylc: Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)\nMPI: (further details to follow)\nJULES: (further details to follow)\nUpgraded LOTUS cluster \u0026nbsp; Preliminary node specification:\ntype status specs standard \u0026nbsp; Ready to use 190* CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD high-mem \u0026nbsp; Ready to use 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD Notes:\n*2 CPU reserved for system processes Overall ~55,000 cores: ~triples capacity pf previous cluster New nodes will form a new cluster, managed separately to the \u0026ldquo;old\u0026rdquo; LOTUS Submission to the new cluster is now via sci-ph-0[1,2,3] and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Submission to \u0026ldquo;old\u0026rdquo; LOTUS will only be from current CentOS7 sci machines sci[1-8] until 18 Feb 2025. and from one additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period. Nodes will gradually be removed from the \u0026ldquo;old\u0026rdquo; cluster and retired, timetable TBC once new cluster is up \u0026amp; running. New LOTUS2 cluster initial submission guide \u0026nbsp; \u0026nbsp; Please see the details below on how to access LOTUS2 and how to submit a job to the new Slurm scheduling partitions.\nThese require a Slurm account, partition and quality of service (QoS) to be specified at job submission time.\nLOTUS2 batch job submission hosts \u0026nbsp; Login to one of the following hosts:\nsci-ph-01.jasmin.ac.uk sci-ph-02.jasmin.ac.uk sci-ph-03.jasmin.ac.uk The hostname will be displayed as hostNNN. This host can be reached in the normal way via a login server.\n(Other submission hosts will be added in due course, see above)\nNew Slurm job accounting hierarchy \u0026nbsp; Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.\nTo find what Slurm accounts and quality of services that you have access to, use the useraccounts command on the job submission host (currently sci-ph-03.jasmin.ac.uk). Output should be similar to one or more of the lines below.\nuseraccounts fred mybiggws debug,highres,long,short,standard fred jules-test jules-test fred no-project debug,highres,long,short,standard fred orchid debug,highres,long,short,standard Users who do not belong to any group workspaces will be assigned the no-project account and should use that in their job submissions.\nPartitions and QoS \u0026nbsp; There are 3 partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:\nPartition Allowed QoS standard standard, short, long highres highres, reservation debug debug, reservation QoS Priority Max CPUs per job Max wall time standard 500 1 24 hours short 550 1 4 hours long 350 1 5 days highres 450 2 days debug 500 1 hour Job submission \u0026nbsp; In order to successfully submit a job to LOTUS2, 3 mandatory fields must be specified. These are a partition, an account, and a QoS. The LOTUS2 configuration has been set to use the standard partition as the default if none is specified. However, users are discouraged from relying on this.\nExample of a batch Script:\nNB: remove any trailing whitespace\n#!/bin/bash #SBATCH --job-name=\u0026#34;Job Name\u0026#34; #SBATCH --time=\u0026lt;wall time required\u0026gt; #SBATCH --mem=\u0026lt;memory required\u0026gt; #SBATCH --cpus=\u0026lt;cpus required for multicore jobs e.g. MPI\u0026gt; #SBATCH --account=\u0026lt;account_name\u0026gt; #SBATCH --partition=\u0026lt;partition_name\u0026gt; #SBATCH --qos=\u0026lt;qos_name\u0026gt; # rest of script hereFor a pseudo-interactive session on a LOTUS2 compute node:\nsrun --account=cedaproc --qos=standard --pty /bin/bash srun: job 586 queued and waiting for resources srun: job 586 has been allocated resources module li Currently Loaded Modules: 1) idl/9.1 Timetable for host retirements \u0026nbsp; Please find below a timetable of planned host retirements in line with our move to Rocky Linux 9.\nPlease start moving your work NOW so that any issues can be resolved and disruption minimized.\nHost retirement date Group A cron1.ceda aka cron.jasmin\nxfer3\nnx-login[2,3] 21/11/2024 16:00 Group B nx4 aka nx-login4 6/12/2024 16:00 Group C xfer1\nhpxfer1 - already shut down due to technical issue\nsci[1,2,4]\nlogin[1,2] 6/12/2024 16:00 Group D xfer2\nhpxfer2\nsci[5,6,8]\nlogin[3,4]\ngridftp1 13/12/2024 16:00 All the hosts listed have new Rocky 9 equivalents described in the document above. Please check back regularly to keep up to date with this schedule."
       })
       .add(
       
       
       {
-        id: 78,
+        id: 77,
         tag: "en",
         href: "/docs/uncategorized/mobaxterm/",
         title: "MobaXterm (Windows terminal client)",
@@ -7535,7 +7522,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 78,
         tag: "en",
         href: "/docs/mass/moose-the-mass-client-user-guide/",
         title: "MOOSE (the MASS client) User Guide",
@@ -7548,7 +7535,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 79,
         tag: "en",
         href: "/docs/getting-started/multiple-account-types/",
         title: "Multiple account types",
@@ -7561,7 +7548,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 80,
         tag: "en",
         href: "/docs/software-on-jasmin/nag-library/",
         title: "NAG Library",
@@ -7574,7 +7561,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 81,
         tag: "en",
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
@@ -7587,7 +7574,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 82,
         tag: "en",
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
@@ -7600,7 +7587,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 83,
         tag: "en",
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
@@ -7613,7 +7600,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 84,
         tag: "en",
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
@@ -7626,7 +7613,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 85,
         tag: "en",
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
@@ -7639,7 +7626,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 86,
         tag: "en",
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
@@ -7652,7 +7639,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 87,
         tag: "en",
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7665,7 +7652,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 88,
         tag: "en",
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
@@ -7678,7 +7665,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 89,
         tag: "en",
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
@@ -7691,7 +7678,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 90,
         tag: "en",
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
@@ -7704,7 +7691,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 91,
         tag: "en",
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
@@ -7717,7 +7704,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 92,
         tag: "en",
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
@@ -7730,7 +7717,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 93,
         tag: "en",
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
@@ -7743,7 +7730,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 94,
         tag: "en",
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
@@ -7756,7 +7743,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 95,
         tag: "en",
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
@@ -7769,7 +7756,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 96,
         tag: "en",
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
@@ -7782,7 +7769,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 97,
         tag: "en",
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
@@ -7795,7 +7782,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 98,
         tag: "en",
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
@@ -7808,7 +7795,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 99,
         tag: "en",
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
@@ -7821,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 100,
         tag: "en",
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
@@ -7834,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 101,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
@@ -7847,7 +7834,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 102,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
@@ -7860,7 +7847,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 103,
         tag: "en",
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
@@ -7873,7 +7860,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 104,
         tag: "en",
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
@@ -7886,7 +7873,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 105,
         tag: "en",
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
@@ -7899,7 +7886,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 106,
         tag: "en",
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
@@ -7912,7 +7899,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 107,
         tag: "en",
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
@@ -7925,7 +7912,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 108,
         tag: "en",
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
@@ -7938,7 +7925,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 109,
         tag: "en",
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
@@ -7951,7 +7938,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 110,
         tag: "en",
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
@@ -7964,7 +7951,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 111,
         tag: "en",
         href: "/docs/interactive-computing/tenancy-sci-analysis-vms/",
         title: "Tenancy Sci Analysis VMs",
@@ -7977,7 +7964,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 112,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
@@ -7990,7 +7977,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 113,
         tag: "en",
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service with GPUs enabled",
@@ -8003,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 114,
         tag: "en",
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
@@ -8016,7 +8003,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 115,
         tag: "en",
         href: "/training/basic/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8029,7 +8016,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 116,
         tag: "en",
         href: "/training/intermediate/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8042,7 +8029,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 117,
         tag: "en",
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
@@ -8055,7 +8042,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 118,
         tag: "en",
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
@@ -8068,7 +8055,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 119,
         tag: "en",
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
@@ -8081,7 +8068,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 120,
         tag: "en",
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
@@ -8094,7 +8081,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 121,
         tag: "en",
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
@@ -8107,7 +8094,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 122,
         tag: "en",
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
@@ -8120,7 +8107,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 123,
         tag: "en",
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
@@ -8133,7 +8120,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 124,
         tag: "en",
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
@@ -8146,7 +8133,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 125,
         tag: "en",
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
@@ -8159,7 +8146,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 126,
         tag: "en",
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
@@ -8172,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 128,
+        id: 127,
         tag: "en",
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",

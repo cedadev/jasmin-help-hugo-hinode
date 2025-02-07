@@ -100,12 +100,13 @@ gridftp-cert-based-auth /docs/data-transfer/globus-transfers-with-jasmin/
 /article/288-jasmin-cloud-portal /docs/for-cloud-tenants/jasmin-cloud-portal/
 /article/3793-jasmin-conditions-of-use /docs/uncategorized/jasmin-conditions-of-use/
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
-/article/4917-software-migration-2020 /docs/software-on-jasmin/software-migration-2020/
 /article/4729-jaspy-envs /docs/software-on-jasmin/jaspy-envs/
 /article/4932-lotus-cluster-specification /docs/batch-computing/lotus-cluster-specification/
 /article/203-managing-a-gws /docs/short-term-project-storage/managing-a-gws/
 /article/3835-name-dispersion-model /docs/software-on-jasmin/name-dispersion-model/
 /docs/interactive-computing/centos7-sci-login-xfer-servers /docs/software-on-jasmin/rocky9-migration-2024/
+/article/4917-software-migration-2020 /docs/software-on-jasmin/rocky9-migration-2024/
+software-migration-2020 /docs/software-on-jasmin/rocky9-migration-2024/
 /article/4832-mobaxterm /docs/uncategorized/mobaxterm/
 /article/4445-moose-the-mass-client-user-guide /docs/mass/moose-the-mass-client-user-guide/
 /article/4448-nag-library /docs/software-on-jasmin/nag-library/

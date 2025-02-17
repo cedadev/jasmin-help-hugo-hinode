@@ -2,7 +2,7 @@
 description: Linux Admin
 slug: linux-admin
 title: Linux Admin
-weight: 35
+weight: 80
 ---
 
 TODO link and/or grab some stuff from the cloud docs

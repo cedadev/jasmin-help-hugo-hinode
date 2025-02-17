@@ -1,8 +1,8 @@
 ---
 description: OpenStack
 slug: openstack
-title: Advance Use of the OpenStack Cloud
-weight: 35
+title: OpenStack
+weight: 70
 ---
 
 While we expect most tenants to use Azimuth to interact with the cloud, some may find it benificial to interact directly with OpenStack. The STFC Cloud team have put together which contain more information about this.

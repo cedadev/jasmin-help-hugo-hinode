@@ -10,7 +10,45 @@ computing (as opposed to
 
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/">batch computing&lt;/a>). It covers:&lt;/p></description></item><item><title>Check network details</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/check-network-details/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/check-network-details/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/">batch computing&lt;/a>). It covers:&lt;/p>
+&lt;ul>
+&lt;li>Login servers&lt;/li>
+&lt;li>Scientific Analysis servers&lt;/li>
+&lt;li>Data Transfer Servers&lt;/li>
+&lt;/ul>
+
+
+
+
+&lt;h2 id="login-severs" class="heading">Login Severs&lt;a href="#login-severs" aria-labelledby="login-severs">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>The 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/">login (also known as gateway or bastion) servers&lt;/a> provide external* users with access to services inside of JASMIN.&lt;/p></description></item><item><title>Check network details</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/check-network-details/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/check-network-details/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
@@ -26,12 +64,22 @@ computing (as opposed to
 
 
  
+ 
+ 
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/">migration to the Rocky 9 operating system&lt;/a>. The previous restriction on network domains and reverse DNS does not apply to the set of new machines (and old ones are being replaced).
  &lt;/div>
  &lt;/div>
-&lt;p>This article explains how to:&lt;/p></description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading">Available login servers &lt;a href="#available-login-servers" aria-labelledby="available-login-servers">
+&lt;p>This article explains how to:&lt;/p></description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading">Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>There are four login servers available to access resources within JASMIN.
 Users with the &lt;code>jasmin-login&lt;/code> access role can access the following servers via
 
@@ -81,6 +129,12 @@ JASMIN can be found
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/how-to-login/">here&lt;/a>, but this article may help to
 resolve login problems. It provides information for the following issues:&lt;/p></description></item><item><title>Graphical linux desktop using NoMachine NX</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/graphical-linux-desktop-access-using-nx/</guid><description>&lt;div class="d-flex alert alert-info " role="alert">
  &lt;div class="pt-1 pe-2">
@@ -91,9 +145,14 @@ resolve login problems. It provides information for the following issues:&lt;/p>
  &lt;/div>
  &lt;/div>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;ul>
 &lt;li>This service provides a graphical Linux desktop on JASMIN, ideal
 for use with graphics-heavy tasks like interactive work with large images.&lt;/li>
@@ -102,9 +161,11 @@ internal-only web resources.&lt;/li>
 &lt;/ul>
 &lt;p>Using graphical applications over a wide-area network can be very slow, and is
 not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading">Intro &lt;a href="#intro" aria-labelledby="intro">
+graphical desktop &lt;strong>within&lt;/strong> the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p></description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading">Intro&lt;a href="#intro" aria-labelledby="intro">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code>jasmin-login&lt;/code> access role.
 The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most* users will need to access them via a 
  
@@ -117,6 +178,12 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/">login server&lt;/a>.&lt;/p></description></item><item><title>Tenancy Sci Analysis VMs</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/tenancy-sci-analysis-vms/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
@@ -135,6 +202,12 @@ served by using the shared
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/">sci servers&lt;/a>.
  &lt;/div>
  &lt;/div>
@@ -152,6 +225,12 @@ they can be used.&lt;/p>
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/">Data Transfer category&lt;/a> for details on managing your data transfers.&lt;/p></description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p>Creating a virtual environment is useful to allow a discrete set of extra
 packages to be installed to meet specific requirements. This allows a user to
 run multiple environments with different dependencies without conflicts.&lt;/p></description></item><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
@@ -164,10 +243,15 @@ Project-specific servers are no longer provided on request, as most use cases ca
 a tenancy in the JASMIN cloud.
  &lt;/div>
  &lt;/div>
-&lt;p>This article introduces the project specific servers. It covers:&lt;/p></description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+&lt;p>This article introduces the project specific servers. It covers:&lt;/p></description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>
+
+
+
 
 
 
@@ -194,12 +278,18 @@ a tenancy in the JASMIN cloud.
 
 
 
-&lt;a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer">Visual Studio Code&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer nofollow">Visual Studio Code&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a richly-featured editor and Integrated Development Environment (IDE)
-which has remote access and other useful features that can be used with JASMIN.&lt;/p></description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+which has remote access and other useful features that can be used with JASMIN.&lt;/p></description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>
  
 
@@ -208,7 +298,11 @@ which has remote access and other useful features that can be used with JASMIN.&
 
 
 
-&lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer">Dask Gateway&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer nofollow">Dask Gateway&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a service which manages 
  
@@ -218,7 +312,11 @@ which has remote access and other useful features that can be used with JASMIN.&
 
 
 
-&lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer">Dask&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer nofollow">Dask&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> clusters for users.
 On JASMIN, it creates a Dask cluster in 
@@ -236,22 +334,33 @@ On JASMIN, it creates a Dask cluster in
 
 
 
- 
-
-
-
-
-
-
-
-
-
-
-
 
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a>, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.&lt;/p></description></item><item><title>JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/</guid><description>&lt;p>The JASMIN Notebooks Service provides access to
 
 
@@ -268,6 +377,9 @@ On JASMIN, it creates a Dask cluster in
 
 
 
+
+
+
  
 
 
@@ -280,7 +392,11 @@ On JASMIN, it creates a Dask cluster in
 
 
 
-&lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter Notebooks&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer nofollow">Jupyter Notebooks&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> in a web browser.&lt;/p></description></item><item><title>The JASMIN Notebooks Service with GPUs enabled</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</guid><description>&lt;p>The 
  
@@ -293,6 +409,12 @@ On JASMIN, it creates a Dask cluster in
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/">JASMIN Notebook Service&lt;/a> has recently been
 updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
 Learning (ML) workflows in Notebooks. This page outlines:&lt;/p></description></item></channel></rss>

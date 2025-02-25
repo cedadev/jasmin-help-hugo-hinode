@@ -12,21 +12,32 @@ internet:&lt;/p>
 
 
 
-&lt;a href="https://www.slideshare.net/myowntelco/centos-linux-server-hardening" target="_blank" rel="noopener noreferrer">https://www.slideshare.net/myowntelco/centos-linux-server-hardening&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://www.slideshare.net/myowntelco/centos-linux-server-hardening" target="_blank" rel="noopener noreferrer nofollow">https://www.slideshare.net/myowntelco/centos-linux-server-hardening&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>And particularly for web servers:&lt;/p></description></item><item><title>Cluster-as-a-Service</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+&lt;p>And particularly for web servers:&lt;/p></description></item><item><title>Cluster-as-a-Service</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>JASMIN Cluster-as-a-Service (CaaS) is a service on the JASMIN Cloud that aims
 to make it easy to provision and maintain clusters of various types by
 providing a simple, intuitive interface via the JASMIN Cloud Portal.&lt;/p></description></item><item><title>Cluster-as-a-Service - Identity Manager</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</guid><description>&lt;p>This article describes how to deploy and use the JASMIN Cluster-as-a-Service
 (CaaS) Identity Manager.&lt;/p>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>The Identity Manager consists of a
 
  
@@ -36,7 +47,11 @@ providing a simple, intuitive interface via the JASMIN Cloud Portal.&lt;/p></des
 
 
 
-&lt;a href="https://www.freeipa.org/page/Main_Page" target="_blank" rel="noopener noreferrer">FreeIPA&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://www.freeipa.org/page/Main_Page" target="_blank" rel="noopener noreferrer nofollow">FreeIPA&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> server, a
 
@@ -47,17 +62,29 @@ providing a simple, intuitive interface via the JASMIN Cloud Portal.&lt;/p></des
 
 
 
-&lt;a href="https://www.keycloak.org/" target="_blank" rel="noopener noreferrer">Keycloak&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://www.keycloak.org/" target="_blank" rel="noopener noreferrer nofollow">Keycloak&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> server and a gateway/proxy server that
 work together to provide a single identity across all cluster types, whether
 via a web-browser, SSH or custom CLI tools like &lt;code>kubectl&lt;/code>.&lt;/p></description></item><item><title>Cluster-as-a-service - Kubernetes</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</guid><description>&lt;p>This article describes how to deploy and use a Kubernetes cluster using JASMIN
 Cluster-as-a-Service (CaaS).&lt;/p>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>
+
+
+
 
 
 
@@ -84,16 +111,28 @@ Cluster-as-a-Service (CaaS).&lt;/p>
 
 
 
-&lt;a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">Kubernetes&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer nofollow">Kubernetes&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is an open-source system for automating
 the deployment, scaling and management of containerised applications.&lt;/p></description></item><item><title>Cluster-as-a-Service - Pangeo</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</guid><description>&lt;p>This article describes how to deploy and use a Pangeo cluster using JASMIN
 Cluster-as-a-Service (CaaS).&lt;/p>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>
+
+
+
 
 
 
@@ -120,7 +159,11 @@ Cluster-as-a-Service (CaaS).&lt;/p>
 
 
 
-&lt;a href="https://pangeo.io/" target="_blank" rel="noopener noreferrer">Pangeo&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://pangeo.io/" target="_blank" rel="noopener noreferrer nofollow">Pangeo&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a community that promotes a philosophy of
 open, scalable and reproducible science, focusing primarily on the
@@ -140,6 +183,9 @@ geosciences. As part of that effort, the Pangeo community provides a curated
 
 
 
+
+
+
  
 
 
@@ -152,7 +198,11 @@ geosciences. As part of that effort, the Pangeo community provides a curated
 
 
 
-&lt;a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://www.python.org/" target="_blank" rel="noopener noreferrer nofollow">Python&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> ecosystem based on popular open-source
 packages like 
@@ -170,6 +220,9 @@ packages like
 
 
 
+
+
+
  
 
 
@@ -182,7 +235,11 @@ packages like
 
 
 
-&lt;a href="http://xarray.pydata.org" target="_blank" rel="noopener noreferrer">xarray&amp;nbsp;
+
+
+ 
+
+&lt;a href="http://xarray.pydata.org" target="_blank" rel="noopener noreferrer nofollow">xarray&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>,
 
@@ -200,6 +257,9 @@ packages like
 
 
 
+
+
+
  
 
 
@@ -212,7 +272,11 @@ packages like
 
 
 
-&lt;a href="https://scitools.org.uk/iris" target="_blank" rel="noopener noreferrer">Iris&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://scitools.org.uk/iris" target="_blank" rel="noopener noreferrer nofollow">Iris&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>, 
 
@@ -229,6 +293,9 @@ packages like
 
 
 
+
+
+
  
 
 
@@ -241,7 +308,11 @@ packages like
 
 
 
-&lt;a href="http://dask.readthedocs.io" target="_blank" rel="noopener noreferrer">Dask&amp;nbsp;
+
+
+ 
+
+&lt;a href="http://dask.readthedocs.io" target="_blank" rel="noopener noreferrer nofollow">Dask&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> and
 
@@ -259,6 +330,9 @@ packages like
 
 
 
+
+
+
  
 
 
@@ -271,15 +345,24 @@ packages like
 
 
 
-&lt;a href="http://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter notebooks&amp;nbsp;
+
+
+ 
+
+&lt;a href="http://jupyter.org/" target="_blank" rel="noopener noreferrer nofollow">Jupyter notebooks&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>, along with documentation and recipes
 for deployment on various infrastructures.&lt;/p></description></item><item><title>Cluster-as-a-Service - Shared storage</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</guid><description>&lt;p>This article describes how to deploy and use shared storage clusters using
 JASMIN Cluster-as-a-Service (CaaS).&lt;/p>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>CaaS provides shared storage clusters that can be mounted on multiple nodes to
 provide common storage across all those nodes.&lt;/p></description></item><item><title>Cluster-as-a-Service - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</guid><description>&lt;p>This article describes how to deploy and use a Slurm cluster using JASMIN
 Cluster-as-a-Service (CaaS).&lt;/p>
@@ -310,9 +393,14 @@ will provide slurm clusters.
  &lt;/div>
  &lt;/div>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>The 
  
 
@@ -321,7 +409,11 @@ will provide slurm clusters.
 
 
 
-&lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer">Slurm Workload Manager&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow">Slurm Workload Manager&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a popular open-
 source job scheduler. It provides facilities for executing and monitoring
@@ -342,6 +434,9 @@ Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p></de
 
 
 
+
+
+
  
 
 
@@ -354,13 +449,19 @@ Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p></de
 
 
 
-&lt;a href="https://cloud.jasmin.ac.uk" target="_blank" rel="noopener noreferrer">JASMIN Cloud Portal&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://cloud.jasmin.ac.uk" target="_blank" rel="noopener noreferrer nofollow">JASMIN Cloud Portal&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a web interface that
 enables the self-service provisioning of virtual machines in the JASMIN Cloud.&lt;/p></description></item><item><title>Provisioning a Sci VM in a Managed Cloud Tenancy</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</guid><description>&lt;p>This article is for admins and managers of managed-cloud tenancies
-and shows how to provision a sci VM within one. It involves the following:&lt;/p></description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>&lt;h2 id="managing-storage" class="heading">Managing storage &lt;a href="#managing-storage" aria-labelledby="managing-storage">
+and shows how to provision a sci VM within one. It involves the following:&lt;/p></description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>&lt;h2 id="managing-storage" class="heading">Managing storage&lt;a href="#managing-storage" aria-labelledby="managing-storage">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>When provisioned, a virtual machine gets allocated a small hard disk (the
 exact size of the disk depends on the selected machine size). This disk is
 intended to run the operating system only. If you require additional storage

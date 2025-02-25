@@ -14,6 +14,9 @@
 
 
 
+
+
+
  
 
 
@@ -26,7 +29,11 @@
 
 
 
-&lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter Notebooks&amp;nbsp;
+
+
+ 
+
+&lt;a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer nofollow">Jupyter Notebooks&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> in a web browser.&lt;/p></description></item><item><title>The JASMIN Notebooks Service with GPUs enabled</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</guid><description>&lt;p>The 
  
@@ -39,6 +46,12 @@
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/">JASMIN Notebook Service&lt;/a> has recently been
 updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
 Learning (ML) workflows in Notebooks. This page outlines:&lt;/p></description></item></channel></rss>

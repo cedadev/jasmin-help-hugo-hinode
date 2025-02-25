@@ -1,4 +1,38 @@
-/*!
+/* eslint-disable no-undef, no-unused-vars */
+function hasConsent (category) {
+  // TODO: placeholder function
+  return true
+}
+
+function getLocalStorage (key, def, category) {
+  if (hasConsent(category)) {
+    return localStorage.getItem(key)
+  } else {
+    return def
+  }
+}
+
+function setLocalStorage (key, val, category) {
+  if (hasConsent(category)) {
+    localStorage.setItem(key, val)
+  }
+}
+
+function getSessionStorage (key, def, category) {
+  if (hasConsent(category)) {
+    return sessionStorage.getItem(key)
+  } else {
+    return def
+  }
+}
+
+function setSessionStorage (key, val, category) {
+  if (hasConsent(category)) {
+    sessionStorage.setItem(key, val)
+  }
+}
+
+;/*!
  * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
@@ -9,8 +43,8 @@
 
   const supportedThemes = ['auto', 'dark', 'light'];
 
-  // retrieves the currently stored theme from local storage (cookie)
-  const storedTheme = localStorage.getItem('theme')
+  // retrieves the currently stored theme from local storage
+  const storedTheme = getLocalStorage('theme', 'auto', 'functional')
 
   // retrieves the theme preferred by the client, defaults to light
   function getPreferredTheme() {
@@ -23,7 +57,7 @@
       return storedTheme
     } else {
       const preference = getPreferredTheme()
-      localStorage.setItem('theme', preference)
+      setLocalStorage('theme', preference, 'functional')
       return preference
     }
   }
@@ -33,7 +67,7 @@
     if (!supportedThemes.includes(theme)) {
       theme = 'auto'
     }
-    localStorage.setItem('theme', theme)
+    setLocalStorage('theme', theme, 'functional')
 
     if (theme === 'auto') {
       document.documentElement.setAttribute('data-bs-theme', (getPreferredTheme()))

@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MASS on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/mass/</link><description>Recent content in MASS on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/mass/index.xml" rel="self" type="application/rss+xml"/><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MASS on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/mass/</link><description>Recent content in MASS on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/mass/index.xml" rel="self" type="application/rss+xml"/><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
-&lt;p>The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p></description></item><item><title>How to apply for MASS access</title><link>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</guid><description>&lt;h3 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p></description></item><item><title>How to apply for MASS access</title><link>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</guid><description>&lt;h3 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h3>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h3>
 &lt;p>To access data held in the Met Office MASS archive, you will need:&lt;/p></description></item><item><title>MOOSE (the MASS client) User Guide</title><link>https://help.jasmin.ac.uk/docs/mass/moose-the-mass-client-user-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/moose-the-mass-client-user-guide/</guid><description>&lt;p>
  
 
@@ -12,7 +16,11 @@
 
 
 
-&lt;a href="http://gws-access.jasmin.ac.uk/public/mohc_shared/moose-user-doc/external_user_guide.html" target="_blank" rel="noopener noreferrer">External Users&amp;rsquo; Version&amp;nbsp;
+
+
+ 
+
+&lt;a href="http://gws-access.jasmin.ac.uk/public/mohc_shared/moose-user-doc/external_user_guide.html" target="_blank" rel="noopener noreferrer nofollow">External Users&amp;rsquo; Version&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> hosted on JASMIN.&lt;/p></description></item><item><title>Setting up your JASMIN account for access to MASS</title><link>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</guid><description>&lt;p>The following notes are written assuming you are using a Linux machine in your
 home institution, that you have 
@@ -26,5 +34,11 @@ home institution, that you have
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/">applied for a new MASS account&lt;/a>, and that you have received an email from the
 Met Office Storage Team with your new MASS credentials file attached.&lt;/p></description></item></channel></rss>

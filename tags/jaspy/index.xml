@@ -7,9 +7,14 @@
  &lt;/div>
  &lt;/div>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p></description></item><item><title>Running python on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</guid><description>&lt;p>On the JASMIN 
  
 
@@ -21,6 +26,12 @@
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/">scientific analysis servers&lt;/a> and on the Lotus batch cluster, we currently support Python version 3.11 with 
  
 
@@ -32,4 +43,31 @@
 
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p></description></item></channel></rss>
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p>
+&lt;p>When you first log in, the default version of Python is that provided by the
+operating system. This is different to the one you shoud use for your work,
+and we recommend using the 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy environments&lt;/a>. In this example, we
+activate the current Jaspy environment before running Python.&lt;/p></description></item></channel></rss>

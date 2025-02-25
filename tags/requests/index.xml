@@ -5,9 +5,14 @@
 &lt;li>How to process a request for additional resources on an existing project&amp;rsquo;s service&lt;/li>
 &lt;/ul>
 
-&lt;h2 id="introduction" class="heading">Introduction &lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/a>&lt;/h2>
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
 &lt;p>Please make sure you have read the article
 
  
@@ -20,5 +25,11 @@
 
 
  
+
+
+
+ 
+ 
+
  &lt;a href="https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/">&amp;ldquo;Requesting resources&amp;rdquo;&lt;/a> to understand how the process works from the
 requester&amp;rsquo;s point of view.&lt;/p></description></item></channel></rss>

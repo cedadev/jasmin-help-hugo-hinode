@@ -43,7 +43,7 @@ Apptainer | another container framework included for HPC applications, supportin
 
 From the Azimuth tenancy landing page shown below click **Create a Platform** or **New platform**.
 
-{{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="Platform landing page" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/azimuth-tenancy-platform-landing-page.png" caption="Platform landing page" wrapper="col-12 mx-auto text-center">}}
 
 A list of available platforms will be shown, where you can choose the **Linux Workstation**.
 
@@ -53,51 +53,53 @@ the data volume size for your workstation which will be available at `/data`. If
 
 {{<mark>}}Can we have an image showing the options when creating a workstation here?{{</mark>}}
 
+{{<image src="img/docs/platform-in-depth-workstation/new-work-station.png" caption="New work station" wrapper="col-10 mx-auto text-center">}}
+
 The platform scheduling window shown below will then enable you to review the current requested resource count/size against the projected resource usage and the tenant resource quota/allocation.
 
-{{<image src="img/docs/azimuth-images/Azimuth-platform-resource-consumption-Page.jpg" caption="Platform Scheduling" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/Azimuth-platform-resource.png" caption="Platform Scheduling" wrapper="col-6 mx-auto text-center">}}
 
 This enables better resource management. Once done click **confirm** to go to the azimuth platform configuring page, shown below.
 
-{{<image src="img/docs/azimuth-images/Azimuth-configuring-page.jpg" caption="Platform in configuring state" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/Azimuth-configuring-page.png" caption="Platform in configuring state" wrapper="col-6 mx-auto text-center">}}
 
 ### Platform Usage
 
 Once the deployment is complete, the deployment page indicates the workstation is ready. Click **details** to go to the platform instance or **monitor** to monitor the workstation. From  **Web console**, you can either copy the URL for the web interface for the workstation, or click on the link for the webconsole for the workstation.
 
-{{<image src="img/docs/azimuth-images/Azimuth-webconsole-url-Page.jpg" caption="Platform in ready state" wrapper="col-3 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/platform-ready-state.png" caption="Platform in ready state" wrapper="col-10 mx-auto text-center">}}
 
 Additionally when you hover the mouse over the Monitoring link you can either copy the link or click on the go-to service link to navigate to the Grafana monitoring page shown below.
 
-{{<image src="img/docs/azimuth-images/Azimuth-monitoring-Page.jpg" caption="Monitoring" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/Azimuth-monitoring-Page.png" caption="Monitoring" wrapper="col-12 mx-auto text-center">}}
 
 When you click the **Details** button on the platform you can view the platform details shown below.
 
-{{<image src="img/docs/azimuth-images/Azimuth-platfor-details-Page.jpg" caption="Platform details" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/Azimuth-platform-details-Page.png" caption="Platform details" wrapper="col-11 mx-auto text-center">}}
 
 The platform details also allows for **updating**, **patching** or **deleting** the platform.
 
-{{<image src="img/docs/azimuth-images/Azimuth-update-platform-Page.jpg" caption="Platform update pop up" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/Azimuth-update-platform-Page.png" caption="Platform update pop up" wrapper="col-9 mx-auto text-center">}}
 
 The platform details page allows you navigate to the webconsole service (Apache guacamole) or the monitoring page as indicated earlier. For the GUI and webconsole, navigate to the **All connections** section after clicking **Web console** on the **platform** tile. You will be able to view any recent desktop or shell sessions. 
 
 **Note** You may need to allow your browser to use the clipboard for copying and pasting text from your PC/Mac to the console instance of the platform.
 
-{{<image src="img/docs/azimuth-images/azimuth-all-connections-page.jpg" caption="All connections" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/azimuth-all-connections-page.png" caption="All connections" wrapper="col-10 mx-auto text-center">}}
 
 From the all connections you can navigate to a browser-based desktop instance of your Ubuntu desktop or instance of a shell. It is important to take note of the unique ID `xxxxxxxxxxxxxx` in the `azimuth.jasmin.ac.uk/guacamole/#/` url.
 
 To create a new volume, navigate to the Tenancy/project page and in the advanced section click the Volumes button.
 There you can click the **New volume** button shown below:
 
-  {{<image src="img/docs/azimuth-images/azimuth-new-volume-page.jpg" caption="New volume" wrapper="col-12 mx-auto text-center">}}
+  {{<image src="img/docs/platform-in-depth-workstation/azimuth-new-volume-page.png" caption="New volume" wrapper="col-14 mx-auto text-center">}}
 
 Specify the volume name, size and click on create.
 
-{{<image src="img/docs/azimuth-images/azimuth-volume-name-page.jpg" caption="New volume" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/azimuth-volume-name-page.png" caption="New volume name" wrapper="col-6 mx-auto text-center">}}
 
 Once the volume is created you can perform actions like **attach**, **detach** or **delete** the volume on an instance of a platform. This is available from the Actions button
   
-{{<image src="img/docs/azimuth-images/azimuth-attach-volume-page.jpg" caption="New volume" wrapper="col-3 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/azimuth-attach-volume-page.png" caption="Attatch, delete or detach a volume" wrapper="col-6 mx-auto text-center">}}
 
 You can also detach or delete an existing volume in your tenancy. It is particularly important to note that you should only manually detach or delete a volume that you manually attached or created, not the ones created with the platform.

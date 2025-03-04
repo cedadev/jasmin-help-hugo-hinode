@@ -33,15 +33,15 @@ To access azimuth navigate to the [JASMIN Azimuth Portal](https://portal.azimuth
 
 {{<mark>}}Can the below show the whole window with the login button showing{{</mark>}}
 
-{{<image src="img/docs/azimuth-images/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}
 
 Click "Sign in", top right, then enter your JASMIN credentials as requested:
 
-{{<image src="img/docs/azimuth-images/Azimuth-Login-Page.jpg" caption="Log in" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-Login-Page.png" caption="Log in" wrapper="col-6 mx-auto text-center">}}
 
 Click the "My Tenancies" button. You should then see a list of one or more tenancies that you belong to.
 
-{{<image src="img/docs/azimuth-images/Azimuth-list-of-Tenants-Page.jpg" caption="List of Tenancies" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-list-of-Tenants-Page.png" caption="List of Tenancies" wrapper="col-12 mx-auto text-center">}}
 
 Select a tenancy from the list. The landing page for that tenancy will then be shown.
 
@@ -71,12 +71,12 @@ Azimuth, however they can be granted access to existing platforms provisioned by
 
 ### Creating Platforms
 
-{{<image src="img/docs/azimuth-images/azimuth-tenancy-platform-landing-page.jpg" caption="platform landing page" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/azimuth-tenancy-platform-landing-page.png" caption="platform landing page" wrapper="col-12 mx-auto text-center">}}
 
 The **Platform** page provides two equivalent methods for initiating the platform creation process. When you select
 **Create Platform / New platform** on the landing page, you can choose a platform type, based on your project as shown in the image below.
 
-{{<image src="img/docs/azimuth-images/Azimuth-new-platform.jpg" caption="New platform list page" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-new-platform.png" caption="New platform list page" wrapper="col-12 mx-auto text-center">}}
 
 When you select a platform, some configuration settings are required, including the platform name, size, and volume. When creating platforms it is recommended that you choose descriptive and meaningful names.
 
@@ -113,7 +113,7 @@ Azimuth **Quotas** provides a comprehensive overview of resource allocation with
 
 as shown below:
 
-{{<image src="img/docs/azimuth-images/Azimuth-quotas-Page.jpg" caption="Quotas page" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-quotas-Page.png" caption="Quotas page" wrapper="col-12 mx-auto text-center">}}
 
 ### Advanced
 

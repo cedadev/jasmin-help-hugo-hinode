@@ -22,19 +22,19 @@ To create a **JupyterHub Platform** navigate to Azimuth Project/Tenancy page and
 Enter the **Platform name** and either select an existing **Kubernetes cluster** or create one here by clicking the plus sign at the end of the textbox. Enter the cluster details: **Name** | **Template** | **Version** | **number of worker nodes** and define **auto healing** if needed and deploy the instance creation.
 
 {{<mark>}}Replace with not stretched image{{</mark>}}
-{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-details.jpg" caption="New Jupyterhub platform details" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-details.png" caption="New Jupyterhub platform details" wrapper="col-9 mx-auto text-center">}}
 
 Once successfully deployed, you can access the platform from the Azimuth tenancy landing page.
 
-{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-and-cluster-deployed.jpg" caption="jupyterhub deployment complete" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-and-cluster-deployed.png" caption="jupyterhub deployment complete" wrapper="col-9 mx-auto text-center">}}
 
 From the **platform details** page you can access the jupyter notebook service from the **services** section. Use the **details** button for the deployed jupyterhub instance  to **refresh**, **update** or **delete** the service.
   
-{{<image src="img/docs/azimuth-images/azimuth-jupyterhub-platform-details-page.jpg" caption="jupyterhub details" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-platform-details-page.png" caption="jupyterhub details" wrapper="col-10 mx-auto text-center">}}
 
 To update the jupyterhub instance, use the **update** window to change the **Notebook CPUs**, **Notebook RAM** and **Notebook storage**.
 
-{{<image src="img/docs/azimuth-images/azimututh-jupyterhub-update.jpg" caption="jupyterhub update" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimututh-jupyterhub-update.png" caption="jupyterhub update" wrapper="col-9 mx-auto text-center">}}
 
 Click **update platform** to make the changes take effect.
 

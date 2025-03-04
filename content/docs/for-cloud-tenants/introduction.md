@@ -15,8 +15,7 @@ Cloud is similar in that it allows an institution or project to consume
 compute resources as a utility, with no need to provision and maintain the
 associated physical infrastructure. Users can provision their own virtual
 machines (VMs), allowing for greater
-flexibility. The JASMIN Cloud also allows users to provision clusters using the
-see {{<link "azimuth-cloud-portal">}} Azimuth Portal{{</link>}}.
+flexibility. The JASMIN Cloud also allows users to provision clusters using the {{<link "azimuth-cloud-portal">}} Azimuth Portal{{</link>}}.
 
 ## Cloud terminology
 
@@ -50,9 +49,9 @@ configuration) and for managing their own users.**
 The Azimuth Platform also provides "Platforms" which are Platform-as-a-Service
 offerings that tenants can use to deploy clusters such as:
 
-- identity cluster
-- storage cluster (NFS)
-- Kubernetes cluster
+- Kubernetes clusters
+- Jupyter Notebooks
+- VMs with a web browser accessible shell and desktop
 
 Each tenancy has its own local network, where machines have IP addresses in the
 range `192.168.3.0/24` - all machines in the tenancy can talk to each other
@@ -76,7 +75,7 @@ Store, OpenDAP, HTTP).
 We expect Tenants to abide by the terms and conditions set out by
 {{<link "jasmin_tcs">}}JASMIN{{</link>}}, {{<link "stfc_cloud_tcs">}}STFC Cloud{{</link>}},
 and {{<link "ukri_tcs">}}UKRI{{</link>}}.
-Importantly, this includes abiding by the {{<link "stfc_cloud_patching">}}patching policy{{</link>}} set out by UKRI and STFC..
+Importantly, this includes abiding by the {{<link "stfc_cloud_patching">}}patching policy{{</link>}} set out by UKRI.
 
 {{<alert type="info">}}
 In line with UKRI security policy, we expect tenants to react in a timely manner to any security vulnerabilities.
@@ -85,15 +84,14 @@ vulnerabilities patched within 14 days.  Failure to comply may result in tenancy
 machines powered down.
 {{</alert>}}
 
-We also expect tenants to practice good practices around machine lifecycles:
+We also expect tenants to adhere to good practices around machine lifecycle:
 patching machines and updating clusters regularly, and working in a reproducible
-way i.e. treating machines as "cattle" not "pets".
+way; i.e. treating machines as "cattle" not "pets".
 
 ### Patching and Machine Lifecycle
 
-Machines should be kept up to date and patched regularly, and also rebooted so that
-updates which required reboot can be applied. The suggested interval for this is 6
-weeks.
+Machines should be kept up to date and patched regularly, and also rebooted where required so that
+updates can be applied. The suggested interval for this is 6 weeks.
 
 Machines should also be cycled out of production regularly. VMs should not be left
 to age for a number of reasons, primarily that older images are more vulnerable to
@@ -112,7 +110,7 @@ Infrastructure-as-Code (IaC). These include: Ansible, Terraform, Docker, Cluster
 Kubernetes, and Helm.
 
 The Azimuth Portal is able to provision {{<link "platform-in-depth-k8s">}}Kubernetes Clusters{{</link>}}
-which can be used to make machine lifecycles and reproducible deployments easier,
+which can be used to make machine lifecycle and reproducible deployments easier,
 including:
 
 - deployments can be deployed and Helm charts, meaning that a deployment is a single 

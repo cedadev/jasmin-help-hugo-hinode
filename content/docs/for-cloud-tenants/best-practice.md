@@ -5,11 +5,10 @@ title: Best Practice
 weight: 90
 ---
 
-Coming soon...
+Work in progress
 
-The STFC CLoud documentation has detailed information about good practice for using the cloud: https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual+Machine+Best+Practises
+The STFC Cloud documentation has information about [good practice for using the cloud](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual+Machine+Best+Practises).
 
-TODO add resources
 
 ## Security
 
@@ -17,7 +16,6 @@ We expect Tenants to abide by the terms and conditions set out by
 {{<link "jasmin_tcs">}}JASMIN{{</link>}}, {{<link "stfc_cloud_tcs">}}STFC Cloud{{</link>}},
 and {{<link "ukri_tcs">}}UKRI{{</link>}}.
 This includes abiding by {{<link "stfc_cloud_patching">}}STFC Cloud's{{</link>}} and UKRI's patching policy.
-
 {{<alert type="info">}}
 
 ### Patching Policy
@@ -31,27 +29,35 @@ machines powered down.
 
 ## VM life cycle
 
-We expect tenants to regularly refresh their infrastructure by creating machines with new images and re installing all required software. The suggested timeframe for this is every 6 months or more. This allows for better security of machines and means that machines are more stable (more problems are expected as machines get older). We also expect tenants to be easily able to reinstall their services incase we cannot recover machines (though we will reasonably try if machines are refreshed regularly). in other words we expect tenants to treat their machines as "cattle" rather than "pets". Infrastructure-as-Code techniques and technologies can be empployed be the tenant to make redeployment as easy and painless as possible.
+We expect tenants to regularly refresh their infrastructure by creating machines with new images and re installing all required software. The suggested time frame for this is every 6 months or more. This allows for better security of machines and means that machines are more stable (more problems are expected as machines get older). We also expect tenants to easily be able to reinstall their services in the event we cannot recover machines (though we will reasonably try if machines are refreshed regularly). In other words, we expect tenants to treat their machines as "cattle" rather than "pets". Infrastructure-as-Code techniques and technologies can be employed be the tenant to make redeployment as easy and painless as possible.
 
 ## Infrastructure-as-Code
 
-We strongly encourage tenants to deploy applications and configure their mahcines in a reproducible way to ___ against VM ot hypervisor issues, as well as regularly phasing out old machines and replacing them with new images. One way of doing this is using Infrastructure-as-Code techniques, including: using Ansible to create and run provisioning scripts to easily re-provision a new machines when required; Terraform/OpenTofu to provision machines and other infrastructure by making calls to the Openstack API in an easiliy repeatable way; Kubernetes which provides a platform which containers can be deployed on and managed using Kubernetes deplyements and Helm; and ClusterAPI which provides declarative APIs and tooling to simplify provisioning, upgrading, and operating multiple Kubernetes clusters (from an existing cluster).
+We strongly encourage tenants to deploy applications and configure their machines in a reproducible way to mitigate against VM or hypervisor issues, as well as regularly phasing out old machines and replacing them with new images. One way of doing this is using Infrastructure-as-Code techniques, including: using Ansible to create and run provisioning scripts to easily re-provision a new machines when required; Terraform/OpenTofu to create machines and other infrastructure by making calls to the Openstack API in an easily repeatable way; Kubernetes which provides a platform which containers can be deployed on and managed using Kubernetes deployments and Helm; and ClusterAPI which provides declarative APIs and tooling to simplify provisioning, upgrading, and operating multiple Kubernetes clusters (from an existing cluster).
 
-Also note that these methods would allow easier deployment to comercial cloud if required.
+Also note that these methods would allow easier deployment to commercial cloud if required.
 
 ### Ansible
 
-Ansible has probably the easiest learning curve and is most useful for the vast majority of JASMIN Cloud tenants. It allows you to define steps for the install of one, or many, services using YAML to describe what the services should look like and what steps are taken to install them, with any changes which are required to the machine. It does this using readilly available (and very well documented) building blocks. Once the Ansible playbook is written the first time, when a machine needs to be replaced, it is simply a matter of running the playbook pointing at the new machine.
+Ansible has probably the easiest learning curve and is most useful for the vast majority of JASMIN Cloud tenants. It allows you to define steps for the install of one, or many, services using YAML to describe what the services should look like and what steps are taken to install them, with any changes which are required to the machine. It does this using readily available (and very well documented) building blocks. Once the Ansible playbook is written the first time, when a machine needs to be replaced, it is simply a matter of running the playbook pointing at the new machine.
+
+See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736734/Ansible) on Ansible, and the [Ansible documentation](https://docs.ansible.com/) (particularly [Getting Started](https://docs.ansible.com/ansible/latest/getting_started/index.html)) for more information.
 
 ### Terraform/OpenTofu
 
-Terraform, and it's open source fork OpenTofu, provide a way of declaring what infrastructure should look like using the building blocks provided for the specific cloud. It then creates or changes the existing infrastructure using the least changes possible so that what is deployed matches what has been defined. This is a powerful tool for automation and reproduciblilty which can also invoke Ansible playbooks to install software and sevices onto the infrastructure after it has been created. The combination of Terraform and Ansible would provide the most resilience incase of machine loss because of the low effort reinstalling those machines takes - Terraform/OpenTofu would just be run again to recreate the infrastructure and services instead of an admin having to manually create machines and install what is required (which oftern takes a large amount of time!).
+Terraform, and it's open source fork OpenTofu, provide a way of declaring what infrastructure should look like using the building blocks provided for the specific cloud. It then creates or changes the existing infrastructure using the least changes possible so that what is deployed matches what has been defined. This is a powerful tool for automation and reproducibility which can also invoke Ansible playbooks to install software and services onto the infrastructure after it has been created. The combination of Terraform and Ansible would provide the most resilience incase of machine loss because of the low effort reinstalling those machines takes - Terraform/OpenTofu would just be run again to recreate the infrastructure and services instead of an admin having to manually create machines and install what is required (which often takes a large amount of time!).
+
+See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736760/Terraform) on Terraform, and the Terraform Openstack Provider [documentation](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs), as well as the [OpenTofu equivalent](https://search.opentofu.org/provider/terraform-provider-openstack/openstack/v2.1.0).
 
 ### Kubenetes
 
-Kubernetes, while having a reasonably high learning curve presents a great opportunity for tennats to deploy robust and easily updatable and redeployable services. In CEDA we use a Kubernetes cluster to deploy most of our user facing services. It allows us to more frequently update and patch applications and services, with minimal downtime and a robust deployment.
+Kubernetes, while having a reasonably high learning curve presents a great opportunity for tenants to deploy robust and easily updatable and re-deployable services. In CEDA we use a Kubernetes cluster to deploy most of our user facing services. It allows us to more frequently update and patch applications and services, with minimal downtime and a robust deployment.
 
-Note that Azimuth provides an easily deployable Kubernetes cluster as part of its platform offerings, giving users the lowest barrier to entry possible by providing a cluster with as many widely useful services already installed.
+Azimuth provides an easily deployable Kubernetes cluster as part of its platform offerings, giving users the lowest barrier to entry possible by providing a cluster with as many widely useful services already installed.
+
+Creating Kubernetes clusters outside of the Azimuth platforms is possible using multiple methods, but is not advised because of the major advantages which the  {{<link "platform-in-depth-k8s">}}Azimuth Kubernetes Platform{{</link>}} gives.
+
+See the [Kubernetes documentation](https://kubernetes.io/docs/home/) for details on how to use Kubernetes. The official [tutorials](https://kubernetes.io/docs/tutorials/) are particularly good.
 
 ### Cluster API
 

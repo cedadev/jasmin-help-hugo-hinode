@@ -5,11 +5,15 @@ title: Linux Admin
 weight: 80
 ---
 
-TODO link and/or grab some stuff from the cloud docs
+Work in progress
 
 ## Patching
 
+Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams.
+
 ## Server hardening
+
+Tenants are strongly encouraged to "harden" their machines against security issues by patching their machines and turning off any non-essential services. Tenants must also abide by STFC Cloud's [security compliance](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/673185793/Security+Compliance), which includes a number of essential services which must not be disabled.
 
 ## Managing storage
 
@@ -141,3 +145,5 @@ echo "/dev/sdb1  /data  ext4  defaults  0 0" >> /etc/fstab
 
 
 ## SSH keys/ access management
+
+When creating a VM through the Azimuth portal, the creator's ssh key is added to the machine so that they can ssh in. Any extra keys needed can be added into the machine to enable others to ssh in as well. Alternatively, when the Azimuth Linux workstation is used, the Zenith proxy can be used to launch a shell (or desktop) in the browser.

@@ -27,16 +27,19 @@ To create a Kubernetes cluster, navigate to the project/tenancy landing page, cl
 
 Enter the cluster name, select a cluster template to use, select a control plane to use, select or add a new node group, enable or disable cluster addons, enable **Kubernetes dashboard** and enable **cluster monitoring**.
 
-{{<mark>}}Can we have an image of the k8s cluster options here instead?{{</mark>}}
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-cluster-details.png" caption="kubernetes options" wrapper="col-9 mx-auto text-center">}}
 
 In order to create a Kubernetes platform, we also have to define a node group for the Kubernetes worker nodes.
 
-{{<mark>}}Can we have an image of creating a node group here?{{</mark>}}
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-node-group.png" caption="kubernetes cluster node group" wrapper="col-9 mx-auto text-center">}}
 Advanced features can be set as shown:
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-advanced-options.png" caption="kubernetes advanced options" wrapper="col-9 mx-auto text-center">}}
+
+{{<alert type="info">}}
+Note that if you use the advanced option for enabling a Kubernetes ingress, you do not have to provision the ingress controller yourself. Doing so can break the cluster.
+You must either: use the advanced option to deploy ingress, or do it manually.
+{{</alert>}}
 
 Click **create platform** to proceed.
 
@@ -62,14 +65,13 @@ Additionally you can **Upgrade** the images in the cluster and potentially the K
 
 *Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped.*
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-upgrade.png" caption="kubernetes upgrade" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-upgrade.png" caption="kubernetes upgrade" wrapper="col-7 mx-auto text-center">}}
 
 You can also permanently **Delete** the cluster.
 
-{{<mark>}}Can this be smaller?{{</mark>}}
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-delete.png" caption="Delete a cluster" wrapper="col-4 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-delete.png" caption="Delete a cluster" wrapper="col-5 mx-auto text-center">}}
 
-The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloading the Kubeconfig file. 
+The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloading the Kubeconfig file.
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-dashboard.png" caption="kubernetes dashboard" wrapper="col-12 mx-auto text-center">}}
 

@@ -21,12 +21,12 @@ To create a **JupyterHub Platform** navigate to Azimuth Project/Tenancy page and
 
 Enter the **Platform name** and either select an existing **Kubernetes cluster** or create one here by clicking the plus sign at the end of the textbox. Enter the cluster details: **Name** | **Template** | **Version** | **number of worker nodes** and define **auto healing** if needed and deploy the instance creation.
 
-{{<mark>}}Replace with not stretched image{{</mark>}}
+
 {{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-details.png" caption="New Jupyterhub platform details" wrapper="col-9 mx-auto text-center">}}
 
 Once successfully deployed, you can access the platform from the Azimuth tenancy landing page.
 
-{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-and-cluster-deployed.png" caption="jupyterhub deployment complete" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-and-cluster-deployed.png" caption="jupyterhub deployment complete" wrapper="col-12 mx-auto text-center">}}
 
 From the **platform details** page you can access the jupyter notebook service from the **services** section. Use the **details** button for the deployed jupyterhub instance  to **refresh**, **update** or **delete** the service.
   
@@ -48,7 +48,7 @@ Azimuth offers several Jupyter-based options such as:
 
 ### Platform usage
 
-To access the deployed JupyterHub instance, click **Juptyer Notebook** on the **platform** tile. This link can be shared with others to access the same JupyterHub instance. If the user accessing it is logged into Azimuth, then they will be logged in to JupyterHub using their Azimuth user. For others who don't have access to Azimuth, users will need to be created using the tenancy's **Identity Provider** by the tenancy admin, which then need to be shared with the users who need access.
+To access the deployed JupyterHub instance, click **Juptyer Notebook** on the **platform** tile. This link can be shared with others to access the same JupyterHub instance. If the user accessing it is logged into Azimuth, then they will be logged in to JupyterHub using their Azimuth user. For others who don't have access to Azimuth, users will need to be created using the tenancy's {{<link "azimuth-identity-provider">}}**Identity Provider**{{</link>}} by the tenancy admin, which then need to be shared with the users who need access.
 
 ## DaskHub
 

@@ -5,11 +5,21 @@ title: Linux Admin
 weight: 80
 ---
 
-Work in progress
 
 ## Patching
 
-Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams.
+Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams, and abide by the patching policy.
+
+{{<alert type="info">}}
+
+### Patching Policy
+
+We expect tenants to react in a timely manner to any security vulnerabilities.
+This means critical vulnerabilities are patched within 7 days, and high
+vulnerabilities are patched within 14 days. This is following UKRI security
+policy. Failure to comply may result in tenancy access being revoked and
+machines powered down.
+{{</alert>}}
 
 ## Server hardening
 
@@ -17,30 +27,35 @@ Tenants are strongly encouraged to "harden" their machines against security issu
 
 ## Managing storage
 
-When provisioned, a virtual machine gets allocated a small hard disk (the
+When machines are manually provisioned, a virtual machine gets allocated a small hard disk (the
 exact size of the disk depends on the selected machine size). This disk is
 intended to run the operating system only. If you require additional storage
 for data, it is possible to add extra volumes to a virtual machine.
 
+The Volume tab under the Advanced section allows creation of volumes manually.
+
+{{<image src="img/docs/linux-admin/Volumes-azimuth.png"  wrapper="col-4 mx-auto text-center">}}
+
 First, create a new volume by navigating to the volumes tab and clicking on
 "New Volume":
 
-{{<image src="img/docs/sysadmin-guidance-external-cloud/file-BsmkG3EXIw.png" caption="create volume dialogue">}}
+{{<image src="img/docs/linux-admin/new-volume-azimuth.png"  wrapper="col-12 mx-auto text-center">}}
 
 This will launch a dialog that allows you to specify a name and size for the
 volume:
 
-{{<image src="img/docs/sysadmin-guidance-external-cloud/file-HRTEvPf0f6.png" caption="specify name and size for volume">}}
+{{<image src="img/docs/linux-admin/new-vol-dialogue-azimuth.png"  wrapper="col-6 mx-auto text-center">}}
 
 Once the volume becomes available, you can attach it to a VM. First, click on
 the "Actions" button and select "Attach volume to machine":
 
-{{<image src="img/docs/sysadmin-guidance-external-cloud/file-Y8uws7yYHi.png" caption="menu options">}}
+
+{{<image src="img/docs/linux-admin/attach-vol-azimuth.png"  wrapper="col-12 mx-auto text-center">}}
 
 This will open a dialog allowing you to select the VM that you want to attach
 the volume to:
 
-{{<image src="img/docs/sysadmin-guidance-external-cloud/file-tMKNp6gxCt.gif" caption="attach volume to VM">}}
+{{<image src="img/docs/linux-admin/select-machine-vol-azimuth.png"  wrapper="col-6 mx-auto text-center">}}
 
 Once the volume has attached to the VM, the new disk will be visible to the
 machine but will not be usable. This can be verified using the `lsblk`

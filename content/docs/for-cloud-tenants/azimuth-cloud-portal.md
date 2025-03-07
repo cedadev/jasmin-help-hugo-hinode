@@ -31,7 +31,6 @@ To get a cloud tenancy or access an existing one, you currently need to contact 
 
 To access azimuth navigate to the [JASMIN Azimuth Portal](https://portal.azimuth.jasmin.ac.uk/) which will take you to the landing page shown in the image below.
 
-{{<mark>}}Can the below show the whole window with the login button showing{{</mark>}}
 
 {{<image src="img/docs/azimuth-cloud-portal/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}
 
@@ -76,7 +75,7 @@ Azimuth, however they can be granted access to existing platforms provisioned by
 The **Platform** page provides two equivalent methods for initiating the platform creation process. When you select
 **Create Platform / New platform** on the landing page, you can choose a platform type, based on your project as shown in the image below.
 
-{{<image src="img/docs/azimuth-cloud-portal/Azimuth-new-platform.png" caption="New platform list page" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-new-platform.png" caption="New platform list page" wrapper="col-9 mx-auto text-center">}}
 
 When you select a platform, some configuration settings are required, including the platform name, size, and volume. When creating platforms it is recommended that you choose descriptive and meaningful names.
 
@@ -118,3 +117,5 @@ as shown below:
 ### Advanced
 
 In the advanced tab there are two sections: the **machine** and the **volume** sections. Some actions you can be able to perform on the machines include **viewing** a list of existing machines, **edit** or **delete** machines, **attach/detach** external IPs, **define firewall rules** and **Start/Stop/Restart** machines. On the **volume tab**, users are able to, **view** a list of volumes in the project and **create new** volumes by providing the name and volume size. Additionally users can **delete** and **attach / detach** volumes.
+
+Note that altering any machines which have been deployed as part of platforms can (and probably will) break that platform.

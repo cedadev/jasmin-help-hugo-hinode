@@ -51,9 +51,8 @@ On the create a new platform window provide a platform name of your choice. ***N
 From the dropdown list select from a list of predefined sizes (*note that each resource used reduces the number of resources in the allocated quota for the project/tenancy*) and a select
 the data volume size for your workstation which will be available at `/data`. If you want to make changes to the configurations, use the back button, otherwise click on Create Platform.
 
-{{<mark>}}Can we have an image showing the options when creating a workstation here?{{</mark>}}
 
-{{<image src="img/docs/platform-in-depth-workstation/new-work-station.png" caption="New work station" wrapper="col-10 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-workstation/new-work-station.png" caption="New work station" wrapper="col-9 mx-auto text-center">}}
 
 The platform scheduling window shown below will then enable you to review the current requested resource count/size against the projected resource usage and the tenant resource quota/allocation.
 

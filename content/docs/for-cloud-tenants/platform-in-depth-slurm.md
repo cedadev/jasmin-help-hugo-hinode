@@ -23,13 +23,12 @@ To create a new Slurm Cluster platform navigate to your Azimuth tenancy/project 
 
 From the list of platforms select the Slurm workload manager platform option.
 
-{{<mark>}}Image is a bit blurry - can we get a better one?{{</mark>}}
 
 {{<image src="img/docs/platform-in-depth-slurm/Azimuth-create-slurm-cluster-configuration-Page.png" caption="Create Slurm platform" wrapper="col-9 mx-auto text-center">}}
 
 Once the deployment is complete an instance of a slurm cluster will appear under the **Platforms** Tab.
 
-{{<image src="img/docs/platform-in-depth-slurm/Azimuth-slurm-cluster-Page.png" caption="Slurm cluster" wrapper="col-3 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-slurm/Azimuth-slurm-cluster-Page.png" caption="Slurm cluster" wrapper="col-4 mx-auto text-center">}}
 
 ## Platform usage
 
@@ -47,7 +46,7 @@ Click **Open OnDemand** to access and manage the Slurm cluster.
 
 This web interface can be used to navigate the file system, create and manage jobs as shown below:
 
-{{<image src="img/docs/platform-in-depth-slurm/managejobs.png" caption="Manage jobs" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-slurm/managejobs.png" caption="Manage jobs" wrapper="col-9 mx-auto text-center">}}
 
 To simplify the creation of jobs, **Open OnDemand** offers templates that reduce the effort associated with job and assciated script creation.
 

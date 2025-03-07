@@ -5,10 +5,7 @@ title: Azimuth Identity Provider
 weight: 70
 ---
 
-Azimuth provides a Keycloak realm for each tenancy. Some of the platforms in Azimuth use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. The following platforms can have users managed by this identity provider:
-
-- JupyterHub
-
+Azimuth provides a Keycloak realm for each tenancy. Some of the platforms in Azimuth use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed in this way.
 
 To access the Identity Provider, go to the **Identity Provider** tab, and click **Open identity provider**.
 
@@ -31,3 +28,10 @@ Before clicking create (you can go back to this if you edit the user), users can
 In order to sign in, a user needs to be given a temporary password. This can be done by going to the detail of the user, navigating to the **Credentials** tab, and clicking **Set password**. If the *Update Password* action was chosen during setup, then the user will be forced to change their password when they first log in.
 
 {{<image src="img/docs/azimuth-identity-provider/set-password.png"  wrapper="col-12 mx-auto text-center">}}
+
+For more information, see the Keycloak documentation on: 
+
+- [Managing users](https://www.keycloak.org/docs/latest/server_admin/#assembly-managing-users_server_administration_guide)
+- [Assigning users to groups](https://www.keycloak.org/docs/latest/server_admin/#proc-managing-groups_server_administration_guide)
+- [Configuring authentication policies](https://www.keycloak.org/docs/latest/server_admin/#configuring-authentication_server_administration_guide), e.g. password requirements, multi-factor authentication
+- [Integrating external identity providers](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)

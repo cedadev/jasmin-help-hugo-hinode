@@ -2,106 +2,120 @@
 description: Introduction to the Azimuth cloud portal
 slug: azimuth-cloud-portal
 title: The Azimuth Cloud Portal
+weight: 20
 ---
-- Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC) and artificial intelligence (AI) applications.
-- It supports OpenStack clouds and can manage a range of platforms from single-machine workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.
 
-## Key features include:
+Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC)
+and artificial intelligence (AI) applications. It supports OpenStack clouds and can manage a range of platforms from single-machine
+workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.
 
-## Multiple Authentication Methods:
+**Azimuth Science Platforms** are designed to be flexible and high-performing computing environments tailored for scientific research.
+They offer a unified interface for managing both Kubernetes and Cluster-as-a-Service (CaaS) platforms, supporting multiple authentication
+methods like username/password, Keystone federation, and application credentials.  Azimuth uses Zenith as an application proxy,
+allowing services to be exposed without consuming floating IPs or requiring SSH keys. It simplifies OpenStack management through
+automatic network detection, machine and volume management, and security group configuration.
 
-Supports username/password, Keystone federation, and application credentials.
+These platforms are ideal for high-performance computing (HPC) tasks, enabling research in disciplines that
+demand significant processing power. Researchers have the flexibility to configure their environments to meet
+specific needs, including choice of operating system, software tools, and hardware. Cloud integration ensures
+scalability and accessibility, allowing researchers to access their environments from anywhere. Collaboration is
+facilitated through tools like Jupyter Notebooks for interactive data exploration and analysis. Ultimately, Azimuth Science Platforms
+aim to enhance the efficiency and effectiveness of scientific research by providing customizable and powerful computing resources.
 
-## On-demand Platforms:
+A **project**, also known as a **cloud tenancy**, is an organizational unit in the cloud where users are assigned.
+Users can be part of multiple tenancies, and all resources within a tenancy are visible and editable by its members or
+if a **external IP** is attached, external users can also access it.
+To get a cloud tenancy or access an existing one, you currently need to contact Helpdesk Support, *This may change in the future*.
 
-Unified interface for managing Kubernetes and Cluster-as-a-Service (CaaS) platforms.
+## Using the JASMIN Azimuth Cloud Portal
 
-## Application Proxy:
+To access azimuth navigate to the [JASMIN Azimuth Portal](https://portal.azimuth.jasmin.ac.uk/) which will take you to the landing page shown in the image below.
 
-Uses Zenith to expose services without consuming floating IPs or requiring SSH keys.
 
-## Simplified OpenStack Management:
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}
 
-Automatic network detection, machine and volume management, and security group configuration.
+Click "Sign in", top right, then enter your JASMIN credentials as requested:
 
-- what's it's purpose (simplification of Horizon)
-Azimuth Science Platforms are designed to provide flexible, high-performance computing environments tailored for scientific research.
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-Login-Page.png" caption="Log in" wrapper="col-6 mx-auto text-center">}}
 
-Here are some key purposes:
+Click the "My Tenancies" button. You should then see a list of one or more tenancies that you belong to.
 
-## High-Performance Computing (HPC):
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-list-of-Tenants-Page.png" caption="List of Tenancies" wrapper="col-12 mx-auto text-center">}}
 
-These platforms support large-scale computational tasks, making them ideal for scientific disciplines that require significant processing power.
+Select a tenancy from the list. The landing page for that tenancy will then be shown.
 
-## Flexibility:
+The **Platforms** section displays the associated any platforms which have been deployed.
+Additional tabs include:
 
-Researchers can configure their computing environments to meet specific needs, such as choosing the operating system, software tools, and hardware specifications.
+- **Quotas** showing resource quotas for the current tenancy,
+- **Identity Provider** displays the configured identity providers and their associated settings.
+- **Advanced** provides access to the advanced feature settings for the platform and associated resources. Within this:
+  - **Machines** show provisioned compute resources, referred to as "machines"
+  - **Volumes** shows the provisioned storage volumes.
+  
+**Switch Tenancy** enables users to transition between tenancies to which they have authorised access.
 
-## Cloud Integration:
+The **Azimuth Identity provider** employs a Keycloak-based identity provider to manage access control for platforms deployed
+within each tenancy. This identity provider, essentially a Keycloak realm, is tailored to each tenancy, controlling user
+accounts, roles, and groups for the platforms hosted there. By default, the realm is configured to allow users with
+Azimuth tenancy access to administer the realm itself. This grants them full control over the platforms deployed within the tenancy. To enhance
+security and control, administrators can use the Keycloak administration console to: 
 
-By leveraging cloud infrastructure, Azimuth Science Platforms offer scalability and accessibility, allowing researchers to access their environments from anywhere.
+- **Create Local Users** by directly adding users
+to the realm without requiring external authentication, and 
+- **Configure Federated Identity Providers** like GitHub, Google, or institutional identity providers to enable single sign-on (SSO). 
 
-## Collaboration:
+To further secure access, Azimuth uses **Platform Access Control** to control access to resources. Federated users cannot deploy platforms in
+Azimuth, however they can be granted access to existing platforms provisioned by others. This is achieved through role-based access control (RBAC) mechanisms within the Keycloak realm.
 
-These platforms facilitate collaborative research by providing tools like Jupyter Notebooks for interactive data exploration and analysis.
+### Creating Platforms
 
-Overall, Azimuth Science Platforms aim to enhance the efficiency and effectiveness of scientific research by providing customizable and powerful computing resources.
+{{<image src="img/docs/azimuth-cloud-portal/azimuth-tenancy-platform-landing-page.png" caption="platform landing page" wrapper="col-12 mx-auto text-center">}}
 
-## Usage
+The **Platform** page provides two equivalent methods for initiating the platform creation process. When you select
+**Create Platform / New platform** on the landing page, you can choose a platform type, based on your project as shown in the image below.
 
-To access azimuth navigate to: [log in](https://cloud.jasmin.ac.uk/). This will take you to the login page shown in the image below.
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-new-platform.png" caption="New platform list page" wrapper="col-9 mx-auto text-center">}}
 
-{{<image src="img/docs/azimuth-images/Azimuth-Login-Page.jpg" caption="Log in">}}
+When you select a platform, some configuration settings are required, including the platform name, size, and volume. When creating platforms it is recommended that you choose descriptive and meaningful names.
 
-In the top right-hand corner of the login page click on the Sign in button and enter your JASMIN username and password and click on sign in.
+The **Azimuth portal** allows you to deploy various platforms, these include:
 
-{{<image src="img/docs/azimuth-images/Azimuth-landing-Page.jpg" caption="Dashboard">}}
+{{<link "platform-in-depth-workstation">}}**Linux Workstation:**{{</link>}} a flexible Ubuntu 22.04 cloud instance with browser based GUI and shell.
 
-Once you have successifully signed in you will land on the JASMIN cloud Dashboard as shown below.
+{{<link "platform-in-depth-slurm">}}**Slurm Cluster:**{{</link>}} is a high-performance computing cluster using Slurm for resource management and job scheduling across multiple nodes. This platform is ideal for batch processing and computationally intensive tasks.
 
-{{<image src="img/docs/azimuth-images/Azimuth-list-of-Tenants-Page.jpg" caption="List of Tenants">}}
+{{<link "platform-in-depth-k8s">}}**Kubernetes:**{{</link>}} is a comprehensive container orchestration platform providing a robust environment for deploying and managing containerised applications. Please note that using other platforms may require an existing Kubernetes cluster.
 
-Here you will see a list of 1 or more projects/tenancies you have been granted access.
+{{<link "platform-in-depth-jupyterhub">}}**JupyterHub:**{{</link>}} is a multi-user JupyterHub deployment built upon Kubernetes, enabling collaborative and interactive computing with Jupyter Notebooks.
 
-## What is project/tenency?
+**Jupyter Notebooks:** provides interactive notebooks based on an existing notebook repository in a cloud environment, enhancing reproducibility.
+To launch a Jupyter Notebook, ensure your repository is repo2docker-compatible and hosted on platforms such as GitHub, GitLab, Zenodo, Figshare,
+or Dataverse. This platform, which functions similarly to Binder, supports any notebook repository adhering to the Reproducible Execution Environment
+Specification (REES). Additionally, the notebook instance includes a configurable cloud volume at `/data`, which is particularly useful for managing
+large datasets that cannot be included within the repository itself.
 
-A project, also known as a cloud tenancy, is an organizational unit in the cloud where users are assigned.
-Users can be part of multiple projects, and all resources within a project are visible and editable by its members.
-To get a cloud project or access an existing one, you need to contact your GWS manager.
+**DaskHub:** is a multi-user DaskHub deployment on Kubernetes, facilitating parallel computing in Python. It extends the capabilities of JupyterHub by providing a framework for distributed computing and scalable data analysis.
 
-## Platforms
+For details on some platforms please see: {{<link "platform-in-depth-slurm">}}**Slurm Cluster**{{</link>}} | {{<link "platform-in-depth-k8s">}}**Kubernetes**{{</link>}} | {{<link "platform-in-depth-jupyterhub">}}**JupyterHub**{{</link>}} | {{<link "platform-in-depth-workstation">}}**Linux Workstations**{{</link>}}
 
-Introduciton to the platforms and their usage
+### Quotas
 
-- breif overview of whats available, with links to the main ones in the other articles
-- (some of this can be taken from the azimuth docs)
+Azimuth **Quotas** provides a comprehensive overview of resource allocation within the Azimuth platform. This functionality allows users to monitor both the total resources allocated to them and the proportion of those resources currently in use. Azimuth **Quotas** include the following:
 
-##  Identity provider
+- **machines:** the number of allowed machines that can be created up in the project/tenancy
+- **volumes:** the number of volumes that can be created in the tenancy/project
+- **external IPs:** the number of external IPs assigned to the tenancy (note that the quota use is for the tenancy, *not* the IPs attached to machines/in use by platforms)
+- **CPUs:** the total number of CPUs that can be defined for all platforms in the current tenancy
+- **RAM:** the total amount of RAM that can be defined for all platforms in the current tenancy
+- **volume storage:** the total size of storage capacity that can be defined for platforms in the current tenancy
 
-- Explain what the identity provide is
-- what it is for
-- how to use it
-- limitations
-- advantages over host their own ID
-- links into some of the platforms - explicitly say which
+as shown below:
 
-## Quotas
+{{<image src="img/docs/azimuth-cloud-portal/Azimuth-quotas-Page.png" caption="Quotas page" wrapper="col-12 mx-auto text-center">}}
 
-Explaining quotas
+### Advanced
 
-- What all the quotas are
-- machines
-- volumes
-- external IPs (note that the quota use is for the tenancy, not the IPs attache to machines/ in use by platforms)
-- CPUs
-- RAM
-- volume storage
+In the advanced tab there are two sections: the **machine** and the **volume** sections. Some actions you can be able to perform on the machines include **viewing** a list of existing machines, **edit** or **delete** machines, **attach/detach** external IPs, **define firewall rules** and **Start/Stop/Restart** machines. On the **volume tab**, users are able to, **view** a list of volumes in the project and **create new** volumes by providing the name and volume size. Additionally users can **delete** and **attach / detach** volumes.
 
-## Advanced use
-
-Use of machine and volume tabs
-
-- manual creation of machines and volumes
-- actions on machines
-  - especially attaching IPs, firewall, restart
-- attaching volumes
+Note that altering any machines which have been deployed as part of platforms can (and probably will) break that platform.

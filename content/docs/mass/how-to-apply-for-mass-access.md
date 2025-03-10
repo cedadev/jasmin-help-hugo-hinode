@@ -1,5 +1,7 @@
 ---
-aliases: /article/228-how-to-apply-for-mass-access
+aliases:
+  - /article/228-how-to-apply-for-mass-access
+  - /article/226-how-to-apply-for-access-to-met-office-mass-archive-from-jasmin
 description: How to apply for MASS access
 slug: how-to-apply-for-mass-access
 title: How to apply for MASS access
@@ -18,12 +20,12 @@ are working on a collaborative research project. If you are a Met Office
 employee, your sponsor will be your manager.
 
 Note: The following instructions also assume you already have a **JASMIN login
-account** and the **jasmin-login** service. If you do not, please follow steps
-1-4 [here]({{% ref "get-started-with-jasmin" %}}).
+account** and the **jasmin-login** service. If you do not, please [follow steps
+1-4 here]({{% ref "get-started-with-jasmin" %}}).
 
 ### Step One - Sponsor Form
 
-**Ask your Met Office sponsor** to complete the sponsor form {{<link "https://metoffice.service-now.com/sp?id=sc_cat_item&sys_id=f00fb9d4dbd06b404690fe9b0c9619a6">}} available here only to those in the Met Office{{</link>}}
+**Ask your Met Office sponsor** to complete the sponsor form {{<link "https://metoffice.service-now.com/sp?id=sc_cat_item&sys_id=f00fb9d4dbd06b404690fe9b0c9619a6">}} available here only to those in the Met Office{{</link>}}.
 
 The following information will be asked for, so please provide your sponsor
 with any details they may not have:
@@ -35,15 +37,14 @@ with any details they may not have:
 - The host country of your organization
 - A list of MASS projects and/or data sets that you need access to. A full MOOSE dataset path is required, and your sponsor should help you determine this.
 - Your JASMIN username
-- Your JASMIN user ID number (UID). You can get this by typing echo $UID at the terminal on any JASMIN machine.
+- Your JASMIN user ID number (UID). You can get this by typing `echo $UID` at the terminal on any JASMIN machine.
 
 The information you provide to the Met Office will be treated in accordance
-with the [Met Office Privacy Policy](https://www.metoffice.gov.uk/about-
-us/legal/privacy), and your use of the service will be subject to the [Terms
-and Conditions of Use](https://metoffice.github.io/JASMIN-MASS-
-access/Terms_and_Conditions.html) for the service.
+with the {{<link "https://www.metoffice.gov.uk/about-us/legal/privacy">}}Met Office Privacy Policy{{</link>}}, and your use of the service will be subject to the {{<link "https://metoffice.github.io/JASMIN-MASS-access/Terms_and_Conditions.html">}}Terms and Conditions of Use{{</link>}} for the service.
 
 ### Step Two - Access to mass-cli1
+
+Next you need to apply for {{<link "https://accounts.jasmin.ac.uk/services/additional_services/mass/">}}the MASS service{{</link>}} in the JASMIN Accounts Portal:
 
   1. Sign into your JASMIN account
   1. Select ‘JASMIN Services’
@@ -51,9 +52,6 @@ access/Terms_and_Conditions.html) for the service.
   1. Next to ‘mass’ click ‘More information’ 
   1. Select ‘Apply for access’
   1. Within the request, please name your sponsor
-
-The direct link is:
-<https://accounts.jasmin.ac.uk/services/additional_services/mass/>
 
 ### Step Three - MASS account
 

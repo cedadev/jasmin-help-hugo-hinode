@@ -226,6 +226,7 @@
     ncas = "https://www.ncas.ac.uk"
     jasmin = "https://www.jasmin.ac.uk"
     stfc = "https://stfc.ukri.org"
+    scd = "https://www.sc.stfc.ac.uk/"
     nerc = "https://nerc.ukri.org"
     ukri = "https://ukri.org"
     jasmin_site = "https://www.jasmin.ac.uk"
@@ -236,6 +237,11 @@
     jasmin_notebooks_service = "https://notebooks.jasmin.ac.uk"
     jasmin_community_discussions = "https://github.com/cedadev/jasmin-community/discussions"
     jasmin_help_docs_issues = "https://github.com/cedadev/jasmin-help-hugo-hinode/issues"
+    stfc_cloud = "https://openstack.stfc.ac.uk"
+    stfc_cloud_tcs = "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service"
+    stfc_cloud_patching = "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211583132/Patching+policy+of+VM+s+in+openstack"
+    ukri_tcs = "https://www.ukri.org/wp-content/uploads/2024/04/UKRI-230424-AcceptableUsePolicy.pdf"
+    jasmin_tcs = "https://accounts.jasmin.ac.uk/account/conditions/"
 
 
 [statusClasses]

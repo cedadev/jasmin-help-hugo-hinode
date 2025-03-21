@@ -129,18 +129,16 @@
 
 - title: for cloud tenants
   pages:
-    - title: introduction to the jasmin cloud
-    - title: jasmin cloud portal
-    - title: cluster as a service
-    - title: cluster as a service kubernetes
-    - title: cluster as a service identity manager
-    - title: cluster as a service slurm
-    - title: cluster as a service pangeo
-    - title: cluster as a service shared storage
-    - title: adding and removing ssh keys from an external cloud vm
-    - title: provisioning tenancy sci vm managed cloud
-    - title: sysadmin guidance external cloud
+    - title: introduction
+    - title: azimuth cloud portal
+    - title: platform in depth - workstation
+    - title: platform in depth - k8s
+    - title: platform in depth - jupyterhub
+    - title: platform in depth - slurm
+    - title: azimuth identity provider
     - title: best practice
+    - title: linux admin
+    - title: openstack
 
 - title: workflow management
   pages:

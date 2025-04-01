@@ -113,11 +113,11 @@ The new list is as follows:
 name | status | specs | slurm cluster
 --- | --- | --- | ---
 Virtual servers | | |
-`sci-vm-01.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | old
-`sci-vm-02.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | old
-`sci-vm-03.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | old
-`sci-vm-04.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | old
-`sci-vm-05.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | old
+`sci-vm-01.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | new
+`sci-vm-02.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | new
+`sci-vm-03.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | new
+`sci-vm-04.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | new
+`sci-vm-05.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 24 CPU / 64 GB RAM / 80 GB (virtual disk) | new
 Physical servers | | |
 `sci-ph-01.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD | new
 `sci-ph-02.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} Ready to use | 48 CPU AMD EPYC 74F3 / 2 TB RAM / 2 x 446 GB SATA SSD | new
@@ -263,11 +263,7 @@ Notes:
 - \*2 CPU reserved for system processes
 - Overall ~55,000 cores: ~triples capacity pf previous cluster
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
-- Submission to the new cluster is now via `sci-ph-0[1,2,3]`
-  - and from **one** additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period.
-- Submission to "old" LOTUS will **only** be from current CentOS7 `sci` machines `sci[1-8]` **until 18 Feb 2025**.
-  - and from **one** additional physical node (details TBC) with extended CentOS7 support, with restricted access to enable use of Cylc 7 for limited period.
-- Nodes will gradually be removed from the "old" cluster and retired, timetable TBC once new cluster is up & running.
+- Submission to the new cluster is now via all `sci` nodes
 
 ### New LOTUS2 cluster initial submission guide
 
@@ -277,32 +273,23 @@ Please see the details below on how to access LOTUS2 and how to submit a job to 
 **These require a Slurm account, partition and quality of service (QoS) to be specified at job submission time**.
 {{</alert>}}
 
-#### LOTUS2 batch job submission hosts
-
-Login to one of the following hosts:
-
-- `sci-ph-01.jasmin.ac.uk`
-- `sci-ph-02.jasmin.ac.uk`
-- `sci-ph-03.jasmin.ac.uk`
-
-The hostname will be displayed as `hostNNN`. This host can be reached in the normal way via a login server.
-
-(Other submission hosts will be added in due course, see above)
-
 #### New Slurm job accounting hierarchy
 
 Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs),
 and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
 
-To find what Slurm accounts and quality of services that you have access to, use the `useraccounts` command on the job submission host (currently `sci-ph-03.jasmin.ac.uk`).
+To find what Slurm accounts and quality of services that you have access to, use the `useraccounts` command on any `sci` machine.
 Output should be similar to one or more of the lines below.
 
-{{<command user="user" host="host1000">}}
+{{<command user="user" host="sci-ph-01">}}
 useraccounts
-(out)fred  mybiggws debug,highres,long,short,standard
-(out)fred  jules-test jules-test
-(out)fred  no-project debug,highres,long,short,standard
-(out)fred  orchid debug,highres,long,short,standard
+(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
+(out)      User     Account QOS
+(out)---------- ----------- --------------------------------------------------
+(out)      fred    mybiggws debug,highres,long,short,standard
+(out)      fred  jules-test jules-test
+(out)      fred  no-project debug,highres,long,short,standard
+(out)      fred      orchid debug,highres,long,short,standard
 {{</command>}}
 
 Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
@@ -352,7 +339,7 @@ where {{<link "https://slurm.schedmd.com/sbatch.html#OPT_time">}}`time`{{</link>
 Save this script file as e.g.`test_submit.sh`
 Then submit this with:
 
-{{<command user="user" host="host1000">}}
+{{<command user="user" host="sci-ph-01">}}
 sbatch test_submit.sh
 {{</command>}}
 
@@ -360,7 +347,7 @@ For a pseudo-interactive session on a LOTUS2 compute node:
 
 (again, replace `mygws` with an account that you belong to, from the `useraccounts` command)
 
-{{<command user="user" host="host1000">}}
+{{<command user="user" host="sci-ph-01">}}
 srun --account=mygws --partition=debug --qos=debug --pty /bin/bash
 (out)srun: job 586 queued and waiting for resources
 (out)srun: job 586 has been allocated resources

@@ -21,11 +21,11 @@ The following sci servers are available:
 
 Server name  |  Virtual/Physical |  Processor model  |  CPU Cores  |  RAM (GB)  | /tmp max per user | /tmp size | slurm cluster
 ---|---|---|---|---|---|---|---
-`sci-vm-01` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | old
-`sci-vm-02` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | old
-`sci-vm-03` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | old
-`sci-vm-04` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | old
-`sci-vm-05` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | old
+`sci-vm-01` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
+`sci-vm-02` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
+`sci-vm-03` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
+`sci-vm-04` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
+`sci-vm-05` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
 `sci-ph-01` | physical | AMD EPYC 74F3 | 48 | 2 TB | 20 GB | 2 x 446 GB SATA SSD | new
 `sci-ph-02` | physical | AMD EPYC 74F3 | 48 | 2 TB | 20 GB | 2 x 446 GB SATA SSD | new
 `sci-ph-03` | physical | AMD EPYC 9654 | 48 | 1.5 TB | 20 GB | 480 GB SATA SSD + 800 GB NvMe SSD | new

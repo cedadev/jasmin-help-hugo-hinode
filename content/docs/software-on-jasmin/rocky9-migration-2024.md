@@ -132,8 +132,7 @@ Notes:
   - for a more richly-featured editor or Integrated Development Environment (IDE), users should consider using
    the remote editing features of {{<link href="https://code.visualstudio.com/docs/remote/ssh">}}VSCode{{</link>}} or 
    {{<link "https://www.jetbrains.com/pycharm/">}}PyCharm{{</link>}}, since these can be installed and customised locally
-   by the user to their taste rather than needing central installation and management on JASMIN. Watch this space for
-   further advice about how to configure and use VSCode in this way.
+   by the user to their taste rather than needing central installation and management on JASMIN. See [access from VSCode]({{% ref "access-from-vscode"%}}).
 - See {{<link "#jaspy">}}jaspy{{</link>}}, {{<link "#jasr">}}jasr{{</link>}} and {{<link "#jasmin-sci">}}jasmin-sci{{</link>}}
 sections below for further information on software.
 - For graphical applications, use the {{<link "#nx-login-nodes">}}NoMachine NX service{{</link>}} rather than
@@ -161,7 +160,7 @@ Notes:
 - Same applies re. **SSH client version**, see [login nodes]({{% ref "#login-nodes" %}})
 - If using cron on `xfer-vm-03`, you must use [crontamer]({{% ref "using-cron/#crontamer" %}})
 - Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked.
-- Consider using [Globus]({{% ref "#globus-data-transfer-service" %}}) for any data transfer in or out of JASMIN
+- Consider using [Globus]({{% ref "#globus-data-transfer-service" %}}) for best performance & reliability for transfers in or out of JASMIN
 - A new software collection `jasmin-xfer` has now been added to these servers, providing these tools:
 
 ```txt
@@ -196,7 +195,7 @@ Notes:
 
 ### GridFTP server
 
-Due to difficulties installing and configuring the suite of legacy components needed to support "old-style" gridftp, **we will not now be providing a replacement for the old server `gridftp1`**. Please familiarise yourself with using Globus, see below: this provides equivalent (and better) functionality.
+Due to difficulties installing and configuring the suite of legacy components needed to support "old-style" gridftp, this services has now been discontinued. Please familiarise yourself with using Globus, see below: this provides equivalent (and better) functionality.
 
 Note this does affect gridftp-over-ssh (`sshftp`) which is available on the new `hpxfer` nodes in the same way as their predecessors, see above.
 
@@ -263,7 +262,7 @@ Notes:
 - \*2 CPU reserved for system processes
 - Overall ~55,000 cores: ~triples capacity pf previous cluster
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
-- Submission to the new cluster is now via all `sci` nodes
+- Submission to the new cluster is now via any `sci-vm-*` or `sci-ph-*` node
 
 ### New LOTUS2 cluster initial submission guide
 
@@ -284,15 +283,17 @@ Output should be similar to one or more of the lines below.
 {{<command user="user" host="sci-ph-01">}}
 useraccounts
 (out)# sacctmgr show user fred withassoc format=user,account,qos%-50
-(out)      User     Account QOS
-(out)---------- ----------- --------------------------------------------------
-(out)      fred    mybiggws debug,highres,long,short,standard
-(out)      fred  jules-test jules-test
-(out)      fred  no-project debug,highres,long,short,standard
-(out)      fred      orchid debug,highres,long,short,standard
+(out)User       Account        QOS
+(out)---------- -------------- --------------------------------------------------
+(out)      fred  mybiggws      debug,highres,long,short,standard
+(out)      fred  jules-test    jules-test
+(out)      fred  no-project    debug,highres,long,short,standard
+(out)      fred  shobu
+(out)      fred  orchid        debug,highres,long,short,standard
 {{</command>}}
 
 Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
+Please ignore and do not use the group `shobu`.
 
 #### Partitions and QoS
 

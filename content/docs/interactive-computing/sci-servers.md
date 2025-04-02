@@ -50,8 +50,8 @@ Physical servers are actually re-configured nodes within the LOTUS cluster and a
 configuration from the virtual `sci` servers, with limited outward connectivity.
 
 Outbound internet access (via NAT) is only
-for HTTP(S), so outbound SSH **will not work (to hosts outside of
-JASMIN) on these machines**. If you try to `git pull/clone` from external repositories e.g. Github, the operation will timeout with error `fatal: Could not read from remote repository`. The solution in this case is to access `git pull/clone` over **HTTPS** instead (check the repo for alternative access details).
+for HTTP(S), so **outbound SSH will not work (to hosts outside of
+JASMIN) on these machines**. This also applies to SSH-based transfer methods (scp, ftp, rsync) which anyway should be done instead on a [transfer server]({{%ref "transfer-servers"%}}). If you try to `git pull/clone` from external repositories e.g. Github using ssh, the operation will timeout with error `fatal: Could not read from remote repository`. The solution in this case is to access `git pull/clone` over **HTTPS** instead (check the repo for alternative access details).
 
 #### 3. /tmp on VMs
 
@@ -60,7 +60,7 @@ as this is used by the VM itself. It also provides no performance advantage as i
 
 #### 4. Arbiter
 
-A monitoring utility "**Arbiter**" is implemented across
+A monitoring utility **Arbiter** is used across
 all sci machines to control CPU and memory usage. This utility
 records the activity on the node, automatically sets limits on the resources
 available to each user. Users' processes are thus capped from

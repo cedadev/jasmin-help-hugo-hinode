@@ -39,27 +39,74 @@ Slurm directives, prefixed with `#SBATCH` as shown in this example:
 
 ```bash
 #!/bin/bash 
-#SBATCH --partition=short-serial 
+#SBATCH --job-name="My test job"
+#SBATCH --time=00:01:00
+#SBATCH --mem=1M
+#SBATCH --account=mygws           # see below about how to use these
+#SBATCH --partition=debug         # <--
+#SBATCH --qos=debug               # <--
 #SBATCH -o %j.out 
 #SBATCH -e %j.err
-#SBATCH --time=05:00
 
 # executable 
 sleep 5m
 ```
 
 For job specification of resources please refer to Table 2 of the help article
-[Slurm quick reference]({{% ref "slurm-quick-reference" %}})
+[Slurm quick reference]({{% ref "slurm-quick-reference" %}}).
+
+### New Slurm job accounting hierarchy
+
+Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
+
+To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
+Output should be similar to one or more of the lines below.
+
+{{<command user="user" host="sci-ph-01">}}
+useraccounts
+(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
+(out)User       Account        QOS
+(out)---------- -------------- -------------------------------------
+(out)      fred  mygws         debug,highres,long,short,standard
+(out)      fred  orchid        debug,highres,long,short,standard
+{{</command>}}
+
+You should use the relevant account for your project's task with the `--account` directive in your job script.
+
+Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
+Please ignore and do not use the group `shobu`.
+
+#### Partitions and QoS
+
+There are 3 partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
+
+| Partition | Allowed QoS |
+| --- | --- |
+| `standard` | `standard`, `short`, `long` |
+| `highres` | `highres`, `reservation` |
+| `debug` | `debug`, `reservation` |
+{.table .table-striped .w-auto}
+
+| QoS | Priority | Max CPUs per job | Max wall time |
+| --- | --- | --- | --- |
+| `standard` | 500 | 1 | 24 hours |
+| `short` | 550 | 1 | 4 hours |
+| `long` | 350 | 1 | 5 days |
+| `highres` | 450 |  | 2 days |
+| `debug` | 500 |  | 1 hour |
+{.table .table-striped .w-auto}
+
+Once you've chosen the partition and QoS you need, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.
 
 ## Method 2: Submit via command-line options
 
 If you have an existing script, written in any language, that you wish to
-submit to LOTUS then you can do so by providing Slurm directives as command-
-line arguments. For example, if you have a script "my-script.py" that takes a
-single argument "-f <filepath>", you can submit it using "sbatch" as follows:
+submit to LOTUS then you can do so by providing Slurm directives as command-line
+arguments. For example, if you have a script `my-script.py` that takes a
+single argument `-f <filepath>`, you can submit it using `sbatch` as follows:
 
 ```bash
-sbatch -p short-serial -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txt
+sbatch -A mygws -p debug -q debug -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txt
 ```
 
 This approach allows you to submit jobs without writing additional job scripts
@@ -69,51 +116,72 @@ to wrap your existing code.
 
 Testing a job on LOTUS can be carried out in an interactive manner by
 obtaining a Slurm job allocation or resources (a set of nodes) via the Slurm
-command `salloc` . The code/application is executed and the allocation are
-released after a specific time -default 1 hour - when the testing is finished.
-There are two ways:
+command `salloc`. The code/application is executed and the allocation is
+released after a specific time - default 30 mins - when the testing is finished.
+<!-- There are two ways: -->
 
-## Interactive execution with pseudo-shell terminal on the compute LOTUS node
+### Interactive execution with pseudo-shell terminal on the compute LOTUS node
 
-The job is executed on the LOTUS compute node by invoking the Slurm command
-srun after allocating resources with `salloc`. See example below.
+The job is executed on the LOTUS compute node by allocating resources with `salloc`.
+See the example below:
 
-```bash
-salloc -p par-single --ntasks-per-node=2
-salloc: Pending job allocation 23506
-salloc: job 23506 queued and waiting for resources
-salloc: job 23506 has been allocated resources
-salloc: Granted job allocation 23506
-```
+{{<command user="train001" host="sci-ph-01">}}
+salloc -p highres -q highres -A mygws --ntasks-per-node=2
+(out)salloc: Pending job allocation 23506
+(out)salloc: job 23506 queued and waiting for resources
+(out)salloc: job 23506 has been allocated resources
+(out)salloc: Granted job allocation 23506
+(out)salloc: Nodes host580 are ready for job
+{{</command>}}
 
-The job allocation ID 23506 has 2 CPUs on the compute node host580 as shown
-below:
+At this point, your shell prompt will change to the LOTUS compute node.
+You will have the allocated compute that you requested at this shell.
+For example the command `hostname` is executed twice as there are 2 CPUs
+and each outputs the name of the node:
 
-```bash
-squeue -u train001-o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
-JOBID PARTITION        NAME        USER   ST       TIME  NODES   CPUS NODELIST(REASON)
-23506 par-singl    interactive   usertest  R       1:32      1      2 host580
-```
+{{<command user="train001" host="host580">}}
+srun hostname
+(out)host580.jc.rl.ac.uk
+(out)host580.jc.rl.ac.uk
+{{</command>}}
 
-To launch an interactive shell session on the compute node host580, use the
-following srun command (from a sci server).
+The job allocation ID `23506` has 2 CPUs on the compute node `host580` and can be
+checked from another terminal as shown below:
+
+{{<command user="train001" host="sci-ph-01">}}
+squeue -u train001 -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
+(out)JOBID PARTITION           NAME       USER  ST       TIME  NODES   CPUS NODELIST(REASON)
+(out)23506 highres      interactive   train001   R       1:32      1      2 host580
+{{</command>}}
+
+Once you're finished, type `exit` to relinquish the allocation. This will happen
+automatically once the time limit on the job runs out.
+
+<!-- Below not possible as salloc opens a shell on the host immediately -->
+
+<!-- 
+
+To launch an interactive shell session on the compute node `host580`, use the
+following `srun` command (from a sci server).
 
 ```bash
 srun --pty /bin/bash
 @host580 ~]$
 ```
 
-##  Interactive execution with no shell
+### Interactive execution with no shell
 
 A code/application can be executed on the LOTUS compute node without a shell
-session on the node itself. For example the command 'hostname' is executed
-twice as there are 2 CPUs and this outputs the name of the node
+session on the node itself. For example the command `hostname` is executed
+twice as there are 2 CPUs and this outputs the name of the node:
 
-```bash
+{{<command user="train001" host="sci-ph-01">}}
 srun hostname
-host580.jc.rl.ac.uk
-host580.jc.rl.ac.uk
-```
+(out)host580.jc.rl.ac.uk
+(out)host580.jc.rl.ac.uk
+{{</command>}}
+
+-->
 
 ## Job array submission
 
@@ -127,7 +195,7 @@ with different driving data or run the same processing task on multiple data
 files.
 
 Important note: The maximum job array size that Slurm is configured for is
-MaxArraySize = 10000. If a Job array of size is greater than 10000 is
+`MaxArraySize = 10000`. If a Job array of size is greater than 10000 is
 submitted, Slurm will reject the job submission with the following error
 message: "Job array index too large. Job not submitted."
 
@@ -135,11 +203,13 @@ Taking a simple R submission script as an example:
 
 ```bash
 #!/bin/bash 
-#SBATCH --partition=short-serial 
 #SBATCH --job-name=myRtest
+#SBATCH --time=30:00
+#SBATCH --account=mygws  
+#SBATCH --partition=debug
+#SBATCH --qos=debug      
 #SBATCH -o %j.out 
 #SBATCH -e %j.err 
-#SBATCH --time=30:00
 
 module add jasr
 Rscript TestRFile.R dataset1.csv
@@ -152,30 +222,33 @@ submission would look something like this:
 
 ```bash
 #!/bin/bash 
-#SBATCH --partition=short-serial 
 #SBATCH --job-name=myRarray
+#SBATCH --time=30:00
+#SBATCH --account=mygws  
+#SBATCH --partition=debug
+#SBATCH --qos=debug
 #SBATCH -o %A_%a.out
 #SBATCH -e %A_%a.err
-#SBATCH --time=30:00
 #SBATCH --array=1-10
+
 module add jasr
 Rscript TestRFile.R datset${SLURM_ARRAY_TASK_ID}.csv
 ```
 
 Here the important differences are :
 
-- The array is created by Slurm directive `--array=1-10` by including elements numbered `[1-10]`to represent our 10 variations
-- The error and output file have the array  index `%a` included  in the name and `%A` is the job ID.
+- The array is created by Slurm directive `--array=1-10` by including elements numbered `[1-10]` to represent our 10 variations
+- The error and output file have the array index `%a` included in the name and `%A` is the job ID.
 - The environment variable `$SLURM_ARRAY_TASK_ID` in the `Rscript` command is expanded to give the job index
 
 When the job is submitted, Slurm will create 10 tasks under the single job
 ID. The job array script is submitted in the usual way:
 
-```bash
+{{<command user="train001" host="sci-ph-01">}}
 sbatch myRarray.sbatch
-```
+{{</command>}}
 
 If you use  the `squeue -u <username>` command  to list your active jobs, you
 will see 10 tasks with the same Job ID. The tasks can be distinguished by  the
-`[index] ` e.g. jobID_index. Note that individual tasks may be allocated to a
+`[index]` e.g. jobID_index. Note that individual tasks may be allocated to a
 range of different hosts on LOTUS.

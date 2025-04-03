@@ -11,6 +11,11 @@ tags:
 title: Slurm queues
 ---
 
+{{<alert type="danger">}}
+Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
+{{</alert>}}
+
 This article introduces the Slurm scheduler queues/partitions for batch job
 submissions to the LOTUS and ORCHID clusters.
 

@@ -70,7 +70,8 @@ Long and short argument names are separated by a comma.
 
 ##### `--mem=XXX`
 
-- Specify that `XXX` memory is required for the job. Default units are megabytes (e.g. `--mem=250` means 250MB)
+- Specify that `XXX` memory is required for the job. **Default** units are megabytes (e.g. `--mem=250` means 250MB) but you can 
+specify the unit, e.g. `--mem=5G` for 5 GB.
 
 ##### `--array=INDEX`
 

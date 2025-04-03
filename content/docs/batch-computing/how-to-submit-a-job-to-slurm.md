@@ -5,13 +5,15 @@ slug: how-to-submit-a-job
 title: How to submit a job
 ---
 
-This article explains how to submit a batch job to the new scheduler Slurm.
+This article explains how to submit a batch job to Slurm.
 
 ## What is a batch job?
 
-A batch job is controlled by a script written by the user who submits the job
-to the batch system Slurm. The batch system then selects the resources for the
-job and decides when to run the job. Note: the term "job" is used throughout
+A batch job is a task that, once submitted to the scheduler, can run without further interaction
+from the user. A user writes a script containing both the
+command(s) to be run and directives for the scheduler as to how the job should be run.
+The batch system then selects the resources for the
+job and decides when and where to run the job. Note: the term "job" is used throughout
 this documentation to mean a "batch job".
 
 There are two ways of submitting a job to Slurm:
@@ -24,7 +26,7 @@ Both options are described below.
 ## Which servers can you submit jobs from?
 
 Jobs can be submitted to Slurm from any of the [sci servers]({{% ref "sci-servers" %}}).
-Check the current list of machines on that page.
+Check the current list of servers on that page.
 
 ## Method 1: Submit via a Slurm job script
 
@@ -37,23 +39,37 @@ sbatch myjobscript
 The job script is a Bash script of user's application and includes a list of
 Slurm directives, prefixed with `#SBATCH` as shown in this example:
 
+{{<alert type="danger">}}
+Remove any trailing whitespace
+{{</alert>}}
+
 ```bash
-#!/bin/bash 
+#!/bin/bash
 #SBATCH --job-name="My test job"
 #SBATCH --time=00:01:00
 #SBATCH --mem=1M
-#SBATCH --account=mygws           # see below about how to use these
-#SBATCH --partition=debug         # <--
-#SBATCH --qos=debug               # <--
-#SBATCH -o %j.out 
+#SBATCH --account=mygws
+#SBATCH --partition=debug
+#SBATCH --qos=debug
+#SBATCH -o %j.out
 #SBATCH -e %j.err
 
-# executable 
-sleep 5m
+# executable
+sleep 5s
 ```
 
-For job specification of resources please refer to Table 2 of the help article
-[Slurm quick reference]({{% ref "slurm-quick-reference" %}}).
+**Explanation**:
+
+Submitting the above script (if you had access to the `mygws` account) creates a job named `My test job` with an estimated run time of
+`00:01:00` (1 minute), memory requirement of `1M` (1 Megabyte), run against the account
+`mygws` on the partition `debug` using Qos `debug`, and writing its STDOUT (standard output) to file 
+`%j.out` and its STDERR to file `%j.err` (where `%j` represents the job ID that the scheduler assigns to the job).
+
+The task itself is the command `sleep 5s` which just pauses for 5 seconds before exiting. This is what you would replace 
+with your actual processing command(s), so you need to have an idea of how long it will take to run (**TIP**: run it manually first with `time <cmd>` to find out!)
+
+For details of other submission parameters, see 
+[job specification]({{% ref "slurm-quick-reference#job-specification" %}}).
 
 ### New Slurm job accounting hierarchy
 
@@ -76,7 +92,7 @@ You should use the relevant account for your project's task with the `--account`
 Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
 Please ignore and do not use the group `shobu`.
 
-#### Partitions and QoS
+### Partitions and QoS
 
 There are 3 partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
 
@@ -112,6 +128,9 @@ sbatch -A mygws -p debug -q debug -t 03:00 -o job01.out -e job01.err my-script.p
 This approach allows you to submit jobs without writing additional job scripts
 to wrap your existing code.
 
+Check the official documentation for `sbatch`, its arguments and their syntax
+{{<link "https://slurm.schedmd.com/sbatch.html">}}here{{</link>}}.
+
 ## Method 3: Submit an interactive session via salloc
 
 Testing a job on LOTUS can be carried out in an interactive manner by
@@ -125,7 +144,7 @@ released after a specific time - default 30 mins - when the testing is finished.
 The job is executed on the LOTUS compute node by allocating resources with `salloc`.
 See the example below:
 
-{{<command user="train001" host="sci-ph-01">}}
+{{<command user="fred" host="sci-ph-01">}}
 salloc -p highres -q highres -A mygws --ntasks-per-node=2
 (out)salloc: Pending job allocation 23506
 (out)salloc: job 23506 queued and waiting for resources
@@ -134,25 +153,44 @@ salloc -p highres -q highres -A mygws --ntasks-per-node=2
 (out)salloc: Nodes host580 are ready for job
 {{</command>}}
 
+Official documentation for the `salloc` command is available
+{{<link "https://slurm.schedmd.com/salloc.html">}}here{{</link>}}.
+
 At this point, your shell prompt will change to the LOTUS compute node.
 You will have the allocated compute that you requested at this shell.
 For example the command `hostname` is executed twice as there are 2 CPUs
 and each outputs the name of the node:
 
-{{<command user="train001" host="host580">}}
+{{<command user="fred" host="host580">}}
 srun hostname
 (out)host580.jc.rl.ac.uk
 (out)host580.jc.rl.ac.uk
 {{</command>}}
 
+Official documentation for the `srun` command is available
+{{<link "https://slurm.schedmd.com/srun.html">}}here{{</link>}}.
+
 The job allocation ID `23506` has 2 CPUs on the compute node `host580` and can be
 checked from another terminal as shown below:
 
-{{<command user="train001" host="sci-ph-01">}}
-squeue -u train001 -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
+{{<command user="fred" host="sci-ph-01">}}
+squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)JOBID PARTITION           NAME       USER  ST       TIME  NODES   CPUS NODELIST(REASON)
-(out)23506 highres      interactive   train001   R       1:32      1      2 host580
+(out)23506 highres      interactive   fred   R       1:32      1      2 host580
 {{</command>}}
+
+{{<alert type="info">}}
+`squeue --me` is equivalent to `squeue -u fred`
+{{</alert>}}
+{{<alert type="danger">}}
+Please **DO NOT** use `watch` or equivalent polling utilities with Slurm
+as they are wasteful of resources and cause communication issues for the scheduler.
+
+Your process may be killed if this is detected.
+{{</alert>}}
+
+Official documentation for the `squeue` command is available
+{{<link "https://slurm.schedmd.com/squeue.html">}}here{{</link>}}.
 
 Once you're finished, type `exit` to relinquish the allocation. This will happen
 automatically once the time limit on the job runs out.
@@ -175,7 +213,7 @@ A code/application can be executed on the LOTUS compute node without a shell
 session on the node itself. For example the command `hostname` is executed
 twice as there are 2 CPUs and this outputs the name of the node:
 
-{{<command user="train001" host="sci-ph-01">}}
+{{<command user="fred" host="sci-ph-01">}}
 srun hostname
 (out)host580.jc.rl.ac.uk
 (out)host580.jc.rl.ac.uk
@@ -244,7 +282,7 @@ Here the important differences are :
 When the job is submitted, Slurm will create 10 tasks under the single job
 ID. The job array script is submitted in the usual way:
 
-{{<command user="train001" host="sci-ph-01">}}
+{{<command user="fred" host="sci-ph-01">}}
 sbatch myRarray.sbatch
 {{</command>}}
 

@@ -286,7 +286,39 @@ of
  
  
 
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/">Get Started with JASMIN&lt;/a>).&lt;/p></description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;h2 id="what-is-a-job-scheduler" class="heading">What is a Job Scheduler?&lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler">
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/">Get Started with JASMIN&lt;/a>).&lt;/p></description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+
+
+
+
+&lt;h2 id="what-is-a-job-scheduler" class="heading">What is a Job Scheduler?&lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -1000,7 +1032,39 @@ the cron job table).&lt;/p></description></item><item><title>Quickstart for acti
  &lt;/a>
 &lt;/h2>
 &lt;p>To activate an environment containing the &amp;ldquo;current&amp;rdquo; common software packages
-(including a modern Python):&lt;/p></description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Wed, 20 May 2020 13:13:23 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading">Job information&lt;a href="#job-information" aria-labelledby="job-information">
+(including a modern Python):&lt;/p></description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Wed, 20 May 2020 13:13:23 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+
+
+
+
+&lt;h2 id="job-information" class="heading">Job information&lt;a href="#job-information" aria-labelledby="job-information">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -1902,7 +1966,35 @@ links to articles that describe them in more detail.&lt;/p></description></item>
 
  &lt;/div>
  &lt;/div>
-&lt;p>This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p></description></item><item><title>Example Job 2: Calculating MD5 Checksums on many files</title><link>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</guid><description>&lt;p>This page records some early CEDA usage of the LOTUS cluster for various
+&lt;p>This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p></description></item><item><title>Example Job 2: Calculating MD5 Checksums on many files</title><link>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This page records some early CEDA usage of the LOTUS cluster for various
 relatively simple tasks. Others may wish to use these examples as a starting
 point for developing their own workflows on LOTUS.&lt;/p></description></item><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
@@ -2220,7 +2312,7 @@ methods:&lt;/p></description></item><item><title>GWS Scanner</title><link>https:
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
 &lt;/h3>
-&lt;p>To access data held in the Met Office MASS archive, you will need:&lt;/p></description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;p>This article explains how to submit a batch job to the new scheduler Slurm.&lt;/p>
+&lt;p>To access data held in the Met Office MASS archive, you will need:&lt;/p></description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;p>This article explains how to submit a batch job to Slurm.&lt;/p>
 
 
 
@@ -2230,22 +2322,40 @@ methods:&lt;/p></description></item><item><title>GWS Scanner</title><link>https:
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
 &lt;/h2>
-&lt;p>A batch job is controlled by a script written by the user who submits the job
-to the batch system Slurm. The batch system then selects the resources for the
-job and decides when to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
-this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p></description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;p>This article explains the submission of an MPI parallel job to Slurm/ LOTUS.&lt;/p>
+&lt;p>A batch job is a task that, once submitted to the scheduler, can run without further interaction
+from the user. A user writes a script containing both the
+command(s) to be run and directives for the scheduler as to how the job should be run.
+The batch system then selects the resources for the
+job and decides when and where to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
+this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p></description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
 
 
 
 
-&lt;h2 id="what-is-an-mpi-parallel-job" class="heading">What is an MPI parallel job?&lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>An MPI parallel job runs on more than one core and more than one host using
-the Message Passing Interface (MPI) library for communication between all
-cores. A simple script, such as the one given below &amp;ldquo;my_script_name.sbatch &amp;quot;&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This article explains the submission of an MPI parallel job to Slurm/ LOTUS.&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
  &lt;div class="pt-1 pe-2">
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
@@ -2386,7 +2496,39 @@ Please read
 
 &lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow">this announcement&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading">Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification">
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+
+
+
+
+&lt;h2 id="current-cluster-specification" class="heading">Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -2485,18 +2627,36 @@ effect for other users, so please take the time to check and change your code
 to make appropriate use of new storage system. If used correctly, the new
 storage offers us a high performance scalable file system, with the capability
 for object storage as tools and interfaces evolve, and we can continue to
-serve the growing demand for storage in the most cost effective manner.&lt;/p></description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;p>This article provides details on JASMIN&amp;rsquo;s GPU
-cluster, named &lt;strong>ORCHID&lt;/strong>.&lt;/p>
+serve the growing demand for storage in the most cost effective manner.&lt;/p></description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
 
 
 
 
-&lt;h2 id="gpu-cluster-spec" class="heading">GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p></description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This article provides details on JASMIN&amp;rsquo;s GPU
+cluster, named &lt;strong>ORCHID&lt;/strong>.&lt;/p></description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -2795,18 +2955,36 @@ environments already available on the system. See the
  
  
 
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy page&lt;/a> for examples of these.&lt;/p></description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;p>This article introduces the Slurm scheduler queues/partitions for batch job
-submissions to the LOTUS and ORCHID clusters.&lt;/p>
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy page&lt;/a> for examples of these.&lt;/p></description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;div class="pt-1 pe-2">
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
+ &lt;div class="flex-grow-1 my-auto">
+ Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using 
+ 
 
 
 
 
-&lt;h2 id="queue-names" class="heading">Queue names&lt;a href="#queue-names" aria-labelledby="queue-names">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>The Slurm queues in the LOTUS cluster are:&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
+
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
+ &lt;/div>
+ &lt;/div>
+&lt;p>This article introduces the Slurm scheduler queues/partitions for batch job
+submissions to the LOTUS and ORCHID clusters.&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>

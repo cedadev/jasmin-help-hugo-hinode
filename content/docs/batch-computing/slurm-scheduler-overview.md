@@ -5,6 +5,11 @@ title: Slurm scheduler overview
 weight: 20
 ---
 
+{{<alert type="danger">}}
+Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
+{{</alert>}}
+
 ## What is a Job Scheduler?
 
 A job or batch scheduler, is a tool that manages how user jobs

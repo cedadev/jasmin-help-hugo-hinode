@@ -8,6 +8,11 @@ tags:
 title: LOTUS cluster specification
 ---
 
+{{<alert type="danger">}}
+Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
+{{</alert>}}
+
 ## Current cluster specification
 
 LOTUS is a cluster of over 300 nodes/hosts and 19000 CPU cores. A node/host is

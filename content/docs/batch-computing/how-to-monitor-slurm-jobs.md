@@ -6,6 +6,11 @@ slug: how-to-monitor-slurm-jobs
 title: How to monitor Slurm jobs
 ---
 
+{{<alert type="danger">}}
+Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
+{{</alert>}}
+
 ## Job information
 
 Information on all running and pending batch jobs managed by Slurm can be
@@ -14,15 +19,27 @@ jobs is only retained for a limited period. Information on jobs that ran in
 the past is via `sacct`. An example of the output `squeue` is shown below.
 
 {{<command user="user" host="sci-vm-01">}}
-squeue
+squeue -u fred
 (out)JOBID PARTITION     NAME   USER ST       TIME  NODES NODELIST(REASON)
-(out)18957 short-ser     mean   user1  R       0:01      1 host147
-(out)18956 short-ser     calc   user2  R      48:38      1 host146
-(out)18967      test     wrap   user1  R      14:25      1 host146
+(out)18957 short-ser     mean   fred   R       0:01      1 host147
+(out)18967      test     wrap   fred   R      14:25      1 host146
 {{</command>}}
 
 where the field `ST` is the job state and the `TIME` is the time used by the
 job.
+
+The `-u fred` argument restricts the `squeue` output about user `fred`. Alternatively,
+use `squeue --me` which means "my own jobs".
+
+Official documentation for the `squeue` command is available
+{{<link "https://slurm.schedmd.com/squeue.html">}}here{{</link>}}.
+
+{{<alert type="danger">}}
+Please **DO NOT** use `watch` or equivalent polling utilities with Slurm
+as they are wasteful of resources and cause communication issues for the scheduler.
+
+Your process may be killed if this is detected.
+{{</alert>}}
 
 A batch job evolves in several states in the course of its execution. The
 typical job states are defined in Table 1
@@ -41,7 +58,7 @@ S  |  Suspended  |  A running job has been stopped with its resources released t
 ST  |  Stopped  |  A running job has been stopped with its resources retained
 {.table .table-striped}
   
-# Slurm commands for monitoring jobs
+## Slurm commands for monitoring jobs
 
 A list of the most commonly used commands and their options for monitoring
 batch jobs are listed in Table 2, below:
@@ -52,7 +69,8 @@ jobs
 Slurm Command  |  Description  
 ---|---  
 `squeue` |  To view information for all jobs running and pending on the cluster  
-`squeue --user=username` |  Displays running and pending jobs per individual user  
+`squeue --user=username` |  Displays running and pending jobs per individual user
+`squeue --me` |  Displays running and pending jobs for the current user
 `squeue --states=PD` |  Displays information for pending jobs (PD state) and their reasons  
 `squeues --states=all` |  Shows a summary of the number of jobs in different states  
 `scontrol show job JOBID` |  Shows detailed information about your job (JOBID = job number) by searching the current event log file  

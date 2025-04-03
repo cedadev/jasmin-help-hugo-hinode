@@ -5,6 +5,11 @@ slug: how-to-submit-an-mpi-parallel-job
 title: How to submit an MPI parallel job
 ---
 
+{{<alert type="danger">}}
+Not yet reviewed for compatibility with the new cluster, April 2025.
+Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
+{{</alert>}}
+
 This article explains the submission of an MPI parallel job to Slurm/ LOTUS.
 
 ## What is an MPI parallel job?

@@ -17,7 +17,7 @@ LOTUS is not, in itself, a High-Performance Computing (HPC) facility, but
 provides the batch and parallel processing component of the JASMIN data-
 intensive scientific analysis environment. LOTUS is a cluster of physical
 machines, running the [Slurm workload manager]({{% ref "slurm-scheduler-overview" %}}), enabling efficient scheduling of larger data analysis tasks
-across nodes in the cluster as a single unit -see Figure 1.
+across nodes in the cluster as a single unit - see Figure 1.
 
 Each node in the
 cluster is connected by 10Gbit/s Ethernet to JASMIN's high-performance
@@ -27,12 +27,12 @@ facilitates MPI-based parallel processing.
 JASMIN provides both interactive and batch computing environments,
 recognising  that scientists often need to develop and test workflows
 interactively before running those workflows efficiently at scale. Nodes
-within LOTUS run the same stack of software and can access the same high-
-performance storage as the JASMIN Scientific Analysis servers, ensuring a
+within LOTUS run the same stack of software and can access the same high-performance
+storage as the JASMIN [scientific analysis servers]({{% ref "sci-servers" %}}), ensuring a
 consistent working environment for all phases of users' workflows.
 
 See [LOTUS Hardware]({{% ref "lotus-cluster-specification" %}}) for details of
-the current LOTUS environment summarised in this schematic presentation
+the current LOTUS environment summarised in this schematic presentation.
 
 **Figure 1** shows a schematic presentation of the LOTUS cluster and its
 environment
@@ -57,8 +57,8 @@ LOTUS currently has around 19,000 cores, but is heavily used and implements a
 fair-share scheduling system between users. It is not intended as a substitute
 for dedicated HPC facilities, rather as a complementary environment in which
 model outputs can be analyzed and compared with observational data. Users with
-large-scale compute-heavy requirements (in particular those requiring large-
-scale parallel processing) should look to access other parts of the national
+large-scale compute-heavy requirements (in particular those requiring large-scale
+parallel processing) should look to access other parts of the national
 HPC infrastructure such as [ARCHER2](http://www.archer2.ac.uk/) or
 [MONSooN](http://collab.metoffice.gov.uk/twiki/bin/view/Support/MONSooN).
 
@@ -79,8 +79,8 @@ services]({{% ref "get-login-account" %}}) and had this approved, there can
 sometimes be a delay (typically up to a day, but in rare cases can be longer)
 before the necessary configuration is created for you on LOTUS. You will not
 be able to submit jobs to LOTUS queues until this has been completed.
-Typically you would see an error message such as this, in this case after an
-unsuccessful attempt to submit to the `short-serial` queue:
+Typically you would see an error message such as this, after an
+unsuccessful attempt to submit a job:
 
 ```bash
 sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified

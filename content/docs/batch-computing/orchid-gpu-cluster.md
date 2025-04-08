@@ -2,7 +2,7 @@
 aliases:
 - /article/5068-gpu-cluster-orchid
 - /article/4951-gpu-testing
-description: Orchid GPU cluster
+description: Details of JASMIN's GPU cluster, ORCHID
 title: Orchid GPU cluster
 type: docs
 ---
@@ -11,10 +11,6 @@ type: docs
 Not yet reviewed for compatibility with the new cluster, April 2025.
 Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
 {{</alert>}}
-
-
-This article provides details on JASMIN's GPU
-cluster, named **ORCHID**.
 
 ## GPU cluster spec
 

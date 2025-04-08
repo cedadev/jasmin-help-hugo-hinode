@@ -1,7 +1,7 @@
 ---
 aliases: /article/4892-how-to-monitor-slurm-jobs
 date: 2020-05-20 13:13:23
-description: How to monitor Slurm jobs
+description: Getting information about your Slurm jobs
 slug: how-to-monitor-slurm-jobs
 title: How to monitor Slurm jobs
 ---

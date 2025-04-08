@@ -1,15 +1,9 @@
 ---
 aliases: /article/5004-lotus-overview
-description: LOTUS overview
+description: Overview of the LOTUS batch computing cluster, part of JASMIN
 title: LOTUS overview
 weight: 10
 ---
-
-This article gives an overview of the LOTUS batch computing cluster which is
-part of JASMIN. It covers:
-
-- What LOTUS is and what it can be used for
-- Where LOTUS can be accessed from
 
 ## What is LOTUS
 

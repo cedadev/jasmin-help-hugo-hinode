@@ -1,6 +1,6 @@
 ---
 aliases: /article/4880-batch-scheduler-slurm-overview
-description: 'Overview of the LOTUS batch scheduler, Slurm'
+description: Overview of the LOTUS batch scheduler, Slurm
 title: Slurm scheduler overview
 weight: 20
 ---
@@ -41,7 +41,7 @@ gets a fair share of the cluster based on the jobs that they have submitted.
 This leads to a small number of important principles:
 
 - Do not try to second guess the scheduler! Submit all of your jobs when you want to run them and let the scheduler figure it out for you. You will get a fair share, and if you don't then we need to adjust the scheduler (so get in touch and let us know).
-- Give the scheduler as much information as possible. There are a number of optional parameters (see [How to submit jobs]({{% ref "how-to-submit-a-job-to-slurm" %}})) such as job duration, and if you put these in then you have an even better chance of getting your jobs to run.
+- Give the scheduler as much information as possible. There are a number of optional parameters (see [how to submit jobs]({{% ref "how-to-submit-a-job-to-slurm" %}})) such as job duration, and if you put these in then you have an even better chance of getting your jobs to run.
 - It is very difficult for one user to monopolise the cluster, even if they submit thousands of jobs. The scheduler will still aim to give everyone else a fair share, so long as there are other jobs waiting to be run.
 
 ## Fair share for all users
@@ -56,15 +56,17 @@ running, whereas the blue user does not, and as such it is the blue user's
 jobs that are run (bottom row).
 
 ## LOTUS queues
-
+<!-- Queues to be updated -->
 There are five standard Slurm queues (also known as "partitions" in Slurm terminology) for batch job submissions to the LOTUS
 cluster: `short-serial`, `long-serial`, `par-single`, `par-multi` and `high-mem`.
 The default queue is `short-serial`. For testing new workflows, the
-additional queue `test`is recommended. The specification of each queue is
-described in detail in this article: [Slurm queues on LOTUS]({{% ref "slurm-queues" %}})
+additional queue `debug` is recommended. The specification of each queue is
+described in detail in this article: [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}).
 
 Queues other than the five standard queues with the test queue should be
 ignored unless you have been specifically instructed to use them.
+
+<!-- Need to add here information about the QoS available -->
 
 ## The typical workflow for LOTUS jobs
 
@@ -86,8 +88,10 @@ The typical workflow for setting up and running LOTUS jobs is as follows:
 
 ## Project-specific LOTUS queues
 
+Each project has an account to submit to and details of this can be found on our page about [submitting a job]({{% ref "slurm-quick-reference#new-slurm-job-accounting-hierarchy" %}}).
+
 Occasionally a project has a specific requirement for a collection of compute
 nodes that involve the provision of a project-specific queue. If you are
 working on such a project your project lead will provide guidance on which
-queue to use. Please contact the helpdesk if
+queue to use. Please contact the JASMIN helpdesk if
 you are interested in setting up a project-specific queue.

@@ -78,20 +78,11 @@ run" approach to "submitting your job and coming back later".
 
 The typical workflow for setting up and running LOTUS jobs is as follows:
 
-  1. Login to one of the [scientific analysis servers]({{% ref "sci-servers" %}}).
-  2. Install/write/configure your processing code.
-  3. Test your code interactively: run it locally in a single-process test case.
-  4. Create a wrapper script for your code that allows multiple versions to run independently: e.g. running for different dates or processing different spatial regions/variables.
-  5. [Submit your jobs]({{% ref "how-to-submit-a-job-to-slurm" %}}) via the batch script.
-  6. [Monitor your jobs]({{% ref "how-to-monitor-slurm-jobs" %}}).
-  7. Gather/analyse/review the outputs as required.
-
-## Project-specific LOTUS queues
-
-Each project has an account to submit to and details of this can be found on our page about [submitting a job]({{% ref "slurm-quick-reference#new-slurm-job-accounting-hierarchy" %}}).
-
-Occasionally a project has a specific requirement for a collection of compute
-nodes that involve the provision of a project-specific queue. If you are
-working on such a project your project lead will provide guidance on which
-queue to use. Please contact the JASMIN helpdesk if
-you are interested in setting up a project-specific queue.
+1. Login to one of the [scientific analysis servers]({{% ref "sci-servers" %}}).
+2. Install/write/configure your processing code.
+3. Test your code interactively: run it locally in a single-process test case.
+4. Create a wrapper script for your code that allows multiple versions to run independently: e.g. running for different dates or processing different spatial regions/variables.
+5. [Submit your jobs]({{% ref "how-to-submit-a-job-to-slurm" %}}) via the batch script.
+6. [Monitor your jobs]({{% ref "how-to-monitor-slurm-jobs" %}}).
+7. Gather/analyse/review the outputs as required.
+8. Tidy up any temporary storage that your jobs may have used, even if they failed (e.g. `/tmp` or `/work/scratch-*`)

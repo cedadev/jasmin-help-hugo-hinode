@@ -19,12 +19,12 @@ and [ORCHID]({{% ref "orchid-gpu-cluster" %}}) (GPU) clusters.
 
 ## Essential Slurm commands
 
-| **Slurm command**                  | **Description**                         |
-| ---------------------------------- | --------------------------------------- |
-| `sbatch my_batch_script.sh`              | Submit a job script to the scheduler    |
-| `sinfo`                              | Show available scheduling queues        |
-| `squeue -u <username>`           | List user's pending and running jobs    |
-| `salloc -p debug -q debug -A mygws`  | Request an interactive session on LOTUS |
+| **Slurm command**                   | **Description**                         |
+| ----------------------------------- | --------------------------------------- |
+| `sbatch my_batch_script.sh`         | Submit a job script to the scheduler    |
+| `sinfo`                             | Show available scheduling queues        |
+| `squeue -u <username>`              | List user's pending and running jobs    |
+| `salloc -p debug -q debug -A mygws` | Request an interactive session on LOTUS |
 {.table .table-striped}
   
 ## Job specification
@@ -130,8 +130,8 @@ specify the unit, e.g. `--mem=5G` for 5 GB.
   
 ## Job environment variables
 
-| **Slurm variable**      | **Description**                        |
-| ----------------------- | -------------------------------------- |
+| **Slurm variable**      | **Description**                      |
+| ----------------------- | ------------------------------------ |
 | `$SLURM_JOBID`          | Job identifier number                |
 | `$SLURM_ARRAY_JOB_ID`   | Job array                            |
 | `$SLURM_ARRAY_TASK_ID`  | Job array index                      |

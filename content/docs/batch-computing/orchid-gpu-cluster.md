@@ -42,24 +42,36 @@ interactive mode by launching a pseudo-shell terminal Slurm job from a JASMIN
 scientific server e.g. `sci-vm-01`:
 
 {{<command user="user" host="sci-vm-01">}}
-srun --gres=gpu:1 --partition=orchid --account=orchid --pty /bin/bash
+srun --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid --pty /bin/bash
 (out)srun: job 24096593 queued and waiting for resources
 (out)srun: job 24096593 has been allocated resources
 {{</command>}}
+
+At this point, your shell prompt will change to the GPU node `gpuhost016`, which is allocated for this interactive session on ORCHID.
+You will have the one GPU allocated at this shell, as requested:
+
 {{<command user="user" host="gpuhost16">}}
-## you are now on gpuhost16
+nvidia-smi
+(out)+-----------------------------------------------------------------------------------------+
+(out)| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+(out)|-----------------------------------------+------------------------+----------------------+
+(out)| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+(out)| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+(out)|                                         |                        |               MIG M. |
+(out)|=========================================+========================+======================|
+(out)|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+(out)|                   ...                   |           ...          |         ...          |
 {{</command>}}
 
-The GPU node gpuhost016 is allocated for this interactive session on LOTUS
-
 Note that for batch mode, a GPU job is submitted using the Slurm command
-'sbatch':
+`sbatch`:
 
 {{<command user="user" host="sci-vm-01">}}
-sbatch --gres=gpu:1 --partition=orchid --account=orchid gpujobscript.sbatch
+sbatch --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid gpujobscript.sbatch
 {{</command>}}
 
 or by adding the following preamble in the job script file
+
 ```bash
 #SBATCH --partition=orchid
 #SBATCH --account=orchid
@@ -74,19 +86,16 @@ Note 2: **CUDA Version: 11.6**
 Note 3: The Slurm batch partition/queue `orchid` has a maximum runtime of 24 hours and
 the default runtime is 1 hour. The maximum number of CPU cores per user is
 limited to 8 cores. If the limit is exceeded then the job is expected to be in
-a pending state with the reason being {{<mark>}}QOSGrpCpuLimit{{</mark>}}
+a pending state with the reason being {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}
 
 ## GPU interactive node
 
 There is an interactive GPU node `gpuhost001.jc.rl.ac.uk`, with the same spec as
 other Orchid nodes, that you can access via a login server to prototype and
-test your GPU code prior to running as a batch job.
+test your GPU code prior to running as a batch job:
 
 {{<command user="user" host="login-01">}}
 ssh -A gpuhost001.jc.rl.ac.uk
-{{</command>}}
-{{<command user="user" host="gpuhost001">}}
-## you are now on gpuhost001
 {{</command>}}
 
 ## Software Installed on the GPU cluster (to be updated)
@@ -97,4 +106,3 @@ ssh -A gpuhost001.jc.rl.ac.uk
 - NGC client (GPU software hub for NVIDIA)  
 - Singularity 3.7.0 - which supports NVIDIA/GPU containers
 - SCL Python 3.6
-

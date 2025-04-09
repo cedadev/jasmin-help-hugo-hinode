@@ -19,12 +19,12 @@ and [ORCHID]({{% ref "orchid-gpu-cluster" %}}) (GPU) clusters.
 
 ## Essential Slurm commands
 
-| **Slurm command**                  | **Description**                         |
-| ---------------------------------- | --------------------------------------- |
-| sbatch _script_file_               | Submit a job script to the scheduler    |
-| sinfo                              | Show available scheduling queues        |
-| squeue -u _\<username\>_           | List user's pending and running jobs    |
-| srun -n 1 -p test \--pty /bin/bash | Request an interactive session on LOTUS |
+| **Slurm command**                   | **Description**                         |
+| ----------------------------------- | --------------------------------------- |
+| `sbatch my_batch_script.sh`         | Submit a job script to the scheduler    |
+| `sinfo`                             | Show available scheduling queues        |
+| `squeue -u <username>`              | List user's pending and running jobs    |
+| `salloc -p debug -q debug -A mygws` | Request an interactive session on LOTUS |
 {.table .table-striped}
   
 ## Job specification
@@ -36,10 +36,22 @@ Long and short argument names are separated by a comma.
 - Scheduler directive - goes in front of the arguments below in a job script file
 - An example Slurm job script file is available [here]({{% ref "how-to-submit-a-job-to-slurm/#method-1-submit-via-a-slurm-job-script" %}})
 
-##### `--partition=QUEUE_NAME, -p QUEUE_NAME`
+##### `--account=GWS_NAME, -A GWS_NAME`
 
-- Specify the scheduling queue/partition by replacing `QUEUE_NAME`
-- A list of queues/partitions that you can use are available [here]({{% ref "slurm-queues" %}})
+- Specify which project's account to log the compute with by replacing `GWS_NAME`
+- To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "how-to-submit-a-job-to-slurm/#new-slurm-job-accounting-hierarchy" %}})
+
+##### `--partition=PARTITION_NAME, -p PARTITION_NAME`
+
+- Specify the scheduling partition by replacing `PARTITION_NAME`
+- See the [list of partitions]({{% ref "how-to-submit-a-job-to-slurm/#partitions-and-qos" %}}) that you can use
+<!-- Once updated, point to [Slurm queues page]({{% ref "slurm-queues" %}}) -->
+
+##### `--qos=QOS_NAME, -q QOS_NAME`
+
+- Specify what Quality of Service your task needs by replacing `QOS_NAME`
+- See the [list of QoS]({{% ref "how-to-submit-a-job-to-slurm/#partitions-and-qos" %}}) that you can use
+<!-- Once updated, point to [Slurm queues page]({{% ref "slurm-queues" %}}) -->
 
 ##### `--time=hh:mm:ss, -t hh:mm:ss`
 
@@ -108,21 +120,21 @@ specify the unit, e.g. `--mem=5G` for 5 GB.
 
 ## Job control commands
 
-| **Slurm command**               | **Description**               |
-| ------------------------------- | ----------------------------- |
-| scancel _\<jobid\>_             | Kill a job                    |
-| scontrol show job _\<jobid\>_   | Show details job information  |
-| scontrol update job _\<jobid\>_ | Modify a pending job          |
-| scancel \--user=_\<username\>_  | Kill all jobs owned by a user |
+| **Slurm command**             | **Description**               |
+| ----------------------------- | ----------------------------- |
+| `scancel <jobid>`             | Kill a job                    |
+| `scontrol show job <jobid>`   | Show details job information  |
+| `scontrol update job <jobid>` | Modify a pending job          |
+| `scancel --user=<username>`   | Kill all jobs owned by a user |
 {.table .table-striped}
   
 ## Job environment variables
 
-| **Slurm variable**    | **Description**                      |
-| --------------------- | ------------------------------------ |
-| $SLURM_JOBID          | Job identifier number                |
-| $SLURM_ARRAY_JOB_ID   | Job array                            |
-| $SLURM_ARRAY_TASK_ID  | Job array index                      |
-| $SLURM_ARRAY_TASK_MAX | Last index number within a job array |
-| $SLURM_NTASKS         | Number of processors allocated       |
+| **Slurm variable**      | **Description**                      |
+| ----------------------- | ------------------------------------ |
+| `$SLURM_JOBID`          | Job identifier number                |
+| `$SLURM_ARRAY_JOB_ID`   | Job array                            |
+| `$SLURM_ARRAY_TASK_ID`  | Job array index                      |
+| `$SLURM_ARRAY_TASK_MAX` | Last index number within a job array |
+| `$SLURM_NTASKS`         | Number of processors allocated       |
 {.table .table-striped}

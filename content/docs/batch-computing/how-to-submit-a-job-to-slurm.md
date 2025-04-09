@@ -1,11 +1,9 @@
 ---
 aliases: /article/4890-how-to-submit-a-job-to-slurm
-description: How to submit a job to Slurm
+description: How to submit a batch job to Slurm
 slug: how-to-submit-a-job
 title: How to submit a job
 ---
-
-This article explains how to submit a batch job to Slurm.
 
 ## What is a batch job?
 

@@ -1,6 +1,6 @@
 ---
 aliases: /article/4881-lotus-queues
-description: Slurm queues
+description: Slurm queues/partitions for batch job submissions to the LOTUS & ORCHID clusters
 tags:
 - slurm
 - queue
@@ -15,9 +15,6 @@ title: Slurm queues
 Not yet reviewed for compatibility with the new cluster, April 2025.
 Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
 {{</alert>}}
-
-This article introduces the Slurm scheduler queues/partitions for batch job
-submissions to the LOTUS and ORCHID clusters.
 
 ## Queue names
 

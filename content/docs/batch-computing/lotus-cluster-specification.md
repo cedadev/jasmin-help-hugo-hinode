@@ -1,6 +1,6 @@
 ---
 aliases: /article/4932-lotus-cluster-specification
-description: LOTUS cluster specification
+description: Details of the current LOTUS cluster
 slug: lotus-cluster-specification
 tags:
 - intel

@@ -4,9 +4,7 @@ description: LOTUS/ORCHID Slurm scheduler status
 title: Slurm status
 ---
 
-The [JASMIN dashboard](https://mon.jasmin.ac.uk/) includes an overview of:
+The [JASMIN dashboard]({{% ref "jasmin-status#jasmin-dashboard" %}}) includes an overview of:
 LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.
 
-{{<image src="img/docs/slurm-status/screenshot.png" caption="lotus status">}}
-
-Figure 1. LOTUS dashboard
+{{<image src="img/docs/slurm-status/lotus-dashboard.png" caption="LOTUS dashboard showing real-time information">}}

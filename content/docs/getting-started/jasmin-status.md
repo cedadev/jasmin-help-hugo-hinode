@@ -13,7 +13,7 @@ The {{< link "ceda_status" >}}CEDA Status page{{< /link >}} is updated regularly
 
 ## JASMIN dashboard
 
-The {{<link "https://mon.jasmin.ac.uk" >}}JASMIN metrics dashboard{{</link>}} has been redeveloped and is now available again. 
+The {{<link "https://mon.jasmin.ac.uk" >}}JASMIN metrics dashboard{{</link>}} has been redeveloped and is now available again. You can log in with the same username and password for the JASMIN Accounts Portal.
 
 Please read the introductory information on that page.
 

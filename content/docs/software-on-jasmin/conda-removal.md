@@ -36,17 +36,11 @@ defaults channel, if the desired end result is a usable conda environment
 containing equivalent packages from conda-forge.  Some manual decision-making
 may be needed, and this document is a guide to help you to do this.
 
-In cases where users take no action, ultimately it might become necessary for
-JASMIN staff to remove affected packages in an automated way from user's conda
-environments, but this would be likely to impair the usability of those
-environments, and it is not our preferred course of action.
-
 Please note that this page is a best-efforts guide only.  Ultimately *you*
 are responsible for the contents of the conda environments in your own
 user directories (including group workspaces, etc).  We cannot warrant
 that following these instructions will succeed in removing all the packages
 for which you could incur charges, despite that being the intention.
-Any feedback for improvements of this document is welcome.
 
 ## What conda environments do I have?
 

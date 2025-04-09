@@ -5,11 +5,6 @@ slug: example-job-2-calc-md5s
 title: 'Example Job 2: Calculating MD5 Checksums on many files'
 ---
 
-{{<alert type="danger">}}
-Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
-{{</alert>}}
-
 This page records some early CEDA usage of the LOTUS cluster for various
 relatively simple tasks. Others may wish to use these examples as a starting
 point for developing their own workflows on LOTUS.

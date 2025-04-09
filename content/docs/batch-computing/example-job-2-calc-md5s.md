@@ -52,6 +52,9 @@ Create the template file: `scan_files_template.sh`
 
 ```bash
 #!/bin/bash
+#SBATCH -A mygws
+#SBATCH -p standard 
+#SBATCH -q standard
 #SBATCH -e %J.e
 
 infile=/home/users/astephen/sst_cci/to_scan/__INSERT_FILE__  
@@ -77,7 +80,7 @@ Submit all 22 jobs to LOTUS:
 ```bash
 for i in `ls /home/users/astephen/sst_cci/to_scan/` ; do      
     echo $i    
-    cat /home/users/astephen/sst_cci/bin/scan_files_${i}.sh | sbatch -p short-serial -o /home/users/astephen/sst_cci/output/$i   
+    cat /home/users/astephen/sst_cci/bin/scan_files_${i}.sh | sbatch -o /home/users/astephen/sst_cci/output/$i   
 done
 ```
 
@@ -119,10 +122,9 @@ def submit_job(dataset):
     if not op.exists(path):
         raise Exception('%s does not exist' % path)
     job_name = dataset
-    cmd = ("echo -e '#!/bin/bash\n"
-            "srun /usr/bin/md5sum {path}/*/*.nc' "
-            "| sbatch -p short-serial -J {job_name} "
-            "-o {job_name}.checksums -e {job_name}.err"
+    cmd = ("sbatch -A mygws -p standard -q standard -J {job_name} "
+            "-o {job_name}.checksums -e {job_name}.err "
+            "--wrap \"srun /usr/bin/md5sum {path}/*/*.nc\""
         ).format(job_name=job_name, path=path)
     
     print(cmd)
@@ -145,8 +147,7 @@ separate job by invoking the above script as follows:
 
 {{<command user="user" host="sci-vm-01">}}
 ./checksum_dataset.py $(cat datasets_to_checksum.dat)
-(out)echo -e '#!/bin/bash
-(out)srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc' | sbatch -p short-serial -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err
+(out) sbatch -A mygws -p standard -q standard -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err --wrap "srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc"
 (out)Submitted batch job 40898728
 (out)...
 {{</command>}}

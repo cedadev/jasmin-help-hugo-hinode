@@ -26,8 +26,16 @@ Please adapt using
  &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
  &lt;/div>
  &lt;/div>
-&lt;p>This article introduces the Slurm scheduler queues/partitions for batch job
-submissions to the LOTUS and ORCHID clusters.&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
+
+
+
+
+&lt;h2 id="queue-names" class="heading">Queue names&lt;a href="#queue-names" aria-labelledby="queue-names">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>The Slurm queues in the LOTUS cluster are:&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>

@@ -10,8 +10,7 @@ title: How to submit a job
 A batch job is a task that, once submitted to the scheduler, can run without further interaction
 from the user. A user writes a script containing both the
 command(s) to be run and directives for the scheduler as to how the job should be run.
-The batch system then selects the resources for the
-job and decides when and where to run the job. Note: the term "job" is used throughout
+The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term "job" is used throughout
 this documentation to mean a "batch job".
 
 There are two ways of submitting a job to Slurm:
@@ -81,8 +80,8 @@ useraccounts
 (out)# sacctmgr show user fred withassoc format=user,account,qos%-50
 (out)User       Account        QOS
 (out)---------- -------------- -------------------------------------
-(out)      fred  mygws         debug,highres,long,short,standard
-(out)      fred  orchid        debug,highres,long,short,standard
+(out)      fred  mygws         debug,high,long,short,standard
+(out)      fred  orchid        debug,high,long,short,standard
 {{</command>}}
 
 You should use the relevant account for your project's task with the `--account` directive in your job script.
@@ -96,8 +95,7 @@ There are 3 partitions currently available on LOTUS, with associated allowed qua
 
 | Partition | Allowed QoS |
 | --- | --- |
-| `standard` | `standard`, `short`, `long` |
-| `highres` | `highres`, `reservation` |
+| `standard` | `standard`, `short`, `long`, `high` |
 | `debug` | `debug`, `reservation` |
 {.table .table-striped .w-auto}
 
@@ -106,7 +104,7 @@ There are 3 partitions currently available on LOTUS, with associated allowed qua
 | `standard` | 500 | 1 | 24 hours |
 | `short` | 550 | 1 | 4 hours |
 | `long` | 350 | 1 | 5 days |
-| `highres` | 450 |  | 2 days |
+| `high` | 450 | 96 | 2 days |
 | `debug` | 500 |  | 1 hour |
 {.table .table-striped .w-auto}
 
@@ -143,7 +141,7 @@ The job is executed on the LOTUS compute node by allocating resources with `sall
 See the example below:
 
 {{<command user="fred" host="sci-ph-01">}}
-salloc -p highres -q highres -A mygws --ntasks-per-node=2
+salloc -p standard -q high -A mygws --ntasks-per-node=2
 (out)salloc: Pending job allocation 23506
 (out)salloc: job 23506 queued and waiting for resources
 (out)salloc: job 23506 has been allocated resources
@@ -174,7 +172,7 @@ checked from another terminal as shown below:
 {{<command user="fred" host="sci-ph-01">}}
 squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)JOBID PARTITION           NAME       USER  ST       TIME  NODES   CPUS NODELIST(REASON)
-(out)23506 highres      interactive   fred   R       1:32      1      2 host580
+(out)23506 standard      interactive   fred   R       1:32      1      2 host580
 {{</command>}}
 
 {{<alert type="info">}}

@@ -16,9 +16,9 @@ On JASMIN, it creates a Dask cluster in {{<link "../batch-computing/lotus-overvi
 Before using Dask Gateway on JASMIN, you will need:
 
 1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. **Subsequently** (once `jasmin-login` has been approved and completed), the `dask` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/dask/">}}Apply here{{</button>}}
+2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "how-to-submit-a-job-to-slurm/#new-slurm-job-accounting-hierarchy" %}}).
 
-The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `dask` role grants access to the special LOTUS partition used by the Dask Gateway service.
+The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster.
 
 ## Creating a Dask cluster
 
@@ -35,6 +35,7 @@ gw = dask_gateway.Gateway("https://dask-gateway.jasmin.ac.uk", auth="jupyterhub"
 # Inspect and change the options if required before creating your cluster.
 options = gw.cluster_options()
 options.worker_cores = 2
+options.account = "your-slurm-account-name"
 
 # Create a Dask cluster, or, if one already exists, connect to it.
 # This stage creates the scheduler job in Slurm, so it may take some

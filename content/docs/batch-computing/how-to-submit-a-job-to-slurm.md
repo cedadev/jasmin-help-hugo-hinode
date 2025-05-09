@@ -91,7 +91,7 @@ Please ignore and do not use the group `shobu`.
 
 ### Partitions and QoS
 
-There are 3 partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
+There are two partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
 
 | Partition | Allowed QoS |
 | --- | --- |
@@ -105,7 +105,7 @@ There are 3 partitions currently available on LOTUS, with associated allowed qua
 | `short` | 550 | 1 | 4 hours |
 | `long` | 350 | 1 | 5 days |
 | `high` | 450 | 96 | 2 days |
-| `debug` | 500 |  | 1 hour |
+| `debug` | 500 | 8 | 1 hour |
 {.table .table-striped .w-auto}
 
 Once you've chosen the partition and QoS you need, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.

@@ -254,7 +254,7 @@ Preliminary node specification:
 type | status | specs
 --- | --- | ---
 standard | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
-high-mem | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+special (not yet available) | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
 {.table .table-striped .w-auto}
 
 Notes:
@@ -263,6 +263,7 @@ Notes:
 - Overall ~55,000 cores: ~triples capacity pf previous cluster
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
 - Submission to the new cluster is now via any `sci-vm-*` or `sci-ph-*` node
+- 70% of old LOTUS has now been decommissioned
 
 ### New LOTUS2 cluster initial submission guide
 
@@ -285,11 +286,8 @@ useraccounts
 (out)# sacctmgr show user fred withassoc format=user,account,qos%-50
 (out)User       Account        QOS
 (out)---------- -------------- --------------------------------------------------
-(out)      fred  mybiggws      debug,highres,long,short,standard
-(out)      fred  jules-test    jules-test
-(out)      fred  no-project    debug,highres,long,short,standard
-(out)      fred  shobu
-(out)      fred  orchid        debug,highres,long,short,standard
+(out)      fred  mybiggws      debug,high,long,short,standard
+(out)      fred  orchid        debug,high,long,short,standard
 {{</command>}}
 
 Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
@@ -297,12 +295,11 @@ Please ignore and do not use the group `shobu`.
 
 #### Partitions and QoS
 
-There are 3 partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:
+There are two partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:
 
 | Partition | Allowed QoS |
 | --- | --- |
 | `standard` | `standard`, `short`, `long` |
-| `highres` | `highres`, `reservation` |
 | `debug` | `debug`, `reservation` |
 {.table .table-striped .w-auto}
 
@@ -311,8 +308,8 @@ There are 3 partitions currently available on LOTUS2, with associated allowed qu
 | `standard` | 500 | 1 | 24 hours |
 | `short` | 550 | 1 | 4 hours |
 | `long` | 350 | 1 | 5 days |
-| `highres` | 450 |  | 2 days |
-| `debug` | 500 |  | 1 hour |
+| `high` | 450 | 96 | 2 days |
+| `debug` | 500 | 8 | 1 hour |
 {.table .table-striped .w-auto}
 
 #### Job submission

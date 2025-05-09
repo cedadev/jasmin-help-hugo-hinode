@@ -47,7 +47,7 @@ duration of a project.
 See [Access to Storage]({{% ref path="/docs/getting-started/storage" %}}) for details about which file
 systems are appropriate to use and how to access them.
 
-LOTUS currently has around 19,000 cores, but is heavily used and implements a
+LOTUS currently has around 55,000 cores, but is heavily used and implements a
 fair-share scheduling system between users. It is not intended as a substitute
 for dedicated HPC facilities, rather as a complementary environment in which
 model outputs can be analyzed and compared with observational data. Users with

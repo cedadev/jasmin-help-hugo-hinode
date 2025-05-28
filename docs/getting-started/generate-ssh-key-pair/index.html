@@ -1416,7 +1416,7 @@ Contact us
 </h2>
 <ul class=list-unstyled>
 <li>
-<a href=javascript:void(0); id=beacon onclick="Beacon('toggle')">Helpdesk</a>
+<a href=javascript:void(0); id=beacon onclick="if (Beacon('info') === undefined) { window.location = 'https:\/\/www.jasmin.ac.uk/help/contact/' } else { Beacon('toggle') }">Helpdesk</a>
 </li>
 </ul>
 </div>

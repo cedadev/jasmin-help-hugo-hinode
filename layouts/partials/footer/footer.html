@@ -51,7 +51,8 @@
                 </h2>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="javascript:void(0);" id="beacon" onclick="Beacon('toggle')">Helpdesk</a>
+                        {{/*  Sets up the Helpdesk link to either toggle the Beacon or go to the JASMIN contact us page if it's not ready  */}}
+                        <a href="javascript:void(0);" id="beacon" onclick="if (Beacon('info') === undefined) { window.location = '{{ site.Params.links.jasmin }}/help/contact/' } else { Beacon('toggle') }">Helpdesk</a>
                     </li>
                 </ul>
             </div>

@@ -276,13 +276,12 @@ scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.
   {{< /accordion-item >}}
   
   {{< accordion-item header="Can I run MASS retrievals on LOTUS or through a workload manager?" >}}
-In addition to the interactive mass-cli server there is also the moose1 server
-that is only accessible through the {{<link "../batch-computing/lotus-overview">}}LOTUS batch processing cluster{{</link>}}. To submit jobs to moose1 you must use the [Slurm scheduler]({{< ref
+In addition to the interactive mass-cli server there is also a node of the {{<link "../batch-computing/lotus-overview">}}LOTUS batch processing cluster{{</link>}} with the MASS client installed. To submit jobs to this, you must use the [Slurm scheduler]({{< ref
 "slurm-scheduler-overview" >}}). You will need to specify the account
-mass and partition mass, for example:
+mass, partition mass and QOS mass, for example:
 
 ```
- sbatch -A mass -p mass [<options>] <jobscript>
+ sbatch -A mass -p mass -q mass [<options>] <jobscript>
 ``` 
 
 where \<jobscript\> looks something like:
@@ -302,6 +301,7 @@ including the following lines in your suite.rc file:
 [[[directives]]]
     --partition=mass
     --account=mass
+    --qos=mass
 [<options>]
 ```
 

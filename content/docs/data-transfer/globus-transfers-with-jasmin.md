@@ -123,6 +123,14 @@ at the path of your home directory (/~/)
 globus ls a2f53b7f-1b4e-4dce-9b7c-349ae760fee0:/~/
 {{</command>}}
 
+If you get an error like the following, please see [Globus CLI Troubleshooting](globus-command-line-interface/#cli-troubleshooting):
+
+```txt
+The resource you are trying to access requires you to re-authenticate with specific identities.
+message: Missing required data_access consent
+Please use "globus session update" to re-authenticate with specific identities
+```
+
 TIP: you can set the ID of the collection to be an environment variable like
 this, for convenience:
 

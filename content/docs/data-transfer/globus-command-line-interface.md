@@ -619,3 +619,29 @@ You could then consider how to repeat the task automatically. For example:
   - watching a directory for arrival/creation of a certain file
   - triggering a compute/analysis step on files in the directory (using a [Globus Compute](https://www.globus.org/compute) endpoint of your own?)
   - transferring the output of that analysis to elsewhere, and cleaning up
+
+## CLI Troubleshooting
+### Missing data_access consent
+
+If you get an error like the following:
+
+```txt
+The resource you are trying to access requires you to re-authenticate with specific identities.
+message: Missing required data_access consent
+Please use "globus session update" to re-authenticate with specific identities
+```
+
+you can explicitly request the `data_access` consent for the collection with which you are
+trying to interact, with the following command, using the ID of the collection, i.e.
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/<COLLECTION_ID>/data_access]'
+{{</command>}}
+
+for example, for the JASMIN Default Collection:
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+{{</command>}}
+
+This should take you through the steps to add the required consent to your session.

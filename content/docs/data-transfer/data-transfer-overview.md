@@ -50,10 +50,8 @@ these locations are available on the transfer servers.
 
 ### JASMIN Transfer servers
 
-JASMIN provides specific {{<link "../interactive-computing/transfer-servers">}}servers{{</link>}}servers for
-managing data transfers. Please read about the different servers available for
-particular data transfer needs, and about the various
-{{<link "data-transfer-tools">}}data transfer tools{{</link>}} available.
+JASMIN provides specific {{<link "../interactive-computing/transfer-servers">}}servers{{</link>}} for managing data transfers. Please read about the different servers available for
+particular data transfer needs, and about the various {{<link "data-transfer-tools">}}data transfer tools{{</link>}} available.
 
 ## Improving your transfer rates
 

@@ -148,8 +148,7 @@ update to Jaspy.
 Yes, the article linked above also describes how to use Conda to create your
 own custom environment.
 
-#### I get "503 service unavailable" when I try to access the JASMIN Notebook
-Service
+#### I get "503 service unavailable" when I try to access the JASMIN Notebook Service
 
 This error occurs when your notebook server is unable to start. By far the
 most common cause of this error is when you are over your quota in your home

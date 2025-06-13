@@ -7,7 +7,7 @@ title: Joint-storage Data Migration App (JDMA)
 ---
 
 {{<alert type="info">}}
-A new system called [NLDS](https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html) is in development and will eventually replace both Elastic Tape and JDMA.
+Please see [Near-Line Data Store](nlds) for details of JASMIN's new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
 {{</alert>}}
 
 **See the JDMA user documentation

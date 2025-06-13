@@ -6,8 +6,7 @@ title: Secondary copy using Elastic Tape
 ---
 
 {{<alert type="info">}}
-- Information below relates to the Elastic Tape command-line tools. The [JDMA]({{% ref "jdma" %}}) system provides a better interface for putting/retrieving data into the Elastic Tape System)
-- A new system called [NLDS](https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html) is coming very shortly (as of Feb 2023) and will eventually replace both of these.
+Please see [Near-Line Data Store](nlds) for details of JASMIN's new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
 {{</alert>}}
 
 ## Introduction

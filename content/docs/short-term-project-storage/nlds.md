@@ -5,7 +5,7 @@ tags: nlds
 ---
 
 {{<alert type="info">}}
-This is a new system which will replace both Elastic Tape and JDMA.
+This is a new system which will replace both Elastic Tape and JDMA, but is now available for use.
 {{</alert>}}
 
 ## Introduction

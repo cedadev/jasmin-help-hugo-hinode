@@ -953,7 +953,7 @@ a software environment before usage. This is typically done by using:&lt;/p></de
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;use href="#fa-lightbulb">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
- A new system called 
+ Please see 
  
 
 
@@ -964,10 +964,15 @@ a software environment before usage. This is typically done by using:&lt;/p></de
 
 
  
+ 
+ 
 
-&lt;a href="https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html" target="_blank" rel="noopener noreferrer nofollow">NLDS&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is in development and will eventually replace both Elastic Tape and JDMA.
+
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/nlds/">Near-Line Data Store&lt;/a> for details of JASMIN&amp;rsquo;s new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
  &lt;/div>
  &lt;/div>
 &lt;p>&lt;strong>See the JDMA user documentation
@@ -2811,8 +2816,7 @@ periodic analysis.&lt;/p></description></item><item><title>Secondary copy using 
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;use href="#fa-lightbulb">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
- &lt;ul>
-&lt;li>Information below relates to the Elastic Tape command-line tools. The 
+ Please see 
  
 
 
@@ -2823,30 +2827,15 @@ periodic analysis.&lt;/p></description></item><item><title>Secondary copy using 
 
 
  
+ 
+ 
 
 
 
  
  
 
- &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/jdma/">JDMA&lt;/a> system provides a better interface for putting/retrieving data into the Elastic Tape System)&lt;/li>
-&lt;li>A new system called 
- 
-
-
-
-
-
-
-
-
- 
-
-&lt;a href="https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html" target="_blank" rel="noopener noreferrer nofollow">NLDS&amp;nbsp;
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is coming very shortly (as of Feb 2023) and will eventually replace both of these.&lt;/li>
-&lt;/ul>
-
+ &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/nlds/">Near-Line Data Store&lt;/a> for details of JASMIN&amp;rsquo;s new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
  &lt;/div>
  &lt;/div>
 

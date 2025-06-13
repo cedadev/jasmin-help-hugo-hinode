@@ -7708,6 +7708,21 @@ function initIndex() {
       {
         id: 81,
         tag: "en",
+        href: "/docs/short-term-project-storage/nlds/",
+        title: "Near-Line Data Store (NLDS)",
+        description: "Near-line storage for group workspace data",
+        
+        
+        content: "\u0026nbsp; This is a new system which will replace both Elastic Tape and JDMA. Introduction \u0026nbsp; The Near-Line Data Store is JASMIN\u0026rsquo;s new service to bridge the gap between disk and tape storage.\nIt makes use of a large cache on Object Storage to help stage data efficiently to and from a large-capacity, high-throughput tape library at the backend. It provides significantly more functionality than previous generations of near-line storage services, so please take the time to find out more.\nNLDS aims to provide:\na more dynamic way of using tape in users\u0026rsquo; workflows more energy-efficient storage, important for both cost and environmental impact of your work all JASMIN users with a means to store data near-line (previously it was aimed more at GWS managers only) Full documentation is available here: NLDS documentation\u0026nbsp; \u0026nbsp; \u0026nbsp; Webinar \u0026nbsp; Our webinar in March 2025 gave an overview of NLDS: please watch this to find out more. The NLDS part of the presentation lasts around 33 minutes.\nBasic usage \u0026nbsp; \u0026nbsp; Please refer to the NLDS documentation\u0026nbsp; for full context and detail of these commands: a selection of simple commands are included here for illustration only. You\u0026rsquo;ll need to install the client software\u0026nbsp; to use the commands, but some examples are:\nPUT a single file into a holding:\nnlds put \u0026lt;filepath\u0026gt; (you can PUT a list of files, too).\nCheck on the status of your holdings:\nnlds stat State of transactions for user:frjohn, group:farmers user id action job label label done state last update frjohn 1 put SheepHerding SheepPen 100% COMPLETE 2023-04-18 15:21:41 frjohn 2 put test_putlist Zoo 100% COMPLETE Retrieve a file from a holding:\nFirst, find the holding that the file is stored in:\nnlds find Listing files for holdings for user:frjohn, group:farmers user h-id h-label size date storage path frjohn 1 SheepPen 49.0B 2023-04-18 O /Users/frjohn/sheep.txt frjohn 2 Zoo 96.0B 2023-04-18 O /Users/frjohn/albatross.txt frjohn 2 Zoo 50.0B 2023-04-18 L /Users/frjohn/rabbit.txt Fetch a single file:\nnlds get /Users/frjohn/sheep.txt -r ./ GETLIST transaction accepted for processing. user : frjohn group : farmers action : getlist job label : 14bc9846 transaction id : 14bc9846-9d45-440a-af6c-dfcb5cb9dcae Further information \u0026nbsp; NLDS is fully documented here\u0026nbsp; , including:\nTutorial Step-by-step guide to setup Hints and Tips"
+      })
+      .add(
+      
+      
+      
+      
+      {
+        id: 82,
+        tag: "en",
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
         description: "New storage FAQs and issues",
@@ -7721,7 +7736,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         tag: "en",
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
@@ -7736,7 +7751,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         tag: "en",
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
@@ -7751,7 +7766,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         tag: "en",
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
@@ -7766,7 +7781,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         tag: "en",
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
@@ -7781,7 +7796,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         tag: "en",
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
@@ -7796,7 +7811,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         tag: "en",
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7811,7 +7826,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         tag: "en",
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
@@ -7826,7 +7841,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         tag: "en",
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
@@ -7841,7 +7856,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         tag: "en",
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
@@ -7856,7 +7871,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         tag: "en",
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
@@ -7871,7 +7886,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         tag: "en",
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
@@ -7886,7 +7901,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         tag: "en",
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
@@ -7901,7 +7916,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         tag: "en",
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
@@ -7916,7 +7931,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         tag: "en",
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
@@ -7931,7 +7946,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         tag: "en",
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
@@ -7946,7 +7961,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         tag: "en",
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
@@ -7961,7 +7976,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         tag: "en",
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
@@ -7976,7 +7991,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         tag: "en",
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
@@ -7991,7 +8006,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         tag: "en",
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
@@ -8006,7 +8021,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
@@ -8021,7 +8036,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         tag: "en",
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
@@ -8036,7 +8051,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         tag: "en",
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
@@ -8051,7 +8066,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         tag: "en",
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
@@ -8066,7 +8081,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         tag: "en",
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
@@ -8081,7 +8096,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         tag: "en",
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
@@ -8096,7 +8111,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         tag: "en",
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
@@ -8111,7 +8126,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         tag: "en",
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
@@ -8126,7 +8141,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         tag: "en",
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
@@ -8141,7 +8156,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         tag: "en",
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
@@ -8156,7 +8171,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         tag: "en",
         href: "/docs/interactive-computing/tenancy-sci-analysis-vms/",
         title: "Tenancy Sci Analysis VMs",
@@ -8171,7 +8186,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         tag: "en",
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
@@ -8186,7 +8201,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         tag: "en",
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service with GPUs enabled",
@@ -8201,7 +8216,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         tag: "en",
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
@@ -8216,7 +8231,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         tag: "en",
         href: "/training/basic/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8231,7 +8246,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         tag: "en",
         href: "/training/intermediate/training-exercises-coming-soon/",
         title: "Training exercises coming soon",
@@ -8246,7 +8261,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         tag: "en",
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
@@ -8261,7 +8276,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         tag: "en",
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
@@ -8276,7 +8291,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         tag: "en",
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
@@ -8291,7 +8306,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         tag: "en",
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
@@ -8306,7 +8321,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         tag: "en",
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
@@ -8321,7 +8336,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         tag: "en",
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
@@ -8336,7 +8351,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         tag: "en",
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
@@ -8351,7 +8366,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         tag: "en",
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
@@ -8366,7 +8381,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         tag: "en",
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
@@ -8381,7 +8396,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         tag: "en",
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
@@ -8396,7 +8411,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         tag: "en",
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",

@@ -20,13 +20,9 @@ Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). 
 
 The Slurm queues in the LOTUS cluster are:
 
-- `test`
-- `short-serial`
-- `long-serial`
-- `par-single`
-- `par-multi`
-- `high-mem`
-- `short-serial-4hr`
+- `debug`
+- `standard`
+
 
 Each queue is has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources is

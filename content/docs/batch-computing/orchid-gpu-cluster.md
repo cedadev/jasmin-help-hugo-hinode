@@ -43,17 +43,17 @@ scientific server e.g. `sci-vm-01`:
 
 {{<command user="user" host="sci-vm-01">}}
 srun --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid --pty /bin/bash
-(out)srun: job 24096593 queued and waiting for resources
-(out)srun: job 24096593 has been allocated resources
+(out)srun: job 19505658 queued and waiting for resources
+(out)srun: job 19505658 has been allocated resources
 {{</command>}}
 
-At this point, your shell prompt will change to the GPU node `gpuhost016`, which is allocated for this interactive session on ORCHID.
+At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVDIA utility: 
 You will have the one GPU allocated at this shell, as requested:
 
-{{<command user="user" host="gpuhost16">}}
+{{<command user="user" host="gpuhost004">}}
 nvidia-smi
 (out)+-----------------------------------------------------------------------------------------+
-(out)| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+(out)| NVIDIA-SMI 570.133.20             Driver Version: 570.133.20     CUDA Version: 12.8     |
 (out)|-----------------------------------------+------------------------+----------------------+
 (out)| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
 (out)| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
@@ -75,34 +75,40 @@ or by adding the following preamble in the job script file
 ```bash
 #SBATCH --partition=orchid
 #SBATCH --account=orchid
+#SBATCH --qos=gpu:1
 #SBATCH --gres=gpu:1
+
 ```
 
 Note 1: `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and
-8 GPUs.
+8 GPUs each.
 
-Note 2: **CUDA Version: 11.6**
+IMPORTANT Note 2: **CUDA Version: 12.8**  Please add the following to your path 
+```bash
+export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+```
 
 Note 3: The Slurm batch partition/queue `orchid` has a maximum runtime of 24 hours and
 the default runtime is 1 hour. The maximum number of CPU cores per user is
 limited to 8 cores. If the limit is exceeded then the job is expected to be in
 a pending state with the reason being {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}
 
-## GPU interactive node
+## GPU interactive node -outside Slurm
 
-There is an interactive GPU node `gpuhost001.jc.rl.ac.uk`, with the same spec as
-other Orchid nodes, that you can access via a login server to prototype and
-test your GPU code prior to running as a batch job:
+There is an interactive GPU node `gpuhost001.jc.rl.ac.uk` (not managed by SLURM) and has the same spec as
+other Orchid nodes. You can access it directly from the JASMIN login servers for prototype and
+code test prior to running as a batch job on `orchid`:
 
 {{<command user="user" host="login-01">}}
 ssh -A gpuhost001.jc.rl.ac.uk
+(out) gpuhost001 ~]$ 
 {{</command>}}
 
-## Software Installed on the GPU cluster (to be updated)
+## Software Installed on the GPU cluster 
   
-- CUDA drivers 10.1, and CUDA libraries 10.0, 10.1 and 11.4  
-- CUDA DNN (Deep Neural Network Library)  
-- NVIDIA container runtime (see notes below)  
-- NGC client (GPU software hub for NVIDIA)  
-- Singularity 3.7.0 - which supports NVIDIA/GPU containers
+- CUDA version 12.8 
+- CUDA DNN (Deep Neural Network Library) version cudnn9-cuda-12
+- cuda-toolkit - version 12.8 
+- Singularity version 4.2.2-1 checked version - which supports NVIDIA/GPU containers
+- podman version 5.2.2 
 - SCL Python 3.6

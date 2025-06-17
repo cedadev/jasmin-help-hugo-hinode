@@ -47,8 +47,7 @@ srun --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid --pty /bin/ba
 (out)srun: job 19505658 has been allocated resources
 {{</command>}}
 
-At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVDIA utility: 
-You will have the one GPU allocated at this shell, as requested:
+At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVDIA utility. You will have the one GPU allocated at this shell, as requested:
 
 {{<command user="user" host="gpuhost004">}}
 nvidia-smi
@@ -80,35 +79,41 @@ or by adding the following preamble in the job script file
 
 ```
 
-Note 1: `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and
-8 GPUs each.
+**Notes:**
 
-IMPORTANT Note 2: **CUDA Version: 12.8**  Please add the following to your path 
+1. `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and 8 GPUs each.
+
+2. IMPORTANT **CUDA Version: 12.8**  Please add the following to your path 
 ```bash
 export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
 ```
 
-Note 3: The Slurm batch partition/queue `orchid` has a maximum runtime of 24 hours and
+3. The Slurm batch partition `orchid` has a maximum runtime of 24 hours and
 the default runtime is 1 hour. The maximum number of CPU cores per user is
 limited to 8 cores. If the limit is exceeded then the job is expected to be in
 a pending state with the reason being {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}
 
-## GPU interactive node -outside Slurm
+## GPU interactive node outside Slurm
 
-There is an interactive GPU node `gpuhost001.jc.rl.ac.uk` (not managed by SLURM) and has the same spec as
-other Orchid nodes. You can access it directly from the JASMIN login servers for prototype and
-code test prior to running as a batch job on `orchid`:
+There is an interactive GPU node `gpuhost001.jc.rl.ac.uk`, not managed by Slurm, which has the same spec as
+other ORCHID nodes. You can access it directly from the JASMIN login servers for prototyping and
+testing code prior to running as a batch job on ORCHID:
+
+Make sure that your initial SSH connection to the login server used the `-A` (agent forwarding) option, then:
 
 {{<command user="user" host="login-01">}}
-ssh -A gpuhost001.jc.rl.ac.uk
-(out) gpuhost001 ~]$ 
+ssh gpuhost001.jc.rl.ac.uk
 {{</command>}}
 
-## Software Installed on the GPU cluster 
+{{<command user="user" host="gpuhost001">}}
+## now on gpu interactive node
+{{</command>}}
+
+## Software Installed on the GPU cluster
   
-- CUDA version 12.8 
+- CUDA version 12.8
 - CUDA DNN (Deep Neural Network Library) version cudnn9-cuda-12
-- cuda-toolkit - version 12.8 
-- Singularity version 4.2.2-1 checked version - which supports NVIDIA/GPU containers
-- podman version 5.2.2 
+- cuda-toolkit - version 12.8
+- Singularity version 4.2.2-1 checked version - supports NVIDIA/GPU containers
+- podman version 5.2.2
 - SCL Python 3.6

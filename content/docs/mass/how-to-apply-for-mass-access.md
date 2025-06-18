@@ -11,9 +11,9 @@ title: How to apply for MASS access
 
 To access data held in the Met Office MASS archive, you will need:
 
-- a sponsor 
-- access to the mass-cli client machine
-- a MASS account 
+- a sponsor
+- access to the `mass-cli` client machine
+- a MASS account
 
 Your sponsor will need to be a **Senior Met Office Scientist** with whom you
 are working on a collaborative research project. If you are a Met Office
@@ -42,7 +42,7 @@ with any details they may not have:
 The information you provide to the Met Office will be treated in accordance
 with the {{<link "https://www.metoffice.gov.uk/about-us/legal/privacy">}}Met Office Privacy Policy{{</link>}}, and your use of the service will be subject to the {{<link "https://metoffice.github.io/JASMIN-MASS-access/Terms_and_Conditions.html">}}Terms and Conditions of Use{{</link>}} for the service.
 
-### Step Two - Access to mass-cli
+### Step Two - Access to `mass-cli`
 
 Next you need to apply for {{<link "https://accounts.jasmin.ac.uk/services/additional_services/mass/">}}the MASS service{{</link>}} in the JASMIN Accounts Portal:
 

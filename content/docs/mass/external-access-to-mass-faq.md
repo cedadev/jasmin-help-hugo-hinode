@@ -276,9 +276,14 @@ scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.
   {{< /accordion-item >}}
   
   {{< accordion-item header="Can I run MASS retrievals on LOTUS or through a workload manager?" >}}
-In addition to the interactive mass-cli server there is also a node of the {{<link "../batch-computing/lotus-overview">}}LOTUS batch processing cluster{{</link>}} with the MASS client installed. To submit jobs to this, you must use the [Slurm scheduler]({{< ref
-"slurm-scheduler-overview" >}}). You will need to specify the account
-mass, partition mass and QOS mass, for example:
+In addition to the interactive `mass-cli` server there is also a node of the [LOTUS batch processing cluster]({{< ref "lotus-overview">}}) lotus-overview with the MASS client installed. To submit jobs to this, you must use the [Slurm scheduler]({{< ref
+"slurm-scheduler-overview" >}}). You will need to specify: 
+
+- the **account** `mass`
+- **partition** `mass` and
+- **QOS** `mass`
+
+for example:
 
 ```
  sbatch -A mass -p mass -q mass [<options>] <jobscript>

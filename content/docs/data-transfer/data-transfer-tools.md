@@ -26,7 +26,7 @@ Tool | Info
 wget, curl  |  Download tools for accessing resources over HTTP primarily. (see 3rd party documentation)
 {{<link "../short-term-project-storage/share-gws-data-via-http">}}sharing GWS data via http{{</link>}} | for exposing part(s) of a Group Workspace via HTTP to users without JASMIN accounts.
 Python transfer tools  |  Methods of managing/scripting data transfer tasks using Python. You can use libraries such as `requests` in a Python 3 virtual environment on the transfer servers.  
-{{<link "../mass/external-access-to-mass-faq">}}MASS client (Met Office){{</link>}}|  A specific command-line tool installed on the mass-cli1.ceda.ac.uk server on JASMIN. Enables extractions from the Met Office MASS Archive.
+{{<link "../mass/external-access-to-mass-faq">}}MASS client (Met Office){{</link>}}|  A specific command-line tool installed on the `mass-cli` server on JASMIN. Enables extractions from the Met Office MASS Archive.
 OPeNDAP  |  A transfer protocol for extracting subsets of files from a remote server (over HTTP)
 {{<link "rclone">}}rclone{{</link>}} |  A 3rd party, open-source command-line utility which can interface to, and synchronise data between, a wide variety of cloud and other storage backends, such as Google Drive and AWS S3 compatible object stores. It can also sync data over SSH.   This utility is not installed on JASMIN but is well-documented and trivial for users to download and configure themselves on one of the {{<link "../interactive-computing/transfer-servers">}}data transfer servers{{</link>}} **Please note {{<link "rclone#installing-rclone-for-yourself-on-jasmin">}}install instructions{{</link>}}, and {{<link "rclone/#dos-and-donts">}}dos and don'ts{{</link>}}for rclone on JASMIN**.
 {.table .table-striped}

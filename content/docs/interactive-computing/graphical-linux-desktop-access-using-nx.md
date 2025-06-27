@@ -342,7 +342,7 @@ traffic or by a wrong server address. Please verify your configuration and try a
 
 ### Client version
 
-Make sure you have installed and are using the correct and most recent version of the {{<link "https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client" >}}NoMachine Enterprise Client{{</link>}} (not the NoMachine Enterprise Desktop or any other applications from NoMachine).
+Make sure you have installed and are using the correct and most recent version of the NoMachine Enterprise Client (not the NoMachine Enterprise Desktop or any other applications from NoMachine). [Check the instructions above]({{% ref "graphical-linux-desktop-access-using-nx#installing-nomachine-enterprise-client" %}}) to make sure you have downloaded the correct application.
 
 ### Key format
 

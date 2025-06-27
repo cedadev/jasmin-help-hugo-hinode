@@ -102,8 +102,8 @@ the same as the old `nx4` in this respect.
 - Use only with the NoMachine Enterprise Client to get a graphical Linux desktop, from where you can
   - use the Firefox browser on the linux desktop to access web resources only accessible within JASMIN
   - make onward connections to a `sci` server for using graphics-intensive applications
-- Make sure you are using the most up-to-date version of 
-{{<link "https://downloads.nomachine.com/download-enterprise/#NoMachine-Enterprise-Client">}}NoMachine Enterprise Client{{</link>}}.
+- Make sure you are using the most up-to-date version of the
+[NoMachine Enterprise Client]({{% ref "graphical-linux-desktop-access-using-nx/#installing-nomachine-enterprise-client" %}}).
 
 ### `sci` servers
 

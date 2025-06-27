@@ -50,9 +50,9 @@ Your home directory is backed up using a daily snapshot which provides a quick, 
 
 Users can access snapshots to recover files/directories that have been
 accidentally deleted. These are stored in
-`/home/users/.snapshot/homeusers.<snapshotid>/<username>`
+`/home/users/.snapshot/homeusers2.<snapshotid>/<username>`
 
-The most recent backup is the one with the highest snapshot id number.
+The most recent backup is the one with the latest snapshot date.
 
 Find the ones relevant to your username with a command line this:
 
@@ -73,12 +73,12 @@ drwx------ 113 joeblogs users 0 Jan 30 09:29 /home/users/.snapshot/homeusers2.20
 Each of these snapshot directories effectively contains your home directory as it was on that date. You can copy files back from them (yourself) to their original location.
 
 {{<command>}}
-ls -l /home/users/.snapshot/homeusers2.45678/joebloggs/
+ls -l /home/users/.snapshot/homeusers2.2024_02_01_02_01/joebloggs/
 (out)total 1170964
 (out)-rw-r--r-- 1 joebloggs users              104857600 Jun 26  2017 100M.dat
 (out)-rw-r--r-- 1 joebloggs users             1024000000 Feb  1  2017 1G.dat
 (out)-rw-r--r-- 1 joebloggs users                      0 Dec 18 12:09 6181791.err
-cp /home/users/.snapshot/homeusers2.45678/joebloggs/100M.dat ~/100M.dat
+cp /home/users/.snapshot/homeusers2.2024_02_01_02_01/joebloggs/100M.dat ~/100M.dat
 {{</command>}}
 
 A snapshot backup is also provided for `/gws/smf` volumes (similar allocations of

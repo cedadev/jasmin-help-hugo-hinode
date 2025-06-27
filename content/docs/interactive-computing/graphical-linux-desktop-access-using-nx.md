@@ -52,17 +52,14 @@ name | notes
 ## Installing NoMachine Enterprise Client
 
 Download the
-{{<link "https://www.nomachine.com/download-enterprise#NoMachine-Enterprise-Client" >}}appropriate version of the NoMachine Enterprise Client{{</link>}}
-from NoMachine.
-That page contains links to several different products: 
-**The only one you need to install is NoMachine Enterprise Client.**
+{{<link "https://downloads.nomachine.com/enterprise/?product=enterprise-client" >}}appropriate version of the NoMachine Enterprise Client{{</link>}}
+from NoMachine. The first time you click this link, you might be redirected to the homepage of the NoMachine download site. If you click the link a second time, you should be taken straight to the NoMachine Enterprise Client download page.
 
-Versions are available for Windows, Mac and Linux. You may need privileges on
-your local machine in order to install the software so you may need to ask for
-help from your local IT helpdesk.
+There are several different NoMachine products: 
+**the only one you need to install is NoMachine Enterprise Client.**
 
-Note that **Nomachine Enterprise Client** is a different application to the
-"Nomachine Enterprise Desktop" or "Nomachine" available from the more publicised download
+Note that **NoMachine Enterprise Client** is a different application to the
+"NoMachine Enterprise Desktop" or "NoMachine" available from the more publicised download
 links on the NoMachine website or other applications in the NoMachine suite:
 the desktop edition contains additional components to enable remote access to
 your **own** (local) machine from a remote location: perhaps convenient
@@ -70,6 +67,10 @@ but not what we are trying to enable for you here.
 
 The **NoMachine Enterprise Client** is a cut-down client to which connects to a remote
 server: in your case, the server is at the JASMIN end, where the desktop session will exist.
+
+Versions are available for Windows, Mac and Linux. You may need privileges on
+your local machine in order to install the software so you may need to ask for
+help from your local IT helpdesk.
 
 Remember to check for updates for the enterprise client to ensure you always
 have the latest stable version. You can configure the application to check for

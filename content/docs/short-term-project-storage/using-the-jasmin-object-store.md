@@ -4,6 +4,23 @@ description: Using the JASMIN Object Store
 title: Using the JASMIN Object Store
 ---
 
+{{<alert type="info">}}
+Currently the JASMIN Object store is set to be read-only and delete when the quota for the tenancy is reached, i.e. stopping writes, but allowing reads and deletes.
+However, there is currently a bug which blocks deletes which are done with a HTTP POST request. HTTP DELETE requests are still allowed when the quota is reached.
+
+What this means in practice is that when the tenancy is full, you won't be able to do deletes with a POST request, which often includes recursive deletes. You will
+Have to do a DELETE request to free up some space and unlock the tenancy for writes, then do a recursive delete if you need to.
+
+For example: 
+```mc rm```
+does a 
+```POST... /?delete=``` 
+but if you use 
+```s3cmd rm```
+ to delete a single object it uses
+```DELETE ...```
+{{</alert>}}
+
 This article describes how to use the JASMIN high-performance object storage.
 
 ## What is object storage?

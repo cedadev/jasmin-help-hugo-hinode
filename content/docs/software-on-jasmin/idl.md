@@ -4,10 +4,7 @@ description: IDL
 title: IDL
 ---
 
-{{<alert type="danger">}}
-There are currently some licensing issues which are affecting how IDL can be used on new
-Rocky 9 servers. Please check back to our [Rocky 9 migration page]({{% ref "rocky9-migration-2024" %}}) for the latest updates as they become available.
-{{</alert>}}
+
 
 This article explains how to:
 
@@ -34,7 +31,7 @@ Check which versions are available:
 module avail idl
 (out)
 (out)-------------------------------------------- /apps/jasmin/modulefiles -----------------------------------------------
-(out)  idl/8.2   idl/8.5 (D)   idl/8.6   idl/8.9
+(out)  idl/8.9 idl/9.1 (D)    midl/20140411
 (out)
 (out)  Where:
 (out)   D:  Default Module
@@ -44,11 +41,13 @@ The current default version is labelled with `(D)` and can be loaded using just 
 adding its version string to the command:
 
 {{<command user="user" host="sci-vm-01">}}
-module load idl ## or idl/8.5 to specify the version
+module load idl ## or idl/8.9 to specify the version
 idl
-(out)IDL Version 8.5 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
-(out)Installation number: 406672.
-(out)Licensed for use by: Science & Technology Facilitie
+(out)IDL 8.9.0 (linux x86_64 m64).
+(out)(c) 2023, L3Harris Geospatial Solutions, Inc.
+(out)% Error initializing graphics device GL.
+(out)Licensed for use by: UKRI Centre for Environmental Data Analysis
+(out)License: 492635
 {{</command>}}
 
 You can then type commands at the `IDL` prompt
@@ -63,8 +62,8 @@ For help on the `idl` module you can type the following :
 
 {{<command user="user" host="sci-vm-01">}}
 module help idl
-(out)----------- Module Specific Help for 'idl/8.5' --------------------
-(out)         Adds IDL 8.5 to your environment variables,  
+(out)----------- Module Specific Help for 'idl/8.9' --------------------
+(out)         Adds IDL 8.9 to your environment variables,  
 {{</command>}}
 
 ### Making efficient use of IDL development licences
@@ -86,25 +85,12 @@ flag. An example of this is shown in the next section (below).
 
 Please try not to run more than one or two simultaneous IDL development
 sessions. However, for licence purposes, each unique combination of username,
-hostname, and `$DISPLAY` variable counts as a single session. So for example,
+hostname, counts as a single session. So for example,
 if you run idl (development mode) in one window, then suspend it with {{<kbd "CTRL-Z">}} and
 start another development session in the same window, this still is only
-counted as one session by the licence server because the username, hostname,
-and $DISPLAY are all identical between the two processes. But if you "ssh" in
-on two different windows, probably the `$DISPLAY` will differ between the two
-windows (e.g. `localhost:10` and `localhost:11`), so if you start idl
-development sessions in each window they will require separate licences.
+counted as one session by the licence server because the username and hostname
+are all identical between the two processes. 
 
-To see what licences you and others are using, you can use the following
-sequence of commands:
-
-{{<command>}}
-module add idl/8.5
-lmstat -a
-{{</command>}}
-
-When interpreting the numbers, note that a single session is counted as 6
-licences.
 
 ### Using IDL on LOTUS (via the run-time Licences)
 
@@ -223,6 +209,26 @@ idl -rt=foo.sav -args 10 20 30
 {{</command>}}
 
 `command_line_args` returns a string array, so convert type as required, e.g. `n = fix(argsarray[0]) `
+
+### How to call IDL from Python using `idlpy`
+
+It is possible to call IDL from Python using the `idlpy` library as illustrated in the following example:
+
+{{<command user="user" host="sci-vm-01">}}
+module load jaspy
+module load idl
+python
+(out)>>> import sys
+(out)>>> import os
+(out)>>> sys.path.append(os.path.join(os.environ["IDL_DIR"], "lib/bridges"))
+(out)>>> from idlpy import IDL
+(out)>>> IDL.print("hello world")
+(out)hello world
+(out)>>> a = IDL.findgen(12)
+(out)>>> a
+(out)array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11.],
+      dtype=float32)
+{{</command>}}
 
 ### Further reading
 

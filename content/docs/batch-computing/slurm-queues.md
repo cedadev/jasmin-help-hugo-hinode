@@ -20,19 +20,14 @@ Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). 
 
 The Slurm queues in the LOTUS cluster are:
 
-- `test`
-- `short-serial`
-- `long-serial`
-- `par-single`
-- `par-multi`
-- `high-mem`
-- `short-serial-4hr`
+- `debug`
+- `standard`
 
-Each queue is has attributes of run-length limits (e.g. short, long) and
-resources. A full breakdown of each queue and its associated resources is
+Each queue has attributes of run-length limits (e.g. short, long) and
+resources via a set of policies known as QoS -Quality of Servie-  A full breakdown of resource limits in each QoS is
 shown below in Table 1.
 
-## Queue details
+## QoS
 
 Queues represent a set of pending jobs, lined up in a defined order, and
 waiting for their opportunity to use resources. The queue is specified in the
@@ -44,9 +39,8 @@ job script file using Slurm scheduler directive like this:
 
 where `<queue_name>` is the name of the queue/partition (Table 1. column 1)
 
-Table 1 summarises important specifications for each queue such as run time
-limits and the number of CPU core limits. If the queue is not specified, Slurm
-will schedule the job to the queue `short-serial` by default.
+Table 1 summarises important specifications for each quality of service such as run time
+limits and the number of CPU core limits.
 
 Table 1. LOTUS/Slurm queues and their specifications
 

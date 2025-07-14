@@ -22,8 +22,10 @@
 
 &lt;a href="http://gws-access.jasmin.ac.uk/public/mohc_shared/moose-user-doc/external_user_guide.html" target="_blank" rel="noopener noreferrer nofollow">External Users&amp;rsquo; Version&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> hosted on JASMIN.&lt;/p></description></item><item><title>Setting up your JASMIN account for access to MASS</title><link>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</guid><description>&lt;p>The following notes are written assuming you are using a Linux machine in your
-home institution, that you have 
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> hosted on JASMIN.&lt;/p></description></item><item><title>Setting up your JASMIN account for access to MASS</title><link>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</guid><description>&lt;p>The following notes are written assuming that you:&lt;/p>
+&lt;ul>
+&lt;li>are using the machine where your SSH key is stored (your laptop or desktop in your home institution)&lt;/li>
+&lt;li>have 
  
 
 
@@ -40,5 +42,36 @@ home institution, that you have
  
  
 
- &lt;a href="https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/">applied for a new MASS account&lt;/a>, and that you have received an email from the
-Met Office Storage Team with your new MASS credentials file attached.&lt;/p></description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/">applied for a new MASS account&lt;/a>&lt;/li>
+&lt;li>have received an email from the Met Office Storage Team with your new MASS credentials file attached.&lt;/li>
+&lt;/ul>
+
+
+
+
+&lt;h2 id="load-your-ssh-key" class="heading">Load your SSH key&lt;a href="#load-your-ssh-key" aria-labelledby="load-your-ssh-key">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>Use one of the methods in 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key#2-loading-your-key-into-an-agent">Present SSH Key&lt;/a> to make sure your key is
+available for use in your Terminal session.&lt;/p></description></item></channel></rss>

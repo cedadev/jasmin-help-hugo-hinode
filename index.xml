@@ -2848,8 +2848,10 @@ periodic analysis.&lt;/p></description></item><item><title>Secondary copy using 
  &lt;/a>
 &lt;/h2>
 &lt;p>Elastic Tape is a system developed for use with JASMIN Group Workspaces
-(GWSs), enabling the Group Workspace Manager to:&lt;/p></description></item><item><title>Setting up your JASMIN account for access to MASS</title><link>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</guid><description>&lt;p>The following notes are written assuming you are using a Linux machine in your
-home institution, that you have 
+(GWSs), enabling the Group Workspace Manager to:&lt;/p></description></item><item><title>Setting up your JASMIN account for access to MASS</title><link>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/</guid><description>&lt;p>The following notes are written assuming that you:&lt;/p>
+&lt;ul>
+&lt;li>are using the machine where your SSH key is stored (your laptop or desktop in your home institution)&lt;/li>
+&lt;li>have 
  
 
 
@@ -2866,8 +2868,39 @@ home institution, that you have
  
  
 
- &lt;a href="https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/">applied for a new MASS account&lt;/a>, and that you have received an email from the
-Met Office Storage Team with your new MASS credentials file attached.&lt;/p></description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+ &lt;a href="https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/">applied for a new MASS account&lt;/a>&lt;/li>
+&lt;li>have received an email from the Met Office Storage Team with your new MASS credentials file attached.&lt;/li>
+&lt;/ul>
+
+
+
+
+&lt;h2 id="load-your-ssh-key" class="heading">Load your SSH key&lt;a href="#load-your-ssh-key" aria-labelledby="load-your-ssh-key">
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>Use one of the methods in 
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+ 
+ 
+
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key#2-loading-your-key-into-an-agent">Present SSH Key&lt;/a> to make sure your key is
+available for use in your Terminal session.&lt;/p></description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>

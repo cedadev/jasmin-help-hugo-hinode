@@ -122,6 +122,64 @@ In the current release of the Notebook Service, users are required to install th
 3. Be sure to follow the instructions for installing `ipykernel` into your _venv_ and running the relevant command to install the kernel so that JupyterHub can locate it and list it as one of the available kernels. Use the name of your _venv_ as the name of the _kernel_.
 4. Once you have installed your kernel, it should appear as an option in the Launcher as outlined in green in the diagram below. The Launcher is accessible from the File menu.
 
+### Specific advice on installing TensorFlow for use with GPU Notebooks
+
+The general-purpose `Python 3 + Jaspy` kernel already includes a version of TensorFlow, 
+but it was compiled against CPU-only hardware.
+
+In order **to use TensorFlow with GPUs in a Notebook**, there are two approaches you can 
+take:
+  1. Create your own virtual environment (as mentioned above) and install TensorFlow.
+  2. Simply install TensorFlow within your Notebook using `pip`.
+
+Option 1 is more complicated but it allows you to manage multiple separate software 
+environments which you can switch between.
+
+For Option 2, you will be installing the package into your `$HOME` directory in a location 
+such as: `${HOME}/.local/lib/python3.11/site-packages/`. Note that the exact Python version 
+may vary. You can install TensorFlow from a Notebook by typing the following into a cell a 
+executing it:
+
+```bash
+!pip install tensorflow[and-cuda] keras
+```
+
+NOTE: Make sure you previously selected the GPU option when you launched your Notebook server 
+(as instructed above).
+
+You will need to restart your Notebook kernel before the newly installed version of TensorFlow 
+can be imported. See below for instructions on importing and checking that the GPUs 
+are visible to your Notebook session.
+
+### Specific advice on installing PyTorch for use with GPU Notebooks
+
+Unlike TensorFlow, PyTorch is not installed within the `Python 3 + Jaspy` kernel so 
+you will need to install it yourself.
+
+In order **to use PyTorch with GPUs in a Notebook**, there are two approaches you can 
+take:
+  1. Create your own virtual environment (as mentioned above) and install PyTorch.
+  2. Simply install PyTorch within your Notebook using `pip`.
+
+Option 1 is more complicated but it allows you to manage multiple separate software 
+environments which you can switch between.
+
+For Option 2, you will be installing the package into your `$HOME` directory in a location 
+such as: `${HOME}/.local/lib/python3.11/site-packages/`. Note that the exact Python version 
+may vary. You can install PyTorch from a Notebook by typing the following into a cell a 
+executing it:
+
+```bash
+!pip install torch
+```
+
+NOTE: Make sure you previously selected the GPU option when you launched your Notebook server 
+(as instructed above).
+
+You will need to restart your Notebook kernel before the newly installed version of PyTorch 
+can be imported. See below for instructions on importing and checking that the GPUs 
+are visible to your Notebook session.
+
 ### Handling multiple/conflicting versions of software packages
 
 It is common to find that different workflows will require different versions

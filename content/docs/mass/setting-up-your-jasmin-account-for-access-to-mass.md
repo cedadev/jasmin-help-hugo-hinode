@@ -5,24 +5,22 @@ slug: setting-up-your-jasmin-account-for-access-to-mass
 title: Setting up your JASMIN account for access to MASS
 ---
 
-The following notes are written assuming you are using a Linux machine in your
-home institution, that you have [applied for a new MASS account]({{% ref "how-to-apply-for-mass-access" %}}), and that you have received an email from the
-Met Office Storage Team with your new MASS credentials file attached.
+The following notes are written assuming that you:
+
+- are using the machine where your SSH key is stored (your laptop or desktop in your home institution)
+- have [applied for a new MASS account]({{% ref "how-to-apply-for-mass-access" %}})
+- have received an email from the Met Office Storage Team with your new MASS credentials file attached.
 
 ## Load your SSH key
 
-Start an SSH agent on your home institution machine, load your private key, and enter your passphrase when requested.
+Use one of the methods in [Present SSH Key]({{% ref "present-ssh-key/#2-loading-your-key-into-an-agent" %}}) to make sure your key is
+available for use in your Terminal session.
 
-{{<command user="localuser" host="localhost">}}
-eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_ecdsa_jasmin
-(out)Enter passphrase for ~/.ssh/id_ecdsa_jasmin:
-{{</command>}}
+{{<alert type="info">}}It's a good idea to use separate private keys for different systems 
+(e.g. JASMIN, Met Office) so you may have multiple SSH private key files, named as per those systems.
 
-**Note:** it's a good idea to keep your private keys for different systems
-separated, so you may want to keep your private key for JASMIN in a separate
-file, just move the one created during the process described above to a new
-sensible location such as `~/.ssh/jasmin_id_rsa`.
+If so, you can repeat the process of presenting your key for each private key file, so that you have all
+the keys that you need loaded within the same agent in your Terminal session{{</alert>}}
 
 ## Test login to the JASMIN login node
 
@@ -31,8 +29,9 @@ Please read the notes in [login servers]({{% ref "login-servers/#recent-changes"
 keep your SSH client up to date in order to be able to connect securely to JASMIN.
 {{< /alert >}}
 
-**Note:** that the `-A` in the first SSH command is mandatory to enable access
-to the client VM, the `-X` enables X11 forwarding and is optional.
+**Note:** You will need **"agent forwarding"** enabled for your **initial** connection: this is the `-A` option for the initial connection to the login node. Graphical clients normally provide a tick-box option for this. Likewise, if you need graphics output you should also use `-X` to enable X11 forwarding, but for any graphics-heavy applications you are recommended to make the initial connection using the [NX graphical linux desktop service]({{% ref "graphical-linux-desktop-access-using-nx" %}}) instead and use a Terminal window within that environment.
+
+In your terminal window:
 
 {{<command user="localuser" host="localhost">}}
 ssh -A -X <userid>@login-01.jasmin.ac.uk
@@ -40,15 +39,7 @@ ssh -A -X <userid>@login-01.jasmin.ac.uk
 
 ## Test login to the MASS client host
 
-From the login machine, you can then login to the MASS client host.
-
-**Note:** If it does not let you log in even when you have agent
-forwarding correctly set up and can log into the sci nodes, then you have
-either not requested additional access to the dedicated client machine, or
-access hasn't been approved yet,
-[email the Met Office Service Manager](mailto:monsoon@metoffice.gov.uk), to verify that
-approval has been granted. Allow a couple of days for this process to happen
-after submitting your request for access to the VM.
+From the login machine, you can now make the onward connection to the "MASS client" host.
 
 {{<command user="user" host="login-01">}}
 ssh -X <userid>@mass-cli.jasmin.ac.uk
@@ -65,19 +56,30 @@ exit
 ## back on your local machine
 {{</command>}}
 
+If the mass client host does not let you in, even when you have correctly set up agent
+forwarding (test this by making an onward connection to a `sci` server), then you have
+either:
+
+- not requested additional access to the dedicated client machine, or
+- access hasn't been approved yet, in which case [email the Met Office Service Manager](mailto:monsoon@metoffice.gov.uk), to verify that approval has been granted.
+
+Allow a couple of days for this process to happen after submitting your request for access to the VM.
+
 ## Install your MOOSE credentials file
 
-You can `scp` the file via a JASMIN transfer server, make sure the credentials
-file is called `moose`, and you must run the `moo install` command on 
-`mass-cli.jasmin.ac.uk` to set it up for you.
+You should now copy your MOOSE credentials file from your local machine to your JASMIN home directory
+using `scp` via a JASMIN transfer server. Make sure the credentials file is called `moose`.
 
 {{<alert type="info" >}}
-The external moose client has improved security settings, so **you
+The external moose client has additional security settings, so **you
 must use the `moo install` command** to put your moose credentials file in the
 correct place in order to get remote access to work. This can only be done on
-the client machine `mass-cli.jasmin.ac.uk`. The credentials file is also changed
-by the running of moo install, so this process can be run only once.
+the client machine `mass-cli.jasmin.ac.uk` once the file is there for it to use.
+The credentials file is also changed by the running of `moo install`, 
+so this process can be run only once.
 {{</alert >}}
+
+Start on your local machine, where you should have the credentials file:
 
 {{<command user="user" host="localhost">}}
 scp moose <userid>@xfer-vm-01.jasmin.ac.uk:~/moose

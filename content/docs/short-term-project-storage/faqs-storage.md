@@ -145,3 +145,20 @@ This can help you select a less-used machine (but don’t necessarily expect the
 same machine to be the right choice next time!).
 
 ---
+
+## 4\. Transport endpoint not connected error
+
+This is a known issue with the SOF storage which provides the group workspace volumes. It happens when the server you are on loses connection to the main storage system, and can occur whenever you try to `cd`, `ls` a directory, or read a file. The error looks something like this:
+
+```
+ls: cannot access '/gws/nopw/j04/my_gws/path/to/my/data/': Transport endpoint is not connected
+```
+
+**Suggested solution:**
+
+If you encounter this issue, there are two things you can do:
+
+1. Try accessing the same directory/file on [another `sci` server]({{% ref "sci-servers"%}}). If that works, then the issue is just on that machine. If not, there might be a wider issue.
+2. [Report to the JASMIN helpdesk]({{% ref "how-to-contact-us-about-jasmin-issues"%}}) the full path of the directory/file that you can't access **and** the server that you are getting this error on.
+
+If it's a wider issue, we will provide updates on the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} and in the MOTD (Message of the day) which appears when you log into JASMIN.

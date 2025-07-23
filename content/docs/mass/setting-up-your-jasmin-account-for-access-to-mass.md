@@ -20,7 +20,8 @@ available for use in your Terminal session.
 (e.g. JASMIN, Met Office) so you may have multiple SSH private key files, named as per those systems.
 
 If so, you can repeat the process of presenting your key for each private key file, so that you have all
-the keys that you need loaded within the same agent in your Terminal session{{</alert>}}
+the keys that you need loaded within the same agent in your Terminal session.
+{{</alert>}}
 
 ## Test login to the JASMIN login node
 
@@ -68,16 +69,7 @@ Allow a couple of days for this process to happen after submitting your request 
 ## Install your MOOSE credentials file
 
 You should now copy your MOOSE credentials file from your local machine to your JASMIN home directory
-using `scp` via a JASMIN transfer server. Make sure the credentials file is called `moose`.
-
-{{<alert type="info" >}}
-The external moose client has additional security settings, so **you
-must use the `moo install` command** to put your moose credentials file in the
-correct place in order to get remote access to work. This can only be done on
-the client machine `mass-cli.jasmin.ac.uk` once the file is there for it to use.
-The credentials file is also changed by the running of `moo install`, 
-so this process can be run only once.
-{{</alert >}}
+using `scp` via a JASMIN [transfer server]({{% ref "transfer-servers" %}}). Make sure the credentials file is called `moose` and in a directory with the correct permissions.
 
 Start on your local machine, where you should have the credentials file:
 
@@ -105,7 +97,7 @@ chmod 600 .moosedir/moose
 
 Run the following command:
 {{<command user="user" host="mass-cli">}}
-moo si -v
+moo si -l
 {{</command>}}
 
 You will be prompted to run `moo passwd -r` next — please run this.
@@ -113,7 +105,7 @@ You will be prompted to run `moo passwd -r` next — please run this.
 To confirm you have the ability to run moose commands, run:
 
 {{<command user="user" host="mass-cli">}}
-moo si -v
+moo si -l
 {{</command>}}
 
 ## Test use of the locally installed MOOSE client

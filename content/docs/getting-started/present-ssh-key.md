@@ -61,7 +61,7 @@ We'll demonstrate the following methods:
 
   {{<youtube id="2__EzPqWZBc" title="MobaXterm" autoplay="true">}}
 
-  Follow the video above for how to set up the ssh-agent and load your key. This method should not need any additional admin permissions once you have got the PuTTY suite of tools installed (PuTTY, PuTTYgen, Pageant, available from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html))
+  Follow the video above for how to set up the `ssh-agent` and load your key. This method should not need any additional admin permissions once you have got the [PuTTY suite of tools installed](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (PuTTY, PuTTYgen, Pageant)
   {{</nav-item>}}
   {{<nav-item header="Windows (2: MobaXterm)">}}
   {{<youtube id="eoQG1jjoPsg" title="MobaXterm" autoplay="true">}}

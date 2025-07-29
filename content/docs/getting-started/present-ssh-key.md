@@ -46,25 +46,25 @@ We'll demonstrate the following methods:
 
 ### Methods to load your key
 
-{{< nav type="tabs" id="tabs-methods" >}}
-  {{< nav-item header="Windows (1: cmd, gui)" show="true">}}
+{{<nav type="tabs" id="tabs-methods">}}
+  {{<nav-item header="Windows (1: cmd, gui)" show="true">}}
 
-  {{< youtube id="DXZ-4UISkYg" title="MobaXterm" autoplay="true" >}}
+  {{<youtube id="DXZ-4UISkYg" title="MobaXterm" autoplay="true">}}
 
   Follow the video above for how to set up the ssh-agent and load your key:
 
   Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
   
-  {{< /nav-item >}}
+  {{</nav-item>}}
 
-  {{< nav-item header="Windows (2: Pageant)">}}
+  {{<nav-item header="Windows (2: Pageant)">}}
 
-  {{< youtube id="2__EzPqWZBc" title="MobaXterm" autoplay="true" >}}
+  {{<youtube id="2__EzPqWZBc" title="MobaXterm" autoplay="true">}}
 
   Follow the video above for how to set up the ssh-agent and load your key. This method should not need any additional admin permissions once you have got the PuTTY suite of tools installed (PuTTY, PuTTYgen, Pageant, available from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html))
-  {{< /nav-item >}}
-  {{< nav-item header="Windows (2: MobaXterm)">}}
-  {{< youtube id="eoQG1jjoPsg" title="MobaXterm" autoplay="true" >}}
+  {{</nav-item>}}
+  {{<nav-item header="Windows (2: MobaXterm)">}}
+  {{<youtube id="eoQG1jjoPsg" title="MobaXterm" autoplay="true">}}
 Notes:
 - Remember that you need a licence to use MobaXterm beyond the intial free trial period.
 - The method shown above does not work with applications outside of MobaXterm (like NoMachine NX or VSCode): you would need to use the Windows OpenSSH client instead to use these with an agent, or set MobaXterm to use the external Pageant agent.
@@ -106,43 +106,43 @@ Notes:
   - or
     - typing this command in a PowerShell window, as administrator
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH.Client*'
-  {{< /command >}}
+  {{</command >}}
   
   if it **IS** installed, you'll see something like this:
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   (out)Name  : OpenSSH.Client~~~~0.0.1.0
   (out)State : Installed
-  {{< /command >}}
+  {{</command>}}
 
   if it's **NOT** installed, you'll see
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   (out)Name  : OpenSSH.Client~~~~0.0.1.0
   (out)State : NotPresent
-  {{< /command >}}
+  {{</command>}}
 
   in which case, note the name and version, and use them in this command:
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
-  {{< /command >}}
+  {{</command >}}
 
   Eventually (this can be slow!) you should see:
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   (out)Path          :
   (out)Online        : True
   (out)RestartNeeded : False
-  {{< /command >}}
+  {{</command>}}
 
   Now you can set up the OpenSSH client:
 
   - Set the ssh-agent service so that it starts manually, and start it on this occasion:
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   Get-Service ssh-agent
   Set-Service ssh-agent -StartupType Manual
   Start-Service ssh-agent
@@ -156,16 +156,16 @@ Notes:
 
   Note that the windows environment variable `%USERPROFILE%` is `${env:USERPROFILE}` in PowerShell. In this example, we're in that directory already, so we can just use the relative path `.ssh\` to the key. But the full path would be `${env:USERPROFILE}\.ssh\id_ecdsa_jasmin`
 
-  {{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+  {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   ssh-add .ssh\id_ecdsa_jasmin
   (out)Enter passphrase for <path to key>: ## right-click to paste your passphrase, then press return
   (out)Identity added: (<path to key>)
-  {{< /command >}}
+  {{</command>}}
 
   Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
 
-  {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
+  {{</nav-item >}}
+  {{<nav-item header="Mac">}}
   
   ## Mac
 
@@ -185,8 +185,8 @@ Notes:
   echo "ssh-add --apple-load-keychain" >> ~/.zshrc
   {{</command>}}
 
-  {{< /nav-item >}}
-  {{< nav-item header="Linux">}}
+  {{</nav-item>}}
+  {{<nav-item header="Linux">}}
   
   ## Linux
 
@@ -210,23 +210,23 @@ Notes:
 
   - Load the key
 
-  {{< command shell="bash" >}}
+  {{<command shell="bash">}}
   ssh-add <path to key>
   (out)Enter passphrase for <path to key>: ## right-click to paste your passphrase, then press return
   (out)Identity added (<path to key>)
-  {{< /command >}}
+  {{</command>}}
 
-  {{< /nav-item >}}
-{{< /nav >}}
+  {{</nav-item>}}
+{{</nav>}}
 
   ### Check that your key is loaded
 
   In all cases, you should now check that the key is loaded and ready to use
 
-  {{< command shell="bash" >}}
+  {{<command shell="bash">}}
   ssh-add -l
   (out)521 SHA256:ZeddNKK5U3am1vyCaUCq4CgMRpvoyv+cJiviqz3zvfw ~/.ssh/id_ecdsa_jasmin (ECDSA)
-  {{< /command >}}
+  {{</command>}}
 
   If you see output similar to the above, your key is now ready to be used in an SSH connection.
   
@@ -278,18 +278,18 @@ this usually solves the problem
 
 - **change the permisisons on the file**
 
-  {{< nav type="tabs" id="tabs-key-perms">}}
-  {{< nav-item header="Linux/Mac/cygwin/Mobaxterm" show="true">}}
+  {{<nav type="tabs" id="tabs-key-perms">}}
+  {{<nav-item header="Linux/Mac/cygwin/Mobaxterm" show="true">}}
   {{<command>}}
 chmod 600 ~/.ssh/id_ecdsa_jasmin
   {{</command>}}
   (replace `id_ecdsa_jasmin` with the path to and/or name of your private key file)
   {{</nav-item>}}
-  {{< nav-item header="Windows: PowerShell">}}
+  {{<nav-item header="Windows: PowerShell">}}
   The equivalent method in Windows PowerShell involves these steps,
   replacing the expression with `id_ecdsa_jasmin` with the path to your key if different. 
   You may need to open the PowerShell window with "run as administrator".
-{{< command prompt="PS C:\Users\User>" shell="powershell" >}}
+{{<command prompt="PS C:\Users\User>" shell="powershell">}}
 ## Set a variable "Key" to hold the key filename:
 New-Variable -Name Key -Value "$env:UserProfile\.ssh\id_ecdsa_jasmin"
 ## Remove Inheritance:

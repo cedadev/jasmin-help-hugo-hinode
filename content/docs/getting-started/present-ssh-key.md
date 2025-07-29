@@ -13,7 +13,7 @@ There are 2 main ways to present your SSH key when connecting via SSH-based meth
 | Method | pros/cons |
 | ---|---|
 | 1. Specify the location of your SSH private key | {{< icon fas plus text-success >}} simple <br>{{< icon fas plus text-success >}} no admin permissions needed<br>{{< icon fas plus text-success >}} works for all platforms if you update your key to ECDSA |
-| 2. Use your key stored in a local ssh-agent | {{< icon fas plus text-success >}} useful if you use many applications which use SSH (e.g. NX, VSCode)<br>{{< icon fas minus text-warning >}} may need admin permissions for 1st-time agent setup<br>{{< icon fas minus text-warning >}} careful editing of config file required in some cases |
+| 2. Use your key stored in a local `ssh-agent` | {{< icon fas plus text-success >}} useful if you use many applications which use SSH (e.g. NX, VSCode)<br>{{< icon fas minus text-warning >}} may need admin permissions for 1st-time agent setup<br>{{< icon fas minus text-warning >}} careful editing of config file required in some cases |
 {.table .table-striped}
 
 ## 1\. Specifying the key location each time
@@ -29,7 +29,7 @@ This simply involves including the `-i` option in the SSH command to specify the
 - Mac: "Terminal" or similar applications
 - Linux: "Terminal" or similar applications
 
-Note: the "standard" location to store your key is the `.ssh` directory within your home directory. Storing it elsewhere, particularly on Windows, can cause permissions problems.
+Note: the "standard" location to store your key is the `.ssh` directory within your home directory. Storing it elsewhere, particularly on Windows, can cause problems with permissions.
 
 {{<command user="user" host="localhost">}}
 ssh -i path_to/my_private_key user@remotehost
@@ -51,9 +51,9 @@ We'll demonstrate the following methods:
 
   {{<youtube id="DXZ-4UISkYg" title="MobaXterm" autoplay="true">}}
 
-  Follow the video above for how to set up the ssh-agent and load your key:
+  Follow the video above for how to set up the `ssh-agent` and load your key:
 
-  Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
+  Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart Windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
   
   {{</nav-item>}}
 
@@ -78,7 +78,7 @@ Notes:
   - Click OK to save the settings. MobaXterm will now need to restart.
   - When you restart MobaXterm, you will be prompted for the passphrase associated with your private key.
    
-  The equivalent action in a Mobaxterm terminal window is
+  The equivalent action in a MobaXterm terminal window is
 
   {{<command user="user" host="mobaxterm">}}
   ssh-add ~/.ssh/id_ecdsa_jasmin
@@ -140,7 +140,7 @@ Notes:
 
   Now you can set up the OpenSSH client:
 
-  - Set the ssh-agent service so that it starts manually, and start it on this occasion:
+  - Set the `ssh-agent` service so that it starts manually, and start it on this occasion:
 
   {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   Get-Service ssh-agent
@@ -150,11 +150,11 @@ Notes:
 
   (once you're confident that it's working correctly, you could set `-StartupType Automatic`)
 
-  - Load your key into the ssh-agent
+  - Load your key into the `ssh-agent`
 
-  Load the key from where it's saved: this should be your `.ssh` directory in your home directory. Storing it elsewhere can cause permissions problems.
+  Load the key from where it's saved: this should be your `.ssh` directory in your home directory. Storing it elsewhere can cause problems with permissions.
 
-  Note that the windows environment variable `%USERPROFILE%` is `${env:USERPROFILE}` in PowerShell. In this example, we're in that directory already, so we can just use the relative path `.ssh\` to the key. But the full path would be `${env:USERPROFILE}\.ssh\id_ecdsa_jasmin`
+  Note that the Windows environment variable `%USERPROFILE%` is `${env:USERPROFILE}` in PowerShell. In this example, we're in that directory already, so we can just use the relative path `.ssh\` to the key. But the full path would be `${env:USERPROFILE}\.ssh\id_ecdsa_jasmin`.
 
   {{<command prompt="PS C:\Users\User>" shell="powershell">}}
   ssh-add .ssh\id_ecdsa_jasmin
@@ -162,7 +162,7 @@ Notes:
   (out)Identity added: (<path to key>)
   {{</command>}}
 
-  Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
+  Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart Windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
 
   {{</nav-item >}}
   {{<nav-item header="Mac">}}
@@ -190,23 +190,23 @@ Notes:
   
   ## Linux
 
-  Some linux terminal and desktop environments provide an ssh-agent as a graphical application: consult the 
+  Some Linux terminal and desktop environments provide an `ssh-agent` as a graphical application: consult the 
   documentation for your system.
 
   A common one is `gnome-keyring-daemon`: check for this first in your list of processes: if it's there and
-  running already, skip to the `ssh-add` command, rather than starting up another ssh-agent (which might then
+  running already, skip to the `ssh-add` command, rather than starting up another `ssh-agent` (which might then
   be ignored by the application you're trying to use).
 
   In the absence of an already-running process, you can use the following commands in a terminal session:
 
-  - Start the ssh-agent
+  - Start the `ssh-agent`
 
   {{<command user="user" host="localhost">}}
   eval $(ssh-agent -s)
   (out)Agent pid 94631
   {{</command>}}
 
-  If the agent starts successfully, a process id (pid) is returned as above.
+  If the agent starts successfully, a process ID (`pid`) is returned as above.
 
   - Load the key
 
@@ -257,7 +257,7 @@ this usually solves the problem
 
 - **(Next simplest)** Another option is to send just the **contents of the file** to the `ssh-add` command:
 
-  In your terminal where you give the ssh-add command, try this instead:
+  In your terminal where you give the `ssh-add` command, try this instead:
 
   {{<command>}}
   cat ~/.ssh/id_ecdsa_jasmin | ssh-add -
@@ -276,7 +276,7 @@ this usually solves the problem
 
   or (perhaps for a more permanent solution), and/or if you are getting similar errors mentioning the `~/.ssh/config` file, might need to change the permissions permanently on these file(s).
 
-- **change the permisisons on the file**
+- **Change the permisisons on the file**
 
   {{<nav type="tabs" id="tabs-key-perms">}}
   {{<nav-item header="Linux/Mac/cygwin/Mobaxterm" show="true">}}

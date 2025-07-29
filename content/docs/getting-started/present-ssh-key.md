@@ -169,7 +169,7 @@ Notes:
   
   ## Mac
 
-  Mac users (OS X Leopard onwards) can optionally benefit from linking the SSH
+  Mac users (OS X Leopard onwards) can benefit from linking the SSH
   key to Keychain, which securely stores the passphrase as well. This means that
   even after a reboot, your SSH key is always available in any terminal session
   automatically. You can do this by running `ssh-add` with `--apple-use-keychain`:

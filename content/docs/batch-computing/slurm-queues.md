@@ -11,22 +11,12 @@ tags:
 title: Slurm queues
 ---
 
-{{<alert type="danger">}}
-Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
-{{</alert>}}
-
 ## Queue names
 
 The Slurm queues in the LOTUS cluster are:
 
-- `test`
-- `short-serial`
-- `long-serial`
-- `par-single`
-- `par-multi`
-- `high-mem`
-- `short-serial-4hr`
+- `standard`
+- `debug`
 
 Each queue is has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources is
@@ -45,32 +35,21 @@ job script file using Slurm scheduler directive like this:
 where `<queue_name>` is the name of the queue/partition (Table 1. column 1)
 
 Table 1 summarises important specifications for each queue such as run time
-limits and the number of CPU core limits. If the queue is not specified, Slurm
-will schedule the job to the queue `short-serial` by default.
+limits and memory limits.
 
 Table 1. LOTUS/Slurm queues and their specifications
 
-Queue name  |  Max run time  |  Default run time  |  Max CPU cores per job  |  MaxCpuPerUserLimit  |  Priority  
----|---|---|---|---|---  
-`test` |  4 hrs  |  1hr  |  8  |  8  |  30  
-`short-serial` |  24 hrs  |  1hr  |  1  |  2000  |  30  
-`par-single` |  48 hrs  |  1hr  |  16  |  300  |  25  
-`par-multi` |  48 hrs  |  1hr  |  256  |  300  |  20  
-`long-serial` |  168 hrs  |  1hr  |  1  |  300  |  10  
-`high-mem` |  48 hrs  |  1hr  |  1  |  75  |  30  
-`short-serial-4hr`<br>(**Note 3**)  |  4 hrs  |  1hr  |  1  |  1000  |  30
+| Queue name | Max run time | Default run time | Default memory per CPU |
+|------------|--------------|------------------|------------------------|
+| `standard` | 24 hrs       | 1hr              | 1GB                    |
+| `debug`    | 1 hr         | 30 mins          | 1GB                    |
 {.table .table-striped}
   
 **Note 1** : Resources requested by a job must be within the resource
 allocation limits of the selected queue.
 
-**Note 2:** The default value for `--time=[hh:mm:ss]` (predicted maximum wall
-time) is 1 hour for the all queues. If you do not specify this option
-and/or your job exceeds the default maximum run time limit then it will be
+**Note 2:** If your job exceeds the default maximum run time limit then it will be
 terminated by the Slurm scheduler.
-
-**Note 3** : A user must specify the Slurm job account `--account=short4hr`
-when submitting a batch job to the `short-serial-4hr` queue.
 
 ## State of queues
 

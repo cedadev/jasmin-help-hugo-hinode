@@ -95,8 +95,8 @@ There are two partitions currently available on LOTUS, with associated allowed q
 
 | Partition | Allowed QoS |
 | --- | --- |
-| `standard` | `standard`, `short`, `long`, `high` |
-| `debug` | `debug`, `reservation` |
+| `standard` | `standard`, `short`, `long`, `high`, `dask` |
+| `debug` | `debug` |
 {.table .table-striped .w-auto}
 
 | QoS | Priority | Max CPUs per job | Max wall time |
@@ -286,3 +286,19 @@ If you use  the `squeue -u <username>` command  to list your active jobs, you
 will see 10 tasks with the same Job ID. The tasks can be distinguished by  the
 `[index]` e.g. jobID_index. Note that individual tasks may be allocated to a
 range of different hosts on LOTUS.
+
+## Troubleshooting
+
+If you have only recently requested access to [JASMIN login
+services]({{% ref "get-login-account" %}}) and had this approved, there can
+sometimes be a delay (typically up to a day, but in rare cases can be longer)
+before the necessary configuration is created for you on LOTUS. You will not
+be able to submit jobs to LOTUS until this has been completed.
+Typically, you would see an error message such as this, after an
+unsuccessful attempt to submit a job:
+
+```bash
+sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
+```
+
+If this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.

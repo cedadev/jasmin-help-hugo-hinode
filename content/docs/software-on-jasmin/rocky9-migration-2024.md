@@ -253,13 +253,12 @@ Preliminary node specification:
 
 type | status | specs
 --- | --- | ---
-standard | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
-special  | {{< icon fas triangle-exclamation text-danger >}} Not yet available | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+standard | {{< icon fas circle-check text-success >}} Ready to use | 192 CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+special  | {{< icon fas triangle-exclamation text-danger >}} Not yet available | 192 CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
 {.table .table-striped .w-auto}
 
 Notes:
 
-- \*2 CPU reserved for system processes
 - Overall ~53,000 cores: ~triples capacity pf previous cluster (exact no. varies for operational reasons)
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
 - Submission to the new cluster is now via any `sci-vm-*` or `sci-ph-*` node

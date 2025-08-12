@@ -7,11 +7,6 @@ title: Orchid GPU cluster
 type: docs
 ---
 
-{{<alert type="danger">}}
-Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
-{{</alert>}}
-
 ## GPU cluster spec
 
 The JASMIN GPU cluster is composed of 16 GPU nodes:
@@ -21,6 +16,8 @@ The JASMIN GPU cluster is composed of 16 GPU nodes:
 
 {{< image src="img/docs/gpu-cluster-orchid/file-NZmhCFPJx9.png" caption="ORCHID GPU cluster" >}}
 
+Note: the actual number of nodes may vary slightly over time due to operational reasons. You can check which nodes are available by checking the `STATE` column in `sinfo --partition=orchid`.
+
 ## Request access to ORCHID
 
 Before using ORCHID on JASMIN, you will need: 
@@ -28,7 +25,7 @@ Before using ORCHID on JASMIN, you will need:
 1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
 2. **Subsequently** (once `jasmin-login` has been approved and completed), the `orchid` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/orchid/">}}Apply here{{</button>}}
 
-The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `orchid` role grants access to the special LOTUS partition used by ORCHID.
+The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `orchid` role grants access to the special LOTUS partition and QoS used by ORCHID.
 
 Holding the `orchid` role also gives access to the GPU interactive node.
 
@@ -47,7 +44,7 @@ srun --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid --pty /bin/ba
 (out)srun: job 19505658 has been allocated resources
 {{</command>}}
 
-At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVDIA utility. You will have the one GPU allocated at this shell, as requested:
+At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVIDIA utility. You will have the one GPU allocated at this shell, as requested:
 
 {{<command user="user" host="gpuhost004">}}
 nvidia-smi
@@ -84,14 +81,18 @@ or by adding the following preamble in the job script file
 1. `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and 8 GPUs each.
 
 2. IMPORTANT **CUDA Version: 12.8**  Please add the following to your path 
-```bash
-export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
-```
+    ```bash
+    export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+    ```
 
-3. The Slurm batch partition `orchid` has a maximum runtime of 24 hours and
-the default runtime is 1 hour. The maximum number of CPU cores per user is
-limited to 8 cores. If the limit is exceeded then the job is expected to be in
-a pending state with the reason being {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}
+3. The following are the limits for the `orchid` QoS. If, for example, the CPU limit
+is exceeded, then the job is expected to be in a pending state with the reason being
+{{<mark>}}`QOSGrpCpuLimit`{{</mark>}}.
+
+    | QoS      | Priority | Max CPUs per job | Max wall time | Max jobs per user |
+    |----------|----------|------------------|---------------|-------------------|
+    | `orchid` | 350      | 8                | 2 days        | 8                 |
+    {.table .table-striped .w-auto}
 
 ## GPU interactive node outside Slurm
 
@@ -114,6 +115,8 @@ ssh gpuhost001.jc.rl.ac.uk
 - CUDA version 12.8
 - CUDA DNN (Deep Neural Network Library) version cudnn9-cuda-12
 - cuda-toolkit - version 12.8
-- Singularity version 4.2.2-1 checked version - supports NVIDIA/GPU containers
-- podman version 5.2.2
+- Singularity-CE version 4.3.2-1 checked version - supports NVIDIA/GPU containers
+- podman version 5.4.0
 - SCL Python 3.6
+
+Please note that the cluster may have newer software available. For example, you can check the current CUDA version by using `nvidia-smi`, or the Singularity version with `singularity --version`.

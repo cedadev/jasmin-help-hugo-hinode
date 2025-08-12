@@ -57,15 +57,13 @@ submissions to the LOTUS cluster: `standard` and `debug`. The default queue is
 `standard`. For testing new workflows, the `debug` queue is recommended.
 The queues are then further divided up into Quality of Services (QoS),
 which determine further restrictions about your job, for example, how long it can
-or how many CPU cores it can use.
+run or how many CPU cores it can use.
 
 The specification of each queue and its associated available QoS is
 described in detail in this article: [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}).
 
 Queues other than the two standard queues should be
 ignored unless you have been specifically instructed to use them.
-
-<!-- Need to add here information about the QoS available -->
 
 ## The typical workflow for LOTUS jobs
 

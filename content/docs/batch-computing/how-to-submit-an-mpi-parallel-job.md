@@ -5,11 +5,6 @@ slug: how-to-submit-an-mpi-parallel-job
 title: How to submit an MPI parallel job
 ---
 
-{{<alert type="danger">}}
-Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
-{{</alert>}}
-
 ## What is an MPI parallel job?
 
 An MPI parallel job runs on more than one core and more than one host using
@@ -22,13 +17,13 @@ cores. A simple script, such as the one given below could be saved as `my_script
 #SBATCH --time=00:30:00
 #SBATCH --mem=100M
 #SBATCH --account=mygws
-#SBATCH --partition=par-multi
-#SBATCH --qos=debug
+#SBATCH --partition=standard
+#SBATCH --qos=high
 #SBATCH -n 36
 #SBATCH -o %j.log
 #SBATCH -e %j.err
 
-# Load a module for the gcc OpenMPI library  (needed for mpi_myname.exe)
+# Load a module for the gcc OpenMPI library (needed for mpi_myname.exe)
 module load eb/OpenMPI/gcc/4.0.0
 
 # Start the job running using OpenMPI's "mpirun" job launcher
@@ -36,15 +31,8 @@ mpirun ./mpi_myname.exe
 ```
 
 `-n` refers to the number of processors or cores you wish to run on. The rest
-of  the `#SBATCH` input  options, and many more besides, can be found in  the
-`sbatch` manual  page or in the related articles. You must only use the `par-multi`
-queue for parallel jobs using MPI.
-
-For those familiar with LOTUS running Platform MPI and Platform LSF, please
-note that the job is started using the OpenMPI native `mpirun` command not the
-`mpirun.lotus` wrapper script that was previously required. We have provided
-an `mpirun.lotus` script for backward compatibility but it just runs the native
-`mpirun`.
+of the `#SBATCH` input  options, and many more besides, can be found in the
+`sbatch` manual page or in the related articles.
 
 To submit the job, do not run the script, but rather use it as the standard
 input to `sbatch`, like so:
@@ -53,12 +41,17 @@ input to `sbatch`, like so:
 sbatch --exclusive my_script_name.sbatch
 {{</command>}}
 
-The `--exclusive` flag  is used to group the parallel jobs onto hosts which
+The `--exclusive` flag is used to group the parallel jobs onto hosts which
 are allocated only to run this job. This ensures the best MPI communication
 consistency and bandwidth/latency for the job and ensures no interference from
 other users' jobs that might otherwise be running on those hosts.
 
 ## MPI implementation and Slurm
+
+{{<alert type="danger">}}
+The following about compilers has not yet been reviewed for compatibility with the new cluster, April 2025.
+This alert will be removed once updated.
+{{</alert>}}
 
 The OpenMPI library is the only supported MPI library on the cluster. OpenMPI
 v3.1.1 and v4.0.0 are provided which are fully MPI3 compliant. MPI I/O

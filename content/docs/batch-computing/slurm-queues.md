@@ -29,7 +29,7 @@ waiting for their opportunity to use resources. The queue is specified in the
 job script file using Slurm scheduler directive like this:
 
 ```bash
-#SBATCH -p <partition=queue_name>`
+#SBATCH -p <partition=queue_name>
 ```
 
 where `<queue_name>` is the name of the queue/partition (Table 1. column 1)
@@ -57,129 +57,134 @@ The Slurm command `sinfo` reports the state of queues and nodes
 managed by Slurm. It has a wide variety of filtering, sorting, and formatting
 options.
 
-{{<command shell="bash">}}
+{{<command shell="bash" user="user" host="sci-ph-01">}}
 sinfo   
-(out)PARTITION     AVAIL  TIMELIMIT  NODES  STATE NODELIST
-(out)test             up    4:00:00     48   idle host[146-193]
-(out)short-serial*    up 1-00:00:00     48   idle host[146-193]
-(out)long-serial      up 7-00:00:00     48   idle host[146-193]
-(out)par-single       up 2-00:00:00     48   idle host[146-193]
-(out)par-multi        up 2-00:00:00     48   idle host[146-193]
-(out)high-mem         up 2-00:00:00     48   idle host[146-193]
-(out)lotus_gpu        up 7-00:00:00     48   idle host[146-193]
-(out)copy             up 7-00:00:00     48   idle host[146-193]
-(out)cpom-comet       up 7-00:00:00     48   idle host[146-193]
+(out)PARTITION AVAIL  TIMELIMIT  NODES STATE NODELIST
+(out)...
+(out)standard*    up 1-00:00:00    262  idle host[1004-1276]
+(out)debug*       up    1:00:00      3  idle host[1001-1003]
 (out)...
 {{</command>}}
 
-{{< alert type="info" >}}
-Queues other than the standard queues `test` , `short-serial` ,
-`long-serial`, `par-single`, `par-multi` and `high-mem` should be ignored
+{{<alert type="info">}}
+Queues other than the standard queues, `standard` and `debug`, should be ignored
 as they implement different job scheduling and control policies.
-{{< /alert >}}
+{{</alert>}}
 
-## 'sinfo' Output field description:
+### `sinfo` output field description:
 
-By default, the Slurm command 'sinfo' displays the following information:
+By default, the Slurm command `sinfo` displays the following information:
 
-- **PARTITION** : Partition name followed by **\*** for the default queue/partition
+- **PARTITION** : Partition name followed by `*` for the default queue/partition
 - **AVAIL** : State/availability of a queue/partition. Partition state: up or down.
-- **TIMELIMIT** : The maximum run time limit per job in each queue/partition is shown in TIMELIMIT in days- hours:minutes  :seconds . e.g. 2-00:00:00 is two days maximum runtime limit 
+- **TIMELIMIT** : The maximum run time limit per job in each queue/partition is shown in `days-hours:minutes:seconds`, e.g. `2-00:00:00` is two days maximum runtime limit
 - **NODES** : Count of nodes with this particular configuration e.g. 48 nodes
-- **STATE** : State of the nodes. Possible states include: allocated, down, drained, and idle. For example, the state "idle" means that the node is not allocated to any jobs and is available for use.
+- **STATE** : State of the nodes. Possible states include: allocated, down, drained, and idle. For example, the state `idle` means that the node is not allocated to any jobs and is available for use.
 - **NODELIST** List of node names associated with this queue/partition
 
 The `sinfo` example below, reports more complete information about the
-partition/queue short-serial
+partition/queue `debug`
 
-{{<command>}}
-sinfo --long --partition=short-serial
-(out)Tue May 12 18:04:54 2020
-(out)PARTITION    AVAIL TIMELIMIT JOB_SIZE  ROOT  OVERSUBS  GROUPS NODES    STATE NODELIST
-(out)short-serial* up  1-00:00:00  1-infinite  no  NO    all     48  idle host[146-193]
+{{<command user="user" host="sci-ph-01">}}
+sinfo --long --partition=debug
+(out)PARTITION AVAIL TIMELIMIT   JOB_SIZE ROOT OVERSUBS GROUPS  NODES STATE RESERVATION NODELIST
+(out)debug        up   1:00:00 1-infinite   no       NO    all      3  idle             host[1001-1003]
 {{</command>}}
 
-## How to choose a Slurm queue/partition
+## Queues and QoS
 
-### Test queue
+Queues/partitions are further divided up into Quality of Services (QoS),
+which determine further restrictions about your job, for example, how long it can
+run or how many CPU cores it can use.
 
-The `test` queue can be used to test new workflows and also to help new
-users to familiarise themselves with the Slurm batch system. Both serial and
-parallel code can be tested on the `test`queue. The maximum runtime is 4 hrs
-and the maximum number of jobs per user is 8 job slots. The maximum number of
-cores for a parallel job e.g. MPI, OpenMP, or multi-threads is limited to 8
-cores. The `test`queue should be used when unsure of the job resource
+Different partitions on LOTUS have different allowed QoS as shown below:
+
+| Partition | Allowed QoS |
+| --- | --- |
+| `standard` | `standard`, `short`, `long`, `high`, `dask` |
+| `debug` | `debug` |
+{.table .table-striped .w-auto}
+
+A summary of the different QoS are below:
+
+| QoS | Priority | Max CPUs per job | Max wall time |
+| --- | --- | --- | --- |
+| `standard` | 500 | 1 | 24 hours |
+| `short` | 550 | 1 | 4 hours |
+| `long` | 350 | 1 | 5 days |
+| `high` | 450 | 96 | 2 days |
+| `debug` | 500 | 8 | 1 hour |
+{.table .table-striped .w-auto}
+
+Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.
+
+## How to choose a QoS
+
+### Debug QoS
+
+The `debug` QoS can be used to test new workflows and also to help new
+users to familiarise themselves with the Slurm batch system. This QoS should be used when unsure of the job resource
 requirements and behavior at runtime because it has a confined set of LOTUS
-nodes (Intel node type) not shared with the other standard LOTUS queues.
+nodes not shared with the other standard LOTUS queues.
 
-### Serial queues
+| QoS     | Priority | Max CPUs per job | Max wall time | Max jobs per user |
+|---------|----------|------------------|---------------|-------------------|
+| `debug` | 500      | 8                | 1 hour        | 32                |
+{.table .table-striped .w-auto}
 
-Serial and array jobs with a single CPU core should be submitted to one of the
-following serial queues depending on the job duration and the memory
-requirement. The default queue is `short-serial`
+### Standard QoS
 
-#### short-serial
+The `standard` QoS is the most common QoS to use, with a maximum of a single CPU per job and a runtime under 24 hours.
 
-Serial and/or array jobs with a single CPU core each and run time less than 24
-hrs should be submitted to the `short-serial` queue . This queue has the
-highest priority of 30. The maximum number of jobs that can be scheduled to
-start running from  the `short-serial` is 2000 jobs whilst  both job's
-resources are available and user' priority is high
+| QoS        | Priority | Max CPUs per job | Max wall time | Max jobs per user |
+|------------|----------|------------------|---------------|-------------------|
+| `standard` | 500      | 1                | 24 hours      | 4000              |
+{.table .table-striped .w-auto}
 
-#### long-serial
+### Short QoS
 
-Serial or array jobs with a single CPU core and run time greater than 24 hrs
-and less than 168 hrs (7 days) should be submitted to the queue `long-serial`
-.  This queue has the lowest priority of 10 and hence jobs might take longer
-to be scheduled to run relatively to other jobs in higher priority queues.
+The `short` QoS is for shorter jobs (under 4 hours) and has a maximum of a single CPU per job.
 
-#### high-mem
+| QoS     | Priority | Max CPUs per job | Max wall time | Max jobs per user |
+|---------|----------|------------------|---------------|-------------------|
+| `short` | 550      | 1                | 4 hours       | 2000              |
+{.table .table-striped .w-auto}
 
-Serial or array jobs with a single CPU core and high memory requirement (> 64
-GB) should be submitted to the `high-mem` queue and the required memory must
-be specified `--mem=XXX` (XXX is in MB units). The job should not exceed the
-maximum run time limit of 48hrs. This queue is not configured to accept
-exclusive jobs.
+### Long QoS
 
-### Parallel queues
+The `long` QoS is for jobs that will take longer than 24 hours but will have a lower priority than `standard`. It also has a maximum of a single CPU per job.
 
-Jobs requiring more than one CPU core should be submitted to one of the
-following parallel queues depending on the type of parallelisms such as shared
-memory or distributed memory jobs.
+| QoS     | Priority | Max CPUs per job | Max wall time | Max jobs per user |
+|---------|----------|------------------|---------------|-------------------|
+| `long`  | 350      | 1                | 5 days        | 1350              |
+{.table .table-striped .w-auto}
 
-#### par-single
+### High QoS
 
-Shared memory multi-threaded jobs with  a maximum  of 16 threads should be
-submitted to  the `par-single` queue . Each thread should be allocated one CPU
-core. Oversubscribing the number of threads to the CPU cores will cause the
-job to run very slow. The number of CPU cores should be specified via the
-submission command line `sbatch -n <number of CPU cores>` or  by adding the
-Slurm directive `#SBATCH -n <number of CPU cores>`in the job script file. An
-example is shown below:
+The `high` QoS is for jobs with larger resource requirements, for example CPUs per job and memory.
 
-{{<command>}}
-sbatch --ntasks=4 --partition=par-single < myjobscript
+| QoS     | Priority | Max CPUs per job | Max wall time |
+|---------|----------|------------------|---------------|
+| `high`  | 450      | 96               | 2 days        |
+{.table .table-striped .w-auto}
+
+## New Slurm job accounting hierarchy
+
+Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
+
+To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
+Output should be similar to one or more of the lines below.
+
+{{<command user="user" host="sci-ph-01">}}
+useraccounts
+(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
+(out)User       Account        QOS
+(out)---------- -------------- -------------------------------------
+(out)      fred  mygws         debug,high,long,short,standard
+(out)      fred  orchid        debug,high,long,short,standard
 {{</command>}}
 
-Note: Jobs submitted with a number of CPU cores greater than 16 will be
-terminated (killed) by the Slurm scheduler with the following statement in the
-job output file:
+You should use the relevant account for your project's task with the `--account` directive in your job script.
 
-#### par-multi
-
-Distributed memory jobs with inter-node communication using the MPI library
-should be submitted to  the `par-multi` queue . A single MPI process (rank)
-should be allocated  a  single CPU core. The number of CPU cores should be
-specified via the Slurm submission command  flag `sbatch -n <number of CPU
-cores>` or  by adding the Slurm directive `#SBATCH -n <number of CPU cores>`
-to  the job script file. An example is shown below:
-
-{{<command>}}
-sbatch --ntasks=4 --partition=par-multi < myjobscript
-{{</command>}}
-
-Note 1: The number of CPU cores gets passed from Slurm submission  flag `-n` .
-Do not add  the `-np` flag  to `mpirun` command  .
-
-Note 2: Slurm will reject a job that requires a number of CPU cores greater
-than the limit of 256.
+Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
+Please ignore and do not use the group `shobu`.

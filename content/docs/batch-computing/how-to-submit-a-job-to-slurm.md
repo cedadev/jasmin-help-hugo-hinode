@@ -59,56 +59,14 @@ sleep 5s
 
 Submitting the above script (if you had access to the `mygws` account) creates a job named `My test job` with an estimated run time of
 `00:01:00` (1 minute), memory requirement of `1M` (1 Megabyte), run against the account
-`mygws` on the partition `debug` using Qos `debug`, and writing its STDOUT (standard output) to file 
+`mygws` on the partition `debug` using QoS `debug`, and writing its STDOUT (standard output) to file 
 `%j.out` and its STDERR to file `%j.err` (where `%j` represents the job ID that the scheduler assigns to the job).
 
 The task itself is the command `sleep 5s` which just pauses for 5 seconds before exiting. This is what you would replace 
 with your actual processing command(s), so you need to have an idea of how long it will take to run (**TIP**: run it manually first with `time <cmd>` to find out!)
 
-For details of other submission parameters, see 
+For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}). For further submission parameters, see the quick reference about
 [job specification]({{% ref "slurm-quick-reference#job-specification" %}}).
-
-### New Slurm job accounting hierarchy
-
-Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
-
-To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
-Output should be similar to one or more of the lines below.
-
-{{<command user="user" host="sci-ph-01">}}
-useraccounts
-(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
-(out)User       Account        QOS
-(out)---------- -------------- -------------------------------------
-(out)      fred  mygws         debug,high,long,short,standard
-(out)      fred  orchid        debug,high,long,short,standard
-{{</command>}}
-
-You should use the relevant account for your project's task with the `--account` directive in your job script.
-
-Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
-Please ignore and do not use the group `shobu`.
-
-### Partitions and QoS
-
-There are two partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
-
-| Partition | Allowed QoS |
-| --- | --- |
-| `standard` | `standard`, `short`, `long`, `high`, `dask` |
-| `debug` | `debug` |
-{.table .table-striped .w-auto}
-
-| QoS | Priority | Max CPUs per job | Max wall time |
-| --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours |
-| `short` | 550 | 1 | 4 hours |
-| `long` | 350 | 1 | 5 days |
-| `high` | 450 | 96 | 2 days |
-| `debug` | 500 | 8 | 1 hour |
-{.table .table-striped .w-auto}
-
-Once you've chosen the partition and QoS you need, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.
 
 ## Method 2: Submit via command-line options
 

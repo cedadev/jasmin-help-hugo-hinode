@@ -254,7 +254,7 @@ Preliminary node specification:
 type | status | specs
 --- | --- | ---
 standard | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
-special (not yet available) | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+special  | {{< icon fas triangle-exclamation text-danger >}} Not yet available | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
 {.table .table-striped .w-auto}
 
 Notes:
@@ -268,93 +268,10 @@ Notes:
 ### New LOTUS2 cluster initial submission guide
 
 {{<alert type="info">}}
-Please see the details below on how to access LOTUS2 and how to submit a job to the new Slurm scheduling partitions.
+Please see the [updated LOTUS pages]({{% ref "batch-computing" %}}), including the [how to submit a job page]({{% ref "how-to-submit-a-job-to-slurm" %}}), to use the new Slurm scheduling partitions in LOTUS2.
 
-**These require a Slurm account, partition and quality of service (QoS) to be specified at job submission time**.
+**These require a [Slurm account]({{% ref "slurm-queues/#new-slurm-job-accounting-hierarchy" %}}), [partition and quality of service (QoS)]({{% ref "slurm-queues/#queues-and-qos" %}}) to be specified at job submission time**.
 {{</alert>}}
-
-#### New Slurm job accounting hierarchy
-
-Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs),
-and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
-
-To find what Slurm accounts and quality of services that you have access to, use the `useraccounts` command on any `sci` machine.
-Output should be similar to one or more of the lines below.
-
-{{<command user="user" host="sci-ph-01">}}
-useraccounts
-(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
-(out)User       Account        QOS
-(out)---------- -------------- --------------------------------------------------
-(out)      fred  mybiggws      debug,high,long,short,standard
-(out)      fred  orchid        debug,high,long,short,standard
-{{</command>}}
-
-Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
-Please ignore and do not use the group `shobu`.
-
-#### Partitions and QoS
-
-There are two partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:
-
-| Partition | Allowed QoS |
-| --- | --- |
-| `standard` | `standard`, `short`, `long` |
-| `debug` | `debug`, `reservation` |
-{.table .table-striped .w-auto}
-
-| QoS | Priority | Max CPUs per job | Max wall time |
-| --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours |
-| `short` | 550 | 1 | 4 hours |
-| `long` | 350 | 1 | 5 days |
-| `high` | 450 | 96 | 2 days |
-| `debug` | 500 | 8 | 1 hour |
-{.table .table-striped .w-auto}
-
-#### Job submission
-
-In order to successfully submit a job to LOTUS2, 3 mandatory fields must be specified. These are a partition, an account, and a QoS. The LOTUS2 configuration has been set to use the `standard` partition as the default if none is specified. However, users are discouraged from relying on the default.
-
-Example of a batch Script: **NB: remove any trailing whitespace**
-
-Replace `mygws` with the name of an account that you belong to (check with the `useraccounts` command, as shown above), and other values appropriate to your job.
-
-```bash
-#!/bin/bash
-#SBATCH --job-name="My test job"
-#SBATCH --time=00:01:00
-#SBATCH --mem=1M
-#SBATCH --account=mygws
-#SBATCH --partition=debug
-#SBATCH --qos=debug
-
-# rest of script here
-```
-
-where {{<link "https://slurm.schedmd.com/sbatch.html#OPT_time">}}`time`{{</link>}} and {{<link "https://slurm.schedmd.com/sbatch.html#OPT_mem" >}}mem{{</link>}} should be specified as per the `sbatch` documentation, which covers all available directives such as `--cpus-per-task`.
-
-Save this script file as e.g.`test_submit.sh`
-Then submit this with:
-
-{{<command user="user" host="sci-ph-01">}}
-sbatch test_submit.sh
-{{</command>}}
-
-For a pseudo-interactive session on a LOTUS2 compute node:
-
-(again, replace `mygws` with an account that you belong to, from the `useraccounts` command)
-
-{{<command user="user" host="sci-ph-01">}}
-srun --account=mygws --partition=debug --qos=debug --pty /bin/bash
-(out)srun: job 586 queued and waiting for resources
-(out)srun: job 586 has been allocated resources
-module li
-(out)
-(out)
-(out)Currently Loaded Modules:
-(out)1) idl/9.1
-{{</command>}}
 
 ### Timetable for host retirements
 

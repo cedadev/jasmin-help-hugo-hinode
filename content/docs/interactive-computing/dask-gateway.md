@@ -16,7 +16,7 @@ On JASMIN, it creates a Dask cluster in {{<link "../batch-computing/lotus-overvi
 Before using Dask Gateway on JASMIN, you will need:
 
 1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "how-to-submit-a-job-to-slurm/#new-slurm-job-accounting-hierarchy" %}}).
+2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "slurm-queues/#new-slurm-job-accounting-hierarchy" %}}).
 
 The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster.
 

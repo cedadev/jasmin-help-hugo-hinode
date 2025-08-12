@@ -23,7 +23,7 @@ and [ORCHID]({{% ref "orchid-gpu-cluster" %}}) (GPU) clusters.
 | ----------------------------------- | --------------------------------------- |
 | `sbatch my_batch_script.sh`         | Submit a job script to the scheduler    |
 | `sinfo`                             | Show available scheduling queues        |
-| `squeue -u <username>`              | List user's pending and running jobs    |
+| `squeue --me`                       | List my pending and running jobs        |
 | `salloc -p debug -q debug -A mygws` | Request an interactive session on LOTUS |
 {.table .table-striped}
   
@@ -39,19 +39,17 @@ Long and short argument names are separated by a comma.
 ##### `--account=GWS_NAME, -A GWS_NAME`
 
 - Specify which project's account to log the compute with by replacing `GWS_NAME`
-- To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "how-to-submit-a-job-to-slurm/#new-slurm-job-accounting-hierarchy" %}})
+- To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "slurm-queues/#new-slurm-job-accounting-hierarchy" %}})
 
 ##### `--partition=PARTITION_NAME, -p PARTITION_NAME`
 
 - Specify the scheduling partition by replacing `PARTITION_NAME`
-- See the [list of partitions]({{% ref "how-to-submit-a-job-to-slurm/#partitions-and-qos" %}}) that you can use
-<!-- Once updated, point to [Slurm queues page]({{% ref "slurm-queues" %}}) -->
+- See the [Slurm queues page]({{% ref "slurm-queues" %}}) for the list of partitions that you can use
 
 ##### `--qos=QOS_NAME, -q QOS_NAME`
 
 - Specify what Quality of Service your task needs by replacing `QOS_NAME`
-- See the [list of QoS]({{% ref "how-to-submit-a-job-to-slurm/#partitions-and-qos" %}}) that you can use
-<!-- Once updated, point to [Slurm queues page]({{% ref "slurm-queues" %}}) -->
+- See the [list of QoS]({{% ref "slurm-queues/#queues-and-qos" %}}) that you can use
 
 ##### `--time=hh:mm:ss, -t hh:mm:ss`
 
@@ -125,7 +123,7 @@ specify the unit, e.g. `--mem=5G` for 5 GB.
 | `scancel <jobid>`             | Kill a job                    |
 | `scontrol show job <jobid>`   | Show details job information  |
 | `scontrol update job <jobid>` | Modify a pending job          |
-| `scancel --user=<username>`   | Kill all jobs owned by a user |
+| `scancel --me`                | Kill all jobs owned by a user |
 {.table .table-striped}
   
 ## Job environment variables

@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slurm on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/slurm/</link><description>Recent content in Slurm on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/slurm/index.xml" rel="self" type="application/rss+xml"/><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
- &lt;div class="pt-1 pe-2">
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using 
- 
-
-
-
-
-
-
-
-
- 
- 
- 
-
-
-
- 
- 
-
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/">new submission instructions&lt;/a>. This alert will be removed once updated.
- &lt;/div>
- &lt;/div>
-
-
-
-
-&lt;h2 id="queue-names" class="heading">Queue names&lt;a href="#queue-names" aria-labelledby="queue-names">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Slurm on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/slurm/</link><description>Recent content in Slurm on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/slurm/index.xml" rel="self" type="application/rss+xml"/><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading">Queue names&lt;a href="#queue-names" aria-labelledby="queue-names">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>

@@ -23,5 +23,5 @@ and the size of the physical memory RAM available per node/host.
 
 Host group name |  Number of nodes/hosts  |  Processor model |  CPUs per host |  RAM 
 ---|---|---|---|---  
-?  |  265  |  AMD EPYC 9654  |  192?  |  1536 GB  
+`AMD_EPYC_9654_1.5TB`  |  265  |  AMD EPYC 9654  |  192  |  1536 GB  
 {.table .table-striped}

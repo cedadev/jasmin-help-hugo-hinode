@@ -37,7 +37,8 @@ The job script is a Bash script of user's application and includes a list of
 Slurm directives, prefixed with `#SBATCH` as shown in this example:
 
 {{<alert type="danger">}}
-Remove any trailing whitespace
+- Remove any trailing whitespace
+- Choose values for `account`, `partition` and `qos` that are valid for you.
 {{</alert>}}
 
 ```bash
@@ -65,7 +66,8 @@ Submitting the above script (if you had access to the `mygws` account) creates a
 The task itself is the command `sleep 5s` which just pauses for 5 seconds before exiting. This is what you would replace 
 with your actual processing command(s), so you need to have an idea of how long it will take to run (**TIP**: run it manually first with `time <cmd>` to find out!)
 
-For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}). For further submission parameters, see the quick reference about
+- For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}).
+- For further submission parameters, see the quick reference about
 [job specification]({{% ref "slurm-quick-reference#job-specification" %}}).
 
 ## Method 2: Submit via command-line options

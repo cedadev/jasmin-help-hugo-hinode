@@ -47,7 +47,7 @@ duration of a project.
 See [Access to Storage]({{% ref path="/docs/getting-started/storage" %}}) for details about which file
 systems are appropriate to use and how to access them.
 
-LOTUS currently has over 55,000 cores, but is heavily used and implements a
+LOTUS currently has over 53,000 cores*, but is heavily used and implements a
 fair-share scheduling system between users. It is not intended as a substitute
 for dedicated HPC facilities, rather as a complementary environment in which
 model outputs can be analyzed and compared with observational data. Users with
@@ -55,6 +55,8 @@ large-scale compute-heavy requirements (in particular those requiring large-scal
 parallel processing) should look to access other parts of the national
 HPC infrastructure such as [ARCHER2](http://www.archer2.ac.uk/) or
 [MONSooN](http://collab.metoffice.gov.uk/twiki/bin/view/Support/MONSooN).
+
+*The exact number of cores available varies for operational reasons.
 
 In order to maintain a safe and reliable working environment for all within
 LOTUS and more widely within JASMIN, users are expected to follow [the best

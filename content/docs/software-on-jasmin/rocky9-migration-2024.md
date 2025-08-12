@@ -260,7 +260,7 @@ special  | {{< icon fas triangle-exclamation text-danger >}} Not yet available |
 Notes:
 
 - \*2 CPU reserved for system processes
-- Overall ~55,000 cores: ~triples capacity pf previous cluster
+- Overall ~53,000 cores: ~triples capacity pf previous cluster (exact no. varies for operational reasons)
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
 - Submission to the new cluster is now via any `sci-vm-*` or `sci-ph-*` node
 - 70% of old LOTUS has now been decommissioned
@@ -272,25 +272,3 @@ Please see the [updated LOTUS pages]({{% ref "batch-computing" %}}), including t
 
 **These require a [Slurm account]({{% ref "slurm-queues/#new-slurm-job-accounting-hierarchy" %}}), [partition and quality of service (QoS)]({{% ref "slurm-queues/#queues-and-qos" %}}) to be specified at job submission time**.
 {{</alert>}}
-
-### Timetable for host retirements
-
-Please find below a timetable of planned host retirements in line with our move to Rocky Linux 9. 
-
-Please start moving your work **NOW**
-so that any issues can be resolved and disruption minimized.
-
-| Host    | retirement date |
-| ---     | --- |
-| Group A | |
-| `cron1.ceda` aka `cron.jasmin`<br>`xfer3`<br>`nx-login[2,3]` | 21/11/2024 16:00 |
-| Group B | 
-| `nx4` aka `nx-login4` | 6/12/2024 16:00 |
-| Group C |
-| `xfer1`<br>`hpxfer1` - already shut down due to technical issue<br>`sci[1,2,4]`<br>`login[1,2]` | 6/12/2024 16:00 |
-| Group D | |
-| `xfer2`<br>`hpxfer2`<br>`sci[5,6,8]`<br>`login[3,4]`<br>`gridftp1`| 13/12/2024 16:00 |
-{.table .table-striped}
-
-All the hosts listed have new Rocky 9 equivalents described in the document above.
-Please check back regularly to keep up to date with this schedule.

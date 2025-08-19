@@ -24,7 +24,7 @@ This simply involves including the `-i` option in the SSH command to specify the
 
 - Windows
   - Windows command or PowerShell terminal window (no additional software needed)
-  - MobaXterm (a 3rd party linux terminal emulator for windows, licence required)
+  - MobaXterm (a 3rd party Linux terminal emulator for windows, licence required)
   - PuTTy (a 3rd party suite of SSH tools including some GUI utilities)
 - Mac: "Terminal" or similar applications
 - Linux: "Terminal" or similar applications

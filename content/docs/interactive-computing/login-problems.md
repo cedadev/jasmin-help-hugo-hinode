@@ -46,22 +46,22 @@ number of reasons:
     * In this case, you will be attempting to connect with the username you have on your local machine, which may not be the same.
   * **You have only recently uploaded your SSH key (it can take 20 to 60 minutes before the key propagates to all the places it needs to on JASMIN).**
     * Try waiting a few minutes before trying again.
-  * **You don't have your key loaded in your local authentication agent (e.g. ssh-agent).**
+  * **You don't have your key presented or loaded in your local authentication agent (e.g. ssh-agent).**
     * Check that you are following the method suitable for your operating system
-      * The article "[How to login]({{% ref "how-to-login" %}})" has instructions for linux, mac and windows.  
-    * Note that connections using NoMachine NX don't require an authentication agent: this can be a good alternative if you're having problems.
-  * **You have not yet been granted jasmin-login access or your access has expired.**
-    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that "Login services: jasmin-login" is listed. If not then you either need to [apply for jasmin-login access](https://accounts.jasmin.ac.uk/account/login/?next=/services/login_services/jasmin-login/), or if you have already done this recently you may simply need to wait for it to be approved. Note that if you have applied for access to a group workspace you still need jasmin-login access in order to connect to jasmin machines.
+      * Please see the [presenting your SSH key]({{%ref "present-ssh-key" %}}) article for the recommended methods depending on what type of machine you are using.
+    * Note that connections using the [NoMachine client]({{% ref "graphical-linux-desktop-access-using-nx" %}}) don't require an authentication agent: this can be a good alternative if you're having problems.
+  * **You have not yet been granted `jasmin-login` access or your access has expired.**
+    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that `Login Services : jasmin-login` is listed with a green box and a tick like this: {{<icon fas square-check text-success>}} `USER`. If not, then you either need to [apply for or extend your `jasmin-login` access](https://accounts.jasmin.ac.uk/account/login/?next=/services/login_services/jasmin-login/). If you have already done this recently, you may simply need to wait for it to be approved. Note, that if you have been granted access to a group workspace, you still need `jasmin-login` access in order to connect to JASMIN machines.
 
-**3) "The authenticity of host 'nnnn ( <ip address>)' can't be established."
+**3) "The authenticity of host 'nnnn (<ip address>)' can't be established."
 or "key for host nnnn has changed"**
 
 Your local computer stores a list of all the other SSH hosts which it has
 successfully connected to in the past. If you use an intermediate host like a
 login server to make onward connections to a sci machine, the login host will
 maintain another such list. In both cases there should be a
-file`~/.ssh/known_hosts` (so one in your local home directory on your own
-machine, and one in your JASMIIN home directory)
+`~/.ssh/known_hosts` file (so one in your local home directory on your own
+machine, and one in your JASMIIN home directory).
 
 When the SSH client first contacts the host for the SSH connection, it checks
 to see if the remote host is one that it recognises. If this check fails, you
@@ -132,7 +132,7 @@ Here, there are 3 main possibilities:
 
 **1) You have not set up agent forwarding correctly on your local machine.**
 
-****This allows your ssh key to be used for logging in from the login server to
+This allows your SSH key to be used for logging in from the login server to
 other machines. To check, run the following command on the login server:
 
 {{<command user="user" host="login-01">}}
@@ -149,7 +149,7 @@ If nothing is displayed then it indicates
 that agent forwarding is not working. Please read 
 [how to login]({{% ref "how-to-login" %}}) and make sure
  you are running ssh-agent (or similar), have loaded
-your private key and are using the `-A` option on your ssh command for the
+your private key and are using the `-A` option on your SSH command for the
 connection to the login server. NX users should make sure that the "agent
 forwarding" option is ticked when setting up a connection profile.
 
@@ -181,7 +181,7 @@ possible:
 - The date and time that you tried connecting (to the nearest minute if possible). This will help us to identify any relevant messages in any log files.
 - The exact command you were using
 - Add `-vvv` to your `ssh` command and send us the the output (please include the command itself)
-- List the SSH keys directory on your local machine. On a linux machine this can be done with the command: `ls -l ~/.ssh`
+- List the SSH keys directory on your local machine. On a Mac/Linux machine this can be done with the command: `ls -l ~/.ssh`
 
 ## ssh-add command gives error: "Could not open a connection to your authentication agent."
 

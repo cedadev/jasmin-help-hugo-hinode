@@ -19,8 +19,8 @@ The Slurm queues in the LOTUS cluster are:
 - `debug`
 
 Each queue is has attributes of run-length limits (e.g. short, long) and
-resources. A full breakdown of each queue and its associated resources is
-shown below in Table 1.
+resources. A full breakdown of each queue and its associated resources, such as run time
+limits and memory limits, is shown below in Table 1.
 
 ## Queue details
 
@@ -32,20 +32,17 @@ job script file using Slurm scheduler directive like this:
 #SBATCH -p <partition=queue_name>
 ```
 
-where `<queue_name>` is the name of the queue/partition (Table 1. column 1)
+where `<queue_name>` is the name of the queue/partition (Table 1, column 1).
 
-Table 1 summarises important specifications for each queue such as run time
-limits and memory limits.
-
-Table 1. LOTUS/Slurm queues and their specifications
+**Table 1:** LOTUS/Slurm queues and their specifications
 
 | Queue name | Max run time | Default run time | Default memory per CPU |
 |------------|--------------|------------------|------------------------|
 | `standard` | 24 hrs       | 1hr              | 1GB                    |
 | `debug`    | 1 hr         | 30 mins          | 1GB                    |
 {.table .table-striped}
-  
-**Note 1** : Resources requested by a job must be within the resource
+
+**Note 1:** Resources requested by a job must be within the resource
 allocation limits of the selected queue.
 
 **Note 2:** If your job exceeds the default maximum run time limit then it will be
@@ -58,7 +55,7 @@ managed by Slurm. It has a wide variety of filtering, sorting, and formatting
 options.
 
 {{<command shell="bash" user="user" host="sci-ph-01">}}
-sinfo   
+sinfo
 (out)PARTITION AVAIL  TIMELIMIT  NODES STATE NODELIST
 (out)...
 (out)standard*    up 1-00:00:00    262  idle host[1004-1276]
@@ -75,15 +72,15 @@ as they implement different job scheduling and control policies.
 
 By default, the Slurm command `sinfo` displays the following information:
 
-- **PARTITION** : Partition name followed by `*` for the default queue/partition
-- **AVAIL** : State/availability of a queue/partition. Partition state: up or down.
-- **TIMELIMIT** : The maximum run time limit per job in each queue/partition is shown in `days-hours:minutes:seconds`, e.g. `2-00:00:00` is two days maximum runtime limit
-- **NODES** : Count of nodes with this particular configuration e.g. 48 nodes
-- **STATE** : State of the nodes. Possible states include: allocated, down, drained, and idle. For example, the state `idle` means that the node is not allocated to any jobs and is available for use.
-- **NODELIST** List of node names associated with this queue/partition
+- **PARTITION**: Partition name followed by `*` for the default queue/partition.
+- **AVAIL**: State/availability of a queue/partition. Partition state: up or down.
+- **TIMELIMIT**: The maximum run time limit per job in each queue/partition is shown in `days-hours:minutes:seconds`, e.g. `2-00:00:00` is two days maximum runtime limit.
+- **NODES**: Count of nodes with this particular configuration e.g. 48 nodes.
+- **STATE**: State of the nodes. Possible states include: allocated, down, drained, and idle. For example, the state `idle` means that the node is not allocated to any jobs and is available for use.
+- **NODELIST**: List of node names associated with this queue/partition.
 
 The `sinfo` example below, reports more complete information about the
-partition/queue `debug`
+partition/queue `debug`:
 
 {{<command user="user" host="sci-ph-01">}}
 sinfo --long --partition=debug
@@ -101,7 +98,7 @@ Different partitions on LOTUS have different allowed QoS as shown below:
 
 | Partition | Allowed QoS |
 | --- | --- |
-| `standard` | `standard`, `short`, `long`, `high`, `dask` |
+| `standard` | `standard`, `short`, `long`, `high` |
 | `debug` | `debug` |
 {.table .table-striped .w-auto}
 

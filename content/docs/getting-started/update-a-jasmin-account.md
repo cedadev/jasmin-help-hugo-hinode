@@ -42,7 +42,7 @@ The system will reject any key that it recognises has been used before (across a
 
 Note: Please allow 15 minutes before attempting to log in again, while the new key becomes active on the JASMIN system.
 
-If you get the message "not a valid ssh public key" please check that you have
+If you get the message "not a valid SSH public key" please check that you have
 copied the text from the `.pub` file and that no newline characters are
 included: the public key should be a single line of text.
 It can be difficult to see this as the text automatically wraps

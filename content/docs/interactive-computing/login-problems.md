@@ -46,12 +46,12 @@ number of reasons:
     * In this case, you will be attempting to connect with the username you have on your local machine, which may not be the same.
   * **You have only recently uploaded your SSH key (it can take 20 to 60 minutes before the key propagates to all the places it needs to on JASMIN).**
     * Try waiting a few minutes before trying again.
-  * **You don't have your key loaded in your local authentication agent (e.g. ssh-agent).**
+  * **You don't have your key presented or loaded in your local authentication agent (e.g. ssh-agent).**
     * Check that you are following the method suitable for your operating system
-      * The article "[How to login]({{% ref "how-to-login" %}})" has instructions for linux, mac and windows.  
-    * Note that connections using NoMachine NX don't require an authentication agent: this can be a good alternative if you're having problems.
-  * **You have not yet been granted jasmin-login access or your access has expired.**
-    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that "Login services: jasmin-login" is listed. If not then you either need to [apply for jasmin-login access](https://accounts.jasmin.ac.uk/account/login/?next=/services/login_services/jasmin-login/), or if you have already done this recently you may simply need to wait for it to be approved. Note that if you have applied for access to a group workspace you still need jasmin-login access in order to connect to jasmin machines.
+      * Please see the [presenting your SSH key]({{%ref "present-ssh-key" %}}) article for the recommended methods depending on what type of machine you are using.
+    * Note that connections using the [NoMachine client]({{% ref "graphical-linux-desktop-access-using-nx" %}}) don't require an authentication agent: this can be a good alternative if you're having problems.
+  * **You have not yet been granted `jasmin-login` access or your access has expired.**
+    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that `Login Services : jasmin-login` is listed with a green box and a tick like this: {{<icon fas square-check text-success>}} `USER`. If not, then you either need to [apply for or extend your `jasmin-login` access](https://accounts.jasmin.ac.uk/account/login/?next=/services/login_services/jasmin-login/). If you have already done this recently, you may simply need to wait for it to be approved. Note, that if you have been granted access to a group workspace, you still need `jasmin-login` access in order to connect to JASMIN machines.
 
 **3) "The authenticity of host 'nnnn (<ip address>)' can't be established."
 or "key for host nnnn has changed"**

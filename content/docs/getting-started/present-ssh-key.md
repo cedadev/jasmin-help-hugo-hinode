@@ -190,7 +190,6 @@ Notes:
   
   ## Linux
 
-
   Some Linux terminal and desktop environments provide an `ssh-agent` as a graphical application: consult the 
   documentation for your system.
 

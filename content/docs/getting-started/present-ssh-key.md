@@ -24,7 +24,7 @@ This simply involves including the `-i` option in the SSH command to specify the
 
 - Windows
   - Windows command or PowerShell terminal window (no additional software needed)
-  - MobaXterm (a 3rd party linux terminal emulator for windows, licence required)
+  - MobaXterm (a 3rd party Linux terminal emulator for windows, licence required)
   - PuTTy (a 3rd party suite of SSH tools including some GUI utilities)
 - Mac: "Terminal" or similar applications
 - Linux: "Terminal" or similar applications
@@ -190,7 +190,7 @@ Notes:
   
   ## Linux
 
-  Some linux terminal and desktop environments provide an ssh-agent as a graphical application: consult the 
+  Some Linux terminal and desktop environments provide an ssh-agent as a graphical application: consult the 
   documentation for your system.
 
   A common one is `gnome-keyring-daemon`: check for this first in your list of processes: if it's there and

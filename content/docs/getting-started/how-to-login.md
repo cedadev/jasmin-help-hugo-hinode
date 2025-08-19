@@ -9,7 +9,7 @@ weight: 100
 ---
 
 The instructions below cover the process of logging in using a terminal client
-only. For a graphical linux desktop, please see alternative instructions using
+only. For a graphical Linux desktop, please see alternative instructions using
 [NoMachine NX]({{% ref "graphical-linux-desktop-access-using-nx" %}}).
 
 ## Preparing your credentials: loading your SSH private key
@@ -27,7 +27,7 @@ The details of how to do this can vary depending on whether your local machine
 runs Windows, macOS or Linux.
 
 {{<alert type="info">}}
-See [presenting your ssh key]({{%ref "present-ssh-key" %}}) for recommended methods
+See [presenting your SSH key]({{%ref "present-ssh-key" %}}) for recommended methods
 to present your SSH key, depending on what type of machine you are using.
 {{</alert>}}
 
@@ -112,13 +112,13 @@ ssh <user>@sci-vm-01.jasmin.ac.uk
 {{</command>}}
 
 If you are asked for a password when trying to login to this second machine,
-it indicates that your ssh key is not being forwarded. Please check that you
+it indicates that your SSH key is not being forwarded. Please check that you
 have used the `-A` option in your initial connection to the login server, or
 set up agent forwarding permanently in your SSH client configuration on your
 local machine.
 
 **There is no point in trying to enter a password (or even the passphrase
-associated with your key) as only an ssh key presented in the way described
+associated with your key) as only an SSH key presented in the way described
 above is accepted.**
 
 Note that once you are logged into a login server then you can omit the

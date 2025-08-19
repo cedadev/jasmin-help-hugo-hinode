@@ -36,7 +36,7 @@ pdu -sh /home/users/<username>
 (out)#                   ^^^^^^^^^^ replace with your username
 {{</command>}}
 
-{{<alert type="danger">}}You are only allowed to exceed the 100 GB quota for a very
+{{<alert alert-type="danger">}}You are only allowed to exceed the 100 GB quota for a very
 brief period of time. If you continue to exceed the limit, you will be
 unable to add any more files, which means that jobs may fail, and other things may
 stop working for you. You will need to reduce your usage below the 100GB quota to resolve this.
@@ -93,7 +93,7 @@ relevant directories should be found at
 
 (where `NN` = `04` or `07` depending on where the volume is located)
 
-{{<alert type="danger">}}All other group workspace volumes are **not backed up**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
+{{<alert alert-type="danger">}}All other group workspace volumes are **not backed up**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
 {{</alert>}}
 
 Please also note the {{<link "#advice-on-inter-volume-symlinks-in-jasmin-storage">}}advice on inter-volume symlinks{{</link>}}, below: these are to be avoided.
@@ -186,7 +186,7 @@ completed normally!).
 Please do this yourself so that you are not taken by surprise when automated 
 deletion processes clear up any residual data:
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Automated cleanup processes run daily and
 delete files that are older than 28 days from the last time of being
 accessed. This applies to `/work/scratch-pw2`, `/work/scratch-pw3` and
@@ -236,7 +236,7 @@ The Archive includes a range of data sets that are provided under varying licenc
 to these groups is managed through standard Unix groups. Information about the
 data and their access restrictions is available from the {{<link "ceda_catalogue">}}CEDA Catalogue{{</link>}}. 
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 As a JASMIN user, it is your
 responsibility to ensure that you have the correct permissions to access data
 any data in CEDA Archive from within JASMIN, even if file system permissions permit access.

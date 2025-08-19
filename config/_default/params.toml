@@ -2,37 +2,51 @@
     separator = "-"
     description = "Help documentation for JASMIN, the UK's environmental data analysis facility"
     enableDarkMode = true
+    enableLanguageSelectionStorage = false
     modes = ["light", "dark"]
     canonifyAssetsURLs = false
-    endorse = true
-    loading = "lazy"
-    breakpoint = "md"
     footerBelowFold = true
+    loading = "lazy"
+    titleCase = true
+    [main.padding]
+        x = 4
+        y = 5
     [main.externalLinks]
         cue = true
         tab = true
+    #[main.build]
+    #    transpiler = "dartsass"
+    #    silenceDeprecations = true
+    #endorse = true
+    #breakpoint = "md"
     [main.build]
         transpiler = "libsass"
 
 [debugging]
     showJS = false
     showSCSS = false
+    purgeHTMLComments = true
 
 [docs]
+    #basePath = "_vendor/github.com/gethinode/hinode"
     github = "https://github.com/cedadev/jasmin-help-hugo-hinode"
-#    release = "https://github.com/gethinode/hinode/releases/tag/"
-#    checkVersion = false
+    #release = "https://github.com/gethinode/hinode/releases/tag/"
 
 [home]
     sections = ["docs", "guides", "training"]
     fullCover = false
     centerHeadline = false
-    style = ""
+    style = "" # "gradient-featured"
+    #[home.feature] # new
+    #    orientation = "stacked"
+    #    color = ""
+    #    width = 6
+    #    align = "start"
 
 [navigation]
     anchor = true
-    logo = "/img/jasmin-logo.svg" # store -light and -dark variants
-    logoHeight = 80 # height to control size of logo in layouts/partials/assets/navbar.html
+    logo = "/img/logos/jasmin-logo.svg" # store -light and -dark variants "/img/logo_var.svg#logo"
+    logo-height = 40 # now a built-in param (changed name) to control size of logo in layouts/partials/assets/navbar.html
     color = "success"
     fixed = true
     #offset = "5em"
@@ -42,6 +56,10 @@
     toc = true
     sidebar = true
     size = "md"
+    # TOC options new with v1.10.0
+    #startLevel = 2
+    #endLevel = 3
+    #maxNumHeadings = 4
 
 [messages]
     placement = "bottom-right"
@@ -51,6 +69,7 @@
     sort = "weight"
     reverse = false
     webshare = true
+    download = true
 
 [[sharing.providers]]
     name = "LinkedIn"
@@ -71,70 +90,25 @@
     weight = 30
 
 [[sharing.providers]]
-    name = "email"
+    name = "link"
     url = "{url}"
     icon = "fas link"
-    weight = 40
+    weight = 50
     clipboard = true
 
-[sections]
-    [sections.docs]
-        title = "Docs: find how things work on JASMIN"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        nested = false # TODO check at https://gethinode.com/docs/configuration/layout/
-        cols = 3
-        background = "body-tertiary"
-        color = "body"
-        padding = "3"
-        header = "none"
-        footer = "tags"
-        orientation = "horizontal" # Placement of the thumbnail/icon either “stacked” (default), “horizontal”, or “none”.
-        style = "border-1 card-emphasize"
-        homepage = 3
-        separator = true
-    [sections.guides]
-        title = "Guides: get started or learn new concepts"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-zoom card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "full"
-        footer = "none"
-        orientation = "none"
-        homepage = 3
-    [sections.training]
-        title = "Training: to get the most out of JASMIN"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-zoom card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "full"
-        footer = "none"
-        orientation = "horizontal"
-        homepage = 3
-        nested = false
-    [sections.about]
-        title = "About JASMIN"
-        layout = "card"
-        sort = "name"
-        reverse = false
-        nested = false
-        header = "none"
-
+[[sharing.providers]]
+    name = "custom link"
+    url = "[{title}]({url})"
+    icon = "fas star"
+    title = "custom link"
+    weight = 60
+    clipboard = true
 
 [favicon]
     logo = "img/favicon.png"
     #sizes = [16, 32, 48]
+
+
 
 [style]
     #blue = "#007bff"
@@ -167,27 +141,31 @@
     danger = "#A91B2E"
     light = "#ced4da"
     dark = "#dee2e6" #2E2D62"
-    
-# toml-docs-end theme-colors
     themeOpacity = "10"
-# toml-docs-start font
+    darkModeShade = "20%"
+    darkModeTint = "40%"
     themeFont = "BoosterNextFY-Regular"
     #themeFontPath = "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" # external path
     themeFontPath = "/fonts" # local path
-    purge = false
+    fontSizeBase = "1rem"
+    #purge = false
 
 [schema]
     type = "Organization"
     name = "JASMIN"
     locale = "en-GB"
     github = "https://github.com/cedadev"
-    section = "docs"
+    #section = "docs"
     [schema.author]
         name = "Matt Pritchard"
     [schema.logo]
         url = "img/logos/jasmin-logo-small-green.png?source=schema.logo"
+        #width = 512
+        #height = 512
     [schema.image]
         url = "img/logos/jasmin-logo-small-green.png?source=schema.image"
+        #width = 1280
+        #height = 640
 
 [opengraph]
     images = ["img/logos/jasmin-logo-small-green.png?source=opengraph"]
@@ -254,3 +232,7 @@
 [videos]
     [videos.youtube]
         host = "youtube"
+
+#[modules.cookieyes]
+    #url = "https://cdn-cookieyes.com/client_data/NNNN/script.js" # need client ID?
+    #local = false

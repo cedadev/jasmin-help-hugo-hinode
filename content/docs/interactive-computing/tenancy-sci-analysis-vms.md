@@ -2,10 +2,11 @@
 aliases: /article/4805-tenancy-sci-analysis-vms
 description: Tenancy-Sci Analysis VMs
 title: Tenancy Sci Analysis VMs
+draft: true
 weight: 70
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 **Deprecated feature** documented here to provide information about how to access existing instances.
 Tenancy sci analysis machines are no longer part of the JASMIN Cloud service, as most use cases can be
 served by using the shared [sci servers]({{% ref "sci-servers" %}}).

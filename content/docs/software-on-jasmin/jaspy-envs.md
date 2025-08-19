@@ -5,7 +5,7 @@ slug: jaspy-envs
 title: Jaspy Software Environments (Python 3, R and other tools)
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Important changes took place in September 2024 affecting what software can be used on JASMIN.
 Please read [this announcement](https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/) carefully.
 
@@ -101,7 +101,7 @@ Environments for the "R" programming language are packaged into separate
 software environments, known as "Jasr". This table lists all the Jaspy R
 environments provided on JASMIN and specifies the current (default) version.
 
-{{<alert type="danger" >}}
+{{<alert alert-type="danger" >}}
 We are aware of a newly discovered vulnerability in the R Language (CVE-2024-27322) which allows arbitrary code execution from maliciously built RDS (R Data Serialisation) files.
 
 We will be updating to the latest version of R as soon as possible to remove this vulnerability, but we do not plan to remove access to R beforehand.
@@ -148,7 +148,7 @@ And if you just want the most up-to-date Python you can even omit the
 module load jaspy
 {{</command>}}
 
-{{<alert type="info" >}}
+{{<alert alert-type="info" >}}
 If you choose to omit the `<release>` and `<python_version>`
 components then it is important to be aware that the resulting environment may
 differ over time. For continuity, you ay wish to use the full

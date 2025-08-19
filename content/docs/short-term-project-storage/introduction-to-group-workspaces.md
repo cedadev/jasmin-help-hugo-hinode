@@ -64,7 +64,7 @@ to your account. If you are not sure of the group name for your GWS you can
 find this by entering the command `groups` to see the names of the groups you
 belong to. The group name normally has the prefix “gws_".
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 All data in a GWS should belong to this group `gws_<name>`, so that group read/write permissions apply to this group rather than the default group, `users`.
 {{</alert>}}
 

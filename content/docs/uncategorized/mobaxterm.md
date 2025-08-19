@@ -82,7 +82,7 @@ clicking on `Start local terminal` and using `ssh-add -l` to list the keys curre
 
 When you type the following command in the MobaXterm terminal, you should see output similar to below:
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 IMPORTANT: The box below is an example of what your command line prompt
 might look like.
 

@@ -4,7 +4,7 @@ description: Using the JASMIN Object Store
 title: Using the JASMIN Object Store
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 **Workaround for bug affecting deletion when quota is reached**
 
 Currently the JASMIN Object store is set to be **"read-only and delete"** when the quota for the tenancy is reached, i.e. stopping writes, but allowing reads and deletes.
@@ -469,6 +469,6 @@ This will copy the contents of `sourcepath` to `destpath`, but not the directori
 
 The example above copies from a local `sourcepath`, which could be a directory on your local machine (either your local laptop/desktop, or perhaps a JASMIN `xfer` server). But given that you can set up multiple **remotes**, you could also configure one of the remotes as SFTP using one of the `xfer` servers, useful if you want to coordinate the transfers from elsewhere rather than on JASMIN itself.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Please note that you are asked **NOT to use** the `rclone mount`, `rcd` or `serve` commands when working with storage on JASMIN, [see here]({{% ref "rclone#dos-and-donts" %}}).
 {{</alert>}}

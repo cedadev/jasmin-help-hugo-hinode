@@ -12,7 +12,7 @@ title: Graphical linux desktop using NoMachine NX
 weight: 50
 ---
 
-{{<alert type="info">}}Updated advice Nov 2024, now works for all platforms if you update your SSH key.{{</alert>}}
+{{<alert alert-type="info">}}Updated advice Nov 2024, now works for all platforms if you update your SSH key.{{</alert>}}
 
 ## Introduction
 
@@ -93,25 +93,25 @@ For a simple terminal connection to JASMIN, you would follow the instructions in
 
 Videos for each platform (click the tab for your operating system):
 
-{{< nav type="tabs" id="tabs-create-key" >}}
-  {{< nav-item header="Windows" show="true" >}}
-    {{< video id="QVj05W9iFJE" >}}
+{{< nav tab-type="tabs" id="tabs-create-key" >}}
+  {{< nav-item title="Windows" show="true" >}}
+    {{< video media-id="QVj05W9iFJE" >}}
 Notes:
 
 - This method has now been tested with Windows 10 and 11, but requires you to [update your SSH key to ECDSA]({{%ref "generate-ssh-key-pair"%}}).
   {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
-    {{< video id="wXDhnP1Ut1c" >}}
+  {{< nav-item title="Mac" >}}
+    {{< video media-id="wXDhnP1Ut1c" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Linux" >}}
-    {{<video id="fsty4PC4Srk">}}
+  {{< nav-item title="Linux" >}}
+    {{<video media-id="fsty4PC4Srk">}}
   {{< /nav-item >}}
 {{< /nav >}}
 
 #### Step-by-step instructions
 
 {{< accordion id="accordion-create-with-key" >}}
-  {{< accordion-item header="Step by step instructions (click to expand)" show="false" >}}
+  {{< accordion-item title="Step by step instructions (click to expand)" show="false" >}}
   1. Open the NX client
       1. On Mac and Windows, click the NoMachine Icon
       1. On Linux, the default location for the executable once installed is `/usr/NX/bin/nxplayer`, so you may want to add this to your `$PATH`. Your desktop environment may enable you to add an icon to your desktop.
@@ -138,22 +138,22 @@ The alternative profile for using an agent instead, is very similar but we need 
 
 Videos for each platform:
 
-{{< nav type="tabs" id="tabs-create-agent" >}}
-  {{< nav-item header="Windows (OpenSSH)" show="true" >}}
-    {{< video id="CxNJz2rLZuA" >}}
+{{< nav tab-type="tabs" id="tabs-create-agent" >}}
+  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+    {{< video media-id="CxNJz2rLZuA" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
-    {{< video id="wBIBtBLGE1g" >}}
+  {{< nav-item title="Mac" >}}
+    {{< video media-id="wBIBtBLGE1g" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Linux" >}}
-    {{<video id="5Yrk8XrmAAE">}}
+  {{< nav-item title="Linux" >}}
+    {{<video media-id="5Yrk8XrmAAE">}}
   {{< /nav-item >}}
 {{< /nav >}}
 
 #### Step-by-step instructions
 
 {{< accordion id="accordion-create-with-agent" >}}
-  {{< accordion-item header="Steps in more detail (click to expand)" show="false" >}}
+  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
 
 - In the "Machines" view, select "Add"
 - You're now in the "Address" tab. Type a name for this connection profile, and the full hostname, e.g. `nx1.jasmin.ac.uk`. Set the Protocol to "SSH", which will change the port to 22.
@@ -174,9 +174,9 @@ Once you have created the connection profile, go to [Connecting]({{% ref "#conne
 
 Follow the steps in the video to show how to connect to the desktop on the `nx` server, and to make the onward connection to the `sci` server:
 
-{{< nav type="tabs" id="tabs-connect-key" >}}
-  {{< nav-item header="Windows" show="true" >}}
-    {{< video id="Ox7S8LOfUwQ" >}}
+{{< nav tab-type="tabs" id="tabs-connect-key" >}}
+  {{< nav-item title="Windows" show="true" >}}
+    {{< video media-id="Ox7S8LOfUwQ" >}}
 Notes:
 - This method has now been thoroughly tested with the new ECDSA keys and should work for Windows 10 and 11 users if you have updated your key.
 - Make sure you have returned your `~/.nx/config/player.cfg` file to its default state if you edited this previously. The relevant lines should be reset as follows, but remember to edit the file with the NoMachine Enterprise Client application **closed**:
@@ -186,18 +186,18 @@ Notes:
 ```
 - If it does not work for you particular setup however, please try one of [Methods 2: OpenSSH or 2: Pageant]({{% ref "#method-2-using-an-agent" %}}) instead.
   {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
-    {{< video id="kNu4oInzEb8" >}}
+  {{< nav-item title="Mac" >}}
+    {{< video media-id="kNu4oInzEb8" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Linux" >}}
-    {{<video id="3ndUx8JFp0U">}}
+  {{< nav-item title="Linux" >}}
+    {{<video media-id="3ndUx8JFp0U">}}
   {{< /nav-item >}}
 {{< /nav >}}
 
 #### Step-by-step instructions
 
 {{< accordion id="accordion-connect-with-key" >}}
-  {{< accordion-item header="Steps in more detail (click to expand)" show="false" >}}
+  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
 
 - You'll be asked for your username and the passphrase for your key. It is NOT recommended to save your passphrase in the connection file.
 - Click OK
@@ -242,23 +242,23 @@ In summary, we need to:
   Change them as follows:
   
   (the changes are slightly different for each platform)
-{{< nav type="tabs" id="tabs-os2" >}}
-  {{< nav-item header="Windows (OpenSSH)" show="true" >}}
+{{< nav tab-type="tabs" id="tabs-os2" >}}
+  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
 ```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="C:\Windows\System32\OpenSSH\ssh.exe" />
 ```
   {{< /nav-item >}}
-  {{< nav-item header="Windows (Pageant)" >}}
+  {{< nav-item title="Windows (Pageant)" >}}
   Leave the file unaltered, with the default settings, as above.
   {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
+  {{< nav-item title="Mac" >}}
 ```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="/usr/bin/ssh" />
 ```
   {{< /nav-item >}}
-  {{< nav-item header="Linux">}}
+  {{< nav-item title="Linux">}}
 ```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="/usr/bin/ssh" />
@@ -270,26 +270,26 @@ In summary, we need to:
 
 Next, follow the video below for actually connecting, or see the step-by-step instructions below:
 
-{{< nav type="tabs" id="tabs-connect-agent" >}}
-  {{< nav-item header="Windows (OpenSSH)" show="true" >}}
-    {{< video id="VUZYOVbugRc" >}}
+{{< nav tab-type="tabs" id="tabs-connect-agent" >}}
+  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+    {{< video media-id="VUZYOVbugRc" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Windows (Pageant)">}}
-    {{< video id="4URCp5AcJdg" >}}
-  This video covers the whole process, incuding how to convert the key using PuTTYgen and load it using Pageant, then set up a connection and use it to connect.
+  {{< nav-item title="Windows (Pageant)">}}
+    {{< video media-id="4URCp5AcJdg" >}}
+  This video covers the whole process, including how to convert the key using PuTTYgen and load it using Pageant, then set up a connection and use it to connect.
   {{< /nav-item >}}
-  {{< nav-item header="Mac" >}}
-    {{< video id="Q7JrBPacBao" >}}
+  {{< nav-item title="Mac" >}}
+    {{< video media-id="Q7JrBPacBao" >}}
   {{< /nav-item >}}
-  {{< nav-item header="Linux" >}}
-    {{<video id="K98A2VdcZo8">}}
+  {{< nav-item title="Linux" >}}
+    {{<video media-id="K98A2VdcZo8">}}
   {{< /nav-item >}}
 {{< /nav >}}
 
 #### Step-by-step instructions
 
 {{< accordion id="accordion-connect-with-agent" >}}
-  {{< accordion-item header="Steps in more detail (click to expand)" show="false" >}}
+  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
 
 - Enter your JASMIN username in the box
 - Click OK

@@ -1,6 +1,10 @@
+{{ $title := .Title }}
+{{ if site.Params.main.titleCase }}{{ $title = title $title }}{{ end }}
+{{/* Render breadcrumb */}}
+{{ if .Site.Params.navigation.breadcrumb }}{{ partial "assets/breadcrumb.html" (dict "page" .) }}{{ end -}}
 <div class="row">
     <div class="col-md-10">
-        {{ with .Title }}<p class="display-4 mt-5">{{ . }}</p>{{ end }}
+        {{ with $title }}<p class="display-4 mt-5">{{ . }}</p>{{ end }}
     </div>
     <div class="col-md-2">
         {{- with .Parent.Params.icon }}<p class="display-4 mt-5">{{- partial "assets/icon.html" (dict "icon" .) }}</p>{{ end }}
@@ -12,7 +16,7 @@
             <div class="hstack gap-0">
                 {{ range (.GetTerms "tags") -}}
                     {{- $url := (path.Join .Page.RelPermalink) | relLangURL -}}
-                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "light" "size" "sm" "icon" "fas tag") }}
+                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "light" "button-size" "sm" "icon" "fas tag") }}
                 {{ end -}}
             </div>
         </div>
@@ -21,7 +25,7 @@
             <div class="hstack gap-0">
                 {{ range (.GetTerms "tags") -}}
                     {{- $url := (path.Join .Page.RelPermalink) | relLangURL -}}
-                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "primary" "size" "sm" "outline" "true" "icon" "fas tag") }}
+                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "primary" "button-size" "sm" "outline" "true" "icon" "fas tag") }}
                 {{ end -}}
             </div>
         </div>

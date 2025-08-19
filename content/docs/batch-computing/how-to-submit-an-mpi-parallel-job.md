@@ -48,7 +48,7 @@ other users' jobs that might otherwise be running on those hosts.
 
 ## MPI implementation and Slurm
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 The following about compilers has not yet been reviewed for compatibility with the new cluster, April 2025.
 This alert will be removed once updated.
 {{</alert>}}

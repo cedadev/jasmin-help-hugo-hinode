@@ -1,6 +1,5 @@
 ---
 aliases: /article/4892-how-to-monitor-slurm-jobs
-date: 2020-05-20 13:13:23
 description: Getting information about your Slurm jobs
 slug: how-to-monitor-slurm-jobs
 title: How to monitor Slurm jobs
@@ -29,7 +28,7 @@ use `squeue --me` which means "my own jobs".
 Official documentation for the `squeue` command is available
 {{<link "https://slurm.schedmd.com/squeue.html">}}here{{</link>}}.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Please **DO NOT** use `watch` or equivalent polling utilities with Slurm
 as they are wasteful of resources and cause communication issues for the scheduler.
 

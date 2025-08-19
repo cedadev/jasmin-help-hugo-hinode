@@ -5,7 +5,7 @@ slug: conda-environments-and-python-virtual-environments
 title: Conda environments and Python virtual environments
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Important changes took place in September 2024 affecting what software can be used on JASMIN.
 Please read [this announcement](https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/) carefully.
 

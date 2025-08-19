@@ -8,7 +8,7 @@ title: Cluster-as-a-Service - Slurm
 This article describes how to deploy and use a Slurm cluster using JASMIN
 Cluster-as-a-Service (CaaS).
 
-{{< alert type="danger" >}}
+{{< alert alert-type="danger" >}}
 CaaS Slurm clusters are currently disabled because of a security problem
 with the images that were being used. We are working on a new system which
 will provide slurm clusters.

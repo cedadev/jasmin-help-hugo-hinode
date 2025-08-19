@@ -46,10 +46,10 @@ We'll demonstrate the following methods:
 
 ### Methods to load your key
 
-{{<nav type="tabs" id="tabs-methods">}}
-  {{<nav-item header="Windows (1: cmd, gui)" show="true">}}
+{{<nav tab-type="tabs" id="tabs-methods">}}
+  {{<nav-item title="Windows (1: cmd, gui)" show="true">}}
 
-  {{<youtube id="DXZ-4UISkYg" title="MobaXterm" autoplay="true">}}
+  {{<video media-id="DXZ-4UISkYg" title="MobaXterm" >}}
 
   Follow the video above for how to set up the `ssh-agent` and load your key:
 
@@ -57,14 +57,14 @@ We'll demonstrate the following methods:
   
   {{</nav-item>}}
 
-  {{<nav-item header="Windows (2: Pageant)">}}
+  {{<nav-item title="Windows (2: Pageant)">}}
 
-  {{<youtube id="2__EzPqWZBc" title="MobaXterm" autoplay="true">}}
+  {{<video media-id="2__EzPqWZBc" title="MobaXterm" >}}
 
   Follow the video above for how to set up the `ssh-agent` and load your key. This method should not need any additional admin permissions once you have got the [PuTTY suite of tools installed](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (PuTTY, PuTTYgen, Pageant)
   {{</nav-item>}}
-  {{<nav-item header="Windows (2: MobaXterm)">}}
-  {{<youtube id="eoQG1jjoPsg" title="MobaXterm" autoplay="true">}}
+  {{<nav-item title="Windows (2: MobaXterm)">}}
+  {{<video media-id="eoQG1jjoPsg" title="MobaXterm" >}}
 Notes:
 - Remember that you need a licence to use MobaXterm beyond the intial free trial period.
 - The method shown above does not work with applications outside of MobaXterm (like NoMachine NX or VSCode): you would need to use the Windows OpenSSH client instead to use these with an agent, or set MobaXterm to use the external Pageant agent.
@@ -94,7 +94,7 @@ Notes:
   2. This method only persists for this particular MobaXterm session. If you want it to always load your key when MobaXterm starts, use the method described in the video above.
 
   {{< /nav-item >}}
-  {{< nav-item header="Windows (3: Powershell)" >}}
+  {{< nav-item title="Windows (3: Powershell)" >}}
   
   The equivalent steps in Powershell are as follows:
 
@@ -165,7 +165,7 @@ Notes:
   Once you have loaded your key this way, and if you have set the Windows OpenSSH Authentication Agent service to start automatically, then next time you restart Windows, your key will load automatically when you log in to Windows. You should consider whether that is the desired behaviour, considering any shared use of that machine, and you should protect your Windows login with strong security.
 
   {{</nav-item >}}
-  {{<nav-item header="Mac">}}
+  {{<nav-item title="Mac">}}
   
   ## Mac
 
@@ -186,7 +186,7 @@ Notes:
   {{</command>}}
 
   {{</nav-item>}}
-  {{<nav-item header="Linux">}}
+  {{<nav-item title="Linux">}}
   
   ## Linux
 
@@ -278,14 +278,14 @@ this usually solves the problem
 
 - **Change the permisisons on the file**
 
-  {{<nav type="tabs" id="tabs-key-perms">}}
-  {{<nav-item header="Linux/Mac/cygwin/Mobaxterm" show="true">}}
+  {{<nav tab-type="tabs" id="tabs-key-perms">}}
+  {{<nav-item title="Linux/Mac/cygwin/Mobaxterm" show="true">}}
   {{<command>}}
 chmod 600 ~/.ssh/id_ecdsa_jasmin
   {{</command>}}
   (replace `id_ecdsa_jasmin` with the path to and/or name of your private key file)
   {{</nav-item>}}
-  {{<nav-item header="Windows: PowerShell">}}
+  {{<nav-item title="Windows: PowerShell">}}
   The equivalent method in Windows PowerShell involves these steps,
   replacing the expression with `id_ecdsa_jasmin` with the path to your key if different. 
   You may need to open the PowerShell window with "run as administrator".

@@ -8,7 +8,7 @@ title: 'GridFTP (SSH authentication)'
 This article describes how to transfer data using GridFTP with SSH
 authentication.
 
-{{<alert type="info">}}The `globus-url-copy` command used here should not be confused with the Globus online data transfer service. They used to be associated, but no longer. If you are starting out and looking for a reliable, high-performance transfer method, the recommendation now is to learn about [Globus Transfers with JASMIN]({{% ref "globus-transfers-with-jasmin" %}}) (using the Globus online data transfer service) instead of command-line gridftp as described in this document.{{</alert>}}
+{{<alert alert-type="info">}}The `globus-url-copy` command used here should not be confused with the Globus online data transfer service. They used to be associated, but no longer. If you are starting out and looking for a reliable, high-performance transfer method, the recommendation now is to learn about [Globus Transfers with JASMIN]({{% ref "globus-transfers-with-jasmin" %}}) (using the Globus online data transfer service) instead of command-line gridftp as described in this document.{{</alert>}}
 
 ## Introduction
 

@@ -2,71 +2,63 @@
 
 - title: getting started
   pages:
-    - title: get started with jasmin
+    - title: beginners training workshop
     - title: generate ssh key pair
     - title: get jasmin portal account
     - title: get login account
-    - title: beginners training workshop
     - title: how to contact us about jasmin issues
+    - title: how to login
     - title: jasmin status
     - title: jasmin training accounts
-    - title: tips for new users
-    - title: how to login
     - title: multiple account types
     - title: present ssh key
     - title: reconfirm email address
     - title: reset jasmin account password
     - title: ssh auth
     - title: storage
+    - title: tips for new users
     - title: understanding new jasmin storage
     - title: update a jasmin account
-    #- title: updating your ssh key
-    #- title: migrate jasmin account from ceda
 
 - title: interactive computing
   pages:
-    - title: interactive computing overview   
-    - title: check network details     
-    - title: login servers
-    - title: login problems    
+    - title: access from vscode
+    - title: creating a virtual environment in the notebooks service
+    - title: dask gateway
     - title: graphical linux desktop access using nx
-    - title: sci servers
-    - title: tenancy sci analysis vms
-    - title: transfer servers
+    - title: interactive computing overview   
     - title: jasmin notebooks service
     - title: jasmin notebooks service with gpus
-    - title: creating a virtual environment in the notebooks service
+    - title: login problems    
+    - title: login servers
     - title: project specific servers
-    - title: dask gateway
-    - title: access from vscode
-    #- title: centos7 sci login xfer servers
+    - title: sci servers
+    - title: transfer servers
 
 - title: batch computing
   pages:
-    - title: lotus overview
-    - title: slurm scheduler overview
-    - title: slurm queues
-    - title: lotus cluster specification
+    - title: example job 2 calc md5s
     - title: how to monitor slurm jobs
     - title: how to submit a job
     - title: how to submit an mpi parallel job
-    - title: example job 2 calc md5s
+    - title: lotus cluster specification
+    - title: lotus overview
     - title: orchid gpu cluster
-    - title: slurm status
+    - title: slurm queues
     - title: slurm quick reference
+    - title: slurm scheduler overview
+    - title: slurm status
 
 - title: software on jasmin
   pages: 
-    - title: software overview
-    - title: quickstart software envs
-    - title: python virtual environments
     - title: additional software
-    - title: community software esmvaltool
     - title: community software checksit
+    - title: community software esmvaltool
     - title: compiling and linking
     - title: conda environments and python virtual environments
     - title: conda removal
     - title: creating and using miniforge environments
+    - title: geocat replaces ncl
     - title: idl
     - title: jasmin sci software environment
     - title: jasmin software faqs
@@ -74,22 +66,24 @@
     - title: matplotlib
     - title: nag library
     - title: name dispersion model
-    - title: geocat replaces ncl
     - title: postgres databases on request
+    - title: python virtual environments
+    - title: quickstart software envs
+    - title: rocky9 migration 2024
     - title: running python on jasmin
     - title: running r on jasmin
-    - title: rocky9 migration 2024
     - title: share software envs
+    - title: software overview
 
 - title: data transfer
   pages:
+    - title: bbcp
     - title: data transfer overview
     - title: data transfer tools
-    - title: globus transfers with jasmin
-    - title: bbcp
     - title: ftp and lftp
     - title: globus command line interface
     - title: globus connect personal
+    - title: globus transfers with jasmin
     - title: gridftp ssh auth
     - title: rclone
     - title: rsync scp sftp
@@ -99,14 +93,14 @@
 - title: short term project storage
   pages:
     - title: apply for access to a gws
+    - title: configuring cors for object storage
     - title: elastic tape command line interface hints
     - title: faqs storage
-    - title: gws etiquette
-    - title: gws scanner ui
-    - title: gws scanner
     - title: gws alert system
+    - title: gws etiquette
+    - title: gws scanner
+    - title: gws scanner ui
     - title: install xfc client
-    - title: xfc
     - title: introduction to group workspaces
     - title: jdma
     - title: managing a gws
@@ -115,7 +109,7 @@
     - title: share gws data on jasmin
     - title: share gws data via http
     - title: using the jasmin object store
-    - title: configuring cors for object storage
+    - title: xfc
 
 - title: long term archive storage
   pages:
@@ -130,18 +124,18 @@
 
 - title: for cloud tenants
   pages:
-    - title: introduction to the jasmin cloud
-    - title: jasmin cloud portal
+    - title: adding and removing ssh keys from an external cloud vm
+    - title: best practice
     - title: cluster as a service
-    - title: cluster as a service kubernetes
     - title: cluster as a service identity manager
-    - title: cluster as a service slurm
+    - title: cluster as a service kubernetes
     - title: cluster as a service pangeo
     - title: cluster as a service shared storage
-    - title: adding and removing ssh keys from an external cloud vm
+    - title: cluster as a service slurm
+    - title: introduction to the jasmin cloud
+    - title: jasmin cloud portal
     - title: provisioning tenancy sci vm managed cloud
     - title: sysadmin guidance external cloud
-    - title: best practice
 
 - title: workflow management
   pages:
@@ -150,10 +144,10 @@
 
 - title: uncategorized
   pages:
-    - title: mobaxterm
-    - title: requesting resources
-    - title: processing requests for resources
     - title: acknowledging jasmin
     - title: approving requests for access
-    - title: working with many linux groups
     - title: jasmin conditions of use
+    - title: mobaxterm
+    - title: processing requests for resources
+    - title: requesting resources
+    - title: working with many linux groups

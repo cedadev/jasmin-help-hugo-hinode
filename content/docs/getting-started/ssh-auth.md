@@ -36,7 +36,7 @@ and the passphrase to unlock it is entered there too. An attacker would require 
 passphrase used to protect your private key as well as the private key file
 itself.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 It is imperative that your private key is protected by a strong passphrase so
 that only you can use it.
 {{</alert>}}

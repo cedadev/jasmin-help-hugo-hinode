@@ -5,7 +5,7 @@ slug: secondary-copy-using-elastic-tape
 title: Secondary copy using Elastic Tape
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please see [Near-Line Data Store](nlds) for details of JASMIN's new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
 {{</alert>}}
 
@@ -148,7 +148,7 @@ need to use one of the login gateways `login*.jasmin.ac.uk`. Use the -A option o
 equivalent for agent forwarding in ssh. STFC users may use the STFC VPN to
 connect to `et.jasmin.ac.uk` as if it were a local connection.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 When writing data to the ET system, it is very important that data remains in place on disk, in the location where ET expects to find them, until the status of the batch in question has reached `CACHED_SYNCED` or `SYNCED`.  This means that the data have actually been written to tape, but is not the case until that status is shown.
 
 The location where ET expects to find the files will be specified in the `LISTFILE` that the user supplied to the `et_put.py` command, or all files and directories under the `DIR`.  The status of user's batches can be checked by going to the webpage: http://et-monitor.fds.rl.ac.uk/et_user/ET_AlertWatch.php. You need to be logged into JASMIN to see this webpage, via the [nx-login servers]({{% ref "graphical-linux-desktop-access-using-nx" %}}), and use Firefox as the web browser.

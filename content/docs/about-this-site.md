@@ -17,7 +17,7 @@ This site should redirect you from any previous URLs you may have stored, but pl
 - icons, to identify articles within the same section
 - table of contents, right side panel
 - hover over sub-headings to reveal a bookmark-able link to that heading
-- {{< icon fas tag >}} {{<link url="/tags"  >}}tags{{</link>}} to group together articles covering similar topics
+- {{< icon fas tag >}} {{<link href="/tags"  >}}tags{{</link>}} to group together articles covering similar topics
 - links between articles
 
 ## Issues with this site

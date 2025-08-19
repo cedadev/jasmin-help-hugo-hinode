@@ -22,8 +22,8 @@ Note: the actual number of nodes may vary slightly over time due to operational 
 
 Before using ORCHID on JASMIN, you will need: 
 
-1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. **Subsequently** (once `jasmin-login` has been approved and completed), the `orchid` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/orchid/">}}Apply here{{</button>}}
+1. An existing JASMIN account and valid `jasmin-login` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
+2. **Subsequently** (once `jasmin-login` has been approved and completed), the `orchid` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/orchid/">}}Apply here{{</button>}}
 
 The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `orchid` role grants access to the special LOTUS partition and QoS used by ORCHID.
 

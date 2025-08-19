@@ -30,7 +30,7 @@ Directories can also be excluded from the scan in the same way. This can be
 useful for speeding up the run time of a scan. Here is an example of a
 config.ini file.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please note that the required directory for this configuration data is `.gws_scan`, not `.gws_scanner` - the
 latter is from the **previous** incarnation of the scanner, and will be be removed in due course)
 {{</alert>}}

@@ -4,7 +4,7 @@ description: IDL
 title: IDL
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 There are currently some licensing issues which are affecting how IDL can be used on new
 Rocky 9 servers. Please check back to our [Rocky 9 migration page]({{% ref "rocky9-migration-2024" %}}) for the latest updates as they become available.
 {{</alert>}}
@@ -73,7 +73,7 @@ We have a large pool of **run-time** licences but a much more limited pool of
 **development** licences. In each case, these consist of floating licences shared
 between JASMIN sci machines and the LOTUS cluster.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 **6 September 2024: IDL v8.9** This version is available but without the full set of run-time
 licences. This may affect usage, particularly on the LOTUS cluster. This will be
 resolved in due course. Also please ignore the error message on startup re. GL graphics device.
@@ -177,7 +177,7 @@ idl -rt=foo.sav
 {{</command>}}
     		
 
-{{<alert type="info">}}Using` -vm=` instead of `-rt=` opens the save file in the IDL
+{{<alert alert-type="info">}}Using` -vm=` instead of `-rt=` opens the save file in the IDL
 virtual machine. No run-time licence is required, but a splash screen must
 be dismissed interactively, so it is not suitable for queues on the
 cluster.

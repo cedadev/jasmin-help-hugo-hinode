@@ -1,0 +1,97 @@
+<footer class="container-fluid footer text-center p-3">
+    <div class="container-xxl text-center">
+        <div class="row">
+            <div class="col-md-4 small">
+            </div>
+            <div class="col-md-2 small">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-start">
+                <h2 class="footer-heading">Useful links</h2>
+                <ul class="list-unstyled">
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "ceda_archive") "text" "CEDA Archive" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "ceda_catalogue") "text" "CEDA Catalogue" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin") "text" "JASMIN" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin_accounts_portal") "text" "JASMIN Accounts Portal" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin_projects_portal") "text" "JASMIN Projects Portal" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin_cloud_portal") "text" "JASMIN Cloud Portal" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin_notebooks_service") "text" "JASMIN Notebooks Service" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                    <li>
+                        {{ $link := partial "assets/link.html" (dict "href" (index site.Params.links "jasmin_community_discussions") "text" "JASMIN Community Discussions" "class" "link-bg-footer" "page" .Page) }}
+                        {{ $link | safeHTML }}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col text-start">
+                <h2 class="footer-heading">
+                    Contact us
+                </h2>
+                <ul class="list-unstyled">
+                    <li>
+                        {{/*  Sets up the Helpdesk link to either toggle the Beacon or go to the JASMIN contact us page if it's not ready  */}}
+                        <a href="javascript:void(0);" id="beacon" onclick="if (Beacon('info') === undefined) { window.location = '{{ site.Params.links.jasmin }}/help/contact/' } else { Beacon('toggle') }">Helpdesk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-right col-md-5">
+                <a href="{{ site.Params.links.nerc }}">
+                    {{- $logo := partial "assets/image.html" (dict "src" "img/logos/UKRI_STF_Council-Logo_Horiz-RGB_h80.png" "title" "STFC Logo" "image-width" "250") -}}
+                    {{ $logo | safeHTML }}
+                </a>
+                <br>
+                <a href="{{ site.Params.links.nerc }}">
+                    {{- $logo := partial "assets/image.html" (dict "src" "img/logos/UKRI_NER_Council-Logo_Horiz-RGB_h80.png" "title" "NERC Logo" "image-width" "250") -}}
+                    {{ $logo | safeHTML }}
+                </a>
+                <br><br>
+                <a href="{{ site.Params.links.ncas }}">
+                    {{- $logo := partial "assets/image.html" (dict "src" "img/logos/ncas-logo-light.png" "title" "NCAS Logo" "image-width" "200") -}}
+                    {{ $logo | safeHTML }}
+                </a>
+                <br><br>
+                <a href="{{ site.Params.links.nceo }}">
+                    {{- $logo := partial "assets/image.html" (dict "src" "img/logos/nceo-logo-light.svg" "title" "NCEO Logo" "image-width" "200") -}}
+                    {{ $logo | safeHTML }}
+                </a>
+            </div>
+
+        </div>
+        <small>
+            {{ $link := partial "assets/link.html" (dict "href" "/accessibility" "text" "Accessibility | " "class" "link-bg-footer" "page" .Page) }}
+            {{ $link | safeHTML }}
+            {{ $link := partial "assets/link.html" (dict "href" "/conditions" "text" "Terms and Conditions | " "class" "link-bg-footer" "page" .Page) }} 
+            {{ $link | safeHTML }}
+            {{ $link := partial "assets/link.html" (dict "href" "/privacy" "text" "Privacy and Cookies" "class" "link-bg-footer" "page" .Page) }}
+            {{ $link | safeHTML }}
+            <br>
+            {{- $copyright := printf "%s © %s %s %s." (T "copyright") (dateFormat "2006" now) .Site.Title (T "rights") }}
+            {{ cond (gt (len .Site.Copyright) 0) .Site.Copyright $copyright }}
+            <br>
+            {{ .Site.Params.footer.license | safeHTML }}
+        </small>
+    </div>
+</footer>

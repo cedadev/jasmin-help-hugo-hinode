@@ -225,7 +225,7 @@ by removal of user access. No offensive, obscene or otherwise unauthorised
 data may be stored in the GWS or anywhere else within JASMIN. Users should not
 store any data of a personal or sensitive nature in the GWS.
 
-{{< alert type="danger" >}}
+{{< alert alert-type="danger" >}}
 Do not set, or allow your users to set, open permissions on files or directories.
 By this we mean permissions where data are "world-writable" by anyone, for example
 

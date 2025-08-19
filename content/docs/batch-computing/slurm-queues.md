@@ -63,7 +63,7 @@ sinfo
 (out)...
 {{</command>}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Queues other than the standard queues, `standard` and `debug`, should be ignored
 as they implement different job scheduling and control policies.
 {{</alert>}}

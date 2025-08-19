@@ -1,11 +1,11 @@
 # Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
-ARG NODE_VERSION=20
+ARG NODE_VERSION=22
 FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo_extended
 # VERSION can be either 'latest' or a specific version number
-ARG VERSION=0.143.1
+ARG VERSION=0.148.0
 
 # Download Hugo
 RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \

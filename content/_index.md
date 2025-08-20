@@ -7,6 +7,7 @@ content_blocks:
   - _bookshop_name: hero
     heading:
       title: JASMIN Help Site
+      size: 4
       content: |-
         Documentation and training resources for JASMIN - the UK's data analysis facility for environmental science.
       width: 8
@@ -35,6 +36,7 @@ content_blocks:
   - _bookshop_name: articles
     heading:
       title: "Docs: find how things work on JASMIN"
+      size: 6
       align: start
     input:
       section: docs

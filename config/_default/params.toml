@@ -7,7 +7,7 @@
     canonifyAssetsURLs = false
     footerBelowFold = true
     loading = "lazy"
-    titleCase = true
+    titleCase = false # keep this false to avoid issues with inline code in headings
     [main.padding]
         x = 4
         y = 5
@@ -57,8 +57,8 @@
     sidebar = true
     size = "md"
     # TOC options new with v1.10.0
-    #startLevel = 2
-    #endLevel = 3
+    startLevel = 2 # need to specify these ...
+    endLevel = 4 # to avoid spurious [ ] in TOC menu
     #maxNumHeadings = 4
 
 [messages]

@@ -4,6 +4,7 @@ description: Information about this documentation site itself.
 icon: fas circle-info
 type: docs
 sidebar: true
+weight: 5
 ---
 
 ## About this site

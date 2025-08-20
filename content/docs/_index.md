@@ -12,7 +12,7 @@ content_blocks:
     input:
       section: docs
       reverse: false
-      sort: title
+      sort: weight
     hide-empty: false
     header-style: none
     more:

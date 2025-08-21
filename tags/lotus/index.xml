@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lotus on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/lotus/</link><description>Recent content in Lotus on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/lotus/index.xml" rel="self" type="application/rss+xml"/><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -13,9 +21,19 @@
 
 
 
+
  
 
-&lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer nofollow">Dask Gateway&amp;nbsp;
+
+ &lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer nofollow">Dask Gateway&amp;nbsp;
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a service which manages 
  
@@ -27,9 +45,19 @@
 
 
 
+
  
 
-&lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer nofollow">Dask&amp;nbsp;
+
+ &lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer nofollow">Dask&amp;nbsp;
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> clusters for users.
 On JASMIN, it creates a Dask cluster in 
@@ -44,27 +72,7 @@ On JASMIN, it creates a Dask cluster in
 
 
 
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
  
  
@@ -74,12 +82,29 @@ On JASMIN, it creates a Dask cluster in
  
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a>, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.&lt;/p></description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading">Queue names&lt;a href="#queue-names" aria-labelledby="queue-names">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
 &lt;/h2>
 &lt;p>The Slurm queues in the LOTUS cluster are:&lt;/p></description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading">Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -96,15 +121,10 @@ On JASMIN, it creates a Dask cluster in
 
 
 
-
-
-
-
-
-
  
 
 
+ &lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow">Slurm&amp;nbsp;
 
 
 
@@ -113,12 +133,6 @@ On JASMIN, it creates a Dask cluster in
 
 
 
-
-
-
- 
-
-&lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow">Slurm&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is the job scheduler deployed on JASMIN. It
 allows users to submit, monitor, and control jobs on the 
@@ -131,13 +145,15 @@ allows users to submit, monitor, and control jobs on the
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a> (CPU)
 and 
  
@@ -149,11 +165,13 @@ and
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/">ORCHID&lt;/a> (GPU) clusters.&lt;/p></description></item></channel></rss>

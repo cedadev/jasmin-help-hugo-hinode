@@ -8,13 +8,15 @@
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/">scientific analysis servers&lt;/a> and on the Lotus batch cluster, we currently support Python version 3.11 with 
  
 
@@ -25,13 +27,15 @@
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p>
 &lt;p>When you first log in, the default version of Python is that provided by the
 operating system. This is different to the one you shoud use for your work,
@@ -45,12 +49,14 @@ and we recommend using the
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy environments&lt;/a>. In this example, we
 activate the current Jaspy environment before running Python.&lt;/p></description></item></channel></rss>

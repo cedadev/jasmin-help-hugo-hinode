@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on JASMIN on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/</link><description>Recent content in Software on JASMIN on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/software-on-jasmin/index.xml" rel="self" type="application/rss+xml"/><item><title>Community Software: ESMValTool</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</link><pubDate>Wed, 25 Jan 2023 10:35:13 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</guid><description>&lt;p>ESMValTool is installed on JASMIN as a &lt;em>community package&lt;/em>. This article
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on JASMIN on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/</link><description>Recent content in Software on JASMIN on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/software-on-jasmin/index.xml" rel="self" type="application/rss+xml"/><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p>This article provides details of additional packages that exist under the
+&lt;code>/apps/jasmin/&lt;/code> directory which is available on all scientific analysis
+servers and on the LOTUS batch cluster on JASMIN.&lt;/p></description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading">Overview&lt;a href="#overview" aria-labelledby="overview">
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>&lt;code>checksit&lt;/code> is a tool that checks the structure and content of a file against a range of available checks. Checks can be made using either &amp;ldquo;spec&amp;rdquo; files defining rules that objects within a file must meet, or comparison against a template file.&lt;/p></description></item><item><title>Community Software: ESMValTool</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</guid><description>&lt;p>ESMValTool is installed on JASMIN as a &lt;em>community package&lt;/em>. This article
 provides:&lt;/p>
 &lt;ul>
 &lt;li>a brief overview of the ESMValTool software&lt;/li>
@@ -11,6 +26,14 @@ provides:&lt;/p>
 
 
 &lt;h2 id="overview-of-esmvaltool" class="heading">Overview of ESMValTool&lt;a href="#overview-of-esmvaltool" aria-labelledby="overview-of-esmvaltool">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -24,9 +47,7 @@ selected Essential Climate Variables, a range of known systematic biases
 common to ESMs, such as coupled tropical climate variability, monsoons,
 Southern Ocean processes, continental dry biases and soil hydrology-climate
 interactions, as well as atmospheric CO2 budgets, tropospheric and
-stratospheric ozone, and tropospheric aerosols.&lt;/p></description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Fri, 21 Oct 2022 12:10:33 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3">
-
- 
+stratospheric ozone, and tropospheric aerosols.&lt;/p></description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 
 
 
@@ -35,38 +56,6 @@ stratospheric ozone, and tropospheric aerosols.&lt;/p></description></item><item
 
 
 
-
-
-
- &lt;div class="accordion-item">&lt;div class="accordion-header m-0 fs-2" id="accordion-default-heading-0">
- &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-default-item-0" aria-expanded="false" aria-controls="accordion-default-item-0">
- Why do I have to load/activate a software environment?
- &lt;/button>
- &lt;/div>&lt;div id="accordion-default-item-0" class="accordion-collapse collapse" aria-labelledby="accordion-default-heading-0" data-bs-parent="#accordion-default">
- &lt;div class="accordion-body">&lt;p>We have a range of different users on JASMIN who work on many different
-projects. Each project has its own software requirements and timeline. By
-providing multiple software environments (such as Python2.7 and Python3.7) we
-can support a wider range of users on the same platform. Since we do not
-assume a &amp;ldquo;standard&amp;rdquo; environment it is up to the user to &amp;ldquo;load&amp;rdquo; (or &amp;ldquo;activate&amp;rdquo;)
-a software environment before usage. This is typically done by using:&lt;/p></description></item><item><title>Quickstart for activating/deactivating software environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</link><pubDate>Thu, 06 Aug 2020 15:53:42 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</guid><description>&lt;p>This article provides a minimum quick-start guide for working with software environments on JASMIN.&lt;/p>
-
-
-
-
-&lt;h2 id="activate-load-an-environment" class="heading">Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>To activate an environment containing the &amp;ldquo;current&amp;rdquo; common software packages
-(including a modern Python):&lt;/p></description></item><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p>This article provides details of additional packages that exist under the
-&lt;code>/apps/jasmin/&lt;/code> directory which is available on all scientific analysis
-servers and on the LOTUS batch cluster on JASMIN.&lt;/p></description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading">Overview&lt;a href="#overview" aria-labelledby="overview">
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>&lt;code>checksit&lt;/code> is a tool that checks the structure and content of a file against a range of available checks. Checks can be made using either &amp;ldquo;spec&amp;rdquo; files defining rules that objects within a file must meet, or comparison against a template file.&lt;/p></description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -81,13 +70,15 @@ servers and on the LOTUS batch cluster on JASMIN.&lt;/p></description></item><it
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a> environment on JASMIN contains the GNU compilers and
 
 
@@ -101,15 +92,10 @@ servers and on the LOTUS batch cluster on JASMIN.&lt;/p></description></item><it
 
 
 
-
-
-
-
-
-
  
 
 
+ &lt;a href="https://www.mpich.org/" target="_blank" rel="noopener noreferrer nofollow">MPICH&amp;nbsp;
 
 
 
@@ -118,16 +104,19 @@ servers and on the LOTUS batch cluster on JASMIN.&lt;/p></description></item><it
 
 
 
-
-
-
- 
-
-&lt;a href="https://www.mpich.org/" target="_blank" rel="noopener noreferrer nofollow">MPICH&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>, plus a wide range of libraries
-from conda-forge that will interoperate with these.&lt;/p></description></item><item><title>Conda environments and Python virtual environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+from conda-forge that will interoperate with these.&lt;/p></description></item><item><title>Conda environments and Python virtual environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert">
  &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
@@ -142,11 +131,29 @@ Please read
 
 
 
+
  
 
-&lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow">this announcement&amp;nbsp;
+
+ &lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow">this announcement&amp;nbsp;
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading">Background&lt;a href="#background" aria-labelledby="background">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -166,29 +173,6 @@ usage, even if it is for the purpose of academic research.&lt;/p></description><
 
 
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
  
 
 
@@ -196,10 +180,19 @@ usage, even if it is for the purpose of academic research.&lt;/p></description><
  
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">jaspy&lt;/a>
 environment (which is itself a Conda environment). This page gives
 detail on how to create and use your own personal Conda environments via the
 &lt;code>miniforge&lt;/code> installer, as an alternative to the use of Jaspy.&lt;/p></description></item><item><title>Geocat replaces NCL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -216,15 +209,10 @@ detail on how to create and use your own personal Conda environments via the
 
 
 
-
-
-
-
-
-
  
 
 
+ &lt;a href="https://geocat-viz.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer nofollow">geocat&amp;nbsp;
 
 
 
@@ -233,15 +221,18 @@ detail on how to create and use your own personal Conda environments via the
 
 
 
-
-
-
- 
-
-&lt;a href="https://geocat-viz.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer nofollow">geocat&amp;nbsp;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p></description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert">
  &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
@@ -256,18 +247,64 @@ Rocky 9 servers. Please check back to our
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/">Rocky 9 migration page&lt;/a> for the latest updates as they become available.
  &lt;/div>
  &lt;/div>
-&lt;p>This article explains how to:&lt;/p></description></item><item><title>Jaspy Software Environments (Python 3, R and other tools)</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/</guid><description>&lt;div class="d-flex alert alert-danger " role="alert">
+&lt;p>This article explains how to:&lt;/p></description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ &lt;div class="accordion-item">&lt;div id="accordion-default-heading-0" class="accordion-header m-0 fs-2">
+ &lt;button class="accordion-button collapsed"
+ type="button"
+ data-bs-toggle="collapse"
+ data-bs-target="#accordion-default-item-0"
+ aria-expanded="false"
+ aria-controls="accordion-default-item-0"
+ >
+ Why do I have to load/activate a software environment?
+ &lt;/button>
+ &lt;/div>&lt;div id="accordion-default-item-0" 
+ class="accordion-collapse collapse"
+ aria-labelledby="accordion-default-heading-0"
+ data-bs-parent="#accordion-default"
+ >
+ &lt;div class="accordion-body">&lt;p>We have a range of different users on JASMIN who work on many different
+projects. Each project has its own software requirements and timeline. By
+providing multiple software environments (such as Python2.7 and Python3.7) we
+can support a wider range of users on the same platform. Since we do not
+assume a &amp;ldquo;standard&amp;rdquo; environment it is up to the user to &amp;ldquo;load&amp;rdquo; (or &amp;ldquo;activate&amp;rdquo;)
+a software environment before usage. This is typically done by using:&lt;/p></description></item><item><title>Jaspy Software Environments (Python 3, R and other tools)</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert">
  &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-triangle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
@@ -282,9 +319,19 @@ Please read
 
 
 
+
  
 
-&lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow">this announcement&amp;nbsp;
+
+ &lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow">this announcement&amp;nbsp;
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> carefully.&lt;/p></description></item><item><title>Met Office NAME Model</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/name-dispersion-model/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/name-dispersion-model/</guid><description>&lt;p>This article provides links to information about running the Met Office
 atmospheric dispersion model, NAME, on JASMIN.&lt;/p>
@@ -293,6 +340,14 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p>
 
 
 &lt;h2 id="the-name-atmospheric-dispersion-model" class="heading">The NAME atmospheric dispersion model&lt;a href="#the-name-atmospheric-dispersion-model" aria-labelledby="the-name-atmospheric-dispersion-model">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -308,15 +363,34 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p>
 
 
 
+
  
 
-&lt;a href="https://www.metoffice.gov.uk/research/modelling-systems/dispersion-model" target="_blank" rel="noopener noreferrer nofollow">https://www.metoffice.gov.uk/research/modelling-systems/dispersion-model&amp;nbsp;
+
+ &lt;a href="https://www.metoffice.gov.uk/research/modelling-systems/dispersion-model" target="_blank" rel="noopener noreferrer nofollow">https://www.metoffice.gov.uk/research/modelling-systems/dispersion-model&amp;nbsp;
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> can
 be run on JASMIN using the LOTUS cluster. A NAME Group Workspace is
 provided to store both the Numerical Weather Prediction (NWP) met data needed
-to drive NAME as well as the user outputs derived from NAME itself.&lt;/p></description></item><item><title>Migration to Rocky Linux 9 2024</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</guid><description>&lt;div class="d-flex alert alert-success " role="alert">
+to drive NAME as well as the user outputs derived from NAME itself.&lt;/p></description></item><item><title>Migration to Rocky Linux 9 2024</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/</guid><description>&lt;div class="d-flex alert alert-success " 
+ role="alert">
  &lt;div class="pt-1 pe-2">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-circle-exclamation fa-2x fa-fw">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-circle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-circle-exclamation">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
  &lt;div class="flex-grow-1 my-auto">
@@ -328,6 +402,14 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p></desc
 
 
 &lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -335,6 +417,14 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p></desc
 &lt;p>As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p></description></item><item><title>NAG Library</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/nag-library/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/nag-library/</guid><description>&lt;p>This article introduces the Fortran and C library of software under the
 Numerical Algorithm Group (NAG) license. NAG Library is a collection of
 robust, documented, tested and maintained numerical algorithms.&lt;/p></description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -352,17 +442,38 @@ Python packages that are not provided in the
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/">common software environments on JASMIN&lt;/a>. You might wish to do this if you
 want to use different packages/versions from those installed on the system, or
 if you have requested for a package to be installed system-wide but wish to
-start using it before this request can be acted upon.&lt;/p></description></item><item><title>Running python on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</guid><description>&lt;p>On the JASMIN 
+start using it before this request can be acted upon.&lt;/p></description></item><item><title>Quickstart for activating/deactivating software environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</guid><description>&lt;p>This article provides a minimum quick-start guide for working with software environments on JASMIN.&lt;/p>
+
+
+
+
+&lt;h2 id="activate-load-an-environment" class="heading">Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment">
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
+ &lt;/a>
+&lt;/h2>
+&lt;p>To activate an environment containing the &amp;ldquo;current&amp;rdquo; common software packages
+(including a modern Python):&lt;/p></description></item><item><title>Running python on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-python-on-jasmin/</guid><description>&lt;p>On the JASMIN 
  
 
 
@@ -372,13 +483,15 @@ start using it before this request can be acted upon.&lt;/p></description></item
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/">scientific analysis servers&lt;/a> and on the Lotus batch cluster, we currently support Python version 3.11 with 
  
 
@@ -389,13 +502,15 @@ start using it before this request can be acted upon.&lt;/p></description></item
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy&lt;/a>.&lt;/p>
 &lt;p>When you first log in, the default version of Python is that provided by the
 operating system. This is different to the one you shoud use for your work,
@@ -409,13 +524,15 @@ and we recommend using the
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy environments&lt;/a>. In this example, we
 activate the current Jaspy environment before running Python.&lt;/p></description></item><item><title>Running R on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</guid><description>&lt;p>On the JASMIN &lt;code>sci&lt;/code> servers and LOTUS, we support the use of &lt;strong>R&lt;/strong> through the
 &amp;ldquo;jasr&amp;rdquo; environment(s), as listed on the 
@@ -428,13 +545,15 @@ activate the current Jaspy environment before running Python.&lt;/p></descriptio
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy page&lt;/a>.&lt;/p></description></item><item><title>Sharing software environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/share-software-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/share-software-envs/</guid><description>&lt;p>This article explains how you can share software environments with other users
 on JASMIN.&lt;/p>
 
@@ -442,6 +561,14 @@ on JASMIN.&lt;/p>
 
 
 &lt;h2 id="what-is-a-software-environment" class="heading">What is a software environment?&lt;a href="#what-is-a-software-environment" aria-labelledby="what-is-a-software-environment">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>
@@ -460,16 +587,26 @@ environments already available on the system. See the
 
 
 
- 
-
-
 
  
+
+
+
+ 
  
 
+ 
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy page&lt;/a> for examples of these.&lt;/p></description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p>JASMIN is a large platform where a range of software tools, packages and
 environments are available. Many users employ software already installed on
 JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p></description></item><item><title>The "jasmin-sci" software environment</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+
+
+
+
+
+
+
+
 &lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
  &lt;/a>

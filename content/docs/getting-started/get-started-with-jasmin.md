@@ -17,7 +17,7 @@ the JASMIN login servers.
 Other services are only available once these basic steps have been
 completed.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 The overview presentation of the [JASMIN workshop](https://github.com/cedadev/jasmin-workshop) training materials gives a good introduction to the range of other services available". Once you're up & running after following the steps below, we recommend new users to try the accompanying
 exercises.
 {{</alert>}}

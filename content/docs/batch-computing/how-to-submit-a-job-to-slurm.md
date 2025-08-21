@@ -36,7 +36,7 @@ sbatch myjobscript
 The job script is a Bash script of user's application and includes a list of
 Slurm directives, prefixed with `#SBATCH` as shown in this example:
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 - Remove any trailing whitespace
 - Choose values for `account`, `partition` and `qos` that are valid for you.
 {{</alert>}}
@@ -66,7 +66,7 @@ Submitting the above script (if you had access to the `mygws` account) creates a
 The task itself is the command `sleep 5s` which just pauses for 5 seconds before exiting. This is what you would replace 
 with your actual processing command(s), so you need to have an idea of how long it will take to run (**TIP**: run it manually first with `time <cmd>` to find out!)
 
-- For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}).
+- For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "docs/batch-computing/slurm-queues" %}}).
 - For further submission parameters, see the quick reference about
 [job specification]({{% ref "slurm-quick-reference#job-specification" %}}).
 
@@ -135,10 +135,10 @@ squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)23506 standard      interactive   fred   R       1:32      1      2 host580
 {{</command>}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 `squeue --me` is equivalent to `squeue -u fred`
 {{</alert>}}
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Please **DO NOT** use `watch` or equivalent polling utilities with Slurm
 as they are wasteful of resources and cause communication issues for the scheduler.
 

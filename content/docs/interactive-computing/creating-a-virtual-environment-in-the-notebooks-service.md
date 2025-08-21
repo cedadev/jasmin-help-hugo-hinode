@@ -23,7 +23,7 @@ on the JASMIN scientific analysis servers or the LOTUS batch processing.
 This step creates a Python virtual environment, and allows you to install
 packages into it.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 These commands are intended for use at the Jupyter
 Notebooks shell, **not on the JASMIN sci machines**
 {{</alert>}}
@@ -33,7 +33,7 @@ and in the launcher click the terminal button.
 
 {{<image src="/img/docs/creating-a-virtual-environment-in-the-jasmin-notebooks-service/notebook-terminal.png" caption="Opening the terminal">}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Don't worry if you see this: this is a known issue but should not cause you a problem.
 
 ```txt

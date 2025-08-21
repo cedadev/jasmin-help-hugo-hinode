@@ -17,7 +17,7 @@ methods:
 - Using the {{<link "gws-scanner-ui">}}GWS Scanner User Interface{{</link>}} to check on where, for how long and by whom, space is being used.
 - GWS Managers should {{<link "gws-scanner">}}configure the GWS Scanner{{</link>}} to gather the above information and arrange email alerts.
 - Look out for emails from the CEDA/JASMIN team
-- News articles on the {{<link "ceda_site">}}CEDA{{</link>}} or {{<link "jasmin_site">}}JASMIN{{</link>}} websites and by monitoring {{<link name="ceda_x" cue="true" >}}CEDA social media{{</link>}}feeds which may be used to post messages regarding system status or security.
+- The {{<link "ceda_status">}}CEDA status{{</link>}} page and News articles on the {{<link "ceda_site">}}CEDA{{</link>}} or {{<link "jasmin_site">}}JASMIN{{</link>}} websites which may be used to post messages regarding system status or security.
 
 If you are aware that a user who has access to your GWS leaves your project,
 or, for whatever reason, no longer needs to be a member of the GWS, please let

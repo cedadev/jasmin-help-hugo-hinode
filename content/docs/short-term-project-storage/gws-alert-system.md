@@ -5,7 +5,7 @@ description: "App to alert GWS managers/deputies when their GWS is reaching capa
 
 The Group Workspace (GWS) Alert system is a python app which alerts the managers/deputies of a GWS when their GWS is reaching full capacity.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please note this service is under beta-testing (June 2024) so if you receive any emails in error please let us know
 {{</alert>}}
 

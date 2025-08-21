@@ -16,7 +16,7 @@ The following notes are written assuming that you:
 Use one of the methods in [Present SSH Key]({{% ref "present-ssh-key/#2-loading-your-key-into-an-agent" %}}) to make sure your key is
 available for use in your Terminal session.
 
-{{<alert type="info">}}It's a good idea to use separate private keys for different systems 
+{{<alert alert-type="info">}}It's a good idea to use separate private keys for different systems 
 (e.g. JASMIN, Met Office) so you may have multiple SSH private key files, named as per those systems.
 
 If so, you can repeat the process of presenting your key for each private key file, so that you have all
@@ -25,7 +25,7 @@ the keys that you need loaded within the same agent in your Terminal session.
 
 ## Test login to the JASMIN login node
 
-{{< alert type="info" >}}
+{{< alert alert-type="info" >}}
 Please read the notes in [login servers]({{% ref "login-servers/#recent-changes" %}}) about the need to
 keep your SSH client up to date in order to be able to connect securely to JASMIN.
 {{< /alert >}}

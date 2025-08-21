@@ -1,6 +1,5 @@
 ---
 aliases: /article/3847-using-cron
-date: 2020-09-04 09:31:14
 description: Using Cron
 slug: using-cron
 title: Using Cron

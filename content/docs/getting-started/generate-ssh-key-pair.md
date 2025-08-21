@@ -39,7 +39,7 @@ There are many more, but if you stick to one of these three, which are known to 
 
 ## Using ssh-keygen to create an SSH key pair
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 As of November 2024 you are now recommended to use an ECDSA key (instead of RSA), for better compatibility with some services.
 Please note the updated command and filenames generated.
 {{</alert>}}

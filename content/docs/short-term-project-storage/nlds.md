@@ -4,7 +4,7 @@ title: Near-Line Data Store (NLDS)
 tags: nlds
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 This is a new system which will replace both Elastic Tape and JDMA, but is now available for use.
 {{</alert>}}
 
@@ -36,7 +36,7 @@ Our webinar in March 2025 gave an overview of NLDS: please watch this to find ou
 
 ## Basic usage
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please refer to the [NLDS documentation](https://cedadev.github.io/nlds-client/) for full context and detail of these commands: a selection of simple commands are included here for illustration only.
 {{</alert>}}
 

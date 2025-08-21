@@ -1,7 +1,6 @@
 ---
 title: "GWS Scanner UI"
 description: "User interface to GWS scanner"
-date: 2023-07-17T15:21:46+01:00
 ---
 
 The [Group Workspace (GWS) Scanner](https://gws-scanner.jasmin.ac.uk/) UI is an interactive web application for JASMIN users to view their GWSs.
@@ -25,7 +24,7 @@ Navigate to the [GWS Scanner homepage](https://gws-scanner.jasmin.ac.uk/) where 
 
 Clicking the login button will take you to the login page where you can sign in using your JASMIN account. Upon successful sign-in you should be redirected back to the homepage where you will have the option to view [your GWSs](https://gws-scanner.jasmin.ac.uk/my_gws).
 
-{{< alert type="info" >}}
+{{< alert alert-type="info" >}}
  At any time, you can click the JASMIN logo in the navbar to return to the homepage.
 {{< /alert >}}
 

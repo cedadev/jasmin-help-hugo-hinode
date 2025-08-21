@@ -61,7 +61,7 @@ Kubernetes cluster.
 
 ### External Cloud patching policy
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 We expect tenants to react in a timely manner to any security vulnerabilities.
 This means critical vulnerabilities are patched within 7 days, and high
 vulnerabilities are patched within 14 days. This is following UKRI security

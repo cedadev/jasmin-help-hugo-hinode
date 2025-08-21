@@ -33,7 +33,7 @@ Server name  |  Virtual/Physical |  Processor model  |  CPU Cores  |  RAM (GB)  
 
 ### Notes
 
-#### 1\. Access
+1. **Access**
 
 Sci servers are not exposed outside the STFC network, so from external locations you need to access
 them via a login server.
@@ -44,7 +44,7 @@ should be accessible directly within that network without need to go via a login
 See [connecting to a sci server via a login server]({{% ref "login-servers#connecting-to-a-sci-server-via-a-login-server" %}})
 for some alternative methods of connecting.
 
-#### 2\. Physical servers
+2. **Physical servers**
 
 Physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network
 configuration from the virtual `sci` servers, with limited outward connectivity.
@@ -53,12 +53,12 @@ Outbound internet access (via NAT) is only
 for HTTP(S), so **outbound SSH will not work (to hosts outside of
 JASMIN) on these machines**. This also applies to SSH-based transfer methods (scp, ftp, rsync) which anyway should be done instead on a [transfer server]({{%ref "transfer-servers"%}}). If you try to `git pull/clone` from external repositories e.g. Github using ssh, the operation will timeout with error `fatal: Could not read from remote repository`. The solution in this case is to access `git pull/clone` over **HTTPS** instead (check the repo for alternative access details).
 
-#### 3. /tmp on VMs
+3. **/tmp on VMs**
 
 The local `/tmp` of the virtual sci servers is not available (N/A) for users
 as this is used by the VM itself. It also provides no performance advantage as it is not local to the server.
 
-#### 4. Arbiter
+4. **Arbiter**
 
 A monitoring utility **Arbiter** is used across
 all sci machines to control CPU and memory usage. This utility
@@ -66,7 +66,7 @@ records the activity on the node, automatically sets limits on the resources
 available to each user. Users' processes are thus capped from
 using excessive resources, and can be slowed or have memory reduced in response to repeated violations.
 
-#### 5. Privileges
+5. **Privileges**
 
 Users are **not permitted to execute commands which require
 administrative privileges.** This applies to all hosts in the managed part of

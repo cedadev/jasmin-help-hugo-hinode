@@ -1,12 +1,11 @@
 ---
 aliases: /article/4698-jdma
-date: 2022-10-20 11:32:46
 description: Joint-storage Data Migration App (JDMA)
 slug: jdma
 title: Joint-storage Data Migration App (JDMA)
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please see [Near-Line Data Store](nlds) for details of JASMIN's new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
 {{</alert>}}
 
@@ -62,7 +61,7 @@ pip install git+https://github.com/cedadev/jdma_client
 You should then have the **jdma** command-line tool available in your terminal
 session.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
   In **August 2024** the JDMA server was upgraded to a new operating system.
   This requires an upgraded JDMA client to be installed.
   If you were using JDMA prior to **August 2024** then you will *have* to upgrade your client.

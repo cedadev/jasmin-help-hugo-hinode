@@ -40,14 +40,6 @@ In order to access the JASMIN Notebook service, first, follow the steps in
 [Getting started with JASMIN]({{% ref "get-started-with-jasmin" %}}) to get a
 JASMIN account and the `jasmin-login` service.
 
-{{<alert type="info">}}
-From 16/6/2021, access to the JASMIN Jupyter Notebook service
-is controlled simply by having a valid `jasmin-login` grant.
-[2-step verification](http://notebooks.jasmin.ac.uk/) is still required as shown
-below, but it is no longer necessary to apply for and be granted the
-additional `jupyter-notebooks` role, which is now deprecated.
-{{</alert>}}
-
 ## Using the JASMIN Notebook Service
 
 To use the JASMIN Notebook Service, navigate to
@@ -111,7 +103,7 @@ separately, before using the notebooks service to visualise the output.
 
 Doing this means that the bulk of the resource usage will be shared by the LOTUS cluster rather than the Notebooks service itself.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Although it was previously the case that Group Workspaces were only available in Notebooks read-only, this is no longer the case (as of 2023), so you should have full read-write access to any group workspace volume.
 {{</alert>}}
 

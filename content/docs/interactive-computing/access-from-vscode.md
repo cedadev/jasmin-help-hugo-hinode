@@ -23,7 +23,7 @@ The following demonstrates how to use VSCode to connect to JASMIN, and mentions 
 Follow the "setup" link from the page linked above
 to obtain VSCode for your platform: this should be your **local** machine, **not** JASMIN.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 **There should be no need for you to install VSCode on JASMIN, and we ask you not to.**
 
 We don't provide it centrally, because the multitude of different extensions and configurations 
@@ -78,7 +78,7 @@ If we use the tool provided by VSCode to create these, we can customise them fur
 The following video demonstrates these steps, and the initial setup of 2 connection profiles, on Windows. But the interface
 is almost identical on Mac and Linux.
 
-{{< video id="PAwSWtHwhSQ">}}
+{{< video media-id="PAwSWtHwhSQ">}}
 
 Notes:
 

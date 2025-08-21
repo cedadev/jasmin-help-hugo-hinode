@@ -56,7 +56,7 @@ you may wish to re-add execute permission on that directory, e.g.:
 chmod o+x /group_workspaces/jasmin/superproj/public
 {{</command>}}
 
-{{< alert type="danger" >}}
+{{< alert alert-type="danger" >}}
 Do not set open permissions on files or directories.
 By this we mean permissions where data are "world-writable" by anyone, for example
 

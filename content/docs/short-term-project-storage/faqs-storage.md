@@ -8,7 +8,7 @@ tags:
 title: New storage FAQs and issues
 ---
 
-{{<alert type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
+{{<alert alert-type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
 
 Workflows with some of the issues highlighted below will have a knock on
 effect for other users, so please take the time to check and change your code

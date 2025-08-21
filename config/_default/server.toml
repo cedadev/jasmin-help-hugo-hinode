@@ -1,41 +1,28 @@
 [[headers]]
-for = '/**'
-[headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = """"""
-    blah = """\
-        default-src 'self'; \
-        script-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; \
-        style-src 'self' https://fonts.googleapis.com https://www.youtube.com; \
-        object-src 'none'; \
+  for = '/**'
+
+  [headers.values]
+    Access-Control-Allow-Origin = '*'
+    Content-Security-Policy = """
         base-uri 'self'; \
-        connect-src 'self'
-            https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; \
-        font-src 'self' https://fonts.gstatic.com; \
-        frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; \
-        img-src 'self' data: https://*.imgix.net https://*.imagekit.io https://*.cloudinary.com https://i.vimeocdn.com https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com https://tile.openstreetmap.org; \
+        connect-src 'self' *.analytics.google.com *.google.com *.google-analytics.com *.googletagmanager.com d3hb14vkzrxvla.cloudfront.net beaconapi.helpscout.net; \
+        default-src 'none'; \
+        font-src 'self' fonts.gstatic.com data:; \
+        form-action 'self'; \
+        frame-src *.googletagmanager.com player.cloudinary.com www.youtube-nocookie.com www.youtube.com player.vimeo.com *.google.com; \
+        img-src 'self' *.google-analytics.com *.googletagmanager.com googletagmanager.com ssl.gstatic.com www.gstatic.com *.google.com  beaconapi.helpscout.net data: *.imgix.net *.imagekit.io *.cloudinary.com i.ytimg.com tile.openstreetmap.org i.vimeocdn.com; \
         manifest-src 'self'; \
-        media-src 'self' \
+        media-src 'self'; \
+        object-src 'none'; \
+        script-src-elem 'self' 'unsafe-inline' *.google.com *.myfonts.net *.helpscout.net; \
+        script-src 'self' 'unsafe-inline' *.google-analytics.com *.googletagmanager.com *.analytics.google.com googletagmanager.com tagmanager.google.com *.google.com player.vimeo.com; \
+        style-src-elem 'unsafe-inline' 'self' *.google.com fonts.googleapis.com *.myfonts.net; \
+        style-src 'self' googletagmanager.com tagmanager.google.com *.google.com fonts.googleapis.com www.youtube.com; \
         """
-    X-Frame-Options = "SAMEORIGIN"
-    Referrer-Policy = "strict-origin"
-    Permissions-Policy = """\
-        geolocation=(), \
-        midi=(), \
-        sync-xhr=(), \
-        microphone=(), \
-        camera=(), \
-        magnetometer=(), \
-        gyroscope=(), \
-        fullscreen=(), \
-        payment=() \
-        """
-    cache-control = """\
-        max-age=0, \
-        no-cache, \
-        no-store, \
-        must-revalidate \
-        """
-    Access-Control-Allow-Origin = "*"
+    Permissions-Policy = 'geolocation=(), midi=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), fullscreen=(), payment=() '
+    Referrer-Policy = 'strict-origin'
+    Strict-Transport-Security = 'max-age=31536000; includeSubDomains; preload'
+    X-Content-Type-Options = 'nosniff'
+    X-Frame-Options = 'SAMEORIGIN'
+    X-XSS-Protection = '1; mode=block'
+    cache-control = 'max-age=0, no-cache, no-store, must-revalidate '

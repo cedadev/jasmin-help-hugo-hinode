@@ -73,14 +73,17 @@ defaultContentLanguageInSubdir = false
     noUgly = true
     permalinkable = false
     name = "xml"
-  #[outputFormats.REDIR]
-  #  mediaType = "text/netlify"
-  #  baseName = "_redirects"
-  #  isPlainText = true
-  #  notAlternative = true
+  [outputFormats.REDIR]
+    mediaType = "text/netlify"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
+
+[mediaTypes."text/netlify"]
+  delimiter = ""
 
 [outputs]
-home = ["HTML", "RSS", "REDIR", "netlify", "server"]
+  home = ["HTML", "RSS", "REDIR", "netlify", "server"]
 
 [minify] # see https://discourse.gohugo.io/t/minify-config-tutorials/28179/5
   disableHTML = false

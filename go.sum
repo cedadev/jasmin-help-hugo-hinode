@@ -1,4 +1,6 @@
 github.com/gethinode/hinode v1.10.0 h1:ZFm0YzOizplzETH4mpIjT1pFe9ZvUhnPDQJb8VVHTOE=
 github.com/gethinode/hinode v1.10.0/go.mod h1:UN9DB9WbfTW2f4JhPJi4p75BQZYAxaRTONzBF8C4f9Y=
+github.com/gethinode/hinode v1.13.3 h1:bgYRKpjtjolXDcwiV0C/ml2Oo67zRh9iDaUlkaCgsqM=
+github.com/gethinode/hinode v1.13.3/go.mod h1:zk/GmlpRDJdZmEI0JHu6PNVI/GmO1XsD9TmJXl9bMNk=
 github.com/gethinode/mod-cookieyes/v2 v2.2.5 h1:xzTQ42qYViZ/LJJUHAEeDV9aayXVEX4MtnpS+m5Zekc=
 github.com/gethinode/mod-cookieyes/v2 v2.2.5/go.mod h1:tULb7D7CoTycGUyL7ryqHJKaX11XuL2SN+XwP7/DI0Y=

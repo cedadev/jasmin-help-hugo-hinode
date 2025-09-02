@@ -1,16 +1,14 @@
 [main]
     separator = "-"
     description = "Help documentation for JASMIN, the UK's environmental data analysis facility"
-    enableDarkMode = true
     enableLanguageSelectionStorage = false
-    modes = ["light", "dark"]
     canonifyAssetsURLs = false
     footerBelowFold = true
     loading = "lazy"
     titleCase = false # keep this false to avoid issues with inline code in headings
     [main.padding]
-        x = 4
-        y = 5
+        x = 1
+        y = 1
     [main.externalLinks]
         cue = true
         tab = true
@@ -21,6 +19,9 @@
     #breakpoint = "md"
     [main.build]
         transpiler = "libsass"
+    [main.colorMode]
+        modes = ["light", "dark"]
+        toggle = false # setting seems wrong way round!
 
 [debugging]
     showJS = false
@@ -50,8 +51,11 @@
     color = "success"
     fixed = true
     #offset = "5em"
-    search = true
-    searchModal = true
+    #overlay = false
+    #overlayMode = "dark"
+    [search]
+        search.enabled = true
+        search.modal = true
     breadcrumb = true
     toc = true
     sidebar = true
@@ -60,6 +64,9 @@
     startLevel = 2 # need to specify these ...
     endLevel = 4 # to avoid spurious [ ] in TOC menu
     #maxNumHeadings = 4
+    [navigation.padding]
+        x = 1
+        y = 4
 
 [messages]
     placement = "bottom-right"

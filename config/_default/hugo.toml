@@ -1,6 +1,6 @@
 title = "JASMIN Help Site"
 copyright = "Copyright © 2025 Science and Technology Facilities Council."
-enableGitInfo = false #true #for production
+enableGitInfo = true #true #for production
 
 # additional settings
 baseURL = 'https://help.jasmin.ac.uk' # temp value until we have a domain
@@ -73,14 +73,17 @@ defaultContentLanguageInSubdir = false
     noUgly = true
     permalinkable = false
     name = "xml"
-  #[outputFormats.REDIR]
-  #  mediaType = "text/netlify"
-  #  baseName = "_redirects"
-  #  isPlainText = true
-  #  notAlternative = true
+  [outputFormats.REDIR]
+    mediaType = "text/netlify"
+    baseName = "_redirects"
+    isPlainText = true
+    notAlternative = true
+
+[mediaTypes."text/netlify"]
+  delimiter = ""
 
 [outputs]
-home = ["HTML", "RSS", "REDIR", "netlify", "server"]
+  home = ["HTML", "RSS", "REDIR", "netlify", "server"]
 
 [minify] # see https://discourse.gohugo.io/t/minify-config-tutorials/28179/5
   disableHTML = false

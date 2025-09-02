@@ -52,14 +52,16 @@
         -}}
 
         <div id="container" class="main">
-                {{/* Initialize local arguments */}}
-                {{- $pageAlertMsg := "Click here for details & registration for the JASMIN User Conference, 1-2 October 2025" -}}
-                {{- $pageAlertURL := "https://www.ceda.ac.uk/events/jasmin-conference-2025/" -}}
-                
-                <div id="page-alert" class="alert alert-warning show d-flex align-items-center small m-0 py-1">
-                    <a {{ with $pageAlertURL }}href="{{ . }}"{{ end }} class="text-decoration-none flex-grow-1 text-center">{{ $pageAlertMsg }}</a>
-                </div>
-
+            {{/* Initialize local arguments */}}
+            {{- $pageAlertMsg := "Details & registration for the JASMIN User Conference, 1-2 October 2025" -}}
+            {{- $pageAlertURL := "https://www.ceda.ac.uk/events/jasmin-conference-2025/" -}}
+            
+            <div id="page-alert" class="alert alert-warning show d-flex align-items-center small m-0 py-1">
+                <span class="flex-grow-1 text-center">
+                    {{ $pageAlertMsg }}&nbsp;
+                    <a {{ with $pageAlertURL }}href="{{ . }}"{{ end }} class="btn btn-sm btn-light" role="button" target="_blank">Find out more!</a>
+                </span>
+            </div>
             {{ block "main" . }}{{ end -}}
         </div>
 
@@ -67,6 +69,7 @@
         {{- partial "footer/footer.html" . -}}
         {{- partial "footer/toast-container.html" . -}}
         {{- partial "assets/symbols.html" . -}}
+        {{- partial "assets/modals.html" . -}}
         {{- partialCached "footer/scripts.html" (dict "page" .) -}}
         {{- partial "footer/scripts.html" (dict "page" . "type" "optional") -}}
     </body>

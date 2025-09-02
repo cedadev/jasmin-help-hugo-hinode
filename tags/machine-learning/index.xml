@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/machine-learning/</link><description>Recent content in Machine Learning on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>The JASMIN Notebooks Service with GPUs enabled</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</guid><description>&lt;p>The 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/machine-learning/</link><description>Recent content in Machine Learning on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>The JASMIN Notebooks Service with GPUs enabled</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service-with-gpus/</guid><description>&lt;p&gt;The 
  
 
 
@@ -17,6 +17,6 @@
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/">JASMIN Notebook Service&lt;/a> has recently been
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/"&gt;JASMIN Notebook Service&lt;/a&gt; has recently been
 updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
-Learning (ML) workflows in Notebooks. This page outlines:&lt;/p></description></item></channel></rss>
+Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description></item></channel></rss>

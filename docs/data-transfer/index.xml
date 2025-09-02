@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data transfer on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/data-transfer/</link><description>Recent content in Data transfer on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/data-transfer/index.xml" rel="self" type="application/rss+xml"/><item><title>bbcp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</guid><description>&lt;p>This article provides information about the bbcp data transfer tool.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data transfer on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/data-transfer/</link><description>Recent content in Data transfer on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/data-transfer/index.xml" rel="self" type="application/rss+xml"/><item><title>bbcp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</guid><description>&lt;p&gt;This article provides information about the bbcp data transfer tool.&lt;/p&gt;
 
 
 
 
-&lt;h2 id="what-is-bbcp" class="heading">What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp">
+&lt;h2 id="what-is-bbcp" class="heading"&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
 
 
 
@@ -12,11 +12,11 @@
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
 
 
 
@@ -31,7 +31,7 @@
  
 
 
- &lt;a href="http://www.slac.stanford.edu/~abh/bbcp/" target="_blank" rel="noopener noreferrer nofollow">bbcp&amp;nbsp;
+ &lt;a href="http://www.slac.stanford.edu/~abh/bbcp/" target="_blank" rel="noopener noreferrer nofollow"&gt;bbcp&amp;nbsp;
 
 
 
@@ -40,8 +40,8 @@
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a simple command-line tool
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a simple command-line tool
 which can use your SSH connection to transfer data in and out of JASMIN
 efficiently. It works in a similar way to 
  
@@ -62,15 +62,15 @@ efficiently. It works in a similar way to
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/">GridFTP over SSH&lt;/a> in that it connects to the transfer
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/"&gt;GridFTP over SSH&lt;/a&gt; in that it connects to the transfer
 server using your usual SSH credentials but then can set up parallel data
-streams for transferring data. One advantage of &lt;code>bbcp&lt;/code> that it is provided as
-a single binary executable which is easy to download and use.&lt;/p></description></item><item><title>Data transfer overview</title><link>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/</guid><description>&lt;p>This article introduces the topic of data transfer to/from JASMIN.&lt;/p>
+streams for transferring data. One advantage of &lt;code&gt;bbcp&lt;/code&gt; that it is provided as
+a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>Data transfer overview</title><link>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/</guid><description>&lt;p&gt;This article introduces the topic of data transfer to/from JASMIN.&lt;/p&gt;
 
 
 
 
-&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading">Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin">
+&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading"&gt;Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin"&gt;
 
 
 
@@ -79,11 +79,11 @@ a single binary executable which is easy to download and use.&lt;/p></descriptio
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>As a JASMIN user you are very likely to be involved in data transfer. You
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;As a JASMIN user you are very likely to be involved in data transfer. You
 might need to copy data files/directories from JASMIN to remote sites (such as
 your own PC, MONSooN or ARCHER2) or bring new data on to JASMIN. These data
 transfer articles explain how to use the basic
@@ -107,21 +107,21 @@ transfer articles explain how to use the basic
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/">transfer tools&lt;/a> such as &lt;code>rsync&lt;/code> and &lt;code>scp&lt;/code>
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/"&gt;transfer tools&lt;/a&gt; such as &lt;code&gt;rsync&lt;/code&gt; and &lt;code&gt;scp&lt;/code&gt;
 as well as more sophisticated services such as Globus. They also cover which
-transfer services and servers are available to JASMIN users.&lt;/p></description></item><item><title>Data Transfer Tools</title><link>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/</guid><description>&lt;p>This article lists the data transfer tools available on JASMIN and provides
-links to articles that describe them in more detail.&lt;/p></description></item><item><title>ftp and lftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</guid><description>&lt;p>This article provides information about FTP (File Transfer Protocol) as a data
-transfer tool. In particular:&lt;/p>
-&lt;ul>
-&lt;li>what is FTP?&lt;/li>
-&lt;li>where and how can I use FTP on JASMIN?&lt;/li>
-&lt;li>what are its limitations?&lt;/li>
-&lt;/ul>
+transfer services and servers are available to JASMIN users.&lt;/p&gt;</description></item><item><title>Data Transfer Tools</title><link>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/</guid><description>&lt;p&gt;This article lists the data transfer tools available on JASMIN and provides
+links to articles that describe them in more detail.&lt;/p&gt;</description></item><item><title>ftp and lftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</guid><description>&lt;p&gt;This article provides information about FTP (File Transfer Protocol) as a data
+transfer tool. In particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what is FTP?&lt;/li&gt;
+&lt;li&gt;where and how can I use FTP on JASMIN?&lt;/li&gt;
+&lt;li&gt;what are its limitations?&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
 
-&lt;h2 id="what-is-ftp" class="heading">What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp">
+&lt;h2 id="what-is-ftp" class="heading"&gt;What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp"&gt;
 
 
 
@@ -130,11 +130,11 @@ transfer tool. In particular:&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
 
 
 
@@ -149,7 +149,7 @@ transfer tool. In particular:&lt;/p>
  
 
 
- &lt;a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol" target="_blank" rel="noopener noreferrer nofollow">FTP&amp;nbsp;
+ &lt;a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol" target="_blank" rel="noopener noreferrer nofollow"&gt;FTP&amp;nbsp;
 
 
 
@@ -158,15 +158,15 @@ transfer tool. In particular:&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a well-established
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a well-established
 transfer protocol enabling connections from a client to download
 files from, or upload files to, a server, although limited in security. A wide variety of client tools are
 available to the user, 2 implementations of which are available on the JASMIN
-transfer servers, although no server is provided. &lt;code>ftp&lt;/code> is also the name of
-the basic FTP client program, see below.&lt;/p></description></item><item><title>Globus Command-Line Interface</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-command-line-interface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-command-line-interface/</guid><description>&lt;div class="d-flex alert alert-info " 
- role="alert">
- &lt;div class="pt-1 pe-2">
+transfer servers, although no server is provided. &lt;code&gt;ftp&lt;/code&gt; is also the name of
+the basic FTP client program, see below.&lt;/p&gt;</description></item><item><title>Globus Command-Line Interface</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-command-line-interface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-command-line-interface/</guid><description>&lt;div class="d-flex alert alert-info " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
 
 
 
@@ -175,13 +175,13 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
 
 
 
-&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;use href="#fa-lightbulb">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
+&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
  Updated for new JASMIN Default Collection (replaces previous JASMIN Globus Endpoint)
- &lt;/div>
- &lt;/div>
-&lt;p>Please read 
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;p&gt;Please read 
 
 
 
@@ -202,7 +202,7 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/">Globus transfers with JASMIN&lt;/a> first for a wider introduction to Globus on JASMIN.&lt;/p></description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus transfers with JASMIN&lt;/a&gt; first for a wider introduction to Globus on JASMIN.&lt;/p&gt;</description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -211,11 +211,11 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p></description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p>This article describes how to do data transfers to and from JASMIN using 
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p&gt;</description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p&gt;This article describes how to do data transfers to and from JASMIN using 
 
 
 
@@ -230,7 +230,7 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
  
 
 
- &lt;a href="https://globus.org" target="_blank" rel="noopener noreferrer nofollow">Globus&amp;nbsp;
+ &lt;a href="https://globus.org" target="_blank" rel="noopener noreferrer nofollow"&gt;Globus&amp;nbsp;
 
 
 
@@ -239,11 +239,11 @@ the basic FTP client program, see below.&lt;/p></description></item><item><title
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a>,
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;,
 an online data transfer service designed specifically for moving large datasets
-between research institutions.&lt;/p></description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p>This article describes how to transfer data using GridFTP with SSH
-authentication.&lt;/p>
+between research institutions.&lt;/p&gt;</description></item><item><title>GridFTP (SSH authentication)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/</guid><description>&lt;p&gt;This article describes how to transfer data using GridFTP with SSH
+authentication.&lt;/p&gt;
 
 
 
@@ -263,8 +263,8 @@ authentication.&lt;/p>
 
 
 &lt;div class="d-flex alert alert-info " 
- role="alert">
- &lt;div class="pt-1 pe-2">
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
 
 
 
@@ -273,10 +273,10 @@ authentication.&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw">&lt;/i> -->
- &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512">&lt;use href="#fa-lightbulb">&lt;/use>&lt;/svg>&amp;nbsp;&lt;/div>
- &lt;div class="flex-grow-1 my-auto">
- The &lt;code>globus-url-copy&lt;/code> command used here should not be confused with the Globus online data transfer service. They used to be associated, but no longer. If you are starting out and looking for a reliable, high-performance transfer method, the recommendation now is to learn about 
+&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ The &lt;code&gt;globus-url-copy&lt;/code&gt; command used here should not be confused with the Globus online data transfer service. They used to be associated, but no longer. If you are starting out and looking for a reliable, high-performance transfer method, the recommendation now is to learn about 
  
 
 
@@ -295,14 +295,14 @@ authentication.&lt;/p>
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/">Globus Transfers with JASMIN&lt;/a> (using the Globus online data transfer service) instead of command-line gridftp as described in this document.
- &lt;/div>
- &lt;/div>
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus Transfers with JASMIN&lt;/a&gt; (using the Globus online data transfer service) instead of command-line gridftp as described in this document.
+ &lt;/div&gt;
+ &lt;/div&gt;
 
 
 
 
-&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -311,26 +311,26 @@ authentication.&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>GridFTP is the recommended tool for transferring large files or groups of
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;GridFTP is the recommended tool for transferring large files or groups of
 files across high-speed Wide-Area Networks (WANs). It is commonly used with
 certificate-based authentication, but can also take place between suitably
-configured* server and client using SSH as the authentication mechanism.&lt;/p></description></item><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p>This article provides information about the rclone data transfer tool. In
-particular:&lt;/p>
-&lt;ul>
-&lt;li>what is rclone?&lt;/li>
-&lt;li>installing rclone for yourself on JASMIN.&lt;/li>
-&lt;li>configuring rclone&lt;/li>
-&lt;li>Dos and Don&amp;rsquo;ts&lt;/li>
-&lt;/ul>
+configured* server and client using SSH as the authentication mechanism.&lt;/p&gt;</description></item><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p&gt;This article provides information about the rclone data transfer tool. In
+particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what is rclone?&lt;/li&gt;
+&lt;li&gt;installing rclone for yourself on JASMIN.&lt;/li&gt;
+&lt;li&gt;configuring rclone&lt;/li&gt;
+&lt;li&gt;Dos and Don&amp;rsquo;ts&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
 
-&lt;h2 id="what-is-rclone" class="heading">What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone">
+&lt;h2 id="what-is-rclone" class="heading"&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
 
 
 
@@ -339,24 +339,24 @@ particular:&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>rclone is a command-line utility which enables access to lots of different
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;rclone is a command-line utility which enables access to lots of different
 storage systems including object stores and cloud-based storage. It can also
 move data between directories act as an SFTP client so could be used to access
-files on JASMIN.&lt;/p></description></item><item><title>rsync, scp, sftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rsync-scp-sftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rsync-scp-sftp/</guid><description>&lt;p>This article tells you about some of the basic transfer tools available for
-use with JASMIN that work over an SSH connection:&lt;/p></description></item><item><title>Scheduling/Automating Transfers</title><link>https://help.jasmin.ac.uk/docs/data-transfer/scheduling-automating-transfers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/scheduling-automating-transfers/</guid><description>&lt;p>This article explains how to schedule or automate data transfers. It covers:&lt;/p>
-&lt;ul>
-&lt;li>Using Globus for transfer automation&lt;/li>
-&lt;li>Scheduling download tasks using cron and LOTUS&lt;/li>
-&lt;/ul>
+files on JASMIN.&lt;/p&gt;</description></item><item><title>rsync, scp, sftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rsync-scp-sftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rsync-scp-sftp/</guid><description>&lt;p&gt;This article tells you about some of the basic transfer tools available for
+use with JASMIN that work over an SSH connection:&lt;/p&gt;</description></item><item><title>Scheduling/Automating Transfers</title><link>https://help.jasmin.ac.uk/docs/data-transfer/scheduling-automating-transfers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/scheduling-automating-transfers/</guid><description>&lt;p&gt;This article explains how to schedule or automate data transfers. It covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Globus for transfer automation&lt;/li&gt;
+&lt;li&gt;Scheduling download tasks using cron and LOTUS&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
 
-&lt;h2 id="overview" class="heading">Overview&lt;a href="#overview" aria-labelledby="overview">
+&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -365,16 +365,16 @@ use with JASMIN that work over an SSH connection:&lt;/p></description></item><it
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>In many cases it can be useful to fetch data from an external source for
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In many cases it can be useful to fetch data from an external source for
 processing/analysis on JASMIN on a regular basis, for example &amp;ldquo;every Monday at
 11:00 fetch all last week&amp;rsquo;s data&amp;rdquo;. It can also be helpful to distribute the
 task downloading of some large datasets, or simply to be able rely on data
 being pulled in from some external source to an accumulating dataset used for
-periodic analysis.&lt;/p></description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading">Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes">
+periodic analysis.&lt;/p&gt;</description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading"&gt;Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes"&gt;
 
 
 
@@ -383,11 +383,11 @@ periodic analysis.&lt;/p></description></item><item><title>Transfers from ARCHER
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>See 
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;See 
  
 
 
@@ -406,5 +406,5 @@ periodic analysis.&lt;/p></description></item><item><title>Transfers from ARCHER
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/">Data Transfer Tools&lt;/a> for general
-information.&lt;/p></description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-tools/"&gt;Data Transfer Tools&lt;/a&gt; for general
+information.&lt;/p&gt;</description></item></channel></rss>

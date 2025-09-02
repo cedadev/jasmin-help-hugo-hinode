@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Met Office on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/met-office/</link><description>Recent content in Met Office on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/met-office/index.xml" rel="self" type="application/rss+xml"/><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Met Office on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/met-office/</link><description>Recent content in Met Office on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/met-office/index.xml" rel="self" type="application/rss+xml"/><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -7,8 +7,8 @@
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p></description></item></channel></rss>
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p&gt;</description></item></channel></rss>

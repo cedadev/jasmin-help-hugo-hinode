@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notebook on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/notebook/</link><description>Recent content in Notebook on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/notebook/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p>Creating a virtual environment is useful to allow a discrete set of extra
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notebook on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/notebook/</link><description>Recent content in Notebook on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/notebook/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p&gt;Creating a virtual environment is useful to allow a discrete set of extra
 packages to be installed to meet specific requirements. This allows a user to
-run multiple environments with different dependencies without conflicts.&lt;/p></description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+run multiple environments with different dependencies without conflicts.&lt;/p&gt;</description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -9,11 +9,11 @@ run multiple environments with different dependencies without conflicts.&lt;/p><
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
  
 
 
@@ -27,7 +27,7 @@ run multiple environments with different dependencies without conflicts.&lt;/p><
  
 
 
- &lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer nofollow">Dask Gateway&amp;nbsp;
+ &lt;a href="https://gateway.dask.org/" target="_blank" rel="noopener noreferrer nofollow"&gt;Dask Gateway&amp;nbsp;
 
 
 
@@ -36,8 +36,8 @@ run multiple environments with different dependencies without conflicts.&lt;/p><
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a service which manages 
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a service which manages 
  
 
 
@@ -51,7 +51,7 @@ run multiple environments with different dependencies without conflicts.&lt;/p><
  
 
 
- &lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer nofollow">Dask&amp;nbsp;
+ &lt;a href="https://dask.org" target="_blank" rel="noopener noreferrer nofollow"&gt;Dask&amp;nbsp;
 
 
 
@@ -60,8 +60,8 @@ run multiple environments with different dependencies without conflicts.&lt;/p><
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> clusters for users.
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; clusters for users.
 On JASMIN, it creates a Dask cluster in 
 
 
@@ -85,4 +85,4 @@ On JASMIN, it creates a Dask cluster in
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/">LOTUS&lt;/a>, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.&lt;/p></description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;LOTUS&lt;/a&gt;, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.&lt;/p&gt;</description></item></channel></rss>

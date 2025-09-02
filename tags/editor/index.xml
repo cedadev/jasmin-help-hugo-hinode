@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Editor on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/editor/</link><description>Recent content in Editor on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/editor/index.xml" rel="self" type="application/rss+xml"/><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading">Introduction&lt;a href="#introduction" aria-labelledby="introduction">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Editor on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/editor/</link><description>Recent content in Editor on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/editor/index.xml" rel="self" type="application/rss+xml"/><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -7,11 +7,11 @@
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
 
 
 
@@ -26,7 +26,7 @@
  
 
 
- &lt;a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer nofollow">Visual Studio Code&amp;nbsp;
+ &lt;a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener noreferrer nofollow"&gt;Visual Studio Code&amp;nbsp;
 
 
 
@@ -35,6 +35,6 @@
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512">&lt;use href="#fas-up-right-from-square">&lt;/use>&lt;/svg>&lt;/a> is a richly-featured editor and Integrated Development Environment (IDE)
-which has remote access and other useful features that can be used with JASMIN.&lt;/p></description></item></channel></rss>
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a richly-featured editor and Integrated Development Environment (IDE)
+which has remote access and other useful features that can be used with JASMIN.&lt;/p&gt;</description></item></channel></rss>

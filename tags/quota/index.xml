@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quota on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/quota/</link><description>Recent content in Quota on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/quota/index.xml" rel="self" type="application/rss+xml"/><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p>&lt;strong>IMPORTANT:&lt;/strong> Please see also
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quota on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/quota/</link><description>Recent content in Quota on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/quota/index.xml" rel="self" type="application/rss+xml"/><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Please see also
 
  
 
@@ -18,8 +18,8 @@
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/">Understanding new JASMIN storage&lt;/a>
-which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p></description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading">How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed">
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/"&gt;Understanding new JASMIN storage&lt;/a&gt;
+which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading"&gt;How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed"&gt;
 
 
 
@@ -28,11 +28,11 @@ which explains more about the different types of storage as of Phase 4 of JASMIN
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>Resouces on JASMIN, such as storage and compute, are allocated to science
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Resouces on JASMIN, such as storage and compute, are allocated to science
 communities separated into &amp;ldquo;consortia&amp;rdquo;. Each consortium has a manager: a
 representative of that science community who is in touch with its major
 activities and understands the resource requirements for projects in that
@@ -41,4 +41,4 @@ with their Consortium Manager, who is best placed to make decisions about the
 allocation of JASMIN resources within that consortium. Requirements can be
 documented using the “JASMIN Resource Management” tool, but need to be
 approved by a Consortium Manager before being passed to the JASMIN Team for
-provisioning.&lt;/p></description></item></channel></rss>
+provisioning.&lt;/p&gt;</description></item></channel></rss>

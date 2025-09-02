@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Packages on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/packages/</link><description>Recent content in Packages on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/packages/index.xml" rel="self" type="application/rss+xml"/><item><title>Running R on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</guid><description>&lt;p>On the JASMIN &lt;code>sci&lt;/code> servers and LOTUS, we support the use of &lt;strong>R&lt;/strong> through the
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Packages on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/packages/</link><description>Recent content in Packages on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/packages/index.xml" rel="self" type="application/rss+xml"/><item><title>Running R on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/running-r-on-jasmin/</guid><description>&lt;p&gt;On the JASMIN &lt;code&gt;sci&lt;/code&gt; servers and LOTUS, we support the use of &lt;strong&gt;R&lt;/strong&gt; through the
 &amp;ldquo;jasr&amp;rdquo; environment(s), as listed on the 
  
 
@@ -18,4 +18,4 @@
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/">Jaspy page&lt;/a>.&lt;/p></description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

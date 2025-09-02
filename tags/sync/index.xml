@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sync on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/sync/</link><description>Recent content in Sync on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/sync/index.xml" rel="self" type="application/rss+xml"/><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p>This article provides information about the rclone data transfer tool. In
-particular:&lt;/p>
-&lt;ul>
-&lt;li>what is rclone?&lt;/li>
-&lt;li>installing rclone for yourself on JASMIN.&lt;/li>
-&lt;li>configuring rclone&lt;/li>
-&lt;li>Dos and Don&amp;rsquo;ts&lt;/li>
-&lt;/ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sync on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/sync/</link><description>Recent content in Sync on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/sync/index.xml" rel="self" type="application/rss+xml"/><item><title>rclone</title><link>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/rclone/</guid><description>&lt;p&gt;This article provides information about the rclone data transfer tool. In
+particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what is rclone?&lt;/li&gt;
+&lt;li&gt;installing rclone for yourself on JASMIN.&lt;/li&gt;
+&lt;li&gt;configuring rclone&lt;/li&gt;
+&lt;li&gt;Dos and Don&amp;rsquo;ts&lt;/li&gt;
+&lt;/ul&gt;
 
 
 
 
-&lt;h2 id="what-is-rclone" class="heading">What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone">
+&lt;h2 id="what-is-rclone" class="heading"&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
 
 
 
@@ -19,11 +19,11 @@ particular:&lt;/p>
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor">&lt;/i> -->
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512">&lt;use href="#fas-link">&lt;/use>&lt;/svg>&amp;nbsp;
- &lt;/a>
-&lt;/h2>
-&lt;p>rclone is a command-line utility which enables access to lots of different
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;rclone is a command-line utility which enables access to lots of different
 storage systems including object stores and cloud-based storage. It can also
 move data between directories act as an SFTP client so could be used to access
-files on JASMIN.&lt;/p></description></item></channel></rss>
+files on JASMIN.&lt;/p&gt;</description></item></channel></rss>

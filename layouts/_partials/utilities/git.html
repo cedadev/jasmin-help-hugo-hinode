@@ -1,0 +1,3 @@
+{{ with .GitInfo }}
+Last updated on <strong>{{.CommitDate.Format "2006-01-02"}}</strong> as part of: &nbsp;<a href="{{ site.Params.docs.github | default site.Params.schema.github }}/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>
+{{ end -}}

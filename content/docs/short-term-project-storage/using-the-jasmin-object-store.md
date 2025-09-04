@@ -292,7 +292,7 @@ website](https://s3tools.org/s3cmd).
 
 ## s4cmd and s5cmd
 
-s3cmd is a convinient way to interact with the S3 compatible storage like the JASMIN object store. [s4cmd](https://github.com/bloomreach/s4cmd) and [s5cmd](https://github.com/peak/s5cmd) provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.
+s3cmd is a convenient way to interact with the S3 compatible storage like the JASMIN object store. [s4cmd](https://github.com/bloomreach/s4cmd) and [s5cmd](https://github.com/peak/s5cmd) provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.
 
 ### s4cmd
 

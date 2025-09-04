@@ -290,6 +290,80 @@ s3cmd get s3://<bucket_name>/<object_name> <file_name>
 For more commands and ways of using `s3cmd`, see the [s3tools
 website](https://s3tools.org/s3cmd).
 
+## s4cmd and s5cmd
+
+s3cmd is a convenient way to interact with the S3 compatible storage like the JASMIN object store. [s4cmd](https://github.com/bloomreach/s4cmd) and [s5cmd](https://github.com/peak/s5cmd) provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.
+
+### s4cmd
+
+[s4cmd](https://github.com/bloomreach/s4cmd) uses Python's boto3 library to run commands in parallel. It can be installed into a user's Python environment.
+
+If you don't have an existing environment to install Python packages into one will need to be created.
+
+```bash
+module load jaspy
+virtualenv venv-s4cmd
+source venv-s3cmd/bin/activate
+```
+
+Once created and activated s4cmd can be installed.
+
+```bash
+pip install s4cmd
+```
+
+Note that the environment will always need to be activated before s4cmd can be used.
+
+In order to use s4cmd with the JASMIN object store, you need to create a key and set environment variables so that s4cmd can pick up the configuration.
+
+```bash
+export S3_ACCESS_KEY=<your key>
+export S3_SECRET_KEY=<your secret>
+
+```
+
+Once set s4cmd can be used. For example copying data from a local disk to a bucket.
+
+```bash
+s4cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk put ./* s3://bucket-name/
+```
+
+Note the requirement of the ```--endpoint-url``` argument for accessing the JASMIN object store. For external access, use the s3-ext url.
+
+See the [documentation for s4cmd](https://github.com/bloomreach/s4cmd) for other usage.
+
+
+### s5cmd
+
+[s5cmd](https://github.com/peak/s5cmd) is a parallel tool for interacting with S3 compatible object stores which offers [significant speed increases over s3cmd and s4cmd](https://github.com/peak/s5cmd/blob/master/README.md#Benchmarks).
+Its speed increase comes from being written in Go, and working in parallel.
+
+It is not available by default on JASMIN, but a binary can be downloaded and used. (Check the [releases](https://github.com/peak/s5cmd/releases) page on s5cmd's girhub for the latest version and alter the wget command below as required.)
+
+```bash
+wget https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-64bit.tar.gz
+tar xvzf s5cmd_2.3.0_Linux-64bit.tar.gz
+chmod +x s5cmd
+```
+
+In order to use s5cmd with the JASMIN object store, you need to create a key and set environment variables so that s5cmd can pick up the configuration.
+
+```bash
+export AWS_ACCESS_KEY_ID=<your key>
+export AWS_SECRET_ACCESS_KEY=<your secret>
+```
+
+Once set s5cmd can be used. For example copying data from a local disk to a bucket.
+
+```bash
+s5cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk cp './*' s3://bucket-name/
+```
+
+Note the requirement of the ```--endpoint-url``` argument for accessing the JASMIN object store. For external access, use the s3-ext url.
+
+See the [documentation for s5cmd](https://github.com/peak/s5cmd) for other usage.
+
+
 ## Using the MinIO client
 
 The MinIO Client is a command line tool to connect to object stores (among

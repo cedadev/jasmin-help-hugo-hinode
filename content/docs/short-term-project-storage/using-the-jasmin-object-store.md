@@ -338,7 +338,7 @@ See the [documentation for s4cmd](https://github.com/bloomreach/s4cmd) for other
 [s5cmd](https://github.com/peak/s5cmd) is a parallel tool for interacting with S3 compatible object stores which offers [significant speed increases over s3cmd and s4cmd](https://github.com/peak/s5cmd/blob/master/README.md#Benchmarks).
 Its speed increase comes from being written in Go, and working in parallel.
 
-It is not available by default on JASMIN, but a binary can be downloaded and used. (Check the [releases](https://github.com/peak/s5cmd/releases) page on s5cmd's girhub for the latest version and alter the wget command below as required.)
+It is not available by default on JASMIN, but a binary can be downloaded and used. (Check the [releases](https://github.com/peak/s5cmd/releases) page on s5cmd's github for the latest version and alter the wget command below as required.)
 
 ```bash
 wget https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-64bit.tar.gz

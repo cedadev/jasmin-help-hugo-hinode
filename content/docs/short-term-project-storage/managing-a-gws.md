@@ -171,6 +171,8 @@ find /gws/nopw/j04/upscale/cache -type f -atime +365
 1. There is also a live view of GWSs and the available space left on the [JASMIN Dashboard](https://mon.jasmin.ac.uk). The “JASMIN Storage” tab shows many
 JASMIN storage volumes with information about current usage.
 
+1. The {{<link "gws-alert-system">}} GWS Alert System {{</link>}} sends out alerts to GWS managers when volumes are reaching capacity.
+
 **So please don't run large `du` or `find` jobs yourself, as this will be duplicating something already running in the background.**
 
 As a GWS Manager

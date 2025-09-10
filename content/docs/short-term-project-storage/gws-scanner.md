@@ -7,19 +7,13 @@ title: GWS Scanner
 
 ## Introduction
 
-This article explains about the process that runs in the background scanning all group workspaces to gather basic information about usage, which are fed into a database to be made available to users via the {{<link "gws-scanner-ui">}}GWS Scanner User Interface{{</link>}}.
+This article explains about the process that runs in the background scanning all group workspaces (GWS) to gather basic information about usage, which are fed into a database to be made available to users via the {{<link "gws-scanner-ui">}}GWS Scanner User Interface{{</link>}}.
 
 It is intended for GWS Managers and provides details about how to customise the scan that is done on each GWS.
 
 **It is run centrally, and is a very resource-intensive task, so please don't run similar tasks of your own, as you will be unnecessarily duplicating resource usage.**
 
-There are two different scans of the Group Workspaces (GWSs).
-
-- A daily scan which checks for how full the GWS is, and will email the GWS manager if it is over the default threshold of 83%, or a defined threshold in the GWS config file (see below).
-- An approximately fortnightly check of the contents of all GWSs. 
-
-As a GWS Manager you will receive e-mails summarising the usage and contents
-of the GWS. By default this is a simple volume level summary of the GWS.
+The scans occurs approximately fortnightly to check the contents of all GWSs. 
 
 ## Customisation
 
@@ -37,7 +31,7 @@ latter is from the **previous** incarnation of the scanner, and will be be remov
 
 ```ini
 [general]
-# GWS fullness threshold for which the daily scan will send a warning email (default 83) (in %)
+# GWS fullness threshold for which the GWS Alerts will send a warning email (default 90) (in %)
 volume_warning_threshold = 83
 # Directories to check for largest sub-dir and filetypes below (comma separated list), these paths must be relative to the group workspace path i.e. path/to/dir, not /group/workspace/path/to/dir
   # Defaults to all top level directories inside volume

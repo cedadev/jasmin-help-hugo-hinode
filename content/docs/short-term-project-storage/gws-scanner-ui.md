@@ -6,8 +6,6 @@ date: 2023-07-17T15:21:46+01:00
 
 The [Group Workspace (GWS) Scanner](https://gws-scanner.jasmin.ac.uk/) UI is an interactive web application for JASMIN users to view their GWSs.
 
-**_Please note this service is under beta-testing and should be used with care (July 2023)_**
-
 ## What is the GWS Scanner UI?
 
 A GWS is collaborative storage made available to a group for a project. The GWS Scanner UI provides information about the structure of GWSs in the form of a tree graph showing the folders within the GWS. The tiles of the graph can be scaled or coloured by size, count or heat. 

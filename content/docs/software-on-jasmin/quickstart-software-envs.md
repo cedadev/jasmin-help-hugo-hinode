@@ -1,6 +1,5 @@
 ---
 aliases: /article/4916-quickstart-software-envs
-date: 2020-08-06 15:53:42
 description: Quickstart for activating/deactivating software environments
 slug: quickstart-software-envs
 title: Quickstart for activating/deactivating software environments

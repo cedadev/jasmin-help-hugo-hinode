@@ -2,6 +2,10 @@
 $enable-negative-margins:       true;
 $enable-important-utilities:    true !default;
 
+// Border radius
+$theme-border-radius:          0px !important;
+$border-radius:                0px !important;
+
 // Remove the border from the focused navigation toggler
 $navbar-toggler-focus-width:    0 !default;
 
@@ -41,7 +45,6 @@ th {
     font-weight: 900 !important;
 }
 // scss-docs-end font
-
 $black:                       #000 !default;
 $btn-toggle-color:              $black !default;
 
@@ -62,9 +65,6 @@ $dropdown-transition: opacity .15s ease-in-out !default;
 $dropdown-horizontal-margin-top: calc((-1.5 * 1rem) - 2px);
 $dropdown-horizontal-padding-y: calc(1rem + 2px);
 // scss-docs-end horizontal-nav
-
-// Border radius
-$border-radius:          0px !important;
 
 // Smaller size for tag label text on cards
 .card-body .tag-label {

@@ -8,7 +8,7 @@ tags:
 title: New storage FAQs and issues
 ---
 
-{{<alert type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
+{{<alert alert-type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
 
 Workflows with some of the issues highlighted below will have a knock on
 effect for other users, so please take the time to check and change your code
@@ -145,3 +145,27 @@ This can help you select a less-used machine (but don’t necessarily expect the
 same machine to be the right choice next time!).
 
 ---
+
+## 4\. Transport endpoint not connected error
+
+This is a known issue with the SOF storage which provides the group workspace volumes. It happens when the server you are on loses connection to the main storage system, and can occur whenever you try to `cd`, `ls` a directory, or read a file. The error looks something like this:
+
+{{<command user="user" host="sci-vm-02">}}
+ls /gws/nopw/j04/my_gws/path/to/my/data/
+(out)ls: cannot access '/gws/nopw/j04/my_gws/path/to/my/data/': Transport endpoint is not connected
+{{</command>}}
+
+**Suggested solution:**
+
+If you encounter this issue, there are two things you should do:
+
+1. Try accessing the same directory/file on [another `sci` server]({{% ref "sci-servers"%}}). If that works, then the issue is just on the first server. If not, there might be a wider issue.
+2. [Report to the JASMIN helpdesk]({{% ref "how-to-contact-us-about-jasmin-issues"%}}) specifying **BOTH**:
+    - the **full path** of the directory/file that you can't access
+      - `/gws/nopw/j04/my_gws/path/to/my/data/` in this example, **and**
+    - the **hostname** of server that you are getting this error on
+      - `sci-vm-02` in this example
+
+If it's a wider issue, we will provide updates on the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} and in the MOTD (Message of the day) which appears when you log into JASMIN.
+
+Please make sure you include **BOTH** the items above in your report, otherwise the helpdesk team will need to ask you for them before the issue can be investigated, which can cause further delay.

@@ -13,7 +13,7 @@ This article describes how to do data transfers to and from JASMIN using {{<link
 an online data transfer service designed specifically for moving large datasets
 between research institutions.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 **Globus** now replaces the previous certificate-based **gridftp** service.
 
 Although gridftp transfers are currently still possible (using the perhaps confusingly-named `globus-url-copy` client tool

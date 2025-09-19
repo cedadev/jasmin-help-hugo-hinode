@@ -15,8 +15,8 @@ On JASMIN, it creates a Dask cluster in {{<link "../batch-computing/lotus-overvi
 
 Before using Dask Gateway on JASMIN, you will need:
 
-1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "how-to-submit-a-job-to-slurm/#new-slurm-job-accounting-hierarchy" %}}).
+1. An existing JASMIN account and valid `jasmin-login` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
+2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "docs/batch-computing/slurm-queues/#new-slurm-job-accounting-hierarchy" %}}).
 
 The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster.
 
@@ -64,13 +64,13 @@ cluster.shutdown()
 
 The following explains how to use the Dask Gateway elsewhere on JASMIN, for example, on the `sci` machines.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 It is not necessary to do this if you only want to use Dask in the JASMIN notebook service.
 {{</alert>}}
 
 At the current time, it is still necessary to use the notebooks service to generate an API token to allow you to connect to the gateway server.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 It is very important that your API token is not shared between users and remains secret. With it, another user could submit Dask jobs to LOTUS as you, and they could exploit this to see anything in your JASMIN account.
 {{</alert>}}
 
@@ -131,7 +131,7 @@ To have Dask use your packages, you need to create a custom environment which yo
 
 However, for technical reasons, it is not currently possible to use the same virtual environment in both the notebook service and on JASMIN. So you will need to make two environments, one for your notebook to use and one for Dask to use.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 It is VERY important that these environments have the same packages installed in them, and that the packages are exactly the same version in both environments.
 
 If you do not keep packages and versions in-sync you can expect many confusing errors.

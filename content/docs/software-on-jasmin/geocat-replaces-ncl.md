@@ -20,7 +20,7 @@ replacement for NCL.
 To give you a chance now to familiarise yourself with `geocat-viz`, here are some
 instructions for how you could install it in a Conda environment under your own home directory.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Note that such an environment cannot be activated at the same time as Jaspy.
 {{</alert>}}
 

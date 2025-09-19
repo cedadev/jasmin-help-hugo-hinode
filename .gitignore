@@ -1,6 +1,7 @@
 /_vendor
-resources/
 node_modules/
+public/
+resources/
 .DS_store
 .hugo_build.lock
-public/
+hugo_stats.json

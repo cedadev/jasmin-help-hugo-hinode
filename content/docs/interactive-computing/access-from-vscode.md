@@ -23,7 +23,7 @@ The following demonstrates how to use VSCode to connect to JASMIN, and mentions 
 Follow the "setup" link from the page linked above
 to obtain VSCode for your platform: this should be your **local** machine, **not** JASMIN.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 **There should be no need for you to install VSCode on JASMIN, and we ask you not to.**
 
 We don't provide it centrally, because the multitude of different extensions and configurations 
@@ -78,7 +78,7 @@ If we use the tool provided by VSCode to create these, we can customise them fur
 The following video demonstrates these steps, and the initial setup of 2 connection profiles, on Windows. But the interface
 is almost identical on Mac and Linux.
 
-{{< video id="PAwSWtHwhSQ">}}
+{{< video media-id="PAwSWtHwhSQ">}}
 
 Notes:
 
@@ -174,3 +174,25 @@ rm -rf ~/.vscode-server
 ```
 - Retry connecting to the remote host
 - If that doesn't work, try rebooting your own machine, then repeating the above steps.
+
+### Failed to parse remote port
+
+When the VS Code server is setting itself up on the JASMIN machine you connect to, it tries to get a port to communicate with the client on. If it can't, then VS Code will not be able to make a connection.
+
+If you check the error logs for the Remote SSH extension - by opening the Output view from the bottom panel and choosing "Remote - SSH" (you can also get to Output with View > Output in the menu) - then you might see an error like this:
+
+```
+Failed to parse remote port from server output
+Exec server for ssh-remote+<server name> failed: Error
+Error opening exec server for ssh-remote+<server name>: Error
+```
+
+This can sometimes be fixed by setting up a few profiles for the different `sci-vm-*` and `sci-ph-*` machines so that if you can't get the server set up on one machine (it might be overloaded), then you can try another.
+
+The other possible solution is to change the Remote - SSH Exec and Local Server settings, which change how VS Code sets up the connection.
+
+1. First, open VS Code's settings using either the command palette ({{<kbd "Ctrl/Command+Shift+P">}} then search for `Open Settings (UI)`) or by clicking on the cog wheel icon (usually at the bottom left of the window) and choosing "Settings".
+2. Search for `remote.ssh use server` or navigate using the sidebar on the left to find the following two settings:
+   - **Extensions > Remote - SSH > Use Exec Server**
+   - **Extensions > Remote - SSH > Use Local Server**
+3. Untick the first one and try connecting again. If this doesn't work, try unticking the second one too, which will hopefully fix the issue.

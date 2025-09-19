@@ -47,7 +47,7 @@ duration of a project.
 See [Access to Storage]({{% ref path="/docs/getting-started/storage" %}}) for details about which file
 systems are appropriate to use and how to access them.
 
-LOTUS currently has around 55,000 cores, but is heavily used and implements a
+LOTUS currently has over 53,000 cores*, but is heavily used and implements a
 fair-share scheduling system between users. It is not intended as a substitute
 for dedicated HPC facilities, rather as a complementary environment in which
 model outputs can be analyzed and compared with observational data. Users with
@@ -55,6 +55,8 @@ large-scale compute-heavy requirements (in particular those requiring large-scal
 parallel processing) should look to access other parts of the national
 HPC infrastructure such as [ARCHER2](http://www.archer2.ac.uk/) or
 [MONSooN](http://collab.metoffice.gov.uk/twiki/bin/view/Support/MONSooN).
+
+*The exact number of cores available varies for operational reasons.
 
 In order to maintain a safe and reliable working environment for all within
 LOTUS and more widely within JASMIN, users are expected to follow [the best
@@ -68,16 +70,5 @@ all JASMIN [scientific analysis servers]({{% ref "sci-servers" %}}).
 From the above servers, it is possible to submit, monitor, and control batch
 jobs using the Slurm commands.
 
-Please note that if you have only recently requested access to [JASMIN login
-services]({{% ref "get-login-account" %}}) and had this approved, there can
-sometimes be a delay (typically up to a day, but in rare cases can be longer)
-before the necessary configuration is created for you on LOTUS. You will not
-be able to submit jobs to LOTUS queues until this has been completed.
-Typically you would see an error message such as this, after an
-unsuccessful attempt to submit a job:
-
-```bash
-sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
-```
-
-If this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.
+For more details about how to use LOTUS, please see our article about
+[how to submit a job to Slurm]({{% ref "how-to-submit-a-job-to-slurm" %}}).

@@ -21,7 +21,7 @@ but see {{<link "https://docs.globus.org/cli/collections_vs_endpoints/#:~:text=T
 For example, if you set up GCP on your desktop/laptop, you could transfer data files to/from your home directory or
 other storage on JASMIN.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 
 - You may not need to do this if your institution already has a Globus endpoint available to you.
 - You should NOT install this on a JASMIN server, as a Globus endpoint is already provided for you.

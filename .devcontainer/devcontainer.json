@@ -10,14 +10,14 @@
 			// Update VERSION to pick a specific hugo version.
 			// Example versions: latest, 0.73.0, 0,71.1
 			// Rebuild the container if it already exists to update.
-			"VERSION": "0.143.1",
+			"VERSION": "0.149.0",
 			// Update NODE_VERSION to pick the Node.js version: 12, 14
-			"NODE_VERSION": "20"
+			"NODE_VERSION": "22"
 		}
 	},
 	"features": {
 		"ghcr.io/devcontainers/features/go:1": {
-			"version": "1.24"
+			"version": "1.25"
 		}
 	},
 

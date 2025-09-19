@@ -5,11 +5,6 @@ title: Slurm scheduler overview
 weight: 20
 ---
 
-{{<alert type="danger">}}
-Not yet reviewed for compatibility with the new cluster, April 2025.
-Please adapt using [new submission instructions](how-to-submit-a-job-to-slurm). This alert will be removed once updated.
-{{</alert>}}
-
 ## What is a Job Scheduler?
 
 A job or batch scheduler, is a tool that manages how user jobs
@@ -55,18 +50,20 @@ that become available. However, the orange and purple users already have jobs
 running, whereas the blue user does not, and as such it is the blue user's
 jobs that are run (bottom row).
 
-## LOTUS queues
-<!-- Queues to be updated -->
-There are five standard Slurm queues (also known as "partitions" in Slurm terminology) for batch job submissions to the LOTUS
-cluster: `short-serial`, `long-serial`, `par-single`, `par-multi` and `high-mem`.
-The default queue is `short-serial`. For testing new workflows, the
-additional queue `debug` is recommended. The specification of each queue is
+## LOTUS partitions
+
+There are two standard Slurm partitions (also known as "queues") for batch job 
+submissions to the LOTUS cluster: `standard` and `debug`. The default queue is
+`standard`. For testing new workflows, the `debug` queue is recommended.
+The queues are then further divided up into Quality of Services (QoS),
+which determine further restrictions about your job, for example, how long it can
+run or how many CPU cores it can use.
+
+The specification of each queue and its associated available QoS is
 described in detail in this article: [Slurm queues on LOTUS]({{% ref "slurm-queues" %}}).
 
-Queues other than the five standard queues with the test queue should be
+Queues other than the two standard queues should be
 ignored unless you have been specifically instructed to use them.
-
-<!-- Need to add here information about the QoS available -->
 
 ## The typical workflow for LOTUS jobs
 

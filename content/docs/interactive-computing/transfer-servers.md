@@ -18,7 +18,7 @@ moving small amounts of data over relatively short distances. However, the
 high-performance data transfer servers shown above are also available for
 those with particular requirements.
 
-{{<alert type="info" >}}
+{{<alert alert-type="info" >}}
 Please make sure you use the dedicated transfer servers and not the scientific
 analysis or login servers for any significant data transfers. The transfer servers have been configured to achieve the best transfer rates and will perform significantly better than other servers on jasmin, while maintaining the performance of analysis servers for interactive use by other users.
 {{</alert>}}
@@ -82,7 +82,7 @@ connections for each.
 All the above servers behave the same way in this respect, so please be aware of this when
 managing your transfers.
 
-{{<alert type="danger" >}}
+{{<alert alert-type="danger" >}}
 Users are **not permitted to execute commands which require
 administrative privileges.** This applies to all hosts in the managed part of
 JASMIN where users have SSH login access (for example `login`, `nx-login`,

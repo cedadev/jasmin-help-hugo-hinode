@@ -1,27 +1,17 @@
+#[[main]]
+#  name = "Blocks"
+#  pageRef = "/blocks/"
+#  weight = 10
+
 [[main]]
   name = "Docs"
   pageRef = "/docs/"
   weight = 10
 
 [[main]]
-  name = "Guides"
-  pageRef = "/guides/"
-  weight = 30
-  
-[[main]]
-  name = "Training"
-  pageRef = "/training/"
-  weight = 40
-
-[[main]]
   name = "Discussions"
   url = "https://github.com/cedadev/jasmin-community/discussions"
   weight = 60
-
-#[[main]]
-#  name = "Contact"
-#  url = "" #beacon toggle?
-#  weight = 60
 
 [[social]]
   name = "YouTube"
@@ -33,4 +23,4 @@
   name = "GitHub"
   pre = "fab fa-github"
   url = "https://github.com/cedadev"
-  weight = 20
+  weight = 2

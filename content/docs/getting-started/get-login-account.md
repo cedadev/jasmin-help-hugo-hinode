@@ -24,7 +24,7 @@ this service
 
 {{<image src="img/docs/get-login-account/login-services.png" caption="More information">}}
 
-**Step 2:** Apply for access to jasmin-login service
+**Step 2:** Apply for access to `jasmin-login` service
 
 {{<image src="img/docs/get-login-account/login-more-info.png" caption="Apply for jasmin-login">}}
 

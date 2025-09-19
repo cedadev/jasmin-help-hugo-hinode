@@ -38,7 +38,7 @@ Much of this work is already underway by teams in CEDA and STFC’s Scientific C
 
 Some services have already been migrated and are already running under Rocky 9, but there is still much work to be done over the coming weeks so please watch this space as we do our best to keep you informed of the progress we’re making, and of any actions you may need to take to minimise disruption to your work on JASMIN.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Please find below details of the new Rocky 9 environment on JASMIN. We will update other documentation to match this in due course, but the information below will be the most up-to-date source until further notice.
 {{</alert>}}
 
@@ -233,19 +233,22 @@ GNU compilers | 7.2.0 ,8.1.0,  8.2.0<br>13.2.0 conda-forge (12.1.0 from legacy J
 JULES <br>**see Note 4**| | Information to follow
 {.table .table-striped .w-auto}
 
-#### Notes
+**Notes:** 
 
-1. **IDL:**
+1. **IDL**
+
    1. IDL versions 8.9 and 9.1 are now available on the Rocky 9 sci servers.
    1. These will also be the versions available on the new cluster, which will be announced in early 2025.
    1. Licensing is now in place to enable use of these versions on Rocky 9 servers, in runtime or interactive mode.
    1. For the limited remaining time that the existing LOTUS cluster is available (with CentOS7 nodes), 8.5 is the default with other legacy versions still available on those nodes.
 
-2. **Cylc:** Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)
+2. **Cylc**
 
-3. **MPI:** (further details to follow)
+Note that Cylc 8 differs from Cylc 7 in many ways: architecture, scheduling algorithm, security, UIs, working practices and more. The Cylc 8 web UI requires the use of a browser (e.g. Firefox in the NoMachine desktop service)
 
-4. **JULES:** (further details to follow)
+3. **MPI** (further details to follow)
+
+4. **JULES** (further details to follow)
 
 ### Upgraded LOTUS cluster
 
@@ -253,127 +256,21 @@ Preliminary node specification:
 
 type | status | specs
 --- | --- | ---
-standard | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
-special (not yet available) | {{< icon fas circle-check text-success >}} Ready to use | 190* CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+standard | {{< icon fas circle-check text-success >}} Ready to use | 192 CPU AMD EPYC 9654 / 1.5 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
+special  | {{< icon fas triangle-exclamation text-danger >}} Not yet available | 192 CPU AMD EPYC 9654 / 6 TB RAM / 480 GB SATA SSD + 800 GB NvMe SSD
 {.table .table-striped .w-auto}
 
 Notes:
 
-- \*2 CPU reserved for system processes
-- Overall ~55,000 cores: ~triples capacity pf previous cluster
+- Overall ~53,000 cores: ~triples capacity pf previous cluster (exact no. varies for operational reasons)
 - New nodes will form a new cluster, managed separately to the "old" LOTUS
 - Submission to the new cluster is now via any `sci-vm-*` or `sci-ph-*` node
 - 70% of old LOTUS has now been decommissioned
 
 ### New LOTUS2 cluster initial submission guide
 
-{{<alert type="info">}}
-Please see the details below on how to access LOTUS2 and how to submit a job to the new Slurm scheduling partitions.
+{{<alert alert-type="info">}}
+Please see the [updated LOTUS pages]({{% ref "batch-computing" %}}), including the [how to submit a job page]({{% ref "how-to-submit-a-job-to-slurm" %}}), to use the new Slurm scheduling partitions in LOTUS2.
 
-**These require a Slurm account, partition and quality of service (QoS) to be specified at job submission time**.
+**These require a [Slurm account]({{% ref "docs/batch-computing/slurm-queues/#new-slurm-job-accounting-hierarchy" %}}), [partition and quality of service (QoS)]({{% ref "docs/batch-computing/slurm-queues/#queues-and-qos" %}}) to be specified at job submission time**.
 {{</alert>}}
-
-#### New Slurm job accounting hierarchy
-
-Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs),
-and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
-
-To find what Slurm accounts and quality of services that you have access to, use the `useraccounts` command on any `sci` machine.
-Output should be similar to one or more of the lines below.
-
-{{<command user="user" host="sci-ph-01">}}
-useraccounts
-(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
-(out)User       Account        QOS
-(out)---------- -------------- --------------------------------------------------
-(out)      fred  mybiggws      debug,high,long,short,standard
-(out)      fred  orchid        debug,high,long,short,standard
-{{</command>}}
-
-Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
-Please ignore and do not use the group `shobu`.
-
-#### Partitions and QoS
-
-There are two partitions currently available on LOTUS2, with associated allowed quality of service (QoS) as shown below:
-
-| Partition | Allowed QoS |
-| --- | --- |
-| `standard` | `standard`, `short`, `long` |
-| `debug` | `debug`, `reservation` |
-{.table .table-striped .w-auto}
-
-| QoS | Priority | Max CPUs per job | Max wall time |
-| --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours |
-| `short` | 550 | 1 | 4 hours |
-| `long` | 350 | 1 | 5 days |
-| `high` | 450 | 96 | 2 days |
-| `debug` | 500 | 8 | 1 hour |
-{.table .table-striped .w-auto}
-
-#### Job submission
-
-In order to successfully submit a job to LOTUS2, 3 mandatory fields must be specified. These are a partition, an account, and a QoS. The LOTUS2 configuration has been set to use the `standard` partition as the default if none is specified. However, users are discouraged from relying on the default.
-
-Example of a batch Script: **NB: remove any trailing whitespace**
-
-Replace `mygws` with the name of an account that you belong to (check with the `useraccounts` command, as shown above), and other values appropriate to your job.
-
-```bash
-#!/bin/bash
-#SBATCH --job-name="My test job"
-#SBATCH --time=00:01:00
-#SBATCH --mem=1M
-#SBATCH --account=mygws
-#SBATCH --partition=debug
-#SBATCH --qos=debug
-
-# rest of script here
-```
-
-where {{<link "https://slurm.schedmd.com/sbatch.html#OPT_time">}}`time`{{</link>}} and {{<link "https://slurm.schedmd.com/sbatch.html#OPT_mem" >}}mem{{</link>}} should be specified as per the `sbatch` documentation, which covers all available directives such as `--cpus-per-task`.
-
-Save this script file as e.g.`test_submit.sh`
-Then submit this with:
-
-{{<command user="user" host="sci-ph-01">}}
-sbatch test_submit.sh
-{{</command>}}
-
-For a pseudo-interactive session on a LOTUS2 compute node:
-
-(again, replace `mygws` with an account that you belong to, from the `useraccounts` command)
-
-{{<command user="user" host="sci-ph-01">}}
-srun --account=mygws --partition=debug --qos=debug --pty /bin/bash
-(out)srun: job 586 queued and waiting for resources
-(out)srun: job 586 has been allocated resources
-module li
-(out)
-(out)
-(out)Currently Loaded Modules:
-(out)1) idl/9.1
-{{</command>}}
-
-### Timetable for host retirements
-
-Please find below a timetable of planned host retirements in line with our move to Rocky Linux 9. 
-
-Please start moving your work **NOW**
-so that any issues can be resolved and disruption minimized.
-
-| Host    | retirement date |
-| ---     | --- |
-| Group A | |
-| `cron1.ceda` aka `cron.jasmin`<br>`xfer3`<br>`nx-login[2,3]` | 21/11/2024 16:00 |
-| Group B | 
-| `nx4` aka `nx-login4` | 6/12/2024 16:00 |
-| Group C |
-| `xfer1`<br>`hpxfer1` - already shut down due to technical issue<br>`sci[1,2,4]`<br>`login[1,2]` | 6/12/2024 16:00 |
-| Group D | |
-| `xfer2`<br>`hpxfer2`<br>`sci[5,6,8]`<br>`login[3,4]`<br>`gridftp1`| 13/12/2024 16:00 |
-{.table .table-striped}
-
-All the hosts listed have new Rocky 9 equivalents described in the document above.
-Please check back regularly to keep up to date with this schedule.

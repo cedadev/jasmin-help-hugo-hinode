@@ -3,7 +3,6 @@ aliases: /article/4895-adding-and-removing-ssh-keys-from-an-external-cloud-vm
 categories:
 - For Cloud Tenants
 collection: jasmin-documentation
-date: 2023-05-23 14:27:10
 description: Adding and removing SSH keys from an External Cloud VM
 slug: adding-and-removing-ssh-keys-from-an-external-cloud-vm
 title: Adding and removing SSH keys from an External Cloud VM

@@ -36,8 +36,9 @@ sbatch myjobscript
 The job script is a Bash script of user's application and includes a list of
 Slurm directives, prefixed with `#SBATCH` as shown in this example:
 
-{{<alert type="danger">}}
-Remove any trailing whitespace
+{{<alert alert-type="danger">}}
+- Remove any trailing whitespace
+- Choose values for `account`, `partition` and `qos` that are valid for you.
 {{</alert>}}
 
 ```bash
@@ -59,56 +60,15 @@ sleep 5s
 
 Submitting the above script (if you had access to the `mygws` account) creates a job named `My test job` with an estimated run time of
 `00:01:00` (1 minute), memory requirement of `1M` (1 Megabyte), run against the account
-`mygws` on the partition `debug` using Qos `debug`, and writing its STDOUT (standard output) to file 
+`mygws` on the partition `debug` using QoS `debug`, and writing its STDOUT (standard output) to file 
 `%j.out` and its STDERR to file `%j.err` (where `%j` represents the job ID that the scheduler assigns to the job).
 
 The task itself is the command `sleep 5s` which just pauses for 5 seconds before exiting. This is what you would replace 
 with your actual processing command(s), so you need to have an idea of how long it will take to run (**TIP**: run it manually first with `time <cmd>` to find out!)
 
-For details of other submission parameters, see 
+- For details about how to pick the right partition, QoS, and account, please read about the [Slurm queues on LOTUS]({{% ref "docs/batch-computing/slurm-queues" %}}).
+- For further submission parameters, see the quick reference about
 [job specification]({{% ref "slurm-quick-reference#job-specification" %}}).
-
-### New Slurm job accounting hierarchy
-
-Slurm accounting by project has been introduced as a means of monitoring compute usage by projects on JASMIN. These projects align with group workspaces (GWSs), and you will automatically be added to Slurm accounts corresponding to any GWS projects that you belong to.
-
-To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
-Output should be similar to one or more of the lines below.
-
-{{<command user="user" host="sci-ph-01">}}
-useraccounts
-(out)# sacctmgr show user fred withassoc format=user,account,qos%-50
-(out)User       Account        QOS
-(out)---------- -------------- -------------------------------------
-(out)      fred  mygws         debug,high,long,short,standard
-(out)      fred  orchid        debug,high,long,short,standard
-{{</command>}}
-
-You should use the relevant account for your project's task with the `--account` directive in your job script.
-
-Users who do not belong to any group workspaces will be assigned the `no-project` account and should use that in their job submissions.
-Please ignore and do not use the group `shobu`.
-
-### Partitions and QoS
-
-There are two partitions currently available on LOTUS, with associated allowed quality of service (QoS) as shown below:
-
-| Partition | Allowed QoS |
-| --- | --- |
-| `standard` | `standard`, `short`, `long`, `high` |
-| `debug` | `debug`, `reservation` |
-{.table .table-striped .w-auto}
-
-| QoS | Priority | Max CPUs per job | Max wall time |
-| --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours |
-| `short` | 550 | 1 | 4 hours |
-| `long` | 350 | 1 | 5 days |
-| `high` | 450 | 96 | 2 days |
-| `debug` | 500 | 8 | 1 hour |
-{.table .table-striped .w-auto}
-
-Once you've chosen the partition and QoS you need, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.
 
 ## Method 2: Submit via command-line options
 
@@ -175,10 +135,10 @@ squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)23506 standard      interactive   fred   R       1:32      1      2 host580
 {{</command>}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 `squeue --me` is equivalent to `squeue -u fred`
 {{</alert>}}
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Please **DO NOT** use `watch` or equivalent polling utilities with Slurm
 as they are wasteful of resources and cause communication issues for the scheduler.
 
@@ -286,3 +246,19 @@ If you use  the `squeue -u <username>` command  to list your active jobs, you
 will see 10 tasks with the same Job ID. The tasks can be distinguished by  the
 `[index]` e.g. jobID_index. Note that individual tasks may be allocated to a
 range of different hosts on LOTUS.
+
+## Troubleshooting
+
+If you have only recently requested access to [JASMIN login
+services]({{% ref "get-login-account" %}}) and had this approved, there can
+sometimes be a delay (typically up to a day, but in rare cases can be longer)
+before the necessary configuration is created for you on LOTUS. You will not
+be able to submit jobs to LOTUS until this has been completed.
+Typically, you would see an error message such as this, after an
+unsuccessful attempt to submit a job:
+
+```bash
+sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
+```
+
+If this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.

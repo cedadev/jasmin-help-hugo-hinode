@@ -7,7 +7,7 @@ tags:
 weight: 100
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 **Deprecated feature** documented here to provide information about how to access existing instances.
 Project-specific servers are no longer provided on request, as most use cases can be satisfied by 
 a tenancy in the JASMIN cloud.

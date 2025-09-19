@@ -1,7 +1,5 @@
 ---
 aliases: /article/4842-working-with-many-linux-groups
-collection: jasmin-documentation
-date: 2020-01-20 12:39:02
 description: working with many Linux groups
 slug: working-with-many-linux-groups
 title: Working with many Linux groups

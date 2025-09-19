@@ -2,10 +2,11 @@
 aliases: /article/190-check-network-details
 description: Check network details
 title: Check network details
+draft: true
 weight: 20
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 DEPRECATED: This article will shortly become obsolete following JASMIN's [migration to the Rocky 9 operating system](../software-on-jasmin/rocky9-migration-2024). The previous restriction on network domains and reverse DNS does not apply to the set of new machines (and old ones are being replaced).
 {{</alert>}}
 

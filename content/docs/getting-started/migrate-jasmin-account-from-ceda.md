@@ -7,7 +7,7 @@ tags:
 weight: 190
 ---
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 JASMIN accounts created before February 2017 had to be migrated to use the
 JASMIN accounts portal.
 It is now no longer possible to do this migration automatically.

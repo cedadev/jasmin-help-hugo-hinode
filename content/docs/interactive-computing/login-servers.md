@@ -13,7 +13,7 @@ There are four login servers available to access resources within JASMIN.
 Users with the `jasmin-login` access role can access the following servers via
 {{<abbr SSH>}}.
 
-{{<alert type="info" >}}
+{{<alert alert-type="info" >}}
 All four login servers now have identical configuration and should be accessible from any network.
 {{</alert>}}
 
@@ -55,7 +55,7 @@ See also [NoMachine NX service]({{% ref "graphical-linux-desktop-access-using-nx
 For full details of how to log in, including making onward connections to
 other machines, please see the article ["How to login"]({{% ref "how-to-login" %}}).
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Users are **not permitted to execute commands which require
 administrative privileges**. This applies to all hosts in the managed part of
 JASMIN where users have SSH login access (for example `login`, `nx`,

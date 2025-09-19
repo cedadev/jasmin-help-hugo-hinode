@@ -1,6 +1,6 @@
 ---
 aliases: /article/4847-using-the-jasmin-object-store
-description: Using the JASMIN Object Store
+description: How to use the high-performance object storage on JASMIN
 title: Using the JASMIN Object Store
 ---
 
@@ -38,15 +38,13 @@ DELETE ...
 
 {{</alert>}}
 
-This article describes how to use the JASMIN high-performance object storage.
-
 ## What is object storage?
 
 An {{< link "https://en.wikipedia.org/wiki/Object_storage" >}}object store{{</link>}} is a data
 storage system that manages data as objects referenced by a globally unique
 identifier, with attached metadata. This is a fundamental change from
 traditional file systems that you may be used to, as there is no directory
-hierarchy - the objects exist in a single flat domain. These semantics allow
+hierarchy – the objects exist in a single flat domain. These semantics allow
 the object store to scale out much more easily than a traditional shared file
 system.
 
@@ -59,20 +57,20 @@ JASMIN firewall, for example to the JASMIN External Cloud. Data can be read
 **and written** in the same way, using the same tools, from inside and outside
 JASMIN. Contrast this with Group Workspaces, where you must be logged in to a
 JASMIN host in order to write data using the file system, and data is only
-accessible externally in a readonly way using HTTP or OPeNDAP or via data 
+accessible externally in a read-only way using HTTP or OPeNDAP or via data 
 transfer methods.
 
 Object stores are seen as the most efficient (and cheapest!) way to store and
 access data from the cloud, and all the major cloud providers support some
 variant of object store. The JASMIN object store is 
 {{< link "https://www.scality.com/topics/what-is-s3-compatible-storage/" >}}S3 compatible{{</link>}} \-
-S3 is the object store for Amazon Web Services (AWS), and has become a de-
-facto standard interface for object stores. This means that all the same tools
-that work with AWS S3 will also work with the JASMIN object store.
+S3 is the object store for Amazon Web Services (AWS), and has become a de-facto
+standard interface for object stores. This means that all the same tools
+that work with AWS S3 will also work with the JASMIN Object Store.
 
 ## Accessing the object store
 
-The JASMIN object store is organised into **tenancies**. These are shared
+The JASMIN Object Store is organised into **tenancies**. These are shared
 areas of the object store, similar in concept to Group Workspaces, and are
 requested by users, usually Group Workspace Managers. Several users can have
 access to a tenancy, and so they can be used collaboratively.
@@ -92,15 +90,15 @@ store tenancy, please see the help article "JASMIN Object Store for Managers"
 
 As of Jan 2024, we have changed the default access policy for newly created tenancies to provide a more sensible and flexible set of access policies.
 
-The old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (USER only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (<tenancy>-members, e.g. cedadev-o-members) - this can be done using the JASMIN Object Store portal (below) or the Swarm portal. Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).
+The old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (`USER` only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (`<tenancy>-members`, e.g. `cedadev-o-members`) - this can be done using the JASMIN Object Store portal (below) or the Swarm portal. Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).
 
-The new policy also gives admin access for tenancy MANAGER and DEPUTY roles, who have access to all the buckets in the tenancy.
+The new policy also gives admin access for tenancy `MANAGER` and `DEPUTY` roles, who have access to all the buckets in the tenancy.
 
 ## Creating an access key and secret
 
 Authentication with the object store uses an access key and secret that are separate to your JASMIN username and password. You can generate keys and manage bucket permissions through the {{<link "jasmin_object_store_portal">}}JASMIN Object Store Portal.{{</link>}}
 
-{{<image src="img/docs/using-the-jasmin-object-store/file-OkGcJm0Mpo.png" caption="JASMIN sbject store portal">}}
+{{<image src="img/docs/using-the-jasmin-object-store/file-OkGcJm0Mpo.png" caption="JASMIN Object Store Portal">}}
 
 You can log in with your JASMIN username and password. You can then click on the "Object Stores" button on the right. This will present you with the list of object store tenancies that you have access to. If you don't see an object store tenancy that you expect to, please check you have access in the {{<link "jasmin_accounts_portal">}}JASMIN Accounts Portal{{</link>}}. If you have access in the Accounts Portal, but not in the Object Store Portal then please email the helpdesk.
 

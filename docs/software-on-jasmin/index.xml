@@ -222,9 +222,7 @@ detail on how to create and use your own personal Conda environments via the
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;div class="d-flex alert alert-danger " 
- role="alert"&gt;
- &lt;div class="pt-1 pe-2"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading"&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
 
 
 
@@ -233,12 +231,11 @@ detail on how to create and use your own personal Conda environments via the
 
 
 
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
- &lt;div class="flex-grow-1 my-auto"&gt;
- There are currently some licensing issues which are affecting how IDL can be used on new
-Rocky 9 servers. Please check back to our 
- 
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
 
 
 
@@ -247,19 +244,25 @@ Rocky 9 servers. Please check back to our
 
 
 
-
- 
 
 
 
  
- 
 
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/rocky9-migration-2024/"&gt;Rocky 9 migration page&lt;/a&gt; for the latest updates as they become available.
- &lt;/div&gt;
- &lt;/div&gt;
-&lt;p&gt;This article explains how to:&lt;/p&gt;</description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3"&gt;
+
+ &lt;a href="https://www.nv5geospatialsoftware.com/Products/IDL" target="_blank" rel="noopener noreferrer nofollow"&gt;IDL&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; stands for
+Interactive Data Language. It is a licensed data manipulation toolkit made
+available on JASMIN.&lt;/p&gt;</description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3"&gt;
 
  
 
@@ -414,9 +417,7 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p&gt;</description></item><item><title>NAG Library</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/nag-library/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/nag-library/</guid><description>&lt;p&gt;This article introduces the Fortran and C library of software under the
-Numerical Algorithm Group (NAG) license. NAG Library is a collection of
-robust, documented, tested and maintained numerical algorithms.&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 

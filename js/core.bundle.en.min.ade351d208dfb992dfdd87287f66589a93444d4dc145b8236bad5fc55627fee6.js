@@ -7363,10 +7363,10 @@ function initIndex() {
         id: 55,
         href: "/docs/software-on-jasmin/idl/",
         title: "IDL",
-        description: "IDL",
+        description: "Using IDL on JASMIN",
         
         
-        content: "\u0026nbsp; There are currently some licensing issues which are affecting how IDL can be used on new Rocky 9 servers. Please check back to our Rocky 9 migration page for the latest updates as they become available. This article explains how to:\nuse the IDL software on JASMIN run these tools on the scientific analysis servers and LOTUS make efficient use of the IDL licences What is IDL? \u0026nbsp; IDL\u0026nbsp; stands for Interactive Data Language. It is a licensed data manipulation toolkit made available on JASMIN.\nAvailability of IDL on JASMIN \u0026nbsp; IDL is available on all scientific analysis servers and LOTUS.\nTo get started with IDL, login to one of scientific analysis servers and do as follows:\nCheck which versions are available:\nmodule avail idl -------------------------------------------- /apps/jasmin/modulefiles ----------------------------------------------- idl/8.2 idl/8.5 (D) idl/8.6 idl/8.9 Where: D: Default Module The current default version is labelled with (D) and can be loaded using just module load idl. Alternatively, load a specific version by adding its version string to the command:\nmodule load idl # or idl/8.5 to specify the version idl IDL Version 8.5 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation. Installation number: 406672. Licensed for use by: Science \u0026amp; Technology Facilitie You can then type commands at the IDL prompt\nprint,1+4 5 exit For help on the idl module you can type the following :\nmodule help idl ----------- Module Specific Help for \u0026#39;idl/8.5\u0026#39; -------------------- Adds IDL 8.5 to your environment variables, Making efficient use of IDL development licences \u0026nbsp; We have a large pool of run-time licences but a much more limited pool of development licences. In each case, these consist of floating licences shared between JASMIN sci machines and the LOTUS cluster.\n\u0026nbsp; 6 September 2024: IDL v8.9 This version is available but without the full set of run-time licences. This may affect usage, particularly on the LOTUS cluster. This will be resolved in due course. Also please ignore the error message on startup re. GL graphics device. Users are welcome to run multiple instances of IDL code, but for that purpose please make use of the run-time licences by compiling your code using a single development session and then running the pre-compiled code using the -rt flag. An example of this is shown in the next section (below).\nPlease try not to run more than one or two simultaneous IDL development sessions. However, for licence purposes, each unique combination of username, hostname, and $DISPLAY variable counts as a single session. So for example, if you run idl (development mode) in one window, then suspend it with CTRL-Z and start another development session in the same window, this still is only counted as one session by the licence server because the username, hostname, and DISPLAYareallidenticalbetweenthetwoprocesses.Butifyou\u0026quot;ssh\u0026quot;inontwodifferentwindows,probablythe‘DISPLAY are all identical between the two processes. But if you \u0026quot;ssh\u0026quot; in on two different windows, probably the ` DISPLAYwill differ between the two windows (e.g.localhost:10andlocalhost:11`), so if you start idl development sessions in each window they will require separate licences.\nTo see what licences you and others are using, you can use the following sequence of commands:\nmodule add idl/8.5 lmstat -a When interpreting the numbers, note that a single session is counted as 6 licences.\nUsing IDL on LOTUS (via the run-time Licences) \u0026nbsp; IDL run-time licences are available for use on the LOTUS cluster. In order to specify use of the run-time licences please follow the instructions here. You need to compile your IDL code in order to run in run-time mode.\nExample program \u0026nbsp; The example program, \u0026ldquo;foo\u0026rdquo;, depends on some other functions.\n======== foo.pro ======= pro foo print, doubleit(10) end ======================== ===== doubleit.pro ===== function doubleit, n return, two() * n end ======================== ======= two.pro ======== function two return, 2 end ========================You must save a compiled version of the code in order to run it.\n1. Compile the program:\nCompiles top-level routine only\n.compile foo % Compiled module: FOO. 2. Use resolve_all to compile routines it depends on:\nRecursively search for and compile modules called\nresolve_all % Compiled module: DOUBLEIT. % Compiled module: TWO. 3. Save all compiled routines to a file:\nsave, /routines, file=\u0026#39;foo.sav\u0026#39; 4. To run the program, using a run-time licence only:\nidl -rt=foo.sav IDL Version 8.5 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation. Installation number: 406672. Licensed for use by: Science \u0026amp; Technology Facilitie 20 \u0026nbsp; Using -vm= instead of -rt= opens the save file in the IDL virtual machine. No run-time licence is required, but a splash screen must be dismissed interactively, so it is not suitable for queues on the cluster. To see what routines are present in the save file:\n.reset_session \u0026lt;=== removes any existing compiled modules help \u0026lt;=== show compiled modules (and variables); there shouldn\u0026#39;t be any #% At $MAIN$ #Compiled Procedures: #$MAIN$ #Compiled Functions: restore,\u0026#39;foo.sav\u0026#39; \u0026lt;=== load contents of save file help % At $MAIN$ Compiled Procedures: $MAIN$ FOO \u0026lt;=== this was loaded from foo.sav Compiled Functions: DOUBLEIT TWO \u0026lt;=== so were these Passing arguments \u0026nbsp; You can also pass arguments in to your code as follows:\nIn your code, use function command_line_args, for example:\nargsarray = command_line_args(count = nparams)Call the code with -args flag:\nidl -rt=foo.sav -args 10 20 30 command_line_args returns a string array, so convert type as required, e.g. n = fix(argsarray[0]) Further reading \u0026nbsp; Vendor documentation: Using IDL\u0026nbsp; (although may be for a newer version than on JASMIN) Related software \u0026nbsp; The related software MIDL is no longer available on JASMIN."
+        content: "What is IDL? \u0026nbsp; IDL\u0026nbsp; stands for Interactive Data Language. It is a licensed data manipulation toolkit made available on JASMIN.\nAvailability of IDL on JASMIN \u0026nbsp; IDL is available on all scientific analysis servers and LOTUS.\nTo get started with IDL, login to one of scientific analysis servers and do as follows:\nCheck which versions are available:\nmodule avail idl -------------------------------------------- /apps/jasmin/modulefiles ----------------------------------------------- idl/8.9 idl/9.1 (D) midl/20140411 Where: D: Default Module The current default version is labelled with (D) and can be loaded using just module load idl. Alternatively, load a specific version by adding its version string to the command:\nmodule load idl # or idl/8.9 to specify the version idl IDL 8.9.0 (linux x86_64 m64). (c) 2023, L3Harris Geospatial Solutions, Inc. % Error initializing graphics device GL. Licensed for use by: UKRI Centre for Environmental Data Analysis License: 492635 You can then type commands at the IDL prompt:\nprint,1+4 5 exit For help on the idl module you can type the following:\nmodule help idl ----------- Module Specific Help for \u0026#39;idl/8.9\u0026#39; -------------------- Adds IDL 8.9 to your environment variables, Making efficient use of IDL development licences \u0026nbsp; We have a large pool of run-time licences but a much more limited pool of development licences. In each case, these consist of floating licences shared between JASMIN sci machines and the LOTUS cluster.\n\u0026nbsp; 6 September 2024: IDL v8.9 This version is available but without the full set of run-time licences. This may affect usage, particularly on the LOTUS cluster. This will be resolved in due course. Also please ignore the error message on startup re. GL graphics device. Users are welcome to run multiple instances of IDL code, but for that purpose please make use of the run-time licences by compiling your code using a single development session and then running the pre-compiled code using the -rt flag. An example of this is shown in the next section (below).\nPlease try not to run more than one or two simultaneous IDL development sessions. However, for licence purposes, each unique combination of username, hostname, counts as a single session. So for example, if you run idl (development mode) in one window, then suspend it with CTRL-Z and start another development session in the same window, this still is only counted as one session by the licence server because the username and hostname are all identical between the two processes.\nUsing IDL on LOTUS (via the run-time licences) \u0026nbsp; IDL run-time licences are available for use on the LOTUS cluster. In order to specify use of the run-time licences please follow the instructions here. You need to compile your IDL code in order to run in run-time mode.\nExample program \u0026nbsp; The example program, foo, depends on some other functions.\n======== foo.pro ======= pro foo print, doubleit(10) end ======================== ===== doubleit.pro ===== function doubleit, n return, two() * n end ======================== ======= two.pro ======== function two return, 2 end ========================You must save a compiled version of the code in order to run it.\n1. Compile the program:\nCompiles top-level routine only\n.compile foo % Compiled module: FOO. 2. Use resolve_all to compile routines it depends on:\nRecursively search for and compile modules called\nresolve_all % Compiled module: DOUBLEIT. % Compiled module: TWO. 3. Save all compiled routines to a file:\nsave, /routines, file=\u0026#39;foo.sav\u0026#39; 4. To run the program, using a run-time licence only:\nidl -rt=foo.sav IDL Version 8.5 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation. Installation number: 406672. Licensed for use by: Science \u0026amp; Technology Facilitie 20 \u0026nbsp; Using -vm= instead of -rt= opens the save file in the IDL virtual machine. No run-time licence is required, but a splash screen must be dismissed interactively, so it is not suitable for queues on the cluster. To see what routines are present in the save file:\n.reset_session \u0026lt;=== removes any existing compiled modules help \u0026lt;=== show compiled modules (and variables); there shouldn\u0026#39;t be any #% At $MAIN$ #Compiled Procedures: #$MAIN$ #Compiled Functions: restore,\u0026#39;foo.sav\u0026#39; \u0026lt;=== load contents of save file help % At $MAIN$ Compiled Procedures: $MAIN$ FOO \u0026lt;=== this was loaded from foo.sav Compiled Functions: DOUBLEIT TWO \u0026lt;=== so were these Passing arguments \u0026nbsp; You can also pass arguments in to your code as follows:\nIn your code, use function command_line_args, for example:\nargsarray = command_line_args(count = nparams)Call the code with -args flag:\nidl -rt=foo.sav -args 10 20 30 command_line_args returns a string array, so convert type as required, e.g. n = fix(argsarray[0]) How to call IDL from Python using idlpy \u0026nbsp; It is possible to call IDL from Python using the idlpy library as illustrated in the following example:\nmodule load jaspy module load idl python \u0026gt;\u0026gt;\u0026gt; import sys \u0026gt;\u0026gt;\u0026gt; import os \u0026gt;\u0026gt;\u0026gt; sys.path.append(os.path.join(os.environ[\u0026#34;IDL_DIR\u0026#34;], \u0026#34;lib/bridges\u0026#34;)) \u0026gt;\u0026gt;\u0026gt; from idlpy import IDL \u0026gt;\u0026gt;\u0026gt; IDL.print(\u0026#34;hello world\u0026#34;) hello world \u0026gt;\u0026gt;\u0026gt; a = IDL.findgen(12) \u0026gt;\u0026gt;\u0026gt; a array([ 0., 1., 2., 3., 4., 5., 6., 7., 8., 9., 10., 11.], dtype=float32) Further reading \u0026nbsp; Vendor documentation: Using IDL\u0026nbsp; (although may be for a newer version than on JASMIN) Related software \u0026nbsp; The related software MIDL is no longer available on JASMIN."
       })
       .add(
       
@@ -7683,20 +7683,6 @@ function initIndex() {
       
       {
         id: 78,
-        href: "/docs/software-on-jasmin/nag-library/",
-        title: "NAG Library",
-        description: "The Numerical Algorithm Group (NAG) Library",
-        
-        
-        content: "This article introduces the Fortran and C library of software under the Numerical Algorithm Group (NAG) license. NAG Library is a collection of robust, documented, tested and maintained numerical algorithms.\nAccessing the NAG Library \u0026nbsp; Requesting access \u0026nbsp; If you wish to use the NAG Library on JASMIN you will need to request access via the JASMIN Accounts Portal at:\nhttps://accounts.jasmin.ac.uk/services/additional_services/nerctools/\u0026nbsp; This will give your JASMIN user account access to the \u0026ldquo;nerctools\u0026rdquo; Unix Group that is used to limit access to NAG.\nLoading the NAG Library for use on JASMIN \u0026nbsp; The NAG library is made available via module command which is only available once you are on the scientific analysis servers and LOTUS cluster on JASMIN. In addition to loading a module for the library, you will usually need to load a module for the compiler you are using. For example:\nmodule load contrib/nag/25 module list Currently Loaded Modulefiles: 1) intel/fce/15.0.090 2) contrib/nag/25 The NAG library is loaded as well as the Intel Fortran compiler. Now you can compile your code and link to the NAG library, for example:\nifort your_code.f90 -lnag_nag -o your_code.exec How to find a NAG library routine \u0026nbsp; Please search the NAG documentation when looking for specific routines:\nhttps://www.nag.co.uk/numeric/fl/nagdoc_fl25/html/indexes/kwic.html\u0026nbsp; How to use the NAG library \u0026nbsp; The following shows the directory and file organisation of the materials.\n/apps/contrib/nag/fll6i25dcl/ |- in.html (Installer\u0026#39;s Note - this document) |- doc -|- un.html (Users\u0026#39; Note) | |- lic_agr.txt (license agreement) | | |- libnag_nag.a (static self-contained library | | including NAG BLAS/LAPACK) | |- libnag_nag.so.25 (shareable self-contained library | | including NAG BLAS/LAPACK) | |- libnag_nag.so (symbolic link pointing at |- lib -| libnag_nag.so.26) | |- libnag_mkl.a (static library requiring | | MKL BLAS/LAPACK) | |- libnag_mkl.so.25 (shareable library requiring | | MKL BLAS/LAPACK) | |- libnag_mkl.so (symbolic link pointing at | libnag_mkl.so.26) fll6i25dcl -| |- nag_interface_blocks -|- * (interface blocks for Intel compiler) | | |- source --|- ??????e.f90 | | |- examples -|- data ----|- ??????e.d | | |- ??????e.opt | | | |- results -|- ??????e.r | | |- nag_example* (scripts to compile and run |- scripts -| NAG example programs) | | | |- nag_recompile_mods (script to recompile | interface blocks) | |- c_headers -|- * (C/C++ header file and information) | |- mkl_intel64_11.2.0 -|- * (Intel Math Kernel Library) | |- rtl -|- * (Intel compiler run-time libraries) | | |- bin -|- * (directories of license management | | binaries for supported platforms) |- license -|- README.txt | |- doc -|- * (license management documentation) Further information \u0026nbsp; See the full NAG library manual at:\nhttps://www.nag.co.uk/numeric/fl/nagdoc_fl26/html/frontmatter/manconts.html\u0026nbsp;"
-      })
-      .add(
-      
-      
-      
-      
-      {
-        id: 79,
         href: "/docs/short-term-project-storage/nlds/",
         title: "Near-Line Data Store (NLDS)",
         description: "Near-line storage for group workspace data",
@@ -7710,7 +7696,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 79,
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
         description: "New storage FAQs and issues",
@@ -7724,7 +7710,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 80,
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Details of JASMIN's GPU cluster, ORCHID",
@@ -7738,7 +7724,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 81,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7752,7 +7738,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 82,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7766,7 +7752,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 83,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7780,7 +7766,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 84,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7794,7 +7780,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 85,
         href: "/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/",
         title: "Provisioning a Sci VM in a Managed Cloud Tenancy",
         description: "Provisioning a Sci VM in a Managed Cloud Tenancy",
@@ -7808,7 +7794,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 86,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments",
@@ -7822,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 87,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
         description: "Quickstart for activating/deactivating software environments",
@@ -7836,7 +7822,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 88,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -7850,7 +7836,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 89,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
         description: "Reconfirm JASMIN account email address",
@@ -7864,7 +7850,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 90,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -7878,7 +7864,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 91,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -7892,7 +7878,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 92,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -7906,7 +7892,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 93,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -7920,7 +7906,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 94,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -7934,7 +7920,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 95,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -7948,7 +7934,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 96,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Scientific analysis servers",
@@ -7962,7 +7948,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 97,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -7976,7 +7962,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 98,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
         description: "Steps to access MASS from JASMIN",
@@ -7990,7 +7976,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 99,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8004,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 100,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8018,7 +8004,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 101,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8032,7 +8018,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 102,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8046,7 +8032,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 103,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8060,7 +8046,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 104,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8074,7 +8060,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 105,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8088,13 +8074,13 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 106,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
         
         
-        content: "JASMIN is a large platform where a range of software tools, packages and environments are available. Many users employ software already installed on JASMIN whilst some need to install their own tools for a particular purpose.\nThis page provides an overview of the software on JASMIN. It links to further information about a range of tools and environments.\nTo help get you started, these have been split into categories:\nSoftware available to all on JASMIN analysis/batch servers Additional tools for compiling and building software Restricted software Server-specific software Data movement software Which software should I use? \u0026nbsp; There are a lot of different options when you are trying to work out which tools and/or environments to use on JASMIN. Here are some quick questions to help you get started:\n1. Do you want to use NAME, JULES, MOOSE or the NAG libraries?\nIf yes, see: Restricted software 2. Do you want a workflow management tool or a graphical Linux desktop?\nIf yes, see: Server-specific software 3. Do you want tools for transferring data or migrating it to/from tape?\nIf yes, see: Data movement software 4. If you need anything else:\nSee: Software available to all on JASMIN analysis/batch servers Software available on all sci/batch nodes \u0026nbsp; Data analysis and visualisation tools \u0026nbsp; If you are looking for software packages and environments that allow you to analyse, process and visualise data then take a look at these options:\nJaspy software environments (Python, R and other tools) The \u0026ldquo;jasmin-sci\u0026rdquo; software environment (packages not provided by Jaspy) Additional packages (provided under: \u0026ldquo;/apps/jasmin\u0026rdquo;) IDL (and MIDL) Creating your own software environments NOTE : If you are using Matplotlib to visualise data please refer to the advice on our Matplotlib help page.\nJaspy Software Environments (Python, R and other tools) \u0026nbsp; Jaspy is a toolkit for managing and deploying Conda environments that include both Python and non-Python packages. Jaspy environments, along with the \u0026ldquo;jasmin-sci\u0026rdquo; environment (see below), provide the main software on the scientific analysis servers and LOTUS cluster on JASMIN. Details of the Jaspy environments and packages are available on the Jaspy page.\nThe \u0026ldquo;jasmin-sci\u0026rdquo; Software Environment \u0026nbsp; The \u0026ldquo;jasmin-sci\u0026rdquo; software environment is intended as a supplement to Jaspy (see above). It contains extra software packages for use with scientific data analysis which, for various reasons, are not provided as part of Jaspy itself. Details of this environment are provided on the \u0026ldquo;jasmin-sci\u0026rdquo; software page.\nAdditional packages \u0026nbsp; A number of additional packages are available under the \u0026ldquo;/apps/jasmin/\u0026rdquo; directory scientific analysis servers and LOTUS cluster. Details of these packages are provided on the additional sofware packages page.\nIDL \u0026nbsp; IDL\u0026nbsp; stands for Interactive Data Language. It is a licensed data manipulation toolkit made available on JASMIN. IDL is available on the JASMIN scientific analysis servers and LOTUS cluster. See IDL.\nCreating your own software environments \u0026nbsp; If you intend to create your own software environments then please take a look at the following pages:\nBuilding virtual environments on top of Jaspy environments Sharing your JASMIN software environments with other users Compilers on JASMIN Restricted software available on specific servers \u0026nbsp; Workflow Management with Rose and Cylc \u0026nbsp; Rose and Cylc provide a suite of tools available for managing sophisticated multi-step workflows. See full details on the Rose and Cylc page.\nGraphical Linux desktop access using NoMachine NX \u0026nbsp; NoMachine NX is a tool that allows users to run a virtual graphical Linux desktop on JASMIN. See details on the NX page.\nData movement software \u0026nbsp; Data transfer \u0026nbsp; There are numerous tools for transferring data to/from JASMIN. Please consult the Data Transfer Tools page for details.\nData migration disk/tape \u0026nbsp; The Joint Data Migration App, or JDMA, is a flexible tool for managing large migrations of data between a range of storage media. On JASMIN, it can be used for migrating data to/from tape, disk and object-store. See more details on the JDMA page.\nStill have a question? \u0026nbsp; Please consult the JASMIN software FAQs."
+        content: "JASMIN is a large platform where a range of software tools, packages and environments are available. Many users employ software already installed on JASMIN whilst some need to install their own tools for a particular purpose.\nThis page provides an overview of the software on JASMIN. It links to further information about a range of tools and environments.\nTo help get you started, these have been split into categories:\nSoftware available to all on JASMIN analysis/batch servers Additional tools for compiling and building software Restricted software Server-specific software Data movement software Which software should I use? \u0026nbsp; There are a lot of different options when you are trying to work out which tools and/or environments to use on JASMIN. Here are some quick questions to help you get started:\n1. Do you want to use NAME, JULES, or MOOSE?\nIf yes, see: Restricted software 2. Do you want a workflow management tool or a graphical Linux desktop?\nIf yes, see: Server-specific software 3. Do you want tools for transferring data or migrating it to/from tape?\nIf yes, see: Data movement software 4. If you need anything else:\nSee: Software available to all on JASMIN analysis/batch servers Software available on all sci/batch nodes \u0026nbsp; Data analysis and visualisation tools \u0026nbsp; If you are looking for software packages and environments that allow you to analyse, process and visualise data then take a look at these options:\nJaspy software environments (Python, R and other tools) The \u0026ldquo;jasmin-sci\u0026rdquo; software environment (packages not provided by Jaspy) Additional packages (provided under: \u0026ldquo;/apps/jasmin\u0026rdquo;) IDL (and MIDL) Creating your own software environments NOTE : If you are using Matplotlib to visualise data please refer to the advice on our Matplotlib help page.\nJaspy Software Environments (Python, R and other tools) \u0026nbsp; Jaspy is a toolkit for managing and deploying Conda environments that include both Python and non-Python packages. Jaspy environments, along with the \u0026ldquo;jasmin-sci\u0026rdquo; environment (see below), provide the main software on the scientific analysis servers and LOTUS cluster on JASMIN. Details of the Jaspy environments and packages are available on the Jaspy page.\nThe \u0026ldquo;jasmin-sci\u0026rdquo; Software Environment \u0026nbsp; The \u0026ldquo;jasmin-sci\u0026rdquo; software environment is intended as a supplement to Jaspy (see above). It contains extra software packages for use with scientific data analysis which, for various reasons, are not provided as part of Jaspy itself. Details of this environment are provided on the \u0026ldquo;jasmin-sci\u0026rdquo; software page.\nAdditional packages \u0026nbsp; A number of additional packages are available under the \u0026ldquo;/apps/jasmin/\u0026rdquo; directory scientific analysis servers and LOTUS cluster. Details of these packages are provided on the additional sofware packages page.\nIDL \u0026nbsp; IDL\u0026nbsp; stands for Interactive Data Language. It is a licensed data manipulation toolkit made available on JASMIN. IDL is available on the JASMIN scientific analysis servers and LOTUS cluster. See IDL.\nCreating your own software environments \u0026nbsp; If you intend to create your own software environments then please take a look at the following pages:\nBuilding virtual environments on top of Jaspy environments Sharing your JASMIN software environments with other users Compilers on JASMIN Restricted software available on specific servers \u0026nbsp; Workflow Management with Rose and Cylc \u0026nbsp; Rose and Cylc provide a suite of tools available for managing sophisticated multi-step workflows. See full details on the Rose and Cylc page.\nGraphical Linux desktop access using NoMachine NX \u0026nbsp; NoMachine NX is a tool that allows users to run a virtual graphical Linux desktop on JASMIN. See details on the NX page.\nData movement software \u0026nbsp; Data transfer \u0026nbsp; There are numerous tools for transferring data to/from JASMIN. Please consult the Data Transfer Tools page for details.\nData migration disk/tape \u0026nbsp; The Joint Data Migration App, or JDMA, is a flexible tool for managing large migrations of data between a range of storage media. On JASMIN, it can be used for migrating data to/from tape, disk and object-store. See more details on the JDMA page.\nStill have a question? \u0026nbsp; Please consult the JASMIN software FAQs."
       })
       .add(
       
@@ -8102,7 +8088,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 107,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8116,7 +8102,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 108,
         href: "/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/",
         title: "System administration guidance (external cloud)",
         description: "System administration guidance (external cloud)",
@@ -8130,7 +8116,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 109,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8144,7 +8130,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 110,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
         description: "The \"jasmin-sci\" software environment",
@@ -8158,7 +8144,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 111,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service with GPUs enabled",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8172,7 +8158,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 112,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8186,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 113,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8200,7 +8186,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 114,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8214,7 +8200,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 115,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8228,7 +8214,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 116,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8242,7 +8228,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 117,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8256,7 +8242,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 118,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8270,7 +8256,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 119,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8284,7 +8270,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 120,
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
         description: "Using the JASMIN Object Store",
@@ -8298,7 +8284,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 121,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8312,7 +8298,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 122,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
         description: "Workflow Management with rose/cylc",
@@ -8326,13 +8312,13 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 123,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",
         
         
-        content: "The number-of-groups limitation - and how to work around it\nDescription \u0026nbsp; On JASMIN, users are added to Linux groups for access to the group workspaces and CEDA datasets which they have registered to use, in addition to a couple of standard groups granted for all users.\nType the id command to see which groups you are a member of. The first one (shown with gid=) is your primary group, and the list starting groups= contains your supplementary groups.\nAlthough the Linux operating system allows the group list to contain a large number of supplementary groups, certain types of filesystem are subject to a maximum number that is supported. When such filesystems are accessed, a truncated copy of the group list may be used while deciding whether to grant read or write access to a given file or directory. This can mean that although a user is a member of the group which is needed, a permissions error still occurs, because the relevant group is being ignored. The groups which are ignored are those with the higher numerical group IDs.\nThe most significant limitation affecting JASMIN users is for filesystems which are mounted as type NFS, because this only supports 16 groups. In particular, this applies to the group workspaces that are optimised for small files (under path /gws/smf). It also applies to the home directories and /apps software directories, and although with these directories it is not normally necessary to restrict access via Linux groups, the restriction can affect for example access to the NAG library licence file for NERC users. The panfs filesystem type (Panasas group workspaces under /group_workspaces) is also affected in principle, but it has a limit of 32 groups, which is less likely to affect users.\nWorkarounds \u0026nbsp; newgrp \u0026nbsp; The newgrp program is available on all machines, and can be used to choose a particular group. For example, typing:\nnewgrp ukmo_climwill start a session (sub-shell) in which the primary group ID of the process is ukmo_clim (provided that you are already a member of that group). This will ensure that, in that session, you have access to any files which require that group. Note that it will also mean that any files and directories you create in that session will be owned by the group which you selected (although they can subsequently be changed with the chgrp command). When you exit from the sub-shell, you will be returned to the original session with your normal group list.\nThe main limitations of newgrp are that:\nIt only works interactively, so it is not possible to use it in LOTUS jobs. It only affects the primary group ID, so cannot be used to guarantee access to more than one group simultaneously, because some groups on the supplementary group list might still be ignored for filesystem accesses. Note that if newgrp prompts for a password, it is because you are trying to use it to access a group that you are not a member of (and then there is no password that you can usefully type).\nwithgroups \u0026nbsp; On the JASMIN scientific analysis machines running CentOS7, including the LOTUS nodes in the centos7 queue, a utility (written locally by CEDA) has been added, which overcomes the above mentioned limitations of the newgrp program. It is not available on the machines running RHEL6.\nTo use withgroups, you first need the following command (in your interactive session or shell script):\nmodule load jasmin-sciOnce you have done this, you can run any individual command with the syntax withgroups \u0026lt;group\u0026gt; \u0026lt;command\u0026gt; followed by any commands arguments, for example:\nwithgroups ukmo_clim ls /badc/ukmo-mslp/You can also use a comma-separated list of groups if a command requires more than one group, for example if you wanted to copy a file between group workspaces:\nwithgroups gws_foo,gws_bar cp /gws/smf/foo/myfile /gws/smf/bar/In these cases, the group list consists only of the specified groups. So if you specify a few additional groups, these should be safe from being ignored during filesystem access, because they are no longer part of a long list.\nNote that the group list in the calling session does not get modified. You will see this if for example you type:\nmodule load jasmin-sci # a reminder of the setup command id # \u0026#34;id\u0026#34; reports your whole list of groups withgroups ukmo_clim id # \u0026#34;id\u0026#34; only reports the \u0026#34;ukmo_clim\u0026#34; group id # again, \u0026#34;id\u0026#34; will show you the whole group listThis means that you should use withgroups on every command for which it is needed. If you prefer to use a subshell in which every command will have this group(s) list (for similar behaviour to newgrp) you could start it by doing something like:\nwithgroups ukmo_clim bash(You might see from the help message that the withgroups command includes a -a option to include all the original groups in the group list, just with the specified ones at the front. However, this option is not recommended for this purpose, because it turns out that filesystem access will ignore the ordering and still truncate the list in numerical order.)\nUse of workarounds with python (and other) programs \u0026nbsp; Note that there is no python module equivalent of either newgrp or withgroups. In most cases, it is sufficient to run your whole python script either inside a newgrp session or via withgroups, for example:\nwithgroups ukmo_clim python my_script.pyIn the unlikely event that your Python program needs access to a large number of groups, you will have to lauch external commands (using os.system or the subprocess package) that start with the relevant withgroups prefix.\nSimilar considerations apply to code written in other programming languages."
+        content: "The number-of-groups limitation - and how to work around it\nDescription \u0026nbsp; On JASMIN, users are added to Linux groups for access to the group workspaces and CEDA datasets which they have registered to use, in addition to a couple of standard groups granted for all users.\nType the id command to see which groups you are a member of. The first one (shown with gid=) is your primary group, and the list starting groups= contains your supplementary groups.\nAlthough the Linux operating system allows the group list to contain a large number of supplementary groups, certain types of filesystem are subject to a maximum number that is supported. When such filesystems are accessed, a truncated copy of the group list may be used while deciding whether to grant read or write access to a given file or directory. This can mean that although a user is a member of the group which is needed, a permissions error still occurs, because the relevant group is being ignored. The groups which are ignored are those with the higher numerical group IDs.\nThe most significant limitation affecting JASMIN users is for filesystems which are mounted as type NFS, because this only supports 16 groups. In particular, this applies to the group workspaces that are optimised for small files (under path /gws/smf). It also applies to the home directories and /apps software directories, and although with these directories it is not normally necessary to restrict access via Linux groups. The panfs filesystem type (Panasas group workspaces under /group_workspaces) is also affected in principle, but it has a limit of 32 groups, which is less likely to affect users.\nWorkarounds \u0026nbsp; newgrp \u0026nbsp; The newgrp program is available on all machines, and can be used to choose a particular group. For example, typing:\nnewgrp ukmo_climwill start a session (sub-shell) in which the primary group ID of the process is ukmo_clim (provided that you are already a member of that group). This will ensure that, in that session, you have access to any files which require that group. Note that it will also mean that any files and directories you create in that session will be owned by the group which you selected (although they can subsequently be changed with the chgrp command). When you exit from the sub-shell, you will be returned to the original session with your normal group list.\nThe main limitations of newgrp are that:\nIt only works interactively, so it is not possible to use it in LOTUS jobs. It only affects the primary group ID, so cannot be used to guarantee access to more than one group simultaneously, because some groups on the supplementary group list might still be ignored for filesystem accesses. Note that if newgrp prompts for a password, it is because you are trying to use it to access a group that you are not a member of (and then there is no password that you can usefully type).\nwithgroups \u0026nbsp; On the JASMIN scientific analysis machines running CentOS7, including the LOTUS nodes in the centos7 queue, a utility (written locally by CEDA) has been added, which overcomes the above mentioned limitations of the newgrp program. It is not available on the machines running RHEL6.\nTo use withgroups, you first need the following command (in your interactive session or shell script):\nmodule load jasmin-sciOnce you have done this, you can run any individual command with the syntax withgroups \u0026lt;group\u0026gt; \u0026lt;command\u0026gt; followed by any commands arguments, for example:\nwithgroups ukmo_clim ls /badc/ukmo-mslp/You can also use a comma-separated list of groups if a command requires more than one group, for example if you wanted to copy a file between group workspaces:\nwithgroups gws_foo,gws_bar cp /gws/smf/foo/myfile /gws/smf/bar/In these cases, the group list consists only of the specified groups. So if you specify a few additional groups, these should be safe from being ignored during filesystem access, because they are no longer part of a long list.\nNote that the group list in the calling session does not get modified. You will see this if for example you type:\nmodule load jasmin-sci # a reminder of the setup command id # \u0026#34;id\u0026#34; reports your whole list of groups withgroups ukmo_clim id # \u0026#34;id\u0026#34; only reports the \u0026#34;ukmo_clim\u0026#34; group id # again, \u0026#34;id\u0026#34; will show you the whole group listThis means that you should use withgroups on every command for which it is needed. If you prefer to use a subshell in which every command will have this group(s) list (for similar behaviour to newgrp) you could start it by doing something like:\nwithgroups ukmo_clim bash(You might see from the help message that the withgroups command includes a -a option to include all the original groups in the group list, just with the specified ones at the front. However, this option is not recommended for this purpose, because it turns out that filesystem access will ignore the ordering and still truncate the list in numerical order.)\nUse of workarounds with python (and other) programs \u0026nbsp; Note that there is no python module equivalent of either newgrp or withgroups. In most cases, it is sufficient to run your whole python script either inside a newgrp session or via withgroups, for example:\nwithgroups ukmo_clim python my_script.pyIn the unlikely event that your Python program needs access to a large number of groups, you will have to lauch external commands (using os.system or the subprocess package) that start with the relevant withgroups prefix.\nSimilar considerations apply to code written in other programming languages."
       })
       ;
   

@@ -32,8 +32,7 @@ which are mounted as type NFS, because this only supports 16 groups. In
 particular, this applies to the group workspaces that are optimised for small
 files (under path `/gws/smf`). It also applies to the home directories and
 `/apps` software directories, and although with these directories it is not
-normally necessary to restrict access via Linux groups, the restriction can
-affect for example access to the NAG library licence file for NERC users. The
+normally necessary to restrict access via Linux groups. The
 `panfs` filesystem type (Panasas group workspaces under `/group_workspaces`)
 is also affected in principle, but it has a limit of 32 groups, which is less
 likely to affect users.

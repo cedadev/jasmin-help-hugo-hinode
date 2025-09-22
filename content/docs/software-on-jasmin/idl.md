@@ -1,7 +1,7 @@
 ---
 aliases: /article/209-idl-and-midl
-description: IDL
-title: Using IDL on JASMIN
+description: Using IDL on JASMIN
+title: IDL
 ---
 
 ## What is IDL?

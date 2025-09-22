@@ -26,7 +26,7 @@ There are a lot of different options when you are trying to work out which
 tools and/or environments to use on JASMIN. Here are some quick questions to
 help you get started:
 
-1\. Do you want to use NAME, JULES, MOOSE or the NAG libraries?
+1\. Do you want to use NAME, JULES, or MOOSE?
 
 - If yes, see: Restricted software
 

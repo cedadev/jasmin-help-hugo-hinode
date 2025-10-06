@@ -1,12 +1,10 @@
 ---
 aliases: /article/4435-get-a-jasmin-account
-description: Get a JASMIN portal account
+description: How to register on the JASMIN Accounts Portal
 slug: get-jasmin-portal-account
 title: Get a JASMIN portal account
 weight: 30
 ---
-
-This article explains how to register on the JASMIN accounts portal.
 
 Having a JASMIN portal account does not by itself provide you with any access to JASMIN machines or services.
 

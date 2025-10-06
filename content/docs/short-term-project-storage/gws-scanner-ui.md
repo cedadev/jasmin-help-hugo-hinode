@@ -19,7 +19,7 @@ The tree graph only shows tiles for the folders within the GWS, the files are lu
 
 Navigate to the [GWS Scanner homepage](https://gws-scanner.jasmin.ac.uk/) where you should see a **Log In** button.
 
-{{<image src="img/docs/gws-scanner-ui/gws-scanner-homepage.png" caption="">}}
+{{<image src="img/docs/gws-scanner-ui/gws-scanner-homepage.png" caption="Group Workspace Scanner Log In Screen">}}
 
 Clicking the login button will take you to the login page where you can sign in using your JASMIN account. Upon successful sign-in you should be redirected back to the homepage where you will have the option to view [your GWSs](https://gws-scanner.jasmin.ac.uk/my_gws).
 

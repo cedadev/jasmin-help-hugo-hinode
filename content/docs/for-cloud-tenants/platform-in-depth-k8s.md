@@ -7,7 +7,7 @@ weight: 40
 
 The **Kubernetes platform** delivers a complete Kubernetes container orchestration cluster, incorporating tools for monitoring, ingress control, and application management. It empowers you to run Kubernetes applications seamlessly within Azimuth or implement custom installations using Helm Charts or Kustomize to oversee Kubernetes manifests. Once your platform is up and running, you'll find a `kubeconfig` file in the platform Details section, ready for use with `helm` or `kubectl`.
 
-To configure your cluster, you'll need to provide a unique name and select a cluster template. This template determines the Kubernetes version and any customizations from your cloud operator.  Refer to your cloud operator's documentation for details on available templates and the resources associated with each control plane size option.
+To configure your cluster, you'll need to provide a unique name and select a cluster template, which determines the Kubernetes version.
 
 Every cluster needs at least one node group of worker nodes.  Give each node group a unique name and choose the appropriate cloud instance size based on your needs, considering factors like CPU, RAM, and GPUs. You can enable autoscaling to allow the node group to adjust its size automatically, or you can set a fixed number of instances. If you enable autoscaling, you'll need to define the minimum and maximum number of instances.
 
@@ -18,8 +18,8 @@ The advanced options are pre-set with reasonable defaults.  Proceed cautiously w
 Some configuration options include:
 
 - **autohealing:** enable this to let the cluster automatically attempt to fix unhealthy nodes
-- **Kubernetes Ingress:** enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer (you'll need an external IP available in your project for the load balancer)
-- **cert-manager:**, enable this to use cert-manager to manage TLS certificates for your cluster services.
+- **Kubernetes Ingress:** enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer (you'll need an external IP available in your project for the load balancer). Do not use this option and deploy your own ingress.
+- **cert-manager:** enable this to use cert-manager to manage TLS certificates for your cluster services.
 
 ### Platform creation
 
@@ -61,7 +61,7 @@ Available **Update** options include: ability to change to a different Control p
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-update.png" caption="kubernetes update" wrapper="col-9 mx-auto text-center">}}
 
-Additionally you can **Upgrade** the images in the cluster and potentially the Kubernetes version to a newer one.
+Additionally you can **Upgrade** the images in the cluster and potentially the Kubernetes version to a newer one. Note that the version of k8s can not be downgraded. If you need to go back to an earlier version og k8s, you would need to create a new cluster.
 
 *Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped.*
 

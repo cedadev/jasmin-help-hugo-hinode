@@ -1,6 +1,5 @@
 ---
 aliases: /article/4781-cluster-as-a-service-kubernetes
-date: 2023-05-23 10:54:27
 description: Cluster-as-a-service - Kubernetes
 slug: cluster-as-a-service-kubernetes
 title: Cluster-as-a-service - Kubernetes
@@ -11,36 +10,36 @@ Cluster-as-a-Service (CaaS).
 
 ## Introduction
 
-[Kubernetes](https://kubernetes.io/) is an open-source system for automating
+{{<link "https://kubernetes.io/">}}Kubernetes{{</link>}} is an open-source system for automating
 the deployment, scaling and management of containerised applications.
 
-Kubernetes is an extremely powerful system, and a full discussion of it's
+Kubernetes is an extremely powerful system, and a full discussion of its
 capabilities is beyond the scope of this article - please refer to the
 Kubernetes documentation. This article assumes some knowledge of Kubernetes
 terminology and focuses on things that are specific to the way Kubernetes is
 deployed by CaaS.
 
 In CaaS, Kubernetes is deployed in a single-master configuration using
-[Rancher Kubernetes Engine (RKE)](https://github.com/rancher/rke). This
+{{<link "https://github.com/rancher/rke">}}Rancher Kubernetes Engine (RKE){{</link>}}. This
 configuration was chosen so that a single external IP can be used for SSH
 access to the cluster and for
-[ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) \-
+{{<link "https://kubernetes.io/docs/concepts/services-networking/ingress/">}}ingress{{</link>}} \-
 external IPs are a scarce resource in the JASMIN Cloud and the number
 available to each tenancy is limited. It is for this reason that load-balancer
 services are also not available. Highly-available (HA) configurations may be
 available in the future.
 
 All externally-exposed services, including the Kubernetes API, are
-authenticated using the [Identity Manager]({{< ref "cluster-as-a-service-identity-manager" >}}), meaning that FreeIPA groups can be used to control
+authenticated using the [Identity Manager]({{% ref "cluster-as-a-service-identity-manager" %}}), meaning that FreeIPA groups can be used to control
 access to the cluster.
 
 The following services are also configured by CaaS (described in more detail
 later):
 
-- The [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
-- The [Openstack Cloud Provider](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#openstack) (Block Storage and Metadata only)
-- [Jetstack's cert-manager](https://docs.cert-manager.io/en/latest/)
-- The [Kubernetes dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+- The {{<link "https://kubernetes.github.io/ingress-nginx/">}}Nginx Ingress Controller{{</link>}}
+- The {{<link "https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#openstack">}}Openstack Cloud Provider{{</link>}} (Block Storage and Metadata only)
+- {{<link "https://docs.cert-manager.io/en/latest/">}}Jetstack's cert-manager{{</link>}}
+- The {{<link "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/">}}Kubernetes dashboard{{</link>}}
 
 ## Cluster configuration
 
@@ -63,7 +62,7 @@ Dashboard domain  |  The domain to use for the Kubernetes dashboard. If left emp
 ## Accessing the cluster
 
 Kubernetes is configured to use the OpenID Connect support of the [Identity
-Manager]({{< ref "cluster-as-a-service-identity-manager" >}}) for
+Manager]({{% ref "cluster-as-a-service-identity-manager" %}}) for
 authentication and authorisation. This means that all interactions with the
 cluster are authenticated and authorised against the users in FreeIPA, via the
 Keycloak integration.
@@ -100,7 +99,7 @@ Connect authentication for kubectl.
 In order to configure OpenID Connect, you need to know the client ID and
 secret of the OpenID Connect client for your Kubernetes cluster in Keycloak.
 If you are an admin, you can [find this information in the Keycloak admin
-console]({{< ref "cluster-as-a-service-identity-manager" >}}) \- the client
+console]({{% ref "cluster-as-a-service-identity-manager" %}}) \- the client
 will be named after the cluster. If you are **not** an admin, your admin
 should provide you with this information.
 
@@ -164,7 +163,7 @@ Kubernetes includes a powerful [Role-Based Access Control (RBAC)
 system](https://kubernetes.io/docs/reference/access-authn-authz/rbac/). A full
 discussion of the RBAC system is beyond the scope of this documentation, but
 this section gives some examples of how RBAC in Kubernetes can be used in
-combination with [FreeIPA groups]({{< ref "cluster-as-a-service-identity-manager" >}}) to allow fine-grained access to the cluster.
+combination with [FreeIPA groups]({{% ref "cluster-as-a-service-identity-manager" %}}) to allow fine-grained access to the cluster.
 
 For every Kubernetes cluster that is deployed, CaaS automatically creates a
 group in FreeIPA called `<clustername>_users`. This group, along with the
@@ -181,7 +180,7 @@ restrictive permissions to them.
 
 For example, suppose you have some auditors who require read-only access to
 the entire cluster in order to know what workloads are running. The first
-thing to do is [create a group in FreeIPA]({{< ref "cluster-as-a-service-identity-manager" >}}) \- in this case, you might create a group called
+thing to do is [create a group in FreeIPA]({{% ref "cluster-as-a-service-identity-manager" %}}) \- in this case, you might create a group called
 `kubernetes_auditors`. Once the group is created, you can reference it in
 Kubernetes by using the prefix `oidc:` \- in this case the group would be
 referenced in Kubernetes as `oidc:kubernetes_auditors`. To grant read-only

@@ -1,6 +1,5 @@
 ---
 aliases: /article/4916-quickstart-software-envs
-date: 2020-08-06 15:53:42
 description: Quickstart for activating/deactivating software environments
 slug: quickstart-software-envs
 title: Quickstart for activating/deactivating software environments
@@ -8,7 +7,7 @@ title: Quickstart for activating/deactivating software environments
 
 This article provides a minimum quick-start guide for working with software environments on JASMIN.
 
-### Activate (load) an environment
+## Activate (load) an environment
 
 To activate an environment containing the "current" common software packages
 (including a modern Python):
@@ -17,7 +16,7 @@ To activate an environment containing the "current" common software packages
 module load jaspy
 {{</command>}}
 
-or for a specific version, see {{<link "jaspy-envs/#discover-which-environments-are-available">}}how to discover what versions are available{{</link>}}
+or for a specific version, see [how to discover what versions are available]({{% ref "jaspy-envs/#discover-which-environments-are-available" %}})
 
 To activate additional packages (known as "jasmin-sci"):
 
@@ -25,7 +24,7 @@ To activate additional packages (known as "jasmin-sci"):
 module load jasmin-sci
 {{</command>}}
 
-### Deactivate (unload) an environment
+## Deactivate (unload) an environment
 
 If you want to deactivate an environment that you have previously activated,
 do:
@@ -36,8 +35,8 @@ module unload <env-id>
 
 Where "<env-id>" is the name used when you activated the environment.
 
-### Which environment(s) should you use?
+## Which environment(s) should you use?
 
 If you are not sure which environment(s) to use please see details on the
-[overview]({{< ref "software-overview" >}}) of Jaspy and "jasmin-sci"
+[overview]({{% ref "software-overview" %}}) of Jaspy and "jasmin-sci"
 environments page.

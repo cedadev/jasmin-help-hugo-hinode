@@ -5,7 +5,7 @@ slug: elastic-tape-command-line-interface-hints
 title: Elastic Tape command-line interface hints
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 - Information below relates to the Elastic Tape command-line tools. The [JDMA]({{<ref "jdma">}}) system provides a better interface for putting/retrieving data into the Elastic Tape System)
 - A new system called [NLDS](https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html) is coming very shortly (as of Feb 2023) and will eventually replace both of these.
 {{</alert>}}
@@ -25,10 +25,13 @@ rc 1: error in start up parameters
 rc 2: error processing list
 ```
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 When writing data to the ET system, it is very important that data remains in place on disk, in the location where ET expects to find them, until the status of the batch in question has reached `CACHED_SYNCED` or `SYNCED`.  This means that the data have actually been written to tape, but is not the case until that status is shown.
 
-The location where ET expects to find the files will be specified in the `LISTFILE` that the user supplied to the `et_put.py` command, or all files and directories under the `DIR`.  The status of user's batches can be checked by going to the webpage: http://et-monitor.fds.rl.ac.uk/et_user/ET_AlertWatch.php. You need to be logged into JASMIN to see this webpage, via the [nx-login servers](/docs/interactive-computing/graphical-linux-desktop-access-using-nx/), and use Firefox as the web browser.
+The location where ET expects to find the files will be specified in the `LISTFILE` that the user supplied to the `et_put.py` command, or all files and directories under the `DIR`.  The status of user's batches can be checked by going to the webpage: http://et-monitor.fds.rl.ac.uk/et_user/ET_AlertWatch.php.
+
+You need to be logged into JASMIN to see this webpage, via the
+[nx login servers]({{% ref "graphical-linux-desktop-access-using-nx" %}}), and use Firefox as the web browser.
 
 Deleting the data from disk prematurely can cause problems for the ET system as a whole (impacting other users) so please be careful with this aspect.
 {{</alert>}}

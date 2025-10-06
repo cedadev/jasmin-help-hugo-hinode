@@ -12,12 +12,12 @@ weight: 30
 - as an easy was to create a machine which also has an available GUI.
 
 For external access, an optional public IP address can be configured to enable secure shell (SSH) connections. Each instance includes a dedicated cloud volume mounted at `/data` for managing large datasets. The capacity of this volume is configurable during instance launch.
-Azimuth offers two distinct **Linux Workstation configurations**, primarily differentiated by **access methods** and **resource utilisation**.
+Azimuth offers two distinct **Linux Workstation configurations**, primarily differentiated by **access methods**.
 
 1. **Linux Workstation (Direct Access)** configuration provides direct access to the Azimuth platform via a graphical user interface (GUI) displayed within the user's web browser.
 Interaction with the platform uses standard mouse and keyboard input. The Azimuth platform uses the processing power, memory, and storage resources of the underlying cloud instance/project. This option is ideal for users who prefer a traditional GUI-driven workflow and whose workload requirements are compatible with the allocated cloud instance resources. Shell access through the browser is also possible.
 
-1. **Linux Workstation (with SSH access)** configuration facilitates remote access to the Azimuth platform through the secure shell (SSH) protocol. Users interact with the platform via a command-line interface (CLI) established from their local workstation. This option is well-suited for users comfortable with command-line operations.
+1. **Linux Workstation (with SSH access)** is the same as without SSH access, except SSH access is enabled on the VM. Note that you will need to request port 22 to be opened in the firewall for the IP associated with the machine. This option is well-suited for users comfortable with command-line operations.
 
 ### Configuration
 

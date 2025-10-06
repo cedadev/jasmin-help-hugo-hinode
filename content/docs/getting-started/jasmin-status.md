@@ -9,11 +9,11 @@ This article lists sources of information about the status of JASMIN services.
 
 ## CEDA Status page
 
-The {{< link ceda_status >}}CEDA Status page{{< /link >}} is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.
+The {{< link "ceda_status" >}}CEDA Status page{{< /link >}} is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.
 
 ## JASMIN dashboard
 
-The {{<link "https://mon.jasmin.ac.uk" >}}JASMIN metrics dashboard{{</link>}} has been redeveloped and is now available again. 
+The {{<link "https://mon.jasmin.ac.uk" >}}JASMIN metrics dashboard{{</link>}} has been redeveloped and is now available again. You can log in with the same username and password for the JASMIN Accounts Portal.
 
 Please read the introductory information on that page.
 
@@ -32,4 +32,3 @@ This is still under active development and further dashboards may be added in du
 Please also keep an eye on:
 - `JASMIN-USERS` email list (all users should be on this list. If not, please ask)
 - {{< link ceda_news >}}CEDA News{{< /link >}} articles on the CEDA website
-- {{< link ceda_x >}}@cedanews on X (formerly Twitter){{</link>}}

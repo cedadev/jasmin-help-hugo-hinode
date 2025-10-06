@@ -1,6 +1,5 @@
 ---
 aliases: /article/5041-data-transfer-tools-globus-connect-personal
-date: 2022-01-25 11:19:40
 description: 'Globus Connect Personal'
 slug: globus-connect-personal
 title: 'Globus Connect Personal'
@@ -13,8 +12,8 @@ This article describes how to create your own Globus collection using Globus Con
 Please read {{<link "globus-transfers-with-jasmin"/>}} first for a wider introduction to Globus.
 
 Using {{<link "https://www.globus.org/globus-connect-personal">}}Globus Connect Personal (GCP){{</link>}} would enable you to transfer files to/from another Globus collection using
-any of the Globus Online transfer tools ([Web app](https://app.globus.org),
-[CLI](https://docs.globus.org/cli/) or [Python SDK](https://globus-sdk-python.readthedocs.io/en/stable/)).
+any of the Globus Online transfer tools ({{<link "https://app.globus.org">}}Web app{{</link>}},
+{{<link "https://docs.globus.org/cli/)">}}CLI{{</link>}} or {{<link "https://globus-sdk-python.readthedocs.io/en/stable/">}}Python SDK{{</link>}}.
 
 The term "endpoint" has changed meaning with version 5 of Globus, so users now interact with "collections". 
 but see {{<link "https://docs.globus.org/cli/collections_vs_endpoints/#:~:text=The%20Endpoint%20is%20used%20for%20some%20operations%20like%20collection%20listing,management%20capabilities%20and%20data%20transfers.">}}Endpoints vs Collections{{</link>}} for a fuller explanation of these entities.
@@ -22,7 +21,7 @@ but see {{<link "https://docs.globus.org/cli/collections_vs_endpoints/#:~:text=T
 For example, if you set up GCP on your desktop/laptop, you could transfer data files to/from your home directory or
 other storage on JASMIN.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 
 - You may not need to do this if your institution already has a Globus endpoint available to you.
 - You should NOT install this on a JASMIN server, as a Globus endpoint is already provided for you.
@@ -78,7 +77,7 @@ the web interface.
 The setup process will have prompted you for a name for your endpoint. It is
 assigned a unique ID, too.
 
-**If you have the Globus Command-Line Interface installed** ([see here]({{<ref "globus-command-line-interface" >}})), you can find
+**If you have the Globus Command-Line Interface installed** ([see here]({{%ref "globus-command-line-interface" %}})), you can find
 the ID of your own endpoint with the CLI command:
 
 {{<command>}}

@@ -1,6 +1,5 @@
 ---
 aliases: /article/4469-share-gws-on-jasmin
-date: 2022-01-14 10:00:33
 description: Sharing GWS data with other users elsewhere on JASMIN
 slug: share-gws-data-on-jasmin
 title: Sharing GWS data on JASMIN
@@ -12,7 +11,7 @@ This article explains how a GWS Manager can organise for some directories within
 
 **Note:** this only applies to sharing data within the managed environment of the JASMIN platform.
 If you need to share data with users outside JASMIN, or to users of external cloud tenancies, please consider
-the [HTTP option]({{< ref "share-gws-data-via-http" >}}).
+the [HTTP option]({{% ref "share-gws-data-via-http" %}}).
 
 ## How to share specific directories
 
@@ -50,14 +49,14 @@ sub-directory as well. Please consult the `chmod` man pages (by typing `man
 chmod`) for details.
 
 NOTE: if you have a `public` directory then it needs `755` access if you want it
-to be visible via the webserver on the `gws-access.jasmin.ac.uk` server. So
+to be visible via the webserver via the `gws-access.jasmin.ac.uk` service. So
 you may wish to re-add execute permission on that directory, e.g.:
 
 {{<command>}}
 chmod o+x /group_workspaces/jasmin/superproj/public
 {{</command>}}
 
-{{< alert type="danger" >}}
+{{< alert alert-type="danger" >}}
 Do not set open permissions on files or directories.
 By this we mean permissions where data are "world-writable" by anyone, for example
 

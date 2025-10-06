@@ -5,7 +5,7 @@ title: Azimuth Identity Provider
 weight: 70
 ---
 
-Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed in this way.
+Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.
 
 To access the Identity Provider, go to the **Identity Provider** tab, and click **Open identity provider**.
 

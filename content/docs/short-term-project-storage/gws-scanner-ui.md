@@ -1,16 +1,14 @@
 ---
 title: "GWS Scanner UI"
 description: "User interface to GWS scanner"
-date: 2023-07-17T15:21:46+01:00
 ---
 
 The [Group Workspace (GWS) Scanner](https://gws-scanner.jasmin.ac.uk/) UI is an interactive web application for JASMIN users to view their GWSs.
 
-**_Please note this service is under beta-testing and should be used with care (July 2023)_**
-
 ## What is the GWS Scanner UI?
 
 A GWS is collaborative storage made available to a group for a project. The GWS Scanner UI provides information about the structure of GWSs in the form of a tree graph showing the folders within the GWS. The tiles of the graph can be scaled or coloured by size, count or heat. 
+
 - **Size** refers to the size (in TB or GB) of the folder
 - **count** refers to the number of files and folders within the directory
 - **heat** refers to the average time since last access (hot = recent).
@@ -25,7 +23,7 @@ Navigate to the [GWS Scanner homepage](https://gws-scanner.jasmin.ac.uk/) where 
 
 Clicking the login button will take you to the login page where you can sign in using your JASMIN account. Upon successful sign-in you should be redirected back to the homepage where you will have the option to view [your GWSs](https://gws-scanner.jasmin.ac.uk/my_gws).
 
-{{< alert type="info" >}}
+{{< alert alert-type="info" >}}
  At any time, you can click the JASMIN logo in the navbar to return to the homepage.
 {{< /alert >}}
 
@@ -47,10 +45,10 @@ Scrolling down the page, you will find the doughnut graphs. There is one for the
 
 ## Common issues and questions
 
-  * If you get stuck on a loading screen try refreshing the page - we are working on fixing this issue. 
-  * If you go to the [My GWSs](https://gws-scanner.jasmin.ac.uk/my_gws) page and don't have any GWSs listed, check that your JASMIN account does have access to the GWS you are looking for.
-  * Sometimes, if there are lots of tiles they can be hard to read - you can hover over the tile to get the full title or if you want to view the tree graph for that folder, you search for it by URL instead. 
-  * If you are ever stuck and requiring help, the help beacon can be accessed from any page.
+- If you get stuck on a loading screen try refreshing the page - we are working on fixing this issue.
+- If you go to the [My GWSs](https://gws-scanner.jasmin.ac.uk/my_gws) page and don't have any GWSs listed, check that your JASMIN account does have access to the GWS you are looking for.
+- Sometimes, if there are lots of tiles they can be hard to read - you can hover over the tile to get the full title or if you want to view the tree graph for that folder, you search for it by URL instead.
+- If you are ever stuck and requiring help, the help beacon can be accessed from any page.
 
 {{<image src="img/docs/gws-scanner-ui/gws-scanner-beacon.png" wrapper="col-2 mx-auto" caption="">}}
 
@@ -58,6 +56,6 @@ Scrolling down the page, you will find the doughnut graphs. There is one for the
 
 Here are some links to learn more about the GWS Scanner:
 
-  * [The GWS Scanner UI](https://gws-scanner.jasmin.ac.uk/)
+- [The GWS Scanner UI](https://gws-scanner.jasmin.ac.uk/)
 
-If you have any questions or suggestions, feel free to [get in touch](mailto:nicola.farmer@stfc.ac.uk).
+If you have any questions or suggestions, feel free to [get in touch](mailto:support@jasmin.ac.uk).

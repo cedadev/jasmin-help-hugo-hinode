@@ -12,9 +12,10 @@ This article introduces the topic of data transfer to/from JASMIN.
 As a JASMIN user you are very likely to be involved in data transfer. You
 might need to copy data files/directories from JASMIN to remote sites (such as
 your own PC, MONSooN or ARCHER2) or bring new data on to JASMIN. These data
-transfer articles explain how to use the basic [transfer tools]({{< ref "data-transfer-tools" >}}) such as `rsync` and `scp` as well as more sophisticated
-methods such as GridFTP. They also cover which transfer services and servers
-are available to JASMIN users.
+transfer articles explain how to use the basic
+{{<link "data-transfer-tools">}}transfer tools{{</link>}} such as `rsync` and `scp`
+as well as more sophisticated services such as Globus. They also cover which
+transfer services and servers are available to JASMIN users.
 
 For many users, moving small amounts of data over short distances, the basic
 tools will meet their requirements. However, data transfer is a complicated
@@ -49,17 +50,15 @@ these locations are available on the transfer servers.
 
 ### JASMIN Transfer servers
 
-JASMIN provides specific [servers for managing data transfers]({{< ref
-"transfer-servers" >}}). Please read about the different servers available for
-particular data transfer needs, and about the various [data transfer
-tools]({{< ref "data-transfer-tools" >}}) available.
+JASMIN provides specific {{<link "../interactive-computing/transfer-servers">}}servers{{</link>}} for managing data transfers. Please read about the different servers available for
+particular data transfer needs, and about the various {{<link "data-transfer-tools">}}data transfer tools{{</link>}} available.
 
 ## Improving your transfer rates
 
 To achieve better transfer rates, for large transfers or where speed and reliability are important, you are recommended to:
 
-- use the {{<link "globus-transfers-with-jasmin">}}Globus data transfer service{{</link>}} (recommended), or
-- use the high-performance data transfer servers ({{<link "hpxfer-access-role">}}hpxfer access role required{{</link>}})
+- use the {{<link "globus-transfers-with-jasmin">}}Globus data transfer service{{</link>}} (recommended as the best method), or
+- use the high-performance data transfer servers (physical equivalents of the transfer VMs, located in a special network zone)
 - use other parallel-capable transfer tools such as bbcp, lftp (parallel-capable ftp client), or gridftp: see {{<link "data-transfer-tools">}}Data transfer tools{{</link>}}
 
 Transfer rates depend on many factors, so try to consider all of these:

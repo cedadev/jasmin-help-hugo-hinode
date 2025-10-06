@@ -20,8 +20,8 @@ This article **is for consortium managers** and explains:
 
 ## Introduction
 
-Please make sure you have read the article ["Requesting resources"]({{< ref
-"requesting-resources" >}}) to understand how the process works from the
+Please make sure you have read the article
+["Requesting resources"]({{% ref "requesting-resources" %}}) to understand how the process works from the
 requester's point of view.
 
 This article will show you how to process requests for resources, but also
@@ -30,21 +30,21 @@ show you what you need to consider when doing so.
 ## Overall process
 
 The overall process for handling requests for resources from projects is
-summarised as follows. It all happens via the [JASMIN Projects
-Portal](https://projects.jasmin.ac.uk).
+summarised as follows. It all happens via the
+{{< link "jasmin_projects_portal" >}}JASMIN Projects Portal{{</link>}}.
 
   * A **project owner** will have created a record representing a **project** for you to review
-  * This will come to you for review because they have selected your consortium as the most relevant to their work. 
+  * This will come to you for review because they have selected your consortium as the most relevant to their work.
     * But this means that the resources they are requesting need to come out of your consortium allocation.
-  * The project record should contain: 
+  * The project record should contain:
     * A project description
     * Requests for 1 or more services. Each proposed service (e.g., a Group Workspace or a Cloud Tenancy) can have
       * 1 or more requirements for **resources**
         * For a Group Workspace service, these could be requirements for disk or tape storage
         * For a Cloud Tenancy service, these could be requirements for disk, CPU and memory resources for the tenancy
-    * Once **all the requirements for a service** have been agreed with the project owner, you, as consortium manager can submit the request for provisioning by the JASMIN team. 
+    * Once **all the requirements for a service** have been agreed with the project owner, you, as consortium manager can submit the request for provisioning by the JASMIN team.
       * Different services on the same project can be provisioned separately: for example, we can provision the Group Workspace resources while you're still discussing what's needed for a cloud tenancy.
-      * But all the requirements for a particular service (for example, disk and tape, for a Group Workspace) need to be agreed before it can be submitted for provisioning. 
+      * But all the requirements for a particular service (for example, disk and tape, for a Group Workspace) need to be agreed before it can be submitted for provisioning.
       * If necessary, certain requirements can simply be rejected and excluded from the submission and can be added later.
       * Requests made by projects directly to the JASMIN team will be referred back to this process, as it's essential that we manage valuable resources in an organised manner, involving you as consortium manager to make decisions for your consortium's allocations. So this does involve active engagement on your part.
   * Once resources have been provisioned, you should be notified so that you can track the progress of the request on behalf of the project.
@@ -54,15 +54,15 @@ Portal](https://projects.jasmin.ac.uk).
 Your task when reviewing should be to:
 
   * Check that the project has selected the appropriate consortium: does this activity sit within your domain?
-  * **Scrutinise** the project's request for use of your allocation of consortium resources for this project. Questions to consider are: 
-    * Do the proposed resource requirements sound reasonable? 
-      * Have they properly considered using shared services like scratch and XFC to minimise the need for their own dedicated resources? For example: 
+  * **Scrutinise** the project's request for use of your allocation of consortium resources for this project. Questions to consider are:
+    * Do the proposed resource requirements sound reasonable?
+      * Have they properly considered using shared services like scratch and XFC to minimise the need for their own dedicated resources? For example:
         * Instead of 100TB SOF for their Group Workspace, could they manage with 25TB, knowing that copious scratch space is nearly always available?
         * Could some of the 100TB go on tape first, "streaming" their processing so that only some fraction is needed on disk at a time?
         * Have they asked for tape resources alongside their disk space? (this would reassure you that they've considered a sensible workflow like above, but you might want to discuss with them). It's reasonable to ask for an equivalent amount of space on tape as on disk. Historically this has usually been provisioned by default anyway, but we do want to capture what the project actually plans to use.
       * Is the proposed workflow free of unnecessary duplication of data already available elsewhere on JASMIN, either in the CEDA Archive or other Group Workspaces (which can be processed in place rather than needing to be copied)?
       * Some of this information will be in the project description but feel free to contact the project owner to gather more details yourself to form your opinion.
-    * Are the start and end dates realistic? 
+    * Are the start and end dates realistic?
       * You will need to reclaim your consortium's resources once a project has finished (in order to support other projects from your allocation), so it's important that these dates are agreed and regularly reviewed.
       * Does the project actually need all the requested resources initially, or could they manage with some fraction to start with?
         * "Hogging" disk space (or other resources), but not using it, wastes expensive resources.
@@ -72,7 +72,7 @@ Your task when reviewing should be to:
 
 ## Processing a request for new resources
 
-Log in to the [JASMIN Projects Portal](https://projects.jasmin.ac.uk/)
+Log in to the {{< link "jasmin_projects_portal" >}}JASMIN Projects Portal{{</link>}}
 
 This requires your JASMIN credentials (so you need to have a JASMIN account to
 proceed). Two-factor authentication is used: you can opt to send a

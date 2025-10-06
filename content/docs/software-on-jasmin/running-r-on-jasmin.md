@@ -13,24 +13,24 @@ title: Running R on JASMIN
 ---
 
 On the JASMIN `sci` servers and LOTUS, we support the use of **R** through the
-"jasr" environment(s), as listed on the [Jaspy page]({{< ref "jaspy-envs">}}).
+"jasr" environment(s), as listed on the [Jaspy page]({{% ref "jaspy-envs" %}}).
 
 In order to activate the R environment, you will need to use:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jasr
 {{</command>}}
 
-Note that the Jaspy page lists [all available environments]({{< ref "jaspy-envs" >}}). You can also list the R packages that are available in the
+Note that the Jaspy page lists [all available environments]({{% ref "jaspy-envs" %}}). You can also list the R packages that are available in the
 environment by typing:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 ls $CONDA_PREFIX/lib/R/library/
 {{</command>}}
 
 Once you have activated the environment, you can start R, using:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 R
 (out)
 (out)R version 4.0.5 (2021-03-31) -- "Shake and Throw"
@@ -58,13 +58,13 @@ R
 If you have an R script that you wish to run, you can use the "Rscript"
 command, such as:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 Rscript <myscript>
 {{</command>}}
 
 The following shows the options available when using "Rscript":
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 Rscript --help
 (out)Usage: /path/to/Rscript [--options] [-e expr [-e expr2 ...] | file] [args]
 (out)
@@ -94,7 +94,7 @@ Rscript --help
 
 The version number (currently 4.0.5) is reported when you start R, or if you
 type:
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 R --version
 (out)R version 4.0.5 (2021-03-31) -- "Shake and Throw"
 (out)Copyright (C) 2021 The R Foundation for Statistical Computing
@@ -126,7 +126,7 @@ many add-on libraries that have been installed to supplement the core R
 distribution. It uses the "prettyunits" package to convert a number of bytes
 to human-readable format.
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jasr
 R --quiet
 {{</command>}}

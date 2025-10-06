@@ -20,7 +20,7 @@ replacement for NCL.
 To give you a chance now to familiarise yourself with `geocat-viz`, here are some
 instructions for how you could install it in a Conda environment under your own home directory.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Note that such an environment cannot be activated at the same time as Jaspy.
 {{</alert>}}
 
@@ -30,19 +30,19 @@ Commands marked with `#*` below will be needed again in order to activate the 
 
 Deactivate `jaspy` in this session:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module unload jaspy     ##*
 {{</command>}}
 
 Download `miniforge` installer:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 wget <https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh>
 {{</command>}}
 
 Install base environment:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 bash Miniforge3-Linux-x86_64.sh
 {{</command>}}
 
@@ -50,27 +50,27 @@ Accept the default answers to the questions, saying no to the question about `co
 
 Activate the base environment:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 source ~/miniforge3/bin/activate  ##*
 {{</command>}}
 
 Create and activate an environment:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 mamba create -n my-geocat-env
 conda activate my-geocat-env    ##*
 {{</command>}}
 
 Install the packages:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 mamba install geocat-viz geocat-datafiles
 {{</command>}}
 
 Try one of the examples from:\
 https://geocat-examples.readthedocs.io/en/latest/gallery/index.html
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 wget https://geocat-examples.readthedocs.io/en/latest/_downloads/efafc109e5344e8e33052ad5213ee4be/NCL_box_1.py
 python NCL_box_1.py
 {{</command>}}

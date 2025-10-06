@@ -8,7 +8,7 @@ title: Understanding new JASMIN storage
 weight: 160
 ---
 
-{{<alert type="info">}}This article was originally written in 2018/19 to introdice new forms of storage which were brought into produciton at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
+{{<alert alert-type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
 
 ## Introduction
 
@@ -51,7 +51,7 @@ times!
 
 The four types are:
 
-- **Solid state fast but not parallel disk (SSD),** really suitable for small files. This is what is used for your `/home/users` directories, so is good for things you really don’t want to lose, because this area is backed up. The same type of storage is also used for the scratch area `/work/scratch-nopw`, although this is NOT for persistent storage and is NOT backed up. SSD is great for compiling and storing millions of small files, but is the most expensive storage, so we don’t have a lot of it.
+- **Solid state fast but not parallel disk (SSD),** really suitable for small files. This is what is used for your `/home/users` directories, so it is good for things you really don’t want to lose, because this area is backed up. The same type of storage is also used for the scratch area `/work/scratch-nopw`, although this is NOT for persistent storage and is NOT backed up. SSD is great for compiling and storing millions of small files, but is the most expensive storage, so we don’t have a lot of it.
 - **Fast parallel disk (PFS)** , great for jobs that read and write the same file from many different processes. This is what we had before. It’s not so great for lots of small files. This is still pretty expensive, which is one of the reasons why we haven’t simply stayed with it. Some GWS still use this, but most are migrating to the next category - scale-out file storage.
 - **Scale Out File Storage (SOF)**. This is what most of our Group Workspaces (GWS) will use. This is great for large volumes of data with regular use (consider near-line tape storage if you don’t need access for a significant period). SOF is not so great for small files, so if you have lots of small files, best to either aggregate them or tar them up. This is *terrible* for parallel *write* access to files, and you must avoid that. More details on that below, but the key point is you might find you need to use the fast parallel scratch (currently /work/scratch) in your workflows as an intermediary between persisting your data and your Lotus batch jobs.
 - **High Performance Object Storage (HPOS)**. This is a new type of storage, and it’s best if you are working with the cloud. It’s going to be a bit tricky to get the hang of, so pay attention to the various things we’re going to be saying over the next few months about how to use it. It is the future though...
@@ -76,7 +76,7 @@ are expecting to see is not listed at the top level ( /gws/nopw/j04/) you
 should use the full path of the volume to access it, and after a very short delay, the
 volume should appear.
 
-See also [here]({{< ref "storage" >}}) to see where these are mounted
+See also [here]({{% ref "storage" %}}) to see where these are mounted
 throughout JASMIN.
 
 ## The BIG issue: why you need to be careful about parallel file access
@@ -113,4 +113,4 @@ performance.
 ## FAQs, issues and solutions
 
 Please read our collection of FAQs and known issues (and solutions!) which
-we've put together [HERE]({{< ref "faqs-storage" >}}).
+we've put together [HERE]({{% ref "faqs-storage" %}}).

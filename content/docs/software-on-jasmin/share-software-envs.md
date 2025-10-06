@@ -13,14 +13,14 @@ on JASMIN.
 A software environment is typically a collection of files and directories
 associated with a set of environment variables that allows a given session to
 access them. In the context of JASMIN, there are a number of Python/other
-environments already available on the system. See the [Jaspy page]({{< ref
-"jaspy-envs" >}}) for examples of these.
+environments already available on the system. See the 
+[Jaspy page]({{% ref "jaspy-envs" %}}) for examples of these.
 
 ## Creating software environments on JASMIN
 
 In some cases, JASMIN users will need to create their own software
 environments because the existing environments do not include all the packages
-that they require. See the [virtual environments page]({{< ref "python-virtual-environments" >}}) for details on creating your own Python
+that they require. See the [virtual environments page]({{% ref "python-virtual-environments" %}}) for details on creating your own Python
 environments.
 
 ## Tips on sharing software environments on JASMIN

@@ -147,7 +147,7 @@ fingerprint, which means the key was saved correctly. The key can be updated
 or deleted at any point in the future if the associated private key is
 compromised or lost:
 
-![](file-o8B0Efprrr.png)
+{{<image src="img/docs/cluster-as-a-service-identity-manager/file-o8B0Efprrr.png" caption="Adding an SSH key (4)">}}
 
 ### Changing a user's password
 
@@ -203,7 +203,7 @@ button.
 ## Managing groups
 
 When you deploy a cluster through CaaS, it may create one or more access
-control groups in FreeIPA as part of it's configuration. Some clusters can
+control groups in FreeIPA as part of its configuration. Some clusters can
 also consume additional groups created in FreeIPA. This is discussed in more
 detail in the documentation for each cluster type, but the way you manage
 group membership is the same in all cases.

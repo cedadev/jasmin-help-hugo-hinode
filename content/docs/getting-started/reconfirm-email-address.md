@@ -18,7 +18,7 @@ days before the required date. Once you are within 2 months of the required
 date, you can carry out the steps below at any time within before the required
 date: the sooner the better.
 
-1. Visit your profile at the JASMIN Accounts Portal <https://accounts.jasmin.ac.uk> If you are already signed in you can get to your profile by following the link to "My JASMIN Account", otherwise you will be automatically taken to your profile when you sign in.
+1. Visit your profile at the {{< link "jasmin_accounts_portal" >}}JASMIN Accounts Portal{{</link>}} If you are already signed in you can get to your profile by following the link to "My JASMIN Account", otherwise you will be automatically taken to your profile when you sign in.
 2. **Click the “Confirm now” button** in your JASMIN profile to request that an email containing a confirmation link is sent to your email address. If this button is not visible and instead you see the message "confirmed" next to your email address:
 
 {{<image src="img/docs/reconfirm-email-address/file-hEfcP6vF1r.png" caption="already confirmed" wrapper="col-2 mx-auto">}}
@@ -43,5 +43,5 @@ Please also contact the helpdesk if:
 - You need to change your email address
 
 You cannot update the email address yourself, since a change of institution
-may affect your eligibility to some JASMIN services. See [here]({{< ref "update-a-jasmin-account" >}}) for details of how to update other aspects of
+may affect your eligibility to some JASMIN services. See [here]({{% ref "update-a-jasmin-account" %}}) for details of how to update other aspects of
 your JASMIN account.

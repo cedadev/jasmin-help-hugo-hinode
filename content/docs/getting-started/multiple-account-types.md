@@ -10,8 +10,6 @@ title: Multiple account types
 weight: 110
 ---
 
-_**Trial period extended**_
-
 This article defines the types of account available on JASMIN and their
 purpose. It covers:
 
@@ -27,9 +25,6 @@ set of users, or by services or functions.
 
 To maintain a secure approach, we have brought these together into a clearly-
 defined set of account types for each purpose.
-
-**These are being introduced on a trial basis as of 1st June 2023 for an
-initial period of 7 months.**
 
 ## Definitions
 

@@ -24,12 +24,12 @@ aim to enhance the efficiency and effectiveness of scientific research by provid
 
 A **project**, also known as a **cloud tenancy**, is an organizational unit in the cloud where users are assigned.
 Users can be part of multiple tenancies, and all resources within a tenancy are visible and editable by its members or
-if a **external IP** is attached, external users can also access it.
+if a **external IP** is attached (and firewall changes are requested), external users can also access it.
 To get a cloud tenancy or access an existing one, you currently need to contact Helpdesk Support, *This may change in the future*.
 
 ## Using the JASMIN Azimuth Cloud Portal
 
-To access azimuth navigate to the [JASMIN Azimuth Portal](https://portal.azimuth.jasmin.ac.uk/) which will take you to the landing page shown in the image below.
+To access azimuth navigate to the [JASMIN Azimuth Portal](https://portal.cloud.jasmin.ac.uk/) which will take you to the landing page shown in the image below.
 
 
 {{<image src="img/docs/azimuth-cloud-portal/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}

@@ -1,6 +1,5 @@
 ---
 aliases: /article/147-cylc-rose-on-jasmin
-date: 2022-02-02 18:53:11
 description: Workflow Management with rose/cylc
 slug: rose-cylc-on-jasmin
 tags:
@@ -50,12 +49,12 @@ information about authentication to the repositories see:
 
 Following these instructions will give you access to FCM.
 
-If you would like to run the cylc GUI then please login through the [NoMachine
-servers]({{< ref "graphical-linux-desktop-access-using-nx" >}}).
+If you would like to run the cylc GUI then please login through the 
+[NoMachine servers]({{% ref "graphical-linux-desktop-access-using-nx" %}}).
 
 ## Example rose/cylc suite
 
-Please see the JASMIN Workshop tutorial for a [worked example](https://github.com/cedadev/jasmin-workshop/tree/master/tutorials/tut02) of setting up a rose/cylc suite and run it on LOTUS.
+Please see the JASMIN Workshop tutorial for a {{<link "https://github.com/cedadev/jasmin-workshop/tree/master/tutorials/tut02">}}worked example{{</link>}} of setting up a rose/cylc suite and run it on LOTUS.
 
 ## Setting up the "suite.rc" file for use with LOTUS
 

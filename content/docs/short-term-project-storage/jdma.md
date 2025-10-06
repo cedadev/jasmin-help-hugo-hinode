@@ -1,13 +1,12 @@
 ---
 aliases: /article/4698-jdma
-date: 2022-10-20 11:32:46
 description: Joint-storage Data Migration App (JDMA)
 slug: jdma
 title: Joint-storage Data Migration App (JDMA)
 ---
 
-{{<alert type="info">}}
-A new system called [NLDS](https://techblog.ceda.ac.uk/2022/03/09/near-line-data-store-intro.html) is coming very shortly (as of Feb 2023) and will eventually replace both Elastic Tape and JDMA.
+{{<alert alert-type="info">}}
+Please see [Near-Line Data Store](nlds) for details of JASMIN's new storage service, which will replace both JDMA and Elastic Tape and is now available for use.
 {{</alert>}}
 
 **See the JDMA user documentation
@@ -52,7 +51,7 @@ The JDMA client github is at:
 If you are working on JASMIN and you wish to use the JDMA client, then you can
 install it as follows on a `sci` server:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jaspy
 python -m venv ~/venvs/jdma-venv
 source ~/venvs/jdma-venv/bin/activate
@@ -61,3 +60,22 @@ pip install git+https://github.com/cedadev/jdma_client
 
 You should then have the **jdma** command-line tool available in your terminal
 session.
+
+{{<alert alert-type="info">}}
+  In **August 2024** the JDMA server was upgraded to a new operating system.
+  This requires an upgraded JDMA client to be installed.
+  If you were using JDMA prior to **August 2024** then you will *have* to upgrade your client.
+  This is a straightforward process of three steps, shown below:
+
+  1. Activate the virtual environment as above:
+  2. Install the upgraded JDMA client:
+  3. Check the version of the JDMA client:
+
+  The correct version is ``1.0.1``
+  {{<command user="user" host="sci-vm-01">}}
+  source ~/jdma_venv/bin/activate
+  pip install --upgrade git+https://github.com/cedadev/jdma_client
+  pip list | grep jdma-client
+  {{</command>}}
+
+{{</alert>}}

@@ -9,9 +9,9 @@ title: Access to storage
 weight: 150
 ---
 
-**IMPORTANT:** Please see also [Understanding new JASMIN storage]({{< ref
-"understanding-new-jasmin-storage" >}}) which explains more about the
-different types of storage as of Phase 4 of JASMIN's history.
+**IMPORTANT:** Please see also
+[Understanding new JASMIN storage]({{% ref"understanding-new-jasmin-storage" %}})
+which explains more about the different types of storage as of Phase 4 of JASMIN's history.
 
 ## Home directory
 
@@ -36,7 +36,7 @@ pdu -sh /home/users/<username>
 (out)#                   ^^^^^^^^^^ replace with your username
 {{</command>}}
 
-{{<alert type="danger">}}You are only allowed to exceed the 100 GB quota for a very
+{{<alert alert-type="danger">}}You are only allowed to exceed the 100 GB quota for a very
 brief period of time. If you continue to exceed the limit, you will be
 unable to add any more files, which means that jobs may fail, and other things may
 stop working for you. You will need to reduce your usage below the 100GB quota to resolve this.
@@ -50,9 +50,9 @@ Your home directory is backed up using a daily snapshot which provides a quick, 
 
 Users can access snapshots to recover files/directories that have been
 accidentally deleted. These are stored in
-`/home/users/.snapshot/homeusers.<snapshotid>/<username>`
+`/home/users/.snapshot/homeusers2.<snapshotid>/<username>`
 
-The most recent backup is the one with the highest snapshot id number.
+The most recent backup is the one with the latest snapshot date.
 
 Find the ones relevant to your username with a command line this:
 
@@ -73,12 +73,12 @@ drwx------ 113 joeblogs users 0 Jan 30 09:29 /home/users/.snapshot/homeusers2.20
 Each of these snapshot directories effectively contains your home directory as it was on that date. You can copy files back from them (yourself) to their original location.
 
 {{<command>}}
-ls -l /home/users/.snapshot/homeusers2.45678/joebloggs/
+ls -l /home/users/.snapshot/homeusers2.2024_02_01_02_01/joebloggs/
 (out)total 1170964
 (out)-rw-r--r-- 1 joebloggs users              104857600 Jun 26  2017 100M.dat
 (out)-rw-r--r-- 1 joebloggs users             1024000000 Feb  1  2017 1G.dat
 (out)-rw-r--r-- 1 joebloggs users                      0 Dec 18 12:09 6181791.err
-cp /home/users/.snapshot/homeusers2.45678/joebloggs/100M.dat ~/100M.dat
+cp /home/users/.snapshot/homeusers2.2024_02_01_02_01/joebloggs/100M.dat ~/100M.dat
 {{</command>}}
 
 A snapshot backup is also provided for `/gws/smf` volumes (similar allocations of
@@ -93,7 +93,7 @@ relevant directories should be found at
 
 (where `NN` = `04` or `07` depending on where the volume is located)
 
-{{<alert type="danger">}}All other group workspace volumes are **not backed up**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
+{{<alert alert-type="danger">}}All other group workspace volumes are **not backed up**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
 {{</alert>}}
 
 Please also note the {{<link "#advice-on-inter-volume-symlinks-in-jasmin-storage">}}advice on inter-volume symlinks{{</link>}}, below: these are to be avoided.
@@ -114,7 +114,7 @@ location |  login  |  sci  |  transfer  |  LOTUS  |  Type  |  Parallel-write
 /home/users  |  R/W  |  R/W  |  R/W  |  R/W  |  SSD  |  no
 /gws/pw/j07<br>/gws/nopw/j04 (see note 1 below)<br>/gws/smf/j0[4,7] |  no<br>no<br>no | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | PFS<br>SOF<br>SSD | yes (hence "pw")<br>no (hence "nopw")<br>no
 /work/xfc/volX (see note 2 below) |  no<br>no  |  R/W  |  R/W |  R/W  | PFS  | yes
-/work/scratch-pw[2,3]<br>/work/scratch-nopw  |  no<br>no  |  R/W<br>R/W  |  R/W<br>R/W |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
+/work/scratch-pw[2,3]<br>/work/scratch-nopw  |  no<br>no  |  R/W<br>R/W  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
 /apps/contrib  |  No  |  RO  |  No  |  RO  |  n/a  |  n/a  
 /badc, /neodc (archives)  |  No  |  RO  |  RO  |  RO  |  n/a  |  n/a  
 {.table .table-striped}
@@ -129,9 +129,9 @@ nodes)
 Disks are mounted read/write (" **R/W** ") or read-only (" **RO** ").
 
 **Note 1:** Please refer to issues related to writing small files and NetCDF3
-to SOF storage [here]({{< ref "faqs-storage" >}})
+to SOF storage [here]({{% ref "faqs-storage" %}})
 
-**Note 2:** For details of how to use the Transfer Cache (XFC) service please see [here]({{< ref "../short-term-project-storage/xfc" >}})
+**Note 2:** For details of how to use the Transfer Cache (XFC) service please see [here]({{% ref "xfc" %}})
 
 ## Where to write data
 
@@ -140,11 +140,11 @@ written. Please follow these general principles when deciding where to write
 your data:
 
 - HOME directories (`/home/users`) are relatively small (100GB) and should NOT be used for storing large data volumes or for sharing data with other users.
-0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{< ref "short-term-project-storage" >}}) documentation for details.
+0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
   - `/gws/pw/j07` volumes are parallel-write-capable storage from Phase 7 (onwards) of JASMIN
   - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwaards) of JASMIN: this storage is not parallel-write-capable
-- The "scratch" areas (`/work/scratch-pw2`, `/work/scratch-pw3` and `/work/scratch-nopw`) are available as a temporary file space for jobs running on {{<link "../batch-computing/lotus-overview">}}LOTUS{{</link>}} (see next section below).
-- The (`/tmp`) directory is **not usually an appropriate location to write your data (see next section below).**
+- The "scratch" areas (`/work/scratch-pw2`, `/work/scratch-pw3` and `/work/scratch-nopw`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below).
+- The `/tmp` directory is **not usually an appropriate location to write your data (see next section below).**
 
 ## How to use the temporary disk space
 
@@ -186,7 +186,7 @@ completed normally!).
 Please do this yourself so that you are not taken by surprise when automated 
 deletion processes clear up any residual data:
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 Automated cleanup processes run daily and
 delete files that are older than 28 days from the last time of being
 accessed. This applies to `/work/scratch-pw2`, `/work/scratch-pw3` and
@@ -200,7 +200,7 @@ Please be a good JASMIN citizen!
 {{</alert>}}
 
 Any important data for keeping should be written to
-a {{<link "../short-term-project-storage/introduction-to-group-workspaces">}}group workspace{{</link>}}
+a [Group Workspace]({{% ref "introduction-to-group-workspaces" %}})
 or to your home directory if appropriate.**
 
 The `/work/scratch-pw[2,3]` and `/work/scratch-nopw` areas are not available on
@@ -236,7 +236,7 @@ The Archive includes a range of data sets that are provided under varying licenc
 to these groups is managed through standard Unix groups. Information about the
 data and their access restrictions is available from the {{<link "ceda_catalogue">}}CEDA Catalogue{{</link>}}. 
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 As a JASMIN user, it is your
 responsibility to ensure that you have the correct permissions to access data
 any data in CEDA Archive from within JASMIN, even if file system permissions permit access.
@@ -244,8 +244,8 @@ any data in CEDA Archive from within JASMIN, even if file system permissions per
 
 ## Tape access
 
-Group workspace managers also have [access to a tape library (Elastic Tape
-service)]({{< ref "secondary-copy-using-elastic-tape" >}}) for making
+Group workspace managers also have access to near-line storage on tape, see [Elastic Tape
+service]({{% ref "secondary-copy-using-elastic-tape" %}}) for making
 secondary copies and managing storage between online and near-line storage.
 
 ## Number of files in a single directory

@@ -20,18 +20,18 @@ Click on the link for each of the FAQs below to expand the answer.
 
 {{< accordion id="accordion-1" >}}
 
-  {{< accordion-item header="Can I use my existing MASS account" show="false" >}}
+  {{< accordion-item title="Can I use my existing MASS account" show="false" >}}
     No. You need a separate MASS account for use on the Met Office internal
 network (CDN), Monsoon, ECMWF HPCs, and JASMIN. With these different account
 types, you can have permission to access different datasets specific to these
 computing environments.
   {{< /accordion-item >}}
 
-  {{< accordion-item header="How do I use MOOSE?" >}}
+  {{< accordion-item title="How do I use MOOSE?" >}}
     Please see the [MOOSE User Guide here]({{< ref "moose-the-mass-client-user-guide" >}})
   {{< /accordion-item >}}
 
-  {{< accordion-item header="Will my account expire?" >}}
+  {{< accordion-item title="Will my account expire?" >}}
 Yes. By default, MASS via JASMIN accounts will expire after 500 days and your
 account will be automatically disabled.
 
@@ -41,7 +41,7 @@ access. If your account has already expired and you are looking to reactive
 it, please email: [Monsoon@metoffice.gov.uk](mailto:Monsoon@metoffice.gov.uk)
   {{< /accordion-item >}}
 
-  {{< accordion-item header="Why am I asked for a password when logging in to mass-cli?" >}}
+  {{< accordion-item title="Why am I asked for a password when logging in to mass-cli?" >}}
     There are two reasons that may result in you being prompted for a password
 when attempting to login to the MASS client machine (mass-cli.jasmin.ac.uk).
 
@@ -70,7 +70,7 @@ the `-A` flag or tick the relevant box for "agent forwarding".
 
   {{< /accordion-item >}}
 
-  {{< accordion-item header="How can I directly login to the MASS client machine?" >}}
+  {{< accordion-item title="How can I directly login to the MASS client machine?" >}}
     You can't, but you can edit your ssh configuration so that it automatically enables
 you to jump through the intermediary login servers.
 
@@ -94,7 +94,7 @@ greater as earlier versions do not support the `-W` flag. You can check your
 version using: `ssh -v`
   {{< /accordion-item >}}
 
-  {{< accordion-item header="Can I write to MASS from JASMIN?" >}}
+  {{< accordion-item title="Can I write to MASS from JASMIN?" >}}
     No, MASS access from JASMIN is strictly read-only. If you need to write to the MASS archive,
     contact monsoon@metoffice.gov.uk and ask to be put in touch with the relevant team.
   {{< /accordion-item >}}
@@ -105,7 +105,7 @@ version using: `ssh -v`
 
 {{< accordion id="accordion-2" >}}
 
-  {{< accordion-item header="Is this process running in the correct environment?" show="false" >}}
+  {{< accordion-item title="Is this process running in the correct environment?" show="false" >}}
     When running 'moo install' you may get an error message similar to:
 
 ```
@@ -122,7 +122,7 @@ send the `uid=` section of the output to:
 Your credentials file will then be reissued.
     {{</accordion-item>}}
 
-    {{<accordion-item header="Your password is due to expire in X day(s).">}}
+    {{<accordion-item title="Your password is due to expire in X day(s).">}}
 Occasionally on running a MOOSE command you will be told that your password is
 due to expire with a message of the form:
 
@@ -143,7 +143,7 @@ If you have a retrieval in progress, it is safe to run this command as it will
 not affect processes already running.
     {{</accordion-item>}}
 
-    {{< accordion-item header="ERROR_SINGLE_COPY_UNAVAILABLE" >}}
+    {{< accordion-item title="ERROR_SINGLE_COPY_UNAVAILABLE" >}}
     
 MOOSE - Single Copy Unavailable error
 
@@ -165,15 +165,15 @@ So, if you find that data or files are unavailable due to the `ERROR_SINGLE_COPY
 
 {{< accordion id="accordion-3" >}}
 
-  {{< accordion-item header="What is MOOSE?" >}}
+  {{< accordion-item title="What is MOOSE?" >}}
     The software that allows you to interact with MASS.
   {{< /accordion-item >}}
 
-  {{< accordion-item header="What is a project?" >}}
+  {{< accordion-item title="What is a project?" >}}
     A collection of access rules.
   {{< /accordion-item >}}
 
-  {{< accordion-item header="What is an access rule?" >}}
+  {{< accordion-item title="What is an access rule?" >}}
     Permission to access an area in MASS. For example, project-random might have
 an access rule to moose:/crum/random-numbers
 
@@ -181,15 +181,15 @@ Being part of project-random would allow you to access the random-numbers set.
 
   {{< /accordion-item >}}
 
-    {{< accordion-item header="How do I see what projects I am a member of?" >}}
+    {{< accordion-item title="How do I see what projects I am a member of?" >}}
     You can use: `moo prls`
   {{< /accordion-item >}}
 
-    {{< accordion-item header="How do I see what access rules a project has?" >}}
+    {{< accordion-item title="How do I see what access rules a project has?" >}}
     You can use: `moo projinfo -l projectname` (Replace _projectname_ with the name of one of your projects)
   {{< /accordion-item >}}
   
-  {{< accordion-item header="How do I get access to a project, or add an access rule to one of my projects?" >}}
+  {{< accordion-item title="How do I get access to a project, or add an access rule to one of my projects?" >}}
 Please contact your sponsor. They can then complete this form if they also
 agree you require access:
 
@@ -198,7 +198,7 @@ https://metoffice.service-now.com/sp?id=sc_cat_item&sys_id=5653331e1bbaf0d88ffa4
 Please note that the link above is only visible to those in the Met Office.
   {{< /accordion-item >}}
 
-      {{< accordion-item header="Why can I not access a set that I know is part of a project?" >}}
+      {{< accordion-item title="Why can I not access a set that I know is part of a project?" >}}
     If you are given access to a project but do not have access to all the sets
 associated with it, this can be due to the Access Control Lists (ACLs).
 
@@ -206,12 +206,12 @@ The project owner will be able to change the ACLs on sets to make them
 readable if it is appropriate.
       {{< /accordion-item >}}
 
-  {{< accordion-item header="How do I retrieve a file from MASS?" >}}
+  {{< accordion-item title="How do I retrieve a file from MASS?" >}}
 Use `moo get` or `moo select`. More information about both commands is in the
 [MOOSE User Guide]({{< ref "moose-the-mass-client-user-guide" >}}).
   {{< /accordion-item >}}
 
-    {{< accordion-item header="How do I make sure my directory has all the available data retrieved from MASS?" >}}
+    {{< accordion-item title="How do I make sure my directory has all the available data retrieved from MASS?" >}}
 **The problem:** You are running a model over a period of several days or weeks,
 and you need to analyse the output of the model as it runs. You have a moo get
 or moo select command that you run to fetch the data that is available. You
@@ -235,7 +235,7 @@ whether they will be there when your job runs. If you use this option MOOSE
 will get as much as it can from your list without bailing out.
   {{< /accordion-item >}}
 
-    {{< accordion-item header="How can I script my data retrieval from MASS?" >}}
+    {{< accordion-item title="How can I script my data retrieval from MASS?" >}}
 There are restrictions on how to login to JASMIN and use of Linux utilities
 such as ‘cron’ and ‘at’ but it is possible to remotely initiate a retrieval
 from MASS on to JASMIN, provided you have your ssh agent running on a machine
@@ -271,18 +271,22 @@ Again, you need the ssh-agent running locally:
 ```
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/jasmin_id_rsa 
-scp userid@xfer1.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.pp my_local_copy.pp
+scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/<project>/jasmin_file.pp my_local_copy.pp
 ```
   {{< /accordion-item >}}
   
-  {{< accordion-item header="Can I run MASS retrievals on LOTUS or through a workload manager?" >}}
-In addition to the interactive mass-cli server there is also the moose1 server
-that is only accessible through the {{<link "../batch-computing/lotus-overview">}}LOTUS batch processing cluster{{</link>}}. To submit jobs to moose1 you must use the [Slurm scheduler]({{< ref
-"slurm-scheduler-overview" >}}). You will need to specify the account
-mass and partition mass, for example:
+  {{< accordion-item title="Can I run MASS retrievals on LOTUS or through a workload manager?" >}}
+In addition to the interactive `mass-cli` server there is also a node of the [LOTUS batch processing cluster]({{< ref "lotus-overview">}}) lotus-overview with the MASS client installed. To submit jobs to this, you must use the [Slurm scheduler]({{< ref
+"slurm-scheduler-overview" >}}). You will need to specify: 
+
+- the **account** `mass`
+- **partition** `mass` and
+- **QOS** `mass`
+
+for example:
 
 ```
- sbatch -A mass -p mass [<options>] <jobscript>
+ sbatch -A mass -p mass -q mass [<options>] <jobscript>
 ``` 
 
 where \<jobscript\> looks something like:
@@ -302,6 +306,7 @@ including the following lines in your suite.rc file:
 [[[directives]]]
     --partition=mass
     --account=mass
+    --qos=mass
 [<options>]
 ```
 

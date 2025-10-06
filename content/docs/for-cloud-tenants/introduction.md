@@ -64,8 +64,8 @@ machine. These "edge devices" also provide a
 facility, which allows machines to be allocated an IP address that is visible outside of
 the tenancy.
 
-Because it is outside of the JASMIN firewall, tenancies in the JASMIN Cloud
-cannot directly access the JASMIN storage (including PFS, and SOF), and so
+Because we allow root access on cloud based VMs, tenancies in the JASMIN Cloud
+cannot access the JASMIN storage (including PFS, and SOF), and so
 there is no filesystem level access to the CEDA Archive or Group Workspaces -
 all access to these data is via the usual external interfaces (i.e. the Object
 Store, OpenDAP, HTTP).
@@ -113,7 +113,7 @@ The Azimuth Portal is able to provision {{<link "platform-in-depth-k8s">}}Kubern
 which can be used to make machine lifecycle and reproducible deployments easier,
 including:
 
-- deployments can be deployed and Helm charts, meaning that a deployment is a single 
+- deployments can be deployed with Helm charts, meaning that a deployment is a single 
 command away from being redeployed or updated
 - in event of machine loss, Kubernetes will redeploy the workload to another worker
 - Azimuth Kubernetes clusters auto-heal and can auto-scale to dynamically create and

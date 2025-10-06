@@ -1,6 +1,5 @@
 ---
 aliases: /article/202-share-gws-data-via-http
-date: 2020-12-07 14:50:54
 description: Sharing GWS data via HTTP
 slug: share-gws-data-via-http
 title: Sharing GWS data via HTTP
@@ -15,7 +14,7 @@ HTTP, so that:
 - common clients such as `wget`, `curl`, client libraries and web browsers can be used to access the data via a commonly-supported protocol.
 
 In this respect, the service should be regarded as another [data transfer
-tool]({{< ref "data-transfer-tools" >}}). However it must be arranged in
+tool]({{% ref "data-transfer-tools" %}}). However it must be arranged in
 advance between the Group Workspace manager and the JASMIN Helpdesk. It
 involves:
 
@@ -36,7 +35,7 @@ configuration permits this (now deprecated) means of restricting access.
 Future revisions of the service may remove or change the way access
 restrictions can be imposed].
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 This facility is **not to be used for hosting project websites**. It is
 provided as a simple means for specific data files to be made available to a
 wider audience than members of a Group Workspace, using a convenient data
@@ -63,7 +62,7 @@ membership of the GWS) can access the data via a web browser or other HTTP-
 based tools. This can be done by creating a `public` directory in the top-
 level directory of the GWS, for example:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 cd /group_workspace/jasmin/foobaa/
 mkdir public 
 chmod -Rf 755 public
@@ -76,7 +75,7 @@ visible from:
 
 https://gws-access.jasmin.ac.uk/public/foobaa/
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 The URL of this service changed in June 2020. A redirect
 is in place from the old URL of `https://gws-access.ceda.ac.uk/`, so the change
 should be transparent to existing users, but **please use the new URLs**
@@ -94,7 +93,7 @@ directories, you will need to create an ".htaccess" file within it. In turn,
 the ".htaccess" file must point to a ".htpasswd" file which lists the
 usernames and encrypted passwords that have read-access to that directory.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 This method of access control is entirely independent of the SSH login
 accounts used on JASMIN and would be the responsibility of the GWS Manager to
 maintain. It is not secure by modern standards and not particularly
@@ -111,6 +110,11 @@ xfer[12].jasmin.ac.uk
 
 You can then create the ".htpasswd" file as follows (using the example of a
 Group Workspace called "foobaa"):
+
+{{<alert alert-type="info">}}
+The `htpasswd` tool is going to be put on the new sci and xfer-vm servers shortly, 
+but please use it on the old ones (e.g sci1) for now.
+{{</alert>}}
 
 {{<command user="user" host="sci1">}}
 export GWS=/group_workspaces/jasmin/foobaa/

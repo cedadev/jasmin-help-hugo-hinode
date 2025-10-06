@@ -11,28 +11,27 @@ tags:
 title: Running python on JASMIN
 ---
 
-On the JASMIN analysis machines and on Lotus, we currently support
-Python version 3.10 through [Jaspy]({{< ref "jaspy-envs" >}}).
+On the JASMIN [scientific analysis servers]({{% ref "sci-servers" %}}) and on the Lotus batch cluster, we currently support Python version 3.11 with [Jaspy]({{% ref "jaspy-envs" %}}).
 
-When you log in, the default version of Python is `2.7.5` which is the used by the
-operating system. You shoud now use a more modern version of Python as v2.x is now deprecated. 
-We recomment using the Jaspy environments. In this example, we
+When you first log in, the default version of Python is that provided by the
+operating system. This is different to the one you shoud use for your work,
+and we recommend using the [Jaspy environments]({{% ref "jaspy-envs" %}}). In this example, we
 activate the current Jaspy environment before running Python.
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jaspy
 {{</command>}}
 
 Check the Python version:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 python -V
-(out)Python 3.10.8
+(out)Python 3.11.9
 {{</command>}}
 
 Run a script:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 python your_script.py
 {{</command>}}
 
@@ -46,10 +45,10 @@ then the recommended line to put at the top of the script would be:
 after which you should set "write" permission, and then you can run it without
 the "python " prefix:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 chmod 755 your_script.py
 ./your_script.py
 {{</command>}}
 
-You should work with Python on the {{<link "../interactive-computing/sci-servers">}}scientific analysis servers{{</link>}}. 
+You should work with Python on the [scientific analysis servers]({{% ref "sci-servers" %}}).
 Login servers do not have any software installed, or filesystems mounted other than home directories.

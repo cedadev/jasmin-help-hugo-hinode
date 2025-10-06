@@ -48,8 +48,8 @@ rsync [OPTION] ... [USER@]HOST:SRC [DEST]
 directories) to copy from, and `DEST` represents the file or directory to copy
 to. (Square brackets indicate optional parameters.)
 
-For more information visit the [official rsync
-website](http://rsync.samba.org/).
+For more information visit the
+{{< link "http://rsync.samba.org/" >}}official rsync website{{</link>}}.
 
 ### rsync example with JASMIN
 
@@ -58,8 +58,8 @@ Workspace on JASMIN:
 
 {{<command user="localuser" host="localhost">}}
 exec ssh-agent $SHELL
-ssh-add ~/.ssh/id_rsa_jasmin  ## local path to your private key file
-rsync myfile <username>@xfer1.jasmin.ac.uk:/gws/nopw/j04/myproject/data/
+ssh-add ~/.ssh/id_ecdsa_jasmin  ## local path to your private key file
+rsync myfile <username>@xfer-vm-01.jasmin.ac.uk:/gws/nopw/j04/myproject/data/
 {{</command>}}
 
 NOTE: The first two lines are the standard method for setting up the SSH agent
@@ -107,11 +107,11 @@ interrupted transfers, directory listings, and remote file removal.
 For basic transfer of a file on JASMIN to the local machine:
 
 {{<command user="localuser" host="localhost">}}
-sftp remoteuser@xfer1.jasmin.ac.uk:/group_workspaces/jasmin/myproject/data/notes.txt ./
+sftp remoteuser@xfer-vm-01.jasmin.ac.uk:/group_workspaces/jasmin/myproject/data/notes.txt ./
 {{</command>}}
 
-For more information see the [Wikipedia page on
-SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
+For more information see the
+{{< link "https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol" >}}Wikipedia page on SFTP{{</link>}}.
 
 There are various 3rd-party tools and clients, for example, WinSCP, FileZilla,
 MobaXterm and others, which can do transfers using the SCP and/or SFTP
@@ -125,5 +125,5 @@ line tool, but often through a graphical user interface instead.
 While convenient and familiar to many users, the tools described above do not
 make efficient use of available bandwidth for transferring large quantities of
 data via high-speed networks over long distances. Please consult [Data
-Transfer Tools]({{< ref "data-transfer-tools" >}}) to learn more about which
+Transfer Tools]({{% ref "data-transfer-tools" %}}) to learn more about which
 might be the most appropriate tool to use in different contexts.

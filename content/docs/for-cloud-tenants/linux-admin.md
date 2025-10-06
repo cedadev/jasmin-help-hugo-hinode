@@ -161,4 +161,4 @@ echo "/dev/sdb1  /data  ext4  defaults  0 0" >> /etc/fstab
 
 ## SSH keys/ access management
 
-When creating a VM through the Azimuth portal, the creator's ssh key is added to the machine so that they can ssh in. Any extra keys needed can be added into the machine to enable others to ssh in as well. Alternatively, when the Azimuth Linux workstation is used, the Zenith proxy can be used to launch a shell (or desktop) in the browser.
+When creating a VM through the Azimuth portal, the creator's ssh key is added to the machine so that they can ssh in. Note that you will need to request port 22 to be opened on the floating IP to be able to ssh into a machine from outside the RAL fireswall - though you should be able to proxy jump through JASMIN login to access it otherwise. Any extra keys needed can be added into the machine to enable others to ssh in as well. Alternatively, when the Azimuth Linux workstation is used, the Zenith proxy can be used to launch a shell (or desktop) in the browser.

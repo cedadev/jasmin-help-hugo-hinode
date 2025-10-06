@@ -8,7 +8,7 @@ title: Cluster-as-a-Service - Slurm
 This article describes how to deploy and use a Slurm cluster using JASMIN
 Cluster-as-a-Service (CaaS).
 
-{{< alert type="danger" >}}
+{{< alert alert-type="danger" >}}
 CaaS Slurm clusters are currently disabled because of a security problem
 with the images that were being used. We are working on a new system which
 will provide slurm clusters.
@@ -28,10 +28,10 @@ deploy and access a Slurm cluster in CaaS.
 
 In CaaS, a Slurm cluster consists of a single login node and several worker
 nodes. The Linux users and groups on the cluster are managed by the [Identity
-Manager]({{< ref "cluster-as-a-service-identity-manager" >}}) for the tenancy,
+Manager]({{% ref "cluster-as-a-service-identity-manager" %}}) for the tenancy,
 meaning that SSH access to the nodes can be controlled using FreeIPA groups.
 User home directories are mounted on all nodes using a [shared storage
-cluster]({{< ref "cluster-as-a-service-shared-storage" >}}). Slurm is
+cluster]({{% ref "cluster-as-a-service-shared-storage" %}}). Slurm is
 configured with a single queue, to which all the compute hosts are added.
 
 The login node can optionally be assigned an external IP, however external IPs
@@ -56,14 +56,14 @@ Compute node size  |  The size to use for the compute nodes.  |  Yes  |  No
 ## Accessing the cluster
 
 The Slurm hosts are configured to use the users and groups from FreeIPA using
-[SSSD](https://docs.pagure.org/SSSD.sssd/). They are also configured to use
+{{<link "https://docs.pagure.org/SSSD.sssd/">}}SSSD{{</link>}}. They are also configured to use
 SSH keys from FreeIPA for SSH authentication (password-based SSH is disabled).
 
 For every Slurm cluster that is deployed, CaaS automatically creates a group
 in FreeIPA called `<clustername>_users`. This group, along with the `admins`
 group, are permitted SSH access to the hosts in the cluster. To permit a user
 SSH access to a Slurm cluster, they just need to be [added to one of these
-groups]({{< ref "cluster-as-a-service-identity-manager" >}}) (depending on
+groups]({{% ref "cluster-as-a-service-identity-manager" %}}) (depending on
 whether you also want them to be an admin on other clusters).
 
 Once they have been added to one of these groups, the Slurm cluster can be

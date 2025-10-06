@@ -6,15 +6,15 @@ title: Python Virtual Environments
 ---
 
 This article describes how you can use "virtual environments" to install
-Python packages that are not provided in the [common software environments on
-JASMIN]({{< ref "software-overview" >}}). You might wish to do this if you
+Python packages that are not provided in the
+[common software environments on JASMIN]({{% ref "software-overview" %}}). You might wish to do this if you
 want to use different packages/versions from those installed on the system, or
 if you have requested for a package to be installed system-wide but wish to
 start using it before this request can be acted upon.
 
 To decide whether you should use a _Python virtual environment_ or a _Conda
-environment_ for this purpose, see: [overview of software environments]({{<
-ref "conda-environments-and-python-virtual-environments" >}}).
+environment_ for this purpose, see:
+[overview of software environments]({{% ref "conda-environments-and-python-virtual-environments" %}}).
 
 ## What is a "virtual environment"?
 
@@ -27,8 +27,8 @@ different applications.
 ## Creating a virtual environment
 
 **As a pre-requisite, when using any modern Python (i.e. Python2.7 onwards),
-you should[activate a Jaspy environment]({{< ref "quickstart-software-envs"
->}}) before following the instructions below.**
+you should [activate a Jaspy environment]({{% ref "quickstart-software-envs" %}})
+before following the instructions below.**
 
 Python allows you to create a directory containing a private virtual
 environment, into which you can install your packages of choice. This is done
@@ -112,7 +112,7 @@ pip install your_package
 
 `pip` is quite flexible what you can use for `your_package`. It can include:
 
-- a package name in the [Python Package Index](https://pypi.python.org/pypi) (PyPI)
+- a package name in the {{< link "https://pypi.python.org/pypi" >}}Python Package Index (PyPI){{</link>}}
 - a URL pointing to a package repository
 - the local path of a `.tar.gz` or `.zip` file containing the package source
 - the local path of a directory containing the extracted package source
@@ -134,7 +134,7 @@ ERROR: Could not install packages due to an OSError: \
 ```
 
 In order to avoid encountering this, 
-you are advised to {{<link "../getting-started/storage/#avoid-inadvertently-writing-to-tmp">}}follow this advice{{</link>}} to over-ride the `TMPDIR` environment variable, setting it to the location of somewhere you know have free space. Don't forget to clean up afterwards!
+please [follow this advice]({{% ref "storage#avoid-inadvertently-writing-to-tmp" %}}) to over-ride the `TMPDIR` environment variable, setting it to the location of somewhere you know have free space. Don't forget to clean up afterwards!
 
 To upgrade an existing package, use:
 

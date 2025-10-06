@@ -1,0 +1,35 @@
+{{ $title := .Title }}
+{{ if site.Params.main.titleCase }}{{ $title = title $title }}{{ end }}
+{{/* Render breadcrumb */}}
+{{ if .Site.Params.navigation.breadcrumb }}{{ partial "assets/breadcrumb.html" (dict "page" .) }}{{ end -}}
+<div class="row">
+    <div class="col-md-10">
+        {{ with $title }}<p class="display-4 mt-5">{{ . }}</p>{{ end }}
+    </div>
+    <div class="col-md-2">
+        {{- with .Parent.Params.icon }}<p class="display-4 mt-5">{{- partial "assets/icon.html" (dict "icon" .) }}</p>{{ end }}
+    </div>
+</div>
+{{- if gt (len (.GetTerms "tags")) 0 -}}
+    <div class="mt-3">
+        <div class="d-none-dark">
+            <div class="hstack gap-0">
+                {{ range (.GetTerms "tags") -}}
+                    {{- $url := (path.Join .Page.RelPermalink) | relLangURL -}}
+                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "light" "button-size" "sm" "icon" "fas tag") }}
+                {{ end -}}
+            </div>
+        </div>
+        
+        <div class="d-none-light">
+            <div class="hstack gap-0">
+                {{ range (.GetTerms "tags") -}}
+                    {{- $url := (path.Join .Page.RelPermalink) | relLangURL -}}
+                    {{ partial "assets/button.html" (dict "href" $url "title" .LinkTitle "color" "primary" "button-size" "sm" "outline" "true" "icon" "fas tag") }}
+                {{ end -}}
+            </div>
+        </div>
+    </div>
+{{- end -}}
+{{ partial "assets/sharing.html" (dict "page" .) }}
+<p class="lead mb-5">{{ .Description }}</p>

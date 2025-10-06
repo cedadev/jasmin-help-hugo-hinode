@@ -5,7 +5,7 @@ slug: globus-command-line-interface
 title: 'Globus Command-Line Interface'
 ---
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Updated for new JASMIN Default Collection (replaces previous JASMIN Globus Endpoint)
 {{</alert>}}
 
@@ -55,7 +55,7 @@ retry automatically until some pre-set deadline.
 - Python environment for that platform, with ability to create virtual environments (to enable installation of additional packages)
 - For use of the JASMIN Default Collection: 
   - An active JASMIN user account, with “jasmin-login” role
-- You may also wish to [set up your own Globus endpoint using Globus Connect Personal]({{< ref "globus-connect-personal" >}}), though this is not needed for these examples.
+- You may also wish to [set up your own Globus endpoint using Globus Connect Personal]({{% ref "globus-connect-personal" %}}), though this is not needed for these examples.
 
 ## Initial Setup
 
@@ -257,7 +257,7 @@ Set `stardtn` to the ID of this endpoint:
 export stardtn=ece400da-0182-4777-91d6-27a1808f8371
 {{</command>}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 None of the endpoints mentioned so far require **authentication** in
 order to use them. This makes demonstrating basic functionality simpler, but
 we'll look at how to use one that does, later.
@@ -552,7 +552,7 @@ DESTINATION_COLLECTION='a2f53b7f-1b4e-4dce-9b7c-349ae760fee0' ##JASMIN Default C
 DESTINATION_PATH='/home/users/<username>/sync-demo/' ##replace <username> with your JASMIN username
 {{</command>}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 For **STFC users only** where the other collection in the transfer is within the STFC network, an additional collection is provided ["JASMIN STFC Internal Collection"](https://app.globus.org/file-manager/collections/591d44ac-adbb-43db-9931-977708d07450/overview) and has ID `9efc947f-5212-4b5f-8c9d-47b93ae676b7`.
 {{</alert>}}
 
@@ -619,3 +619,29 @@ You could then consider how to repeat the task automatically. For example:
   - watching a directory for arrival/creation of a certain file
   - triggering a compute/analysis step on files in the directory (using a [Globus Compute](https://www.globus.org/compute) endpoint of your own?)
   - transferring the output of that analysis to elsewhere, and cleaning up
+
+## CLI Troubleshooting
+### Missing data_access consent
+
+If you get an error like the following:
+
+```txt
+The resource you are trying to access requires you to re-authenticate with specific identities.
+message: Missing required data_access consent
+Please use "globus session update" to re-authenticate with specific identities
+```
+
+you can explicitly request the `data_access` consent for the collection with which you are
+trying to interact, with the following command, using the ID of the collection, i.e.
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/<COLLECTION_ID>/data_access]'
+{{</command>}}
+
+for example, for the JASMIN Default Collection:
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+{{</command>}}
+
+This should take you through the steps to add the required consent to your session.

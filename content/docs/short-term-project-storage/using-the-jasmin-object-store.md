@@ -4,11 +4,45 @@ description: Using the JASMIN Object Store
 title: Using the JASMIN Object Store
 ---
 
+{{<alert alert-type="info">}}
+**Workaround for bug affecting deletion when quota is reached**
+
+Currently the JASMIN Object store is set to be **"read-only and delete"** when the quota for the tenancy is reached, i.e. stopping writes, but allowing reads and deletes.
+However, there is currently a bug which blocks deletes done with a `HTTP POST` request. `HTTP DELETE` requests are still allowed when the quota is reached.
+
+This means that when the tenancy is full, you won't be able to do deletes with a `POST` request, including recursive deletes. You will have to do a `DELETE` request to free up some space and unlock the tenancy for writes, then do a recursive delete if you need to.
+
+For example:
+
+```bash
+mc rm
+```
+
+does a
+
+```bash
+POST... /?delete=
+```
+
+but if you use
+
+```bash
+s3cmd rm
+```
+
+to delete a single object it uses
+
+```bash
+DELETE ...
+```
+
+{{</alert>}}
+
 This article describes how to use the JASMIN high-performance object storage.
 
 ## What is object storage?
 
-An [object store](https://en.wikipedia.org/wiki/Object_storage) is a data
+An {{< link "https://en.wikipedia.org/wiki/Object_storage" >}}object store{{</link>}} is a data
 storage system that manages data as objects referenced by a globally unique
 identifier, with attached metadata. This is a fundamental change from
 traditional file systems that you may be used to, as there is no directory
@@ -30,8 +64,8 @@ transfer methods.
 
 Object stores are seen as the most efficient (and cheapest!) way to store and
 access data from the cloud, and all the major cloud providers support some
-variant of object store. The JASMIN object store is [S3
-compatible](https://www.scality.com/topics/what-is-s3-compatible-storage/) \-
+variant of object store. The JASMIN object store is 
+{{< link "https://www.scality.com/topics/what-is-s3-compatible-storage/" >}}S3 compatible{{</link>}} \-
 S3 is the object store for Amazon Web Services (AWS), and has become a de-
 facto standard interface for object stores. This means that all the same tools
 that work with AWS S3 will also work with the JASMIN object store.
@@ -111,17 +145,21 @@ outside of JASMIN - you will need to use a graphical session on JASMIN to
 access a Firefox browser running on a JASMIN system.
 
 **The recommended way to do this is using the** [NX Graphical Desktop
-service]({{< ref "graphical-linux-desktop-access-using-nx" >}}). You can start Firefox from
+service]({{% ref "graphical-linux-desktop-access-using-nx" %}}). You can start Firefox from
 the "Activities" menu once you have logged in to your graphical desktop on one
 of the `nx-login*` servers (so no need to make an onward connection to a `sci`
 server).
 
-An alternative option is to using X11 Forwarding on your SSH connection:
+An alternative option is to using X11 Forwarding on your SSH connection. You 
+need to do this on one of the `nx*` servers (not the sci servers as previously)
+because this is where firefox is now installed:
 
     
 ```bash
-ssh -AY <user>@sciX.jasmin.ac.uk firefox
-```    
+ssh -X <user>@nx1.jasmin.ac.uk firefox
+```
+
+(try `-Y` if `-X` does not work for you).
 
 Once you have Firefox open, navigate to
 
@@ -183,8 +221,8 @@ used - note the `https://` prefix and additional `-ext`.
 `s3cmd` is a command line tool provided by Amazon to work with S3 compatible
 Object Storage. It is installed on JASMIN, both on the sci-machines and on
 LOTUS. It is a little more complicated to use than the MinIO client, but is
-more powerful and flexible. For full details on `s3cmd`, see the [s3tools.org
-website](http://s3tools.org).
+more powerful and flexible. For full details on `s3cmd`, see the 
+{{< link "http://s3tools.org" >}}s3tools.org website{{</link>}}.
 
 To configure `s3cmd` to use the JASMIN object store, you need to create and
 edit a `~/.s3cfg` file. To access the `my-os-tenancy-o` tenancy (where "my-os-
@@ -252,6 +290,80 @@ s3cmd get s3://<bucket_name>/<object_name> <file_name>
 For more commands and ways of using `s3cmd`, see the [s3tools
 website](https://s3tools.org/s3cmd).
 
+## s4cmd and s5cmd
+
+s3cmd is a convenient way to interact with the S3 compatible storage like the JASMIN object store. [s4cmd](https://github.com/bloomreach/s4cmd) and [s5cmd](https://github.com/peak/s5cmd) provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.
+
+### s4cmd
+
+[s4cmd](https://github.com/bloomreach/s4cmd) uses Python's boto3 library to run commands in parallel. It can be installed into a user's Python environment.
+
+If you don't have an existing environment to install Python packages into one will need to be created.
+
+```bash
+module load jaspy
+virtualenv venv-s4cmd
+source venv-s3cmd/bin/activate
+```
+
+Once created and activated s4cmd can be installed.
+
+```bash
+pip install s4cmd
+```
+
+Note that the environment will always need to be activated before s4cmd can be used.
+
+In order to use s4cmd with the JASMIN object store, you need to create a key and set environment variables so that s4cmd can pick up the configuration.
+
+```bash
+export S3_ACCESS_KEY=<your key>
+export S3_SECRET_KEY=<your secret>
+
+```
+
+Once set s4cmd can be used. For example copying data from a local disk to a bucket.
+
+```bash
+s4cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk put ./* s3://bucket-name/
+```
+
+Note the requirement of the ```--endpoint-url``` argument for accessing the JASMIN object store. For external access, use the s3-ext url.
+
+See the [documentation for s4cmd](https://github.com/bloomreach/s4cmd) for other usage.
+
+
+### s5cmd
+
+[s5cmd](https://github.com/peak/s5cmd) is a parallel tool for interacting with S3 compatible object stores which offers [significant speed increases over s3cmd and s4cmd](https://github.com/peak/s5cmd/blob/master/README.md#Benchmarks).
+Its speed increase comes from being written in Go, and working in parallel.
+
+It is not available by default on JASMIN, but a binary can be downloaded and used. (Check the [releases](https://github.com/peak/s5cmd/releases) page on s5cmd's github for the latest version and alter the wget command below as required.)
+
+```bash
+wget https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-64bit.tar.gz
+tar xvzf s5cmd_2.3.0_Linux-64bit.tar.gz
+chmod +x s5cmd
+```
+
+In order to use s5cmd with the JASMIN object store, you need to create a key and set environment variables so that s5cmd can pick up the configuration.
+
+```bash
+export AWS_ACCESS_KEY_ID=<your key>
+export AWS_SECRET_ACCESS_KEY=<your secret>
+```
+
+Once set s5cmd can be used. For example copying data from a local disk to a bucket.
+
+```bash
+s5cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk cp './*' s3://bucket-name/
+```
+
+Note the requirement of the ```--endpoint-url``` argument for accessing the JASMIN object store. For external access, use the s3-ext url.
+
+See the [documentation for s5cmd](https://github.com/peak/s5cmd) for other usage.
+
+
 ## Using the MinIO client
 
 The MinIO Client is a command line tool to connect to object stores (among
@@ -260,8 +372,8 @@ filesystem. As such, many of the UNIX file management commands found in
 standard installations of the OS are found within this client ( `ls`, `cat`,
 `cp`, `rm` for example).
 
-There are a number of ways to install this client as shown in the [quickstart
-guide](https://docs.min.io/docs/minio-client-quickstart-guide.html). Methods
+There are a number of ways to install this client as shown in the
+{{< link "https://docs.min.io/docs/minio-client-quickstart-guide.html" >}}quickstart guide{{</link>}}. Methods
 include: docker, Homebrew for macOS, wget for Linux and instructions for
 Windows. Follow these steps to get the client installed on the relevant
 system.
@@ -311,14 +423,14 @@ mc cp jasmin-store/my-bucket/object-1 jasmin-store/different-bucket/
 ## From Python
 
 One method of accessing the object store from Python is using
-[s3fs](https://s3fs.readthedocs.io/en/latest/index.html). This library builds
+{{< link "https://s3fs.readthedocs.io/en/latest/index.html" >}}s3fs{{</link>}}. This library builds
 on
-[botocore](https://botocore.amazonaws.com/v1/documentation/api/latest/index.html)
+{{< link "https://botocore.amazonaws.com/v1/documentation/api/latest/index.html" >}}botocore{{</link>}}
 but abstracts a lot of the complexities away. There are three main types of
 object in this library:
-[S3FileSystem](https://s3fs.readthedocs.io/en/latest/api.html#s3fs.core.S3FileSystem),
-[S3File](https://s3fs.readthedocs.io/en/latest/api.html#s3fs.core.S3File) and
-[S3Map](https://s3fs.readthedocs.io/en/latest/api.html#s3fs.mapping.S3Map).
+{{< link "https://s3fs.readthedocs.io/en/latest/api.html#s3fs.core.S3FileSystem" >}}S3FileSystem{{</link>}},
+{{< link "https://s3fs.readthedocs.io/en/latest/api.html#s3fs.core.S3File" >}}S3File{{</link>}} and
+{{< link "https://s3fs.readthedocs.io/en/latest/api.html#s3fs.mapping.S3Map" >}}S3Map{{</link>}}.
 The filesystem object is used to configure a connection to the object store.
 Note: it's **strongly** recommended to store the endpoint, token and secret
 outside of the Python file, either using environment variables or an external
@@ -327,6 +439,9 @@ MinIO:
 
     
 ```python
+import json
+import s3fs
+
 with open('jasmin_object_store_credentials.json') as f:
     jasmin_store_credentials = json.load(f)
 
@@ -336,7 +451,14 @@ with open('jasmin_object_store_credentials.json') as f:
         client_kwargs={'endpoint_url': jasmin_store_credentials['endpoint_url']}
     )
 
+    # list the objects in a bucket
+    my_objects = jasmin_s3.ls('my-bucket')
+    print('My objects: {}'.format(my_objects))
+
+    # report the size of an object
     my_object_size = jasmin_s3.du('my-bucket/object-1')
+    print('Size: {}'.format(my_object_size))
+
 ```
 
 Please note in the example above, the `jasmin_object_store_credentials.json`
@@ -375,7 +497,7 @@ file_object.write(data)
 file_object.flush()
 ```
 
-S3Map is very useful when using [xarray](http://xarray.pydata.org/en/stable/)
+S3Map is very useful when using {{< link "http://xarray.pydata.org/en/stable/" >}}xarray{{</link>}}
 to open a number of data files (netCDF4 for example), and turn them into the
 zarr format ready to be stored as objects on the store. The function for this
 can store a `.zarr` file in a POSIX filesystem, or can be streamed directly to
@@ -391,4 +513,36 @@ dataset.to_zarr(store=s3_store, mode='w')
 xarray.open_zarr(s3_store, consolidated=True)
 ```
 
+## Using `rclone`
 
+Rclone can be configured to perform operations on an S3 object store backend, just as it can for
+a long list of other backend storage types. It is mentioned in our data transfer section here, but
+extensively documented here.
+
+Below is an example of how to copy data to the JASMIN object store using `rclone`, in a very similar manner to how you would use `rsync`. However, first you need to define parameters for accessing the JASMIN object store. 
+
+Do this by using the `rclone config` wizard. This will update the configuration file (~/.config/rclone/rclone.conf) so that it looks like this:
+
+```config
+[cedadev-o]
+type = s3
+provider = Other
+access_key_id = <access key as above>
+secret_access_key = <secret key as above>
+endpoint = cedadev-o.s3-ext.jc.rl.ac.uk
+acl = private
+```
+
+You could then copy the contents of a directory to this remote, using the `rclone copy` command ({{<link "https://rclone.org/commands/rclone_copy/">}}full description here{{</link>}}):
+
+{{<command user="user" host="localhost">}}
+rclone copy source:sourcepath dest:destpath
+{{</command>}}
+
+This will copy the contents of `sourcepath` to `destpath`, but not the directories themselves. By default, it does not transfer files that are identical on source and destination, testing by modification time or md5sum. It will not delete files from the destination (but note that the `rclone sync` command will). For copying single files, use the `rclone copyto` command.
+
+The example above copies from a local `sourcepath`, which could be a directory on your local machine (either your local laptop/desktop, or perhaps a JASMIN `xfer` server). But given that you can set up multiple **remotes**, you could also configure one of the remotes as SFTP using one of the `xfer` servers, useful if you want to coordinate the transfers from elsewhere rather than on JASMIN itself.
+
+{{<alert alert-type="danger">}}
+Please note that you are asked **NOT to use** the `rclone mount`, `rcd` or `serve` commands when working with storage on JASMIN, [see here]({{% ref "rclone#dos-and-donts" %}}).
+{{</alert>}}

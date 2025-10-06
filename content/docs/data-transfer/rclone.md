@@ -31,47 +31,17 @@ use on JASMIN.
 Further information will follow in due course as our experience with this tool
 develops.
 
-## Installing rclone for yourself on JASMIN
+## Accessing rclone
 
-First off, **do not attempt to follow the documented instructions for
-installing on Linux**. As a regular user, **you do not have root/administrator
-permission and are not permitted to run scripts using sudo**. Normally most
-utilities are already installed for you on JASMIN, but in this case you need
-to adapt the documented instructions so that you can safely install this in
-your OWN home directory. [That may change in the future if this tool proves
-useful].
+`rclone` is installed on the JASMIN `xfer` servers for you, so there should now be 
+no need to install it for yourself.
 
-The recommended procedure for installation on JASMIN is as follows:
-
-Fetch and unpack the Linux binary distribution: (in your home directory on an
-**xfer** server)
-
-{{<command>}}
-curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
-unzip rclone-current-linux-amd64.zip
-cd rclone-*-linux-amd64
+{{<command user="user" host="xfer-vm-01">}}
+which rclone
+(out)/usr/bin/rclone
 {{</command>}}
 
-Next, move the `rclone` executable to your own `bin` directory. You may need
-to create that directory if it does not exist already, and add it to your
-`PATH` environment variable in your `~/.bash_profile` file.
-
-{{<command shell="bash">}}
-## only need these if these aren't in place already in your own setup:
-mkdir ~/bin # comment here
-
-## add this to your PATH (add to your ~/.bash_profile to make this permanent)
-export PATH="~/bin:$PATH"
-
-## move the rclone executable
-mv rclone ~/bin/
-
-## make the permissions on the file executable by you
-chmod 700 ~/bin/rclone
-{{</command>}}
-
-Note that you will not have installed the man pages, so these will not be
-available: please consult the online documentation instead.
+You may also want to consider installing it locally on your own machine
 
 ## Configuring rclone
 
@@ -85,12 +55,15 @@ interact with. You can then use rclone to manage data between those "remotes".
   - `rclone mount` (mounting a remote as a filesystem) - **DO NOT USE**
   - `rclone rcd` (remote control daemon) - **DO NOT USE**
   - `rclone serve`(serve remote over a protocol) - **DO NOT USE**
-- You should safely be able to use the following, between remotes that you have configured: 
-  - `rclone copy`
-  - `rclone sync`
+- You should safely be able to use the following, between remotes that you have configured:
+  - `rclone copyto` (for single files) 
+  - `rclone copy` (similar to `rsync`, but does not delete on destination)
+  - `rclone sync` (similar to `rsync`, but beware will delete files from destination)
   - `rclone lsd`
   - `rclone ls`
   - `..(other basic commands)`
+
+See [rclone commands](https://rclone.org/commands/)
 
 Help on a particular command is found using
 
@@ -98,4 +71,4 @@ Help on a particular command is found using
 rclone <command> --help
 {{</command>}}
 
-Further examples of useful ways of using rclone on JASMIN will follow...
+See also [using rclone]({{% ref "using-the-jasmin-object-store/#using-rclone" %}}) with the JASMIN object store.

@@ -2,8 +2,13 @@
 aliases: /article/190-check-network-details
 description: Check network details
 title: Check network details
+draft: true
 weight: 20
 ---
+
+{{<alert alert-type="danger">}}
+DEPRECATED: This article will shortly become obsolete following JASMIN's [migration to the Rocky 9 operating system](../software-on-jasmin/rocky9-migration-2024). The previous restriction on network domains and reverse DNS does not apply to the set of new machines (and old ones are being replaced).
+{{</alert>}}
 
 This article explains how to:
 
@@ -21,8 +26,8 @@ All `.ac.uk` network domains (i.e. UK universities and "academic" institutions)
 are already registered.
 
 If your institution's network domain is not .ac.uk, please request for it to
-be added to the allow list by contacting [the JASMIN
-Helpdesk](https://www.jasmin.ac.uk/help/contact/), after reading the
+be added to the allow list by contacting the
+[JASMIN Helpdesk](mailto:support@jasmin.ac.uk), after reading the
 information in the following section about forward and reverse DNS lookup.
 
 ## Check IP address resolves to network domain (all users)
@@ -83,6 +88,6 @@ of JASMIN you will need to have an IP address that resolves to the domain of
 your institution. For access to graphical desktops, equivalent servers `nx-
 login2.jasmin.ac.uk` and `nx-login3.jasmin.ac.uk` have been provided and for
 transfer tasks, an additional transfer server `xfer3.jasmin.ac.uk` is
-available. See [login servers]({{< ref "login-servers" >}}) and [transfer
-servers]({{< ref "transfer-servers" >}}), but note the additional access role
+available. See [login servers]({{% ref "login-servers" %}}) and [transfer
+servers]({{% ref "transfer-servers" %}}), but note the additional access role
 required in the case of the transfer server.

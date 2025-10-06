@@ -1,57 +1,72 @@
 [main]
     separator = "-"
-    description = "Hinode is a clean documentation and blog theme for your Hugo site based on Bootstrap 5."
-    enableDarkMode = true
-    modes = ["light", "dark"]
+    description = "Help documentation for JASMIN, the UK's environmental data analysis facility"
+    enableLanguageSelectionStorage = false
     canonifyAssetsURLs = false
-    endorse = true
-    loading = "lazy"
-    breakpoint = "md"
     footerBelowFold = true
+    loading = "lazy"
+    titleCase = false # keep this false to avoid issues with inline code in headings
+    [main.padding]
+        x = 1
+        y = 1
     [main.externalLinks]
         cue = true
         tab = true
+    #[main.build]
+    #    transpiler = "dartsass"
+    #    silenceDeprecations = true
+    #endorse = true
+    #breakpoint = "md"
     [main.build]
         transpiler = "libsass"
-
-[modules]
-    core = ["bootstrap", "fontawesome", "flexsearch"] #"flexsearch", 
-    optional = ["leaflet", "katex", "lottie"]
-    excludeSCSS = ["bootstrap"]
-    disableTemplate = ["katex"]
-    [modules.fontawesome]
-        inline = true
-        debug = true
-        skipMissing = false
+    [main.colorMode]
+        modes = ["light", "dark"]
+        toggle = false # setting seems wrong way round!
 
 [debugging]
     showJS = false
     showSCSS = false
+    purgeHTMLComments = true
 
 [docs]
+    #basePath = "_vendor/github.com/gethinode/hinode"
     github = "https://github.com/cedadev/jasmin-help-hugo-hinode"
-#    release = "https://github.com/gethinode/hinode/releases/tag/"
-#    checkVersion = false
+    #release = "https://github.com/gethinode/hinode/releases/tag/"
 
 [home]
     sections = ["docs", "guides", "training"]
     fullCover = false
     centerHeadline = false
-    style = ""
+    style = "" # "gradient-featured"
+    #[home.feature] # new
+    #    orientation = "stacked"
+    #    color = ""
+    #    width = 6
+    #    align = "start"
 
 [navigation]
     anchor = true
-    logo = "/img/jasmin-logo.svg" # store -light and -dark variants
-    logoHeight = 45 # height to control size of logo in layouts/partials/assets/navbar.html
+    logo = "/img/logos/jasmin-logo.svg" # store -light and -dark variants "/img/logo_var.svg#logo"
+    logo-height = 40 # now a built-in param (changed name) to control size of logo in layouts/partials/assets/navbar.html
     color = "success"
     fixed = true
     #offset = "5em"
-    search = true
-    searchModal = true
+    #overlay = false
+    #overlayMode = "dark"
+    [search]
+        search.enabled = true
+        search.modal = true
     breadcrumb = true
     toc = true
     sidebar = true
     size = "md"
+    # TOC options new with v1.10.0
+    startLevel = 2 # need to specify these ...
+    endLevel = 4 # to avoid spurious [ ] in TOC menu
+    #maxNumHeadings = 4
+    [navigation.padding]
+        x = 1
+        y = 4
 
 [messages]
     placement = "bottom-right"
@@ -61,6 +76,7 @@
     sort = "weight"
     reverse = false
     webshare = true
+    download = true
 
 [[sharing.providers]]
     name = "LinkedIn"
@@ -69,88 +85,37 @@
     weight = 10
 
 [[sharing.providers]]
-    name = "Twitter"
-    url = "https://twitter.com/home?status={url}"
-    icon = "fab x-twitter"
-    weight = 20
-
-[[sharing.providers]]
     name = "Facebook"
     url = "https://www.facebook.com/sharer.php?u={url}"
     icon = "fab facebook"
-    weight = 30
+    weight = 20
 
 [[sharing.providers]]
     name = "WhatsApp"
     url = "whatsapp://send?text={title}%20{url}"
     icon = "fab whatsapp"
-    weight = 40
+    weight = 30
 
 [[sharing.providers]]
-    name = "email"
+    name = "link"
     url = "{url}"
     icon = "fas link"
     weight = 50
     clipboard = true
 
-[sections]
-    [sections.docs]
-        title = "Docs: find how things work on JASMIN"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        nested = false # TODO check at https://gethinode.com/docs/configuration/layout/
-        cols = 3
-        background = "body-tertiary"
-        color = "body"
-        padding = "3"
-        header = "none"
-        footer = "tags"
-        orientation = "horizontal" # Placement of the thumbnail/icon either “stacked” (default), “horizontal”, or “none”.
-        style = "border-1 card-emphasize"
-        homepage = 3
-        separator = true
-    [sections.guides]
-        title = "Guides: get started or learn new concepts"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-zoom card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "full"
-        footer = "none"
-        orientation = "none"
-        homepage = 3
-    [sections.training]
-        title = "Training: to get the most out of JASMIN"
-        layout = "card"
-        sort = "weight"
-        reverse = false
-        background = ""
-        color = "body-tertiary"
-        style = "border-0 shadow card-zoom card-body-margin"
-        cols = 3
-        padding = "3"
-        header = "full"
-        footer = "none"
-        orientation = "horizontal"
-        homepage = 3
-        nested = false
-    [sections.about]
-        title = "About JASMIN"
-        layout = "card"
-        sort = "name"
-        reverse = false
-        nested = false
-        header = "none"
-
+[[sharing.providers]]
+    name = "custom link"
+    url = "[{title}]({url})"
+    icon = "fas star"
+    title = "custom link"
+    weight = 60
+    clipboard = true
 
 [favicon]
     logo = "img/favicon.png"
     #sizes = [16, 32, 48]
+
+
 
 [style]
     #blue = "#007bff"
@@ -183,40 +148,35 @@
     danger = "#A91B2E"
     light = "#ced4da"
     dark = "#dee2e6" #2E2D62"
-    
-# toml-docs-end theme-colors
     themeOpacity = "10"
-# toml-docs-start font
+    darkModeShade = "20%"
+    darkModeTint = "40%"
     themeFont = "BoosterNextFY-Regular"
     #themeFontPath = "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" # external path
     themeFontPath = "/fonts" # local path
-    purge = false
+    fontSizeBase = "1rem"
+    #purge = false
 
 [schema]
     type = "Organization"
-    name = "Hinode"
-    locale = "en-US"
-    # twitter = "https://twitter.com/gethinode"
-    # linkedIn = ""
-    github = "https://github.com/gethinode/hinode"
-    section = "news"
-    [author]
-        name = "Mark Dumay"
-        # twitter = "https://twitter.com/markdumay"
-        linkedin = "https://www.linkedin.com/in/markdumay/"
-        github = "https://github.com/markdumay"
-    [logo]
-        url = "img/logo512x512.png"
-        width = 512
-        height = 512
-    [image]
-        url = "img/logo1280x640.png"
-        width = 1280
-        height = 640
+    name = "JASMIN"
+    locale = "en-GB"
+    github = "https://github.com/cedadev"
+    #section = "docs"
+    [schema.author]
+        name = "Matt Pritchard"
+    [schema.logo]
+        url = "img/logos/jasmin-logo-small-green.png?source=schema.logo"
+        #width = 512
+        #height = 512
+    [schema.image]
+        url = "img/logos/jasmin-logo-small-green.png?source=schema.image"
+        #width = 1280
+        #height = 640
 
 [opengraph]
-    images = ["logo.png"]
-    locale = "en_US"
+    images = ["img/logos/jasmin-logo-small-green.png?source=opengraph"]
+    locale = "en_GB"
 
 [comments]
     enabled = false
@@ -244,6 +204,7 @@
     ceda_helpdesk = "https://help.ceda.ac.uk"
     ceda_status = "https://www.ceda.ac.uk/status"
     ceda_news = "https://www.ceda.ac.uk/news"
+    ceda_events = "https://www.ceda.ac.uk/events"
     ceda_data = "https://data.ceda.ac.uk"
     ceda_x = "https://twitter.com/cedanews"
     nceo = "https://www.nceo.ac.uk"
@@ -280,3 +241,11 @@
 
 [beacon]
     html = "<p>Beacon</p><script src=\"/static/js/beacon.js\" type=\"text/javascript\">"
+
+[videos]
+    [videos.youtube]
+        host = "youtube"
+
+#[modules.cookieyes]
+    #url = "https://cdn-cookieyes.com/client_data/NNNN/script.js" # need client ID?
+    #local = false

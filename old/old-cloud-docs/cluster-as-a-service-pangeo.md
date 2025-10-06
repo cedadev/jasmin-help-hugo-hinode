@@ -1,6 +1,5 @@
 ---
 aliases: /article/4797-cluster-as-a-service-pangeo
-date: 2023-05-23 10:58:41
 description: Cluster-as-a-Service - Pangeo
 slug: cluster-as-a-service-pangeo
 title: Cluster-as-a-Service - Pangeo
@@ -11,33 +10,33 @@ Cluster-as-a-Service (CaaS).
 
 ## Introduction
 
-[Pangeo](https://pangeo.io/) is a community that promotes a philosophy of
+{{<link "https://pangeo.io/">}}Pangeo{{</link>}} is a community that promotes a philosophy of
 open, scalable and reproducible science, focusing primarily on the
 geosciences. As part of that effort, the Pangeo community provides a curated
-[Python](https://www.python.org/) ecosystem based on popular open-source
-packages like [xarray](http://xarray.pydata.org),
-[Iris](https://scitools.org.uk/iris), [Dask](http://dask.readthedocs.io) and
-[Jupyter notebooks](http://jupyter.org/), along with documentation and recipes
+{{<link "https://www.python.org/">}}Python{{</link>}} ecosystem based on popular open-source
+packages like {{<link "http://xarray.pydata.org">}}xarray{{</link>}},
+{{<link "https://scitools.org.uk/iris">}}Iris{{</link>}}, {{<link "http://dask.readthedocs.io">}}Dask{{</link>}} and
+{{<link "http://jupyter.org/">}}Jupyter notebooks{{</link>}}, along with documentation and recipes
 for deployment on various infrastructures.
 
 The Pangeo cluster type in CaaS is a multi-user implementation of the Pangeo
-ecosystem using [JupyterHub](https://jupyter.org/hub) deployed on
-[Kubernetes](https://kubernetes.io/), giving users a scalable and fault-
+ecosystem using {{<link "https://jupyter.org/hub">}}JupyterHub{{</link>}} deployed on
+{{<link "https://kubernetes.io/">}}Kubernetes{{</link>}}, giving users a scalable and fault-
 tolerant infrastructure to use for doing science, all through a web-browser
-interface. Authentication is handled by the [Identity Manager]({{< ref
-"cluster-as-a-service-identity-manager" >}}) for the tenancy via JupyterHub's
-LDAP integration. Each authenticated user gets their own Jupyter notebook
+interface. Authentication is handled by the
+[Identity Manager]({{% ref "cluster-as-a-service-identity-manager" %}}) for the tenancy
+via JupyterHub's LDAP integration. Each authenticated user gets their own Jupyter notebook
 environment running in its own container, isolated from other users. The
 automatic spawning of containers for authenticated users is handled by
 JupyterHub, which also provides an interface for admins to manage the running
-containers. This is achieved by using the [Pangeo Helm
-chart](https://github.com/pangeo-data/helm-chart) to deploy the Pangeo
-ecosystem on a [CaaS Kubernetes cluster]({{< ref "cluster-as-a-service-kubernetes" >}}).
+containers. This is achieved by using the
+{{<link "https://github.com/pangeo-data/helm-chart">}}Pangeo Helm chart{{</link>}} to deploy the Pangeo
+ecosystem on a [CaaS Kubernetes cluster]({{% ref "cluster-as-a-service-kubernetes" %}}).
 
 ## Cluster configuration
 
 The Pangeo ecosystem is deployed on top of CaaS Kubernetes, so all the
-[configuration variables for Kubernetes]({{< ref "cluster-as-a-service-kubernetes" >}}) also apply to Pangeo clusters.
+[configuration variables for Kubernetes]({{% ref "cluster-as-a-service-kubernetes" %}}) also apply to Pangeo clusters.
 
 In addition, the following variables are available to configure the Pangeo
 installation:
@@ -59,12 +58,12 @@ might want to run.
 ## Accessing the cluster
 
 Access to the underlying Kubernetes cluster is achieved in the [same way as
-any other CaaS Kubernetes cluster]({{< ref "cluster-as-a-service-kubernetes" >}}).
+any other CaaS Kubernetes cluster]({{% ref "cluster-as-a-service-kubernetes" %}}).
 
 The Pangeo web interface will be available at `https://<pangeo domain>`.
 Access to the Pangeo interface is managed through FreeIPA, and users sign in
 with the same username and password as for other clusters. As part of the
-cluster configuration, CaaS will create a [FreeIPA group]({{< ref "cluster-as-a-service-identity-manager" >}}) called `<clustername>_notebook_users`.
+cluster configuration, CaaS will create a [FreeIPA group]({{% ref "cluster-as-a-service-identity-manager" %}}) called `<clustername>_notebook_users`.
 Granting access to the Pangeo interface is as simple as adding a user to this
 group.
 
@@ -81,8 +80,7 @@ And after:
 A full discussion of the capabilities of Jupyter notebooks, the JupyterLab
 environment and the many libraries included in the Pangeo ecosystem is beyond
 the scope of this documentation. There are plenty of examples on the web, and
-Pangeo provide some [example notebooks](https://github.com/pangeo-data/pangeo-
-example-notebooks).
+Pangeo provide some {{<link "https://github.com/pangeo-data/pangeo-example-notebooks">}}example notebooks{{</link>}}.
 
 As a very brief example of the power and simplicity of Jupyter notebooks,
 especially on Kubernetes, this short video (no sound) shows a user signing

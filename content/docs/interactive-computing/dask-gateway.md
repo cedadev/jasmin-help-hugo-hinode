@@ -15,16 +15,16 @@ On JASMIN, it creates a Dask cluster in {{<link "../batch-computing/lotus-overvi
 
 Before using Dask Gateway on JASMIN, you will need:
 
-1. An existing JASMIN account and valid `jasmin-login` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. **Subsequently** (once `jasmin-login` has been approved and completed), the `dask` access role: {{<button size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/dask/">}}Apply here{{</button>}}
+1. An existing JASMIN account and valid `jasmin-login` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
+2. A Slurm account to log the Dask compute to. To choose the right one, please read about the [new Slurm job accounting by project]({{% ref "docs/batch-computing/slurm-queues/#new-slurm-job-accounting-hierarchy" %}}).
 
-The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `dask` role grants access to the special LOTUS partition used by the Dask Gateway service.
+The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster.
 
 ## Creating a Dask cluster
 
 ### In the JASMIN Notebooks service
 
-In the {{<link "jasmin-notebooks-service">}}JASMIN notebooks service{{</link>}}, authentication to `dask-gateway` happens automatically. You can use the snippet below to create a cluster and get a Dask client which you can use:
+In the {{<link "jasmin_notebooks_service">}}JASMIN notebooks service{{</link>}}, authentication to `dask-gateway` happens automatically. You can use the snippet below to create a cluster and get a Dask client which you can use:
 
 ```python
 import dask_gateway
@@ -35,6 +35,7 @@ gw = dask_gateway.Gateway("https://dask-gateway.jasmin.ac.uk", auth="jupyterhub"
 # Inspect and change the options if required before creating your cluster.
 options = gw.cluster_options()
 options.worker_cores = 2
+options.account = "your-slurm-account-name"
 
 # Create a Dask cluster, or, if one already exists, connect to it.
 # This stage creates the scheduler job in Slurm, so it may take some
@@ -63,13 +64,13 @@ cluster.shutdown()
 
 The following explains how to use the Dask Gateway elsewhere on JASMIN, for example, on the `sci` machines.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 It is not necessary to do this if you only want to use Dask in the JASMIN notebook service.
 {{</alert>}}
 
 At the current time, it is still necessary to use the notebooks service to generate an API token to allow you to connect to the gateway server.
 
-{{<alert type="danger">}}
+{{<alert alert-type="danger">}}
 It is very important that your API token is not shared between users and remains secret. With it, another user could submit Dask jobs to LOTUS as you, and they could exploit this to see anything in your JASMIN account.
 {{</alert>}}
 
@@ -77,23 +78,23 @@ It is very important that your API token is not shared between users and remains
 
 1. Make a Dask configuration folder in your home directory
 
-    {{<command user="user" host="sci1">}}
+    {{<command user="user" host="sci-vm-01">}}
     mkdir -p ~/.config/dask
     {{</command>}}
 
 2. Create a configuration file for `dask-gateway`
 
-    {{<command user="user" host="sci1">}}
+    {{<command user="user" host="sci-vm-01">}}
     touch ~/.config/dask/gateway.yaml
     {{</command>}}
 
 3. Change the permissions on the file so that only you can read it
 
-    {{<command user="user" host="sci1">}}
+    {{<command user="user" host="sci-vm-01">}}
     chmod 600 ~/.config/dask/gateway.yaml
     {{</command>}}
 
-4. Head to the [API token generator page](https://notebooks.jasmin.ac.uk/hub/token), put a note in the box to remind yourself what this token is for, press the **big orange button**, then {{<mark>}}copy{{</mark>}} the {{<mark>}}token{{</mark>}}.
+4. Head to the {{< link "https://notebooks.jasmin.ac.uk/hub/token" >}}API token generator page{{</link>}}, put a note in the box to remind yourself what this token is for, press the **big orange button**, then {{<mark>}}copy{{</mark>}} the {{<mark>}}token{{</mark>}}.
 
 5. Paste the following snippet into `~/.config/dask/gateway.yaml`, replace the entry on the final line with the API token you just created.
 
@@ -116,7 +117,8 @@ To get the link to your Dask dashboard, run the following:
 print(client.dashboard_link)
 ```
 
-Currently the Dask dashboard is not accessible from a browser outside the JASMIN firewall. If your browser fails to load the dashboard link returned, please use our {{<link "graphical-linux-desktop-access-using-nx">}}graphical desktop service{{</link>}} to run a Firefox browser inside the firewall to view your dashboard.
+Currently the Dask dashboard is not accessible from a browser outside the JASMIN firewall. If your browser fails to load the dashboard link returned,
+please use our [graphical desktop service]({{% ref "graphical-linux-desktop-access-using-nx" %}}) to run a Firefox browser inside the firewall to view your dashboard.
 
 ## Use a custom Python environment
 
@@ -129,7 +131,7 @@ To have Dask use your packages, you need to create a custom environment which yo
 
 However, for technical reasons, it is not currently possible to use the same virtual environment in both the notebook service and on JASMIN. So you will need to make two environments, one for your notebook to use and one for Dask to use.
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 It is VERY important that these environments have the same packages installed in them, and that the packages are exactly the same version in both environments.
 
 If you do not keep packages and versions in-sync you can expect many confusing errors.
@@ -139,7 +141,7 @@ If you use a self-contained conda environment this is not a problem, and you can
 
 ### Creating a virtual environment for Dask
 
-- Login to the JASMIN `sci` machines.
+- Login to one of the JASMIN `sci` machines.
 - Activate `jaspy`
 
 {{<command>}}
@@ -166,7 +168,7 @@ pip install dask-gateway dask lz4
 
 ### Creating a virtual environment for the notebooks service
 
-- Follow the instructions {{<link "creating-a-virtual-environment-in-the-notebooks-service">}}here{{</link>}} to create a virtual environment.
+- Follow the instructions [here]({{% ref "creating-a-virtual-environment-in-the-notebooks-service" %}}) to create a virtual environment.
 - Install Dask and Dask Gateway and dependencies: without this step your environment will not work with Dask.
 
 {{<command>}}
@@ -186,4 +188,5 @@ options.worker_setup = "source /home/users/example/name-of-environment/bin/activ
 
 ## Code Examples
 
-Examples of code and notebooks which can be used to test the JASMIN Dask Gateway service are [available on GitHub](https://github.com/cedadev/jasmin-daskgateway/tree/main/examples).
+Examples of code and notebooks which can be used to test the JASMIN Dask Gateway service are
+{{< link "https://github.com/cedadev/jasmin-daskgateway/tree/main/examples" >}}available on GitHub{{</link>}}.

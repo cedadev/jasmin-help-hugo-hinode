@@ -1,6 +1,5 @@
 ---
 aliases: /article/4918-jasmin-software-faqs
-date: 2022-10-21 12:10:33
 description: JASMIN software FAQs
 slug: jasmin-software-faqs
 tags:
@@ -9,7 +8,7 @@ title: JASMIN software FAQs
 ---
 {{< accordion id="accordion-default" >}}
 
-  {{< accordion-item header="Why do I have to load/activate a software environment?" >}}
+  {{< accordion-item title="Why do I have to load/activate a software environment?" >}}
 
 We have a range of different users on JASMIN who work on many different
 projects. Each project has its own software requirements and timeline. By
@@ -25,7 +24,7 @@ See the [overview]({{< ref path="software-overview" >}}) page for more details.
 
   {{< /accordion-item >}}
 
-  {{< accordion-item header="How do I set the Jaspy environment as my default?" >}}
+  {{< accordion-item title="How do I set the Jaspy environment as my default?" >}}
 If you want your JASMIN sessions to automatically use the default "jaspy"
 environment then append this line to the end of your "$HOME/.bashrc" file:
 
@@ -35,7 +34,7 @@ module load jaspy
 
   {{< /accordion-item >}}
 
-  {{< accordion-item header="How do I set the `jasmin-sci` environment as my default?" >}}
+  {{< accordion-item title="How do I set the `jasmin-sci` environment as my default?" >}}
 If you want your JASMIN sessions to automatically know about the packages in
 the "jasmin-sci" environment then add this line to the end of your
 "$HOME/.bashrc" file:
@@ -46,7 +45,7 @@ module load jasmin-sci
 
   {{< /accordion-item >}}
 
-{{< accordion-item header="How do I activate a combination of Jaspy and `jasmin-sci` environments together?" >}}
+{{< accordion-item title="How do I activate a combination of Jaspy and `jasmin-sci` environments together?" >}}
 If you want to activate (or load) both the current Jaspy and the "jasmin-sci"
 environments at the same time, use:
 
@@ -57,7 +56,7 @@ module load jaspy
 
 {{< /accordion-item >}}
 
-{{< accordion-item header="What is the plan for the future of Jaspy and `jasmin-sci` environments?" >}}
+{{< accordion-item title="What is the plan for the future of Jaspy and `jasmin-sci` environments?" >}}
 We have moved over to using [Conda](https://docs.conda.io/en/latest/) as the
 primary tool for building and deploying software environments. The [Jaspy]({{<
 ref "jaspy-envs" >}}) environments are all Conda-based and make use of the
@@ -68,7 +67,7 @@ Ideally, we would like to move to a Conda-only solution in order to simplify
 both the management and user perspectives.
 {{< /accordion-item >}}
 
-{{< accordion-item header="Can I install my own Conda environment?" >}}
+{{< accordion-item title="Can I install my own Conda environment?" >}}
 If you need to install a set of packages that are not provided in Jaspy or the
 "jasmin-sci" environment then you can create your own Conda installation. It
 is important to note that this **will not be compatible** with the Jaspy
@@ -76,7 +75,7 @@ environments and please take note of the FAQ below: "Where should I install
 software environments on JASMIN?".
 {{< /accordion-item >}}
 
-{{< accordion-item header="Where should I install software environments on JASMIN?" >}}
+{{< accordion-item title="Where should I install software environments on JASMIN?" >}}
 If you need to install your own software environment(s) on JASMIN then we
 strongly advise that you install it on one of the SSD file systems:
 
@@ -84,7 +83,7 @@ strongly advise that you install it on one of the SSD file systems:
 - Within a "small files" Group Workspace - if you wish to share the environment with other JASMIN users.
 {{< /accordion-item >}}
 
-{{< accordion-item header="Is MATLAB available on JASMIN?" >}}
+{{< accordion-item title="Is MATLAB available on JASMIN?" >}}
 No, MATLAB is not one of our supported software packages and is not installed
 on JASMIN for general use. As a result, we are not able to provide support for
 MATLAB-related issues.

@@ -48,7 +48,7 @@ GWSs are available on:
 - All nodes in the LOTUS and ORCHID clusters
 - Some application-specific servers (by arrangement)
 
-They are NOT available on `login` or `nx-login` servers.
+They are NOT available on `login` or `nx` servers.
 
 ### Requesting access to a GWS
 
@@ -64,20 +64,20 @@ to your account. If you are not sure of the group name for your GWS you can
 find this by entering the command `groups` to see the names of the groups you
 belong to. The group name normally has the prefix “gws_".
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 All data in a GWS should belong to this group `gws_<name>`, so that group read/write permissions apply to this group rather than the default group, `users`.
 {{</alert>}}
 
 ## GWS management
 
 Each GWS has a designated manager. See the article on
-[managing a GWS]({{< ref "managing-a-gws" >}}).
+[managing a GWS]({{% ref "managing-a-gws" %}}).
 
 ### Backup
 
 Please note that data in GWSs are only backed up if the GWS Manager has put
 tasks in place to do this. The 
-[Elastic Tape service]({{< ref "secondary-copy-using-elastic-tape" >}}) is available to enable to  make a secondary near-line copy of data. Please discuss the details with your GWS Manager.
+[Elastic Tape service]({{% ref "secondary-copy-using-elastic-tape" %}}) is available to enable to  make a secondary near-line copy of data. Please discuss the details with your GWS Manager.
 
 ### Recommended directory structure for a GWS
 
@@ -96,5 +96,5 @@ order to conventions are used within your GWS:
 ```
 
 See the GWS etiquette article for more details about GWSs and the [GWS data
-sharing via HTTP]({{< ref "share-gws-data-via-http" >}}) article for
+sharing via HTTP]({{% ref "share-gws-data-via-http" %}}) article for
 information about the use of the `public` directory.

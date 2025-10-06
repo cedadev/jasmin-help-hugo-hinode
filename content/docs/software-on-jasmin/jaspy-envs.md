@@ -1,10 +1,16 @@
 ---
 aliases: /article/4729-jaspy-envs
-date: 2024-04-09 11:01:44
 description: Jaspy Software Environments (Python 3, R and other tools)
 slug: jaspy-envs
 title: Jaspy Software Environments (Python 3, R and other tools)
 ---
+
+{{<alert alert-type="danger">}}
+Important changes took place in September 2024 affecting what software can be used on JASMIN.
+Please read [this announcement](https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/) carefully.
+
+The information below **has** been updated in line with this announcement.
+{{</alert>}}
 
 This page provides details of the "Jaspy" software environments that provide
 access to Python 3, R and a range of other tools on JASMIN.
@@ -24,17 +30,17 @@ reproducibility and continuity.
 
 ## Working with Jaspy environments
 
-#### Quickstart for Python 3 environment
+### Quickstart for Python 3 environment
 
 If you want to get on, you can select a Jaspy environment to "activate". This
 means that once you have run these commands then the various tools and
 libraries will be available in your current session.
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jaspy
 {{</command>}}
 
-#### Activating the environment in scripts
+### Activating the environment in scripts
 
 If you want a particular script to activate a Jaspy environment then add the
 "module" command to it, e.g.:
@@ -45,7 +51,7 @@ module load jaspy
 python do-something.py
 ```
 
-#### Setting your profile to always use a Jaspy environment
+### Setting your profile to always use a Jaspy environment
 
 If you want all your JASMIN sessions to use a particular Jaspy environment
 then you can add the `module load jaspy` command to your `$HOME/.bashrc` file.
@@ -62,96 +68,87 @@ fi
 
 You can list the currently available Jaspy environments using:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module avail jaspy
-(out)-------------------------  /apps/modulefiles  ----------------------------
-(out)   jaspy/2.7/r20190715    jaspy/3.7/r20200606     jaspy/3.10/r20230718 (D)
-(out)   jaspy/3.7/r20181219    jaspy/3.7/r20210320     jaspy/3.11/r20240302
-(out)   jaspy/3.7/r20190612    jaspy/3.8/r20211105     jaspy/3.11/r20240508
-(out)   jaspy/3.7/r20190627    jaspy/3.10/r20220721
+-------------------------------- /apps/jasmin/modulefiles ----------------------------------
+   jaspy/3.10/v20230718    jaspy/3.11/v20240508        snappy/8.0/jaspy-3.7-r20210320
+   jaspy/3.11/v20240302    jaspy/3.11/v20240815 (D)
 {{</command>}}
 
 This lists all jaspy modules (i.e. environments) that can be loaded.
 
-#### Jaspy Python 3.7+ (plus other tools) environments
+### Jaspy Python (plus other tools) environments
 
 The packages available in the Jaspy environments can be found by searching the
 GitHub repository where the Conda environment files are defined. This table
 lists all the Jaspy Python 3.7+ environments provided on JASMIN and specifies
 the current (default) version.
 
-Jaspy Python 3.7 Environment |  Versioned list of software packages |  Default? |  Comments / Issues
+Jaspy Python Environment |  Versioned list of software packages |  Default? |  Comments / Issues
 ---|---|---|---
-jaspy/3.11/r20240508  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-r20240508/final-spec.yml) | No (will become the default on 22/05/2024) | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_r20240508)
-jaspy/3.11/r20240302  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-r20240302/final-spec.yml) | No | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_r20240302)
-jaspy/3.10/r20220721  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/m3-4.9.2/jaspy3.10-m3-4.9.2-r20220721/final-spec.yml) |  Yes (from: 18/10/2022)  |  NCO and NCL have now been moved to the ["jasmin-sci" packages]({{< ref "jasmin-sci-software" >}}) installation.
-jaspy/3.8/r20211105  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.8/m3-4.9.2/jaspy3.8-m3-4.9.2-r20211105/final-spec.yml) |  No (was default: 16/11/2021 - 17/102022)  |  Known problem with NCL rendering Shapefiles (see [issue](https://github.com/cedadev/ceda-jaspy-envs/issues/56)). Some packages were removed in this release due to dependency problems: theano, pymc3, pystan, pyngl,pyferret (see[issue](https://github.com/cedadev/ceda-jaspy-envs/issues/81)).
-jaspy/3.7/r20210320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.9.2/jaspy3.7-m3-4.9.2-r20210320/final-spec.yml)  |  No (was default:  20/05/2021 - 16/11/2021)  |  Known problem with NCL rendering Shapefiles (see [issue](https://github.com/cedadev/ceda-jaspy-envs/issues/56))
-jaspy/3.7/r20200606  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.6.14/jaspy3.7-m3-4.6.14-r20200606/packages.txt)|  No  |  |
-jaspy/3.7/r20181219  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py3.7/m3-4.5.11/jaspy3.7-m3-4.5.11-r20181219/packages.txt)|  No  |  |
+jaspy/3.10/v20230718 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/mf-22.11.1-4/jaspy3.10-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
+jaspy/3.11/v20240302 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240302/final_spec.yml) | No  | 
+jaspy/3.11/v20240508 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240508/final_spec.yml) | No  | 
+jaspy/3.11/v20240815 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240815/final-spec.yml) | Yes  | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 
-#### Jaspy Python 2.7 (plus other tools) environments
+### Jaspy Python 2.7 (plus other tools) environments
 
-This table lists all the Jaspy Python 2.7 environments provided on JASMIN and
-specifies the current (default) version.
+Python 2.7 environments are no longer supported.
 
-Jaspy Python 2.7 Environment |  Versioned list of software packages |  Default?
----|---|---
-jaspy/2.7/r20190715 |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/py2.7/m2-4.6.14/jaspy2.7-m2-4.6.14-r20190715/packages.txt)  |  Yes
-{.table .table-striped}
-
-#### Jasr R environments
+### Jasr R environments
 Environments for the "R" programming language are packaged into separate
 software environments, known as "Jasr". This table lists all the Jaspy R
 environments provided on JASMIN and specifies the current (default) version.
 
-{{<alert type="danger" >}}
+{{<alert alert-type="danger" >}}
 We are aware of a newly discovered vulnerability in the R Language (CVE-2024-27322) which allows arbitrary code execution from maliciously built RDS (R Data Serialisation) files.
 
 We will be updating to the latest version of R as soon as possible to remove this vulnerability, but we do not plan to remove access to R beforehand.
 Our advice, as always, is to not open data from untrusted sources and not to install untrusted packages from CRAN.
 
 Please note that this position may change at short notice as more information becomes available- this notice was last updated on Friday 10th May 2024.
+
+
 {{< /alert >}}
 
 Jaspy R Environment ("Jasr") |  Versioned list of software packages|  Default?
 ---|---|---
-jasr/4.3/r20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-r20240320/final-spec.yml) | No (will become the default on 16/04/2024)  |
-jasr/4.0/r20220729  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.0/m3-4.9.2/jasr4.0-m3-4.9.2-r20220729/final-spec.yml)  |  Yes (from: 18/10/2022)
-jasr/4.0/r20211110  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/master/environments/r4.0/m3-4.9.2/jasr4.0-m3-4.9.2-r20211110/packages.txt)|  No  (was default: 16/11/2021 - 17/10/2022)
+jasr/4.2/v20230718  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.2/mf-22.11.1-4/jasr4.2-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
+jasr/4.3/v20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240320/final_spec.yml)  | No | 
+jasr/4.3/v20240815  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240815/final-spec.yml)| Yes | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 
 The available R environments can be listed with:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module avail jasr
 {{</command>}}
 
-##  Understanding versioning with Jaspy/Jasr
+## Understanding versioning with Jaspy/Jasr
 
 Jaspy environments are labelled as "jaspy/<python_version>/<release>". The
 environment is selected and activated using the "module load" command:
 
-{{<command user="user" host="sci1">}}
-module load jaspy/3.7/r20210320
+{{<command user="user" host="sci-vm-01">}}
+module load jaspy/3.10/v20230718
 {{</command>}}
 
 However, if you wish to get the latest environment for a given Python version
 you can omit the "<release>", as follows:
 
-{{<command user="user" host="sci1">}}
-module load jaspy/3.7
+{{<command user="user" host="sci-vm-01">}}
+module load jaspy/3.10
 {{</command>}}
 
 And if you just want the most up-to-date Python you can even omit the
 `<python_version>`, as follows:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-01">}}
 module load jaspy
 {{</command>}}
 
-{{<alert type="info" >}}
+{{<alert alert-type="info" >}}
 If you choose to omit the `<release>` and `<python_version>`
 components then it is important to be aware that the resulting environment may
 differ over time. For continuity, you ay wish to use the full
@@ -174,19 +171,19 @@ Manageability  |  Provide tools to easily construct, test, deploy, document and 
 
 ## Updates and tracking of Jaspy/Jasr environments
 
-#### History of environments on JASMIN
+### History of environments on JASMIN
 
-Please see the [Jaspy Python 3.7+ (and other tools) environments](#jaspy-python-27-plus-other-tools-environments) section
+Please see the [Jaspy Python (and other tools) environments](#jaspy-python-plus-other-tools-environments) section
 above for information about releases on JASMIN.
 
-#### Which environment is "current"?
+### Which environment is "current"?
 
-Please refer to the [Jaspy Python 3.7+ (and other tools) environments](#jaspy-python-27-plus-other-tools-environments) section
+Please refer to the [Jaspy Python (and other tools) environments](#jaspy-python-plus-other-tools-environments) section
 above for information about the current release on JASMIN.
 
 ## Citing Jaspy environments
 
-#### Can I cite a jaspy (conda) environment?
+### Can I cite a jaspy (conda) environment?
 
 We do not yet have an agreed approach for citing a Jaspy environment. However,
 you can refer to the environment description URLs given in the table above.
@@ -207,14 +204,34 @@ environments on JASMIN then please use one of the following approaches:
 Jaspy environments can also be activated in a more traditional way using
 standard the standard conda approach, for example:
 
-{{<command user="user" host="sci1">}}
-export PATH=/apps/jasmin/jaspy/miniconda_envs/jaspy3.7/m3-4.6.14//bin/conda:$PATH
+List the available environments:
+
+{{<command>}}
+conda info --envs
+(out)# conda environments:
+(out)#
+(out)base                  *  /apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0
+(out)jaspy3.11-mf3-23.11.0-0-v20240302     /apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0/envs/jaspy3.11-mf3-23.11.0-0-v20240302
+(out)jaspy3.11-mf3-23.11.0-0-v20240508     /apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0/envs/jaspy3.11-mf3-23.11.0-0-v20240508
+(out)jaspy3.11-mf3-23.11.0-0-v20240815     /apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0/envs/jaspy3.11-mf3-23.11.0-0-v20240815
+{{</command>}}
+
+Select one of them, e.g. `jaspy3.11-mf3-23.11.0-0-v20240302` and set up to activate it:
+
+{{<command>}}
+export PATH=/apps/jasmin/jaspy/miniforge_envs/jaspy3.11/mf3-23.11.0-0/envs/jaspy3.11-mf3-23.11.0-0-v20240302:$PATH
 source activate
-conda activate jaspy3.7-m3-4.6.14-r20210320
+conda activate jaspy3.11-mf3-23.11.0-0-v20240302
+{{</command>}}
+
+Prompt changes to:
+
+{{<command prompt="(jaspy3.11-mf3-23.11.0-0-v20240302) user@host:~$">}}
+#
 {{</command>}}
 
 This has the same result as the `module load` approach. The naming of the
-environment identifiers includes the "Miniconda" version used to generate the
+environment identifiers includes the "miniforge" version used to generate the
 environment. The `module load` approach is recommended as the standard method
 for activating Jaspy environments.
 

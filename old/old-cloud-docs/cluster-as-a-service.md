@@ -1,9 +1,5 @@
 ---
 aliases: /article/4735-cluster-as-a-service
-categories:
-- For Cloud Tenants
-collection: jasmin-documentation
-date: 2023-05-23 09:38:48
 description: Cluster-as-a-Service
 slug: cluster-as-a-service
 title: Cluster-as-a-Service
@@ -47,15 +43,15 @@ CaaS system are subject to the usual constraints:
 - The CaaS system has an Identity Manager which provides identity services for a tenancy, i.e. users have a single identity across all clusters within in a single tenancy.
 - However this identity is not linked to a JASMIN account.
 
-###  Available cluster types
+### Available cluster types
 
 Cluster type | Details
 ---|--- 
-[Identity Manager]({{< ref "cluster-as-a-service-identity-manager" >}})  |  Manages identity and permissions for other clusters using a combination of [FreeIPA](https://www.freeipa.org/page/Main_Page) and [Keycloak](https://www.keycloak.org/).  
-[NFS]({{< ref "cluster-as-a-service-shared-storage" >}}) |  Shared storage for other clusters using a simple NFS server.  
-[Kubernetes]({{< ref "cluster-as-a-service-kubernetes" >}}) |  A Kubernetes cluster deployed using [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/).
-[Pangeo]({{< ref "cluster-as-a-service-pangeo" >}}) |  The [Pangeo](https://pangeo.io/) stack deployed on Kubernetes.  
-[Slurm]({{< ref "cluster-as-a-service-slurm" >}}) (currently disabled) |  A batch cluster running the [Slurm workload manager](https://slurm.schedmd.com/).
+[Identity Manager]({{% ref "cluster-as-a-service-identity-manager" %}})  |  Manages identity and permissions for other clusters using a combination of [FreeIPA](https://www.freeipa.org/page/Main_Page) and [Keycloak](https://www.keycloak.org/).  
+[NFS]({{% ref "cluster-as-a-service-shared-storage" %}}) |  Shared storage for other clusters using a simple NFS server.  
+[Kubernetes]({{% ref "cluster-as-a-service-kubernetes" %}}) |  A Kubernetes cluster deployed using [Rancher Kubernetes Engine](https://rancher.com/docs/rke/latest/en/).
+[Pangeo]({{% ref "cluster-as-a-service-pangeo" %}}) |  The [Pangeo](https://pangeo.io/) stack deployed on Kubernetes.  
+[Slurm]({{% ref "cluster-as-a-service-slurm" %}}) (currently disabled) |  A batch cluster running the [Slurm workload manager](https://slurm.schedmd.com/).
 {.table .table-striped}
   
 ## Creating a cluster

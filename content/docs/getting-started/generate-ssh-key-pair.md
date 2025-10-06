@@ -10,23 +10,28 @@ This article explains how to create an SSH key pair for logging in to JASMIN.
 
 You can also use this procedure to update an existing SSH key pair for JASMIN.
 However, if you are experiencing problems logging in to JASMIN you are advised
-to first check [Login problems]({{< ref "login-problems" >}}) before changing your
-key. Once you have created your SSH key pair it will need to be uploaded to
-the JASMIN accounts portal. If this is the first time you have created a key
-pair then this will be done when you create an account on the portal (Step 2
-of [Get Started with JASMIN]({{< ref "get-started-with-jasmin" >}})). If you
-are updating your key for an existing account then you will need to update it
-in your [JASMIN
-profile](https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/).
+to first check {{<link "../interactive-computing/login-problems">}}Login problems{{</link>}} before changing your
+key. Once you have created your SSH key pair, the public key will need to be uploaded to
+your {{<link "https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/">}}JASMIN profile{{</link>}}.
+If this is the first time you have created a key
+pair then this will be done when you create an account on the accounts portal (Step 2
+of {{<link "get-started-with-jasmin">}}Get Started with JASMIN{{</link>}}).
 
-## The shell terminal
+## SSH client and terminal
 
-Generating an SSH key pair requires an SSH client and a Shell terminal. Linux
+Generating an SSH key pair requires an SSH client, usually an application which functions as a terminal: 
+a text-based environment where you type commands to make things happen. Linux
 and Mac users can use a standard terminal which is very likely to have SSH
-installed. Windows users are advised to [install the MobaXterm
-application]({{< ref "../uncategorized/mobaxterm" >}}) which provides a linux-style terminal
-with all the relevant utilities included. Figures 1 and 2 show example
-terminal windows on a Mac and Windows (using MobaXterm).
+installed. Windows users are advised to find a suitable SSH client to use or
+install on their machine. Suggestions are:
+
+- {{<link "../uncategorized/mobaxterm">}}MobaXterm{{</link>}} (requires license), provides a Linux-style terminal
+with all the relevant command-line and some GUI utilities included. Figures 1 and 2, below, show example
+terminal windows on a Mac, and Windows (using MobaXterm).
+- {{<link "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement">}}Windows OpenSSH client{{</link>}} an optional feature in Windows 10 or 11, but usually installed by default.
+- {{<link "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">}}PuTTY{{</link>}} set of SSH tools (includes PuTTYgen GUI tool for generating keys, and Pageant ssh-agent)
+
+There are many more, but if you stick to one of these three, which are known to us, then potentially we can help you if you run into difficulties.
 
 {{<image src="img/docs/generate-ssh-key-pair/file-QrkL51B5fW.png" caption="Mac terminal" >}}
 
@@ -34,44 +39,50 @@ terminal windows on a Mac and Windows (using MobaXterm).
 
 ## Using ssh-keygen to create an SSH key pair
 
+{{<alert alert-type="info">}}
+As of November 2024 you are now recommended to use an ECDSA key (instead of RSA), for better compatibility with some services.
+Please note the updated command and filenames generated.
+{{</alert>}}
+
 The Linux command `ssh-keygen` should be used to generate your SSH key pair.
-Open a terminal and generate your public and private key, as follows (replace
-the e-mail address with your own):
+Open a terminal and generate your public and private key, as follows, replacing the e-mail address with your own:
 
 {{<command user="localuser" host="localhost">}}
-ssh-keygen -t rsa -b 2048 -C "me@somewhere.ac.uk" -f ~/.ssh/id_rsa_jasmin
+ssh-keygen -m PEM -t ecdsa -b 521 -C "me@somewhere.ac.uk" -f ~/.ssh/id_ecdsa_jasmin
 {{</command>}}
 
-At the prompt, type a **secure passphrase** to protect your SSH private key.
+(Here, `~/` or `$HOME` both mean "your home directory". The equivalent on Windows is `%USERPROFILE%`)
+
+The equivalent using the graphical PuTTYgen or MobaKeyGen tools is with these settings: choose these **before** clicking "Generate"
+{{< image src="img/docs/generate-ssh-key-pair/puttygen-ecdsa-key.png" caption="Settings for ECDSA key in PuTTYgen (same for MobaKeyGen). Choose settings before clicking Generate." wrapper="col-8 mx-auto">}}
+When prompted, type a **secure passphrase** to protect your SSH private key.
 **This is a requirement for access to JASMIN machines. Use a new, different
 passphrase whenever you generate a new key.** Note that nothing is echoed to
 the screen when you enter your passphrase, so it may look like it is not
 working.
 
-The output will look something like this:
+The output from the command-line tools will look something like this:
 {{<command user="localuser" host="localhost">}}
-(out)Generating public/private rsa key pair.
+(out)Generating public/private ecdsa key pair.
 (out)Enter passphrase (empty for no passphrase): <ADD PASSPHRASE HERE>
 (out)Enter same passphrase again: <REPEAT PASSPHRASE HERE>
-(out)Your identification has been saved in /home/users/meuser/.ssh/id_rsa_jasmin.
-(out)Your public key has been saved in /home/users/meuser/.ssh/id_rsa_jasmin.pub.
+(out)Your identification has been saved in /home/users/meuser/.ssh/id_ecdsa_jasmin.
+(out)Your public key has been saved in /home/users/meuser/.ssh/id_ecdsa_jasmin.pub.
 (out)The key fingerprint is:
 (out)74:14:95:8a:31:73:cc:5c:af:be:91:04:01:c2:39:0b me@somewhere.ac.uk
 {{</command>}}
 
 Running `ssh-keygen` will generate two files in your `$HOME/.ssh/` directory:
 
-- `id_rsa_jasmin` -  private key file (which should have permission "400", i.e. readable only by you)
-- `id_rsa_jasmin.pub` - public key file
+- `id_ecdsa_jasmin` -  private key file (which should have permission "600", i.e. read/write only by you)
+- `id_ecdsa_jasmin.pub` - public key file
 
 The **public** key file is the part that you need to share in order to access
-JASMIN. The **private** key file should be protected and not shared with
-others.
+JASMIN. Windows may mistakenly associated the `*.pub` file with Microsoft Publisher so don't try to double-click it. When you need to copy & paste its contents to upload to your JASMIN profile, use a simple text editor (like Notepad).
 
-## Converting a PuTTYGen SSH private key for use with MobaXterm (Windows only)
+Make sure the file is stored in a directory called `.ssh` in your home directory (`~/.ssh`, `$HOME/.ssh` or `%USERPROFILE%\.ssh` on Windows, or `${env:UserProfile}\.ssh` in PowerShell). Storing it elsewhere sometimes causes problems with permissions, but it's also good to keep keys in one place so that they can be kept securely.
 
-If you have previously used the
-[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/) utilities to
-login to JASMIN and you wish to move over to using [MobaXterm]({{< ref "../uncategorized/mobaxterm" >}}) then please see these [instructions to convert your SSH
-private key from the PuTTYGen format to the OpenSSH
-format](https://docs.oseems.com/general/application/putty/convert-ppk-to-ssh-key) (as used by Linux/Mac). Please save your resulting OpenSSH key as `id_rsa_jasmin` in your `$HOME/.ssh/` directory.
+{{<alert color="warning" icon="fas lock">}}
+The **private** key file should be protected and not shared with
+others. It should stay on your local machine: **Do not copy your private key to anywhere on JASMIN.**
+{{</alert>}}

@@ -128,4 +128,4 @@ and {{<link "openstack">}}OpenStack{{</link>}}.
 ## Getting a JASMIN Cloud Tenancy
 
 To start a conversation with us about getting a JASMIN Cloud Tenancy for your
-project, please contact JASMIN Support.
+project, please [contact JASMIN Support](mailto:support@jasmin.ac.uk).

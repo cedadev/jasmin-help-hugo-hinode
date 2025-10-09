@@ -1,5 +1,5 @@
 ---
-description: In depth look at the jupyterhub platforms
+description: In depth look at the JupyterHub platforms
 slug: platform-in-depth-jupyterhub
 title: Platforms In Depth - JupyterHub, DaskHub, BinderHub
 weight: 50
@@ -17,53 +17,53 @@ To **create** a JupyterHub instance on Azimuth, you will need an existing {{<lin
 
 ### Platform creation
 
-To create a **JupyterHub Platform** navigate to Azimuth Project/Tenancy page and click on **New platform**. Then select **Jupyterhub platform** from the **Create a new platform** page.
+To create a **JupyterHub Platform** navigate to Azimuth Project/Tenancy page and click on **New platform**. Then select **JupyterHub platform** from the **Create a new platform** page.
 
 Enter the **Platform name** and either select an existing **Kubernetes cluster** or create one here by clicking the plus sign at the end of the textbox. Enter the cluster details: **Name** | **Template** | **Version** | **number of worker nodes** and define **auto healing** if needed and deploy the instance creation.
 
 
-{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-details.png" caption="New Jupyterhub platform details" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-details.png" caption="New JupyterHub platform details" wrapper="col-9 mx-auto text-center">}}
 
 Once successfully deployed, you can access the platform from the Azimuth tenancy landing page.
 
-{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-and-cluster-deployed.png" caption="jupyterhub deployment complete" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-and-cluster-deployed.png" caption="JupyterHub deployment complete" wrapper="col-12 mx-auto text-center">}}
 
-From the **platform details** page you can access the jupyter notebook service from the **services** section. Use the **details** button for the deployed jupyterhub instance  to **refresh**, **update** or **delete** the service.
+From the **platform details** page you can access the jupyter notebook service from the **services** section. Use the **details** button for the deployed JupyterHub instance  to **refresh**, **update**, or **delete** the service.
   
-{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-platform-details-page.png" caption="jupyterhub details" wrapper="col-10 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimuth-jupyterhub-platform-details-page.png" caption="JupyterHub details" wrapper="col-10 mx-auto text-center">}}
 
-To update the jupyterhub instance, use the **update** window to change the **Notebook CPUs**, **Notebook RAM** and **Notebook storage**.
+To update the JupyterHub instance, use the **update** window to change the **Notebook CPUs**, **Notebook RAM**, and **Notebook storage**.
 
-{{<image src="img/docs/platform-in-depth-jupyterhub/azimututh-jupyterhub-update.png" caption="jupyterhub update" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-jupyterhub/azimututh-jupyterhub-update.png" caption="JupyterHub update" wrapper="col-9 mx-auto text-center">}}
 
 Click **update platform** to make the changes take effect.
 
-**Patching** a JupyterHub instance involves updating the software to fix bugs or vulnerabilities, which can typically be done by accessing the Kubernetes Cluster, from the Kubernetes dashboard or through command-line tools. You can apply updates to the JupyterHub deployment using Kubernetes commands or from the **Applications** dashboard. To ensure that the updated version is running, you can restart the JupyterHub service.
+**Patching** a JupyterHub instance involves updating the software to fix bugs or vulnerabilities, which can typically be done by accessing the Kubernetes Cluster, from the Kubernetes dashboard, or through command-line tools. You can apply updates to the JupyterHub deployment using Kubernetes commands or from the **Applications** dashboard. To ensure that the updated version is running, you can restart the JupyterHub service.
 
 Azimuth offers several Jupyter-based options such as:
 
-- **JupyterHub** as mentioned above
-- **Jupyter Notebook** a single-user notebook service that can be launched from a repo2docker-compatible repository, similar to Binder2
-- **JupyterLab** an enhanced interface for Jupyter notebooks, providing additional features like code consoles, terminals, and a file browser.
+- **JupyterHub**, as mentioned above
+- **Jupyter Notebook**, a single-user notebook service that can be launched from a `repo2docker`-compatible repository, similar to Binder2
+- **JupyterLab**, an enhanced interface for Jupyter notebooks, providing additional features like code consoles, terminals, and a file browser.
 
 ### Platform usage
 
-To access the deployed JupyterHub instance, click **Juptyer Notebook** on the **platform** tile. This link can be shared with others to access the same JupyterHub instance. If the user accessing it is logged into Azimuth, then they will be logged in to JupyterHub using their Azimuth user. For others who don't have access to Azimuth, users will need to be created using the tenancy's {{<link "azimuth-identity-provider">}}**Identity Provider**{{</link>}} by the tenancy admin, which then need to be shared with the users who need access.
+To access the deployed JupyterHub instance, click **Juptyer Notebook** on the **platform** tile. This link can be shared with others to access the same JupyterHub instance. If the user accessing it is logged into Azimuth, then they will be logged in to JupyterHub using their Azimuth user. For others who don't have access to Azimuth, users will need to be created using the tenancy's {{<link "azimuth-identity-provider">}}**Identity Provider**{{</link>}} by the tenancy admin, the details of which then need to be shared with the users who need access.
 
 ## DaskHub
 
-**Daskhub** is a cloud-based platform designed to simplify and accelerate distributed data processing tasks using Dask. It provides a user-friendly interface that abstracts away the complexities of setting up and managing Dask clusters, allowing users to focus on their data analysis and machine learning workflows.
+**DaskHub** is a cloud-based platform designed to simplify and accelerate distributed data processing tasks using Dask. It provides a user-friendly interface that abstracts away the complexities of setting up and managing Dask clusters, allowing users to focus on their data analysis and machine learning workflows.
 
-**Key Features and Benefits** include:
+**Key features and benefits** include:
 
-- **simplified Cluster Management** handles the provisioning, scaling, and management of Dask clusters, eliminating the need for users to manually configure and maintain infrastructure
-- **Scalability** allows platform users to scale Dask clusters up or down to accommodate varying workloads, ensuring optimal resource utilisation and performance.
+- **simplified cluster management** handles the provisioning, scaling, and management of Dask clusters, eliminating the need for users to manually configure and maintain infrastructure
+- **scalability** allows platform users to scale Dask clusters up or down to accommodate varying workloads, ensuring optimal resource utilisation and performance.
 
-Additionally, Dask offers a **user-friendly web interface** that is intuitive and easy to use, even for users who are not familiar with Dask or distributed computing. Dask also **integrates seamlessly** with popular data science tools like JupyterLab, allowing users to build on their existing workflows and libraries. Azimuth Daskhub comes pre-installed with a wide range of popular libraries and packages, including NumPy, Pandas, Scikit-learn, and TensorFlow, making it easy to get started with data analysis and machine learning tasks.
+Additionally, Dask offers a **user-friendly web interface** that is intuitive and easy to use, even for users who are not familiar with Dask or distributed computing. Dask also **integrates seamlessly** with popular data science tools like JupyterLab, allowing users to build on their existing workflows and libraries. Azimuth DaskHub comes pre-installed with a wide range of popular libraries and packages, including NumPy, Pandas, Scikit-learn, and TensorFlow, making it easy to get started with data analysis and machine learning tasks.
 
-In much the same way as with JupyterHub, to use Dask you need to first create a **Dask cluster** with the desired number of workers and memory allocation. Once the cluster is created, data can be uploaded to the platform or accessed from external storage sources. A user can then start to submit Dask tasks and workflows to the cluster, which are then executed in parallel across the worker nodes. The platform provides tools to monitor cluster health, task progress, and resource usage. Additionally, users can also manage their clusters, such as scaling them up or down as needed.
+In much the same way as JupyterHub, to use Dask, you need to first create a **Dask cluster** with the desired number of workers and memory allocation. Once the cluster is created, data can be uploaded to the platform or accessed from external storage sources. A user can then start to submit Dask tasks and workflows to the cluster, which are executed in parallel across the worker nodes. The platform provides tools to monitor cluster health, task progress, and resource usage. Additionally, users can also manage their clusters, such as scaling them up or down as needed.
 
-**Azimuth Daskhub** can be used to perform large-scale data analysis and visualization tasks, such as exploratory data analysis, feature engineering, and data cleaning. Additionally, the platform is well-suited for training and deploying machine learning models on large datasets, including tasks like image classification, natural language processing, and recommendation systems. Azimuth Daskhub can also be used for various scientific computing tasks, such as simulations, numerical modeling, and data processing.
+**Azimuth DaskHub** can be used to perform large-scale data analysis and visualization tasks, such as exploratory data analysis, feature engineering, and data cleaning. Additionally, the platform is well-suited for training and deploying machine learning models on large datasets, including tasks like image classification, natural language processing, and recommendation systems. Azimuth DaskHub can also be used for various scientific computing tasks, such as simulations, numerical modeling, and data processing.
 
 ### BinderHub
 

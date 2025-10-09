@@ -57,7 +57,7 @@ See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/173
 
 Using Azmiuth's platforms may mean that users never need to consider Terraform/OpenTofu.
 
-### Kubenetes
+### Kubernetes
 
 Kubernetes, while having a reasonably high learning curve, presents a great opportunity for tenants to deploy robust and easily updatable and re-deployable services. In CEDA we use a Kubernetes cluster to deploy most of our user facing services. It allows us to more frequently update and patch applications and services, with minimal downtime and a robust deployment.
 

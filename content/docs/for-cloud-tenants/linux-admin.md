@@ -10,10 +10,9 @@ weight: 80
 
 Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams, and abide by the patching policy.
 
-{{<alert type="info">}}
-
 ### Patching Policy
 
+{{<alert alert-type="danger">}}
 We expect tenants to react in a timely manner to any security vulnerabilities.
 This means critical vulnerabilities are patched within 7 days, and high
 vulnerabilities are patched within 14 days. This is following UKRI security

@@ -15,10 +15,10 @@ We expect Tenants to abide by the terms and conditions set out by
 {{<link "jasmin_tcs">}}JASMIN{{</link>}}, {{<link "stfc_cloud_tcs">}}STFC Cloud{{</link>}},
 and {{<link "ukri_tcs">}}UKRI{{</link>}}.
 This includes abiding by {{<link "stfc_cloud_patching">}}STFC Cloud's{{</link>}} and UKRI's patching policy.
-{{<alert type="info">}}
 
 ### Patching Policy
 
+{{<alert alert-type="danger">}}
 We expect tenants to react in a timely manner to any security vulnerabilities.
 This means critical vulnerabilities are patched within 7 days, and high
 vulnerabilities are patched within 14 days. This is following UKRI security

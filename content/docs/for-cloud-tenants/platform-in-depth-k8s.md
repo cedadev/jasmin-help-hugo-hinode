@@ -36,7 +36,7 @@ Advanced features can be set as shown:
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-advanced-options.png" caption="kubernetes advanced options" wrapper="col-9 mx-auto text-center">}}
 
-{{<alert type="info">}}
+{{<alert alert-type="info">}}
 Note that if you use the advanced option for enabling a Kubernetes ingress, you do not have to provision the ingress controller yourself. Doing so can break the cluster.
 You must either: use the advanced option to deploy ingress, or do it manually.
 {{</alert>}}

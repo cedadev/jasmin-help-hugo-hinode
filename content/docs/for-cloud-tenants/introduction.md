@@ -77,7 +77,7 @@ We expect Tenants to abide by the terms and conditions set out by
 and {{<link "ukri_tcs">}}UKRI{{</link>}}.
 Importantly, this includes abiding by the {{<link "stfc_cloud_patching">}}patching policy{{</link>}} set out by UKRI.
 
-{{<alert type="info">}}
+{{<alert alert-type="danger">}}
 In line with UKRI security policy, we expect tenants to react in a timely manner to any security vulnerabilities.
 This means critical vulnerabilities must be patched within 7 days, and high
 vulnerabilities patched within 14 days.  Failure to comply may result in tenancy access being revoked and

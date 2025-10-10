@@ -31,9 +31,9 @@ In order to sign in, a user needs to be given a temporary password. This can be 
 
 {{<image src="img/docs/azimuth-identity-provider/set-password.png"  wrapper="col-12 mx-auto text-center">}}
 
-For more information, see the Keycloak documentation on: 
+For more information, see the Keycloak documentation on:
 
-- [Managing users](https://www.keycloak.org/docs/latest/server_admin/#assembly-managing-users_server_administration_guide)
-- [Assigning users to groups](https://www.keycloak.org/docs/latest/server_admin/#proc-managing-groups_server_administration_guide)
-- [Configuring authentication policies](https://www.keycloak.org/docs/latest/server_admin/#configuring-authentication_server_administration_guide) - e.g. password requirements, multi-factor authentication
-- [Integrating external identity providers](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker)
+- {{<link "https://www.keycloak.org/docs/latest/server_admin/#assembly-managing-users_server_administration_guide">}}Managing users{{</link>}}
+- {{<link "https://www.keycloak.org/docs/latest/server_admin/#proc-managing-groups_server_administration_guide">}}Assigning users to groups{{</link>}}
+- {{<link "https://www.keycloak.org/docs/latest/server_admin/#configuring-authentication_server_administration_guide">}}Configuring authentication policies{{</link>}} - e.g. password requirements, multi-factor authentication
+- {{<link "https://www.keycloak.org/docs/latest/server_admin/#_identity_broker">}}Integrating external identity providers{{</link>}}

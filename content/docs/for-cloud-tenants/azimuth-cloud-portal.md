@@ -29,7 +29,7 @@ To get a cloud tenancy or access an existing one, you currently need to [contact
 
 ## Using the JASMIN Azimuth Cloud Portal
 
-To access Azimuth, navigate to the [JASMIN Azimuth Portal](https://portal.cloud.jasmin.ac.uk/), which will take you to the landing page shown in the image below.
+To access Azimuth, navigate to the {{<link "https://portal.cloud.jasmin.ac.uk/">}}JASMIN Azimuth Portal{{</link>}}, which will take you to the landing page shown in the image below.
 
 {{<image src="img/docs/azimuth-cloud-portal/Azimuth-landing-page.png" caption="Landing page" wrapper="col-12 mx-auto text-center">}}
 

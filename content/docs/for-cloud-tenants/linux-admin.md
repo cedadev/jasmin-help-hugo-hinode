@@ -22,7 +22,7 @@ machines powered down.
 
 ## Server hardening
 
-Tenants are strongly encouraged to "harden" their machines against security issues by patching their machines and turning off any non-essential services. Tenants must also abide by STFC Cloud's [security compliance](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/673185793/Security+Compliance), which includes a number of essential services which must not be disabled.
+Tenants are strongly encouraged to "harden" their machines against security issues by patching their machines and turning off any non-essential services. Tenants must also abide by STFC Cloud's {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/673185793/Security+Compliance">}}security compliance{{</link>}}, which includes a number of essential services which must not be disabled.
 
 ## Managing storage
 

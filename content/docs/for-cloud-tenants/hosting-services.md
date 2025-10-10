@@ -13,7 +13,7 @@ When hosting services on the JASMIN Cloud, whether that be through manually crea
 4) Consider using HA services and load balancers to limit the impact of any issues we might have with the JASMIN Cloud, and to assist with rotating machines out of service.
 5) JASMIN is research support infrastructure, as such we do not offer a guarantee for service uptime. If more resiliency than we can offer is required, consider using public cloud services.
 6) By default, no floating IPs are whitelisted for external access like in the old JASMIN Cloud service. Please see the section below on requesting firewall changes.
-7) See [JASMIN terms and conditions](https://accounts.jasmin.ac.uk/account/conditions/), and [STFC Cloud terms and conditions](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service) for more.
+7) See {{<link "https://accounts.jasmin.ac.uk/account/conditions/">}}JASMIN terms and conditions{{</link>}}, and {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service">}}STFC Cloud terms and conditions{{</link>}} for more.
 
 **Firewall Changes**
 
@@ -25,7 +25,7 @@ To request changes to the firewall and allow external access to services deploye
 4) The protocol (TCP, UDP, or other)
 5) The direction of access (inbound or outbound)
 6) Whether this IP is currently attached to a machine, and if so, which machine
-7) Confirm you have read the [JASMIN terms and conditions](https://accounts.jasmin.ac.uk/account/conditions/) and [STFC Cloud terms and conditions](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service)
+7) Confirm you have read the {{<link "https://accounts.jasmin.ac.uk/account/conditions/">}}JASMIN terms and conditions{{</link>}} and {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service">}}STFC Cloud terms and conditions{{</link>}}
 8) Confirm what security precautions you have in place (e.g. SSL/TLS, Fail2Ban or similar automatic blocking tool, host based firewalls in use)
 9) Confirm that you have not removed the following from the image: Pakiti (package vulnerability tracking), ROOT user SSH keys, and automatic updates
 

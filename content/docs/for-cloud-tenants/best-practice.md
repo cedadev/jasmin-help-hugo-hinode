@@ -6,7 +6,7 @@ weight: 90
 ---
 
 
-The STFC Cloud documentation has information about [good practice for using the cloud](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual+Machine+Best+Practises).
+The STFC Cloud documentation has information about {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual+Machine+Best+Practises">}}good practice for using the cloud{{</link>}}.
 
 ## Security
 
@@ -44,7 +44,7 @@ Also note that these methods would allow easier deployment to commercial cloud i
 
 Ansible has probably the easiest learning curve and is most useful for the vast majority of JASMIN Cloud tenants. It allows you to define steps for the install of one, or many, services using YAML to describe what the services should look like and what steps are taken to install them, with any changes which are required to the machine. It does this using readily available (and very well documented) building blocks. Once the Ansible playbook is written the first time, when a machine needs to be replaced, it is simply a matter of running the playbook pointing at the new machine.
 
-See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736734/Ansible) on Ansible, and the [Ansible documentation](https://docs.ansible.com/) (particularly [Getting Started](https://docs.ansible.com/ansible/latest/getting_started/index.html)) for more information.
+See {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736734/Ansible">}}STFC Cloud's page{{</link>}} on Ansible, and the {{<link "https://docs.ansible.com/">}}Ansible documentation{{</link>}} (particularly {{<link "https://docs.ansible.com/ansible/latest/getting_started/index.html">}}Getting Started{{</link>}}) for more information.
 
 ### Terraform/OpenTofu
 
@@ -52,7 +52,7 @@ Terraform, and its open source fork OpenTofu, provide a way of declaring what in
 
 Note that some machine changes would cause Terraform/OpenTofu to replace machines and in this instance anything installed or saved on the root disk would be lost.
 
-See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736760/Terraform) on Terraform, and the Terraform Openstack Provider [documentation](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs), as well as the [OpenTofu equivalent](https://search.opentofu.org/provider/terraform-provider-openstack/openstack/v2.1.0).
+See {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/1736760/Terraform">}}STFC Cloud's page{{</link>}} on Terraform, and the Terraform Openstack Provider {{<link "https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs">}}documentation{{</link>}}, as well as the {{<link "https://search.opentofu.org/provider/terraform-provider-openstack/openstack/v2.1.0">}}OpenTofu equivalent{{</link>}}.
 
 Using Azmiuth's platforms may mean that users never need to consider Terraform/OpenTofu.
 
@@ -64,7 +64,7 @@ Azimuth provides an easily deployable Kubernetes cluster as part of its platform
 
 Creating Kubernetes clusters outside of the Azimuth platforms is possible using multiple methods, but is not advised because of the major advantages which the  {{<link "platform-in-depth-k8s">}}Azimuth Kubernetes Platform{{</link>}} gives.
 
-See the [Kubernetes documentation](https://kubernetes.io/docs/home/) for details on how to use Kubernetes. The official [tutorials](https://kubernetes.io/docs/tutorials/) are particularly good.
+See the {{<link "https://kubernetes.io/docs/home/">}}Kubernetes documentation{{</link>}} for details on how to use Kubernetes. The official {{<link "https://kubernetes.io/docs/tutorials/">}}tutorials{{</link>}} are particularly good.
 
 ### Cluster API
 

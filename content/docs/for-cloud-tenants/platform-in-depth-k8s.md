@@ -1,5 +1,5 @@
 ---
-description: In depth look at the kubernetes platforms
+description: In depth look at the Kubernetes platforms
 slug: platform-in-depth-k8s
 title: Platforms In Depth - Kubernetes
 weight: 40
@@ -19,7 +19,7 @@ Some configuration options include:
 
 - **autohealing:** enable this to let the cluster automatically attempt to fix unhealthy nodes
 - **Kubernetes Ingress:** enable this to use Kubernetes Ingress to expose services in your cluster via a load balancer (you'll need an external IP available in your project for the load balancer). Do not use this option and deploy your own ingress.
-- **cert-manager:** enable this to use cert-manager to manage TLS certificates for your cluster services.
+- **cert-manager:** enable this to use `cert-manager` to manage TLS certificates for your cluster services.
 
 ### Platform creation
 
@@ -27,56 +27,58 @@ To create a Kubernetes cluster, navigate to the project/tenancy landing page, cl
 
 Enter the cluster name, select a cluster template to use, select a control plane to use, select or add a new node group, enable or disable cluster addons, enable **Kubernetes dashboard** and enable **cluster monitoring**.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-cluster-details.png" caption="kubernetes options" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-cluster-details.png" caption="Kubernetes options" wrapper="col-9 mx-auto text-center">}}
 
 In order to create a Kubernetes platform, we also have to define a node group for the Kubernetes worker nodes.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-node-group.png" caption="kubernetes cluster node group" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-kubernetes-node-group.png" caption="Kubernetes cluster node group" wrapper="col-9 mx-auto text-center">}}
 Advanced features can be set as shown:
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-advanced-options.png" caption="kubernetes advanced options" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-advanced-options.png" caption="Kubernetes advanced options" wrapper="col-9 mx-auto text-center">}}
 
 {{<alert alert-type="info">}}
-Note that if you use the advanced option for enabling a Kubernetes ingress, you do not have to provision the ingress controller yourself. Doing so can break the cluster.
+Note that if you use the advanced option for enabling Kubernetes Ingress, you do not have to provision the ingress controller yourself - doing so can break the cluster.
 You must either: use the advanced option to deploy ingress, or do it manually.
 {{</alert>}}
 
 Click **create platform** to proceed.
 
-From the **Platform scheduling** window, confirm the options selected in the previous section and once the deployment is complete, the cluster becomes available from the azimuth landing page for the tenancy.
+From the **Platform scheduling** window, confirm the options selected in the previous section and once the deployment is complete, the cluster becomes available from the Azimuth landing page for the tenancy.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8es-cluster-scheduling.png" caption="kubernetes scheduling" wrapper="col-6 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8es-cluster-scheduling.png" caption="Kubernetes scheduling" wrapper="col-6 mx-auto text-center">}}
 
 ### Platform Usage
 
-From the Cluster details windows you are be able to: view the **Kubeconfig** file (for interacting with the cluster from your local computer), **Update** the configuration of the cluster, **Upgrade** the images used for patching or upgrading the Kubernetes version, and **Delete** the cluster. The installed **Cluster addons** are shown in the right panel. The **Nodes** tab shows information on the nodes in the cluster.
+From the Cluster details windows you can: view the **Kubeconfig** file (for interacting with the cluster from your local computer), **Update** the configuration of the cluster, **Upgrade** the images used for patching or upgrading the Kubernetes version, and **Delete** the cluster. The installed **Cluster addons** are shown in the right panel. The **Nodes** tab shows information on the nodes in the cluster.
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-cluster-deployment-details.png" caption="Kubernetes deployment details" wrapper="col-9 mx-auto text-center">}}
 
 Click **Kubeconfig**. You can then copy or download the `kubeconfig` file for accessing the cluster using `kubectl` from your local computer.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k82-config.png" caption="kubernetes config" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k82-config.png" caption="Kubernetes config" wrapper="col-9 mx-auto text-center">}}
 
-Available **Update** options include: ability to change to a different Control plane size, adding or removing node group(s), enable/Disable: Kubernetes Dashboard, cluster monitoring, enable auto-healing, enable Kubernetes Ingress, change the Metrics and logs volumes. You can change the cluster size by defining the node size and count from the node group, either editing the existing node group, or creating a new one (node groups can be different sizes with different numbers of machines).
+Available **Update** options include: the ability to change to a different control plane size, adding or removing node group(s), enabling/disabling: Kubernetes Dashboard, cluster monitoring, enable auto-healing, enable Kubernetes Ingress, change the Metrics and logs volumes. You can change the cluster size by defining the node size and count from the node group, either editing the existing node group, or creating a new one (node groups can be different sizes with different numbers of machines).
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-update.png" caption="kubernetes update" wrapper="col-9 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-update.png" caption="Kubernetes update" wrapper="col-9 mx-auto text-center">}}
 
-Additionally you can **Upgrade** the images in the cluster and potentially the Kubernetes version to a newer one. Note that the version of k8s can not be downgraded. If you need to go back to an earlier version og k8s, you would need to create a new cluster.
+Additionally you can **Upgrade** the images in the cluster and potentially the Kubernetes version to a newer one. Note that the version of Kubernetes can not be downgraded. If you need to go back to an earlier version of Kubernetes, you would need to create a new cluster.
 
-*Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped.*
+{{<alert alert-type="info">}}
+Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped.
+{{</alert>}}
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-upgrade.png" caption="kubernetes upgrade" wrapper="col-7 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-upgrade.png" caption="Kubernetes upgrade" wrapper="col-7 mx-auto text-center">}}
 
 You can also permanently **Delete** the cluster.
 
 {{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-delete.png" caption="Delete a cluster" wrapper="col-5 mx-auto text-center">}}
 
-The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloading the Kubeconfig file.
+The **Kubernetes Dashboard** provides an alternative option to managing the cluster as opposed to downloading the `kubeconfig` file.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-dashboard.png" caption="kubernetes dashboard" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-dashboard.png" caption="Kubernetes dashboard" wrapper="col-12 mx-auto text-center">}}
 
 Monitoring the Kubernetes instance is provided by a Grafana dashboard.
 
-{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-monitoring.png" caption="kubernetes monitoring" wrapper="col-12 mx-auto text-center">}}
+{{<image src="img/docs/platform-in-depth-k8s/azimuth-k8s-monitoring.png" caption="Kubernetes monitoring" wrapper="col-12 mx-auto text-center">}}
 
 For links to resources for Kubernetes, see the {{<link "best-practice">}}**Best Practice**{{</link>}} section.

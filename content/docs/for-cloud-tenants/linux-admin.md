@@ -1,7 +1,7 @@
 ---
-description: Linux Admin
+description: Linux administration for JASMIN Cloud
 slug: linux-admin
-title: Linux Admin
+title: Linux admin
 weight: 80
 ---
 
@@ -31,11 +31,11 @@ exact size of the disk depends on the selected machine size). This disk is
 intended to run the operating system only. If you require additional storage
 for data, it is possible to add extra volumes to a virtual machine.
 
-The Volume tab under the Advanced section allows creation of volumes manually.
+The **Volumes** tab under the Advanced section allows creation of volumes manually.
 
 {{<image src="img/docs/linux-admin/Volumes-azimuth.png"  wrapper="col-4 mx-auto text-center">}}
 
-First, create a new volume by navigating to the volumes tab and clicking on
+First, create a new volume by navigating to the Volumes tab and clicking on
 "New Volume":
 
 {{<image src="img/docs/linux-admin/new-volume-azimuth.png"  wrapper="col-12 mx-auto text-center">}}
@@ -157,7 +157,6 @@ df -h
 echo "/dev/sdb1  /data  ext4  defaults  0 0" >> /etc/fstab
 {{</command>}}
 
+## SSH keys/access management
 
-## SSH keys/ access management
-
-When creating a VM through the Azimuth portal, the creator's ssh key is added to the machine so that they can ssh in. Note that you will need to request port 22 to be opened on the floating IP to be able to ssh into a machine from outside the RAL fireswall - though you should be able to proxy jump through JASMIN login to access it otherwise. Any extra keys needed can be added into the machine to enable others to ssh in as well. Alternatively, when the Azimuth Linux workstation is used, the Zenith proxy can be used to launch a shell (or desktop) in the browser.
+When creating a VM through the Azimuth portal, the creator's SSH key is added to the machine so that they can SSH in. Note that you will need to request port 22 to be opened on the floating IP to be able to SSH into a machine from outside the RAL firewall - though you should be able to proxy jump through the [login servers]({{% ref "login-servers" %}}) to access it otherwise. Any extra keys needed can be added into the machine to enable others to SSH in as well. Alternatively, when the Azimuth Linux workstation is used, the Zenith proxy can be used to launch a shell (or desktop) in the browser.

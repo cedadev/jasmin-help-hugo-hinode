@@ -1,5 +1,5 @@
 ---
-description: Best practice with the cloud
+description: Best practice with the JASMIN Cloud
 slug: best-practice
 title: Best Practice
 weight: 90
@@ -7,7 +7,6 @@ weight: 90
 
 
 The STFC Cloud documentation has information about [good practice for using the cloud](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual+Machine+Best+Practises).
-
 
 ## Security
 
@@ -28,7 +27,7 @@ machines powered down.
 
 ## VM life cycle
 
-We expect tenants to regularly refresh their infrastructure by creating machines with new images and re installing all required software. The suggested time frame for this is every 6 months (or more frequently). This allows for better security of machines and means that machines are more stable (machines experience more issues as they get older). We also expect tenants to easily be able to reinstall their services in the event we cannot recover machines (though we will reasonably try if machines are refreshed regularly). In other words, we expect tenants to treat their machines as "cattle" rather than "pets". Infrastructure-as-Code techniques and technologies can be employed be the tenant to make redeployment as easy and painless as possible.
+We expect tenants to regularly refresh their infrastructure by creating machines with new images and re-installing all required software. The suggested timeframe for this is every 6 months (or more frequently). This allows for better security of machines and means that machines are more stable (machines experience more issues as they get older). We also expect tenants to easily be able to reinstall their services in the event we cannot recover machines (though we will reasonably try if machines are refreshed regularly). In other words, we expect tenants to treat their machines as "cattle" rather than "pets". Infrastructure-as-Code techniques and technologies can be employed by the tenant to make redeployment as easy and painless as possible.
 
 ## Infrastructure-as-Code
 
@@ -49,7 +48,7 @@ See [STFC Cloud's page](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/173
 
 ### Terraform/OpenTofu
 
-Terraform, and it's open source fork OpenTofu, provide a way of declaring what infrastructure should look like using the building blocks provided for the specific cloud. It then creates or changes the existing infrastructure using the least changes possible so that what is deployed matches what has been defined. This is a powerful tool for automation and reproducibility which can also invoke Ansible playbooks to install software and services onto the infrastructure after it has been created. The combination of Terraform and Ansible would provide the most resilience incase of machine loss because of the low effort reinstalling those machines takes - Terraform/OpenTofu would just be run again to recreate the infrastructure and services instead of an admin having to manually create machines and install what is required (which often takes a large amount of time!).
+Terraform, and its open source fork OpenTofu, provide a way of declaring what infrastructure should look like using the building blocks provided for the specific cloud. It then creates or changes the existing infrastructure using the least changes possible so that what is deployed matches what has been defined. This is a powerful tool for automation and reproducibility which can also invoke Ansible playbooks to install software and services onto the infrastructure after it has been created. The combination of Terraform and Ansible would provide the most resilience in case of machine loss because of the low effort reinstalling those machines - Terraform/OpenTofu would just need to be run again to recreate the infrastructure and services, rather than an admin having to manually create machines and install what is required (which often takes a large amount of time!).
 
 Note that some machine changes would cause Terraform/OpenTofu to replace machines and in this instance anything installed or saved on the root disk would be lost.
 
@@ -70,4 +69,3 @@ See the [Kubernetes documentation](https://kubernetes.io/docs/home/) for details
 ### Cluster API
 
 Cluster API is probably the least relevant technology for most tenants of the JASMIN Cloud, because Azimuth provides a much easier way to provision and manage Kubernetes clusters. Azimuth uses Cluster API under the hood to create its Kubernetes clusters.
-

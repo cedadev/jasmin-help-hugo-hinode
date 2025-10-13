@@ -14,8 +14,6 @@ Some key considerations when defining a Slurm cluster include the following:
 - System performance and job status can be monitored using the integrated Grafana dashboard and Open OnDemand's job-specific monitoring.
 - The `azimuth` user has passwordless `sudo` access. For `sudo` access on non-login nodes, SSH as `azimuth` from the login node first.
 - To preserve software installations across platform upgrades, consider packaging them for use with `apptainer`, which supports SIF and Docker/OCI container formats.
-- Explore the EESSI pilot repository for additional software options.
-- For software with broad applicability, contribute to the Ansible Slurm Appliance repository to enhance the platform's image building and configuration capabilities.
 
 ## Platform creation
 

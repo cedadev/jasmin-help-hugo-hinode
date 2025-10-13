@@ -76,6 +76,3 @@ The platform helps to ensure reproducibility in data science workflows, by shari
 **Binder Build:** When a user accesses a GitHub repository through Azimuth BinderHub, the platform triggers a Binder build process. This process creates a Docker image based on the specified dependencies and configuration.
 
 **Interactive Environment:** Once the Docker image is built, Azimuth BinderHub launches an interactive Jupyter environment that can be accessed through a web browser. This environment contains all of the files and dependencies defined in the GitHub repository.
-
-Azimuth BinderHub is a valuable tool for teaching data science and machine learning. Instructors can create interactive Jupyter Notebooks that students can explore and experiment with. The platform can be used to facilitate collaboration among researchers, allowing them to share and work on data science projects together. Azimuth BinderHub provides a convenient way to explore and analyze data using Jupyter Notebooks.
-Users can visualize data, perform statistical analysis, and build machine learning models. By sharing Binder environments, researchers can ensure that their work is reproducible and can be verified by others.

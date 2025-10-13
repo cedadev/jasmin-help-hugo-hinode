@@ -125,7 +125,8 @@ computing (as opposed to
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>LOTUS overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</guid><description>&lt;h2 id="what-is-lotus" class="heading"&gt;What is LOTUS&lt;a href="#what-is-lotus" aria-labelledby="what-is-lotus"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Introduction to the JASMIN Cloud</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</guid><description>&lt;p&gt;In addition to the traditional batch computing (LOTUS) and storage (Group
+Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p&gt;</description></item><item><title>LOTUS overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</guid><description>&lt;h2 id="what-is-lotus" class="heading"&gt;What is LOTUS&lt;a href="#what-is-lotus" aria-labelledby="what-is-lotus"&gt;
 
 
 
@@ -275,7 +276,9 @@ compute resources are the set of compute nodes that make up the
 jobs to the scheduler which then decides which jobs to run and where to
 execute them. The scheduler manages the jobs to ensure that the compute
 resources are being used efficiently and that users get appropriate access to
-those resources.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;p&gt;This article explains how to register on the JASMIN accounts portal.&lt;/p&gt;
+those resources.&lt;/p&gt;</description></item><item><title>The Azimuth Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</guid><description>&lt;p&gt;Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC)
+and artificial intelligence (AI) applications. It supports OpenStack clouds and can manage a range of platforms from single-machine
+workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.&lt;/p&gt;</description></item><item><title>Hosting services</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</guid><description>&lt;p&gt;When hosting services on the JASMIN Cloud, whether that be through manually created VMs, or through an Azimuth platform, there are a number of things to consider.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;p&gt;This article explains how to register on the JASMIN accounts portal.&lt;/p&gt;
 &lt;p&gt;Having a JASMIN portal account does not by itself provide you with any access to JASMIN machines or services.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
 
 
@@ -322,7 +325,7 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
 
  &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0"&gt;SSH&lt;/abbr&gt;
 
-.&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading"&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
+.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Workstations</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</guid><description>&lt;p&gt;&lt;strong&gt;The Linux Workstation platform&lt;/strong&gt; provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. These are aimed at:&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading"&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
 
 
 
@@ -387,7 +390,7 @@ JASMIN can be found
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/how-to-login/"&gt;here&lt;/a&gt;, but this article may help to
-resolve login problems. It provides information for the following issues:&lt;/p&gt;</description></item><item><title>beginners training workshop - materials</title><link>https://help.jasmin.ac.uk/docs/getting-started/beginners-training-workshop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/beginners-training-workshop/</guid><description>&lt;p&gt;The 
+resolve login problems. It provides information for the following issues:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Kubernetes</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-k8s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-k8s/</guid><description>&lt;p&gt;The &lt;strong&gt;Kubernetes platform&lt;/strong&gt; delivers a complete Kubernetes container orchestration cluster, incorporating tools for monitoring, ingress control, and application management. It empowers you to run Kubernetes applications seamlessly within Azimuth or implement custom installations using Helm Charts or Kustomize to oversee Kubernetes manifests. Once your platform is up and running, you&amp;rsquo;ll find a &lt;code&gt;kubeconfig&lt;/code&gt; file in the platform Details section, ready for use with &lt;code&gt;helm&lt;/code&gt; or &lt;code&gt;kubectl&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>beginners training workshop - materials</title><link>https://help.jasmin.ac.uk/docs/getting-started/beginners-training-workshop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/beginners-training-workshop/</guid><description>&lt;p&gt;The 
  
 
 
@@ -456,10 +459,27 @@ internal-only web resources.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Using graphical applications over a wide-area network can be very slow, and is
 not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop &lt;strong&gt;within&lt;/strong&gt; the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p&gt;</description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p&gt;If you are experiencing difficulties or slow performance and are unsure why,
+graphical desktop &lt;strong&gt;within&lt;/strong&gt; the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p&gt;</description></item><item><title>Platforms In Depth - JupyterHub, DaskHub, BinderHub</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</guid><description>&lt;h2 id="jupyterhub" class="heading"&gt;JupyterHub&lt;a href="#jupyterhub" aria-labelledby="jupyterhub"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;JupyterHub&lt;/strong&gt; is a multi-user platform that allows multiple users to access and run &lt;strong&gt;Jupyter notebooks&lt;/strong&gt; through a web interface.
+It is designed to provide a standardised computing environment for groups, such as classes or research teams, by launching individual
+Jupyter notebook instances for each user. The primary purpose of JupyterHub is to facilitate collaborative and scalable data science and
+research. It allows users access to a consistent computing environment from any device with a web browser where they can share resources
+efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.&lt;/p&gt;</description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p&gt;If you are experiencing difficulties or slow performance and are unsure why,
 please first consult all relevant documentation, then if needed, contact our Helpdesk
 using the help beacon below, but please include the following
-information with your initial query:&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+information with your initial query:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 
@@ -492,7 +512,7 @@ The sci servers are not directly accessible outside the firewall of the STFC net
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p&gt;This article lists sources of information about the status of JASMIN services.&lt;/p&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Azimuth Identity Provider</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</guid><description>&lt;p&gt;Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.&lt;/p&gt;</description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p&gt;This article lists sources of information about the status of JASMIN services.&lt;/p&gt;
 
 
 
@@ -537,7 +557,7 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading"&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading"&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
 
 
 
@@ -552,7 +572,20 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 &lt;/h2&gt;
 &lt;p&gt;JASMIN training accounts are TEMPORARY accounts that provide a person with
 access to JASMIN for a specific event (such as a training workshop) organised
-in advance.&lt;/p&gt;</description></item><item><title>Transfer servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</guid><description>&lt;p&gt;This article lists the JASMIN data transfer servers and provides links to how
+in advance.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</guid><description>&lt;h2 id="patching" class="heading"&gt;Patching&lt;a href="#patching" aria-labelledby="patching"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams, and abide by the patching policy.&lt;/p&gt;</description></item><item><title>Transfer servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</guid><description>&lt;p&gt;This article lists the JASMIN data transfer servers and provides links to how
 they can be used.&lt;/p&gt;
 &lt;p&gt;Please see further articles in the 
  
@@ -573,7 +606,32 @@ they can be used.&lt;/p&gt;
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/"&gt;Data Transfer category&lt;/a&gt; for details on managing your data transfers.&lt;/p&gt;</description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p&gt;Creating a virtual environment is useful to allow a discrete set of extra
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/"&gt;Data Transfer category&lt;/a&gt; for details on managing your data transfers.&lt;/p&gt;</description></item><item><title>Best Practice</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</guid><description>&lt;p&gt;The STFC Cloud documentation has information about 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ &lt;a href="https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845339/Virtual&amp;#43;Machine&amp;#43;Best&amp;#43;Practises" target="_blank" rel="noopener noreferrer nofollow"&gt;good practice for using the cloud&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p&gt;Creating a virtual environment is useful to allow a discrete set of extra
 packages to be installed to meet specific requirements. This allows a user to
 run multiple environments with different dependencies without conflicts.&lt;/p&gt;</description></item><item><title>tips-for-new-users</title><link>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</guid><description>&lt;p&gt;These tips for new users are based on users&amp;rsquo; queries encountered by our helpdesk. They are not exhaustive but may help solve some initial problems and set out best practice.&lt;/p&gt;</description></item><item><title>How to login</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</guid><description>&lt;p&gt;The instructions below cover the process of logging in using a terminal client
 only. For a graphical Linux desktop, please see alternative instructions using
@@ -946,9 +1004,7 @@ It is now no longer possible to do this migration automatically.&lt;/p&gt;</desc
  srcset="https://help.jasmin.ac.uk/img/jasmin2023-576x324.webp 576w, https://help.jasmin.ac.uk/img/jasmin2023-768x432.webp 768w, https://help.jasmin.ac.uk/img/jasmin2023-992x558.webp 992w, https://help.jasmin.ac.uk/img/jasmin2023-1200x675.webp 1200w, https://help.jasmin.ac.uk/img/jasmin2023-1400x788.webp 1400w, https://help.jasmin.ac.uk/img/jasmin2023-2800x1575.webp 2800w" sizes="100vw" height="1575" width="2800" alt="JASMIN is operated by STFC on behalf of NERC."&gt;&lt;figcaption class="figure-caption"&gt;JASMIN is operated by STFC on behalf of NERC.&lt;/figcaption&gt;
  &lt;/figure&gt;
 &lt;p&gt;JASMIN is the UK&amp;rsquo;s data analysis facility for environmental science, architected and operated by the Science and Technology Facilities Council on behalf of the Natural Environment Research Council.&lt;/p&gt;</description></item><item><title>Acknowledging JASMIN</title><link>https://help.jasmin.ac.uk/docs/uncategorized/acknowledging-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/acknowledging-jasmin/</guid><description>&lt;p&gt;We strongly encourage users to acknowledge JASMIN in all research outputs that
-have used the JASMIN facility. The acknowledgement statement should be:&lt;/p&gt;</description></item><item><title>Adding and removing SSH keys from an External Cloud VM</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/</guid><description>&lt;p&gt;When you create a machine in a JASMIN External Cloud tenancy, the SSH key
-associated with your JASMIN account is uploaded to the machine to grant you
-access to the machine as &lt;code&gt;root&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p&gt;This article provides details of additional packages that exist under the
+have used the JASMIN facility. The acknowledgement statement should be:&lt;/p&gt;</description></item><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p&gt;This article provides details of additional packages that exist under the
 &lt;code&gt;/apps/jasmin/&lt;/code&gt; directory which is available on all scientific analysis
 servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p&gt;This article explains how to apply for access to a GWS from the JASMIN account
 portal.&lt;/p&gt;
@@ -1050,37 +1106,7 @@ efficiently. It works in a similar way to
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/"&gt;GridFTP over SSH&lt;/a&gt; in that it connects to the transfer
 server using your usual SSH credentials but then can set up parallel data
 streams for transferring data. One advantage of &lt;code&gt;bbcp&lt;/code&gt; that it is provided as
-a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>Best practice</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/best-practice/</guid><description>&lt;p&gt;External Cloud Tenancy additional notes&lt;/p&gt;
-&lt;p&gt;Best practice guides for “server hardening” of Linux machines facing the
-internet:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
- 
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://www.slideshare.net/myowntelco/centos-linux-server-hardening" target="_blank" rel="noopener noreferrer nofollow"&gt;https://www.slideshare.net/myowntelco/centos-linux-server-hardening&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And particularly for web servers:&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -1122,417 +1148,7 @@ internet:&lt;/p&gt;
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; provides direct access to thousands of
 atmospheric, climate change and earth observation datasets. The Archive is directly accessible as a
-file system from the shared science machines on JASMIN.&lt;/p&gt;</description></item><item><title>Cluster-as-a-Service</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;JASMIN Cluster-as-a-Service (CaaS) is a service on the JASMIN Cloud that aims
-to make it easy to provision and maintain clusters of various types by
-providing a simple, intuitive interface via the JASMIN Cloud Portal.&lt;/p&gt;</description></item><item><title>Cluster-as-a-Service - Identity Manager</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-identity-manager/</guid><description>&lt;p&gt;This article describes how to deploy and use the JASMIN Cluster-as-a-Service
-(CaaS) Identity Manager.&lt;/p&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The Identity Manager consists of a
-
- 
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://www.freeipa.org/page/Main_Page" target="_blank" rel="noopener noreferrer nofollow"&gt;FreeIPA&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; server, a
-
- 
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://www.keycloak.org/" target="_blank" rel="noopener noreferrer nofollow"&gt;Keycloak&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; server and a gateway/proxy server that
-work together to provide a single identity across all cluster types, whether
-via a web-browser, SSH or custom CLI tools like &lt;code&gt;kubectl&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Cluster-as-a-service - Kubernetes</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-kubernetes/</guid><description>&lt;p&gt;This article describes how to deploy and use a Kubernetes cluster using JASMIN
-Cluster-as-a-Service (CaaS).&lt;/p&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer nofollow"&gt;Kubernetes&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is an open-source system for automating
-the deployment, scaling and management of containerised applications.&lt;/p&gt;</description></item><item><title>Cluster-as-a-Service - Pangeo</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-pangeo/</guid><description>&lt;p&gt;This article describes how to deploy and use a Pangeo cluster using JASMIN
-Cluster-as-a-Service (CaaS).&lt;/p&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://pangeo.io/" target="_blank" rel="noopener noreferrer nofollow"&gt;Pangeo&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a community that promotes a philosophy of
-open, scalable and reproducible science, focusing primarily on the
-geosciences. As part of that effort, the Pangeo community provides a curated
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://www.python.org/" target="_blank" rel="noopener noreferrer nofollow"&gt;Python&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; ecosystem based on popular open-source
-packages like 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="http://xarray.pydata.org" target="_blank" rel="noopener noreferrer nofollow"&gt;xarray&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;,
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://scitools.org.uk/iris" target="_blank" rel="noopener noreferrer nofollow"&gt;Iris&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;, 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="http://dask.readthedocs.io" target="_blank" rel="noopener noreferrer nofollow"&gt;Dask&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="http://jupyter.org/" target="_blank" rel="noopener noreferrer nofollow"&gt;Jupyter notebooks&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;, along with documentation and recipes
-for deployment on various infrastructures.&lt;/p&gt;</description></item><item><title>Cluster-as-a-Service - Shared storage</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-shared-storage/</guid><description>&lt;p&gt;This article describes how to deploy and use shared storage clusters using
-JASMIN Cluster-as-a-Service (CaaS).&lt;/p&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;CaaS provides shared storage clusters that can be mounted on multiple nodes to
-provide common storage across all those nodes.&lt;/p&gt;</description></item><item><title>Cluster-as-a-Service - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cluster-as-a-service-slurm/</guid><description>&lt;p&gt;This article describes how to deploy and use a Slurm cluster using JASMIN
-Cluster-as-a-Service (CaaS).&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
- 
-
-
-&lt;div class="d-flex alert alert-danger " 
- role="alert"&gt;
- &lt;div class="pt-1 pe-2"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
- &lt;div class="flex-grow-1 my-auto"&gt;
- CaaS Slurm clusters are currently disabled because of a security problem
-with the images that were being used. We are working on a new system which
-will provide slurm clusters.
- &lt;/div&gt;
- &lt;/div&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The 
- 
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow"&gt;Slurm Workload Manager&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a popular open-
-source job scheduler. It provides facilities for executing and monitoring
-workloads across a set of nodes and managing contention for those nodes by
-maintaining a queue of pending jobs.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+file system from the shared science machines on JASMIN.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -2376,36 +1992,7 @@ available on JASMIN.&lt;/p&gt;</description></item><item><title>Install XFC clie
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;In order to initiate and manage your usage of the XFC (transfer cache)
-service, you need to use the XFC client.&lt;/p&gt;</description></item><item><title>Introduction to the JASMIN Cloud</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</guid><description>&lt;p&gt;In addition to the traditional batch computing (LOTUS) and storage (Group
-Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p&gt;</description></item><item><title>JASMIN Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/jasmin-cloud-portal/</guid><description>&lt;p&gt;The 
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
-
-
- &lt;a href="https://cloud.jasmin.ac.uk" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Cloud Portal&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a web interface that
-enables the self-service provisioning of virtual machines in the JASMIN Cloud.&lt;/p&gt;</description></item><item><title>JASMIN Conditions of Use</title><link>https://help.jasmin.ac.uk/docs/uncategorized/jasmin-conditions-of-use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/jasmin-conditions-of-use/</guid><description>&lt;p&gt;Please refer to the 
+service, you need to use the XFC client.&lt;/p&gt;</description></item><item><title>JASMIN Conditions of Use</title><link>https://help.jasmin.ac.uk/docs/uncategorized/jasmin-conditions-of-use/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/jasmin-conditions-of-use/</guid><description>&lt;p&gt;Please refer to the 
  
 
 
@@ -2865,8 +2452,7 @@ Postgres) database on JASMIN for use with scientific workflows.&lt;/p&gt;</descr
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/"&gt;&amp;ldquo;Requesting resources&amp;rdquo;&lt;/a&gt; to understand how the process works from the
-requester&amp;rsquo;s point of view.&lt;/p&gt;</description></item><item><title>Provisioning a Sci VM in a Managed Cloud Tenancy</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/</guid><description>&lt;p&gt;This article is for admins and managers of managed-cloud tenancies
-and shows how to provision a sci VM within one. It involves the following:&lt;/p&gt;</description></item><item><title>Python Virtual Environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</guid><description>&lt;p&gt;This article describes how you can use &amp;ldquo;virtual environments&amp;rdquo; to install
+requester&amp;rsquo;s point of view.&lt;/p&gt;</description></item><item><title>Python Virtual Environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</guid><description>&lt;p&gt;This article describes how you can use &amp;ldquo;virtual environments&amp;rdquo; to install
 Python packages that are not provided in the
 
  
@@ -3370,23 +2956,7 @@ and
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/jasmin-status#jasmin-dashboard"&gt;JASMIN dashboard&lt;/a&gt; includes an overview of:
 LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p&gt;</description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p&gt;JASMIN is a large platform where a range of software tools, packages and
 environments are available. Many users employ software already installed on
-JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p&gt;</description></item><item><title>System administration guidance (external cloud)</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/sysadmin-guidance-external-cloud/</guid><description>&lt;h2 id="managing-storage" class="heading"&gt;Managing storage&lt;a href="#managing-storage" aria-labelledby="managing-storage"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;When provisioned, a virtual machine gets allocated a small hard disk (the
-exact size of the disk depends on the selected machine size). This disk is
-intended to run the operating system only. If you require additional storage
-for data, it is possible to add extra volumes to a virtual machine.&lt;/p&gt;</description></item><item><title>Test doc</title><link>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</guid><description>&lt;p&gt;Test page showing additional features.
+JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p&gt;</description></item><item><title>Test doc</title><link>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</guid><description>&lt;p&gt;Test page showing additional features.
 Notes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;optional modules need to be listed in frontmatter&lt;/li&gt;

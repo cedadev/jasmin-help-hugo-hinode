@@ -1,5 +1,6 @@
 /article/189-get-started-with-jasmin /docs/getting-started/get-started-with-jasmin/
 /article/204-interactive-computing-overview /docs/interactive-computing/interactive-computing-overview/
+/article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
 /article/5004-lotus-overview /docs/batch-computing/lotus-overview/
 /article/185-generate-ssh-key-pair /docs/getting-started/generate-ssh-key-pair/
 /category/108-interactive-computing /docs/interactive-computing/
@@ -41,7 +42,6 @@ nx-update-nov24 /docs/interactive-computing/graphical-linux-desktop-access-using
 /article/4834-updating-your-ssh-key /docs/getting-started/update-a-jasmin-account/
 /article/4434-migrate-jasmin-account-from-ceda /docs/getting-started/migrate-jasmin-account-from-ceda/
 /article/4693-acknowledging-jasmin /docs/uncategorized/acknowledging-jasmin/
-/article/4895-adding-and-removing-ssh-keys-from-an-external-cloud-vm /docs/for-cloud-tenants/adding-and-removing-ssh-keys-from-an-external-cloud-vm/
 /article/4731-additional-software /docs/software-on-jasmin/additional-software/
 /article/3801-apply-for-access-to-a-gws /docs/short-term-project-storage/apply-for-access-to-a-gws/
 /article/4490-resource-applications /docs/uncategorized/approving-requests-for-access/
@@ -52,14 +52,7 @@ nx-update-nov24 /docs/interactive-computing/graphical-linux-desktop-access-using
 /article/3844-copy-service /docs/uncategorized/article-under-review/
 /docs/data-transfer/jasmin-external-connections /docs/uncategorized/article-under-review/
 /article/3824-data-transfer-tools-bbcp /docs/data-transfer/bbcp/
-/article/286-best-practice /docs/for-cloud-tenants/best-practice/
 /article/3838-ceda-archive /docs/long-term-archive-storage/ceda-archive/
-/article/4735-cluster-as-a-service /docs/for-cloud-tenants/cluster-as-a-service/
-/article/4736-cluster-as-a-service-identity-manager /docs/for-cloud-tenants/cluster-as-a-service-identity-manager/
-/article/4781-cluster-as-a-service-kubernetes /docs/for-cloud-tenants/cluster-as-a-service-kubernetes/
-/article/4797-cluster-as-a-service-pangeo /docs/for-cloud-tenants/cluster-as-a-service-pangeo/
-/article/4798-cluster-as-a-service-shared-storage /docs/for-cloud-tenants/cluster-as-a-service-shared-storage/
-/article/4799-cluster-as-a-service-slurm /docs/for-cloud-tenants/cluster-as-a-service-slurm/
 /article/5131-checksit /docs/software-on-jasmin/community-software-checksit/
 /article/4955-community-software-esmvaltool /docs/software-on-jasmin/community-software-esmvaltool/
 /article/5074-conda-environments-and-python-virtual-environments /docs/software-on-jasmin/conda-environments-and-python-virtual-environments/
@@ -88,8 +81,6 @@ gridftp-cert-based-auth /docs/data-transfer/globus-transfers-with-jasmin/
 /article/4896-how-to-submit-an-mpi-parallel-job-to-slurm /docs/batch-computing/how-to-submit-an-mpi-parallel-job/
 /article/209-idl-and-midl /docs/software-on-jasmin/idl/
 /article/4536-install-jasmin-xfc-client /docs/short-term-project-storage/install-xfc-client/
-/article/282-introduction-to-the-jasmin-cloud /docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/
-/article/288-jasmin-cloud-portal /docs/for-cloud-tenants/jasmin-cloud-portal/
 /article/3793-jasmin-conditions-of-use /docs/uncategorized/jasmin-conditions-of-use/
 /article/4851-jasmin-notebook-service /docs/interactive-computing/jasmin-notebooks-service/
 /article/4918-jasmin-software-faqs /docs/software-on-jasmin/jasmin-software-faqs/
@@ -108,7 +99,6 @@ software-migration-2020 /docs/software-on-jasmin/rocky9-migration-2024/
 /article/4951-gpu-testing /docs/batch-computing/orchid-gpu-cluster/
 /article/5038-postgres-databases-on-request /docs/software-on-jasmin/postgres-databases-on-request/
 /article/5023-processing-requests-for-resources /docs/uncategorized/processing-requests-for-resources/
-/article/4581-tenancy-based-sci-vm-managed-cloud /docs/for-cloud-tenants/provisioning-tenancy-sci-vm-managed-cloud/
 /article/4489-python-virtual-environments /docs/software-on-jasmin/python-virtual-environments/
 /article/4916-quickstart-software-envs /docs/software-on-jasmin/quickstart-software-envs/
 /article/5037-data-transfer-tools-rclone /docs/data-transfer/rclone/
@@ -128,7 +118,6 @@ software-migration-2020 /docs/software-on-jasmin/rocky9-migration-2024/
 /docs/batch-computing/lsf-to-slurm-quick-reference/ /docs/batch-computing/slurm-quick-reference/
 /article/4894-lotus-slurm-status /docs/batch-computing/slurm-status/
 /article/273-software-on-jasmin /docs/software-on-jasmin/software-overview/
-/article/285-system-administration-guidance-for-the-unmanaged-cloud /docs/for-cloud-tenants/sysadmin-guidance-external-cloud/
 /article/4914-jasmin-sci-software /docs/software-on-jasmin/jasmin-sci-software-environment/
 /article/4535-xfc /docs/short-term-project-storage/xfc/
 /article/4997-transfers-from-archer2 /docs/data-transfer/transfers-from-archer2/

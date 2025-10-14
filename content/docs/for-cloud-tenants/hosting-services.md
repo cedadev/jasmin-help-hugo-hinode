@@ -12,7 +12,7 @@ When hosting services on the JASMIN Cloud, whether that be through manually crea
 3) Machines should be regularly recreated from new images to ensure that they are up to date. If this hasn't been followed, and there are issues with specific machines, we will just ask you to redeploy your services on new machines.
 4) Consider using HA services and load balancers to limit the impact of any issues we might have with the JASMIN Cloud, and to assist with rotating machines out of service.
 5) JASMIN is research support infrastructure, as such we do not offer a guarantee for service uptime. If more resiliency than we can offer is required, consider using public cloud services.
-6) By default, no floating IPs are whitelisted for external access like in the old JASMIN Cloud service. Please see the section below on requesting firewall changes.
+6) By default, adding floating IPs to machines will not make that IP accessible outside the RAL firewall like in the old JASMIN Cloud service. Please see the section below on requesting firewall changes.
 7) See {{<link "https://accounts.jasmin.ac.uk/account/conditions/">}}JASMIN terms and conditions{{</link>}}, and {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service">}}STFC Cloud terms and conditions{{</link>}} for more.
 
 **Firewall Changes**

@@ -5,7 +5,7 @@ tags: nlds
 ---
 
 {{<alert alert-type="info">}}
-This is a new system which will replace both Elastic Tape and JDMA, but is now available for use.
+Update as of 14/10/2025: a new version of NLDS is available which requires an updated client, please [follow these steps](https://cedadev.github.io/nlds-client/installation.html#upgrading-to-v1-0-12) to upgrade.
 {{</alert>}}
 
 ## Introduction

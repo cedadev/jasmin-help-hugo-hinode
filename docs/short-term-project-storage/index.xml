@@ -293,7 +293,31 @@ a duty to:&lt;/p&gt;</description></item><item><title>Near-Line Data Store (NLDS
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
- This is a new system which will replace both Elastic Tape and JDMA, but is now available for use.
+ Update as of 14/10/2025: a new version of NLDS is available which requires an updated client, please 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+ &lt;a href="https://cedadev.github.io/nlds-client/installation.html#upgrading-to-v1-0-12" target="_blank" rel="noopener noreferrer nofollow"&gt;follow these steps&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; to upgrade.
  &lt;/div&gt;
  &lt;/div&gt;
 

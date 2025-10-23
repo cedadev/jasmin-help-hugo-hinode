@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Short term project storage on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/</link><description>Recent content in Short term project storage on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/short-term-project-storage/index.xml" rel="self" type="application/rss+xml"/><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p&gt;This article explains how to apply for access to a GWS from the JASMIN account
-portal.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Sign in into your 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Short term project storage on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/</link><description>Recent content in Short term project storage on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/short-term-project-storage/index.xml" rel="self" type="application/rss+xml"/><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p&gt;This article explains how to apply for access to a GWS from the JASMIN Accounts
+Portal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Sign in to the 
  
 
 
@@ -14,8 +14,8 @@ portal.&lt;/p&gt;
  
 
 
- &lt;a href="https://accounts.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN accounts
-portal&amp;nbsp;
+ &lt;a href="https://accounts.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Accounts
+Portal&amp;nbsp;
 
 
 
@@ -25,10 +25,7 @@ portal&amp;nbsp;
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;. Navigate to the JASMIN services tab
-of the portal then select the group workspaces from &amp;ldquo;Discover services&amp;rdquo; menu.
-You can search or browse a list of available GWSs. For example here the search
-for GWS with name containing CEDA, resulted in two GWSs.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and select &amp;lsquo;Manage JASMIN services&amp;rsquo; to navigate to the JASMIN Services page. From the &amp;lsquo;Discover Services&amp;rsquo; menu on the left, select &amp;lsquo;Group Workspaces&amp;rsquo;.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 

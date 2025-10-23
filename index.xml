@@ -278,8 +278,47 @@ execute them. The scheduler manages the jobs to ensure that the compute
 resources are being used efficiently and that users get appropriate access to
 those resources.&lt;/p&gt;</description></item><item><title>The Azimuth Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</guid><description>&lt;p&gt;Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC)
 and artificial intelligence (AI) applications. It supports OpenStack clouds and can manage a range of platforms from single-machine
-workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.&lt;/p&gt;</description></item><item><title>Hosting services</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</guid><description>&lt;p&gt;When hosting services on the JASMIN Cloud, whether that be through manually created VMs, or through an Azimuth platform, there are a number of things to consider.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;p&gt;This article explains how to register on the JASMIN accounts portal.&lt;/p&gt;
-&lt;p&gt;Having a JASMIN portal account does not by itself provide you with any access to JASMIN machines or services.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
+workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.&lt;/p&gt;</description></item><item><title>Hosting services</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</guid><description>&lt;p&gt;When hosting services on the JASMIN Cloud, whether that be through manually created VMs, or through an Azimuth platform, there are a number of things to consider.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading"&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+ &lt;a href="https://accounts.jasmin.ac.uk" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Accounts Portal&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the place where you manage your JASMIN account and can apply for access to the many services which you may want to use on JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
 
 
 
@@ -338,12 +377,8 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of
-&lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (Scientific servers, data
-transfer servers) and the LOTUS batch cluster. Sign in into the
-
-
-
+&lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of &lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (
+ 
 
 
 
@@ -354,22 +389,52 @@ transfer servers) and the LOTUS batch cluster. Sign in into the
 
 
  
+
+
+
  
  
 
-
- &lt;a href="https://accounts.jasmin.ac.uk" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN accounts portal&amp;nbsp;
-
-
-
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/"&gt;scientific servers&lt;/a&gt;, 
+ 
 
 
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; where you can apply for a JASMIN login
-account representing the JASMIN access role appropriate to your affiliation.&lt;/p&gt;</description></item><item><title>Login problems</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</guid><description>&lt;p&gt;Having problems connecting to a host on JASMIN? Details of how to login to
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/"&gt;data transfer servers&lt;/a&gt;) and 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;the LOTUS batch cluster&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Login problems</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</guid><description>&lt;p&gt;Having problems connecting to a host on JASMIN? Details of how to login to
 JASMIN can be found 
  
 
@@ -1006,9 +1071,9 @@ It is now no longer possible to do this migration automatically.&lt;/p&gt;</desc
 &lt;p&gt;JASMIN is the UK&amp;rsquo;s data analysis facility for environmental science, architected and operated by the Science and Technology Facilities Council on behalf of the Natural Environment Research Council.&lt;/p&gt;</description></item><item><title>Acknowledging JASMIN</title><link>https://help.jasmin.ac.uk/docs/uncategorized/acknowledging-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/acknowledging-jasmin/</guid><description>&lt;p&gt;We strongly encourage users to acknowledge JASMIN in all research outputs that
 have used the JASMIN facility. The acknowledgement statement should be:&lt;/p&gt;</description></item><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p&gt;This article provides details of additional packages that exist under the
 &lt;code&gt;/apps/jasmin/&lt;/code&gt; directory which is available on all scientific analysis
-servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p&gt;This article explains how to apply for access to a GWS from the JASMIN account
-portal.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Sign in into your 
+servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item><item><title>Apply for access to a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/apply-for-access-to-a-gws/</guid><description>&lt;p&gt;This article explains how to apply for access to a GWS from the JASMIN Accounts
+Portal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Sign in to the 
  
 
 
@@ -1022,8 +1087,8 @@ portal.&lt;/p&gt;
  
 
 
- &lt;a href="https://accounts.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN accounts
-portal&amp;nbsp;
+ &lt;a href="https://accounts.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Accounts
+Portal&amp;nbsp;
 
 
 
@@ -1033,10 +1098,7 @@ portal&amp;nbsp;
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;. Navigate to the JASMIN services tab
-of the portal then select the group workspaces from &amp;ldquo;Discover services&amp;rdquo; menu.
-You can search or browse a list of available GWSs. For example here the search
-for GWS with name containing CEDA, resulted in two GWSs.&lt;/p&gt;</description></item><item><title>Approving requests for access roles</title><link>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</guid><description>&lt;p&gt;Managers of JASMIN resources will also be set up to approve applications from
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and select &amp;lsquo;Manage JASMIN services&amp;rsquo; to navigate to the JASMIN Services page. From the &amp;lsquo;Discover Services&amp;rsquo; menu on the left, select &amp;lsquo;Group Workspaces&amp;rsquo;.&lt;/p&gt;</description></item><item><title>Approving requests for access roles</title><link>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</guid><description>&lt;p&gt;Managers of JASMIN resources will also be set up to approve applications from
 members of the JASMIN user community wishing to use particular resources.
 The following video tutorial explains the approval process using the JASMIN
 Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review</title><link>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</guid><description>&lt;p&gt;The article which you are trying to access has been removed, pending reorganisation of the JASMIN documentation and training materials.&lt;/p&gt;</description></item><item><title>bbcp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</guid><description>&lt;p&gt;This article provides information about the bbcp data transfer tool.&lt;/p&gt;

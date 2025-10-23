@@ -57,12 +57,8 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of
-&lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (Scientific servers, data
-transfer servers) and the LOTUS batch cluster. Sign in into the
-
-
-
+&lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of &lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (
+ 
 
 
 
@@ -73,19 +69,49 @@ transfer servers) and the LOTUS batch cluster. Sign in into the
 
 
  
+
+
+
  
  
 
-
- &lt;a href="https://accounts.jasmin.ac.uk" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN accounts portal&amp;nbsp;
-
-
-
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/"&gt;scientific servers&lt;/a&gt;, 
+ 
 
 
 
 
 
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; where you can apply for a JASMIN login
-account representing the JASMIN access role appropriate to your affiliation.&lt;/p&gt;</description></item></channel></rss>
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/"&gt;data transfer servers&lt;/a&gt;) and 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;the LOTUS batch cluster&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

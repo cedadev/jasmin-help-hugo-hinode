@@ -7,40 +7,34 @@ tags:
 title: Apply for access to a GWS
 ---
 
-This article explains how to apply for access to a GWS from the JASMIN account
-portal.
+This article explains how to apply for access to a GWS from the JASMIN Accounts
+Portal.
 
-**Step 1** : Sign in into your [JASMIN accounts
-portal](https://accounts.jasmin.ac.uk/). Navigate to the JASMIN services tab
-of the portal then select the group workspaces from "Discover services" menu.
-You can search or browse a list of available GWSs. For example here the search
-for GWS with name containing CEDA, resulted in two GWSs.
+**Step 1:** Sign in to the [JASMIN Accounts
+Portal](https://accounts.jasmin.ac.uk/) and select 'Manage JASMIN services' to navigate to the JASMIN Services page. From the 'Discover Services' menu on the left, select 'Group Workspaces'.
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-PJUTPDMY7G.png" caption="Discover services">}}
+Here you can browse the list of available GWSs. In this example, a search for the word 'climate' returned one GWS with the search term in the name or description:
 
-**Step 2:** Select the GWS you are interested in and
-provide supporting information. In the following example, the GWS cedaproc was
-selected.
+{{<image src="img/docs/apply-for-access-to-a-gws/access-gws-1.png" caption="Searching for a GWS">}}
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-Vz26gVnqgG.png" caption="Select GWS">}}
+**Step 2:** Select the GWS you are interested in and click the green 'Apply' button next to the 'USER' role.
+Here you will be asked to provide supporting information for your application, such as your role in the project or the names of your collaborators, so the manager of the GWS can assess your eligibility.
 
-**Step 3:** Your request to join a GWS is pending for approval
+{{<image src="img/docs/apply-for-access-to-a-gws/access-gws-2.png" caption="GWS 'USER' role application form">}}
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-jpLAu7Mc3j.png" caption="Request pending">}}
+**Step 3:** Your request to join a GWS is now pending.
 
-**Step 4** : You will receive a notification of the outcome of your
-application. For example, the request to join an existing GWS cedaproc was
-granted and details of this service such as status and expiry date are
-displayed below
+{{<image src="img/docs/apply-for-access-to-a-gws/access-gws-3.png" caption="GWS access request pending">}}
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-mS76jkVD7W.png" caption="Outcome notification">}}
+**Step 4:** You will receive a notification of the outcome of your
+application by email and in the Accounts Portal notifications. 
 
-**Step 5:** Every time a notification is acknowledged the counter is reset or
-decremented.
+In this example, the request to join the GWS was
+granted, and the status and expiry date of the grant are
+displayed on the right hand side:
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-0vkRLnIAzR.png" caption="Notification count">}}
+{{<image src="img/docs/apply-for-access-to-a-gws/access-gws-4.png" caption="Details of an approved grant">}}
 
-**Finally,** you can view all the services that you currently have access to
-or have requested access for under 'My Services'
+**Finally,** you can view all the services that you have requested or been granted access to under ['My Services'](https://accounts.jasmin.ac.uk/services/my_services/).
 
-{{<image src="img/docs/apply-for-access-to-a-gws/file-tzze9MUUo0.png" caption="My services">}}
+{{<image src="img/docs/apply-for-access-to-a-gws/access-gws-5.png" caption="My Services">}}

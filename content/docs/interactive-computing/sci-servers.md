@@ -119,6 +119,6 @@ See [[Note 4]](#5-privileges) above about privileges: you can only install softw
 
 Each sci server has:
 
-- Access to the LOTUS `/work/scratch-pw*` and `/work/scratch-nopw2` volumes.
+- Access to the LOTUS `/work/scratch-pw*` and `/work/scratch-nopw*` volumes.
 - Read access to the [CEDA Archive]({{% ref "ceda-archive" %}}) according to permissions on your CEDA account.
 - Read/Write access to Group Workspaces according to membership.

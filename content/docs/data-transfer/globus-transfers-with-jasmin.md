@@ -41,10 +41,11 @@ however, the following file systems are available via this collection
 File system  |  Access  
 ---|---  
 `$HOME` (`/home/users/<username>`)  |  Read-write  
-`/gws` (group workspaces)  |  Read-write  
+`/gws` (group workspaces)  |  Read-write
+`/work/scratch-*` (scratch volumes) | Read-write
 `/work/xfc` (transfer cache)  |  Read-write  
-`/badc` (CEDA Archive)  
-`/neodc` |  Read-only  |  
+`/badc` (CEDA Archive)  |  Read-only
+`/neodc` (CEDA Archive) |  Read-only
 {.table .table-striped}
   
 ## List your home directory using the web app

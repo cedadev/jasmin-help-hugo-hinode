@@ -113,8 +113,8 @@ location |  login  |  sci  |  transfer  |  LOTUS  |  Type  |  Parallel-write
 ---|---|---|---|---|---|---  
 /home/users  |  R/W  |  R/W  |  R/W  |  R/W  |  SSD  |  no
 /gws/pw/j07<br>/gws/nopw/j04 (see note 1 below)<br>/gws/smf/j0[4,7] |  no<br>no<br>no | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | PFS<br>SOF<br>SSD | yes (hence "pw")<br>no (hence "nopw")<br>no
-/work/xfc/volX (see note 2 below) |  no<br>no  |  R/W  |  R/W |  R/W  | PFS  | yes
-/work/scratch-pw[2,3]<br>/work/scratch-nopw  |  no<br>no  |  R/W<br>R/W  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
+/work/xfc/vol* (see note 2 below) |  no<br>no  |  R/W  |  R/W |  R/W  | PFS  | yes
+/work/scratch-pw*<br>/work/scratch-nopw*  |  no<br>no  |  R/W<br>R/W  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
 /apps/contrib  |  No  |  RO  |  No  |  RO  |  n/a  |  n/a  
 /badc, /neodc (archives)  |  No  |  RO  |  RO  |  RO  |  n/a  |  n/a  
 {.table .table-striped}
@@ -143,15 +143,15 @@ your data:
 0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
   - `/gws/pw/j07` volumes are parallel-write-capable storage from Phase 7 (onwards) of JASMIN
   - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwaards) of JASMIN: this storage is not parallel-write-capable
-- The "scratch" areas (`/work/scratch-pw2`, `/work/scratch-pw3` and `/work/scratch-nopw`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below).
+- The "scratch" areas (`/work/scratch-pw*` and `/work/scratch-nopw*`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below).
 - The `/tmp` directory is **not usually an appropriate location to write your data (see next section below).**
 
 ## How to use the temporary disk space
 
 ### Scratch
 
-The scratch areas `/work/scratch-pw2`, `/work/scratch-pw3` and
-`/work/scratch-nopw` are a temporary file space shared across the entire LOTUS
+The scratch areas `/work/scratch-pw*` and
+`/work/scratch-nopw*` are a temporary file space shared across the entire LOTUS
 cluster and the scientific analysis servers.
 
 These scratch areas are ideal for processes that generate _intermediate_ data
@@ -161,9 +161,12 @@ consider other users and remember to clean up after your jobs. **** Any data
 that you wish to keep should be written to a Group Workspace (but remember to
 change the group-ownership of the data if you do).
 
+{{<alert>}}**Update October 2025**: New scratch volumes `/work/scratch-pw4`, `/work/scratch-pw5` are now to be used in preference to old volumes `/work/scratch-pw2`, `/work/scratch-pw3`. The old volumes will be decommissioned on **Tuesday 2 December 2025**: please ensure you have dealt with any data you wish to retain before then.
+{{</alert>}}
+
 There are 2 types of scratch storage available:
 
-- **PFS scratch** (lots of it, fast, less good for small files) as 2 x 1 PB volumes `/work/scratch-pw[2,3]` and particularly suitable for users with a need for storage capabale of shared-file writes with MPI-IO, but good for most purposes.
+- **PFS scratch** (lots of it, fast, less good for small files) as 2 x 1 PB volumes `/work/scratch-pw[4,5]` and particularly suitable for users with a need for storage capabale of shared-file writes with MPI-IO, but good for most purposes.
 - **SSD scratch** (less of it, very fast, good for small files) `/work/scratch-nopw2` as 1 x 220 TB volume. Do not use for operations that attempt to write to multiple parts of a file simultaneously. Please be aware of this if your code (perhaps inadvertently?) writes to a shared log file.
 
 When using the "scratch" areas, please create a sub-directory (e.g.
@@ -189,8 +192,8 @@ deletion processes clear up any residual data:
 {{<alert alert-type="danger">}}
 Automated cleanup processes run daily and
 delete files that are older than 28 days from the last time of being
-accessed. This applies to `/work/scratch-pw2`, `/work/scratch-pw3` and
-`/work/scratch-nopw2`
+accessed. This applies to `/work/scratch-pw*` and
+`/work/scratch-nopw*`
 
 Please remember that shared temporary storage is for the use of all 2,000 users
 of JASMIN, not just you. If you persistently store large amounts (100s of TB) of data in scratch 
@@ -203,8 +206,8 @@ Any important data for keeping should be written to
 a [Group Workspace]({{% ref "introduction-to-group-workspaces" %}})
 or to your home directory if appropriate.**
 
-The `/work/scratch-pw[2,3]` and `/work/scratch-nopw` areas are not available on
-the xfer, login or nx-login servers.
+The `/work/scratch-pw*` and `/work/scratch-nopw*` areas are NOT available on
+the xfer, login or nx-login servers, but ARE available via Globus.
 
 ### Avoid inadvertently writing to /tmp
 

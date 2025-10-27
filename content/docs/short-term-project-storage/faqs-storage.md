@@ -107,7 +107,7 @@ files, transparent to the user. SOF however, can’t do this (until later in
 well as an additional and larger scratch area.
 
 **Suggested solution:** Please consider using your home directory for small-
-file storage, or `/work/scratch-nopw2` for situations involving LOTUS
+file storage, or `/work/scratch-nopw*` for situations involving LOTUS
 intermediate job storage. It should be possible to share code, scripts and
 other small files from your home directory by changing the file and directory
 permissions yourself.
@@ -125,7 +125,7 @@ similar issues from writing large numbers of small files to SOF storage (known
 as QB ).
 
 **Suggested solution:** It is more efficient to write netCDF3 classic files to
-another filesystem type (e.g. `/work/scratch/pw*` or `/work/scratch-nopw2`) and then move them to a SOF GWS, rather than writing directly to SOF.
+another filesystem type (e.g. `/work/scratch/pw*` or `/work/scratch-nopw*`) and then move them to a SOF GWS, rather than writing directly to SOF.
 
 ---
 

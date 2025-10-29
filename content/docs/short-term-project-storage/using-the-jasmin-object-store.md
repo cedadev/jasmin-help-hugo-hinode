@@ -558,6 +558,7 @@ S3cmd has two options related to multipart uploads in s3cmd. They are:
 `--disable-multipart`
 
 and
+
 `--multipart-chunk-size-mb=SIZE`
 
 Other methods of access will have similar options.

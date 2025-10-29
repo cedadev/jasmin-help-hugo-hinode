@@ -382,11 +382,15 @@ Did you omit the `-X` option from the SSH command when you made the onward conne
 
 ### Disk space
 
-Check your disk usage in your JASMIN home directory: if this is over the 100G limit, you may not be able to write any temporary files and this could prevent NoMachine from being able to start a new session or even reconnect to an existing virtual desktop session. Clear out some space and re-check with `pdu -sh $HOME` to find out how much space you're using.
+Check your disk usage in your JASMIN home directory: if this is over or near the 100G limit, you may not be able to write any temporary files and this could prevent NoMachine from being able to start a new session or even reconnect to an existing virtual desktop session.
+
+You may see the error `X11 connection rejected because of wrong authentication.`.
+
+Clear out some space and re-check with `pdu -sh $HOME` to find out how much space you're using.
 
 ### Can't connect or gets stuck connecting to a previous session
 
-Sometimes, you can't connect because you have a previous session which did not terminate correectly, or you might have problems reconnecting to a previous desktop session. Sometimes the client will get stuck with a "spinning wheel" before eventually timing out. You can terminate your own previous session as follows:
+Sometimes, you can't connect because you have a previous session which did not terminate correctly, or you might have problems reconnecting to a previous desktop session. Sometimes the client will get stuck with a "spinning wheel" before eventually timing out. You can terminate your own previous session as follows:
 
 - Follow instructions in {{<link "#connecting">}}Connecting{{</link>}} until the point where all the other users' sessions on the machine are displayed.
 - Find the one corresponding to your username

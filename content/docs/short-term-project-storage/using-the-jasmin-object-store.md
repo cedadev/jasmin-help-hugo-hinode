@@ -546,3 +546,16 @@ The example above copies from a local `sourcepath`, which could be a directory o
 {{<alert alert-type="danger">}}
 Please note that you are asked **NOT to use** the `rclone mount`, `rcd` or `serve` commands when working with storage on JASMIN, [see here]({{% ref "rclone#dos-and-donts" %}}).
 {{</alert>}}
+
+## Large objects and performance
+
+When objects are uploaded to the object store, one option on upload is how large to make the "chunks" which an object is split into (often this is hidden behind a default value). For very large objects, a relatively small chunk size will spread the object out a lot. When a request is made to access the file, the system has to work out where all the chunks of file are before it can start the request. This means that for large objects, there will be a large latency in requests if the file has a small chunk size.
+
+**We advise that for files of 10s of GB or larger that the chunk size is at least 200MB** to reduce the number of parts the file is uploaded in. The option for this will often be called something like "multipart upload" or similar. The AWS S3 documentation has more information about [multipart uploads](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html).
+
+`s3cmd` has two options related to multipart uploads:
+
+- `--disable-multipart`
+- `--multipart-chunk-size-mb=SIZE`
+
+Other methods of access will have similar options.

@@ -12,7 +12,14 @@ title: Graphical linux desktop using NoMachine NX
 weight: 50
 ---
 
-{{<alert alert-type="info">}}Updated advice Nov 2024, now works for all platforms if you update your SSH key.{{</alert>}}
+{{<alert alert-type="info">}}**Update 5 Nov 2025**: Recent updates to the service
+software mean that while the **agent** method should now work for all platforms (Mac,
+Windows 11 and Linux), the **key** method may not.
+
+Windows 10 clients are no longer supported.
+
+You are now recommended to use the **agent** method of presenting your key
+when creating your connection profile, see "Method 2" in details below.{{</alert>}}
 
 ## Introduction
 

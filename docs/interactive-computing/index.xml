@@ -141,35 +141,9 @@ resolve login problems. It provides information for the following issues:&lt;/p&
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
- Updated advice Nov 2024, now works for all platforms if you update your SSH key.
- &lt;/div&gt;
- &lt;/div&gt;
-
-
-
-
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;This service provides a graphical Linux desktop on JASMIN, ideal
-for use with graphics-heavy tasks like interactive work with large images.&lt;/li&gt;
-&lt;li&gt;The desktop environment includes a Firefox web browser which can be used to access
-internal-only web resources.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using graphical applications over a wide-area network can be very slow, and is
-not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop &lt;strong&gt;within&lt;/strong&gt; the JASMIN environment itself, rather than on the user&amp;rsquo;s local machine.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+ &lt;p&gt;&lt;strong&gt;Update 5 Nov 2025&lt;/strong&gt;: Recent updates to the service
+software mean that while the &lt;strong&gt;agent&lt;/strong&gt; method should now work for all platforms (Mac,
+Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 

@@ -85,7 +85,7 @@ In the next 3 sections, the symbols `r` `w` `x` `-` have the following meanings:
 |----|---------|---------|
 | `r` | can read contents of file | can read contents of directory |
 | `w` | can modify contents | can modify contents (e.g. create new file) |
-| `x` | can execute contents | can execute contents |
+| `x` | can execute contents | can access or traverse directory |
 | `-` | no permission | no permission |
 {{</table>}}
 
@@ -113,10 +113,29 @@ and other, respectively.
 
 Each of these is the sum of the following values which represent a permission:
 
-- `r` (read) 4
-- `w` (write) 2
-- `x` (write) 1
+
+- `r` read 4
+- `w` write 2
+- `x` execute (access or traverse, for directory) 1
 - `-` (no permission) 0
+
+This comes from octal notation where each digit represents 3 binary digits
+(bits). For example the binary number `110` can be represented as `6` in octal.
+
+For the 3 sets of permissions we then have:
+
+```
+Permission Set:    rwx   rw-   r--
+                   User  Group Others
+
+Binary Bits:        1      1      1     ← Read (r) = 4
+                    1      1      0     ← Write (w) = 2
+                    1      0      0     ← Execute (x) = 1
+                   ────────────────
+                   111    110    100
+
+Octal Value:         7      6      4
+```
 
 If we look back at the permissions on the file `readme.txt`, these were
 `-rw-r--r--`, meaning:

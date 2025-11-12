@@ -7669,6 +7669,20 @@ function initIndex() {
       
       {
         id: 77,
+        href: "/docs/getting-started/permissions-and-groups/",
+        title: "Permissions and groups",
+        description: "How permissions and groups are used to manage access to data stored on JASMIN.",
+        
+        
+        content: "Introduction \u0026nbsp; Within a multi-user system such as JASMIN, permissions and groups are used to ensure that:\nthe right people have the appropriate access to the right data the system is kept secure This guide will help you understand how access is organised on JASMIN, and what you need to do as a user to ensure that your data, and that of any groups you belong to, are kept safe.\nTLDR \u0026nbsp; While data in home or scratch areas belongs to group users, each group workspace has its own Linux group. If you\u0026rsquo;re moving data from your home directory or scratch to a group workspace, make sure you chgrp the data to belong to the gws_\u0026lt;name\u0026gt; group of the GWS. You must not set unsafe permissions on JASMIN. UNIX/Linux permissions \u0026nbsp; JASMIN uses the Linux operating system, so we use standard Linux mechanisms to control access to files and directories within storage volumes on JASMIN.\n\u0026nbsp; This guide applies to POSIX\u0026nbsp; file system volumes (like your home directory, group workspaces, scratch, XFC and the CEDA Archive, also the terminal environment from which you may connect to JASMIN, i.e. your local machine). For other types of storage such as high-performance object storage, or block storage, other access control mechanisms apply. For a great introduction to permissions, see this online lesson\u0026nbsp; , one of many provided by LinuxJourney.com\u0026nbsp; .\nUnderstanding ls -l output \u0026nbsp; One of the basic tools for looking at permissions is the ls command, using the -l (long listing) option.\nIn this example, user fred has some files in his home directory:\npwd /home/users/fred ls -l total 8 -rw-r--r-- 1 fred users 18 4 Nov 09:36 readme.txt drwxr-xr-x 2 fred users 64 4 Nov 09:36 src \u0026nbsp; TIP: if you see very different output, check that your ls command isn\u0026rsquo;t \u0026ldquo;aliassed\u0026rdquo; to apply extra options. There may be alias entries in your ~/.bashrc file which control this. or you can force use of the un-aliassed ls command by using a backslash before the command, e.g. \\ls -l The long-listing option shows the permissions and groups for each item (file or directory).\nLooking at the permissions for the src directory, we can split the information into 4 main sections as follows:\nd | rwx | r-x | r-x\nIn the first section, d indicates that src is a directory, whereas the equivalent section for readme.txt does not have this, because it\u0026rsquo;s a file not a directory.\nIn the next 3 sections, the symbols r w x - have the following meanings:\npermission meaning for file meaning for directory r can read contents of file can read contents of directory w can modify contents can modify contents (e.g. create new file) x can execute contents can access or traverse directory - no permission no permission The remaining 3 sections are:\nuser permissions relating to the user who owns the file group permissions relating to members of the group that owns the file (in this case group users) other permissions relating to all other users on the system When you try to access a file or directory, the system will check:\nIf you are the user that owns the file. If so you are granted the set of user permissions If you are not the user that owns the file, it checks whether you belong to the group which owns the file. If so you are granted those permissions. If neither of the above apply, then the set of permissions applied is the \u0026ldquo;other\u0026rdquo; permissions. Octal or numeric permissions \u0026nbsp; In addition to the rwx- notation, permissions can also be represented by a sequence of digits, e.g. 644, where the three digits correspond to user, group and other, respectively.\nEach of these is the sum of the following values which represent a permission:\nr read 4 w write 2 x execute (access or traverse, for directory) 1 - (no permission) 0 This comes from octal notation where each digit represents 3 binary digits (bits). For example the binary number 110 can be represented as 6 in octal.\nFor the 3 sets of permissions we then have:\nPermission Set: rwx rw- r-- User Group Others Binary Bits: 1 1 1 ← Read (r) = 4 1 1 0 ← Write (w) = 2 1 0 0 ← Execute (x) = 1 ──────────────── 111 110 100 Octal Value: 7 6 4If we look back at the permissions on the file readme.txt, these were -rw-r--r--, meaning:\n1st section: -: it\u0026rsquo;s a file, not a directory 2nd section: rw-: the user owner has read and write permission 3rd section: r--: members of the group users have only read permission 4th section: r--: all other users have only read permission We can represent that numerically as 644, made up of:\nthe user permission 4+2+0 (r + w + -) = 6 the group permision is 4+0+0 = (r + - + -) = 4 the other permission is 4+0+0 = (r + - + -) = 4 We can set the permissions on a file with the chmod command, using either letters or numbers.\nFor example, to set the permissions on the file readme.txt so that \u0026ldquo;other\u0026rdquo; users no longer have read permission:\nchmod o-r readme.txt The - here means \u0026ldquo;remove\u0026rdquo;, so the opposite (to restore that permission) would be +\nThe equivalent using octal/numerical permissions would be:\nchmod 640 readme.txt Whether using characters or digits, the commands have the same effect, which can be checked with ls -l:\nls -l readme.txt -rw-r----- 1 fred users 18 4 Nov 09:36 readme.txt Similarly, to add the execute permission for a script that needs to be run:\nchmod u+x myscript.sh or chmod 755 myscript.sh` Note this would allow any user to run the script: use 700 for just the user themselves, or 770 for the user and any member of the specified group.\nSharing \u0026nbsp; By default on JASMIN, we set user home directories to be only visible to the user themselves. The permissions on the home directory ($HOME or /home/users/\u0026lt;username\u0026gt;) can be inspected like this, with the -d option showing properties of the directory itself, rather than listing its contents:\nls -ld /home/users/fred drwx------ 10 fred users 0 Oct 27 09:35 /home/users/fred When sharing, consider the following:\nwho you want to share with (members of which groups?) what permissions you want to give them (read-only, or read-write) Note that you cannot share data with another single, specific user, and you must not set unsafe permissions as defined below.\nSo far we\u0026rsquo;ve only really considered user fred, looking at data in his home directory. User fred belongs to group users (as do all users of JASMIN).\nUser fred sensibly prefers to keep his home directory only visible to himself (as per our default), but he is a also member of the \u0026ldquo;Tinysat\u0026rdquo; group workspace (GWS): this has shared storage at /gws/ssde/j25b/tinysat and has its own linux group, gws_tinysat.\nHe now creates a new file /home/users/fred/plans.txt but wants to share the file with colleagues.\nhe can\u0026rsquo;t easily share it from his home directory, because that\u0026rsquo;s set to be only visible to him. the group workspace is designed for this, so is ideal for sharing something with colleagues, but not with others. Let\u0026rsquo;s take a look at the group workspace itself first:\nls -ld /gws/ssde/j25b/tinysat drwxrws--- 10 root gws_tinysat 0 Oct 27 09:35 /gws/ssde/j25b/tinysat Notice that a few things are different:\nthe top-level directory itself belongs to user root (the system \u0026ldquo;superuser\u0026rdquo;) the directory has group ownership (is owned by) group gws_tinysat the group permissions are set to rws, which means: allow read and write by members of group gws_tinysat make sure any new child directory is also owned by group gws_tinysat (the s in rws has special meaning here) Fred has a directory within the GWS which he owns, as do other users:\nls -l /gws/ssde/j25b/tinysat drwxrws--- 10 barney gws_tinysat 0 Oct 26 10:35 barney drwxrws--- 10 fred gws_tinysat 0 Oct 27 08:10 fred drwxrws--- 10 wilma gws_tinysat 0 Oct 28 09:47 wilma Fred has a new file ideas.txt which he created in his home directory, but now wants to share it with wilma, barney, and others in the GWS, so that they can all add ideas to the file.\nCurrently the file is only editable by fred, but because it came from his home directory it, by default it is owned by group users:\nls -l ~/ideas.txt -rw------- 1 fred users 18 4 Nov 10:36 ideas.txt He moves it to his own folder in the GWS, and lists the contents:\nmv ~/ideas.txt /gws/ssde/j25b/tinysat/fred/ ls -l /gws/ssde/j25b/tinysat/fred -rw------- 1 fred users 18 4 Nov 10:36 ideas.txt -rw-rw---- 10 fred gws_tinysat 0 Nov 4 10:35 timescale.txt Users wilma can\u0026rsquo;t yet access the file ideas.txt because it only has user permissions set AND belongs to the wrong group.\nThe other file, timescale.txt has the correct ownership and permissions for what we want, because:\nit belongs to group gws_tinysat rather than users it has group permissions rw- rathen than --- First, Fred needs to change the group ownership of file ideas.txt to gws_tinysat. This ensures that any group permissions apply to the correct group. He can use the chgrp command:\nchgrp gws_tinysat ideas.txt Next, he needs to set the group permissions so that it\u0026rsquo;s writable, using the chmod command:\nchmod g+rw ideas.txt Leaving the group ownership as it was, but setting the same group permissions, would have meant that anyone in group users could edit (or delete) the file, which isn\u0026rsquo;t what Fred wanted.\nFrom before, we know that the fred directory is already group-readable and -writeable by members of group gws_tinysat, so now he has the permissions and ownership that he wants, and wilma can edit the file:\nmv ~/ideas.txt /gws/ssde/j25b/tinysat/fred/ ls -l /gws/ssde/j25b/tinysat/fred -rw-rw---- 1 fred users 18 4 Nov 10:36 ideas.txt -rw-rw---- 10 fred gws_tinysat 0 Nov 4 10:35 timescale.txt The same would apply if Fred were to move data from a scratch area (where, just like in his home directory, files are created with group users): he would need to remember to change the group ownership of any files moved into the GWS to belong to the correct group (gws_tinysat), otherwise any group-level permissions would apply to the wrong group.\nUnsafe permissions \u0026nbsp; \u0026nbsp; Do not set open permissions on files or directories. By \u0026ldquo;open\u0026rdquo; we mean where data are writable by the \u0026ldquo;other\u0026rdquo; group, for example:\n-rw-rw-rw- \u0026laquo; DON\u0026rsquo;T DO THIS!!\ndrwxrwxrwx \u0026laquo; OR THIS!!\nThis would mean that any user with access to the same file system could modify or delete your data: this is a security risk.\nWe provide a UNIX a group corresponding to each group workspace, which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using the advice in this guide. If you are unsure about setting permissions, please ask the helpdesk.\nWhere we (JASMIN administrators) encounter unsafe permissions on JASMIN, we may take action to revert permissions to a safe state."
+      })
+      .add(
+      
+      
+      
+      
+      {
+        id: 78,
         href: "/docs/for-cloud-tenants/platform-in-depth-jupyterhub/",
         title: "Platforms In Depth - JupyterHub, DaskHub, BinderHub",
         description: "In depth look at the JupyterHub platforms",
@@ -7682,7 +7696,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         href: "/docs/for-cloud-tenants/platform-in-depth-k8s/",
         title: "Platforms In Depth - Kubernetes",
         description: "In depth look at the Kubernetes platforms",
@@ -7696,7 +7710,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         href: "/docs/for-cloud-tenants/platform-in-depth-slurm/",
         title: "Platforms In Depth - Slurm",
         description: "In depth look at the Slurm platform",
@@ -7710,7 +7724,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         href: "/docs/for-cloud-tenants/platform-in-depth-workstation/",
         title: "Platforms In Depth - Workstations",
         description: "In depth look at the workstation platforms",
@@ -7724,7 +7738,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7738,7 +7752,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7752,7 +7766,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7766,7 +7780,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7780,7 +7794,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments",
@@ -7794,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deactivating software environments",
         description: "Quickstart for activating/deactivating software environments",
@@ -7808,7 +7822,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -7822,7 +7836,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email address",
         description: "Reconfirm JASMIN account email address",
@@ -7836,7 +7850,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -7850,7 +7864,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -7864,7 +7878,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -7878,7 +7892,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -7892,7 +7906,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -7906,7 +7920,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -7920,7 +7934,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Scientific analysis servers",
@@ -7934,7 +7948,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -7948,7 +7962,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account for access to MASS",
         description: "Steps to access MASS from JASMIN",
@@ -7962,7 +7976,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -7976,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -7990,7 +8004,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8004,7 +8018,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8018,7 +8032,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8032,7 +8046,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8046,7 +8060,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8060,7 +8074,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8074,7 +8088,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8088,7 +8102,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8102,7 +8116,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software environment",
         description: "The \"jasmin-sci\" software environment",
@@ -8116,7 +8130,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8130,7 +8144,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service with GPUs enabled",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8144,7 +8158,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8158,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8172,7 +8186,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8186,7 +8200,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8200,7 +8214,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8214,7 +8228,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8228,7 +8242,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8242,7 +8256,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisation on JASMIN",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8256,7 +8270,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
         description: "Using the JASMIN Object Store",
@@ -8270,7 +8284,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8284,7 +8298,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/cylc",
         description: "Workflow Management with rose/cylc",
@@ -8298,7 +8312,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

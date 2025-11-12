@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/</link><description>Recent content in Docs on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>About this site</title><link>https://help.jasmin.ac.uk/docs/about-this-site/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/about-this-site/</guid><description>&lt;h2 id="about-this-site" class="heading"&gt;About this site&lt;a href="#about-this-site" aria-labelledby="about-this-site"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/</link><description>Recent content in Docs on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>About this site</title><link>https://help.jasmin.ac.uk/docs/about-this-site/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/about-this-site/</guid><description>&lt;h2 id="about-this-site" class="heading "&gt;About this site&lt;a href="#about-this-site" aria-labelledby="about-this-site"&gt;
 
 
 
@@ -8,7 +8,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;We hope you like our new-look help docs&lt;/strong&gt; which make use of richer formatting to make the articles easier to read, particularly those with code snippets or command-line instructions. We&amp;rsquo;ve also changed the way we manage the source content so it&amp;rsquo;s easier for us to maintain. There&amp;rsquo;s still more to do, to re-organise some of the content and add new pages to reflect how JASMIN is evolving.

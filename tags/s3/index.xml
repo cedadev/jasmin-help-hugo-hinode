@@ -10,7 +10,8 @@ particular:&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-rclone" class="heading"&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
+
+&lt;h2 id="what-is-rclone" class="heading "&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
 
 
 
@@ -20,7 +21,7 @@ particular:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;rclone is a command-line utility which enables access to lots of different

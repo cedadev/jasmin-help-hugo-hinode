@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on JASMIN on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/</link><description>Recent content in Software on JASMIN on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/software-on-jasmin/index.xml" rel="self" type="application/rss+xml"/><item><title>Additional software</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/additional-software/</guid><description>&lt;p&gt;This article provides details of additional packages that exist under the
 &lt;code&gt;/apps/jasmin/&lt;/code&gt; directory which is available on all scientific analysis
-servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -10,7 +10,7 @@ servers and on the LOTUS batch cluster on JASMIN.&lt;/p&gt;</description></item>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;checksit&lt;/code&gt; is a tool that checks the structure and content of a file against a range of available checks. Checks can be made using either &amp;ldquo;spec&amp;rdquo; files defining rules that objects within a file must meet, or comparison against a template file.&lt;/p&gt;</description></item><item><title>Community Software: ESMValTool</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</guid><description>&lt;p&gt;ESMValTool is installed on JASMIN as a &lt;em&gt;community package&lt;/em&gt;. This article
@@ -25,7 +25,8 @@ provides:&lt;/p&gt;
 
 
 
-&lt;h2 id="overview-of-esmvaltool" class="heading"&gt;Overview of ESMValTool&lt;a href="#overview-of-esmvaltool" aria-labelledby="overview-of-esmvaltool"&gt;
+
+&lt;h2 id="overview-of-esmvaltool" class="heading "&gt;Overview of ESMValTool&lt;a href="#overview-of-esmvaltool" aria-labelledby="overview-of-esmvaltool"&gt;
 
 
 
@@ -35,7 +36,7 @@ provides:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Earth System Model Evaluation Tool (ESMValTool) is a community diagnostics
@@ -47,7 +48,7 @@ selected Essential Climate Variables, a range of known systematic biases
 common to ESMs, such as coupled tropical climate variability, monsoons,
 Southern Ocean processes, continental dry biases and soil hydrology-climate
 interactions, as well as atmospheric CO2 budgets, tropospheric and
-stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -57,7 +58,7 @@ stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><i
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -145,7 +146,7 @@ Please read
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; carefully.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading"&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; carefully.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading "&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
 
 
 
@@ -155,7 +156,7 @@ Please read
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Following a change in the licensing conditions by Anaconda, it is now the case
@@ -184,7 +185,7 @@ usage, even if it is for the purpose of academic research.&lt;/p&gt;</descriptio
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;jaspy&lt;/a&gt;
 environment (which is itself a Conda environment). This page gives
 detail on how to create and use your own personal Conda environments via the
-&lt;code&gt;miniforge&lt;/code&gt; installer, as an alternative to the use of Jaspy.&lt;/p&gt;</description></item><item><title>Geocat replaces NCL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;code&gt;miniforge&lt;/code&gt; installer, as an alternative to the use of Jaspy.&lt;/p&gt;</description></item><item><title>Geocat replaces NCL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -194,7 +195,7 @@ detail on how to create and use your own personal Conda environments via the
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article introduces 
@@ -222,7 +223,7 @@ detail on how to create and use your own personal Conda environments via the
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading"&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; as a replacement on JASMIN for NCAR Command Language (NCL) which is now deprecated.&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading "&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
 
 
 
@@ -232,7 +233,7 @@ detail on how to create and use your own personal Conda environments via the
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -342,7 +343,8 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p&gt;
 
 
 
-&lt;h2 id="the-name-atmospheric-dispersion-model" class="heading"&gt;The NAME atmospheric dispersion model&lt;a href="#the-name-atmospheric-dispersion-model" aria-labelledby="the-name-atmospheric-dispersion-model"&gt;
+
+&lt;h2 id="the-name-atmospheric-dispersion-model" class="heading "&gt;The NAME atmospheric dispersion model&lt;a href="#the-name-atmospheric-dispersion-model" aria-labelledby="the-name-atmospheric-dispersion-model"&gt;
 
 
 
@@ -352,7 +354,7 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Met Office&amp;rsquo;s Numerical Atmospheric-dispersion Modelling Environment (NAME)
@@ -404,7 +406,8 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -414,10 +417,10 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -427,7 +430,7 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article explains that users may request access to a PostgreSQL (known as
@@ -460,7 +463,8 @@ start using it before this request can be acted upon.&lt;/p&gt;</description></i
 
 
 
-&lt;h2 id="activate-load-an-environment" class="heading"&gt;Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment"&gt;
+
+&lt;h2 id="activate-load-an-environment" class="heading "&gt;Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment"&gt;
 
 
 
@@ -470,7 +474,7 @@ start using it before this request can be acted upon.&lt;/p&gt;</description></i
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;To activate an environment containing the &amp;ldquo;current&amp;rdquo; common software packages
@@ -561,7 +565,8 @@ on JASMIN.&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-a-software-environment" class="heading"&gt;What is a software environment?&lt;a href="#what-is-a-software-environment" aria-labelledby="what-is-a-software-environment"&gt;
+
+&lt;h2 id="what-is-a-software-environment" class="heading "&gt;What is a software environment?&lt;a href="#what-is-a-software-environment" aria-labelledby="what-is-a-software-environment"&gt;
 
 
 
@@ -571,7 +576,7 @@ on JASMIN.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A software environment is typically a collection of files and directories
@@ -599,7 +604,7 @@ environments already available on the system. See the
  
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt; for examples of these.&lt;/p&gt;</description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p&gt;JASMIN is a large platform where a range of software tools, packages and
 environments are available. Many users employ software already installed on
-JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p&gt;</description></item><item><title>The "jasmin-sci" software environment</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p&gt;</description></item><item><title>The "jasmin-sci" software environment</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -609,7 +614,7 @@ JASMIN whilst some need to install their own tools for a particular purpose.&lt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes the &lt;code&gt;jasmin-sci&lt;/code&gt; software environment on JASMIN. It

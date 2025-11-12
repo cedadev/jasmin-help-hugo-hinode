@@ -4,7 +4,8 @@ access to the JASMIN environment.&lt;/p&gt;
 
 
 
-&lt;h2 id="start-here" class="heading"&gt;Start here&lt;a href="#start-here" aria-labelledby="start-here"&gt;
+
+&lt;h2 id="start-here" class="heading "&gt;Start here&lt;a href="#start-here" aria-labelledby="start-here"&gt;
 
 
 
@@ -14,7 +15,7 @@ access to the JASMIN environment.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For most users, the &amp;ldquo;front door&amp;rdquo; to JASMIN is via 
@@ -125,7 +126,7 @@ of
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/"&gt;Get Started with JASMIN&lt;/a&gt;).&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading"&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/"&gt;Get Started with JASMIN&lt;/a&gt;).&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading "&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
 
 
 
@@ -135,7 +136,7 @@ of
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -165,7 +166,7 @@ of
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the place where you manage your JASMIN account and can apply for access to the many services which you may want to use on JASMIN.&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading"&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the place where you manage your JASMIN account and can apply for access to the many services which you may want to use on JASMIN.&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading "&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
 
 
 
@@ -175,7 +176,7 @@ of
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of &lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (
@@ -270,7 +271,8 @@ information with your initial query:&lt;/p&gt;</description></item><item><title>
 
 
 
-&lt;h2 id="ceda-status-page" class="heading"&gt;CEDA Status page&lt;a href="#ceda-status-page" aria-labelledby="ceda-status-page"&gt;
+
+&lt;h2 id="ceda-status-page" class="heading "&gt;CEDA Status page&lt;a href="#ceda-status-page" aria-labelledby="ceda-status-page"&gt;
 
 
 
@@ -280,7 +282,7 @@ information with your initial query:&lt;/p&gt;</description></item><item><title>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -310,7 +312,7 @@ information with your initial query:&lt;/p&gt;</description></item><item><title>
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading"&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading "&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
 
 
 
@@ -320,7 +322,7 @@ information with your initial query:&lt;/p&gt;</description></item><item><title>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;JASMIN training accounts are TEMPORARY accounts that provide a person with
@@ -357,7 +359,8 @@ purpose. It covers:&lt;/p&gt;
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -367,7 +370,7 @@ purpose. It covers:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For some time, we have been asked by user communities to cater for legitimate
@@ -490,7 +493,8 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
 
 
-&lt;h2 id="1-specifying-the-key-location-each-time" class="heading"&gt;1. Specifying the key location each time&lt;a href="#1-specifying-the-key-location-each-time" aria-labelledby="1-specifying-the-key-location-each-time"&gt;
+
+&lt;h2 id="1-specifying-the-key-location-each-time" class="heading "&gt;1. Specifying the key location each time&lt;a href="#1-specifying-the-key-location-each-time" aria-labelledby="1-specifying-the-key-location-each-time"&gt;
 
 
 
@@ -500,7 +504,7 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This simply involves including the &lt;code&gt;-i&lt;/code&gt; option in the SSH command to specify the location of your private key:&lt;/p&gt;</description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Please see also
@@ -524,7 +528,7 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/"&gt;Understanding new JASMIN storage&lt;/a&gt;
-which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Permissions and groups</title><link>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Permissions and groups</title><link>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -534,7 +538,7 @@ which explains more about the different types of storage as of Phase 4 of JASMIN
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Within a multi-user system such as JASMIN, permissions and groups are used to
@@ -559,7 +563,8 @@ ensure that:&lt;/p&gt;</description></item><item><title>Understanding new JASMIN
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -569,7 +574,7 @@ ensure that:&lt;/p&gt;</description></item><item><title>Understanding new JASMIN
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;JASMIN continues to grow as a unique collaborative analysis environment for an
@@ -578,7 +583,7 @@ address with Phase 4 were the ever-growing demand for storage space and the
 increasing diversity of scientific workflows. However, we’re aware that some
 aspects of the changes introduced in Phase 4 have presented some challenges in
 themselves. Here, we outline the reasons for the changes and try to summarise
-some of the challenges and what can be done to help deal with them.&lt;/p&gt;</description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;h2 id="update-info" class="heading"&gt;Update info&lt;a href="#update-info" aria-labelledby="update-info"&gt;
+some of the challenges and what can be done to help deal with them.&lt;/p&gt;</description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;h2 id="update-info" class="heading "&gt;Update info&lt;a href="#update-info" aria-labelledby="update-info"&gt;
 
 
 
@@ -588,7 +593,7 @@ some of the challenges and what can be done to help deal with them.&lt;/p&gt;</d
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Navigate to your 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sinfo on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/sinfo/</link><description>Recent content in Sinfo on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/sinfo/index.xml" rel="self" type="application/rss+xml"/><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading"&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sinfo on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/sinfo/</link><description>Recent content in Sinfo on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/sinfo/index.xml" rel="self" type="application/rss+xml"/><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading "&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
 
 
 
@@ -8,7 +8,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Slurm queues in the LOTUS cluster are:&lt;/p&gt;</description></item></channel></rss>

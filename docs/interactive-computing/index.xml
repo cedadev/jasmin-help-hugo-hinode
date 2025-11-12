@@ -28,7 +28,8 @@ computing (as opposed to
 
 
 
-&lt;h2 id="login-severs" class="heading"&gt;Login Severs&lt;a href="#login-severs" aria-labelledby="login-severs"&gt;
+
+&lt;h2 id="login-severs" class="heading "&gt;Login Severs&lt;a href="#login-severs" aria-labelledby="login-severs"&gt;
 
 
 
@@ -38,7 +39,7 @@ computing (as opposed to
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -60,7 +61,7 @@ computing (as opposed to
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading "&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
 
 
 
@@ -70,7 +71,7 @@ computing (as opposed to
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;There are four login servers available to access resources within JASMIN.
@@ -143,7 +144,7 @@ resolve login problems. It provides information for the following issues:&lt;/p&
  &lt;div class="flex-grow-1 my-auto"&gt;
  &lt;p&gt;&lt;strong&gt;Update 5 Nov 2025&lt;/strong&gt;: Recent updates to the service
 software mean that while the &lt;strong&gt;agent&lt;/strong&gt; method should now work for all platforms (Mac,
-Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading "&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 
@@ -153,7 +154,7 @@ Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role.
@@ -218,7 +219,7 @@ Project-specific servers are no longer provided on request, as most use cases ca
 a tenancy in the JASMIN cloud.
  &lt;/div&gt;
  &lt;/div&gt;
-&lt;p&gt;This article introduces the project specific servers. It covers:&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;This article introduces the project specific servers. It covers:&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -228,7 +229,7 @@ a tenancy in the JASMIN cloud.
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -257,7 +258,7 @@ a tenancy in the JASMIN cloud.
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a richly-featured editor and Integrated Development Environment (IDE)
-which has remote access and other useful features that can be used with JASMIN.&lt;/p&gt;</description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+which has remote access and other useful features that can be used with JASMIN.&lt;/p&gt;</description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -267,7 +268,7 @@ which has remote access and other useful features that can be used with JASMIN.&
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;

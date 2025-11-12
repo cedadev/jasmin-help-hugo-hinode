@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JASMIN Help site on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/</link><description>Recent content in JASMIN Help site on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>About this site</title><link>https://help.jasmin.ac.uk/docs/about-this-site/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/about-this-site/</guid><description>&lt;h2 id="about-this-site" class="heading"&gt;About this site&lt;a href="#about-this-site" aria-labelledby="about-this-site"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JASMIN Help site on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/</link><description>Recent content in JASMIN Help site on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/index.xml" rel="self" type="application/rss+xml"/><item><title>About this site</title><link>https://help.jasmin.ac.uk/docs/about-this-site/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/about-this-site/</guid><description>&lt;h2 id="about-this-site" class="heading "&gt;About this site&lt;a href="#about-this-site" aria-labelledby="about-this-site"&gt;
 
 
 
@@ -8,7 +8,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;We hope you like our new-look help docs&lt;/strong&gt; which make use of richer formatting to make the articles easier to read, particularly those with code snippets or command-line instructions. We&amp;rsquo;ve also changed the way we manage the source content so it&amp;rsquo;s easier for us to maintain. There&amp;rsquo;s still more to do, to re-organise some of the content and add new pages to reflect how JASMIN is evolving.
@@ -18,7 +18,8 @@ access to the JASMIN environment.&lt;/p&gt;
 
 
 
-&lt;h2 id="start-here" class="heading"&gt;Start here&lt;a href="#start-here" aria-labelledby="start-here"&gt;
+
+&lt;h2 id="start-here" class="heading "&gt;Start here&lt;a href="#start-here" aria-labelledby="start-here"&gt;
 
 
 
@@ -28,7 +29,7 @@ access to the JASMIN environment.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For most users, the &amp;ldquo;front door&amp;rdquo; to JASMIN is via 
@@ -93,7 +94,8 @@ computing (as opposed to
 
 
 
-&lt;h2 id="login-severs" class="heading"&gt;Login Severs&lt;a href="#login-severs" aria-labelledby="login-severs"&gt;
+
+&lt;h2 id="login-severs" class="heading "&gt;Login Severs&lt;a href="#login-severs" aria-labelledby="login-severs"&gt;
 
 
 
@@ -103,7 +105,7 @@ computing (as opposed to
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -126,7 +128,7 @@ computing (as opposed to
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Introduction to the JASMIN Cloud</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/</guid><description>&lt;p&gt;In addition to the traditional batch computing (LOTUS) and storage (Group
-Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p&gt;</description></item><item><title>LOTUS overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</guid><description>&lt;h2 id="what-is-lotus" class="heading"&gt;What is LOTUS&lt;a href="#what-is-lotus" aria-labelledby="what-is-lotus"&gt;
+Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p&gt;</description></item><item><title>LOTUS overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/</guid><description>&lt;h2 id="what-is-lotus" class="heading "&gt;What is LOTUS&lt;a href="#what-is-lotus" aria-labelledby="what-is-lotus"&gt;
 
 
 
@@ -136,7 +138,7 @@ Workspaces) services, JASMIN also provides a cloud computing service.&lt;/p&gt;<
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;LOTUS is not, in itself, a High-Performance Computing (HPC) facility, but
@@ -238,7 +240,7 @@ of
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/"&gt;Get Started with JASMIN&lt;/a&gt;).&lt;/p&gt;</description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;h2 id="what-is-a-job-scheduler" class="heading"&gt;What is a Job Scheduler?&lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/"&gt;Get Started with JASMIN&lt;/a&gt;).&lt;/p&gt;</description></item><item><title>Slurm scheduler overview</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-scheduler-overview/</guid><description>&lt;h2 id="what-is-a-job-scheduler" class="heading "&gt;What is a Job Scheduler?&lt;a href="#what-is-a-job-scheduler" aria-labelledby="what-is-a-job-scheduler"&gt;
 
 
 
@@ -248,7 +250,7 @@ of
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A job or batch scheduler, is a tool that manages how user jobs
@@ -278,7 +280,7 @@ execute them. The scheduler manages the jobs to ensure that the compute
 resources are being used efficiently and that users get appropriate access to
 those resources.&lt;/p&gt;</description></item><item><title>The Azimuth Cloud Portal</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-cloud-portal/</guid><description>&lt;p&gt;Azimuth is a self-service portal designed to simplify the management of cloud resources, particularly for high-performance computing (HPC)
 and artificial intelligence (AI) applications. It supports OpenStack clouds and can manage a range of platforms from single-machine
-workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.&lt;/p&gt;</description></item><item><title>Hosting services</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</guid><description>&lt;p&gt;When hosting services on the JASMIN Cloud, whether that be through manually created VMs, or through an Azimuth platform, there are a number of things to consider.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading"&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
+workstations to entire Slurm clusters and Kubernetes-based platforms like JupyterHub.&lt;/p&gt;</description></item><item><title>Hosting services</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/hosting-services/</guid><description>&lt;p&gt;When hosting services on the JASMIN Cloud, whether that be through manually created VMs, or through an Azimuth platform, there are a number of things to consider.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading "&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
 
 
 
@@ -288,7 +290,7 @@ workstations to entire Slurm clusters and Kubernetes-based platforms like Jupyte
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -318,7 +320,7 @@ workstations to entire Slurm clusters and Kubernetes-based platforms like Jupyte
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the place where you manage your JASMIN account and can apply for access to the many services which you may want to use on JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the place where you manage your JASMIN account and can apply for access to the many services which you may want to use on JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading "&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
 
 
 
@@ -328,7 +330,7 @@ workstations to entire Slurm clusters and Kubernetes-based platforms like Jupyte
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;There are four login servers available to access resources within JASMIN.
@@ -364,7 +366,7 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
 
  &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0"&gt;SSH&lt;/abbr&gt;
 
-.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Workstations</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</guid><description>&lt;p&gt;&lt;strong&gt;The Linux Workstation platform&lt;/strong&gt; provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. These are aimed at:&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading"&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
+.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Workstations</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</guid><description>&lt;p&gt;&lt;strong&gt;The Linux Workstation platform&lt;/strong&gt; provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. These are aimed at:&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading "&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
 
 
 
@@ -374,7 +376,7 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of &lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (
@@ -498,7 +500,7 @@ environment.&lt;/p&gt;</description></item><item><title>Graphical linux desktop 
  &lt;div class="flex-grow-1 my-auto"&gt;
  &lt;p&gt;&lt;strong&gt;Update 5 Nov 2025&lt;/strong&gt;: Recent updates to the service
 software mean that while the &lt;strong&gt;agent&lt;/strong&gt; method should now work for all platforms (Mac,
-Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Platforms In Depth - JupyterHub, DaskHub, BinderHub</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</guid><description>&lt;h2 id="jupyterhub" class="heading"&gt;JupyterHub&lt;a href="#jupyterhub" aria-labelledby="jupyterhub"&gt;
+Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Platforms In Depth - JupyterHub, DaskHub, BinderHub</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</guid><description>&lt;h2 id="jupyterhub" class="heading "&gt;JupyterHub&lt;a href="#jupyterhub" aria-labelledby="jupyterhub"&gt;
 
 
 
@@ -508,7 +510,7 @@ Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;JupyterHub&lt;/strong&gt; is a multi-user platform that allows multiple users to access and run &lt;strong&gt;Jupyter notebooks&lt;/strong&gt; through a web interface.
@@ -518,7 +520,7 @@ research. It allows users access to a consistent computing environment from any 
 efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.&lt;/p&gt;</description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p&gt;If you are experiencing difficulties or slow performance and are unsure why,
 please first consult all relevant documentation, then if needed, contact our Helpdesk
 using the help beacon below, but please include the following
-information with your initial query:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+information with your initial query:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading "&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 
@@ -528,7 +530,7 @@ information with your initial query:&lt;/p&gt;</description></item><item><title>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role.
@@ -556,7 +558,8 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 
-&lt;h2 id="ceda-status-page" class="heading"&gt;CEDA Status page&lt;a href="#ceda-status-page" aria-labelledby="ceda-status-page"&gt;
+
+&lt;h2 id="ceda-status-page" class="heading "&gt;CEDA Status page&lt;a href="#ceda-status-page" aria-labelledby="ceda-status-page"&gt;
 
 
 
@@ -566,7 +569,7 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -596,7 +599,7 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading"&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading "&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
 
 
 
@@ -606,12 +609,12 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;JASMIN training accounts are TEMPORARY accounts that provide a person with
 access to JASMIN for a specific event (such as a training workshop) organised
-in advance.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</guid><description>&lt;h2 id="patching" class="heading"&gt;Patching&lt;a href="#patching" aria-labelledby="patching"&gt;
+in advance.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</guid><description>&lt;h2 id="patching" class="heading "&gt;Patching&lt;a href="#patching" aria-labelledby="patching"&gt;
 
 
 
@@ -621,7 +624,7 @@ in advance.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Tenants are strongly encouraged to regularly patch machines and must update anything when asked by the JASMIN or STFC Cloud teams, and abide by the patching policy.&lt;/p&gt;</description></item><item><title>Transfer servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/transfer-servers/</guid><description>&lt;p&gt;This article lists the JASMIN data transfer servers and provides links to how
@@ -723,7 +726,8 @@ purpose. It covers:&lt;/p&gt;
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -733,12 +737,12 @@ purpose. It covers:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;For some time, we have been asked by user communities to cater for legitimate
 use cases where accounts need to be shared by a small, known and pre-arranged
-set of users, or by services or functions.&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+set of users, or by services or functions.&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -748,7 +752,7 @@ set of users, or by services or functions.&lt;/p&gt;</description></item><item><
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -895,7 +899,8 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
 
 
-&lt;h2 id="1-specifying-the-key-location-each-time" class="heading"&gt;1. Specifying the key location each time&lt;a href="#1-specifying-the-key-location-each-time" aria-labelledby="1-specifying-the-key-location-each-time"&gt;
+
+&lt;h2 id="1-specifying-the-key-location-each-time" class="heading "&gt;1. Specifying the key location each time&lt;a href="#1-specifying-the-key-location-each-time" aria-labelledby="1-specifying-the-key-location-each-time"&gt;
 
 
 
@@ -905,7 +910,7 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This simply involves including the &lt;code&gt;-i&lt;/code&gt; option in the SSH command to specify the location of your private key:&lt;/p&gt;</description></item><item><title>Access to storage</title><link>https://help.jasmin.ac.uk/docs/getting-started/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/storage/</guid><description>&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; Please see also
@@ -929,7 +934,7 @@ authentication.&lt;/p&gt;</description></item><item><title>Present your SSH key<
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/"&gt;Understanding new JASMIN storage&lt;/a&gt;
-which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Permissions and groups</title><link>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Permissions and groups</title><link>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/permissions-and-groups/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -939,7 +944,7 @@ which explains more about the different types of storage as of Phase 4 of JASMIN
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Within a multi-user system such as JASMIN, permissions and groups are used to
@@ -964,7 +969,8 @@ ensure that:&lt;/p&gt;</description></item><item><title>Understanding new JASMIN
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -974,7 +980,7 @@ ensure that:&lt;/p&gt;</description></item><item><title>Understanding new JASMIN
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;JASMIN continues to grow as a unique collaborative analysis environment for an
@@ -983,7 +989,7 @@ address with Phase 4 were the ever-growing demand for storage space and the
 increasing diversity of scientific workflows. However, we’re aware that some
 aspects of the changes introduced in Phase 4 have presented some challenges in
 themselves. Here, we outline the reasons for the changes and try to summarise
-some of the challenges and what can be done to help deal with them.&lt;/p&gt;</description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;h2 id="update-info" class="heading"&gt;Update info&lt;a href="#update-info" aria-labelledby="update-info"&gt;
+some of the challenges and what can be done to help deal with them.&lt;/p&gt;</description></item><item><title>Update a JASMIN account</title><link>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/update-a-jasmin-account/</guid><description>&lt;h2 id="update-info" class="heading "&gt;Update info&lt;a href="#update-info" aria-labelledby="update-info"&gt;
 
 
 
@@ -993,7 +999,7 @@ some of the challenges and what can be done to help deal with them.&lt;/p&gt;</d
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Step 1&lt;/strong&gt; : Navigate to your 
@@ -1094,7 +1100,8 @@ Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review
 
 
 
-&lt;h2 id="what-is-bbcp" class="heading"&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
+
+&lt;h2 id="what-is-bbcp" class="heading "&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
 
 
 
@@ -1104,7 +1111,7 @@ Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -1156,7 +1163,7 @@ efficiently. It works in a similar way to
  &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/"&gt;GridFTP over SSH&lt;/a&gt; in that it connects to the transfer
 server using your usual SSH credentials but then can set up parallel data
 streams for transferring data. One advantage of &lt;code&gt;bbcp&lt;/code&gt; that it is provided as
-a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -1166,7 +1173,7 @@ a single binary executable which is easy to download and use.&lt;/p&gt;</descrip
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -1198,7 +1205,7 @@ a single binary executable which is easy to download and use.&lt;/p&gt;</descrip
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; provides direct access to thousands of
 atmospheric, climate change and earth observation datasets. The Archive is directly accessible as a
-file system from the shared science machines on JASMIN.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+file system from the shared science machines on JASMIN.&lt;/p&gt;</description></item><item><title>Community Software: checksit</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-checksit/</guid><description>&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -1208,7 +1215,7 @@ file system from the shared science machines on JASMIN.&lt;/p&gt;</description><
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;checksit&lt;/code&gt; is a tool that checks the structure and content of a file against a range of available checks. Checks can be made using either &amp;ldquo;spec&amp;rdquo; files defining rules that objects within a file must meet, or comparison against a template file.&lt;/p&gt;</description></item><item><title>Community Software: ESMValTool</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/community-software-esmvaltool/</guid><description>&lt;p&gt;ESMValTool is installed on JASMIN as a &lt;em&gt;community package&lt;/em&gt;. This article
@@ -1223,7 +1230,8 @@ provides:&lt;/p&gt;
 
 
 
-&lt;h2 id="overview-of-esmvaltool" class="heading"&gt;Overview of ESMValTool&lt;a href="#overview-of-esmvaltool" aria-labelledby="overview-of-esmvaltool"&gt;
+
+&lt;h2 id="overview-of-esmvaltool" class="heading "&gt;Overview of ESMValTool&lt;a href="#overview-of-esmvaltool" aria-labelledby="overview-of-esmvaltool"&gt;
 
 
 
@@ -1233,7 +1241,7 @@ provides:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Earth System Model Evaluation Tool (ESMValTool) is a community diagnostics
@@ -1245,7 +1253,7 @@ selected Essential Climate Variables, a range of known systematic biases
 common to ESMs, such as coupled tropical climate variability, monsoons,
 Southern Ocean processes, continental dry biases and soil hydrology-climate
 interactions, as well as atmospheric CO2 budgets, tropospheric and
-stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><item><title>Compiling and linking</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/compiling-and-linking/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1255,7 +1263,7 @@ stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><i
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The 
@@ -1343,7 +1351,7 @@ Please read
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; carefully.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading"&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; carefully.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading "&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
 
 
 
@@ -1353,13 +1361,13 @@ Please read
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Following a change in the licensing conditions by Anaconda, it is now the case
 that all users of the Anaconda &lt;code&gt;defaults&lt;/code&gt; Conda package channel (repository)
 from organisations of 500 or more employees are potentially liable to pay for
-usage, even if it is for the purpose of academic research.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+usage, even if it is for the purpose of academic research.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1369,7 +1377,7 @@ usage, even if it is for the purpose of academic research.&lt;/p&gt;</descriptio
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes how to configure Cross-Origin Resource Sharing (CORS) on a JASMIN Caringo S3 object store.&lt;/p&gt;</description></item><item><title>Creating and using miniforge environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/creating-and-using-miniforge-environments/</guid><description>&lt;p&gt;On JASMIN, we provide a wide range of packages via the 
@@ -1395,7 +1403,7 @@ usage, even if it is for the purpose of academic research.&lt;/p&gt;</descriptio
  &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;jaspy&lt;/a&gt;
 environment (which is itself a Conda environment). This page gives
 detail on how to create and use your own personal Conda environments via the
-&lt;code&gt;miniforge&lt;/code&gt; installer, as an alternative to the use of Jaspy.&lt;/p&gt;</description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;code&gt;miniforge&lt;/code&gt; installer, as an alternative to the use of Jaspy.&lt;/p&gt;</description></item><item><title>Dask Gateway</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/dask-gateway/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1405,7 +1413,7 @@ detail on how to create and use your own personal Conda environments via the
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -1485,7 +1493,8 @@ On JASMIN, it creates a Dask cluster in
 
 
 
-&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading"&gt;Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin"&gt;
+
+&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading "&gt;Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin"&gt;
 
 
 
@@ -1495,7 +1504,7 @@ On JASMIN, it creates a Dask cluster in
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;As a JASMIN user you are very likely to be involved in data transfer. You
@@ -1591,7 +1600,7 @@ links to articles that describe them in more detail.&lt;/p&gt;</description></it
  &lt;/div&gt;
 &lt;p&gt;This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p&gt;</description></item><item><title>Example Job 2: Calculating MD5 Checksums on many files</title><link>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</guid><description>&lt;p&gt;This page records some early CEDA usage of the LOTUS cluster for various
 relatively simple tasks. Others may wish to use these examples as a starting
-point for developing their own workflows on LOTUS.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+point for developing their own workflows on LOTUS.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1601,7 +1610,7 @@ point for developing their own workflows on LOTUS.&lt;/p&gt;</description></item
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p&gt;</description></item><item><title>ftp and lftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</guid><description>&lt;p&gt;This article provides information about FTP (File Transfer Protocol) as a data
@@ -1615,7 +1624,8 @@ transfer tool. In particular:&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-ftp" class="heading"&gt;What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp"&gt;
+
+&lt;h2 id="what-is-ftp" class="heading "&gt;What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp"&gt;
 
 
 
@@ -1625,7 +1635,7 @@ transfer tool. In particular:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -1658,7 +1668,7 @@ transfer protocol enabling connections from a client to download
 files from, or upload files to, a server, although limited in security. A wide variety of client tools are
 available to the user, 2 implementations of which are available on the JASMIN
 transfer servers, although no server is provided. &lt;code&gt;ftp&lt;/code&gt; is also the name of
-the basic FTP client program, see below.&lt;/p&gt;</description></item><item><title>Geocat replaces NCL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+the basic FTP client program, see below.&lt;/p&gt;</description></item><item><title>Geocat replaces NCL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/geocat-replaces-ncl/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1668,7 +1678,7 @@ the basic FTP client program, see below.&lt;/p&gt;</description></item><item><ti
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article introduces 
@@ -1734,7 +1744,7 @@ the basic FTP client program, see below.&lt;/p&gt;</description></item><item><ti
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus transfers with JASMIN&lt;/a&gt; first for a wider introduction to Globus on JASMIN.&lt;/p&gt;</description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus transfers with JASMIN&lt;/a&gt; first for a wider introduction to Globus on JASMIN.&lt;/p&gt;</description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1744,7 +1754,7 @@ the basic FTP client program, see below.&lt;/p&gt;</description></item><item><ti
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p&gt;</description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p&gt;This article describes how to do data transfers to and from JASMIN using 
@@ -1834,7 +1844,8 @@ authentication.&lt;/p&gt;
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1844,7 +1855,7 @@ authentication.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;GridFTP is the recommended tool for transferring large files or groups of
@@ -1856,7 +1867,8 @@ workspaces.&lt;/p&gt;
 
 
 
-&lt;h2 id="keeping-informed" class="heading"&gt;Keeping informed&lt;a href="#keeping-informed" aria-labelledby="keeping-informed"&gt;
+
+&lt;h2 id="keeping-informed" class="heading "&gt;Keeping informed&lt;a href="#keeping-informed" aria-labelledby="keeping-informed"&gt;
 
 
 
@@ -1866,11 +1878,11 @@ workspaces.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Please maintain contact throughout the life of the GWS via the following
-methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1880,7 +1892,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article explains about the process that runs in the background scanning all group workspaces (GWS) to gather basic information about usage, which are fed into a database to be made available to users via the 
@@ -1927,7 +1939,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p&gt;</description></item><item><title>How to apply for MASS access</title><link>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</guid><description>&lt;h3 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p&gt;</description></item><item><title>How to apply for MASS access</title><link>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/how-to-apply-for-mass-access/</guid><description>&lt;h3 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1937,10 +1949,10 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;To access data held in the Met Office MASS archive, you will need:&lt;/p&gt;</description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading"&gt;Job information&lt;a href="#job-information" aria-labelledby="job-information"&gt;
+&lt;p&gt;To access data held in the Met Office MASS archive, you will need:&lt;/p&gt;</description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading "&gt;Job information&lt;a href="#job-information" aria-labelledby="job-information"&gt;
 
 
 
@@ -1950,13 +1962,13 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Information on all running and pending batch jobs managed by Slurm can be
 obtained from the Slurm command &lt;code&gt;squeue&lt;/code&gt;. Note that information on completed
 jobs is only retained for a limited period. Information on jobs that ran in
-the past is via &lt;code&gt;sacct&lt;/code&gt;. A (simplified) example of the output &lt;code&gt;squeue&lt;/code&gt; is shown below.&lt;/p&gt;</description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;h2 id="what-is-a-batch-job" class="heading"&gt;What is a batch job?&lt;a href="#what-is-a-batch-job" aria-labelledby="what-is-a-batch-job"&gt;
+the past is via &lt;code&gt;sacct&lt;/code&gt;. A (simplified) example of the output &lt;code&gt;squeue&lt;/code&gt; is shown below.&lt;/p&gt;</description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;h2 id="what-is-a-batch-job" class="heading "&gt;What is a batch job?&lt;a href="#what-is-a-batch-job" aria-labelledby="what-is-a-batch-job"&gt;
 
 
 
@@ -1966,14 +1978,14 @@ the past is via &lt;code&gt;sacct&lt;/code&gt;. A (simplified) example of the ou
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A batch job is a task that, once submitted to the scheduler, can run without further interaction
 from the user. A user writes a script containing both the
 command(s) to be run and directives for the scheduler as to how the job should be run.
 The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
-this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p&gt;</description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;h2 id="what-is-an-mpi-parallel-job" class="heading"&gt;What is an MPI parallel job?&lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job"&gt;
+this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p&gt;</description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;h2 id="what-is-an-mpi-parallel-job" class="heading "&gt;What is an MPI parallel job?&lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job"&gt;
 
 
 
@@ -1983,12 +1995,12 @@ this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p&gt;</descrip
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;An MPI parallel job runs on more than one core and more than one host using
 the Message Passing Interface (MPI) library for communication between all
-cores. A simple script, such as the one given below could be saved as &lt;code&gt;my_script_name.sbatch&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading"&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
+cores. A simple script, such as the one given below could be saved as &lt;code&gt;my_script_name.sbatch&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading "&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
 
 
 
@@ -1998,7 +2010,7 @@ cores. A simple script, such as the one given below could be saved as &lt;code&g
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -2028,7 +2040,7 @@ cores. A simple script, such as the one given below could be saved as &lt;code&g
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; stands for
 Interactive Data Language. It is a licensed data manipulation toolkit made
-available on JASMIN.&lt;/p&gt;</description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>&lt;h2 id="xfc-client-install" class="heading"&gt;XFC client install&lt;a href="#xfc-client-install" aria-labelledby="xfc-client-install"&gt;
+available on JASMIN.&lt;/p&gt;</description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>&lt;h2 id="xfc-client-install" class="heading "&gt;XFC client install&lt;a href="#xfc-client-install" aria-labelledby="xfc-client-install"&gt;
 
 
 
@@ -2038,7 +2050,7 @@ available on JASMIN.&lt;/p&gt;</description></item><item><title>Install XFC clie
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;In order to initiate and manage your usage of the XFC (transfer cache)
@@ -2228,7 +2240,7 @@ at:
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;
-for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading"&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
+for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading "&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
 
 
 
@@ -2238,7 +2250,7 @@ for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></i
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;LOTUS is a cluster of over 260 nodes/hosts and over 53,000 CPU cores. A node/host is
@@ -2253,7 +2265,8 @@ manager.&lt;/p&gt;
 
 
 
-&lt;h2 id="role-of-the-gws-manager" class="heading"&gt;Role of the GWS Manager&lt;a href="#role-of-the-gws-manager" aria-labelledby="role-of-the-gws-manager"&gt;
+
+&lt;h2 id="role-of-the-gws-manager" class="heading "&gt;Role of the GWS Manager&lt;a href="#role-of-the-gws-manager" aria-labelledby="role-of-the-gws-manager"&gt;
 
 
 
@@ -2263,7 +2276,7 @@ manager.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;When a GWS is created it is important that the designated GWS Manager
@@ -2274,7 +2287,8 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p&gt;
 
 
 
-&lt;h2 id="the-name-atmospheric-dispersion-model" class="heading"&gt;The NAME atmospheric dispersion model&lt;a href="#the-name-atmospheric-dispersion-model" aria-labelledby="the-name-atmospheric-dispersion-model"&gt;
+
+&lt;h2 id="the-name-atmospheric-dispersion-model" class="heading "&gt;The NAME atmospheric dispersion model&lt;a href="#the-name-atmospheric-dispersion-model" aria-labelledby="the-name-atmospheric-dispersion-model"&gt;
 
 
 
@@ -2284,7 +2298,7 @@ atmospheric dispersion model, NAME, on JASMIN.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Met Office&amp;rsquo;s Numerical Atmospheric-dispersion Modelling Environment (NAME)
@@ -2336,7 +2350,8 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2346,7 +2361,7 @@ to drive NAME as well as the user outputs derived from NAME itself.&lt;/p&gt;</d
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;As with a previous migration completed in 2020, the change of operating system version is needed to make sure that the version in use is current and fully supported, i.e. that package updates are available and important security updates can be obtained and applied to keep the platform secure.&lt;/p&gt;</description></item><item><title>MobaXterm (Windows terminal client)</title><link>https://help.jasmin.ac.uk/docs/uncategorized/mobaxterm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/mobaxterm/</guid><description>&lt;p&gt;Windows users are recommended to try the 3rd party application MobaXterm for
@@ -2420,7 +2435,8 @@ Please note its licence conditions for ongoing use, however.&lt;/p&gt;</descript
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2430,7 +2446,7 @@ Please note its licence conditions for ongoing use, however.&lt;/p&gt;</descript
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Near-Line Data Store is JASMIN&amp;rsquo;s new service to bridge the gap between disk and tape storage.&lt;/p&gt;</description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&lt;div class="d-flex alert alert-info " 
@@ -2455,7 +2471,7 @@ effect for other users, so please take the time to check and change your code
 to make appropriate use of new storage system. If used correctly, the new
 storage offers us a high performance scalable file system, with the capability
 for object storage as tools and interfaces evolve, and we can continue to
-serve the growing demand for storage in the most cost effective manner.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading"&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
+serve the growing demand for storage in the most cost effective manner.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading "&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
 
 
 
@@ -2465,10 +2481,10 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2478,7 +2494,7 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article explains that users may request access to a PostgreSQL (known as
@@ -2492,7 +2508,8 @@ Postgres) database on JASMIN for use with scientific workflows.&lt;/p&gt;</descr
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2502,7 +2519,7 @@ Postgres) database on JASMIN for use with scientific workflows.&lt;/p&gt;</descr
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Please make sure you have read the article
@@ -2555,7 +2572,8 @@ start using it before this request can be acted upon.&lt;/p&gt;</description></i
 
 
 
-&lt;h2 id="activate-load-an-environment" class="heading"&gt;Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment"&gt;
+
+&lt;h2 id="activate-load-an-environment" class="heading "&gt;Activate (load) an environment&lt;a href="#activate-load-an-environment" aria-labelledby="activate-load-an-environment"&gt;
 
 
 
@@ -2565,7 +2583,7 @@ start using it before this request can be acted upon.&lt;/p&gt;</description></i
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;To activate an environment containing the &amp;ldquo;current&amp;rdquo; common software packages
@@ -2581,7 +2599,8 @@ particular:&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-rclone" class="heading"&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
+
+&lt;h2 id="what-is-rclone" class="heading "&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
 
 
 
@@ -2591,13 +2610,13 @@ particular:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;rclone is a command-line utility which enables access to lots of different
 storage systems including object stores and cloud-based storage. It can also
 move data between directories act as an SFTP client so could be used to access
-files on JASMIN.&lt;/p&gt;</description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading"&gt;How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed"&gt;
+files on JASMIN.&lt;/p&gt;</description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading "&gt;How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed"&gt;
 
 
 
@@ -2607,7 +2626,7 @@ files on JASMIN.&lt;/p&gt;</description></item><item><title>Requesting resources
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Resouces on JASMIN, such as storage and compute, are allocated to science
@@ -2710,7 +2729,8 @@ activate the current Jaspy environment before running Python.&lt;/p&gt;</descrip
 
 
 
-&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+
+&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -2720,7 +2740,7 @@ activate the current Jaspy environment before running Python.&lt;/p&gt;</descrip
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;In many cases it can be useful to fetch data from an external source for
@@ -2768,7 +2788,8 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Secondary copy usi
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2778,7 +2799,7 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Secondary copy usi
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Elastic Tape is a system developed for use with JASMIN Group Workspaces
@@ -2811,7 +2832,8 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Secondary copy usi
 
 
 
-&lt;h2 id="load-your-ssh-key" class="heading"&gt;Load your SSH key&lt;a href="#load-your-ssh-key" aria-labelledby="load-your-ssh-key"&gt;
+
+&lt;h2 id="load-your-ssh-key" class="heading "&gt;Load your SSH key&lt;a href="#load-your-ssh-key" aria-labelledby="load-your-ssh-key"&gt;
 
 
 
@@ -2821,7 +2843,7 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Secondary copy usi
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Use one of the methods in 
@@ -2846,7 +2868,7 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Secondary copy usi
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/present-ssh-key#2-loading-your-key-into-an-agent"&gt;Present SSH Key&lt;/a&gt; to make sure your key is
-available for use in your Terminal session.&lt;/p&gt;</description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+available for use in your Terminal session.&lt;/p&gt;</description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2856,10 +2878,10 @@ available for use in your Terminal session.&lt;/p&gt;</description></item><item>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.&lt;/p&gt;</description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading"&gt;What is HTTP data sharing?&lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing"&gt;
+&lt;p&gt;This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.&lt;/p&gt;</description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading "&gt;What is HTTP data sharing?&lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing"&gt;
 
 
 
@@ -2869,7 +2891,7 @@ available for use in your Terminal session.&lt;/p&gt;</description></item><item>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Specific parts of JASMIN Group Workspaces (GWSs) can be made available via
@@ -2879,7 +2901,8 @@ on JASMIN.&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-a-software-environment" class="heading"&gt;What is a software environment?&lt;a href="#what-is-a-software-environment" aria-labelledby="what-is-a-software-environment"&gt;
+
+&lt;h2 id="what-is-a-software-environment" class="heading "&gt;What is a software environment?&lt;a href="#what-is-a-software-environment" aria-labelledby="what-is-a-software-environment"&gt;
 
 
 
@@ -2889,7 +2912,7 @@ on JASMIN.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A software environment is typically a collection of files and directories
@@ -2915,7 +2938,7 @@ environments already available on the system. See the
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt; for examples of these.&lt;/p&gt;</description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading"&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt; for examples of these.&lt;/p&gt;</description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading "&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
 
 
 
@@ -2925,10 +2948,10 @@ environments already available on the system. See the
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;The Slurm queues in the LOTUS cluster are:&lt;/p&gt;</description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading"&gt;Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler"&gt;
+&lt;p&gt;The Slurm queues in the LOTUS cluster are:&lt;/p&gt;</description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading "&gt;Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler"&gt;
 
 
 
@@ -2938,7 +2961,7 @@ environments already available on the system. See the
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -3040,7 +3063,8 @@ Notes:&lt;/p&gt;
 
 
 
-&lt;h2 id="animation" class="heading"&gt;Animation&lt;a href="#animation" aria-labelledby="animation"&gt;
+
+&lt;h2 id="animation" class="heading "&gt;Animation&lt;a href="#animation" aria-labelledby="animation"&gt;
 
 
 
@@ -3050,10 +3074,10 @@ Notes:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;As an example, the following shortcode shows an animation that plays on hover.&lt;/p&gt;</description></item><item><title>The "jasmin-sci" software environment</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;As an example, the following shortcode shows an animation that plays on hover.&lt;/p&gt;</description></item><item><title>The "jasmin-sci" software environment</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-sci-software-environment/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -3063,7 +3087,7 @@ Notes:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes the &lt;code&gt;jasmin-sci&lt;/code&gt; software environment on JASMIN. It
@@ -3088,7 +3112,7 @@ covers the following topics:&lt;/p&gt;</description></item><item><title>The JASM
  
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/"&gt;JASMIN Notebook Service&lt;/a&gt; has recently been
 updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
-Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading"&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
+Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading "&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
 
 
 
@@ -3098,12 +3122,12 @@ Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Transfer Cache (XFC) provides a large area of temporary storage for
 users of JASMIN to store large files and/or a large volume of files on a
-short-term basis.&lt;/p&gt;</description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading"&gt;Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes"&gt;
+short-term basis.&lt;/p&gt;</description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading "&gt;Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes"&gt;
 
 
 
@@ -3113,7 +3137,7 @@ short-term basis.&lt;/p&gt;</description></item><item><title>Transfers from ARCH
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;See 
@@ -3181,7 +3205,7 @@ failing when run on the LOTUS cluster.&lt;/p&gt;</description></item><item><titl
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
- &lt;p&gt;&lt;strong&gt;Workaround for bug affecting deletion when quota is reached&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;p&gt;&lt;strong&gt;Workaround for bug affecting deletion when quota is reached&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -3191,7 +3215,7 @@ failing when run on the LOTUS cluster.&lt;/p&gt;</description></item><item><titl
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes the way that storage is usually provided to projects on JASMIN: the &lt;strong&gt;Group Workspace (GWS)&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Workflow Management with rose/cylc</title><link>https://help.jasmin.ac.uk/docs/workflow-management/rose-cylc-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/workflow-management/rose-cylc-on-jasmin/</guid><description>&lt;p&gt;This page provides is an overview of Met Office tools (Rose, Cylc and FCM)
@@ -3201,7 +3225,8 @@ cluster.&lt;/p&gt;</description></item><item><title>Working with many Linux grou
 
 
 
-&lt;h2 id="description" class="heading"&gt;Description&lt;a href="#description" aria-labelledby="description"&gt;
+
+&lt;h2 id="description" class="heading "&gt;Description&lt;a href="#description" aria-labelledby="description"&gt;
 
 
 
@@ -3211,7 +3236,7 @@ cluster.&lt;/p&gt;</description></item><item><title>Working with many Linux grou
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;On JASMIN, users are added to Linux groups for access to the group workspaces

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arbiter on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/arbiter/</link><description>Recent content in Arbiter on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/arbiter/index.xml" rel="self" type="application/rss+xml"/><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading"&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arbiter on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/arbiter/</link><description>Recent content in Arbiter on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/arbiter/index.xml" rel="self" type="application/rss+xml"/><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading "&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 
@@ -8,7 +8,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role.

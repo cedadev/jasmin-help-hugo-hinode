@@ -25,7 +25,7 @@ Portal&amp;nbsp;
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and select &amp;lsquo;Manage JASMIN services&amp;rsquo; to navigate to the JASMIN Services page. From the &amp;lsquo;Discover Services&amp;rsquo; menu on the left, select &amp;lsquo;Group Workspaces&amp;rsquo;.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and select &amp;lsquo;Manage JASMIN services&amp;rsquo; to navigate to the JASMIN Services page. From the &amp;lsquo;Discover Services&amp;rsquo; menu on the left, select &amp;lsquo;Group Workspaces&amp;rsquo;.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -35,7 +35,7 @@ Portal&amp;nbsp;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes how to configure Cross-Origin Resource Sharing (CORS) on a JASMIN Caringo S3 object store.&lt;/p&gt;</description></item><item><title>Elastic Tape command-line interface hints</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/</guid><description>&lt;div class="d-flex alert alert-info " 
@@ -108,7 +108,8 @@ workspaces.&lt;/p&gt;
 
 
 
-&lt;h2 id="keeping-informed" class="heading"&gt;Keeping informed&lt;a href="#keeping-informed" aria-labelledby="keeping-informed"&gt;
+
+&lt;h2 id="keeping-informed" class="heading "&gt;Keeping informed&lt;a href="#keeping-informed" aria-labelledby="keeping-informed"&gt;
 
 
 
@@ -118,11 +119,11 @@ workspaces.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Please maintain contact throughout the life of the GWS via the following
-methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/gws-scanner/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -132,7 +133,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article explains about the process that runs in the background scanning all group workspaces (GWS) to gather basic information about usage, which are fed into a database to be made available to users via the 
@@ -179,7 +180,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p&gt;</description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>&lt;h2 id="xfc-client-install" class="heading"&gt;XFC client install&lt;a href="#xfc-client-install" aria-labelledby="xfc-client-install"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; UI is an interactive web application for JASMIN users to view their GWSs.&lt;/p&gt;</description></item><item><title>Install XFC client</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/install-xfc-client/</guid><description>&lt;h2 id="xfc-client-install" class="heading "&gt;XFC client install&lt;a href="#xfc-client-install" aria-labelledby="xfc-client-install"&gt;
 
 
 
@@ -189,7 +190,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;In order to initiate and manage your usage of the XFC (transfer cache)
@@ -261,7 +262,8 @@ manager.&lt;/p&gt;
 
 
 
-&lt;h2 id="role-of-the-gws-manager" class="heading"&gt;Role of the GWS Manager&lt;a href="#role-of-the-gws-manager" aria-labelledby="role-of-the-gws-manager"&gt;
+
+&lt;h2 id="role-of-the-gws-manager" class="heading "&gt;Role of the GWS Manager&lt;a href="#role-of-the-gws-manager" aria-labelledby="role-of-the-gws-manager"&gt;
 
 
 
@@ -271,7 +273,7 @@ manager.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;When a GWS is created it is important that the designated GWS Manager
@@ -321,7 +323,8 @@ a duty to:&lt;/p&gt;</description></item><item><title>Near-Line Data Store (NLDS
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -331,7 +334,7 @@ a duty to:&lt;/p&gt;</description></item><item><title>Near-Line Data Store (NLDS
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Near-Line Data Store is JASMIN&amp;rsquo;s new service to bridge the gap between disk and tape storage.&lt;/p&gt;</description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&lt;div class="d-flex alert alert-info " 
@@ -396,7 +399,8 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -406,11 +410,11 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Elastic Tape is a system developed for use with JASMIN Group Workspaces
-(GWSs), enabling the Group Workspace Manager to:&lt;/p&gt;</description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+(GWSs), enabling the Group Workspace Manager to:&lt;/p&gt;</description></item><item><title>Sharing GWS data on JASMIN</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-on-jasmin/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -420,10 +424,10 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.&lt;/p&gt;</description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading"&gt;What is HTTP data sharing?&lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing"&gt;
+&lt;p&gt;This article explains how a GWS Manager can organise for some directories within a GWS to be shared with other users on JASMIN.&lt;/p&gt;</description></item><item><title>Sharing GWS data via HTTP</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/share-gws-data-via-http/</guid><description>&lt;h2 id="what-is-http-data-sharing" class="heading "&gt;What is HTTP data sharing?&lt;a href="#what-is-http-data-sharing" aria-labelledby="what-is-http-data-sharing"&gt;
 
 
 
@@ -433,11 +437,11 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Specific parts of JASMIN Group Workspaces (GWSs) can be made available via
-HTTP, so that:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading"&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
+HTTP, so that:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading "&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
 
 
 
@@ -447,7 +451,7 @@ HTTP, so that:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The Transfer Cache (XFC) provides a large area of temporary storage for
@@ -466,7 +470,7 @@ short-term basis.&lt;/p&gt;</description></item><item><title>Using the JASMIN Ob
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
- &lt;p&gt;&lt;strong&gt;Workaround for bug affecting deletion when quota is reached&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;p&gt;&lt;strong&gt;Workaround for bug affecting deletion when quota is reached&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -476,7 +480,7 @@ short-term basis.&lt;/p&gt;</description></item><item><title>Using the JASMIN Ob
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes the way that storage is usually provided to projects on JASMIN: the &lt;strong&gt;Group Workspace (GWS)&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

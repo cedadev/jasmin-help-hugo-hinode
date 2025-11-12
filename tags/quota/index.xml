@@ -19,7 +19,7 @@
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/understanding-new-jasmin-storage/"&gt;Understanding new JASMIN storage&lt;/a&gt;
-which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading"&gt;How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed"&gt;
+which explains more about the different types of storage as of Phase 4 of JASMIN&amp;rsquo;s history.&lt;/p&gt;</description></item><item><title>Requesting resources</title><link>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/</guid><description>&lt;h2 id="how-projects-and-resources-are-managed" class="heading "&gt;How projects and resources are managed&lt;a href="#how-projects-and-resources-are-managed" aria-labelledby="how-projects-and-resources-are-managed"&gt;
 
 
 
@@ -29,7 +29,7 @@ which explains more about the different types of storage as of Phase 4 of JASMIN
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Resouces on JASMIN, such as storage and compute, are allocated to science

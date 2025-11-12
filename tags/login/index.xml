@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Login on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/login/</link><description>Recent content in Login on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/login/index.xml" rel="self" type="application/rss+xml"/><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading"&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Login on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/tags/login/</link><description>Recent content in Login on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/tags/login/index.xml" rel="self" type="application/rss+xml"/><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading "&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
 
 
 
@@ -8,7 +8,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;There are four login servers available to access resources within JASMIN.
@@ -44,7 +44,7 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
 
  &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0"&gt;SSH&lt;/abbr&gt;
 
-.&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading"&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
+.&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading "&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
 
 
 
@@ -54,7 +54,7 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the 
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;A user with a &lt;code&gt;jasmin-login&lt;/code&gt; grant is allocated a &lt;code&gt;HOME&lt;/code&gt; directory of &lt;strong&gt;100GB&lt;/strong&gt; and can access the shared JASMIN servers (

@@ -3,7 +3,8 @@
 
 
 
-&lt;h2 id="what-is-bbcp" class="heading"&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
+
+&lt;h2 id="what-is-bbcp" class="heading "&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
 
 
 
@@ -13,7 +14,7 @@
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -70,7 +71,8 @@ a single binary executable which is easy to download and use.&lt;/p&gt;</descrip
 
 
 
-&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading"&gt;Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin"&gt;
+
+&lt;h2 id="introduction-to-data-transfer-on-jasmin" class="heading "&gt;Introduction to Data Transfer on JASMIN&lt;a href="#introduction-to-data-transfer-on-jasmin" aria-labelledby="introduction-to-data-transfer-on-jasmin"&gt;
 
 
 
@@ -80,7 +82,7 @@ a single binary executable which is easy to download and use.&lt;/p&gt;</descrip
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;As a JASMIN user you are very likely to be involved in data transfer. You
@@ -121,7 +123,8 @@ transfer tool. In particular:&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-ftp" class="heading"&gt;What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp"&gt;
+
+&lt;h2 id="what-is-ftp" class="heading "&gt;What is FTP?&lt;a href="#what-is-ftp" aria-labelledby="what-is-ftp"&gt;
 
 
 
@@ -131,7 +134,7 @@ transfer tool. In particular:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;
@@ -202,7 +205,7 @@ the basic FTP client program, see below.&lt;/p&gt;</description></item><item><ti
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus transfers with JASMIN&lt;/a&gt; first for a wider introduction to Globus on JASMIN.&lt;/p&gt;</description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus transfers with JASMIN&lt;/a&gt; first for a wider introduction to Globus on JASMIN.&lt;/p&gt;</description></item><item><title>Globus Connect Personal</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-connect-personal/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -212,7 +215,7 @@ the basic FTP client program, see below.&lt;/p&gt;</description></item><item><ti
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;This article describes how to create your own Globus collection using Globus Connect Personal.&lt;/p&gt;</description></item><item><title>Globus transfers with JASMIN</title><link>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/</guid><description>&lt;p&gt;This article describes how to do data transfers to and from JASMIN using 
@@ -302,7 +305,8 @@ authentication.&lt;/p&gt;
 
 
 
-&lt;h2 id="introduction" class="heading"&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -312,7 +316,7 @@ authentication.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;GridFTP is the recommended tool for transferring large files or groups of
@@ -330,7 +334,8 @@ particular:&lt;/p&gt;
 
 
 
-&lt;h2 id="what-is-rclone" class="heading"&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
+
+&lt;h2 id="what-is-rclone" class="heading "&gt;What is rclone?&lt;a href="#what-is-rclone" aria-labelledby="what-is-rclone"&gt;
 
 
 
@@ -340,7 +345,7 @@ particular:&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;rclone is a command-line utility which enables access to lots of different
@@ -356,7 +361,8 @@ use with JASMIN that work over an SSH connection:&lt;/p&gt;</description></item>
 
 
 
-&lt;h2 id="overview" class="heading"&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+
+&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 
@@ -366,7 +372,7 @@ use with JASMIN that work over an SSH connection:&lt;/p&gt;</description></item>
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;In many cases it can be useful to fetch data from an external source for
@@ -374,7 +380,7 @@ processing/analysis on JASMIN on a regular basis, for example &amp;ldquo;every M
 11:00 fetch all last week&amp;rsquo;s data&amp;rdquo;. It can also be helpful to distribute the
 task downloading of some large datasets, or simply to be able rely on data
 being pulled in from some external source to an accumulating dataset used for
-periodic analysis.&lt;/p&gt;</description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading"&gt;Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes"&gt;
+periodic analysis.&lt;/p&gt;</description></item><item><title>Transfers from ARCHER2</title><link>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/transfers-from-archer2/</guid><description>&lt;h2 id="choice-of-available-toolsroutes" class="heading "&gt;Choice of available Tools/Routes&lt;a href="#choice-of-available-toolsroutes" aria-labelledby="choice-of-available-toolsroutes"&gt;
 
 
 
@@ -384,7 +390,7 @@ periodic analysis.&lt;/p&gt;</description></item><item><title>Transfers from ARC
 
 
 &lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 640 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;See 

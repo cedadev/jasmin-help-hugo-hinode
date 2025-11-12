@@ -86,9 +86,9 @@ the current (default) version.
 
 Jaspy Python Environment |  Versioned list of software packages |  Default? |  Comments / Issues
 ---|---|---|---
-jaspy/3.10/v20230718 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/mf-22.11.1-4/jaspy3.10-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
-jaspy/3.11/v20240302 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240302/final_spec.yml) | No  | 
-jaspy/3.11/v20240508 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240508/final_spec.yml) | No  | 
+jaspy/3.10/v20230718 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/mf-22.11.1-4/jaspy3.10-mf-22.11.1-4-v20230718/final_spec.yml) | No |
+jaspy/3.11/v20240302 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240302/final_spec.yml) | No  |
+jaspy/3.11/v20240508 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240508/final_spec.yml) | No  |
 jaspy/3.11/v20240815 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240815/final-spec.yml) | Yes  | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 
@@ -114,8 +114,8 @@ Please note that this position may change at short notice as more information be
 
 Jaspy R Environment ("Jasr") |  Versioned list of software packages|  Default?
 ---|---|---
-jasr/4.2/v20230718  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.2/mf-22.11.1-4/jasr4.2-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
-jasr/4.3/v20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240320/final_spec.yml)  | No | 
+jasr/4.2/v20230718  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.2/mf-22.11.1-4/jasr4.2-mf-22.11.1-4-v20230718/final_spec.yml) | No |
+jasr/4.3/v20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240320/final_spec.yml)  | No |
 jasr/4.3/v20240815  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240815/final-spec.yml)| Yes | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 

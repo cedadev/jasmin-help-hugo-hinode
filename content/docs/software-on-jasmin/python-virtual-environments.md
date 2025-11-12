@@ -1,75 +1,187 @@
 ---
-aliases: /article/4489-python-virtual-environments
-description: Python Virtual Environments
+aliases:
+- /article/4489-python-virtual-environments
+- /article/5084-creating-a-virtual-environment-in-the-jasmin-notebooks-service
+description: Python Virtual Environments on JASMIN
 slug: python-virtual-environments
 title: Python Virtual Environments
 ---
 
-This article describes how you can use "virtual environments" to install
-Python packages that are not provided in the
-[common software environments on JASMIN]({{% ref "software-overview" %}}). You might wish to do this if you
-want to use different packages/versions from those installed on the system, or
-if you have requested for a package to be installed system-wide but wish to
-start using it before this request can be acted upon.
+This article describes how to create Python virtual environments on JASMIN to install
+custom packages not provided in the
+[common software environments]({{% ref "software-overview" %}}). Virtual environments allow you to
+use different packages/versions from those installed system-wide.
+
+Virtual environments created correctly will work across both the
+[JASMIN Notebook Service]({{% ref "jasmin-notebooks-service" %}}) and the scientific analysis servers.
 
 To decide whether you should use a _Python virtual environment_ or a _Conda
 environment_ for this purpose, see:
 [overview of software environments]({{% ref "conda-environments-and-python-virtual-environments" %}}).
 
+{{<alert alert-type="warning">}}
+Virtual environments created with the old notebook service system will no longer work.
+Please recreate them following the instructions below.
+{{</alert>}}
+
 ## What is a "virtual environment"?
 
 A "virtual environment" is a self-contained directory tree that contains a
-Python installation for a particular version of Python (such as 2.7, 3.7,
-3.8), plus a number of additional packages. It provides a very useful method
-for managing multiple environments on a single platform that can be used by
-different applications.
+Python installation for a particular version of Python, plus a number of
+additional packages. It provides a very useful method for managing multiple
+environments on a single platform that can be used by different applications.
 
-## Creating a virtual environment
+## Creating a Cross-Compatible Virtual Environment
 
-**As a pre-requisite, when using any modern Python (i.e. Python2.7 onwards),
-you should [activate a Jaspy environment]({{% ref "quickstart-software-envs" %}})
+Virtual environments created following these instructions will work in both
+the JASMIN Notebook Service and on the scientific analysis servers.
+
+### In the JASMIN Notebook Service
+
+To create a virtual environment in the Notebook Service that will also work on
+the sci machines:
+
+1. Open the [JASMIN Notebooks Service](https://notebooks.jasmin.ac.uk/)
+2. In the launcher, click the terminal button
+3. Run the following commands:
+
+{{<command user="user" host="jupyter-user">}}
+mkdir ~/nb_envs
+cd ~/nb_envs
+{{</command>}}
+
+
+Activate the base Jaspy environment:
+
+Choose which jaspy version you will base your environment upon:
+{{<command user="user" host="jupyter-user">}}
+conda env list
+{{</command>}}
+
+Activate the environment of your choice:
+{{<command user="user" host="jupyter-user">}}
+conda activate jaspy-version
+{{</command>}}
+
+Create the virtual environment with access to Jaspy packages:
+{{<command user="user" host="jupyter-user">}}
+python -m venv name-of-environment --system-site-packages
+{{</command>}}
+
+Activate your new environment:
+
+{{<command user="user" host="jupyter-user">}}
+source name-of-environment/bin/activate
+{{</command>}}
+
+Install `ipykernel` to make this environment available as a Jupyter kernel:
+
+{{<command user="user" host="jupyter-user">}}
+pip install ipykernel
+{{</command>}}
+
+Install any packages you need:
+
+{{<command user="user" host="jupyter-user">}}
+pip install your_package_name
+{{</command>}}
+
+Register the environment as a kernel:
+
+{{<command user="user" host="jupyter-user">}}
+python -m ipykernel install --user --name=name-of-environment
+{{</command>}}
+
+The kernel will now appear in your list of available kernels and will persist
+across sessions.
+
+### On Scientific Analysis Servers
+
+To create a virtual environment on the sci machines that will also work in
+the Notebook Service:
+
+**As a pre-requisite, [activate a Jaspy environment]({{% ref "quickstart-software-envs" %}})
 before following the instructions below.**
 
-Python allows you to create a directory containing a private virtual
-environment, into which you can install your packages of choice. This is done
-differently for python2 and python3, as follows:
+Load the Jaspy module:
 
 {{<command user="user" host="sci1">}}
-## Python 3 onwards:
-python -m venv /path/to/my_virtual_env
-(out)
-## Python 2.7 (deprecated)
-virtualenv /path/to/my_virtual_env
+module load jaspy
 {{</command>}}
 
-The path can be an absolute or relative path, but it should not already exist.
-Note: `/path/to/my_virtual_env` here (and also in the commands shown below)
-should be replaced by the actual path where you choose to create your virtual
-environment.
-
-## Using the system "site-packages" with your virtual environment
-
-Note that if you create a virtual environment using the above syntax, the
-packages initially installed in it will **only be those in the standard Python
-library**. This means, for example, that the `numpy` package (not in the
-standard library, but installed as part of Jaspy) will be unavailable unless
-you install it yourself. If you would prefer as a starting point to have all
-the add-on packages which have already been installed in Jaspy, then use
-instead:
+Create a directory for your virtual environments:
 
 {{<command user="user" host="sci1">}}
-python -m venv --system-site-packages /path/to/my_virtual_env
+mkdir ~/my_venvs
+cd ~/my_venvs
 {{</command>}}
 
-This will work for most packages in Jaspy. We have seen situations where one
-or two packages from Jaspy do not work in private virtual environments, and if
-you are affected by this then please see the "package-specific fixes" section
-below.
+Create the virtual environment with access to Jaspy packages:
 
-## Activating a virtual environment
+{{<command user="user" host="sci1">}}
+python -m venv name-of-environment --system-site-packages
+{{</command>}}
 
-Before the virtual environment can be used, it needs to be " **activated** ".
-This is done by running the `activate` script using the `source` command:
+The `--system-site-packages` flag gives you access to all packages already
+installed in Jaspy (like numpy, pandas, etc.). Without this flag, you would
+only have the standard Python library available.
+
+Activate your new environment:
+
+{{<command user="user" host="sci1">}}
+source name-of-environment/bin/activate
+{{</command>}}
+
+Install any packages you need:
+
+{{<command user="user" host="sci1">}}
+pip install your_package_name
+{{</command>}}
+
+This environment will also work in the Notebook Service once you register it
+as a kernel (see notebook instructions above).
+
+## Cross-Compatibility Notes
+
+Virtual environments created on either the notebook service or sci machines will
+work in both locations, provided:
+
+1. You activated a Jaspy environment before creating the venv (`conda activate jaspy-version` in notebooks, `module load jaspy` on sci machines)
+2. The environment is stored in a location accessible from both (e.g., your home directory or group workspace)
+
+This allows you to develop in notebooks and run batch jobs on LOTUS using the
+same environment.
+
+## Using Your Virtual Environment as a Notebook Kernel
+
+To use your virtual environment in Jupyter notebooks:
+
+1. The environment must have `ipykernel` installed (see notebook creation steps above)
+2. Register it as a kernel with: `python -m ipykernel install --user --name=name-of-environment`
+3. The kernel will appear in your kernel list in JupyterLab
+
+To select the kernel:
+- When creating a new notebook, choose it from the kernel picker
+- In an existing notebook, use the kernel selector in the top-right corner
+
+To list your installed kernels:
+
+{{<command user="user" host="jupyter-user">}}
+jupyter kernelspec list
+{{</command>}}
+
+To remove a kernel you no longer need:
+
+{{<command user="user" host="jupyter-user">}}
+jupyter kernelspec uninstall kernel-name-here
+{{</command>}}
+
+## Working with Virtual Environments
+
+### Activating a virtual environment
+
+Before a virtual environment can be used in a terminal or script, it needs to be
+**activated**. This is done by running the `activate` script using the `source` command:
 
 {{<command user="user" host="sci1">}}
 source /path/to/my_virtual_env/bin/activate
@@ -99,6 +211,29 @@ If you wish to deactivate the currently active virtual environment in a
 particular shell, just type `deactivate`. The environment variable changes
 will be undone, and you will again be using the system default set of
 packages. This is also reflected in the shell prompt.
+
+### Managing package requirements
+
+To export a list of packages installed in your virtual environment (useful for
+sharing or recreating environments):
+
+{{<command user="user" host="sci1">}}
+pip freeze > requirements.txt
+{{</command>}}
+
+To install packages from a requirements file:
+
+{{<command user="user" host="sci1">}}
+pip install -r requirements.txt
+{{</command>}}
+
+This is recommended for reproducible environments and sharing with collaborators.
+
+{{<alert alert-type="warning">}}
+**It is not reccomended to install packages from inside python code.** While it's technically possible
+to run pip from within a notebook cell or python code, this often causes issues. Always install
+packages from a terminal with the virtual environment activated.
+{{</alert>}}
 
 ## Installing packages into a virtual environment
 
@@ -133,7 +268,7 @@ ERROR: Could not install packages due to an OSError: \
 [Errno 122] Disk quota exceeded
 ```
 
-In order to avoid encountering this, 
+In order to avoid encountering this,
 please [follow this advice]({{% ref "storage#avoid-inadvertently-writing-to-tmp" %}}) to over-ride the `TMPDIR` environment variable, setting it to the location of somewhere you know have free space. Don't forget to clean up afterwards!
 
 To upgrade an existing package, use:
@@ -230,7 +365,7 @@ in the Jaspy environment itself) require fixes in order to use them in virtual
 environments that are created on top of Jaspy. In particular:
 
 - if you use `shapely`, we suggest to reinstall this into your virtual environment using `pip install --ignore-installed shapely` after activating the environment
-- if you use `geopandas`, you will need to reinstall shapely as above, and also when running python you will need to set an environment variable to enable it to find the `spatialindex` library. After loading Jaspy and activating the virtual environment, you could use either one of the following: 
+- if you use `geopandas`, you will need to reinstall shapely as above, and also when running python you will need to set an environment variable to enable it to find the `spatialindex` library. After loading Jaspy and activating the virtual environment, you could use either one of the following:
   - `export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH`
   - `export LD_PRELOAD=$CONDA_PREFIX/lib/libspatialindex.so:$CONDA_PREFIX/lib/libspatialindex_c.so`
 
@@ -239,7 +374,7 @@ behaviour of other Linux commands, although unlikely, so you might prefer to
 set them only for the python session (using a command of the form `env
 variable_name=value python`) rather than using `export`.
 
-- if you use `cartopy` (also used by `iris`), you may need to create a symbolic link into your virtual environment to allow the correct loading of `libgeos_c.so` during `import cartopy` or `import iris`. To do this: 
+- if you use `cartopy` (also used by `iris`), you may need to create a symbolic link into your virtual environment to allow the correct loading of `libgeos_c.so` during `import cartopy` or `import iris`. To do this:
 
 {{<command user="user" host="sci1">}}
 ln -s $CONDA_PREFIX/lib/libgeos_c.so /path/to/my_virtual_env/lib/

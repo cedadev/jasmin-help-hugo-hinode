@@ -122,69 +122,38 @@ please use our [graphical desktop service]({{% ref "graphical-linux-desktop-acce
 
 ## Use a custom Python environment
 
-By default the JASMIN Notebooks service and Dask Gateway use the latest version of the `jaspy` software environment. However, often users would like to use their own software environments.
+By default the JASMIN Notebooks service and Dask Gateway use the latest version of the `jaspy` software environment. However, users often need custom software environments for specific packages or versions.
 
-### Understanding the problem
+### Creating a cross-compatible virtual environment
 
-When Dask Gateway creates a dask cluster for a user, it runs a setup command to activate a conda environment or python `venv`.
-To have Dask use your packages, you need to create a custom environment which you can pass to `dask-gateway` to activate.
+Virtual environments created correctly will now work across both the notebook service
+and LOTUS workers, simplifying Dask Gateway usage significantly.
 
-However, for technical reasons, it is not currently possible to use the same virtual environment in both the notebook service and on JASMIN. So you will need to make two environments, one for your notebook to use and one for Dask to use.
+Follow the [Python virtual environments guide]({{% ref "python-virtual-environments" %}})
+to create a virtual environment
 
-{{<alert alert-type="info">}}
-It is VERY important that these environments have the same packages installed in them, and that the packages are exactly the same version in both environments.
 
-If you do not keep packages and versions in-sync you can expect many confusing errors.
-{{</alert>}}
 
-If you use a self-contained conda environment this is not a problem, and you can use this as a kernel in the notebooks service and on the `sci` machines. You can skip to {{<link "#putting-it-all-together">}}Putting it all together{{</link>}} below.
+### Using your custom environment with Dask Gateway
 
-### Creating a virtual environment for Dask
+1. In your notebook, select your custom environment as the kernel
+2. Configure Dask Gateway to use the same environment for workers:
 
-- Login to one of the JASMIN `sci` machines.
-- Activate `jaspy`
-
-{{<command>}}
-module load jaspy
-{{</command>}}
-
-- Create your environment in the normal way
-
-{{<command>}}
-python -m venv name-of-environment
-{{</command>}}
-
-- Activate the environment
-
-{{<command>}}
-source name-of-environment/bin/activate
-{{</command>}}
-
-- Install dask and dask gateway and dependencies: without this step your environment will not work with dask.
-
-{{<command>}}
-pip install dask-gateway dask lz4
-{{</command>}}
-
-### Creating a virtual environment for the notebooks service
-
-- Follow the instructions [here]({{% ref "creating-a-virtual-environment-in-the-notebooks-service" %}}) to create a virtual environment.
-- Install Dask and Dask Gateway and dependencies: without this step your environment will not work with Dask.
-
-{{<command>}}
-pip install dask-gateway dask lz4
-{{</command>}}
-
-### Putting it all together
-
-- Set your notebook virtual environment as the kernel for the notebook in question as shown in the instructions linked above.
-- Set `options.worker_setup` to a command which will activate your Dask virtual environment. For example
-
-```bash
-options.worker_setup = "source /home/users/example/name-of-environment/bin/activate"
+```python
+options = gw.cluster_options()
+options.worker_setup = "source /home/users/yourname/my_dask_env/bin/activate"
+options.account = "your-slurm-account-name"
 ```
 
-- If you have an existing Dask cluster, close it and ensure all LOTUS jobs are stopped before recreating it using the new environment.
+3. Create your cluster as usual
+
+{{<alert alert-type="info">}}
+The environment will be available to both your notebook (via the kernel) and the
+LOTUS workers (via `worker_setup`), ensuring consistency.
+{{</alert>}}
+
+If you have an existing Dask cluster, close it and ensure all LOTUS jobs are
+stopped before recreating it using the new environment.
 
 ## Code Examples
 

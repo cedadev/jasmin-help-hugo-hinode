@@ -7,6 +7,13 @@ title: Quickstart for activating/deactivating software environments
 
 This article provides a minimum quick-start guide for working with software environments on JASMIN.
 
+{{<alert alert-type="info">}}
+**Note:** The `module` commands described here are for use on scientific analysis servers
+and LOTUS. They do not work in the [JASMIN Notebook Service]({{% ref "jasmin-notebooks-service" %}}),
+where Jaspy and Jasr are available by default. In notebooks, use `conda activate` to
+access different versions.
+{{</alert>}}
+
 ## Activate (load) an environment
 
 To activate an environment containing the "current" common software packages

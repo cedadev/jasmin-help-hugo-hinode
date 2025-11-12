@@ -1,5 +1,5 @@
 ---
-aliases: 
+aliases:
   - /article/5075-creating-and-using-miniconda-environments # preserve reachability of old HS article URL
   - /docs/software-on-jasmin/creating-and-using-miniconda-environments # preserve reachability of previously-named article
 description: Creating and using miniforge environments
@@ -12,8 +12,16 @@ environment (which is itself a Conda environment). This page gives
 detail on how to create and use your own personal Conda environments via the
 `miniforge` installer, as an alternative to the use of Jaspy.
 
-To decide which to use, please see this page: 
+To decide which to use, please see this page:
 {{<link "conda-environments-and-python-virtual-environments">}}conda environments and python virtual environments{{</link>}}.
+
+{{<alert alert-type="info">}}
+**Notebook Service:** The `mamba` command is available in the
+[JASMIN Notebook Service]({{% ref "jasmin-notebooks-service" %}}) without needing
+to install miniforge. You can use it directly to create conda environments that
+can be registered as Jupyter kernels. See the section below on using conda
+environments in notebooks.
+{{</alert>}}
 
 ## Obtaining miniforge
 
@@ -57,7 +65,7 @@ the section "Varying the installation location" near the end of this page for mo
 - Say **no** to the question about `conda init`, because saying yes will cause it to add
 lines to your `~/.bashrc` file causing your base environment to be activated every time
 you log in, which may interfere with the use of Jaspy. If you say no, you can still
-follow the instructions below when you wish to activate your base environment.  
+follow the instructions below when you wish to activate your base environment.
 
 (Add the `-b` option at the end of the above command to run the installer in
 batch mode, which will also skip the "conda init". Or add `-h` to see help on
@@ -114,7 +122,7 @@ and type:
 ```bash
 mamba create -n myenv
 ```
-  
+
 It will show the proposed installation location, and once you answer the
 prompt to proceed, will do the installation. If you have followed these
 instructions, this location should be
@@ -247,7 +255,7 @@ To do this, you can export a list of packages to a YAML file and use this file
 to create the new environment -- as follows:
 
 - first activate the conda environment that you wish to clone (for Jaspy, load the jaspy module)
-- export a list of contents to a YAML file (for example `environment.yml`) by typing  
+- export a list of contents to a YAML file (for example `environment.yml`) by typing
 
 ```bash
 mamba env export > environment.yml
@@ -255,13 +263,13 @@ mamba env export > environment.yml
 
 - deactivate this environment (or as the case may be, unload the jaspy module)
 - ensure that the relevant base environment is activated
-- create the new environment (for example `my_new_env`) by using:  
+- create the new environment (for example `my_new_env`) by using:
 
 ```bash
 mamba env create -n my_new_env -f environment.yml
-```  
+```
 
-Note the use of `mamba env create`, rather than `mamba create` as above.  
+Note the use of `mamba env create`, rather than `mamba create` as above.
 
 You might also edit the YAML file before using it to create the environment if
 you do not want an exact clone -- for example, adding packages, removing
@@ -269,6 +277,37 @@ packages that are not of relevance, or removing version requirements in order
 to give mamba more flexibility about what versions to install
 (for example if you do not require particular legacy versions, or if the
 versions in the original environment are no longer available).
+
+## Using Conda Environments in the JASMIN Notebook Service
+
+The JASMIN Notebook Service has `mamba` available without needing to install
+miniforge. To create and use a conda environment as a Jupyter kernel:
+
+1. Open a terminal in JupyterLab (File → New → Terminal)
+2. Create a new environment with ipykernel:
+
+```bash
+mamba create -n myenv ipykernel
+```
+
+3. Install packages you need:
+
+```bash
+mamba install -n myenv numpy pandas matplotlib
+```
+
+4. Register it as a kernel:
+
+```bash
+mamba run -n myenv python -m ipykernel install --user --name myenv
+```
+
+The kernel will then appear in your list of available kernels in JupyterLab.
+
+**Note:** Conda environments are generally larger and more complex than Python
+virtual environments. For simple package additions to Jaspy, consider using
+[Python virtual environments]({{% ref "python-virtual-environments" %}}) instead,
+which are lighter-weight and compatible across notebooks and sci machines.
 
 ## Varying the installation location
 

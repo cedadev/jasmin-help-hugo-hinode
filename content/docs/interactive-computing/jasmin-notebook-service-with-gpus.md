@@ -22,21 +22,20 @@ ORCHID (GPU) cluster. Existing JASMIN users can {{<link "https://accounts.jasmin
 
 ## Starting a Notebook Server with GPUs
 
-In order to start a Notebook Server with GPUs enabled, go to the initial start page
-and click on the "Launch Server" button:
-
-{{< image src="img/docs/jasmin-notebook-service-with-gpus/notebook-server-start-page.png" caption="Notebook server start page" wrapper="col-9 mx-auto text-center">}}
-
-Then select the "GPU" option and click "Start":
+When starting your notebook server, you will be presented with a profile picker.
+Select the **GPU mode** option to start a notebook server with GPU access:
 
 {{< image src="img/docs/jasmin-notebook-service-with-gpus/notebook-server-select-gpu.png" caption="Selecting the GPU notebook server" wrapper="col-9 mx-auto text-center">}}
 
+See the [main notebook service page]({{% ref "jasmin-notebooks-service" %}}) for details
+about the different profile options.
+
 ## Which packages are available by default?
 
-Check the top-right corner of a Notebook session to see which _kernel_ that is being used.
+Check the top-right corner of a Notebook session to see which _kernel_ is being used.
 If you don't need any specialist Machine Learning (ML) libraries, you would typically
-choose `Python 3 + Jaspy` as this has many of the common open-source packages used within
-environmental science:
+choose the latest Jaspy (Python) kernel, which has many of the common open-source
+packages used within environmental science:
 
 {{< image src="img/docs/jasmin-notebook-service-with-gpus/notebook-kernel.png" caption="Notebook kernel"  wrapper="col-6 mx-auto text-center">}}
 
@@ -116,68 +115,64 @@ The current allocation of GPUs to the JASMIN Notebook Service is as follows:
 
 ## Software environments and Machine Learning packages
 
-In the current release of the Notebook Service, users are required to install their own ML packages for use with GPUs. We recommend this approach:
-1. Create a virtual environment ("_venv_"), for example `ml-venv`. [Use our guide]({{% ref "creating-a-virtual-environment-in-the-notebooks-service" %}}) to help you.
-2. Install the packages you require into that _venv_. For example, if you needed `pytorch` and `torchvision`, you would run `pip install torch torchvision` (including specific versions if needed). **NOTE: Many ML packages are very big - this can take several minutes.**
+Users should create their own virtual environments to install ML packages for use with GPUs.
+We recommend this approach:
+
+1. Create a virtual environment ("_venv_"), for example `ml-venv`. Follow the [Python virtual environments guide]({{% ref "python-virtual-environments" %}}) for detailed instructions.
+2. Install the packages you require into that _venv_. For example, if you needed `pytorch` and `torchvision`, you would run `pip install torch torchvision` (including specific versions if needed). **NOTE: Many ML packages are very large and can take several minutes to install. Ensure you have sufficient space in your home directory (see warnings below).**
 3. Be sure to follow the instructions for installing `ipykernel` into your _venv_ and running the relevant command to install the kernel so that JupyterHub can locate it and list it as one of the available kernels. Use the name of your _venv_ as the name of the _kernel_.
 4. Once you have installed your kernel, it should appear as an option in the Launcher as outlined in green in the diagram below. The Launcher is accessible from the File menu.
 
 ### Specific advice on installing TensorFlow for use with GPU Notebooks
 
-The general-purpose `Python 3 + Jaspy` kernel already includes a version of TensorFlow, 
+The general-purpose `Python 3 + Jaspy` kernel already includes a version of TensorFlow,
 but it was compiled against CPU-only hardware.
 
-In order **to use TensorFlow with GPUs in a Notebook**, there are two approaches you can 
-take:
-  1. Create your own virtual environment (as mentioned above) and install TensorFlow.
-  2. Simply install TensorFlow within your Notebook using `pip`.
+**To use TensorFlow with GPUs**, we recommend creating a virtual environment
+and installing the GPU-enabled version there:
 
-Option 1 is more complicated but it allows you to manage multiple separate software 
-environments which you can switch between.
-
-For Option 2, you will be installing the package into your `$HOME` directory in a location 
-such as: `${HOME}/.local/lib/python3.11/site-packages/`. Note that the exact Python version 
-may vary. You can install TensorFlow from a Notebook by typing the following into a cell a 
-executing it:
+1. Follow the instructions above to create a virtual environment
+2. Install TensorFlow with GPU support:
 
 ```bash
-!pip install tensorflow[and-cuda] keras
+pip install tensorflow[and-cuda] keras
 ```
 
-NOTE: Make sure you previously selected the GPU option when you launched your Notebook server 
-(as instructed above).
+3. Register your environment as a kernel and select it when running your notebooks
 
-You will need to restart your Notebook kernel before the newly installed version of TensorFlow 
-can be imported. See below for instructions on importing and checking that the GPUs 
+**Alternative (not recommended):** You can install TensorFlow directly using `!pip install`
+in a notebook cell, but this installs packages into `${HOME}/.local/lib/python*/site-packages/`
+which can cause conflicts and prevent your notebook server from starting. If you choose this
+approach and encounter problems, use Safe Mode to recover (see warning above).
+
+You may need to restart your Notebook kernel before the newly installed version of TensorFlow
+can be imported. See below for instructions on importing and checking that the GPUs
 are visible to your Notebook session.
 
 ### Specific advice on installing PyTorch for use with GPU Notebooks
 
-Unlike TensorFlow, PyTorch is not installed within the `Python 3 + Jaspy` kernel so 
+Unlike TensorFlow, PyTorch is not installed within the `Python 3 + Jaspy` kernel so
 you will need to install it yourself.
 
-In order **to use PyTorch with GPUs in a Notebook**, there are two approaches you can 
-take:
-  1. Create your own virtual environment (as mentioned above) and install PyTorch.
-  2. Simply install PyTorch within your Notebook using `pip`.
+**To use PyTorch with GPUs**, we strongly recommend creating a virtual environment
+and installing PyTorch there:
 
-Option 1 is more complicated but it allows you to manage multiple separate software 
-environments which you can switch between.
-
-For Option 2, you will be installing the package into your `$HOME` directory in a location 
-such as: `${HOME}/.local/lib/python3.11/site-packages/`. Note that the exact Python version 
-may vary. You can install PyTorch from a Notebook by typing the following into a cell a 
-executing it:
+1. Follow the instructions above to create a virtual environment
+2. Install PyTorch:
 
 ```bash
-!pip install torch
+pip install torch torchvision
 ```
 
-NOTE: Make sure you previously selected the GPU option when you launched your Notebook server 
-(as instructed above).
+3. Register your environment as a kernel and select it when running your notebooks
 
-You will need to restart your Notebook kernel before the newly installed version of PyTorch 
-can be imported. See below for instructions on importing and checking that the GPUs 
+**Alternative (not recommended):** You can install PyTorch directly using `!pip install`
+in a notebook cell, but this installs packages into `${HOME}/.local/lib/python*/site-packages/`
+which can cause conflicts and prevent your notebook server from starting. If you choose this
+approach and encounter problems, use Safe Mode to recover (see warning above).
+
+You may need to restart your Notebook kernel before the newly installed version of PyTorch
+can be imported. See below for instructions on importing and checking that the GPUs
 are visible to your Notebook session.
 
 ### Handling multiple/conflicting versions of software packages
@@ -229,14 +224,26 @@ The same thing is possible with `TensorFlow`:
 
 ### Warning about large ML packages and HOME directory disk quota
 
-Please be aware that installing these packages into your `$HOME` directory will
-require multiple gigabytes of free space. If you are near your quota (100GB),
-then the installation may fail. It is important to note that an
-**installation failure may not report a violation of disk quota** even if
-that is the underlying problem.
+Please be aware that installing ML packages (especially TensorFlow and PyTorch)
+requires multiple gigabytes of free space in your `$HOME` directory. If you are
+near your quota (100GB), installation may fail or you may encounter problems
+saving notebooks.
+
+**Common symptoms of quota issues:**
+- Installation failures (may not explicitly report quota violation)
+- "403 forbidden" errors when trying to save notebooks
+- Notebook server fails to start
+
+To check your home directory usage, open a terminal in JupyterLab and run:
+
+```bash
+du -sh ~
+```
 
 See the [`HOME` directory documentation]({{% ref "storage" %}}#home-directory)
-for details on checking your current disk usage.
+for details on managing your disk usage, and the
+[troubleshooting section]({{% ref "jasmin-notebooks-service" %}}#i-get-403-forbidden-or-other-errors-when-trying-to-save-my-notebook)
+on the main notebook page for help with quota-related errors.
 
 ## Guidelines and Best Practices
 

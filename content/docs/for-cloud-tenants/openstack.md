@@ -19,3 +19,5 @@ The STFC Cloud documentation also covers the following more advanced topics:
 - and {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/267616365/Networking">}}networking{{</link>}}.
 
 The STFC Cloud documentation also has information about all the {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/267714579/Cloud+Overview">}}images which are available to projects, machine flavors, and network information{{</link>}}, beyond what is accessible through the Azimuth Portal.
+
+Note that if you are using the Openstack Horizon UI, there is an upstream bug which means that the menu cannot be accessed when the window is too small. If you encounter this issue, increase the size of the window until the side bar appears.

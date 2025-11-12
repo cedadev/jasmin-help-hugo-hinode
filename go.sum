@@ -1,6 +1,14 @@
 github.com/gethinode/hinode v1.10.0 h1:ZFm0YzOizplzETH4mpIjT1pFe9ZvUhnPDQJb8VVHTOE=
 github.com/gethinode/hinode v1.10.0/go.mod h1:UN9DB9WbfTW2f4JhPJi4p75BQZYAxaRTONzBF8C4f9Y=
+github.com/gethinode/hinode v1.13.2 h1:6lciGVu83hzFAX8X/Mj9o9A1dS0Bq7q/HftUljspiA8=
+github.com/gethinode/hinode v1.13.2/go.mod h1:zk/GmlpRDJdZmEI0JHu6PNVI/GmO1XsD9TmJXl9bMNk=
 github.com/gethinode/hinode v1.13.3 h1:bgYRKpjtjolXDcwiV0C/ml2Oo67zRh9iDaUlkaCgsqM=
 github.com/gethinode/hinode v1.13.3/go.mod h1:zk/GmlpRDJdZmEI0JHu6PNVI/GmO1XsD9TmJXl9bMNk=
+github.com/gethinode/hinode v1.19.7 h1:Nj9Zn6Akwt8Tl6dLj10NtES6te1jRvJj/S/SxYWLYGs=
+github.com/gethinode/hinode v1.19.7/go.mod h1:qm9X5FuEoIYstw6PwE9X97tM7Pm/mtajJ375wbC6ZK4=
+github.com/gethinode/hinode v1.22.0 h1:kvqLIcTEgdPtfotDhria2eD/ihhFR/Z9tBJXxSf8jv8=
+github.com/gethinode/hinode v1.22.0/go.mod h1:SBhJ3V9cFgBTUM8cw09u5+ArrPBlyYKiVRP/CEFYIrk=
 github.com/gethinode/mod-cookieyes/v2 v2.2.5 h1:xzTQ42qYViZ/LJJUHAEeDV9aayXVEX4MtnpS+m5Zekc=
 github.com/gethinode/mod-cookieyes/v2 v2.2.5/go.mod h1:tULb7D7CoTycGUyL7ryqHJKaX11XuL2SN+XwP7/DI0Y=
+github.com/nextapps-de/flexsearch v0.0.0-20250907103239-defb38b083f0 h1:55phPhe6fDjfjG0jX4+br3nLORKgjgx8abZUdI0YJRA=
+github.com/nextapps-de/flexsearch v0.0.0-20250907103239-defb38b083f0/go.mod h1:5GdMfPAXzbA2gXBqTjC6l27kioSYzHlqDMh0+wyx7sU=

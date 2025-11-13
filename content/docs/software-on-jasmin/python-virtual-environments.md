@@ -230,7 +230,7 @@ pip install -r requirements.txt
 This is recommended for reproducible environments and sharing with collaborators.
 
 {{<alert alert-type="warning">}}
-**It is not reccomended to install packages from inside python code.** While it's technically possible
+**It is not recommended to install packages from inside python code.** While it's technically possible
 to run pip from within a notebook cell or python code, this often causes issues. Always install
 packages from a terminal with the virtual environment activated.
 {{</alert>}}

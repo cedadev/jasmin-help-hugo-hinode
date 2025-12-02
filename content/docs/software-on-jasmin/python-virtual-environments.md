@@ -2,6 +2,7 @@
 aliases:
 - /article/4489-python-virtual-environments
 - /article/5084-creating-a-virtual-environment-in-the-jasmin-notebooks-service
+- /docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service
 description: Python Virtual Environments on JASMIN
 slug: python-virtual-environments
 title: Python Virtual Environments
@@ -19,7 +20,7 @@ To decide whether you should use a _Python virtual environment_ or a _Conda
 environment_ for this purpose, see:
 [overview of software environments]({{% ref "conda-environments-and-python-virtual-environments" %}}).
 
-{{<alert alert-type="warning">}}
+{{<alert color="warning">}}
 Virtual environments created with the old notebook service system will no longer work.
 Please recreate them following the instructions below.
 {{</alert>}}
@@ -229,7 +230,7 @@ pip install -r requirements.txt
 
 This is recommended for reproducible environments and sharing with collaborators.
 
-{{<alert alert-type="warning">}}
+{{<alert color="warning">}}
 **It is not recommended to install packages from inside python code.** While it's technically possible
 to run pip from within a notebook cell or python code, this often causes issues. Always install
 packages from a terminal with the virtual environment activated.

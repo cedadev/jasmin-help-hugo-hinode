@@ -552,10 +552,6 @@ DESTINATION_COLLECTION='a2f53b7f-1b4e-4dce-9b7c-349ae760fee0' ##JASMIN Default C
 DESTINATION_PATH='/home/users/<username>/sync-demo/' ##replace <username> with your JASMIN username
 {{</command>}}
 
-{{<alert alert-type="info">}}
-For **STFC users only** where the other collection in the transfer is within the STFC network, an additional collection is provided ["JASMIN STFC Internal Collection"](https://app.globus.org/file-manager/collections/591d44ac-adbb-43db-9931-977708d07450/overview) and has ID `9efc947f-5212-4b5f-8c9d-47b93ae676b7`.
-{{</alert>}}
-
 2\. If you haven't already, activate the Python virtual environment where you
 have the CLI installed, and login:
 

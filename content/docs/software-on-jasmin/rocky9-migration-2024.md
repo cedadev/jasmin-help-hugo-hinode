@@ -209,7 +209,7 @@ As introduced earlier this year, the following Globus collections are available 
 name | uuid | status | notes
 --- | --- | --- | ---
 JASMIN Default Collection | `a2f53b7f-1b4e-4dce-9b7c-349ae760fee0` | {{< icon fas circle-check text-success >}} Ready to use | Best performance, currently has 2 physical Data Transfer Nodes (DTNs).
-JASMIN STFC Internal Collection | `9efc947f-5212-4b5f-8c9d-47b93ae676b7` | {{< icon fas circle-check text-success >}} Ready to use | For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection.
+JASMIN STFC Internal Collection | `9efc947f-5212-4b5f-8c9d-47b93ae676b7` | {{< icon fas triangle-exclamation text-danger >}} Disabled Dec 2025 | For transfers involving other collections inside the STFC network. 2 DTNs, 1 physical, 1 virtual. Can be used by any user in case of issues with the above collection.
 {.table .table-striped .w-auto}
 
 Notes:

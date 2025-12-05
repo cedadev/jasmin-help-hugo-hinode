@@ -27,7 +27,7 @@ FTP can only be used as a client on JASMIN, to pull data from external FTP
 servers to local storage on JASMIN, for example a Group Workspace or your home
 directory. **There is no FTP server within JASMIN providing the ability to
 upload files to these locations.** Please use an alternative, more secure
-method instead. See other [Data Transfer Tools]({{% ref "data-transfer-tools" %}}) such as [scp/rsync/sftp]({{% ref "rsync-scp-sftp" %}}), [bbcp]({{% ref "bbcp" %}}) or GridFTP ([over SSH]({{% ref "gridftp-ssh-auth" %}}) or using [Globus]({{% ref "globus-transfers-with-jasmin"%}}))
+method instead. See other [Data Transfer Tools]({{% ref "data-transfer-tools" %}}) such as [scp/rsync/sftp]({{% ref "rsync-scp-sftp" %}}) or using [Globus]({{% ref "globus-transfers-with-jasmin"%}}))
 
 On the [transfer servers]({{% ref "transfer-servers" %}}), you can use one of
 the installed FTP clients to download data from elsewhere. These are:

@@ -125,8 +125,6 @@ Note the transfer rate achieved in Megabytes/second (MB/sec), although for
 various reasons this is not to be relied upon as an accurate expectation of
 speed for real transfers. However, **you are unlikely to achieve even half of
 this data rate via`scp`, `rsync` or `sftp` over the same route**.
-[Bbcp]({{% ref "bbcp" %}}) may achieve similar rates, however, and
-this is considered by some as easier to use.
 
 4\. Recursively download the contents of a directory on a remote location to a
 local destination.

@@ -2,8 +2,14 @@
 aliases: /article/3824-data-transfer-tools-bbcp
 description: 'Data transfer tool bbcp'
 slug: bbcp
-title: bbcp
+title: bbcp (deprecated)
 ---
+
+{{<alert alert-type="danger">}}
+This tool is no longer maintained and its use is no longer recommended.
+Please see [Globus Transfers with JASMIN](globus-transfers-with-jasmin)
+as our recommended method for transferring data into/out of JASMIN.
+{{</alert>}}
 
 This article provides information about the bbcp data transfer tool.
 

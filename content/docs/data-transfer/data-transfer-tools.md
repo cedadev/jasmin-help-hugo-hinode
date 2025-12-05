@@ -19,7 +19,6 @@ Tool | Info
 {{<link "rsync-scp-sftp">}}scp{{</link>}} |  A basic transfer tool that works over the SSH protocol. Similar to "cp" but copies between remote servers.  
 {{<link "rsync-scp-sftp">}}rsync (over SSH){{</link>}} |  Like scp but more sophisticated. Allows synchronisation between remote directory trees.  
 {{<link "rsync-scp-sftp">}}sftp{{</link>}} |  SSH FTP - works over SSH.  
-{{<link "bbcp">}}bbcp{{</link>}} |  A command-line tool that allows the user to specify parallel transfer over multiple streams, using SSH authentication.
 {{<link "gridftp-ssh-auth">}}GridFTP (over SSH){{</link>}} |  An old but comprehensive data transfer tool. Highly configurable and able to transfer over multiple parallel streams. Used over SSH in this case. Superseded by {{<link "globus-transfers-with-jasmin">}}Globus{{</link>}}
 {{<link "ftp-and-lftp">}}FTP{{</link>}} |  File Transfer Protocol. An aged transfer protocol suitable for small file transfers but limited.
 {{<link "ftp-and-lftp">}}LFTP{{</link>}} |  Parallel-capable FTP client.

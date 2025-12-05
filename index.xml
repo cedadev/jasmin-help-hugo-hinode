@@ -1095,26 +1095,9 @@ Portal&amp;nbsp;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; and select &amp;lsquo;Manage JASMIN services&amp;rsquo; to navigate to the JASMIN Services page. From the &amp;lsquo;Discover Services&amp;rsquo; menu on the left, select &amp;lsquo;Group Workspaces&amp;rsquo;.&lt;/p&gt;</description></item><item><title>Approving requests for access roles</title><link>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/approving-requests-for-access/</guid><description>&lt;p&gt;Managers of JASMIN resources will also be set up to approve applications from
 members of the JASMIN user community wishing to use particular resources.
 The following video tutorial explains the approval process using the JASMIN
-Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review</title><link>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</guid><description>&lt;p&gt;The article which you are trying to access has been removed, pending reorganisation of the JASMIN documentation and training materials.&lt;/p&gt;</description></item><item><title>bbcp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</guid><description>&lt;p&gt;This article provides information about the bbcp data transfer tool.&lt;/p&gt;
-
-
-
-
-
-&lt;h2 id="what-is-bbcp" class="heading "&gt;What is bbcp?&lt;a href="#what-is-bbcp" aria-labelledby="what-is-bbcp"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;
+Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review</title><link>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/article-under-review/</guid><description>&lt;p&gt;The article which you are trying to access has been removed, pending reorganisation of the JASMIN documentation and training materials.&lt;/p&gt;</description></item><item><title>bbcp (deprecated)</title><link>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/bbcp/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
 
 
 
@@ -1123,25 +1106,11 @@ Accounts Portal.&lt;/p&gt;</description></item><item><title>Article under review
 
 
 
-
-
-
- 
-
-
- &lt;a href="http://www.slac.stanford.edu/~abh/bbcp/" target="_blank" rel="noopener noreferrer nofollow"&gt;bbcp&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is a simple command-line tool
-which can use your SSH connection to transfer data in and out of JASMIN
-efficiently. It works in a similar way to 
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ This tool is no longer maintained and its use is no longer recommended.
+Please see 
  
 
 
@@ -1160,10 +1129,11 @@ efficiently. It works in a similar way to
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/gridftp-ssh-auth/"&gt;GridFTP over SSH&lt;/a&gt; in that it connects to the transfer
-server using your usual SSH credentials but then can set up parallel data
-streams for transferring data. One advantage of &lt;code&gt;bbcp&lt;/code&gt; that it is provided as
-a single binary executable which is easy to download and use.&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/globus-transfers-with-jasmin/"&gt;Globus Transfers with JASMIN&lt;/a&gt;
+as our recommended method for transferring data into/out of JASMIN.
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;p&gt;This article provides information about the bbcp data transfer tool.&lt;/p&gt;</description></item><item><title>CEDA Archive</title><link>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/long-term-archive-storage/ceda-archive/</guid><description>&lt;h2 id="overview" class="heading "&gt;Overview&lt;a href="#overview" aria-labelledby="overview"&gt;
 
 
 

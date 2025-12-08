@@ -96,7 +96,7 @@ This is the standard notebook environment with access to the latest Jaspy (Pytho
 and Jasr (R) kernels. Use this mode for regular notebook work.
 
 **Safe Mode**
-This mode removes user and will not load python packages from your home directory
+This mode removes user and will not load Python packages from your home directory
 configuration, which can be useful if you have accidentally installed a broken
 version of Jupyter or other packages in your home directory that prevent your
 notebook server from starting correctly.

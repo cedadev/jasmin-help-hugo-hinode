@@ -130,7 +130,7 @@ Virtual environments created correctly will now work across both the notebook se
 and LOTUS workers, simplifying Dask Gateway usage significantly.
 
 Follow the [Python virtual environments guide]({{% ref "python-virtual-environments" %}})
-to create a virtual environment
+to create a virtual environment.
 
 
 

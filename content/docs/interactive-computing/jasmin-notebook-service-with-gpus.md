@@ -234,10 +234,10 @@ saving notebooks.
 - "403 forbidden" errors when trying to save notebooks
 - Notebook server fails to start
 
-To check your home directory usage, open a terminal in JupyterLab and run:
+To check your home directory usage, run the following **from a login machine or a sci server**. `pdu` is not available in the terminal in the notebooks service.
 
 ```bash
-du -sh ~
+pdu -sh ~
 ```
 
 See the [`HOME` directory documentation]({{% ref "storage" %}}#home-directory)

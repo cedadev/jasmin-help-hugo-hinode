@@ -63,20 +63,30 @@ note the extra configuration below which can be added to specify the location of
 
 2. Next, consider which remote host(s) on JASMIN you want to connect to:
 
-- `login` servers are available from any location, but don't have any software or storage mounted other than your home directory
+{{<alert alert-type="danger">}}
+Please **DO NOT** connect to a login server (either the single service or any individual login node) as the main host for your VSCode session. The instructions below show you how to set up
+your connection using the login service as a `ProxyJump`, but only as means of **reaching** the sci server where your session will run.
+
+If you start a VSCode session on a login node, it will be automatically killed.
+{{</alert>}}
+
 - `sci` servers are probably where you want to work, but aren't directly accessible from outside of the STFC network.
 - `xfer` servers might be a good choice if it's just editing you're likely to be doing, since they're directly accessible from anywhere
 and have all filesystems mounted (except scratch). But they're not for doing processing.
 
 So the ideal setup might be 2 profiles as follows:
 
-1. `sci` server, accessed via a login server
-1. `xfer` server, accessed directly
+1. `sci` server, accessed using `ProxyJump` via the login service
+1. `xfer` server, accessed directly (no `ProxyJump` required)
 
 If we use the tool provided by VSCode to create these, we can customise them further.
 
 The following video demonstrates these steps, and the initial setup of 2 connection profiles, on Windows. But the interface
 is almost identical on Mac and Linux.
+
+{{<alert alert-type="info">}}
+Note (10 Dec 2025): Until the video below is updated to reflect the introduction of the single login service, please replace references to any individual login server with the new service name `login.jasmin.ac.uk`.
+{{</alert>}}
 
 {{< video media-id="PAwSWtHwhSQ">}}
 
@@ -90,10 +100,11 @@ Notes:
 
 - Install the extensions
 - Create a connection profile
-  - start by entering the one-liner command you would use to connect to a sci server via a login server, i.e.
+  - start by entering the one-liner command you would use to connect to a sci server via the login service, i.e.
     ```bash
-    ssh -A username@sci-vm-01.jasmin.ac.uk -J username@login-01.jasmin.ac.uk
+    ssh -A username@sci-vm-01.jasmin.ac.uk -J username@login.jasmin.ac.uk
     ```
+    This is now a single login service name, rather than the name of a particular login server.
   - this creates an entry in `~/.ssh/config` (it's recommended to choose that location)
 - This entry can be customised, by editing that file
   - note that the `Host` is a "friendly name" which you can define, whereas `HostName` is the actual full name of the host including domain, e.g. `sci-vm-01.jasmin.ac.uk`
@@ -107,15 +118,19 @@ Notes:
 
 ### Specifying the key location
 
+{{<alert alert-type="info">}}
+**NEW:** Specify the new single login service name `login.jasmin.ac.uk` as shown below, rather than an individual server.
+{{</alert>}}
+
 Alternative method if you can't get the "agent" method to work (but means that you may be prompted for the key passphrase each time you connect):
 
 - edit `~/.ssh/config` and add the line with `IdentityFile` as shown:
 
 ```config
-Host sci-vm-01-via-login-01
+Host sci-vm-01-via-login
   Hostname sci-vm-01.jasmin.ac.uk
   User username
-  ProxyJump username@login-01.jasmin.ac.uk
+  ProxyJump username@login.jasmin.ac.uk
   ForwardAgent yes
   IdentityFile ~/.ssh/id_ecdsa_jasmin
 ```
@@ -172,7 +187,7 @@ kill <PID>
 ```
 rm -rf ~/.vscode-server
 ```
-- Retry connecting to the remote host
+- Retry connecting to the remote host (sometimes it takes more than one attempt)
 - If that doesn't work, try rebooting your own machine, then repeating the above steps.
 
 ### Failed to parse remote port

@@ -49,7 +49,7 @@ ssh -A <user_id>@<login_server>
 For example, user `jpax` might login to a JASMIN login server with:
 
 {{<command user="user" host="localhost">}}
-ssh -A jpax@login-01.jasmin.ac.uk
+ssh -A jpax@login.jasmin.ac.uk
 {{</command>}}
 
 The `-A` **argument is important** because it enables "agent-forwarding".
@@ -66,7 +66,7 @@ SSH connections.
 When you first login you will see a message that provides some useful
 information (see Figure 1).
 
-{{<image src="img/docs/login/motd-labelled.png" caption="The login message shown on login-01.jasmin.ac.uk.">}}
+{{<image src="img/docs/login/motd-labelled.png" caption="The login message shown on login.jasmin.ac.uk.">}}
 
 ## X-forwarding for graphical applications (within JASMIN only)
 
@@ -107,7 +107,7 @@ under heavy usage.
 For example, from the JASMIN login server, you might choose to login to
 `sci-vm-01`:
 
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 ssh <user>@sci-vm-01.jasmin.ac.uk
 {{</command>}}
 
@@ -135,14 +135,14 @@ have finished your work, to get back to your own (local) machine:
 exit
 (out)logout
 {{</command>}}
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 (out)Connection to sci-vm-01.jasmin.ac.uk closed.
 exit
 (out)logout
 {{</command>}}
 {{<command user="user" host="localhost">}}
 #
-(out)Connection to login-01.jasmin.ac.uk closed.
+(out)Connection to login.jasmin.ac.uk closed.
 {{</command>}}
 
 You are then back on your own machine.

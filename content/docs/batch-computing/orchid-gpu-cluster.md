@@ -102,7 +102,7 @@ testing code prior to running as a batch job on ORCHID:
 
 Make sure that your initial SSH connection to the login server used the `-A` (agent forwarding) option, then:
 
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 ssh gpuhost001.jc.rl.ac.uk
 {{</command>}}
 

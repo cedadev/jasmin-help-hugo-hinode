@@ -20,7 +20,7 @@ resolve login problems. It provides information for the following issues:
 
 ## Unable to login to login server
 
-If you are unable to login to a login server e.g. `login-01.jasmin.ac.uk` then
+If you are unable to login to the login service on `login.jasmin.ac.uk` then
 look carefully at any error messages displayed as this can help diagnose what
 is wrong:
 
@@ -135,13 +135,13 @@ Here, there are 3 main possibilities:
 This allows your SSH key to be used for logging in from the login server to
 other machines. To check, run the following command on the login server:
 
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 echo "$SSH_AUTH_SOCK"
 {{</command>}}
 
 This should display something that looks similar to (but not identical to)
 
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 (out)/tmp/ssh-RNjiHr2844/agent.2844
 {{</command>}}
 

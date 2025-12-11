@@ -35,14 +35,14 @@ keep your SSH client up to date in order to be able to connect securely to JASMI
 In your terminal window:
 
 {{<command user="localuser" host="localhost">}}
-ssh -A -X <userid>@login-01.jasmin.ac.uk
+ssh -A -X <userid>@login.jasmin.ac.uk
 {{</command>}}
 
 ## Test login to the MASS client host
 
 From the login machine, you can now make the onward connection to the "MASS client" host.
 
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 ssh -X <userid>@mass-cli.jasmin.ac.uk
 {{</command>}}
 {{<command user="user" host="mass-cli">}}
@@ -50,7 +50,7 @@ echo "Hello World"
 (out)Hello World
 exit
 {{</command>}}
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 exit
 {{</command>}}
 {{<command user="localuser" host="localhost">}}
@@ -75,9 +75,9 @@ Start on your local machine, where you should have the credentials file:
 
 {{<command user="user" host="localhost">}}
 scp moose <userid>@xfer-vm-01.jasmin.ac.uk:~/moose
-ssh -A -X <userid>@login-01.jasmin.ac.uk
+ssh -A -X <userid>@login.jasmin.ac.uk
 {{</command>}}
-{{<command user="user" host="login-01">}}
+{{<command user="user" host="login-NN">}}
 ssh -X <userid>@mass-cli.jasmin.ac.uk
 {{</command>}}
 

@@ -7,41 +7,30 @@ title: Login servers
 weight: 30
 ---
 
-## Available login servers
+## Single login service
 
-There are four login servers available to access resources within JASMIN.
-Users with the `jasmin-login` access role can access the following servers via
+There is now a single login service to access resources within JASMIN.
+Users with the `jasmin-login` access role can access `login.jasmin.ac.uk` via
 {{<abbr SSH>}}.
-
-{{<alert alert-type="info" >}}
-All four login servers now have identical configuration and should be accessible from any network.
-{{</alert>}}
-
-name |
---- |
-`login-01.jasmin.ac.uk` |
-`login-02.jasmin.ac.uk` |
-`login-03.jasmin.ac.uk` |
-`login-04.jasmin.ac.uk` |
-{.table .table-striped .w-auto}
 
 ## Features of login servers
 
-Login servers have minimal resources and software installed. They provide:
+Login servers have minimal resources and no software installed. They provide:
 
 - a means to access other resources within JASMIN (inside the {{<abbr STFC >}} firewall)
 - access to your home directory (`/home/users/<username>`)
 - no analysis software
-- no access to group workspaces
+- no access to group workspaces or other file systems
 
 ### Recent changes
 
+- With the single login service, connect to `login.jasmin.ac.uk` instead of choosing a numbered login server.  Your session will be assigned to one of the available numbered login servers on a load-sharing basis.  Your command prompt will show which server you are using, but note that you cannot connect to a numbered server directly.
+- Some users may need to run `ssh-keygen -R login.jasmin.ac.uk` first to remove previous host key entries for that name from their `~/.ssh/authorized_keys`.
 - There is no longer any requirement for forward/reverse DNS lookup or any restriction by
 institutional domain.
 - You no longer need to register non-`*.ac.uk` domains with the JASMIN team.
 - This means all users can access all login servers (previously some users could only use particular ones)
-- As before, no filesystems other than the home directory are mounted.
-- Use only as a "hop" to reach other servers within JASMIN.
+- Use only as a "hop" to reach other servers within JASMIN - **do not run any processes on a login server**.
 - **Make sure your SSH client is up to date**. Check the version with `ssh -V`. If
 it's significantly older than `OpenSSH_8.7p1, OpenSSL 3.0.7`, speak to your local
 admin team as it may need to be updated before you can connect securely to JASMIN.
@@ -76,9 +65,9 @@ The connection via a login server can be done either with 2 hops, or using a log
 - 2 hops method:
 
 {{<command user="user" host="localhost">}}
-ssh -A fred@login-01.jasmin.ac.uk
+ssh -A fred@login.jasmin.ac.uk
 {{</command>}}
-{{<command user="fred" host="login-01">}}
+{{<command user="fred" host="login-NN">}}
 ssh fred@sci-vm-01.jasmin.ac.uk
 ## no -A needed for this step, if no onward connections from sci server
 {{</command>}}
@@ -89,26 +78,26 @@ ssh fred@sci-vm-01.jasmin.ac.uk
 - Jump Host method:
 
 {{<command user="user" host="localhost">}}
-ssh -A fred@sci-vm-01.jasmin.ac.uk -J fred@login-01.jasmin.ac.uk
+ssh -A fred@sci-vm-01.jasmin.ac.uk -J fred@login.jasmin.ac.uk
 {{</command>}}
 {{<command user="fred" host="sci-vm-01">}}
 ## now on sci server
 {{</command>}}
 
-Alternatively, the same effect can be achieved with a ProxyJump directive in your local `~/.ssh/config` file:
+Alternatively, the same effect can be achieved with a `ProxyJump` directive in your local `~/.ssh/config` file:
 
 ```config
-Host Sci1ViaLogin01
+Host Sci1ViaLogin
   User fred
   ForwardAgent yes
   HostName sci-vm-01.jasmin.ac.uk
-  ProxyJump fred@login-01.jasmin.ac.uk
+  ProxyJump fred@login.jasmin.ac.uk
 ```
 
-You could then simply connect to `Sci1ViaLogin01`:
+You could then simply connect to `Sci1ViaLogin`:
 
 {{<command user="user" host="localhost">}}
-ssh Sci1ViaLogin01
+ssh Sci1ViaLogin
 {{</command>}}
 {{<command user="fred" host="sci-vm-01">}}
 ## now on sci server
@@ -122,10 +111,10 @@ Host *.jasmin.ac.uk
   ForwardAgent yes
 
 Host *.jasmin.ac.uk !login*.jasmin.ac.uk !xfer*.jasmin.ac.uk !nx*.jasmin.ac.uk
-  ProxyJump login-01.jasmin.ac.uk
+  ProxyJump login.jasmin.ac.uk
 ```
 
-Then you when you connect to any JASMIN host (other than a login or transfer host), it will go via login-01:
+Then you when you connect to any JASMIN host (other than a login or transfer host), it will go via `login.jasmin.ac.uk`:
 
 {{<command user="user" host="localhost">}}
 ssh sci-vm-01.jasmin.ac.uk
@@ -148,11 +137,11 @@ An alternative is to include a line specifying
 the location of your key, so you'll then be prompted for your passphrase whenever you connect:
 
 ```config
-Host Sci1ViaLogin01
+Host Sci1ViaLogin
   User fred
   ForwardAgent yes
   HostName sci-vm-01.jasmin.ac.uk
-  ProxyJump fred@login-01.jasmin.ac.uk
+  ProxyJump fred@login.jasmin.ac.uk
   IdentityFile ~/.ssh/id_ecdsa_jasmin
 ```
 

@@ -49,21 +49,22 @@ The first is if you do not have permission to access the machine. A quick
 method to check is to verify if you are a member of the `moose` user group. It
 should be listed when you use the ‘groups’ command:
 
-```
-[login1]$ groups
-moose
-```
+{{<command user="user" host="login-NN">}}
+groups
+(out)moose
+{{</command>}}
+
 If this happens, please contact:
 [Monsoon@metoffice.gov.uk](mailto:Monsoon@metoffice.gov.uk)
 
-The second is if you forget the `-A` option for agent forwarind when you ssh to a JASMIN login
+The second is if you forget the `-A` option for agent forwarding when you ssh to a JASMIN login
 node. You can test for this condition by listing loaded identities on the
 login node, and finding you have none:
 
-```
-[login1]$ ssh-add -l
-Could not open a connection to your authentication agent.
-```
+{{<command user="user" host="login-NN">}}
+ssh-add -l
+(out)Could not open a connection to your authentication agent.
+{{</command>}}
 
 If this happens, please exit back to your local machine and ssh in again using
 the `-A` flag or tick the relevant box for "agent forwarding".
@@ -80,7 +81,7 @@ file):
 Host mass-cli 
     User your_jasmin_userid 
     HostName mass-cli.jasmin.ac.uk
-    ProxyCommand ssh -YA -t your_jasmin_userid@login1.jasmin.ac.uk -W %h:%p 2>/dev/null
+    ProxyCommand ssh -YA -t your_jasmin_userid@login.jasmin.ac.uk -W %h:%p 2>/dev/null
 ```
 
 You should then be able to login directly using:

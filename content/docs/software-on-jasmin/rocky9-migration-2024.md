@@ -58,14 +58,8 @@ but have been influenced by a number of factors including:
 
 ### Login nodes
 
-The list of new login nodes is as follows:
+Use the single login service on `login.jasmin.ac.uk`.  Your session will be assigned to one of the available login nodes.
 
-name | status
---- | ---
-`login-01.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} ready to use
-`login-02.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} ready to use
-`login-03.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} ready to use
-`login-04.jasmin.ac.uk` | {{< icon fas circle-check text-success >}} ready to use
 {.table .table-striped .w-auto}
 
 Notes:

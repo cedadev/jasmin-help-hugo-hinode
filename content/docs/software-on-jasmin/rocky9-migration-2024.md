@@ -133,7 +133,7 @@ Notes:
    the remote editing features of {{<link href="https://code.visualstudio.com/docs/remote/ssh">}}VSCode{{</link>}} or 
    {{<link "https://www.jetbrains.com/pycharm/">}}PyCharm{{</link>}}, since these can be installed and customised locally
    by the user to their taste rather than needing central installation and management on JASMIN. See [access from VSCode]({{% ref "access-from-vscode"%}}).
-- See {{<link "#jaspy">}}jaspy{{</link>}}, {{<link "#jasr">}}jasr{{</link>}} and {{<link "#jasmin-sci">}}jasmin-sci{{</link>}}
+- See {{<link "#jaspy">}}Jaspy{{</link>}}, {{<link "#jasr">}}JasR{{</link>}} and {{<link "#jasmin-sci">}}jasmin-sci{{</link>}}
 sections below for further information on software.
 - For graphical applications, use the {{<link "#nx-login-nodes">}}NoMachine NX service{{</link>}} rather than
 sending X11 graphics over the network back to your laptop/desktop, to ensure performance.
@@ -225,7 +225,7 @@ Software | CentOS7 | Rocky 9
 --- | --- | ---
 IDL versions<br>IDL licence server<br>**see Note 1** | 8.2, 8.5 (D), 8.5, 8.6<br>Flexnet | 8.9, 9.1(D)<br>Next generation
 Cylc<br>Cylc UI visualisation<br>**see Note 2**  | 7.8.14 and 8.3.3-1<br>UI functionality integrated | 8.3.3-1<br>UI via browser: discussion ongoing
-Jaspy<br>Jasr<br>jasmin-sci | 2.7, 3.7*, 3.10* (*: all variants)<br>3.6, 4.0 (all variants), 4.2<br>URL page of the packages | 3.11<br>4.3<br>rpm/Glibc compatibility tba?
+Jaspy<br>JasR<br>jasmin-sci | 2.7, 3.7*, 3.10* (*: all variants)<br>3.6, 4.0 (all variants), 4.2<br>URL page of the packages | 3.11<br>4.3<br>rpm/Glibc compatibility tba?
 Intel compilers | 12.1.5-20.0.0 (11 variants) | Intel oneAPI
 MPI library/ OpenMPI<br>versions/compiler<br>**see Note 3**  | 3.1.1/Intel,GNU, 4.0.0<br>4.1.[0-1,4-5]/Intel<br>4.1.2, 5.0.1, 5.1.2 | 4.1.5/Intel/gcc &  5.0.4 /intel/gcc<br><br>Possibility to support mpich or IntelMPI
 NetCDF C library<br>NetCDF Fortran binding lib. | netcdf/gnu/4.4..7, netcdf/intel/14.0/<br>netcdff/gnu/4.4.7/*, netcdff/intel/4.4.7<br>parallel-netcdf/gnu/201411/22<br>parallel-netcdf/intel/20141122 | A new module env for serial and parallel version GNU and Intel oneAPI build of NetCDF against either OpenMPI and/or Intel MPI

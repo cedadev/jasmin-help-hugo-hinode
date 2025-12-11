@@ -10,7 +10,7 @@ This article provides a minimum quick-start guide for working with software envi
 {{<alert alert-type="info">}}
 **Note:** The `module` commands described here are for use on scientific analysis servers
 and LOTUS. They do not work in the [JASMIN Notebook Service]({{% ref "jasmin-notebooks-service" %}}),
-where Jaspy and Jasr are available by default. In notebooks, use `conda activate` to
+where Jaspy and JasR are available by default. In notebooks, use `conda activate` to
 access different versions.
 {{</alert>}}
 

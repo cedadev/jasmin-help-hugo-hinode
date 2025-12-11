@@ -21,9 +21,9 @@ the open-source Jupyter Notebook server application.
 Jupyter has support for many languages including Python, R, Scala and Julia,
 which are implemented by plugins known as "kernels". The JASMIN Notebook
 Service provides kernels with the latest
-[Jaspy software environment]({{% ref "jaspy-envs" %}}) and Jasr (R) environment installed by default.
+[Jaspy software environment]({{% ref "jaspy-envs" %}}) and JasR (R) environment installed by default.
 The `/apps/jasmin/jaspy` directory is mounted directly into the notebook service,
-providing access to all Jaspy and Jasr versions available on the scientific analysis servers.
+providing access to all Jaspy and JasR versions available on the scientific analysis servers.
 These environments are active by default, so there is no need for the `module` commands
 described in the linked article. You can also install and use your own environments
 as explained below.
@@ -93,7 +93,7 @@ that offers three modes:
 
 **Normal Mode (Default)**
 This is the standard notebook environment with access to the latest Jaspy (Python)
-and Jasr (R) kernels. Use this mode for regular notebook work.
+and JasR (R) kernels. Use this mode for regular notebook work.
 
 **Safe Mode**
 This mode removes user and will not load Python packages from your home directory
@@ -111,13 +111,13 @@ the ORCHID access role. See the
 for more details.
 
 ## Using Different Kernels
-### Old Jaspy and Jasr Versions
+### Old Jaspy and JasR Versions
 
-While the notebook service provides the latest Jaspy and Jasr versions as default
+While the notebook service provides the latest Jaspy and JasR versions as default
 kernels, all older versions are also available. To use an older version:
 
 1. Open a terminal in JupyterLab (File → New → Terminal)
-2. Run `conda env list` to see all available Jaspy and Jasr environments
+2. Run `conda env list` to see all available Jaspy and JasR environments
 3. Activate the environment you want: `conda activate <environment-name>`
 4. Install it as a kernel: `python -m ipykernel install --user --name <kernel-name>`
 
@@ -174,7 +174,7 @@ JASMIN Notebook service. Please ensure you have been granted the `jasmin-login` 
 
 #### Which software environment is used by the Notebook Service?
 
-The JASMIN Notebook Service provides the **latest Jaspy and Jasr environments**
+The JASMIN Notebook Service provides the **latest Jaspy and JasR environments**
 as default kernels. See the [Jaspy page]({{% ref "jaspy-envs" %}}) for details
 about the packages included. Older versions can be installed as additional
 kernels as described above.

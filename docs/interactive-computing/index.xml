@@ -61,7 +61,7 @@ computing (as opposed to
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="available-login-servers" class="heading "&gt;Available login servers&lt;a href="#available-login-servers" aria-labelledby="available-login-servers"&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login (also known as gateway or bastion) servers&lt;/a&gt; provide external* users with access to services inside of JASMIN.&lt;/p&gt;</description></item><item><title>Login servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/</guid><description>&lt;h2 id="single-login-service" class="heading "&gt;Single login service&lt;a href="#single-login-service" aria-labelledby="single-login-service"&gt;
 
 
 
@@ -74,8 +74,8 @@ computing (as opposed to
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;There are four login servers available to access resources within JASMIN.
-Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access the following servers via
+&lt;p&gt;There is now a single login service to access resources within JASMIN.
+Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access &lt;code&gt;login.jasmin.ac.uk&lt;/code&gt; via
 
 
 

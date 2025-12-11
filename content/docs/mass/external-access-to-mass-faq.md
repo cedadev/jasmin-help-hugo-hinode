@@ -49,21 +49,22 @@ The first is if you do not have permission to access the machine. A quick
 method to check is to verify if you are a member of the `moose` user group. It
 should be listed when you use the ‘groups’ command:
 
-```
-[user@login-NN ~]$ groups
-moose
-```
+{{<command user="user" host="login-NN">}}
+groups
+(out)moose
+{{</command>}}
+
 If this happens, please contact:
 [Monsoon@metoffice.gov.uk](mailto:Monsoon@metoffice.gov.uk)
 
-The second is if you forget the `-A` option for agent forwarind when you ssh to a JASMIN login
+The second is if you forget the `-A` option for agent forwarding when you ssh to a JASMIN login
 node. You can test for this condition by listing loaded identities on the
 login node, and finding you have none:
 
-```
-[user@login-NN ~]$ ssh-add -l
-Could not open a connection to your authentication agent.
-```
+{{<command user="user" host="login-NN">}}
+ssh-add -l
+(out)Could not open a connection to your authentication agent.
+{{</command>}}
 
 If this happens, please exit back to your local machine and ssh in again using
 the `-A` flag or tick the relevant box for "agent forwarding".

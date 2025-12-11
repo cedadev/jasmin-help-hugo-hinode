@@ -15,22 +15,22 @@ Users with the `jasmin-login` access role can access `login.jasmin.ac.uk` via
 
 ## Features of login servers
 
-Login servers have minimal resources and software installed. They provide:
+Login servers have minimal resources and no software installed. They provide:
 
 - a means to access other resources within JASMIN (inside the {{<abbr STFC >}} firewall)
 - access to your home directory (`/home/users/<username>`)
 - no analysis software
-- no access to group workspaces
+- no access to group workspaces or other file systems
 
 ### Recent changes
 
 - With the single login service, connect to `login.jasmin.ac.uk` instead of choosing a numbered login server.  Your session will be assigned to one of the available numbered login servers on a load-sharing basis.  Your command prompt will show which server you are using, but note that you cannot connect to a numbered server directly.
+- Some users may need to run `ssh-keygen -R login.jasmin.ac.uk` first to remove previous host key entries for that name from their `~/.ssh/authorized_keys`.
 - There is no longer any requirement for forward/reverse DNS lookup or any restriction by
 institutional domain.
 - You no longer need to register non-`*.ac.uk` domains with the JASMIN team.
 - This means all users can access all login servers (previously some users could only use particular ones)
-- As before, no filesystems other than the home directory are mounted.
-- Use only as a "hop" to reach other servers within JASMIN.
+- Use only as a "hop" to reach other servers within JASMIN - **do not run any processes on a login server**.
 - **Make sure your SSH client is up to date**. Check the version with `ssh -V`. If
 it's significantly older than `OpenSSH_8.7p1, OpenSSL 3.0.7`, speak to your local
 admin team as it may need to be updated before you can connect securely to JASMIN.
@@ -84,7 +84,7 @@ ssh -A fred@sci-vm-01.jasmin.ac.uk -J fred@login.jasmin.ac.uk
 ## now on sci server
 {{</command>}}
 
-Alternatively, the same effect can be achieved with a ProxyJump directive in your local `~/.ssh/config` file:
+Alternatively, the same effect can be achieved with a `ProxyJump` directive in your local `~/.ssh/config` file:
 
 ```config
 Host Sci1ViaLogin

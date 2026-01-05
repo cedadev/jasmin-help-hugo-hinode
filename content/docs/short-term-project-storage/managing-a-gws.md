@@ -235,7 +235,7 @@ Do not set, or allow your users to set, "world-writable" permissions on files or
 
 We provide a UNIX a group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group.  This may include group-writable permissions where appropriate, for example:
 
-`-rw-rw-r--` for a file
+`-rw-rw-r--` for a file<br>
 `drwxrwxr-x` for a directory
 
 If you are unsure about setting permissions, please ask the helpdesk.

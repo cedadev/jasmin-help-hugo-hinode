@@ -230,7 +230,7 @@ store any data of a personal or sensitive nature in the GWS.
 {{< alert alert-type="danger" >}}
 Do not set, or allow your users to set, "world-writable" permissions on files or directories, for example:
 
-`-rw-rw-rw-` for a file, or **<< DON'T USE THESE!!**
+`-rw-rw-rw-` for a file, or **<< DON'T USE THESE!!**<br>
 `drwxrwxrwx` for a directory. **<< DON'T USE THESE!!**
 
 We provide a UNIX a group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group.  This may include group-writable permissions where appropriate, for example:

@@ -325,20 +325,18 @@ otherwise any group-level permissions would apply to the wrong group.
 
 ## Unsafe permissions
 
-{{<alert alert-type="danger">}}Do not set open permissions on files or
-directories. By "open" we mean where data are writable by the "other"
-group, for example:
+{{<alert alert-type="danger">}}
+Do not set "world-writable" permissions on files or directories, for example:
 
-`-rw-rw-rw-` **<< DON'T DO THIS!!**<br>
-`drwxrwxrwx` **<< OR THIS!!**
+`-rw-rw-rw-` for a file, or **<< DON'T USE THESE!!**
+`drwxrwxrwx` for a directory. **<< DON'T USE THESE!!**
 
-This would mean that any user with access to the same file system could
-modify or delete your data: this is a security risk.
+We provide a UNIX a group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group.  This may include group-writable permissions where appropriate, for example:
 
-We provide a UNIX a group corresponding to each group workspace, which all
-members of that GWS belong to: this enables sharing within the group if you set
-permissions appropriately using the advice in this guide. If you are unsure
-about setting permissions, please ask the helpdesk.
+`-rw-rw-r--` for a file
+`drwxrwxr-x` for a directory
+
+If you are unsure about setting permissions, please ask the helpdesk.
 
 **Where we (JASMIN administrators) encounter unsafe permissions on JASMIN,
 we may take action to revert permissions to a safe state.**

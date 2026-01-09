@@ -59,10 +59,13 @@ In order to avoid issues with using "module load" on
 unsupported servers, please wrap the call in an "if" clause, such as:
 
 ```bash
-if [[ $(hostname) =~ (sci[0-9]|host[0-9]|cylc) ]] ; then
+if [[ $(hostname) =~ ^(sci-vm-|cylc|host)[0-9]+\. ]] ; then
     module load jaspy
 fi
 ```
+(Note: this pattern is also valid for the physical sci nodes, because for
+example, `sci-ph-01` is an alias for the `host1000` LOTUS node, which has been
+repurposed for interactive use.)
 
 ## Discover which environments are available
 

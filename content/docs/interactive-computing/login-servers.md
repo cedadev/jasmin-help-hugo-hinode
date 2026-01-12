@@ -13,6 +13,18 @@ There is now a single login service to access resources within JASMIN.
 Users with the `jasmin-login` access role can access `login.jasmin.ac.uk` via
 {{<abbr SSH>}}.
 
+{{<alert alert-type="danger">}}
+**The separate login servers `login-0[1,2,3,4]` will be closed on 10 Feb 2026.
+Please update your own environment to use the single login service instead**.
+
+This includes host names used in connection commands, and/or your local 
+`~/.ssh/config` file, aliases, and environment variables, depending on how
+you have set your local environment.
+
+Any instance where you currently reference a single login server should now be
+updated to reference the single entity `login.jasmin.ac.uk`.
+{{</alert>}}
+
 ## Features of login servers
 
 Login servers have minimal resources and no software installed. They provide:

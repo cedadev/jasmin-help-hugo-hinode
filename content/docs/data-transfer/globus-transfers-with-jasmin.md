@@ -126,18 +126,39 @@ globus ls a2f53b7f-1b4e-4dce-9b7c-349ae760fee0:/~/
 
 If you get an error like the following, please see [Globus CLI Troubleshooting](globus-command-line-interface/#cli-troubleshooting):
 
-```txt
-The resource you are trying to access requires you to re-authenticate with specific identities.
-message: Missing required data_access consent
-Please use "globus session update" to re-authenticate with specific identities
-```
+{{<command>}}
+The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it.
+(out)
+(out)Please run:
+(out)
+(out)  globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+(out)
+(out)to login with the required scopes.
+{{</command>}}
+
+run the suggested command, and follow the steps in the browser window that will open.
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+(out)You are running 'globus session consent', which should automatically open a browser window for you to authenticate with specific identities.
+(out)If this fails or you experience difficulty, try 'globus session consent --no-local-server'
+(out)---
+(out)
+(out)You have successfully updated your CLI session.
+(out)
+{{</command>}}
+
+Once the steps in the browser window have been completed successfully, you can close the browser window and try the `globus ls` command again.
+
+This authentication will last for 30 days (in the case of the JASMIN collection), but can be refreshed ahead of time by repeating that command.
+You will usually need to do an equivalent action for the collection at the other end of the transfer, too.
 
 TIP: you can set the ID of the collection to be an environment variable like
 this, for convenience:
 
 {{<command>}}
-export JASMIN_GLOBUS=a2f53b7f-1b4e-4dce-9b7c-349ae760fee0
-globus ls $JASMIN_GLOBUS:/~/
+export jdc=a2f53b7f-1b4e-4dce-9b7c-349ae760fee0
+globus ls $jdc:/~/
 {{</command>}}
 
 6\. You will be taken through an equivalent set of steps to those needed for
@@ -164,3 +185,23 @@ A good idea is to try this on your own desktop/laptop first.
 
 Our help doc guides you through how to do this and some examples of how to use it. Versions available for
 Windows, Mac and Linux.
+
+## Troubleshooting
+
+### Transfer task reports errors while in progress
+
+This is normal, and Globus will automatically retry a transfer several times before giving up. If it's actually failed, it will report the final status as such. You can terminate a transfer task that has got stuck, if needed, either in the web interface, or by obtaining the task id and using the command `globus task 
+
+### Other problems with command-line interface (CLI) in terminal environment
+
+Most issues can be resolved by resetting your local Globus environment:
+
+```
+globus logout
+rm -rf ~/.globus
+globus login
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+# (repeat for any other collection IDs that you need to interact with)
+globus session show
+globus ls $jdc:/~/
+```

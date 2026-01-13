@@ -1,6 +1,6 @@
 ---
 aliases: /article/3801-apply-for-access-to-a-gws
-description: Apply for access to a GWS
+description: How to apply for access to a GWS
 tags:
 - group workspace
 - access

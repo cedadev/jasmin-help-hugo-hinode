@@ -18,6 +18,9 @@ conditions.
 
 The recommended option (as of mid-2024) is now **Globus**.
 
+- See here for a [quick-start guide to using Globus with JASMIN](globus-transfers-with-jasmin).
+- Further aspects specific to transfers between ARCHER2 and JASMIN are covered below.
+
 Common requirements to all of the methods are:
 
 - an account with the [jasmin-login](https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/) access role on JASMIN.
@@ -42,6 +45,8 @@ This is now the recommended method, because:
 - it is a managed transfer service, less prone to overloading and system issues
 - it is actively maintained
 - it is easy to use
+
+Please read our [quick-start guide to using Globus with JASMIN](globus-transfers-with-jasmin) first, then come back here.
 
 Because Globus can do transfers between two third-party locations, you don't necessarily
 need to invoke the transfers from a machine on JASMIN, or ARCHER2 (even though it's those 
@@ -86,7 +91,42 @@ globus ls $jdc:/~/
 The steps above establish your ability to interact with each of the specified collections using Globus. Once you've completed each one,
 you should see a directory listing.
 
-Once you've completed the steps for both source and destination collections, you are ready to try a transfer.
+In both cases, if you don't yet have consent and authentication for that particular collection, you will be provided with the suggested command to run in your terminal environment:
+
+{{<command>}}
+globus ls $a2c$:
+(out)The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it.
+(out) 
+(out)Please run:
+(out)
+(out)  globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]'
+(out) 
+(out) to login with the required scopes.
+(out)
+{{</command>}}
+
+Run the suggested command:
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]'
+(out)You are running 'globus session consent', which should automatically open a browser window for you to authenticate with specific identities.
+(out)If this fails or you experience difficulty, try 'globus session consent --no-local-server'
+(out)---
+{{</command>}}
+
+and complete the authentication process in the browser window.
+
+The equivalent command for the JASMIN Default Collection is this:
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+{{</command>}}
+
+Once you've completed these steps **for both source and destination collections**, the `globus ls` commands you tried earlier should now work, and you are now ready to try a transfer.
+
+{{<alert alert-type="info">}}
+Authentication with each collection is valid for 30 days. To avoid this expiring at an inconvenient time (e.g. if you have repeating transfers in some automated workflow but know that
+you will be away on leave etc), you can run the 2 commands above to refresh authentication with each collection in advance.
+{{</alert>}}
 
 4\. Initiate a simple transfer
 

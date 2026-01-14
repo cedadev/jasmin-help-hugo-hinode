@@ -5,12 +5,6 @@ slug: conda-environments-and-python-virtual-environments
 title: Conda environments and Python virtual environments
 ---
 
-{{<alert alert-type="danger">}}
-Important changes took place in September 2024 affecting what software can be used on JASMIN.
-Please read [this announcement](https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/) carefully.
-
-This supersedes the information below which has yet to be updated in line with this.
-{{</alert>}}
 
 ## Introduction
 
@@ -29,7 +23,7 @@ suitable for your needs.
 ## Description of Python virtual environments and Conda environments
 
 - A Python virtual environment is a relatively lightweight environment, which is used for running Python packages, typically installed using the "pip" installer from the Python Package Index {{<link "https://pypi.org/">}}pypi{{</link>}} or locally from Python source containing a `setup.py` file. This enables you to install packages in your home directory without writing to the underlying Python installation itself (for example when you do not have write permission), and you can have any number of separate virtual environments and "activate" the relevant one when needed. When you run `pip` to install a Python package, additional Python packages may be installed automatically in order to satisfy dependencies. Depending on the package being installed, if it requires compiled libraries to accompany it, it may try to compile these locally, but depending what development libraries are available, occasionally this might not succeed.
-- By contrast, a Conda environment is a much bulkier, more fully featured environment, using the `mamba` or `conda` package managers. This enables the installation of packages from conda channels, usually {{<link "https://conda-forge.org/">}}conda-forge{{</link>}}, which are not restricted to being Python packages. Where packages contain compiled libraries, these are generally available as pre-compiled binaries. As with python virtual environments, you can have any number of these environments and activate the required one. When you run the mamba or conda installer, similarly it will install whatever additional packages are required in order to satisfy dependencies. (It is also possible to use the pip installer when working with conda environments.) Various versions of the conda installer are available, but for use on JASMIN, we now ask users to use Miniforge, for licensing reasons.
+- By contrast, a Conda environment is a much bulkier, more fully featured environment, using the `mamba` or `conda` package managers (with `mamba` being the recommended choice due to better performance). This enables the installation of packages from conda channels, usually {{<link "https://conda-forge.org/">}}conda-forge{{</link>}}, which are not restricted to being Python packages. Where packages contain compiled libraries, these are generally available as pre-compiled binaries. As with Python virtual environments, you can have any number of these environments and activate the required one. When you run the mamba or conda installer, similarly it will install whatever additional packages are required in order to satisfy dependencies. (It is also possible to use the pip installer when working with conda environments.) Various versions of the conda installer are available, but for use on JASMIN, we ask users to use Miniforge for licensing reasons. Note that `mamba` is available in the JASMIN Notebook Service without needing to install Miniforge.
 
 ### Environment size
 

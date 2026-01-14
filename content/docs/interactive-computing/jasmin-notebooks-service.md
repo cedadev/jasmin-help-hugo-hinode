@@ -69,7 +69,7 @@ notebook server for you to use, and you will see a loading page:
 After a few seconds, or in some rare cases a minute or two, you will be taken
 to the JupyterLab interface:
 
-{{<image src="img/docs/jasmin-notebooks-service/file-fhTnvJz3xx.png" caption="JupyterLab interface">}}
+{{<image src="img/docs/jasmin-notebooks-service/jupyterlab-interface.png" caption="JupyterLab interface">}}
 
 The folder shown in the left-hand panel will be your home directory on JASMIN,
 exactly as if you had logged in to a scientific analysis server. Any changes
@@ -80,7 +80,7 @@ CEDA Archive, and also have read-only access to group workspaces. For example,
 this notebook reads a file belonging to the CCI project from the CEDA Archive
 and plots the data on a map:
 
-{{<image src="img/docs/jasmin-notebooks-service/file-LvHEu70CM6.png" caption="Example notebook">}}
+{{<image src="img/docs/jasmin-notebooks-service/cartopy-cci-example.png" caption="Example notebook">}}
 
 A full discussion of the power of the JupyterLab interface is beyond the scope
 of this documentation, but the

@@ -7722,7 +7722,7 @@ function initIndex() {
         description: "Near-line storage for group workspace data",
         
         
-        content: "\u0026nbsp; Update as of 14/10/2025: a new version of NLDS is available which requires an updated client, please follow these steps\u0026nbsp; to upgrade. Introduction \u0026nbsp; The Near-Line Data Store is JASMIN\u0026rsquo;s new service to bridge the gap between disk and tape storage.\nIt makes use of a large cache on Object Storage to help stage data efficiently to and from a large-capacity, high-throughput tape library at the backend. It provides significantly more functionality than previous generations of near-line storage services, so please take the time to find out more.\nNLDS aims to provide:\na more dynamic way of using tape in users\u0026rsquo; workflows more energy-efficient storage, important for both cost and environmental impact of your work all JASMIN users with a means to store data near-line (previously it was aimed more at GWS managers only) Full documentation is available here: NLDS documentation\u0026nbsp; \u0026nbsp; \u0026nbsp; Webinar \u0026nbsp; Our webinar in March 2025 gave an overview of NLDS: please watch this to find out more. The NLDS part of the presentation lasts around 33 minutes.\nBasic usage \u0026nbsp; \u0026nbsp; Please refer to the NLDS documentation\u0026nbsp; for full context and detail of these commands: a selection of simple commands are included here for illustration only. You\u0026rsquo;ll need to install the client software\u0026nbsp; to use the commands, but some examples are:\nPUT a single file into a holding:\nnlds put \u0026lt;filepath\u0026gt; (you can PUT a list of files, too).\nCheck on the status of your holdings:\nnlds stat State of transactions for user:frjohn, group:farmers user id action job label label done state last update frjohn 1 put SheepHerding SheepPen 100% COMPLETE 2023-04-18 15:21:41 frjohn 2 put test_putlist Zoo 100% COMPLETE Retrieve a file from a holding:\nFirst, find the holding that the file is stored in:\nnlds find Listing files for holdings for user:frjohn, group:farmers user h-id h-label size date storage path frjohn 1 SheepPen 49.0B 2023-04-18 O /Users/frjohn/sheep.txt frjohn 2 Zoo 96.0B 2023-04-18 O /Users/frjohn/albatross.txt frjohn 2 Zoo 50.0B 2023-04-18 L /Users/frjohn/rabbit.txt Fetch a single file:\nnlds get /Users/frjohn/sheep.txt -r ./ GETLIST transaction accepted for processing. user : frjohn group : farmers action : getlist job label : 14bc9846 transaction id : 14bc9846-9d45-440a-af6c-dfcb5cb9dcae Further information \u0026nbsp; NLDS is fully documented here\u0026nbsp; , including:\nTutorial Step-by-step guide to setup Hints and Tips"
+        content: "\u0026nbsp; As of January 2026, a new version of NLDS is available with a much simpler setup process for users. This includes an updated client, so you should now upgrade to that version using these instructions. Introduction \u0026nbsp; The Near-Line Data Store is JASMIN\u0026rsquo;s new service to bridge the gap between disk and tape storage.\nIt makes use of a large cache on Object Storage to help stage data efficiently to and from a large-capacity, high-throughput tape library at the backend. It provides significantly more functionality than previous generations of near-line storage services, so please take the time to find out more.\nNLDS aims to provide:\na more dynamic way of using tape in users\u0026rsquo; workflows more energy-efficient storage, important for both cost and environmental impact of your work all JASMIN users with a means to store data near-line (previously it was aimed more at GWS managers only) Documentation is available here:\nstep by step guide to setup on JASMIN basic usage (this document) Full NLDS tutorial\u0026nbsp; as part of NLDS client software documentation. It is recommended to start with the step-by-step guide\nBasic usage \u0026nbsp; You\u0026rsquo;ll need to follow the step by step guide to use these commands on JASMIN, but some examples are:\nPUT a single file into a holding:\nnlds put \u0026lt;filepath\u0026gt; (you can PUT a list of files, too).\nCheck on the status of your holdings:\nnlds stat State of transactions for user:frjohn, group:farmers user id action job label label done state last update frjohn 1 put SheepHerding SheepPen 100% COMPLETE 2023-04-18 15:21:41 frjohn 2 put test_putlist Zoo 100% COMPLETE Retrieve a file from a holding:\nFirst, find the holding that the file is stored in:\nnlds find Listing files for holdings for user:frjohn, group:farmers user h-id h-label size date storage path frjohn 1 SheepPen 49.0B 2023-04-18 O /Users/frjohn/sheep.txt frjohn 2 Zoo 96.0B 2023-04-18 O /Users/frjohn/albatross.txt frjohn 2 Zoo 50.0B 2023-04-18 L /Users/frjohn/rabbit.txt Fetch a single file:\nnlds get /Users/frjohn/sheep.txt -r ./ GETLIST transaction accepted for processing. user : frjohn group : farmers action : getlist job label : 14bc9846 transaction id : 14bc9846-9d45-440a-af6c-dfcb5cb9dcae Further information \u0026nbsp; NLDS is fully documented here\u0026nbsp; , including:\nTutorial Step-by-step guide to setup Hints and Tips Webinar \u0026nbsp; Our webinar in March 2025 gave an overview of NLDS: please watch this to find out more. The NLDS part of the presentation lasts around 33 minutes.\n\u0026nbsp; Jan 2026 update: An updated version of this webinar, to reflect the simplified setup process, will follow soon - watch this space."
       })
       .add(
       
@@ -7747,6 +7747,21 @@ function initIndex() {
       
       {
         id: 75,
+        href: "/docs/short-term-project-storage/nlds-step-by-step/",
+        title: "NLDS Step by step",
+        description: "Step-by-Step guide to setting up the NLDS client on JASMIN",
+        
+        
+        content: "\u0026nbsp; In January 2026, we introduced a a simpler method of setting up the NLDS client on JASMIN.\nThis guide has been updated to reflect this.\nChanges from previous method \u0026nbsp; The access and secret keys required by the object store are now automatically generated by the nlds init command. The previous workflow of generating the object store access and secret keys is no longer required. In addition, the nlds init command will now fill in all of the required values in the ~/.nlds-config file, including the user and group. This makes the setting up of the NLDS client much more user-friendly. PyPi is now used for hosting the NLDS client, which makes installation much more straightforward for the user. pip install nlds-client can now be used, rather than the long GitHub URL as previously. JASMIN users are automatically granted access to the nlds-cache-01-o object store tenancy on JASMIN. They no longer have to apply for access to this tenancy via the JASMIN accounts portal. Prerequisites \u0026nbsp; This guide assumes that the user already has:\nA JASMIN user account and the jasmin-login access role. See Getting Started. Access to at least one Group Workspace. See Apply for access to a group workspace. With those in place, the remainder of this guide will take you through the following additional steps to access NLDS as a JASMIN user:\nGetting access to the NLDS object storage. Installing the NLDS client. Running the nlds init command. Access to the object storage \u0026nbsp; Data pushed to the NLDS service is initially written to a cache on object storage. Similarly, when data is brought back from tape, it is initially written to the object store cache before being made available to you.\nNormally, to gain access to object storage ( HPOS or s3 storage) on JASMIN, you would need to apply for an additional access role via the JASMIN Accounts Portal. However, this has now been automated for the object storage used for the NLDS cache, so this is now tied to your jasmin-login access role.\nFor further information about object storage on JASMIN, see Using the JASMIN Object Store.\nInstalling the NLDS client in your JASMIN home directory \u0026nbsp; Installing the NLDS client in your home directory enables use of the nlds client in the following recommended places on JASMIN:\nsci servers transfer servers (xfer-vm-0x) Please read the documentation about each type of server.\nCreating the required virtual environment in your home directory will ensure that it is available from both types of server.\nLog into your chosen server:\nssh \u0026lt;user\u0026gt;@sci-vm-01.jasmin.ac.uk Sci servers usually need to be accessed via a login server if you are outside the STFC network. Transfer servers can be accessed directly .See also login servers\nInstall the NLDS client software:\nFull documentation here\u0026nbsp; .\nThe essential steps are reproduced below:\ncd $HOME # ensure that you are in your home directory module load jaspy # ensure that you\u0026#39;re using the current Python environment python3 -m venv ~/nlds-client source ~/nlds-client/bin/activate pip install --upgrade pip pip install nlds-client Configuring the NLDS client \u0026nbsp; First make sure your are running the nlds-client virtual-environment that you created above\n(Tip: try echo $VIRTUAL_ENV: is the returned path correct?).\nIf you are not running it then issue the command:\nsource ~/nlds-client/bin/activate Run NLDS with the init command to create your NLDS config file.\nThis file will be in your home directory with the name .nlds-config. The full path is ~/.nlds-config, also $HOME/.nlds-config.\nUse the -g|--group option to specify the default Group Workspace (GWS) when you are working with NLDS. This should be the short name e.g. myproject and NOT the corresponding unix group name with the gws_ prefix, e.g. gws_myproject.\nnlds init -g \u0026lt;default gws\u0026gt; Initialising the Near-line Data Store... • This application uses OAuth2 to authenticate with the server on your behalf. • To do this it needs your password. Your password is not stored. • It is used to obtain an access token, which is stored in the file: ~/.nlds-token, (out)and used for subsequent interactions with the server. • It is also used to obtain object storage keys. These are stored in the configuration file: ~/.nlds-config and used for interaction with the object storage (out)cache. Password: Note the output shown above, with the password prompt at the end.\nEnter your JASMIN accounts portal password. The user name is set automatically.\nYou should now see the following message:\nSuccessfully initialised, the config file at ~/.nlds-config has been updated with all of the necessary information to start using the NLDS. You can now examine the config file with the following command (use your preferred editor, nano is used here):\nnano ~/.nlds-config or\nless ~/.nlds-config if you simply want to read it: there should be no need to modify it.\nThe file should look like the example below. Fields between \u0026lt; \u0026gt; characters should have values in them. If these fields contain the characters   then please delete the ~/.nlds-config file and try nlds init -g \u0026lt;gws\u0026gt; again. If this fails again then please contact the JASMIN helpdesk.\n \u0026#34;server\u0026#34;:  \u0026#34;url\u0026#34;: \u0026#34;https://nlds.jasmin.ac.uk\u0026#34;, \u0026#34;api\u0026#34;: \u0026#34;api/1.0.0\u0026#34; , \u0026#34;user\u0026#34;:  \u0026#34;default_user\u0026#34;: \u0026#34;\u0026lt; your JASMIN username \u0026gt;\u0026#34;, \u0026#34;default_group\u0026#34;: \u0026#34;\u0026lt; your default GWS \u0026gt;\u0026#34; , \u0026#34;authentication\u0026#34;:  \u0026#34;oauth_client_id\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34;, \u0026#34;oauth_client_secret\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34;, \u0026#34;oauth_token_url\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34;, \u0026#34;oauth_scopes\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34;, \u0026#34;oauth_token_file_location\u0026#34;: \u0026#34;~/.nlds-token\u0026#34; , \u0026#34;object_storage\u0026#34;:  \u0026#34;tenancy\u0026#34;: \u0026#34;nlds-cache-01.s3.jc.rl.ac.uk\u0026#34;, \u0026#34;access_key\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34;, \u0026#34;secret_key\u0026#34;: \u0026#34;\u0026lt; redacted \u0026gt;\u0026#34; , \u0026#34;options\u0026#34;:  \u0026#34;verify_certificates\u0026#34;: true   Running the NLDS client for the first time \u0026nbsp; You should now have a fully configured and functioning NLDS client. You can now run the NLDS client for the first time. Make sure the Python virtual environment you created earlier is activated first, then run nlds with the command stat.\nYou should see something similar to this:\nsource ~/nlds-client/bin/activate nlds stat Usage: nlds stat [OPTIONS] Try \u0026#39;nlds stat --help\u0026#39; for help. Error: Failed to get status of transaction(s) with user:\u0026lt;user\u0026gt;, group:\u0026lt;gws\u0026gt; Reason: no transaction records found for user:\u0026lt; user \u0026gt; and group:\u0026lt; gws \u0026gt; Because you issued the stat command with nlds, the status of all your NLDS requests will be shown. This is empty, as this is the first time you have run NLDS, and the error message reflects this by stating no transaction records found.\nNext steps \u0026nbsp; Basic usage Full NLDS tutorial\u0026nbsp; Now that you have the NLDS client set up on JASMIN, you can go through the tutorial in the NLDS client documentation. This includes how to use the commands listed with the nlds --help command:\nnlds --help Usage: nlds [OPTIONS] COMMAND [ARGS]... Options: -v, --version Output NLDS client version and exit. --help Show this message and exit. Commands: find Find and list files. get Get a single file. getlist Get a number of files specified in a list. init Set up the NLDS client on first use. list List holdings. meta Alter metadata for a holding. put Put a single file. putlist Put a number of files specified in a list. stat List transactions."
+      })
+      .add(
+      
+      
+      
+      
+      
+      {
+        id: 76,
         href: "/docs/for-cloud-tenants/openstack/",
         title: "OpenStack",
         description: "OpenStack on the JASMIN Cloud",
@@ -7761,7 +7776,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 77,
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Details of JASMIN's GPU cluster, ORCHID",
@@ -7776,7 +7791,7 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 78,
         href: "/docs/getting-started/permissions-and-groups/",
         title: "Permissions and groups",
         description: "How permissions and groups are used to manage access to data stored on JASMIN.",
@@ -7793,7 +7808,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         href: "/docs/for-cloud-tenants/platform-in-depth-jupyterhub/",
         title: "Platforms In Depth - JupyterHu...",
         description: "In depth look at the JupyterHub platforms",
@@ -7808,7 +7823,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         href: "/docs/for-cloud-tenants/platform-in-depth-k8s/",
         title: "Platforms In Depth - Kubernetes",
         description: "In depth look at the Kubernetes platforms",
@@ -7823,7 +7838,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         href: "/docs/for-cloud-tenants/platform-in-depth-slurm/",
         title: "Platforms In Depth - Slurm",
         description: "In depth look at the Slurm platform",
@@ -7838,7 +7853,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         href: "/docs/for-cloud-tenants/platform-in-depth-workstation/",
         title: "Platforms In Depth - Workstations",
         description: "In depth look at the workstation platforms",
@@ -7853,7 +7868,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7868,7 +7883,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7883,7 +7898,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7898,7 +7913,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7913,7 +7928,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments",
@@ -7930,7 +7945,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deac...",
         description: "Quickstart for activating/deactivating software environments",
@@ -7945,7 +7960,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -7962,7 +7977,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email...",
         description: "Reconfirm JASMIN account email address",
@@ -7977,7 +7992,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -7992,7 +8007,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -8007,7 +8022,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -8022,7 +8037,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -8037,7 +8052,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -8052,7 +8067,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -8067,7 +8082,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Scientific analysis servers",
@@ -8082,7 +8097,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8099,7 +8114,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8114,7 +8129,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8129,7 +8144,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8144,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8159,7 +8174,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8174,7 +8189,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8189,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8204,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8219,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8234,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8249,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8266,7 +8281,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8281,7 +8296,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8298,7 +8313,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8313,7 +8328,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8328,7 +8343,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8343,7 +8358,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8358,7 +8373,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8373,7 +8388,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8388,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8403,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8420,7 +8435,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8435,13 +8450,13 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/short-term-project-storage/using-the-jasmin-object-store/",
         title: "Using the JASMIN Object Store",
         description: "Using the JASMIN Object Store",
         
         
-        content: "\u0026nbsp; Workaround for bug affecting deletion when quota is reached\nCurrently the JASMIN Object store is set to be \u0026ldquo;read-only and delete\u0026rdquo; when the quota for the tenancy is reached, i.e. stopping writes, but allowing reads and deletes. However, there is currently a bug which blocks deletes done with a HTTP POST request. HTTP DELETE requests are still allowed when the quota is reached.\nThis means that when the tenancy is full, you won\u0026rsquo;t be able to do deletes with a POST request, including recursive deletes. You will have to do a DELETE request to free up some space and unlock the tenancy for writes, then do a recursive delete if you need to.\nFor example:\nmc rmdoes a\nPOST... /?delete=but if you use\ns3cmd rmto delete a single object it uses\nDELETE ... This article describes how to use the JASMIN high-performance object storage.\nWhat is object storage? \u0026nbsp; An object store\u0026nbsp; is a data storage system that manages data as objects referenced by a globally unique identifier, with attached metadata. This is a fundamental change from traditional file systems that you may be used to, as there is no directory hierarchy - the objects exist in a single flat domain. These semantics allow the object store to scale out much more easily than a traditional shared file system.\nThe other fundamental change is that the data is no longer accessed by mounting a file system onto a host and referencing a file path (where authentication is \u0026ldquo;can I log in to the host\u0026rdquo;). Instead, the data is accessed over HTTP, with authentication using HTTP headers. This has many benefits, the biggest of which is that we can make the object store available outside of the JASMIN firewall, for example to the JASMIN External Cloud. Data can be read and written in the same way, using the same tools, from inside and outside JASMIN. Contrast this with Group Workspaces, where you must be logged in to a JASMIN host in order to write data using the file system, and data is only accessible externally in a readonly way using HTTP or OPeNDAP or via data transfer methods.\nObject stores are seen as the most efficient (and cheapest!) way to store and access data from the cloud, and all the major cloud providers support some variant of object store. The JASMIN object store is S3 compatible\u0026nbsp; - S3 is the object store for Amazon Web Services (AWS), and has become a de- facto standard interface for object stores. This means that all the same tools that work with AWS S3 will also work with the JASMIN object store.\nAccessing the object store \u0026nbsp; The JASMIN object store is organised into tenancies. These are shared areas of the object store, similar in concept to Group Workspaces, and are requested by users, usually Group Workspace Managers. Several users can have access to a tenancy, and so they can be used collaboratively.\nTo join an existing object store tenancy, navigate to the \u0026ldquo;Services\u0026rdquo; section in the JASMIN Accounts Portal and select the \u0026ldquo;Object store\u0026rdquo; category. Select a tenancy and submit a request to join. This request will then be considered by the manager of the tenancy and either accepted or rejected.\nFor details on how to request and manage an object store tenancy, please see the help article \u0026ldquo;JASMIN Object Store for Managers\u0026rdquo; (forthcoming).\nDefault access policies \u0026nbsp; As of Jan 2024, we have changed the default access policy for newly created tenancies to provide a more sensible and flexible set of access policies.\nThe old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (USER only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (-members, e.g. cedadev-o-members) - this can be done using the JASMIN Object Store portal (below) or the Swarm portal. Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).\nThe new policy also gives admin access for tenancy MANAGER and DEPUTY roles, who have access to all the buckets in the tenancy.\nCreating an access key and secret \u0026nbsp; Authentication with the object store uses an access key and secret that are separate to your JASMIN username and password. You can generate keys and manage bucket permissions through the JASMIN Object Store Portal.\u0026nbsp; JASMIN sbject store portal You can log in with your JASMIN username and password. You can then click on the \u0026ldquo;Object Stores\u0026rdquo; button on the right. This will present you with the list of object store tenancies that you have access to. If you don\u0026rsquo;t see an object store tenancy that you expect to, please check you have access in the JASMIN Accounts Portal\u0026nbsp; . If you have access in the Accounts Portal, but not in the Object Store Portal then please email the helpdesk.\nList of object store tenancies The URL for the object store tenancy is also presented here for convenience. You can click on the \u0026ldquo;Manage Object Store\u0026rdquo; button to manage you keys and buckets. This will ask you to confirm your JASMIN password.\nPrompt for password You will then be presented with the following page.\nexisting keys From this page you can view your existing keys, and delete them if you require. You can also use the \u0026ldquo;Create Key\u0026rdquo; tab on the left.\nCreate access key You need to name the key and enter an expiry date for it. This will then present you with a pop-up with details on your access key and secret key. This is the only time your secret key will visible, so save it immediately in a secure password manager.\nManaging bucket permissions \u0026nbsp; You can also manage the permissions on buckets using the \u0026ldquo;Buckets\u0026rdquo; tab from this page. This allows you to manage the access policies for your buckets without using the S3 API or the Swarm portal.\nBucket permissions Click on the \u0026ldquo;Manage permissions\u0026rdquo; button for a bucket to add or change access policies for that bucket.\nGranting access By default this lets you grant access to specific JASMIN Users and/or groups (these are LDAP groups and you might need to request that one is created for you if you require a subgroup for your tenancy). The advanced tab gives you the same options as available through the Swarm portal - including making buckets publicly accessible. Once done, hit the save to add the policy to the bucket. You can edit or delete permissions from that bucket through the \u0026ldquo;View Bucket Policies\u0026rdquo; tab.\nLegacy method for key creation \u0026nbsp; This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.\nYou can generate an access key and secret using the Caringo portal.\nAuthentication with the object store uses an access key and secret that are separate to your JASMIN username and password. You can generate an access key and secret using the Caringo portal. This portal is not currently available outside of JASMIN - you will need to use a graphical session on JASMIN to access a Firefox browser running on a JASMIN system.\nThe recommended way to do this is using the NX Graphical Desktop service. You can start Firefox from the \u0026ldquo;Activities\u0026rdquo; menu once you have logged in to your graphical desktop on one of the nx-login* servers (so no need to make an onward connection to a sci server).\nAn alternative option is to using X11 Forwarding on your SSH connection. You need to do this on one of the nx* servers (not the sci servers as previously) because this is where firefox is now installed:\nssh -X \u0026lt;user\u0026gt;@nx1.jasmin.ac.uk firefox(try -Y if -X does not work for you).\nOnce you have Firefox open, navigate to\nhttp://my-os-tenancy-o.s3.jc.rl.ac.uk:81/_admin/portalbut replace my-os-tenancy-o with your tenancy name.\nYou will see a login screen where you should enter your JASMIN username and password:\nIf you receive a \u0026ldquo;HTTP ERROR 500 java\u0026hellip;\u0026rdquo; error, it is likely that you haven\u0026rsquo;t added the port (81) to the address.\nUpon successfully entering the username and password of a user who belongs to the tenancy, you will see a dashboard. To create an access key and secret, click on the cog icon and select \u0026ldquo;Tokens\u0026rdquo;:\nOn the tokens page, click \u0026ldquo;Add\u0026rdquo;:\nIn the dialogue that pops up, enter a description for the token and set an expiration date. Make sure to click \u0026ldquo;S3 Secret Key\u0026rdquo; - this will expose an additional field containing the secret key. Make sure you copy this and store it somewhere safe - you will not be able to see it again! This value will be used whenever the \u0026ldquo;S3 secret key\u0026rdquo; is required.\nOnce the token is created, it will appear in the list. The \u0026ldquo;Token\u0026rdquo; should be used whenever the \u0026ldquo;S3 access key\u0026rdquo; is required:\nAccessing data in the object store \u0026nbsp; URLs for internal and external access \u0026nbsp; Although the data is exactly the same in both cases, a slightly different URL must be used depending on whether you are accessing the object store from the JASMIN managed cloud servers or from the JASMIN External Cloud.\nFrom inside JASMIN, including LOTUS and the Scientific Analysis servers, my-os-tenancy-o.s3.jc.rl.ac.uk should be used, with the `http://`` prefix.\nFrom the JASMIN External Cloud, and from locations external to JASMIN, my-os-tenancy-o.s3-ext.jc.rl.ac.uk should be used - note the https:// prefix and additional -ext.\n(Where my-os-tenancy-o needs to be replaced with your tenancy name)\nUsing s3cmd \u0026nbsp; s3cmd is a command line tool provided by Amazon to work with S3 compatible Object Storage. It is installed on JASMIN, both on the sci-machines and on LOTUS. It is a little more complicated to use than the MinIO client, but is more powerful and flexible. For full details on s3cmd, see the s3tools.org website\u0026nbsp; .\nTo configure s3cmd to use the JASMIN object store, you need to create and edit a ~/.s3cfg file. To access the my-os-tenancy-o tenancy (where \u0026ldquo;my-os- tenancy-o\u0026rdquo; needs to be replaced with your tenancy name), the following should be in the ~/.s3cfg file:\naccess_key = \u0026lt;access key generated above\u0026gt; host_base = my-os-tenancy-o.s3.jc.rl.ac.uk host_bucket = my-os-tenancy-o.s3.jc.rl.ac.uk secret_key = \u0026lt;secret key generated above\u0026gt; use_https = False signature_v2 = Falseor, from an external tenancy or locations outside of JASMIN:\naccess_key = \u0026lt;access key generated above\u0026gt; host_base = my-os-tenancy-o.s3-ext.jc.rl.ac.uk host_bucket = my-os-tenancy-o.s3-ext.jc.rl.ac.uk secret_key = \u0026lt;secret key generated above\u0026gt; use_https = True signature_v2 = FalseTo see which commands can be used with s3cmd, type:\ns3cmd -hTo list a tenancy\u0026rsquo;s buckets:\ns3cmd lsTo list the contents of a bucket:\ns3cmd ls s3://\u0026lt;bucket_name\u0026gt;Make a new bucket:\ns3cmd mb s3://\u0026lt;bucket_name\u0026gt;s3cmd uses PUT and GET nomenclature for copying files to and from the object store.\nTo copy a file to a bucket in the object store:\ns3cmd put \u0026lt;file name\u0026gt; s3://\u0026lt;bucket_name\u0026gt;To copy a file from a bucket in the object store to the file system:\ns3cmd get s3://\u0026lt;bucket_name\u0026gt;/\u0026lt;object_name\u0026gt; \u0026lt;file_name\u0026gt;For more commands and ways of using s3cmd, see the s3tools website\u0026nbsp; .\ns4cmd and s5cmd \u0026nbsp; s3cmd is a convenient way to interact with the S3 compatible storage like the JASMIN object store. s4cmd\u0026nbsp; and s5cmd\u0026nbsp; provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.\ns4cmd \u0026nbsp; s4cmd\u0026nbsp; uses Python\u0026rsquo;s boto3 library to run commands in parallel. It can be installed into a user\u0026rsquo;s Python environment.\nIf you don\u0026rsquo;t have an existing environment to install Python packages into one will need to be created.\nmodule load jaspy virtualenv venv-s4cmd source venv-s3cmd/bin/activateOnce created and activated s4cmd can be installed.\npip install s4cmdNote that the environment will always need to be activated before s4cmd can be used.\nIn order to use s4cmd with the JASMIN object store, you need to create a key and set environment variables so that s4cmd can pick up the configuration.\nexport S3_ACCESS_KEY=\u0026lt;your key\u0026gt; export S3_SECRET_KEY=\u0026lt;your secret\u0026gt;Once set s4cmd can be used. For example copying data from a local disk to a bucket.\ns4cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk put ./* s3://bucket-name/Note the requirement of the --endpoint-url argument for accessing the JASMIN object store. For external access, use the s3-ext url.\nSee the documentation for s4cmd\u0026nbsp; for other usage.\ns5cmd \u0026nbsp; s5cmd\u0026nbsp; is a parallel tool for interacting with S3 compatible object stores which offers significant speed increases over s3cmd and s4cmd\u0026nbsp; . Its speed increase comes from being written in Go, and working in parallel.\nIt is not available by default on JASMIN, but a binary can be downloaded and used. (Check the releases\u0026nbsp; page on s5cmd\u0026rsquo;s github for the latest version and alter the wget command below as required.)\nwget https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-64bit.tar.gz tar xvzf s5cmd_2.3.0_Linux-64bit.tar.gz chmod +x s5cmdIn order to use s5cmd with the JASMIN object store, you need to create a key and set environment variables so that s5cmd can pick up the configuration.\nexport AWS_ACCESS_KEY_ID=\u0026lt;your key\u0026gt; export AWS_SECRET_ACCESS_KEY=\u0026lt;your secret\u0026gt;Once set s5cmd can be used. For example copying data from a local disk to a bucket.\ns5cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk cp \u0026#39;./*\u0026#39; s3://bucket-name/Note the requirement of the --endpoint-url argument for accessing the JASMIN object store. For external access, use the s3-ext url.\nSee the documentation for s5cmd\u0026nbsp; for other usage.\nUsing the MinIO client \u0026nbsp; The MinIO Client is a command line tool to connect to object stores (among other types of file storage) and interface with it as you would with a UNIX filesystem. As such, many of the UNIX file management commands found in standard installations of the OS are found within this client ( ls, cat, cp, rm for example).\nThere are a number of ways to install this client as shown in the quickstart guide\u0026nbsp; . Methods include: docker, Homebrew for macOS, wget for Linux and instructions for Windows. Follow these steps to get the client installed on the relevant system.\nMinIO Client is not installed on JASMIN, but users can download and install it to their own user space, following the instructions for \u0026ldquo;64-bit Intel\u0026rdquo; (linux- amd64) in the MinIO quickstart guide. Below is an example to install it into the bin directory in your user space\nmkdir ~/bin wget https://dl.min.io/client/mc/release/linux-amd64/mc ~/bin chmod u+x ~/bin/mcYou can then add the ~/bin directory to the PATH environment variable in your ~/.bashrc file to allow mc to be accessed from anywhere on JASMIN.\n# User specific aliases and functions PATH=$PATH:$HOME/binTo configure the client with the JASMIN object store, create an access key and secret as documented above and insert them into the command:\nmc config host add [ALIAS] [S3-ENDPOINT] [TOKEN] [S3 SECRET KEY]The ALIAS is the name you\u0026rsquo;ll reference the object store when using the client. To demonstrate, if the alias was set to \u0026ldquo;jasmin-store\u0026rdquo;, displaying a specific bucket in the object store would be done in the following way:\nmc ls jasmin-store/my-bucketThe commands available in the client are documented in the quickstart guide (linked above). Copying an object from one place to another is very similar to a UNIX filesystem:\nmc cp jasmin-store/my-bucket/object-1 jasmin-store/different-bucket/ From Python \u0026nbsp; One method of accessing the object store from Python is using s3fs\u0026nbsp; . This library builds on botocore\u0026nbsp; but abstracts a lot of the complexities away. There are three main types of object in this library: S3FileSystem\u0026nbsp; , S3File\u0026nbsp; and S3Map\u0026nbsp; . The filesystem object is used to configure a connection to the object store. Note: it\u0026rsquo;s strongly recommended to store the endpoint, token and secret outside of the Python file, either using environment variables or an external file. This object can be used for lots of the operations which can be done MinIO:\nimport json import s3fs with open(\u0026#39;jasmin_object_store_credentials.json\u0026#39;) as f: jasmin_store_credentials = json.load(f) jasmin_s3 = s3fs.S3FileSystem( anon=False, secret=jasmin_store_credentials[\u0026#39;secret\u0026#39;], key=jasmin_store_credentials[\u0026#39;token\u0026#39;], client_kwargs=\u0026#39;endpoint_url\u0026#39;: jasmin_store_credentials[\u0026#39;endpoint_url\u0026#39;] ) # list the objects in a bucket my_objects = jasmin_s3.ls(\u0026#39;my-bucket\u0026#39;) print(\u0026#39;My objects: \u0026#39;.format(my_objects)) # report the size of an object my_object_size = jasmin_s3.du(\u0026#39;my-bucket/object-1\u0026#39;) print(\u0026#39;Size: \u0026#39;.format(my_object_size))Please note in the example above, the jasmin_object_store_credentials.json file would look along the lines of:\n \u0026#34;token\u0026#34;: \u0026#34;\u0026lt;access key generated above\u0026gt;\u0026#34;, \u0026#34;secret\u0026#34;: \u0026#34;\u0026lt;secret key generated above\u0026gt;\u0026#34;, \u0026#34;endpoint_url\u0026#34;: \u0026#34;http://my-os-tenancy-o.s3.jc.rl.ac.uk\u0026#34; or, from an external tenancy or locations outside of JASMIN:\n \u0026#34;token\u0026#34;: \u0026#34;\u0026lt;access key generated above\u0026gt;\u0026#34;, \u0026#34;secret\u0026#34;: \u0026#34;\u0026lt;secret key generated above\u0026gt;\u0026#34;, \u0026#34;endpoint_url\u0026#34;: \u0026#34;https://my-os-tenancy-o.s3-ext.jc.rl.ac.uk\u0026#34; S3File is used for dealing with individual files on the object store within Python. These objects can read and written to and from the store:\nfile_object = s3fs.S3File(jasmin_s3, \u0026#39;my-bucket/object-1\u0026#39;, mode=\u0026#39;rb\u0026#39;) # refresh can be set to True to disable metadata caching file_metadata = file_object.metadata(refresh=False) # Writing data to variable in Python file_object.write(data) # Data will only be written to the object store if flush() is used. This can be executed in S3FS source code if the buffer \u0026gt;= the blocksize file_object.flush()S3Map is very useful when using xarray\u0026nbsp; to open a number of data files (netCDF4 for example), and turn them into the zarr format ready to be stored as objects on the store. The function for this can store a .zarr file in a POSIX filesystem, or can be streamed directly to an object store. These datasets can then be opened back into Python:\nxarray.open_mfdataset(filepath_list, engine=netcdf4) s3_store = s3fs.S3Map(\u0026#39;my-bucket/zarr-data\u0026#39;, s3=jasmin_s3) dataset.to_zarr(store=s3_store, mode=\u0026#39;w\u0026#39;) # Reopening the dataset from object store using xarray xarray.open_zarr(s3_store, consolidated=True) Using rclone \u0026nbsp; Rclone can be configured to perform operations on an S3 object store backend, just as it can for a long list of other backend storage types. It is mentioned in our data transfer section here, but extensively documented here.\nBelow is an example of how to copy data to the JASMIN object store using rclone, in a very similar manner to how you would use rsync. However, first you need to define parameters for accessing the JASMIN object store.\nDo this by using the rclone config wizard. This will update the configuration file (~/.config/rclone/rclone.conf) so that it looks like this:\n[cedadev-o] type = s3 provider = Other access_key_id = \u0026lt;access key as above\u0026gt; secret_access_key = \u0026lt;secret key as above\u0026gt; endpoint = cedadev-o.s3-ext.jc.rl.ac.uk acl = privateYou could then copy the contents of a directory to this remote, using the rclone copy command ( full description here\u0026nbsp; ):\nrclone copy source:sourcepath dest:destpath This will copy the contents of sourcepath to destpath, but not the directories themselves. By default, it does not transfer files that are identical on source and destination, testing by modification time or md5sum. It will not delete files from the destination (but note that the rclone sync command will). For copying single files, use the rclone copyto command.\nThe example above copies from a local sourcepath, which could be a directory on your local machine (either your local laptop/desktop, or perhaps a JASMIN xfer server). But given that you can set up multiple remotes, you could also configure one of the remotes as SFTP using one of the xfer servers, useful if you want to coordinate the transfers from elsewhere rather than on JASMIN itself.\n\u0026nbsp; Please note that you are asked NOT to use the rclone mount, rcd or serve commands when working with storage on JASMIN, see here. Large objects and performance \u0026nbsp; When objects are uploaded to the object store, one option on upload is how large to make the \u0026ldquo;chunks\u0026rdquo; which an object is split into (often this is hidden behind a default value). For very large objects, a relatively small chunk size will spread the object out a lot. When a request is made to access the file, the system has to work out where all the chunks of file are before it can start the request. This means that for large objects, there will be a large latency in requests if the file has a small chunk size.\nWe advise that for files of 10s of GB or larger that the chunk size is at least 200MB to reduce the number of parts the file is uploaded in. The option for this will often be called something like \u0026ldquo;multipart upload\u0026rdquo; or similar. The AWS S3 documentation has more information about multipart uploads\u0026nbsp; .\ns3cmd has two options related to multipart uploads:\n--disable-multipart --multipart-chunk-size-mb=SIZE Other methods of access will have similar options."
+        content: "\u0026nbsp; Workaround for bug affecting deletion when quota is reached\nCurrently the JASMIN Object store is set to be \u0026ldquo;read-only and delete\u0026rdquo; when the quota for the tenancy is reached, i.e. stopping writes, but allowing reads and deletes. However, there is currently a bug which blocks deletes done with a HTTP POST request. HTTP DELETE requests are still allowed when the quota is reached.\nThis means that when the tenancy is full, you won\u0026rsquo;t be able to do deletes with a POST request, including recursive deletes. You will have to do a DELETE request to free up some space and unlock the tenancy for writes, then do a recursive delete if you need to.\nFor example:\nmc rmdoes a\nPOST... /?delete=but if you use\ns3cmd rmto delete a single object it uses\nDELETE ... This article describes how to use the JASMIN high-performance object storage.\nWhat is object storage? \u0026nbsp; An object store\u0026nbsp; is a data storage system that manages data as objects referenced by a globally unique identifier, with attached metadata. This is a fundamental change from traditional file systems that you may be used to, as there is no directory hierarchy - the objects exist in a single flat domain. These semantics allow the object store to scale out much more easily than a traditional shared file system.\nThe other fundamental change is that the data is no longer accessed by mounting a file system onto a host and referencing a file path (where authentication is \u0026ldquo;can I log in to the host\u0026rdquo;). Instead, the data is accessed over HTTP, with authentication using HTTP headers. This has many benefits, the biggest of which is that we can make the object store available outside of the JASMIN firewall, for example to the JASMIN External Cloud. Data can be read and written in the same way, using the same tools, from inside and outside JASMIN. Contrast this with Group Workspaces, where you must be logged in to a JASMIN host in order to write data using the file system, and data is only accessible externally in a readonly way using HTTP or OPeNDAP or via data transfer methods.\nObject stores are seen as the most efficient (and cheapest!) way to store and access data from the cloud, and all the major cloud providers support some variant of object store. The JASMIN object store is S3 compatible\u0026nbsp; - S3 is the object store for Amazon Web Services (AWS), and has become a de- facto standard interface for object stores. This means that all the same tools that work with AWS S3 will also work with the JASMIN object store.\nOn JASMIN object storage is also referred to as High-Performance Object Store ( HPOS ).\nAccessing the object store \u0026nbsp; The JASMIN object store is organised into tenancies. These are shared areas of the object store, similar in concept to Group Workspaces, and are requested by users, usually Group Workspace Managers. Several users can have access to a tenancy, and so they can be used collaboratively.\nTo join an existing object store tenancy, navigate to the \u0026ldquo;Services\u0026rdquo; section in the JASMIN Accounts Portal and select the \u0026ldquo;Object store\u0026rdquo; category. Select a tenancy and submit a request to join. This request will then be considered by the manager of the tenancy and either accepted or rejected.\nFor details on how to request and manage an object store tenancy, please see the help article \u0026ldquo;JASMIN Object Store for Managers\u0026rdquo; (forthcoming).\nDefault access policies \u0026nbsp; As of Jan 2024, we have changed the default access policy for newly created tenancies to provide a more sensible and flexible set of access policies.\nThe old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (USER only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (-members, e.g. cedadev-o-members) - this can be done using the JASMIN Object Store portal (below) or the Swarm portal. Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).\nThe new policy also gives admin access for tenancy MANAGER and DEPUTY roles, who have access to all the buckets in the tenancy.\nCreating an access key and secret \u0026nbsp; Authentication with the object store uses an access key and secret that are separate to your JASMIN username and password. You can generate keys and manage bucket permissions through the JASMIN Object Store Portal.\u0026nbsp; JASMIN sbject store portal You can log in with your JASMIN username and password. You can then click on the \u0026ldquo;Object Stores\u0026rdquo; button on the right. This will present you with the list of object store tenancies that you have access to. If you don\u0026rsquo;t see an object store tenancy that you expect to, please check you have access in the JASMIN Accounts Portal\u0026nbsp; . If you have access in the Accounts Portal, but not in the Object Store Portal then please email the helpdesk.\nList of object store tenancies The URL for the object store tenancy is also presented here for convenience. You can click on the \u0026ldquo;Manage Object Store\u0026rdquo; button to manage you keys and buckets. This will ask you to confirm your JASMIN password.\nPrompt for password You will then be presented with the following page.\nexisting keys From this page you can view your existing keys, and delete them if you require. You can also use the \u0026ldquo;Create Key\u0026rdquo; tab on the left.\nCreate access key You need to name the key and enter an expiry date for it. This will then present you with a pop-up with details on your access key and secret key. This is the only time your secret key will visible, so save it immediately in a secure password manager.\nManaging bucket permissions \u0026nbsp; You can also manage the permissions on buckets using the \u0026ldquo;Buckets\u0026rdquo; tab from this page. This allows you to manage the access policies for your buckets without using the S3 API or the Swarm portal.\nBucket permissions Click on the \u0026ldquo;Manage permissions\u0026rdquo; button for a bucket to add or change access policies for that bucket.\nGranting access By default this lets you grant access to specific JASMIN Users and/or groups (these are LDAP groups and you might need to request that one is created for you if you require a subgroup for your tenancy). The advanced tab gives you the same options as available through the Swarm portal - including making buckets publicly accessible. Once done, hit the save to add the policy to the bucket. You can edit or delete permissions from that bucket through the \u0026ldquo;View Bucket Policies\u0026rdquo; tab.\nLegacy method for key creation \u0026nbsp; This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.\nYou can generate an access key and secret using the Caringo portal.\nAuthentication with the object store uses an access key and secret that are separate to your JASMIN username and password. You can generate an access key and secret using the Caringo portal. This portal is not currently available outside of JASMIN - you will need to use a graphical session on JASMIN to access a Firefox browser running on a JASMIN system.\nThe recommended way to do this is using the NX Graphical Desktop service. You can start Firefox from the \u0026ldquo;Activities\u0026rdquo; menu once you have logged in to your graphical desktop on one of the nx-login* servers (so no need to make an onward connection to a sci server).\nAn alternative option is to using X11 Forwarding on your SSH connection. You need to do this on one of the nx* servers (not the sci servers as previously) because this is where firefox is now installed:\nssh -X \u0026lt;user\u0026gt;@nx1.jasmin.ac.uk firefox(try -Y if -X does not work for you).\nOnce you have Firefox open, navigate to\nhttp://my-os-tenancy-o.s3.jc.rl.ac.uk:81/_admin/portalbut replace my-os-tenancy-o with your tenancy name.\nYou will see a login screen where you should enter your JASMIN username and password:\nIf you receive a \u0026ldquo;HTTP ERROR 500 java\u0026hellip;\u0026rdquo; error, it is likely that you haven\u0026rsquo;t added the port (81) to the address.\nUpon successfully entering the username and password of a user who belongs to the tenancy, you will see a dashboard. To create an access key and secret, click on the cog icon and select \u0026ldquo;Tokens\u0026rdquo;:\nOn the tokens page, click \u0026ldquo;Add\u0026rdquo;:\nIn the dialogue that pops up, enter a description for the token and set an expiration date. Make sure to click \u0026ldquo;S3 Secret Key\u0026rdquo; - this will expose an additional field containing the secret key. Make sure you copy this and store it somewhere safe - you will not be able to see it again! This value will be used whenever the \u0026ldquo;S3 secret key\u0026rdquo; is required.\nOnce the token is created, it will appear in the list. The \u0026ldquo;Token\u0026rdquo; should be used whenever the \u0026ldquo;S3 access key\u0026rdquo; is required:\nAccessing data in the object store \u0026nbsp; URLs for internal and external access \u0026nbsp; Although the data is exactly the same in both cases, a slightly different URL must be used depending on whether you are accessing the object store from the JASMIN managed cloud servers or from the JASMIN External Cloud.\nFrom inside JASMIN, including LOTUS and the Scientific Analysis servers, my-os-tenancy-o.s3.jc.rl.ac.uk should be used, with the `http://`` prefix.\nFrom the JASMIN External Cloud, and from locations external to JASMIN, my-os-tenancy-o.s3-ext.jc.rl.ac.uk should be used - note the https:// prefix and additional -ext.\n(Where my-os-tenancy-o needs to be replaced with your tenancy name)\nUsing s3cmd \u0026nbsp; s3cmd is a command line tool provided by Amazon to work with S3 compatible Object Storage. It is installed on JASMIN, both on the sci-machines and on LOTUS. It is a little more complicated to use than the MinIO client, but is more powerful and flexible. For full details on s3cmd, see the s3tools.org website\u0026nbsp; .\nTo configure s3cmd to use the JASMIN object store, you need to create and edit a ~/.s3cfg file. To access the my-os-tenancy-o tenancy (where \u0026ldquo;my-os- tenancy-o\u0026rdquo; needs to be replaced with your tenancy name), the following should be in the ~/.s3cfg file:\naccess_key = \u0026lt;access key generated above\u0026gt; host_base = my-os-tenancy-o.s3.jc.rl.ac.uk host_bucket = my-os-tenancy-o.s3.jc.rl.ac.uk secret_key = \u0026lt;secret key generated above\u0026gt; use_https = False signature_v2 = Falseor, from an external tenancy or locations outside of JASMIN:\naccess_key = \u0026lt;access key generated above\u0026gt; host_base = my-os-tenancy-o.s3-ext.jc.rl.ac.uk host_bucket = my-os-tenancy-o.s3-ext.jc.rl.ac.uk secret_key = \u0026lt;secret key generated above\u0026gt; use_https = True signature_v2 = FalseTo see which commands can be used with s3cmd, type:\ns3cmd -hTo list a tenancy\u0026rsquo;s buckets:\ns3cmd lsTo list the contents of a bucket:\ns3cmd ls s3://\u0026lt;bucket_name\u0026gt;Make a new bucket:\ns3cmd mb s3://\u0026lt;bucket_name\u0026gt;s3cmd uses PUT and GET nomenclature for copying files to and from the object store.\nTo copy a file to a bucket in the object store:\ns3cmd put \u0026lt;file name\u0026gt; s3://\u0026lt;bucket_name\u0026gt;To copy a file from a bucket in the object store to the file system:\ns3cmd get s3://\u0026lt;bucket_name\u0026gt;/\u0026lt;object_name\u0026gt; \u0026lt;file_name\u0026gt;For more commands and ways of using s3cmd, see the s3tools website\u0026nbsp; .\ns4cmd and s5cmd \u0026nbsp; s3cmd is a convenient way to interact with the S3 compatible storage like the JASMIN object store. s4cmd\u0026nbsp; and s5cmd\u0026nbsp; provide a similar interface, but with significantly improved performance over s3cmd. They are not installed by default on JASMIN, but are easy to install without the need for sudo or root.\ns4cmd \u0026nbsp; s4cmd\u0026nbsp; uses Python\u0026rsquo;s boto3 library to run commands in parallel. It can be installed into a user\u0026rsquo;s Python environment.\nIf you don\u0026rsquo;t have an existing environment to install Python packages into one will need to be created.\nmodule load jaspy virtualenv venv-s4cmd source venv-s3cmd/bin/activateOnce created and activated s4cmd can be installed.\npip install s4cmdNote that the environment will always need to be activated before s4cmd can be used.\nIn order to use s4cmd with the JASMIN object store, you need to create a key and set environment variables so that s4cmd can pick up the configuration.\nexport S3_ACCESS_KEY=\u0026lt;your key\u0026gt; export S3_SECRET_KEY=\u0026lt;your secret\u0026gt;Once set s4cmd can be used. For example copying data from a local disk to a bucket.\ns4cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk put ./* s3://bucket-name/Note the requirement of the --endpoint-url argument for accessing the JASMIN object store. For external access, use the s3-ext url.\nSee the documentation for s4cmd\u0026nbsp; for other usage.\ns5cmd \u0026nbsp; s5cmd\u0026nbsp; is a parallel tool for interacting with S3 compatible object stores which offers significant speed increases over s3cmd and s4cmd\u0026nbsp; . Its speed increase comes from being written in Go, and working in parallel.\nIt is not available by default on JASMIN, but a binary can be downloaded and used. (Check the releases\u0026nbsp; page on s5cmd\u0026rsquo;s github for the latest version and alter the wget command below as required.)\nwget https://github.com/peak/s5cmd/releases/download/v2.3.0/s5cmd_2.3.0_Linux-64bit.tar.gz tar xvzf s5cmd_2.3.0_Linux-64bit.tar.gz chmod +x s5cmdIn order to use s5cmd with the JASMIN object store, you need to create a key and set environment variables so that s5cmd can pick up the configuration.\nexport AWS_ACCESS_KEY_ID=\u0026lt;your key\u0026gt; export AWS_SECRET_ACCESS_KEY=\u0026lt;your secret\u0026gt;Once set s5cmd can be used. For example copying data from a local disk to a bucket.\ns5cmd --endpoint-url http://my-os-tenancy-o.s3.jc.rl.ac.uk cp \u0026#39;./*\u0026#39; s3://bucket-name/Note the requirement of the --endpoint-url argument for accessing the JASMIN object store. For external access, use the s3-ext url.\nSee the documentation for s5cmd\u0026nbsp; for other usage.\nUsing the MinIO client \u0026nbsp; The MinIO Client is a command line tool to connect to object stores (among other types of file storage) and interface with it as you would with a UNIX filesystem. As such, many of the UNIX file management commands found in standard installations of the OS are found within this client ( ls, cat, cp, rm for example).\nThere are a number of ways to install this client as shown in the quickstart guide\u0026nbsp; . Methods include: docker, Homebrew for macOS, wget for Linux and instructions for Windows. Follow these steps to get the client installed on the relevant system.\nMinIO Client is not installed on JASMIN, but users can download and install it to their own user space, following the instructions for \u0026ldquo;64-bit Intel\u0026rdquo; (linux- amd64) in the MinIO quickstart guide. Below is an example to install it into the bin directory in your user space\nmkdir ~/bin wget https://dl.min.io/client/mc/release/linux-amd64/mc ~/bin chmod u+x ~/bin/mcYou can then add the ~/bin directory to the PATH environment variable in your ~/.bashrc file to allow mc to be accessed from anywhere on JASMIN.\n# User specific aliases and functions PATH=$PATH:$HOME/binTo configure the client with the JASMIN object store, create an access key and secret as documented above and insert them into the command:\nmc config host add [ALIAS] [S3-ENDPOINT] [TOKEN] [S3 SECRET KEY]The ALIAS is the name you\u0026rsquo;ll reference the object store when using the client. To demonstrate, if the alias was set to \u0026ldquo;jasmin-store\u0026rdquo;, displaying a specific bucket in the object store would be done in the following way:\nmc ls jasmin-store/my-bucketThe commands available in the client are documented in the quickstart guide (linked above). Copying an object from one place to another is very similar to a UNIX filesystem:\nmc cp jasmin-store/my-bucket/object-1 jasmin-store/different-bucket/ From Python \u0026nbsp; One method of accessing the object store from Python is using s3fs\u0026nbsp; . This library builds on botocore\u0026nbsp; but abstracts a lot of the complexities away. There are three main types of object in this library: S3FileSystem\u0026nbsp; , S3File\u0026nbsp; and S3Map\u0026nbsp; . The filesystem object is used to configure a connection to the object store. Note: it\u0026rsquo;s strongly recommended to store the endpoint, token and secret outside of the Python file, either using environment variables or an external file. This object can be used for lots of the operations which can be done MinIO:\nimport json import s3fs with open(\u0026#39;jasmin_object_store_credentials.json\u0026#39;) as f: jasmin_store_credentials = json.load(f) jasmin_s3 = s3fs.S3FileSystem( anon=False, secret=jasmin_store_credentials[\u0026#39;secret\u0026#39;], key=jasmin_store_credentials[\u0026#39;token\u0026#39;], client_kwargs=\u0026#39;endpoint_url\u0026#39;: jasmin_store_credentials[\u0026#39;endpoint_url\u0026#39;] ) # list the objects in a bucket my_objects = jasmin_s3.ls(\u0026#39;my-bucket\u0026#39;) print(\u0026#39;My objects: \u0026#39;.format(my_objects)) # report the size of an object my_object_size = jasmin_s3.du(\u0026#39;my-bucket/object-1\u0026#39;) print(\u0026#39;Size: \u0026#39;.format(my_object_size))Please note in the example above, the jasmin_object_store_credentials.json file would look along the lines of:\n \u0026#34;token\u0026#34;: \u0026#34;\u0026lt;access key generated above\u0026gt;\u0026#34;, \u0026#34;secret\u0026#34;: \u0026#34;\u0026lt;secret key generated above\u0026gt;\u0026#34;, \u0026#34;endpoint_url\u0026#34;: \u0026#34;http://my-os-tenancy-o.s3.jc.rl.ac.uk\u0026#34; or, from an external tenancy or locations outside of JASMIN:\n \u0026#34;token\u0026#34;: \u0026#34;\u0026lt;access key generated above\u0026gt;\u0026#34;, \u0026#34;secret\u0026#34;: \u0026#34;\u0026lt;secret key generated above\u0026gt;\u0026#34;, \u0026#34;endpoint_url\u0026#34;: \u0026#34;https://my-os-tenancy-o.s3-ext.jc.rl.ac.uk\u0026#34; S3File is used for dealing with individual files on the object store within Python. These objects can read and written to and from the store:\nfile_object = s3fs.S3File(jasmin_s3, \u0026#39;my-bucket/object-1\u0026#39;, mode=\u0026#39;rb\u0026#39;) # refresh can be set to True to disable metadata caching file_metadata = file_object.metadata(refresh=False) # Writing data to variable in Python file_object.write(data) # Data will only be written to the object store if flush() is used. This can be executed in S3FS source code if the buffer \u0026gt;= the blocksize file_object.flush()S3Map is very useful when using xarray\u0026nbsp; to open a number of data files (netCDF4 for example), and turn them into the zarr format ready to be stored as objects on the store. The function for this can store a .zarr file in a POSIX filesystem, or can be streamed directly to an object store. These datasets can then be opened back into Python:\nxarray.open_mfdataset(filepath_list, engine=netcdf4) s3_store = s3fs.S3Map(\u0026#39;my-bucket/zarr-data\u0026#39;, s3=jasmin_s3) dataset.to_zarr(store=s3_store, mode=\u0026#39;w\u0026#39;) # Reopening the dataset from object store using xarray xarray.open_zarr(s3_store, consolidated=True) Using rclone \u0026nbsp; Rclone can be configured to perform operations on an S3 object store backend, just as it can for a long list of other backend storage types. It is mentioned in our data transfer section here, but extensively documented here.\nBelow is an example of how to copy data to the JASMIN object store using rclone, in a very similar manner to how you would use rsync. However, first you need to define parameters for accessing the JASMIN object store.\nDo this by using the rclone config wizard. This will update the configuration file (~/.config/rclone/rclone.conf) so that it looks like this:\n[cedadev-o] type = s3 provider = Other access_key_id = \u0026lt;access key as above\u0026gt; secret_access_key = \u0026lt;secret key as above\u0026gt; endpoint = cedadev-o.s3-ext.jc.rl.ac.uk acl = privateYou could then copy the contents of a directory to this remote, using the rclone copy command ( full description here\u0026nbsp; ):\nrclone copy source:sourcepath dest:destpath This will copy the contents of sourcepath to destpath, but not the directories themselves. By default, it does not transfer files that are identical on source and destination, testing by modification time or md5sum. It will not delete files from the destination (but note that the rclone sync command will). For copying single files, use the rclone copyto command.\nThe example above copies from a local sourcepath, which could be a directory on your local machine (either your local laptop/desktop, or perhaps a JASMIN xfer server). But given that you can set up multiple remotes, you could also configure one of the remotes as SFTP using one of the xfer servers, useful if you want to coordinate the transfers from elsewhere rather than on JASMIN itself.\n\u0026nbsp; Please note that you are asked NOT to use the rclone mount, rcd or serve commands when working with storage on JASMIN, see here. Large objects and performance \u0026nbsp; When objects are uploaded to the object store, one option on upload is how large to make the \u0026ldquo;chunks\u0026rdquo; which an object is split into (often this is hidden behind a default value). For very large objects, a relatively small chunk size will spread the object out a lot. When a request is made to access the file, the system has to work out where all the chunks of file are before it can start the request. This means that for large objects, there will be a large latency in requests if the file has a small chunk size.\nWe advise that for files of 10s of GB or larger that the chunk size is at least 200MB to reduce the number of parts the file is uploaded in. The option for this will often be called something like \u0026ldquo;multipart upload\u0026rdquo; or similar. The AWS S3 documentation has more information about multipart uploads\u0026nbsp; .\ns3cmd has two options related to multipart uploads:\n--disable-multipart --multipart-chunk-size-mb=SIZE Other methods of access will have similar options."
       })
       .add(
       
@@ -8450,7 +8465,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8467,7 +8482,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8482,7 +8497,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

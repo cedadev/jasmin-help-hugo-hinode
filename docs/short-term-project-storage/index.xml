@@ -292,7 +292,9 @@ a duty to:&lt;/p&gt;</description></item><item><title>Near-Line Data Store (NLDS
 &lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
- Update as of 14/10/2025: a new version of NLDS is available which requires an updated client, please 
+ As of January 2026, a new version of NLDS is available with a much simpler
+setup process for users. This includes an updated client, so you should now upgrade
+to that version 
  
 
 
@@ -306,17 +308,12 @@ a duty to:&lt;/p&gt;</description></item><item><title>Near-Line Data Store (NLDS
  
 
 
- &lt;a href="https://cedadev.github.io/nlds-client/installation.html#upgrading-to-v1-0-12" target="_blank" rel="noopener noreferrer nofollow"&gt;follow these steps&amp;nbsp;
 
+ 
+ 
 
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; to upgrade.
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/short-term-project-storage/nlds-step-by-step/"&gt;using these instructions&lt;/a&gt;.
  &lt;/div&gt;
  &lt;/div&gt;
 
@@ -359,7 +356,22 @@ effect for other users, so please take the time to check and change your code
 to make appropriate use of new storage system. If used correctly, the new
 storage offers us a high performance scalable file system, with the capability
 for object storage as tools and interfaces evolve, and we can continue to
-serve the growing demand for storage in the most cost effective manner.&lt;/p&gt;</description></item><item><title>Secondary copy using Elastic Tape</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</guid><description>&lt;div class="d-flex alert alert-info " 
+serve the growing demand for storage in the most cost effective manner.&lt;/p&gt;</description></item><item><title>NLDS Step by step</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/nlds-step-by-step/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/nlds-step-by-step/</guid><description>&lt;div class="d-flex alert alert-info " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ &lt;p&gt;In January 2026, we introduced a a simpler method of setting up the NLDS
+client on JASMIN.&lt;/p&gt;</description></item><item><title>Secondary copy using Elastic Tape</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/secondary-copy-using-elastic-tape/</guid><description>&lt;div class="d-flex alert alert-info " 
  role="alert"&gt;
  &lt;div class="pt-1 pe-2"&gt;
 

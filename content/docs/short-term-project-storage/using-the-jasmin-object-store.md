@@ -2,6 +2,9 @@
 aliases: /article/4847-using-the-jasmin-object-store
 description: Using the JASMIN Object Store
 title: Using the JASMIN Object Store
+tags:
+ - s3
+ - hpos
 ---
 
 {{<alert alert-type="info">}}
@@ -69,6 +72,8 @@ variant of object store. The JASMIN object store is
 S3 is the object store for Amazon Web Services (AWS), and has become a de-
 facto standard interface for object stores. This means that all the same tools
 that work with AWS S3 will also work with the JASMIN object store.
+
+On JASMIN object storage is also referred to as High-Performance Object Store ({{<abbr HPOS>}}).
 
 ## Accessing the object store
 

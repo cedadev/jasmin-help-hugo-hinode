@@ -4,6 +4,9 @@
 - id: html
   long: "HyperText Markup Language"
 
+- id: hpos
+  long: "High Performance Object Storage"
+
 - id: pfs
   long: "parallel file system"
 

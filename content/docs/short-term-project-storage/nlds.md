@@ -5,7 +5,9 @@ tags: nlds
 ---
 
 {{<alert alert-type="info">}}
-Update as of 14/10/2025: a new version of NLDS is available which requires an updated client, please [follow these steps](https://cedadev.github.io/nlds-client/installation.html#upgrading-to-v1-0-12) to upgrade.
+As of January 2026, a new version of NLDS is available with a much simpler
+setup process for users. This includes an updated client, so you should now upgrade
+to that version [using these instructions](nlds-step-by-step).
 {{</alert>}}
 
 ## Introduction
@@ -21,27 +23,20 @@ NLDS aims to provide:
 
 - a more dynamic way of using tape in users' workflows
 - more energy-efficient storage, important for both cost and environmental impact of your work
-- all JASMIN users with a means to store data near-line (previously it was aimed more at GWS managers only)
+- **all JASMIN users** with a means to store data near-line (previously it was aimed more at GWS managers only)
 
-Full documentation is available here:
-{{<button tooltip="NLDS documentation" href="https://cedadev.github.io/nlds-client/" >}}
-    NLDS documentation
-{{< /button >}}
+Documentation is available here:
 
-## Webinar
+- [step by step guide](nlds-step-by-step) to setup on JASMIN
+- [basic usage](#basic-usage) (this document)
+- {{<link "https://cedadev.github.io/nlds-client/tutorial.html" >}}Full NLDS tutorial{{</link>}} as part of NLDS client software documentation.
 
-Our webinar in March 2025 gave an overview of NLDS: please watch this to find out more. The NLDS part of the presentation lasts around 33 minutes.
-
-{{< youtube 5qFPGLgXma0 >}}
+It is recommended to start with the step-by-step guide
 
 ## Basic usage
 
-{{<alert alert-type="info">}}
-Please refer to the [NLDS documentation](https://cedadev.github.io/nlds-client/) for full context and detail of these commands: a selection of simple commands are included here for illustration only.
-{{</alert>}}
-
-You'll need to {{<link "https://cedadev.github.io/nlds-client/installation.html">}}install the client software{{</link>}} to use the commands, but some examples are:
-
+You'll need to follow the [step by step guide](nlds-step-by-step) to use these commands on JASMIN, but some examples are:
+ 
 PUT a single file into a holding:
 
 {{<command>}}
@@ -85,9 +80,6 @@ nlds get /Users/frjohn/sheep.txt -r ./
 (out)    transaction id  : 14bc9846-9d45-440a-af6c-dfcb5cb9dcae
 {{</command>}}
 
-
-
-
 ## Further information
 
 NLDS is {{<link "https://cedadev.github.io/nlds-client/">}}fully documented here{{</link>}}, including:
@@ -95,3 +87,13 @@ NLDS is {{<link "https://cedadev.github.io/nlds-client/">}}fully documented here
 - Tutorial
 - Step-by-step guide to setup
 - Hints and Tips
+
+## Webinar
+
+Our webinar in March 2025 gave an overview of NLDS: please watch this to find out more. The NLDS part of the presentation lasts around 33 minutes.
+
+{{<alert alert-type="info">}}
+**Jan 2026 update:** An updated version of this webinar, to reflect the simplified setup process, will follow soon - watch this space.
+{{</alert>}}
+
+{{< youtube 5qFPGLgXma0 >}}

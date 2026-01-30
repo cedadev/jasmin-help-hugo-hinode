@@ -27,7 +27,7 @@ The details of how to do this can vary depending on whether your local machine
 runs Windows, macOS or Linux.
 
 {{<alert alert-type="info">}}
-See [presenting your SSH key]({{%ref "present-ssh-key" %}}) for recommended methods
+See [Present your SSH key]({{%ref "present-ssh-key" %}}) for recommended methods
 to present your SSH key, depending on what type of machine you are using.
 {{</alert>}}
 

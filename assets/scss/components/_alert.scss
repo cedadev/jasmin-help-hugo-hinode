@@ -8,13 +8,17 @@
     
     &:link,
     &:visited,
-    &:hover,
     &:active {
         text-decoration-line: underline;
+        text-decoration-style: dotted;
         text-decoration-thickness: 10%;
-        // text-decoration-style: dashed;
-        // text-decoration-color: var(--bs-body);
-        text-decoration-color: var(--bs-primary);
-    }    
+    }
+
+    &:hover {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 10%;
+        opacity: 0.5;
+    }
 }
 /* stylelint-enable declaration-block-no-redundant-longhand-properties */

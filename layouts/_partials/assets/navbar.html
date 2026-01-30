@@ -264,7 +264,7 @@
 {{- if $search.modal }}
     <div id="search-modal" class="modal fade search-modal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" aria-modal="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content h-50">
+            <div class="modal-content h-100">
                 <div class="modal-header">
                     <div class="w-100">
                         <form class="search position-relative me-auto">
@@ -279,9 +279,8 @@
                 <div class="modal-footer">
                     <div class="w-100">
                         <h4>Can't find what you're looking for?</h3>
-                        <div class="gcse-searchbox-only"></div>
-                        <p>Try our Google custom search, across all JASMIN sites</p>
-                        
+                        <p>Try our <a href="https://cse.google.com/cse?cx=b0a2e1d21b00e4028#gsc.tab=0&gsc.q=jasmin" target="_blank">Google custom search</a>, across all JASMIN sites.</p>
+                        <strong>Note:</strong>This may result in additional cookies being set in your browser by Google.</p>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ T "close" }}"></button>
                 </div>

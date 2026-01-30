@@ -22,8 +22,12 @@ This guide has been updated to reflect this.
 
 This guide assumes that the user already has:
 
-1. A JASMIN user account **and** the `jasmin-login` access role. See [Getting Started]({{% ref "get-started-with-jasmin#essential-steps" %}}).
-2. Access to at least one Group Workspace. See [Apply for access to a group workspace]({{% ref "apply-for-access-to-a-gws" %}}).
+1. A JASMIN user account **and** the `jasmin-login` access role.
+   1. {{< fas icon="arrow-right" wrapper="fa-li" >}} See [Getting Started]({{% ref "get-started-with-jasmin#essential-steps" %}})
+   {.fa-ul}
+2. Access to at least one Group Workspace.
+   1. {{< fas icon="arrow-right" wrapper="fa-li" >}} See [Apply for access to a Group Workspace]({{% ref "apply-for-access-to-a-gws" %}})
+   {.fa-ul}
 
 With those in place, the remainder of this guide will take you through the following additional steps to access NLDS
 as a JASMIN user:
@@ -38,18 +42,19 @@ Data pushed to the NLDS service is initially written to a cache on object storag
 Similarly, when data is brought back from tape, it is initially written to the
 object store cache before being made available to you.
 
-Normally, to gain access to object storage ({{<abbr HPOS>}} or s3 storage) on
+Normally, to gain access to object storage ({{<abbr HPOS>}} or S3 storage) on
 JASMIN, you would need to apply for an additional access role via the JASMIN
 Accounts Portal. However, this has now been automated for the object storage
 used for the NLDS cache, so this is now tied to your
 `jasmin-login` access role.
 
-For further information about object storage on JASMIN, see
-[Using the JASMIN Object Store](https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/).
+- {{< fas icon="arrow-right" wrapper="fa-li" >}} For further information about object storage on JASMIN, see
+[Using the JASMIN Object Store]({{% ref "using-the-jasmin-object-store" %}}).
+{.fa-ul}
 
 ## Installing the NLDS client in your JASMIN home directory
 
-Installing the NLDS client in your home directory enables use of the nlds client
+Installing the NLDS client in your home directory enables use of the NLDS client
 in the following recommended places on JASMIN:
 
 - [sci servers]({{% ref "sci-servers" %}}) 
@@ -62,68 +67,71 @@ it is available from both types of server.
 
 1. Log into your chosen server:
 
-   {{<command user="localuser" host="localhost">}}
-ssh <user>@sci-vm-01.jasmin.ac.uk
-   {{</command>}}
+    {{<command user="localuser" host="localhost">}}
+    ssh <user>@sci-vm-01.jasmin.ac.uk
+    {{</command>}}
 
     Sci servers usually need to be accessed via a login server if you are outside 
     the STFC network. Transfer
-    servers can be accessed directly .See also [login servers]({{% ref "login-servers" %}})
+    servers can be accessed directly.
+    1. {{< fas icon="arrow-right" wrapper="fa-li" >}} See [Login servers]({{% ref "login-servers" %}}) and [How to login]({{% ref "how-to-login" %}})
+    {.fa-ul}
 
 2. Install the NLDS client software:
 
-    Full documentation {{<link "https://cedadev.github.io/nlds-client/installation.html">}}here{{</link>}}.
+    The full installation steps are part of the {{<link "https://cedadev.github.io/nlds-client/installation.html">}}documentation for the NLDS client{{</link>}}.
 
     The essential steps are reproduced below:
 
     {{<command user="user" host="sci-vm-01">}}
-cd $HOME           ## ensure that you are in your home directory
-module load jaspy  ## ensure that you're using the current Python environment
-python3 -m venv ~/nlds-client
-source ~/nlds-client/bin/activate
-pip install --upgrade pip
-pip install nlds-client
+    cd $HOME           ## ensure that you are in your home directory
+    module load jaspy  ## ensure that you're using the current Python environment
+    python3 -m venv ~/nlds-client
+    source ~/nlds-client/bin/activate
+    pip install --upgrade pip
+    pip install nlds-client
     {{</command>}}
 
 ## Configuring the NLDS client
 
 1. First make sure your are running the `nlds-client`
-   virtual-environment that you created above
+   virtual environment that you created above.
 
-   (**Tip:** try `echo $VIRTUAL_ENV`: is the returned path correct?).
+   (**Tip:** is the path returned by `echo $VIRTUAL_ENV` correct?)
 
-   If you are not running it then issue the command:
+   If you are not, then issue the command:
 
    {{<command>}}
-source ~/nlds-client/bin/activate
+   source ~/nlds-client/bin/activate
    {{</command>}}
 
 2. Run NLDS with the `init` command to create your NLDS config file.
 
     This file will be in your home directory with the name
     `.nlds-config`. The full path is `~/.nlds-config`, also
-    `$HOME/.nlds-config`. 
+    `$HOME/.nlds-config`.
   
-    Use the `-g|--group` option to specify the
+    Use the `-g` or `--group` option to specify the
     default Group Workspace (GWS) when you are working with NLDS. This should be
     the **short name e.g. `myproject`** and **NOT** the corresponding unix group name with the `gws_` prefix, e.g. `gws_myproject`.
 
     {{<command>}}
-nlds init -g <default gws>
-(out)Initialising the Near-line Data Store...
-(out)• This application uses OAuth2 to authenticate with the server on your behalf.
-(out)• To do this it needs your password.  Your password is not stored. 
-(out)• It is used to obtain an access token, which is stored in the file: ~/.nlds-token,    (out)and used for subsequent interactions with the server. 
-(out)• It is also used to obtain object storage keys.  These are stored in the configuration file: ~/.nlds-config and used for interaction with the object storage    (out)cache.
-(out)
-(out)Password: 
+    nlds init -g <default gws>
+    (out)Initialising the Near-line Data Store...
+    (out)• This application uses OAuth2 to authenticate with the server on your behalf.
+    (out)• To do this it needs your password.  Your password is not stored. 
+    (out)• It is used to obtain an access token, which is stored in the file: ~/.nlds-token,
+    (out)  and used for subsequent interactions with the server. 
+    (out)• It is also used to obtain object storage keys.  These are stored in the configuration file:
+    (out)  ~/.nlds-config and used for interaction with the object storage cache.
+    (out)
+    (out)Password:
     {{</command>}}
 
     Note the output shown above, with the password prompt at the end.
 
-    Enter your JASMIN accounts portal password. The user name is set
-    automatically. 
-    
+3. Here, you should enter your JASMIN accounts portal password. The user name is set automatically.
+
     You should now see the following message:
 
     {{<command>}}
@@ -131,7 +139,7 @@ nlds init -g <default gws>
     (out)updated with all of the necessary information to start using the NLDS.
     {{</command>}}
 
-    You can now examine the config file with the following command (use your preferred editor, `nano` is used here):
+4. You can now examine the config file with the following command (use your preferred editor, `nano` is used here):
 
     {{<command>}}
 nano ~/.nlds-config
@@ -148,7 +156,7 @@ less ~/.nlds-config
     The file should look like the example below. Fields between `< >`
     characters should have values in them. If these fields contain the
     characters `{{ }}` then please delete the `~/.nlds-config` file and try
-    `nlds init -g <gws>` again. If this fails again then please contact the
+    `nlds init -g <gws>` again. If this fails again, please contact the
     JASMIN helpdesk.
 
     ```json
@@ -206,11 +214,10 @@ time you have run NLDS, and the error message reflects this by stating
 
 ## Next steps
 
-- [Basic usage]({{% ref "nlds/#basic-usage" %}})
-- Full {{<link "https://cedadev.github.io/nlds-client/tutorial.html" >}}NLDS tutorial{{</link>}}
+Now that you have the NLDS client set up on JASMIN, you can read about NLDS [Basic usage]({{% ref "nlds/#basic-usage" %}}) and go through
+the {{<link "https://cedadev.github.io/nlds-client/tutorial.html" >}}full tutorial in the NLDS client documentation{{</link>}}
 
-Now that you have the NLDS client set up on JASMIN, you can go through
-the tutorial in the NLDS client documentation. This includes how to use the commands listed with the `nlds --help` command:
+The full tutorial includes how to use the commands listed with the `nlds --help` command:
 
 {{<command>}}
 nlds --help

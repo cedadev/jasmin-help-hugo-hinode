@@ -31,7 +31,7 @@ Documentation is available here:
 - [basic usage](#basic-usage) (this document)
 - {{<link "https://cedadev.github.io/nlds-client/tutorial.html" >}}Full NLDS tutorial{{</link>}} as part of NLDS client software documentation.
 
-It is recommended to start with the step-by-step guide
+It is recommended to start with the step-by-step guide.
 
 ## Basic usage
 
@@ -45,7 +45,11 @@ nlds put <filepath>
 
 (you can PUT a list of files, too).
 
-Check on the status of your holdings: 
+{{<alert alert-type="info">}}
+Before you run `nlds put`, make sure that all the files you want to put into a holding belong to your `gws_<mygws>` group using `chgrp`. In addition, run `chmod g+r` for files and `chmod g+rx` for directories so NLDS can retrieve them.
+{{</alert>}}
+
+Check on the status of your holdings:
 
 {{<command>}}
 nlds stat

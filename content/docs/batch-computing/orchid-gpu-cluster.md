@@ -71,7 +71,7 @@ or by adding the following preamble in the job script file
 ```bash
 #SBATCH --partition=orchid
 #SBATCH --account=orchid
-#SBATCH --qos=gpu:1
+#SBATCH --qos=orchid
 #SBATCH --gres=gpu:1
 
 ```

@@ -20,10 +20,12 @@ the open-source Jupyter Notebook server application.
 
 Jupyter has support for many languages including Python, R, Scala and Julia,
 which are implemented by plugins known as "kernels". The JASMIN Notebook
-Service currently provides one kernel - Python 3.10 with the latest
-[Jaspy software environment]({{% ref "jaspy-envs" %}}) installed. This environment is
-active by default, so there is no need for the `module` commands described in
-the linked article. You can also install and use your own Python environments
+Service provides kernels with the latest
+[Jaspy software environment]({{% ref "jaspy-envs" %}}) and JasR (R) environment installed by default.
+The `/apps/jasmin/jaspy` directory is mounted directly into the notebook service,
+providing access to all Jaspy and JasR versions available on the scientific analysis servers.
+These environments are active by default, so there is no need for the `module` commands
+described in the linked article. You can also install and use your own environments
 as explained below.
 
 The JASMIN Notebook Service uses
@@ -67,7 +69,7 @@ notebook server for you to use, and you will see a loading page:
 After a few seconds, or in some rare cases a minute or two, you will be taken
 to the JupyterLab interface:
 
-{{<image src="img/docs/jasmin-notebooks-service/file-fhTnvJz3xx.png" caption="JupyterLab interface">}}
+{{<image src="img/docs/jasmin-notebooks-service/jupyterlab-interface.png" caption="JupyterLab interface">}}
 
 The folder shown in the left-hand panel will be your home directory on JASMIN,
 exactly as if you had logged in to a scientific analysis server. Any changes
@@ -78,12 +80,63 @@ CEDA Archive, and also have read-only access to group workspaces. For example,
 this notebook reads a file belonging to the CCI project from the CEDA Archive
 and plots the data on a map:
 
-{{<image src="img/docs/jasmin-notebooks-service/file-LvHEu70CM6.png" caption="Example notebook">}}
+{{<image src="img/docs/jasmin-notebooks-service/cartopy-cci-example.png" caption="Example notebook">}}
 
 A full discussion of the power of the JupyterLab interface is beyond the scope
 of this documentation, but the
 {{<link "https://jupyterlab.readthedocs.io/en/stable/">}}JupyterLab documentation{{</link>}} is excellent, and
 there are many tutorials available on the internet.
+
+### Profile Selection
+When starting your notebook server, you will be presented with a profile picker
+that offers three modes:
+
+**Normal Mode (Default)**
+This is the standard notebook environment with access to the latest Jaspy (Python)
+and JasR (R) kernels. Use this mode for regular notebook work.
+
+**Safe Mode**
+This mode removes user and will not load Python packages from your home directory
+configuration, which can be useful if you have accidentally installed a broken
+version of Jupyter or other packages in your home directory that prevent your
+notebook server from starting correctly.
+While safe mode bypasses these issues for testing,
+you may want to clean up the broken installation (see troubleshooting section below).
+
+**GPU Mode**
+This mode provides your notebook server with access to a MIG GPU partition,
+useful for machine learning and other GPU-accelerated workflows. Access requires
+the ORCHID access role. See the
+[JASMIN Notebooks with GPUs page]({{% ref "jasmin-notebook-service-with-gpus" %}})
+for more details.
+
+## Using Different Kernels
+### Old Jaspy and JasR Versions
+
+While the notebook service provides the latest Jaspy and JasR versions as default
+kernels, all older versions are also available. To use an older version:
+
+1. Open a terminal in JupyterLab (File → New → Terminal)
+2. Run `conda env list` to see all available Jaspy and JasR environments
+3. Activate the environment you want: `conda activate <environment-name>`
+4. Install it as a kernel: `python -m ipykernel install --user --name <kernel-name>`
+
+The kernel will then appear in your list of available kernels and persist across
+sessions. These older versions are maintained for the same period as they are
+available on the scientific analysis servers.
+
+### Using Julia
+The notebook service has `juliaup` installed, which can be used to provision
+Julia and create Julia kernels. To set up Julia:
+
+1. Open a terminal in JupyterLab
+2. Use `juliaup` to install your desired Julia version (e.g., `juliaup add release`)
+3. Launch Julia and install the IJulia package:
+   ```julia
+   using Pkg
+   Pkg.add("IJulia")
+   ```
+4. The Julia kernel will then be available in your notebook interface
 
 ### Intended usage and limitations
 
@@ -109,7 +162,7 @@ Although it was previously the case that Group Workspaces were only available in
 
 ### Using the GPU-enabled Notebook Service
 
-Please see the [JASMIN Notebooks with GPUs enabled page]({{% ref "jasmin-notebook-service-with-gpus" %}}) 
+Please see the [JASMIN Notebooks with GPUs enabled page]({{% ref "jasmin-notebook-service-with-gpus" %}})
 to learn about using Notebooks with GPU access.
 
 ### Common issues and questions
@@ -121,24 +174,27 @@ JASMIN Notebook service. Please ensure you have been granted the `jasmin-login` 
 
 #### Which software environment is used by the Notebook Service?
 
-The JASMIN Notebook Service currently uses the **default Jaspy environment**
-listed on the [Jaspy page]({{% ref "jaspy-envs" %}}).
+The JASMIN Notebook Service provides the **latest Jaspy and JasR environments**
+as default kernels. See the [Jaspy page]({{% ref "jaspy-envs" %}}) for details
+about the packages included. Older versions can be installed as additional
+kernels as described above.
 
 #### Can I install additional packages?
 
 The recommended way to do this is to
-[create your own virtual environment]({{% ref "creating-a-virtual-environment-in-the-notebooks-service" %}})
-in the notebooks service and install additional packages into that.
-You can make that virtual environment persist as a kernel to use again next time you
-use the Notebooks service.
+[create your own Python virtual environment]({{% ref "python-virtual-environments" %}})
+and install additional packages into that. You can make that virtual environment
+persist as a kernel to use again next time you use the Notebooks service.
+Environments created correctly will also work on the scientific analysis servers.
 
 If you believe that the package is more widely applicable, you can request an
 update to Jaspy.
 
 #### Can I use a different software environment?
 
-Yes, the article linked above also describes how to use Conda to create your
-own custom environment.
+Yes, you can create [Python virtual environments]({{% ref "python-virtual-environments" %}})
+or [Conda environments]({{% ref "creating-and-using-miniforge-environments" %}})
+for custom software stacks.
 
 #### I get "503 service unavailable" when I try to access the JASMIN Notebook Service
 
@@ -163,6 +219,46 @@ Notebook server. Please try again later!
 
 Please use the scientific analysis server and LOTUS for processing and Jupyter
 Notebook for lighter visualisation.
+
+#### I get "403 forbidden" or other errors when trying to save my notebook
+
+This error commonly occurs when your home directory is full or over quota.
+The JASMIN filesystem does not expose quotas in a standard way, so Jupyter
+cannot provide a clear error message.
+
+To check your home directory usage:
+
+1. Open a terminal in JupyterLab (File → New → Terminal)
+2. Run `du -sh ~` to see your total home directory usage
+3. Compare this to the home directory quota (see [Storage]({{% ref "storage" %}}))
+
+If you are over quota, you will need to delete or move files to free up space.
+Common culprits include old conda environments, cached package downloads, and
+large data files that should be stored in group workspaces.
+
+#### My notebook server won't start or I have Jupyter errors
+
+If your notebook server fails to start or you experience strange Jupyter-related
+errors, this may be caused by a broken Jupyter installation in your home directory
+(typically in `~/.local/lib/python*/site-packages/`).
+
+**Quick fix: Use Safe Mode**
+
+Start your notebook server in Safe Mode using the profile picker. This bypasses
+your user-installed packages and should allow you to access your notebooks.
+
+**Permanent fix: Clean up the broken installation**
+
+1. Connect to JASMIN via SSH or open a terminal in JupyterLab (in Safe Mode)
+2. Rename your local Python packages directory:
+   ```bash
+   mv ~/.local ~/.local.old
+   ```
+3. Restart your notebook server in Normal Mode
+
+This will remove all user-installed Python packages. If you had custom packages
+you need, reinstall them in a proper virtual environment instead of your home
+directory.
 
 ## Example Notebooks
 

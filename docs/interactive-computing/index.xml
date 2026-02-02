@@ -198,9 +198,7 @@ they can be used.&lt;/p&gt;
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/"&gt;Data Transfer category&lt;/a&gt; for details on managing your data transfers.&lt;/p&gt;</description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p&gt;Creating a virtual environment is useful to allow a discrete set of extra
-packages to be installed to meet specific requirements. This allows a user to
-run multiple environments with different dependencies without conflicts.&lt;/p&gt;</description></item><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ &lt;a href="https://help.jasmin.ac.uk/docs/data-transfer/data-transfer-overview/"&gt;Data Transfer category&lt;/a&gt; for details on managing your data transfers.&lt;/p&gt;</description></item><item><title>Project-specific servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/project-specific-servers/</guid><description>&lt;div class="d-flex alert alert-danger " 
  role="alert"&gt;
  &lt;div class="pt-1 pe-2"&gt;
 

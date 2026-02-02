@@ -23,7 +23,6 @@ nx-update-nov24 /docs/interactive-computing/graphical-linux-desktop-access-using
 /article/4996-jasmin-training-accounts /docs/getting-started/jasmin-training-accounts/
 /category/227-mass /docs/mass/
 /article/192-transfer-servers /docs/interactive-computing/transfer-servers/
-/article/5084-creating-a-virtual-environment-in-the-jasmin-notebooks-service /docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/
 /category/65-for-cloud-tenants /docs/for-cloud-tenants/
 /article/4856-jasmin-users-guide /docs/getting-started/tips-for-new-users/
 /category/109-workflow-management /docs/workflow-management/
@@ -100,6 +99,8 @@ software-migration-2020 /docs/software-on-jasmin/rocky9-migration-2024/
 /article/5038-postgres-databases-on-request /docs/software-on-jasmin/postgres-databases-on-request/
 /article/5023-processing-requests-for-resources /docs/uncategorized/processing-requests-for-resources/
 /article/4489-python-virtual-environments /docs/software-on-jasmin/python-virtual-environments/
+/article/5084-creating-a-virtual-environment-in-the-jasmin-notebooks-service /docs/software-on-jasmin/python-virtual-environments/
+/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service /docs/software-on-jasmin/python-virtual-environments/
 /article/4916-quickstart-software-envs /docs/software-on-jasmin/quickstart-software-envs/
 /article/5037-data-transfer-tools-rclone /docs/data-transfer/rclone/
 /article/5022-requesting-resources /docs/uncategorized/requesting-resources/

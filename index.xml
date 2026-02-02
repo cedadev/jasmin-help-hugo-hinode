@@ -673,9 +673,7 @@ they can be used.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Creating a virtual environment in the JASMIN Notebooks Service</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/creating-a-virtual-environment-in-the-notebooks-service/</guid><description>&lt;p&gt;Creating a virtual environment is useful to allow a discrete set of extra
-packages to be installed to meet specific requirements. This allows a user to
-run multiple environments with different dependencies without conflicts.&lt;/p&gt;</description></item><item><title>tips-for-new-users</title><link>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</guid><description>&lt;p&gt;These tips for new users are based on users&amp;rsquo; queries encountered by our helpdesk. They are not exhaustive but may help solve some initial problems and set out best practice.&lt;/p&gt;</description></item><item><title>How to login</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</guid><description>&lt;p&gt;The instructions below cover the process of logging in using a terminal client
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>tips-for-new-users</title><link>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</guid><description>&lt;p&gt;These tips for new users are based on users&amp;rsquo; queries encountered by our helpdesk. They are not exhaustive but may help solve some initial problems and set out best practice.&lt;/p&gt;</description></item><item><title>How to login</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</guid><description>&lt;p&gt;The instructions below cover the process of logging in using a terminal client
 only. For a graphical Linux desktop, please see alternative instructions using
 
  
@@ -1282,9 +1280,7 @@ stratospheric ozone, and tropospheric aerosols.&lt;/p&gt;</description></item><i
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;, plus a wide range of libraries
-from conda-forge that will interoperate with these.&lt;/p&gt;</description></item><item><title>Conda environments and Python virtual environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</guid><description>&lt;div class="d-flex alert alert-danger " 
- role="alert"&gt;
- &lt;div class="pt-1 pe-2"&gt;
+from conda-forge that will interoperate with these.&lt;/p&gt;</description></item><item><title>Conda environments and Python virtual environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1293,35 +1289,35 @@ from conda-forge that will interoperate with these.&lt;/p&gt;</description></ite
 
 
 
-&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
- &lt;div class="flex-grow-1 my-auto"&gt;
- &lt;p&gt;Important changes took place in September 2024 affecting what software can be used on JASMIN.
-Please read 
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This article describes two types of software environments that you can create
+in order to install packages for your own use on JASMIN. Typical examples why
+you may wish to do this is if you have asked us to add packages to
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
 
-
-
-
-
-
-
+ 
  
 
-
- &lt;a href="https://www.ceda.ac.uk/news/updates/2024/2024-08-29-important-software-changes-autumn/" target="_blank" rel="noopener noreferrer nofollow"&gt;this announcement&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; carefully.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading "&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy&lt;/a&gt; but wish to make use of them before the next release, or
+if they are not likely to be relevant to other users.&lt;/p&gt;</description></item><item><title>Conda removal</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/conda-removal/</guid><description>&lt;h2 id="background" class="heading "&gt;Background&lt;a href="#background" aria-labelledby="background"&gt;
 
 
 
@@ -2525,8 +2521,8 @@ Postgres) database on JASMIN for use with scientific workflows.&lt;/p&gt;</descr
 
  
  &lt;a href="https://help.jasmin.ac.uk/docs/uncategorized/requesting-resources/"&gt;&amp;ldquo;Requesting resources&amp;rdquo;&lt;/a&gt; to understand how the process works from the
-requester&amp;rsquo;s point of view.&lt;/p&gt;</description></item><item><title>Python Virtual Environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</guid><description>&lt;p&gt;This article describes how you can use &amp;ldquo;virtual environments&amp;rdquo; to install
-Python packages that are not provided in the
+requester&amp;rsquo;s point of view.&lt;/p&gt;</description></item><item><title>Python Virtual Environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/python-virtual-environments/</guid><description>&lt;p&gt;This article describes how to create Python virtual environments on JASMIN to install
+custom packages not provided in the
 
  
 
@@ -2546,10 +2542,65 @@ Python packages that are not provided in the
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/"&gt;common software environments on JASMIN&lt;/a&gt;. You might wish to do this if you
-want to use different packages/versions from those installed on the system, or
-if you have requested for a package to be installed system-wide but wish to
-start using it before this request can be acted upon.&lt;/p&gt;</description></item><item><title>Quickstart for activating/deactivating software environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</guid><description>&lt;p&gt;This article provides a minimum quick-start guide for working with software environments on JASMIN.&lt;/p&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/"&gt;common software environments&lt;/a&gt;. Virtual environments allow you to
+use different packages/versions from those installed system-wide.&lt;/p&gt;</description></item><item><title>Quickstart for activating/deactivating software environments</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/quickstart-software-envs/</guid><description>&lt;p&gt;This article provides a minimum quick-start guide for working with software environments on JASMIN.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+ 
+
+
+&lt;div class="d-flex alert alert-info " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ &lt;strong&gt;Note:&lt;/strong&gt; The &lt;code&gt;module&lt;/code&gt; commands described here are for use on scientific analysis servers
+and LOTUS. They do not work in the 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/"&gt;JASMIN Notebook Service&lt;/a&gt;,
+where Jaspy and JasR are available by default. In notebooks, use &lt;code&gt;conda activate&lt;/code&gt; to
+access different versions.
+ &lt;/div&gt;
+ &lt;/div&gt;
 
 
 

@@ -152,65 +152,6 @@ Note the requirement of the ```--endpoint-url``` argument for accessing the JASM
 
 See the [documentation for s5cmd](https://github.com/peak/s5cmd) for other usage.
 
-
-## Using the MinIO client
-
-https://github.com/minio/mc/issues/5263#issuecomment-3614266966
-
-The MinIO Client is a command line tool to connect to object stores (among
-other types of file storage) and interface with it as you would with a UNIX
-filesystem. As such, many of the UNIX file management commands found in
-standard installations of the OS are found within this client ( `ls`, `cat`,
-`cp`, `rm` for example).
-
-There are a number of ways to install this client as shown in the
-{{< link "https://docs.min.io/docs/minio-client-quickstart-guide.html" >}}quickstart guide{{</link>}}. Methods
-include: docker, Homebrew for macOS, wget for Linux and instructions for
-Windows. Follow these steps to get the client installed on the relevant
-system.
-
-MinIO Client is not installed on JASMIN, but users can download and install it
-to their own user space, following the instructions for "64-bit Intel" (linux-
-amd64) in the MinIO quickstart guide. Below is an example to install it into
-the `bin` directory in your user space
-
-```bash
-mkdir ~/bin
-wget https://dl.min.io/client/mc/release/linux-amd64/mc ~/bin
-chmod u+x ~/bin/mc
-```
-
-You can then add the `~/bin` directory to the PATH environment variable in
-your `~/.bashrc` file to allow `mc` to be accessed from anywhere on JASMIN.
-
-```bash
-# User specific aliases and functions
-PATH=$PATH:$HOME/bin
-```
-
-To configure the client with the JASMIN object store, create an access key and
-secret as documented above and insert them into the command:
-
-```bash
-mc config host add [ALIAS] [S3-ENDPOINT] [TOKEN] [S3 SECRET KEY]
-```
-
-The ALIAS is the name you'll reference the object store when using the client.
-To demonstrate, if the alias was set to "jasmin-store", displaying a specific
-bucket in the object store would be done in the following way:
-
-```bash
-mc ls jasmin-store/my-bucket
-```
-
-The commands available in the client are documented in the quickstart guide
-(linked above). Copying an object from one place to another is very similar to
-a UNIX filesystem:
-
-```bash
-mc cp jasmin-store/my-bucket/object-1 jasmin-store/different-bucket/
-```
-
 ## From Python
 
 One method of accessing the object store from Python is using

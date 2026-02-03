@@ -108,7 +108,10 @@
     - title: secondary copy using elastic tape
     - title: share gws data on jasmin
     - title: share gws data via http
-    - title: using the jasmin object store
+    - title: jasmin object store
+    - title: s3 portal
+    - title: s3 tools
+    - title: object store legacy
     - title: xfc
 
 - title: long term archive storage

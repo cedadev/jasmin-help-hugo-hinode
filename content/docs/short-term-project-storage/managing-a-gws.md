@@ -228,13 +228,17 @@ data may be stored in the GWS or anywhere else within JASMIN. Users should not
 store any data of a personal or sensitive nature in the GWS.
 
 {{< alert alert-type="danger" >}}
-Do not set, or allow your users to set, open permissions on files or directories.
-By this we mean permissions where data are "world-writable" by anyone, for example
+Do not set, or allow your users to set, "world-writable" permissions on files or directories, for example:
 
 `-rw-rw-rw-` for a file, or **<< DON'T USE THESE!!**<br>
-`drwxrwxrwx` for a directory. **<< OR THESE!!**
+`drwxrwxrwx` for a directory. **<< DON'T USE THESE!!**
 
-We provide a UNIX a group corresponding to each group workspace, which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group. If you are unsure about setting permissions, please ask the helpdesk.
+We provide a UNIX a group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group.  This may include group-writable permissions where appropriate, for example:
+
+`-rw-rw-r--` for a file<br>
+`drwxrwxr-x` for a directory
+
+If you are unsure about setting permissions, please ask the helpdesk.
 {{< /alert >}}
 
 ## Changing ownership of files in your GWS

@@ -91,8 +91,11 @@ is exceeded, then the job is expected to be in a pending state with the reason b
 
     | QoS      | Priority | Max CPUs per job | Max wall time | Max jobs per user |
     |----------|----------|------------------|---------------|-------------------|
-    | `orchid` | 350      | 8                | 2 days        | 8                 |
+    | `orchid` | 350      | 8                | 1 day        | 8                 |
+    | `orchid48`* | 350 | 8 | 2 days | 8 |
     {.table .table-striped .w-auto}
+
+   \* We provide this QoS (`orchid48`) as an on-request basis. If your workflow needs to run on a GPU for 2 days, please [contact the JASMIN helpdesk](mailto:support@jasmin.ac.uk) and justify the resource request. Access to this QoS is time-bound (maximum two months).
 
 ## GPU interactive node outside Slurm
 
@@ -115,8 +118,7 @@ ssh gpuhost001.jc.rl.ac.uk
 - CUDA version 12.8
 - CUDA DNN (Deep Neural Network Library) version cudnn9-cuda-12
 - cuda-toolkit - version 12.8
-- Singularity-CE version 4.3.2-1 checked version - supports NVIDIA/GPU containers
-- podman version 5.4.0
-- SCL Python 3.6
+- Singularity-CE version 4.3.7-1.el9 - supports NVIDIA/GPU containers
+- podman version 5.6.0
 
-Please note that the cluster may have newer software available. For example, you can check the current CUDA version by using `nvidia-smi`, or the Singularity version with `singularity --version`.
+Please note that the cluster may have newer software available. For example, you can check the current CUDA version by running `nvcc --version` (`nvidia-smi` also shows the CUDA version, see example above). You can also check the Singularity version with `singularity --version`.

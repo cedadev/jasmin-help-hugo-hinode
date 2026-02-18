@@ -89,10 +89,10 @@ or by adding the following preamble in the job script file
 is exceeded, then the job is expected to be in a pending state with the reason being
 {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}.
 
-    | QoS      | Priority | Max CPUs per job | Max wall time | Max jobs per user |
-    |----------|----------|------------------|---------------|-------------------|
-    | `orchid` | 350      | 8                | 1 day        | 8                 |
-    | `orchid48`* | 350 | 8 | 2 days | 8 |
+    | QoS         | Priority | Max wall time | Max jobs per user |
+    |-------------|----------|---------------|-------------------|
+    | `orchid`    | 350      | 1 day         | 8                 |
+    | `orchid48`* | 350      | 2 days        | 8                 |
     {.table .table-striped .w-auto}
 
    \* We provide this QoS (`orchid48`) as an on-request basis. If your workflow needs to run on a GPU for 2 days, please [contact the JASMIN helpdesk](mailto:support@jasmin.ac.uk) and justify the resource request. Access to this QoS is time-bound (maximum two months).
@@ -115,9 +115,9 @@ ssh gpuhost001.jc.rl.ac.uk
 
 ## Software Installed on the GPU cluster
   
-- CUDA version 12.8
-- CUDA DNN (Deep Neural Network Library) version cudnn9-cuda-12
-- cuda-toolkit - version 12.8
+- CUDA version 13 (other versions will be available soon via the module environment)
+- CUDA DNN (Deep Neural Network Library) version 13
+- cuda-toolkit - version 13.1
 - Singularity-CE version 4.3.7-1.el9 - supports NVIDIA/GPU containers
 - podman version 5.6.0
 

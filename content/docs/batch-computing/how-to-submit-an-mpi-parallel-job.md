@@ -23,10 +23,11 @@ cores. A simple script, such as the one given below could be saved as `my_script
 #SBATCH -o %j.log
 #SBATCH -e %j.err
 
-# Load a module for the gcc OpenMPI library (needed for mpi_myname.exe)
-module load eb/OpenMPI/gcc/4.0.0
+# Load the modules for the Intel oneAPI library (needed for mpi_myname.exe)
+module load oneapi/compilers/24.2.0
+module load oneapi/mpi/24.2.0
 
-# Start the job running using OpenMPI's "mpirun" job launcher
+# Start the job running using Intel oneAPI's "mpirun" job launcher
 mpirun ./mpi_myname.exe
 ```
 
@@ -38,56 +39,35 @@ To submit the job, do not run the script, but rather use it as the standard
 input to `sbatch`, like so:
 
 {{<command user="user" host="sci-vm-01">}}
-sbatch --exclusive my_script_name.sbatch
+sbatch my_script_name.sbatch
 {{</command>}}
-
-The `--exclusive` flag is used to group the parallel jobs onto hosts which
-are allocated only to run this job. This ensures the best MPI communication
-consistency and bandwidth/latency for the job and ensures no interference from
-other users' jobs that might otherwise be running on those hosts.
 
 ## MPI implementation and Slurm
 
-{{<alert alert-type="danger">}}
-The following about compilers has not yet been reviewed for compatibility with the new cluster, April 2025.
-This alert will be removed once updated.
-{{</alert>}}
-
-The OpenMPI library is the only supported MPI library on the cluster. OpenMPI
-v3.1.1 and v4.0.0 are provided which are fully MPI3 compliant. MPI I/O
-features are fully supported *only* on the LOTUS `/work/scratch-pw*` volumes as
-these use a Panasas fully parallel file system. The MPI implementation on
-CentOS7 LOTUS/Slurm is available via the module environment for each compiler
+The Intel oneAPI library is the only supported MPI library on the cluster. MPI I/O
+features are fully supported throughout JASMIN. The MPI implementation is available via the module environment for each compiler
 as listed below:
 
 ```bash
-eb/OpenMPI/gcc/3.1.1 
-eb/OpenMPI/gcc/4.0.0       
-eb/OpenMPI/intel/3.1.1
+module load oneapi/compilers/24.2.0
+module load oneapi/mpi/24.2.0
 ```
 
-**Note:** OpenMPI Intel compiler is due shortly as is 4.0.3  
+## Parallel MPI compiler with oneAPI
 
-## Parallel MPI compiler with OpenMPI
-
-Compile and link to OpenMPI libraries using the `mpif90`, `mpif77`, `mpicc`, `mpiCC`
+Compile and link to Intel oneAPI libraries using the `mpif90`, `mpif77`, `mpicc`, `mpiCC`
 wrapper scripts which are in the default unix path. The scripts will detect
-which compiler you are using (GNU, Intel) by the compiler environment loaded
+which compiler you are using (GNU, Intel oneAPI) by the compiler environment loaded
 and add the relevant compiler library switches. For example:
 
 ```bash
-module load intel/20.0.0
-module load eb/OpenMPI/intel/3.1.1
+module load oneapi/compilers/24.2.0
+module load oneapi/mpi/24.2.0
 mpif90
 ```
 
-will use the Intel Fortran compiler `ifort` and OpenMPI/3.1.1.  Whereas
+will use the Intel Fortran compiler `ifort`.
 
-```bash
-module load eb/OpenMPI/gcc/3.1.1
-mpicc
-```
+The GNU compilers `gcc`, `gfortran` and the `mpich` library is available via [the Jaspy environment]({{% ref "jaspy-envs" %}}). Please only run workflows on one compute node over several cores, not cross-node.
 
-will call the GNU C compiler `gcc` and  OpenMPI/3.1.1.
-
-The OpenMPI User Guides can be found at <https://www.open-mpi.org/doc/>.
+For more information, please see the {{<link "https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-documentation.html">}}Intel openAPI documentation{{</link>}}. More examples will be coming soon.

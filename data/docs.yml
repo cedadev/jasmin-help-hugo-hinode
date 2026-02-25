@@ -144,6 +144,7 @@
 - title: uncategorized
   pages:
     - title: acknowledging jasmin
+    - title: rate limiting
     - title: approving requests for access
     - title: jasmin conditions of use
     - title: mobaxterm

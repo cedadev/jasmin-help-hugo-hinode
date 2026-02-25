@@ -20,7 +20,7 @@ Click on the link for each of the FAQs below to expand the answer.
 
 {{< accordion id="accordion-1" >}}
 
-  {{< accordion-item title="Can I use my existing MASS account" show="false" >}}
+  {{< accordion-item title="Can I use my existing MASS account?" show="false" >}}
     No. You need a separate MASS account for use on the Met Office internal
 network (CDN), Monsoon, ECMWF HPCs, and JASMIN. With these different account
 types, you can have permission to access different datasets specific to these
@@ -311,6 +311,46 @@ including the following lines in your suite.rc file:
 [<options>]
 ```
 
+  {{< /accordion-item >}}
+
+{{< /accordion >}}
+
+## New MOOSE and MASS
+
+The following section contains information about the new MOOSE and MASS system. For help with the current MOOSE client, please see the sections above.
+
+{{< accordion id="accordion-3" >}}
+
+  {{< accordion-item title="Introduction" >}}
+    MASS refers to the tape archive and MOOSE is the interface used to interact with MASS, allowing you to do GETs, SELECTs and other commands. The current MASS system is aging and a new version of MASS, and a new version of MOOSE, is being developed.
+    We expect the new MOOSE commands to work in the same way as current MOOSE commands. However, there will be some differences with the new system, such as new commands to log into MOOSE.
+  {{< /accordion-item >}}
+
+  {{< accordion-item title="What do I need to do?" >}}
+- Make your existing MOOSE commands (GETs, SELECTs) as 'nice’ to current MASS as you can. For example, split single large GETs into several smaller GETs
+- Review your workflows and jobs for those that use moo commands so that you know which ones to target for testing when the new MOOSE client becomes available.
+- Make note of the timeline and switchover details below to assist with any planning.
+  {{< /accordion-item >}}
+
+  {{< accordion-item title="Timeline and Switchover" >}}
+Timeline: Last update December 2025. This is a draft timeline and is potentially subject to further changes. We'll keep you updated via our usual communication channels.
+- User Acceptance Testing: Mid March
+- Service Commencement: 6th May
+
+If you would like to be involved in the User Acceptance Testing (UAT) and have not already been contacted about it, please email: monsoon@metoffice.gov.uk. There will be limited places available but please do register your interest with us.
+
+To safely switchover to the new MASS system we need to pause all MASS access and invoke a MASS outage to complete the metadata migration. It is estimated that there will be between **36 and 48 hours of MASS service outage**, during which time there will be no access available to either MASS system.
+
+To de-risk the switchover, users may be asked to reduce MASS usage for a short period ahead of the outage. As we get closer to the switchover date, further details about this will be communicated.
+  {{< /accordion-item >}}
+
+  {{< accordion-item title="Resources and Further Reading" >}}
+Please note that these links are only accessible to Met Office staff members.
+
+- [Getting ready for go live](https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Getting-ready-for-go-live.aspx)
+- [Training and resource hub](https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Training-Resource-hub.aspx) (note that this does not yet contain training and resources for JASMIN MASS users)
+
+If you have any questions, please email monsoon@metoffice.gov.uk. However, please be aware that as the client is still being developed, we may be unable to answer some questions and advise that we are awaiting further information ourselves.
   {{< /accordion-item >}}
 
 {{< /accordion >}}

@@ -56,16 +56,23 @@ you may wish to re-add execute permission on that directory, e.g.:
 chmod o+x /group_workspaces/jasmin/superproj/public
 {{</command>}}
 
-{{< alert alert-type="danger" >}}
+{{<alert color="danger" icon="fas circle-xmark">}}
 Do not set "world-writable" permissions on files or directories, for example:
 
 `-rw-rw-rw-` for a file, or **<< DON'T USE THESE!!**<br>
 `drwxrwxrwx` for a directory. **<< DON'T USE THESE!!**
 
-We provide a UNIX a group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group if you set permissions appropriately using that group.  This may include group-writable permissions where appropriate, for example:
+{{</alert>}}
+
+We provide a UNIX group corresponding to each group workspace, usually named `gws_<name>` which all members of that GWS belong to: this enables sharing within the group.
+
+{{<alert color="success" icon="fas circle-check">}}
+
+To set permissions appropriately using your `gws_<name>` group, you may want to use the group-writable flag, for example:
 
 `-rw-rw-r--` for a file<br>
 `drwxrwxr-x` for a directory
 
-If you are unsure about setting permissions, please ask the helpdesk.
 {{</alert>}}
+
+If you are unsure about setting permissions, please ask the helpdesk.

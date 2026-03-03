@@ -16,7 +16,10 @@ The JASMIN GPU cluster is composed of 16 GPU nodes:
 
 {{< image src="img/docs/gpu-cluster-orchid/file-NZmhCFPJx9.png" caption="ORCHID GPU cluster" >}}
 
-Note: the actual number of nodes may vary slightly over time due to operational reasons. You can check which nodes are available by checking the `STATE` column in `sinfo --partition=orchid`.
+Notes:
+
+- `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and 8 GPUs each.
+- the actual number of nodes may vary slightly over time due to operational reasons. You can check which nodes are available by checking the `STATE` column in `sinfo --partition=orchid`.
 
 ## Request access to ORCHID
 
@@ -32,7 +35,7 @@ Holding the `orchid` role also gives access to the GPU interactive node.
 **Note:** In the supporting info on the `orchid` request form, please provide details
 on the software and the workflow that you will use/run on ORCHID.
 
-## Test a GPU job
+## Test a GPU job interactively
 
 Testing a job on the JASMIN ORCHID GPU cluster can be carried out in an
 interactive mode by launching a pseudo-shell terminal Slurm job from a JASMIN
@@ -59,43 +62,52 @@ nvidia-smi
 (out)|                   ...                   |           ...          |         ...          |
 {{</command>}}
 
-Note that for batch mode, a GPU job is submitted using the Slurm command
-`sbatch`:
+## Submit a GPU batch job
+
+Use the following Slurm command to submit a GPU batch job:
 
 {{<command user="user" host="sci-vm-01">}}
 sbatch --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid gpujobscript.sbatch
 {{</command>}}
 
-or by adding the following preamble in the job script file
+or add the following preamble in the job script file:
 
 ```bash
 #SBATCH --partition=orchid
 #SBATCH --account=orchid
 #SBATCH --qos=orchid
 #SBATCH --gres=gpu:1
-
 ```
 
-**Notes:**
+## Multi-instance GPU partition
 
-1. `gpuhost015` and `gpuhost016` are the two largest nodes with 64 CPUs and 8 GPUs each.
+This feature is new as of Spring 2026.
 
-2. IMPORTANT **CUDA Version: 12.8**  Please add the following to your path 
-    ```bash
-    export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
-    ```
+A new partition with the multi-instance GPU (MIG) feature has been added to the ORCHID cluster. This partition is dedicated for small workflows or machine learning processes that don't use the whole graphics card or parallel processing across GPU nodes. The benefit of using this partition is shorter scheduling time for smaller jobs.
 
-3. The following are the limits for the `orchid` QoS. If, for example, the CPU limit
-is exceeded, then the job is expected to be in a pending state with the reason being
-{{<mark>}}`QOSGrpCpuLimit`{{</mark>}}.
+To access this partition, specify the following directives in your job script:
 
-    | QoS         | Priority | Max wall time | Max jobs per user |
-    |-------------|----------|---------------|-------------------|
-    | `orchid`    | 350      | 1 day         | 8                 |
-    | `orchid48`* | 350      | 2 days        | 8                 |
-    {.table .table-striped .w-auto}
+```bash
+#SBATCH --partition=gpumig
+#SBATCH --account=orchid
+#SBATCH --qos=gpumig
+#SBATCH --gres=gpu:1g.10g:1
+```
 
-   \* We provide this QoS (`orchid48`) as an on-request basis. If your workflow needs to run on a GPU for 2 days, please [contact the JASMIN helpdesk](mailto:support@jasmin.ac.uk) and justify the resource request. Access to this QoS is time-bound (maximum two months).
+## Partition and QoS limits
+
+Below is the table of Quality of Services (QoS) available on ORCHID and their limits.
+
+If, for example, the CPU limit is exceeded, then the job is expected to be in a pending state with the reason {{<mark>}}`QOSGrpCpuLimit`{{</mark>}}.
+
+| Partition | QoS         | Priority | Max wall time | Max jobs per user |
+|-----------|-------------|----------|---------------|-------------------|
+| `orchid`  | `orchid`    | 350      | 1 day         | 8                 |
+| `orchid`  | `orchid48`* | 350      | 2 days        | 8                 |
+| `gpumig`  | `gpumig`    | 700      | 12 hours      | 4                 |
+{.table .table-striped .w-auto}
+
+\* We provide this QoS (`orchid48`) as an on-request basis. If your workflow needs to run on a GPU for 2 days, please [contact the JASMIN helpdesk](mailto:support@jasmin.ac.uk) and justify the resource request. Access to this QoS is time-bound (maximum two months).
 
 ## GPU interactive node outside Slurm
 

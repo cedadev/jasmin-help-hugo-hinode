@@ -17,8 +17,9 @@ The Slurm queues in the LOTUS cluster are:
 
 - `standard`
 - `debug`
+- `special`
 
-Each queue is has attributes of run-length limits (e.g. short, long) and
+Each queue has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources, such as run time
 limits and memory limits, is shown below in Table 1.
 
@@ -40,6 +41,7 @@ where `<queue_name>` is the name of the queue/partition (Table 1, column 1).
 |------------|--------------|------------------|------------------------|
 | `standard` | 24 hrs       | 1hr              | 1GB                    |
 | `debug`    | 1 hr         | 30 mins          | 1GB                    |
+| `special`  |              |                  |                        |
 {.table .table-striped}
 
 **Note 1:** Resources requested by a job must be within the resource

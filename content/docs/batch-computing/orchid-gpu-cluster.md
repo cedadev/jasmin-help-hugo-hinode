@@ -26,41 +26,12 @@ Notes:
 Before using ORCHID on JASMIN, you will need: 
 
 1. An existing JASMIN account and valid `jasmin-login` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/">}}Apply here{{</button>}}
-2. **Subsequently** (once `jasmin-login` has been approved and completed), the `orchid` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/orchid/">}}Apply here{{</button>}}
+2. **Subsequently** once `jasmin-login` has been approved and completed, the `orchid` access role: {{<button button-size="sm" href="https://accounts.jasmin.ac.uk/services/additional_services/orchid/">}}Apply here{{</button>}}
 
-The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `orchid` role grants access to the special LOTUS partition and QoS used by ORCHID.
-
-Holding the `orchid` role also gives access to the GPU interactive node.
+The `jasmin-login` access role ensures that your account is set up with access to the LOTUS batch processing cluster, while the `orchid` role grants access to the ORCHID cluster and the GPU interactive node.
 
 **Note:** In the supporting info on the `orchid` request form, please provide details
 on the software and the workflow that you will use/run on ORCHID.
-
-## Test a GPU job interactively
-
-Testing a job on the JASMIN ORCHID GPU cluster can be carried out in an
-interactive mode by launching a pseudo-shell terminal Slurm job from a JASMIN
-scientific server e.g. `sci-vm-01`:
-
-{{<command user="user" host="sci-vm-01">}}
-srun --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid --pty /bin/bash
-(out)srun: job 19505658 queued and waiting for resources
-(out)srun: job 19505658 has been allocated resources
-{{</command>}}
-
-At this point, your shell prompt will change to the GPU node `gpuhost004`, but with access to one GPU as shown by the NVIDIA utility. You will have the one GPU allocated at this shell, as requested:
-
-{{<command user="user" host="gpuhost004">}}
-nvidia-smi
-(out)+-----------------------------------------------------------------------------------------+
-(out)| NVIDIA-SMI 570.133.20             Driver Version: 570.133.20     CUDA Version: 12.8     |
-(out)|-----------------------------------------+------------------------+----------------------+
-(out)| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-(out)| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-(out)|                                         |                        |               MIG M. |
-(out)|=========================================+========================+======================|
-(out)|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
-(out)|                   ...                   |           ...          |         ...          |
-{{</command>}}
 
 ## Submit a GPU batch job
 
@@ -102,8 +73,8 @@ If, for example, the CPU limit is exceeded, then the job is expected to be in a 
 
 | Partition | QoS         | Priority | Max wall time | Max jobs per user |
 |-----------|-------------|----------|---------------|-------------------|
-| `orchid`  | `orchid`    | 350      | 1 day         | 8                 |
-| `orchid`  | `orchid48`* | 350      | 2 days        | 8                 |
+| `orchid`  | `orchid`    | 350      | 24 hours      | 8                 |
+| `orchid`  | `orchid48`* | 350      | 48 hours      | 8                 |
 | `gpumig`  | `gpumig`    | 700      | 12 hours      | 4                 |
 {.table .table-striped .w-auto}
 
@@ -123,11 +94,25 @@ ssh gpuhost001.jc.rl.ac.uk
 
 {{<command user="user" host="gpuhost001">}}
 ## now on gpu interactive node
+nvidia-smi
+(out)+-----------------------------------------------------------------------------------------+
+(out)| NVIDIA-SMI 570.133.20             Driver Version: 570.133.20     CUDA Version: 12.8     |
+(out)|-----------------------------------------+------------------------+----------------------+
+(out)| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+(out)| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+(out)|                                         |                        |               MIG M. |
+(out)|=========================================+========================+======================|
+(out)|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+(out)|                   ...                   |           ...          |         ...          |
 {{</command>}}
 
 ## Software Installed on the GPU cluster
   
 - CUDA version 13 (other versions will be available soon via the module environment)
+  - If you want to use CUDA Version 12.8, please add the following to your path:
+    ```bash
+    export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+    ```
 - CUDA DNN (Deep Neural Network Library) version 13
 - cuda-toolkit - version 13.1
 - Singularity-CE version 4.3.7-1.el9 - supports NVIDIA/GPU containers

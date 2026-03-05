@@ -62,7 +62,7 @@ To access this partition, specify the following directives in your job script:
 #SBATCH --partition=gpumig
 #SBATCH --account=orchid
 #SBATCH --qos=gpumig
-#SBATCH --gres=gpu:1g.10g:1
+#SBATCH --gres=gpu:1g.10gb:1
 ```
 
 ## Partition and QoS limits

@@ -7,9 +7,9 @@ title: The JASMIN Object Store
 
 The JASMIN object store provides a S3 compatible storage alternative to POSIX based disk. It provides a number of advantages over traditional POSIX based storage, mainly around external accessibility due to the use of access keys and policies.
 
-Access keys and bucket permissions can be managed through the [JASMIN Object Store Portal](https://s3-portal.jasmin.ac.uk), see [here](s3-portal) for use.
+Access keys and bucket permissions can be managed through the [JASMIN Object Store Portal](https://s3-portal.jasmin.ac.uk), see [here]({{% ref "s3-portal" %}}) for use.
 
-For information on tools to use with the JASMIN object store see [S3 Tools](s3-tools).
+For information on tools to use with the JASMIN object store see [S3 Tools]({{% ref "s3-tools" %}}).
 
 ## What is object storage?
 
@@ -62,7 +62,7 @@ To request a new Object Store, or a change in quota please see [Requesting Resou
 
 As of Jan 2024, we have changed the default access policy for newly created tenancies to provide a more sensible and flexible set of access policies.
 
-The old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (USER only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (<tenancy>-members, e.g. cedadev-o-members) - this can be done using the [JASMIN Object Store portal](https://s3-portal.jasmin.ac.uk) or the Swarm portal (see [Legacy access](object-store-legacy)). Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).
+The old policy allowed any members of the tenancy access to any bucket created in the tenancy by default. The new policy allow Users (USER only in the JASMIN Accounts Portal) of the tenancy only access to buckets they own by default. This can be effectively changed to the old policy by setting the policy of the bucket to the LDAP group for the tenancy members (<tenancy>-members, e.g. cedadev-o-members) - this can be done using the [JASMIN Object Store portal](https://s3-portal.jasmin.ac.uk) or the Swarm portal (see [Legacy access]({{% ref "object-store-legacy" %}})). Specific JASMIN users or groups can also be given permission to buckets (group access is controlled by LDAP groups, and only existing LDAP group will work - you may need to ask for one to be created).
 
 The new policy also gives admin access for tenancy MANAGER and DEPUTY roles, who have access to all the buckets in the tenancy. Deputies can be added via the JASMIN accounts portal in the same way as Group Workspaces (on the page for the Object Store service).
 

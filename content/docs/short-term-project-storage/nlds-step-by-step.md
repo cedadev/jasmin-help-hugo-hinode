@@ -49,7 +49,7 @@ used for the NLDS cache, so this is now tied to your
 `jasmin-login` access role.
 
 - {{< fas icon="arrow-right" wrapper="fa-li" >}} For further information about object storage on JASMIN, see
-[Using the JASMIN Object Store]({{% ref "using-the-jasmin-object-store" %}}).
+[Using the JASMIN Object Store]({{% ref "jasmin-object-store" %}}).
 {.fa-ul}
 
 ## Installing the NLDS client in your JASMIN home directory

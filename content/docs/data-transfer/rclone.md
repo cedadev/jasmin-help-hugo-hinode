@@ -71,4 +71,4 @@ Help on a particular command is found using
 rclone <command> --help
 {{</command>}}
 
-See also [using rclone]({{% ref "using-the-jasmin-object-store/#using-rclone" %}}) with the JASMIN object store.
+See also [using rclone]({{% ref "s3-tools/#using-rclone" %}}) with the JASMIN object store.

@@ -2,7 +2,8 @@
 aliases:
 - /article/5077-configurando-cors-for-object-store
 - /article/5077-configuring-cors-for-object-store
-description: Confguring cross-origin resource sharing (CORS) for object storage.
+- /docs/short-term-project-storage/configuring-cors-for-object-storage
+description: Configuring cross-origin resource sharing (CORS) for object storage.
 title: Configuring CORS for object storage
 ---
 
@@ -12,7 +13,7 @@ This article describes how to configure Cross-Origin Resource Sharing (CORS) on 
 
 ## S3 CORS configuration
 
-JASMIN's DataCore (previously Caringo) S3 object storage allows domain owners to configure Cross-Origin Resource Sharing (CORS) at bucket level. This article assumes you have read the {{<link "using-the-jasmin-object-store">}}this help article{{</link>}} which introduces the object store and the use of the `s3cmd` command line tool.
+JASMIN's DataCore (previously Caringo) S3 object storage allows domain owners to configure Cross-Origin Resource Sharing (CORS) at bucket level. This article assumes you have read [this help article]({{% ref "s3-tools/#using-rclone" %}}) which introduces the object store and the use of the `s3cmd` command line tool.
 
 ## Prerequisites
 

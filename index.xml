@@ -1333,7 +1333,7 @@ if they are not likely to be relevant to other users.&lt;/p&gt;</description></i
 &lt;p&gt;Following a change in the licensing conditions by Anaconda, it is now the case
 that all users of the Anaconda &lt;code&gt;defaults&lt;/code&gt; Conda package channel (repository)
 from organisations of 500 or more employees are potentially liable to pay for
-usage, even if it is for the purpose of academic research.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+usage, even if it is for the purpose of academic research.&lt;/p&gt;</description></item><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -2070,7 +2070,36 @@ service, you need to use the XFC client.&lt;/p&gt;</description></item><item><ti
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; in a web browser.&lt;/p&gt;</description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; in a web browser.&lt;/p&gt;</description></item><item><title>JASMIN Object Store Portal</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-portal/</guid><description>&lt;p&gt;In order to more easily manage keys and bucket permissions, JASMIN provides the 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+ &lt;a href="https://s3-portal.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Object Store Portal.&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.
+This portal can be used to create and delete key pairs for accessing an object store which a user has access to (for whicih they have been given access through the JASMIN Accounts Portal).
+It can also be used to create, edit and remove access permissions for a bucjet which a user has access to. Note that a tenancy admin will have access to all of the buckets to manage the permissions and can do so on behalf of users.&lt;/p&gt;</description></item><item><title>JASMIN software FAQs</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/jasmin-software-faqs/</guid><description>&lt;div id="accordion-default" class="accordion mb-3"&gt;
 
  
 
@@ -2206,7 +2235,20 @@ at:
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;
-for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading "&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
+for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Legacy Content for the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/object-store-legacy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/object-store-legacy/</guid><description>&lt;h2 id="legacy-method-for-key-creation" class="heading "&gt;Legacy method for key creation&lt;a href="#legacy-method-for-key-creation" aria-labelledby="legacy-method-for-key-creation"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading "&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
 
 
 
@@ -2449,7 +2491,7 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
  &lt;p&gt;In January 2026, we introduced a a simpler method of setting up the NLDS
-client on JASMIN.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading "&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
+client on JASMIN.&lt;/p&gt;</description></item><item><title>Object Store Tools</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</guid><description>&lt;p&gt;S3 object store has many different tools which can be used to access and managed it. This page goes through some examples of tools.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading "&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
 
 
 
@@ -3145,7 +3187,7 @@ covers the following topics:&lt;/p&gt;</description></item><item><title>The JASM
  
  &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/jasmin-notebooks-service/"&gt;JASMIN Notebook Service&lt;/a&gt; has recently been
 updated to include a GPU-enabled node. This means that JASMIN users can now run Machine
-Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading "&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
+Learning (ML) workflows in Notebooks. This page outlines:&lt;/p&gt;</description></item><item><title>The JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/jasmin-object-store/</guid><description>&lt;p&gt;The JASMIN object store provides a S3 compatible storage alternative to POSIX based disk. It provides a number of advantages over traditional POSIX based storage, mainly around external accessibility due to the use of access keys and policies.&lt;/p&gt;</description></item><item><title>Transfer Cache (XFC)</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/xfc/</guid><description>&lt;h2 id="what-is-the-xfc" class="heading "&gt;What is the XFC?&lt;a href="#what-is-the-xfc" aria-labelledby="what-is-the-xfc"&gt;
 
 
 
@@ -3224,21 +3266,7 @@ crontab&amp;nbsp;
  &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; (the command for loading
 the cron job table).&lt;/p&gt;</description></item><item><title>Using Matplotlib for visualisation on JASMIN</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/matplotlib/</guid><description>&lt;p&gt;This article provides a basic example of using Matplotlib on JASMIN to
 generate a plot. It also gives an important tip that may stop your code
-failing when run on the LOTUS cluster.&lt;/p&gt;</description></item><item><title>Using the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/using-the-jasmin-object-store/</guid><description>&lt;div class="d-flex alert alert-info " 
- role="alert"&gt;
- &lt;div class="pt-1 pe-2"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fa fa-lightbulb fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
- &lt;div class="flex-grow-1 my-auto"&gt;
- &lt;p&gt;&lt;strong&gt;Workaround for bug affecting deletion when quota is reached&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+failing when run on the LOTUS cluster.&lt;/p&gt;</description></item><item><title>What is a Group Workspace?</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/introduction-to-group-workspaces/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 

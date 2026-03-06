@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Object Store on JASMIN Help Site</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/</link><description>Recent content in Object Store on JASMIN Help Site</description><generator>Hugo</generator><language>en</language><copyright>Copyright © 2025 Science and Technology Facilities Council.</copyright><atom:link href="https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuring CORS for object storage</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/configuring-cors-for-object-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/configuring-cors-for-object-storage/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This article describes how to configure Cross-Origin Resource Sharing (CORS) on a JASMIN Caringo S3 object store.&lt;/p&gt;</description></item><item><title>JASMIN Object Store Portal</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-portal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-portal/</guid><description>&lt;p&gt;In order to more easily manage keys and bucket permissions, JASMIN provides the 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+ &lt;a href="https://s3-portal.jasmin.ac.uk/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN Object Store Portal.&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.
+This portal can be used to create and delete key pairs for accessing an object store which a user has access to (for whicih they have been given access through the JASMIN Accounts Portal).
+It can also be used to create, edit and remove access permissions for a bucjet which a user has access to. Note that a tenancy admin will have access to all of the buckets to manage the permissions and can do so on behalf of users.&lt;/p&gt;</description></item><item><title>Legacy Content for the JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/object-store-legacy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/object-store-legacy/</guid><description>&lt;h2 id="legacy-method-for-key-creation" class="heading "&gt;Legacy method for key creation&lt;a href="#legacy-method-for-key-creation" aria-labelledby="legacy-method-for-key-creation"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.&lt;/p&gt;</description></item><item><title>Object Store Tools</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</guid><description>&lt;p&gt;S3 object store has many different tools which can be used to access and managed it. This page goes through some examples of tools.&lt;/p&gt;</description></item><item><title>The JASMIN Object Store</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/jasmin-object-store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/jasmin-object-store/</guid><description>&lt;p&gt;The JASMIN object store provides a S3 compatible storage alternative to POSIX based disk. It provides a number of advantages over traditional POSIX based storage, mainly around external accessibility due to the use of access keys and policies.&lt;/p&gt;</description></item></channel></rss>

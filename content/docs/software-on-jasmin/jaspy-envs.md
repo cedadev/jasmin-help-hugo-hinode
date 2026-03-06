@@ -59,10 +59,13 @@ In order to avoid issues with using "module load" on
 unsupported servers, please wrap the call in an "if" clause, such as:
 
 ```bash
-if [[ $(hostname) =~ (sci[0-9]|host[0-9]|cylc) ]] ; then
+if [[ $(hostname) =~ ^(sci-vm-|cylc|host)[0-9]+\. ]] ; then
     module load jaspy
 fi
 ```
+(Note: this pattern is also valid for the physical sci nodes, because for
+example, `sci-ph-01` is an alias for the `host1000` LOTUS node, which has been
+repurposed for interactive use.)
 
 ## Discover which environments are available
 
@@ -86,9 +89,9 @@ the current (default) version.
 
 Jaspy Python Environment |  Versioned list of software packages |  Default? |  Comments / Issues
 ---|---|---|---
-jaspy/3.10/v20230718 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/mf-22.11.1-4/jaspy3.10-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
-jaspy/3.11/v20240302 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240302/final_spec.yml) | No  | 
-jaspy/3.11/v20240508 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240508/final_spec.yml) | No  | 
+jaspy/3.10/v20230718 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.10/mf-22.11.1-4/jaspy3.10-mf-22.11.1-4-v20230718/final_spec.yml) | No |
+jaspy/3.11/v20240302 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240302/final_spec.yml) | No  |
+jaspy/3.11/v20240508 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240508/final_spec.yml) | No  |
 jaspy/3.11/v20240815 | [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/py3.11/mf3-23.11.0-0/jaspy3.11-mf3-23.11.0-0-v20240815/final-spec.yml) | Yes  | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 
@@ -96,9 +99,9 @@ jaspy/3.11/v20240815 | [List of packages including versions](https://github.com/
 
 Python 2.7 environments are no longer supported.
 
-### Jasr R environments
+### JasR R environments
 Environments for the "R" programming language are packaged into separate
-software environments, known as "Jasr". This table lists all the Jaspy R
+software environments, known as "JasR". This table lists all the Jaspy R
 environments provided on JASMIN and specifies the current (default) version.
 
 {{<alert alert-type="danger" >}}
@@ -112,10 +115,10 @@ Please note that this position may change at short notice as more information be
 
 {{< /alert >}}
 
-Jaspy R Environment ("Jasr") |  Versioned list of software packages|  Default?
+Jaspy R Environment ("JasR") |  Versioned list of software packages|  Default?
 ---|---|---
-jasr/4.2/v20230718  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.2/mf-22.11.1-4/jasr4.2-mf-22.11.1-4-v20230718/final_spec.yml) | No | 
-jasr/4.3/v20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240320/final_spec.yml)  | No | 
+jasr/4.2/v20230718  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.2/mf-22.11.1-4/jasr4.2-mf-22.11.1-4-v20230718/final_spec.yml) | No |
+jasr/4.3/v20240320  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240320/final_spec.yml)  | No |
 jasr/4.3/v20240815  |  [List of packages including versions](https://github.com/cedadev/ceda-jaspy-envs/blob/main/environments/r4.3/mf3-23.11.0-0/jasr4.3-mf3-23.11.0-0-v20240815/final-spec.yml)| Yes | [Release notes](https://github.com/cedadev/ceda-jaspy-envs/releases/tag/jaspy3.11_v20240815)
 {.table .table-striped}
 
@@ -125,7 +128,7 @@ The available R environments can be listed with:
 module avail jasr
 {{</command>}}
 
-## Understanding versioning with Jaspy/Jasr
+## Understanding versioning with Jaspy/JasR
 
 Jaspy environments are labelled as "jaspy/<python_version>/<release>". The
 environment is selected and activated using the "module load" command:
@@ -169,7 +172,7 @@ Multiple simultaneous environments  |  Allow multiple, but separate, software en
 Manageability  |  Provide tools to easily construct, test, deploy, document and reproduce software environments.  |  Jaspy builds upon a set of excellent Conda command-line tools that simplify the package management process. Jaspy wraps the Conda functionality so that command-line tools can be used to build, test, deploy and distribute Conda environments for use by our community.  |
 {.table .table-striped}
 
-## Updates and tracking of Jaspy/Jasr environments
+## Updates and tracking of Jaspy/JasR environments
 
 ### History of environments on JASMIN
 

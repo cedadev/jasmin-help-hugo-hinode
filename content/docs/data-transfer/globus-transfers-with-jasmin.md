@@ -4,7 +4,6 @@ aliases:
 - /article/5008-data-transfer-tools-using-the-globus-web-interface
 - gridftp-cert-based-auth
 slug: globus-transfers-with-jasmin
-collection: jasmin-documentation
 description: Globus transfers with JASMIN
 title: Globus transfers with JASMIN
 ---

@@ -25,7 +25,6 @@
 - title: interactive computing
   pages:
     - title: access from vscode
-    - title: creating a virtual environment in the notebooks service
     - title: dask gateway
     - title: graphical linux desktop access using nx
     - title: interactive computing overview   
@@ -104,6 +103,7 @@
     - title: jdma
     - title: managing a gws
     - title: nlds
+    - title: nlds step by step
     - title: object store
       pages:
         - title: jasmin object store

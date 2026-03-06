@@ -84,10 +84,6 @@ If we use the tool provided by VSCode to create these, we can customise them fur
 The following video demonstrates these steps, and the initial setup of 2 connection profiles, on Windows. But the interface
 is almost identical on Mac and Linux.
 
-{{<alert alert-type="info">}}
-Note (10 Dec 2025): Until the video below is updated to reflect the introduction of the single login service, please replace references to any individual login server with the new service name `login.jasmin.ac.uk`.
-{{</alert>}}
-
 {{< video media-id="9PDbHqq5o5M">}}
 
 Notes:

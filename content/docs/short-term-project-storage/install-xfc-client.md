@@ -67,7 +67,7 @@ The `xfc` client can be used without activating the python virtualenv by
 adding the path to the xfc client to the `$PATH$` environment variable:
 
 {{<command user="user" host="sci-vm-01">}}
-export PATH="$PATH:~/xfc_venv/bin" `
+export PATH="$PATH:~/xfc_venv/bin"
 echo 'export PATH="$PATH:~/xfc_venv/bin"' >> "$HOME/.bashrc"
 {{</command>}}
 

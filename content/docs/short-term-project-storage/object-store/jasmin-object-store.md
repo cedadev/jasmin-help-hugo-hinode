@@ -2,6 +2,9 @@
 description: The JASMIN Object Store
 title: The JASMIN Object Store
 aliases: /docs/short-term-project-storage/using-the-jasmin-object-store
+tags:
+ - s3
+ - hpos
 ---
 
 

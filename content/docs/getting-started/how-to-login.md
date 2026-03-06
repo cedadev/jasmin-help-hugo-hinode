@@ -27,7 +27,7 @@ The details of how to do this can vary depending on whether your local machine
 runs Windows, macOS or Linux.
 
 {{<alert alert-type="info">}}
-See [presenting your SSH key]({{%ref "present-ssh-key" %}}) for recommended methods
+See [Present your SSH key]({{%ref "present-ssh-key" %}}) for recommended methods
 to present your SSH key, depending on what type of machine you are using.
 {{</alert>}}
 
@@ -43,7 +43,7 @@ Assuming that you have loaded your SSH private key using one of the methods
 described above, then you can login to a login server as follows (do this on your own/local machine):
 
 {{<command user="user" host="localhost">}}
-ssh -A <user_id>@<login_server>
+ssh -A <user_id>@login.jasmin.ac.uk
 {{</command>}}
 
 For example, user `jpax` might login to a JASMIN login server with:

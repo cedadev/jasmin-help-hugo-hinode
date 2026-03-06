@@ -2,7 +2,8 @@
 aliases:
 - /article/5077-configurando-cors-for-object-store
 - /article/5077-configuring-cors-for-object-store
-description: Confguring cross-origin resource sharing (CORS) for object storage.
+- /docs/short-term-project-storage/configuring-cors-for-object-storage
+description: Configuring cross-origin resource sharing (CORS) for object storage.
 title: Configuring CORS for object storage
 ---
 

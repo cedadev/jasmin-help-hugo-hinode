@@ -107,23 +107,23 @@ run or how many CPU cores it can use.
 
 Different partitions on LOTUS have different allowed QoS as shown below:
 
-| Partition | Allowed QoS | Allowed accounts |
-| --- | --- | --- |
-| `standard` | `standard`, `short`, `long`, `high` | all GWSs |
-| `debug` | `debug` | all GWSs |
-| `special` | `special` | `special` |
+| Partition  | Allowed QoS                         | Allowed accounts |
+|------------|-------------------------------------|------------------|
+| `standard` | `standard`, `short`, `long`, `high` | all GWSs         |
+| `debug`    | `debug`                             | all GWSs         |
+| `special`  | `special`                           | `special`        |
 {.table .table-striped .w-auto}
 
 A summary of the different QoS are below:
 
-| QoS | Priority | Max CPUs per job | Max wall time | Max memory per job|
-| --- | --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours | 128 GB|
-| `short` | 550 | 1 | 4 hours | 200 GB|
-| `long` | 350 | 1 | 5 days | 128 GB|
-| `high` | 450 | 96 | 48 hours| 1000 GB|
-| `debug` | 500 | 8 | 1 hour |    N/A    |
-| `special`| 700 | 96 | 48 hours| 3000 GB|
+| QoS        | Priority | Max CPUs per job | Max wall time | Max memory per job |
+|------------|----------|------------------|---------------|--------------------|
+| `standard` | 500      | 1                | 24 hours      | 128 GB             |
+| `short`    | 550      | 1                | 4 hours       | 200 GB             |
+| `long`     | 350      | 1                | 5 days        | 128 GB             |
+| `high`     | 450      | 96               | 48 hours      | 1000 GB            |
+| `debug`    | 500      | 8                | 1 hour        | N/A                |
+| `special`  | 700      | 96               | 48 hours      | 3000 GB            |
 {.table .table-striped .w-auto}
 
 Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive and

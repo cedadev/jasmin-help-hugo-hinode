@@ -122,7 +122,7 @@ A summary of the different QoS are below:
 | `short` | 550 | 1 | 4 hours | 200 GB|
 | `long` | 350 | 1 | 5 days | 128 GB|
 | `high` | 450 | 96 | 48 hours| 1000 GB|
-| `debug` | 500 | 8 | 1 hour |    -    |
+| `debug` | 500 | 8 | 1 hour |    N/A    |
 | `special`| 700 | 96 | 48 hours| 3000 GB|
 {.table .table-striped .w-auto}
 

@@ -19,16 +19,16 @@ Users inside the STFC network (e.g. STFC staff on site, or remotely using the ST
 
 The following sci servers are available:
 
-Server name  |  Virtual/Physical |  Processor model  |  CPU Cores  |  RAM (GB)  | /tmp max per user | /tmp size | slurm cluster
----|---|---|---|---|---|---|---
-`sci-vm-01` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
-`sci-vm-02` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
-`sci-vm-03` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
-`sci-vm-04` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
-`sci-vm-05` | virtual | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8 | 32 GB | 512 MB | 80 GB virtual disk | new
-`sci-ph-01` | physical | AMD EPYC 74F3 | 48 | 2 TB | 20 GB | 2 x 446 GB SATA SSD | new
-`sci-ph-02` | physical | AMD EPYC 74F3 | 48 | 2 TB | 20 GB | 2 x 446 GB SATA SSD | new
-`sci-ph-03` | physical | AMD EPYC 9654 | 48 | 1.5 TB | 20 GB | 480 GB SATA SSD + 800 GB NvMe SSD | new
+| Server name | Virtual/Physical | Processor model                          | CPU Cores | RAM (GB) | /tmp max per user | /tmp size                         |
+|-------------|------------------|------------------------------------------|-----------|----------|-------------------|-----------------------------------|
+| `sci-vm-01` | virtual          | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8         | 32 GB    | 512 MB            | 80 GB virtual disk                |
+| `sci-vm-02` | "                | "                                        | "         | "        | "                 | "                                 |
+| `sci-vm-03` | "                | "                                        | "         | "        | "                 | "                                 |
+| `sci-vm-04` | "                | "                                        | "         | "        | "                 | "                                 |
+| `sci-vm-05` | "                | "                                        | "         | "        | "                 | "                                 |
+| `sci-ph-01` | physical         | AMD EPYC 74F3                            | 48        | 2 TB     | 20 GB             | 2 x 446 GB SATA SSD               |
+| `sci-ph-02` | "                | "                                        | "         | "        | "                 | "                                 |
+| `sci-ph-03` | "                | "                                        | "         | 1.5 TB   | "                 | 480 GB SATA SSD + 800 GB NvMe SSD |
 {.table .table-striped}
 
 ### Notes
@@ -65,6 +65,16 @@ all sci machines to control CPU and memory usage. This utility
 records the activity on the node, automatically sets limits on the resources
 available to each user. Users' processes are thus capped from
 using excessive resources, and can be slowed or have memory reduced in response to repeated violations.
+
+Below are the limits for the sci machines:
+
+| Server name  | CPU cores | Memory in GiB |
+|--------------|-----------|---------------|
+| sci-ph-01,02 | 24        | 800           |
+| sci-ph-03    | 64        | 400           |
+| sci-vm-*     | 8         | 15            |
+{.table .table-striped}
+
 
 5. **Privileges**
 

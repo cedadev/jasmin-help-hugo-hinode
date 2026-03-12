@@ -17,10 +17,11 @@ The Slurm queues in the LOTUS cluster are:
 
 - `standard`
 - `debug`
+- `special`
 
-Each queue is has attributes of run-length limits (e.g. short, long) and
+Each queue has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources, such as run time
-limits and memory limits, is shown below in Table 1.
+limits and memory limits, is shown below in Table 1. 
 
 ## Queue details
 
@@ -38,8 +39,9 @@ where `<queue_name>` is the name of the queue/partition (Table 1, column 1).
 
 | Queue name | Max run time | Default run time | Default memory per CPU |
 |------------|--------------|------------------|------------------------|
-| `standard` | 24 hrs       | 1hr              | 1GB                    |
-| `debug`    | 1 hr         | 30 mins          | 1GB                    |
+| `standard` | 24 hrs       | 1 hr             | 1 GB                   |
+| `debug`    | 1 hr         | 30 mins          | 1 GB                   |
+| `special`  | 48 hrs       | 1 hr             | 1 GB                   |
 {.table .table-striped}
 
 **Note 1:** Resources requested by a job must be within the resource
@@ -47,6 +49,15 @@ allocation limits of the selected queue.
 
 **Note 2:** If your job exceeds the default maximum run time limit then it will be
 terminated by the Slurm scheduler.
+
+{{<alert alert-type="info">}}
+**New Slurm partition `special` (March 2026)**
+
+A new set of high memory nodes was added to the cluster LOTUS. 
+Each node has 6TB of physical memory and 192 CPU cores. 
+A new partition called `special` is able to submit jobs to the new set of nodes, 
+with access controlled by [the `lotus-special` service](https://accounts.jasmin.ac.uk/services/additional_services/lotus-special/).
+{{</alert>}}
 
 ## State of queues
 
@@ -96,24 +107,27 @@ run or how many CPU cores it can use.
 
 Different partitions on LOTUS have different allowed QoS as shown below:
 
-| Partition | Allowed QoS |
-| --- | --- |
-| `standard` | `standard`, `short`, `long`, `high` |
-| `debug` | `debug` |
+| Partition  | Allowed QoS                         | Allowed accounts |
+|------------|-------------------------------------|------------------|
+| `standard` | `standard`, `short`, `long`, `high` | all GWSs         |
+| `debug`    | `debug`                             | all GWSs         |
+| `special`  | `special`                           | `special`        |
 {.table .table-striped .w-auto}
 
 A summary of the different QoS are below:
 
-| QoS | Priority | Max CPUs per job | Max wall time |
-| --- | --- | --- | --- |
-| `standard` | 500 | 1 | 24 hours |
-| `short` | 550 | 1 | 4 hours |
-| `long` | 350 | 1 | 5 days |
-| `high` | 450 | 96 | 2 days |
-| `debug` | 500 | 8 | 1 hour |
+| QoS        | Priority | Max CPUs per job | Max wall time | Max memory per job |
+|------------|----------|------------------|---------------|--------------------|
+| `standard` | 500      | 1                | 24 hours      | 128 GB             |
+| `short`    | 550      | 1                | 4 hours       | 200 GB             |
+| `long`     | 350      | 1                | 5 days        | 128 GB             |
+| `high`     | 450      | 96               | 48 hours      | 1000 GB            |
+| `debug`    | 500      | 8                | 1 hour        | N/A                |
+| `special`  | 700      | 96               | 48 hours      | 3000 GB            |
 {.table .table-striped .w-auto}
 
-Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive.
+Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive and
+specify the memory required in the `--mem=` directive.
 
 ## How to choose a QoS
 

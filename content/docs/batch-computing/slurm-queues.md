@@ -104,8 +104,8 @@ run or how many CPU cores it can use.
 
 Different partitions on LOTUS have different allowed QoS as shown below:
 
-| Partition | Allowed QoS | Allowed accounts
-| --- | --- |
+| Partition | Allowed QoS | Allowed accounts |
+| --- | --- | --- |
 | `standard` | `standard`, `short`, `long`, `high` | all GWSs |
 | `debug` | `debug` | all GWSs |
 | `special` | `special` | `special` |

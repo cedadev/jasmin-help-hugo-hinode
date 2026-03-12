@@ -20,14 +20,14 @@ Currently, checksit can:
 
 - use spec files and define rules against which to check files
 - check a file against a given template file
-- check for compliance against `NCAS-GENERAL-2.0.0` and `NCAS-IMAGE-1.0` standards
+- check for compliance against `NCAS-GENERAL`, `NCAS-RADAR`, and `NCAS-IMAGE` standards
+- check files from the European Space Agency Climate Change Initiative
 - output in either "standard" mode or a one line "compact" mode
 - summarise output from multiple "compact" mode file checks
 
 Work in progress includes:
 
-- check for compliance against other NCAS standards (e.g. `NCAS-RADAR`)
-- check against future versions of standards (`NCAS-GENERAL-2.1.0` and `NCAS-IMAGE-1.1`)
+- check against future versions of NCAS standards
 - allow user defined specs and rules
 - Visit the GitHub repository linked at the bottom of this page for further information on what is being worked on.
 

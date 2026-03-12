@@ -66,6 +66,16 @@ records the activity on the node, automatically sets limits on the resources
 available to each user. Users' processes are thus capped from
 using excessive resources, and can be slowed or have memory reduced in response to repeated violations.
 
+Below are the limits for the sci machines:
+
+| Server name  | CPU cores | Memory in GiB |
+|--------------|-----------|---------------|
+| sci-ph-01,02 | 24        | 800           |
+| sci-ph-03    | 64        | 400           |
+| sci-vm-*     | 8         | 15            |
+{.table .table-striped}
+
+
 5. **Privileges**
 
 Users are **not permitted to execute commands which require

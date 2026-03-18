@@ -119,11 +119,13 @@ kernels, all older versions are also available. To use an older version:
 1. Open a terminal in JupyterLab (File → New → Terminal)
 2. Run `conda env list` to see all available Jaspy and JasR environments
 3. Activate the environment you want: `conda activate <environment-name>`
-4. Install it as a kernel: `python -m ipykernel install --user --name <kernel-name>`
+4. Register it as a kernel: `register-kernel`
 
 The kernel will then appear in your list of available kernels and persist across
 sessions. These older versions are maintained for the same period as they are
 available on the scientific analysis servers.
+
+If you previously registered a conda environment as a kernel using `python -m ipykernel install`, and are having package loading problems, see [My conda environment kernel doesn't find packages](#my-conda-environment-kernel-doesnt-find-packages-that-are-installed-in-the-environment) for an explanation and fix.
 
 ### Using Julia
 The notebook service has `juliaup` installed, which can be used to provision
@@ -259,6 +261,18 @@ your user-installed packages and should allow you to access your notebooks.
 This will remove all user-installed Python packages. If you had custom packages
 you need, reinstall them in a proper virtual environment instead of your home
 directory.
+
+#### My conda environment kernel doesn't find packages that are installed in the environment
+
+When a conda environment is registered as a kernel using `python -m ipykernel install`, the conda activation scripts are not run when the kernel starts. This means environment variables set during `conda activate`, which many packages rely on, are missing. As a result, packages installed in the environment may not be found, or the wrong Python interpreter may be used.
+
+The fix is to use `conda run` to launch the kernel, which properly activates the environment. The `register-kernel` script does this automatically. Note that `mamba run` is NOT supported- it has file locking problems that cause kernel failures. To fix an affected kernel, activate the environment in a terminal and run:
+
+```bash
+register-kernel
+```
+
+This updates the kernel spec in place and does not affect your installed packages.
 
 ## Example Notebooks
 

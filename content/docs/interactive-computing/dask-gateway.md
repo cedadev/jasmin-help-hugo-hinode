@@ -22,7 +22,7 @@ The `jasmin-login` access role ensures that your account is set up with access t
 
 ## Creating a Dask cluster
 
-### In the JASMIN Notebooks service
+### In the JASMIN Notebook Service
 
 In the {{<link "jasmin_notebooks_service">}}JASMIN notebooks service{{</link>}}, authentication to `dask-gateway` happens automatically. You can use the snippet below to create a cluster and get a Dask client which you can use:
 
@@ -65,7 +65,7 @@ cluster.shutdown()
 The following explains how to use the Dask Gateway elsewhere on JASMIN, for example, on the `sci` machines.
 
 {{<alert alert-type="info">}}
-It is not necessary to do this if you only want to use Dask in the JASMIN notebook service.
+It is not necessary to do this if you only want to use Dask in the JASMIN Notebook Service.
 {{</alert>}}
 
 At the current time, it is still necessary to use the notebooks service to generate an API token to allow you to connect to the gateway server.
@@ -117,12 +117,13 @@ To get the link to your Dask dashboard, run the following:
 print(client.dashboard_link)
 ```
 
-Currently the Dask dashboard is not accessible from a browser outside the JASMIN firewall. If your browser fails to load the dashboard link returned,
-please use our [graphical desktop service]({{% ref "graphical-linux-desktop-access-using-nx" %}}) to run a Firefox browser inside the firewall to view your dashboard.
+When using the JASMIN Notebooks service, this link will work directly in your browser — the dashboard is proxied through the notebook service and protected by your JASMIN login.
+
+If you are using Dask Gateway from outside the notebook service (e.g. on a sci machine), the dashboard link will not be accessible from outside the JASMIN firewall. In that case, use our [graphical desktop service]({{% ref "graphical-linux-desktop-access-using-nx" %}}) to run a browser inside the firewall.
 
 ## Use a custom Python environment
 
-By default the JASMIN Notebooks service and Dask Gateway use the latest version of the `jaspy` software environment. However, users often need custom software environments for specific packages or versions.
+By default the JASMIN Notebook Service and Dask Gateway use the latest version of the `jaspy` software environment. However, users often need custom software environments for specific packages or versions.
 
 ### Creating a cross-compatible virtual environment
 

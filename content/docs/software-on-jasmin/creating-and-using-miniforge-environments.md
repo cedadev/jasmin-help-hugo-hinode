@@ -296,13 +296,16 @@ mamba create -n myenv ipykernel
 mamba install -n myenv numpy pandas matplotlib
 ```
 
-4. Register it as a kernel:
+4. Activate the environment and register it as a kernel:
 
 ```bash
-mamba run -n myenv python -m ipykernel install --user --name myenv
+conda activate myenv
+register-kernel
 ```
 
 The kernel will then appear in your list of available kernels in JupyterLab.
+
+If you previously registered a conda environment as a kernel using `python -m ipykernel install` or `mamba run`, see [this FAQ entry]({{% ref "jasmin-notebooks-service" %}}#my-conda-environment-kernel-doesnt-find-packages-that-are-installed-in-the-environment) for an explanation and fix.
 
 **Note:** Conda environments are generally larger and more complex than Python
 virtual environments. For simple package additions to Jaspy, consider using
@@ -321,7 +324,7 @@ location under your home directory. It is possible to change this, but note
 that a conda environment can have tens of thousands of files and that group
 workspaces on JASMIN will generally perform poorly for this use case. If you
 need to make a conda environment which is shared with collaborators, you may
-need to request a {{<link "share-software-envs">}}small files GWS{{</link>}}{{< ref "" >}} as
+need to request a {{<link "share-software-envs">}}small files GWS{{</link>}} as
 these will give better performance.
 
 If you are creating a conda environment for very short-term testing only, you

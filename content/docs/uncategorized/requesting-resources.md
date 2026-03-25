@@ -15,7 +15,7 @@ title: Requesting resources
 
 ## How projects and resources are managed
 
-Resouces on JASMIN, such as storage and compute, are allocated to science
+Resources on JASMIN, such as storage and compute, are allocated to science
 communities separated into "consortia". Each consortium has a manager: a
 representative of that science community who is in touch with its major
 activities and understands the resource requirements for projects in that
@@ -40,15 +40,15 @@ to:
 
 Usually, you would only need to access the projects portal if you are:
 
-- the Principal Investigator (or their delegated project manager) for a project
+- **the Principal Investigator** (or their delegated project manager) for a project
   - to document requirements for a project
   - to invite other individuals (with a JASMIN account) who may wish to view and/or discuss the requirements
-- a consortium manager
+- **a consortium manager**
   - to review/approve resource requirements
 
-**Note: Please do not make requests yourself unless you are involved in the
+{{<alert alert-type="info">}}Please do not make requests yourself unless you are involved in the
 management of the project: speak to the project or group workspace (GWS)
-manager and ask them to make the request.**
+manager and ask them to make the request.{{</alert>}}
 
 These users need to log in with their JASMIN account credentials, the same as
 those used for the JASMIN accounts portal. 2-factor authentication is in use,
@@ -86,12 +86,10 @@ A project can have several Services, such as:
 To add the services needed for the project:
 
 - in the panel on the right, click "Add Service"
-- select the category of service required: in this case, we're making requirements for a group workspace, but the available options are: 
+- select the category of service required: in this case:
   - **Group Workspace** (for shared disk storage for a project)
-  - **External Tenancy VIO** (for an external cloud tenancy on the VIO cloud platform)
-  - **Managed Tenancy VIO** (for a managed cloud tenancy on the VIO cloud platform)
-  - (please do not use the "... Tenancy **MCP** " options as these will soon be removed)
-- provide a short name for the service
+  - (further options representing cloud services on our new platform will be added soon)
+- provide a short name for the service (no spaces or special characters. DON'T include "gws")
 - click "create".
 
 {{<image src="img/docs/requesting-resources/file-bo7r6lG1NA.png" caption="">}}
@@ -114,6 +112,11 @@ but you could also request:
 - PFS (parallel file system, by special request if certain workflows specifically need this)
 - SSD (Solid State Disk), used for "small files" or "SMF" volumes for storing code or virtual environments to share within a GWS.
 
+{{<alert alert-type="info">}}
+- JASMIN is currently undergoing a major storage migration. Until this complete, please consider the "regular" GWS storage to be "SOF" and use this for your request. We will assign it to the new type of storage for you, and update details in due course.
+- The units of storage are **GB** (gigabytes), so 5 TB (terabytes) would be **5000 GB** - please check you have used the correct units
+{{</alert>}}
+
 It is assumed that you've considered carefully how you will do your work on
 JASMIN, with some knowledge of its services and components. You may find the
 following helpful:
@@ -129,9 +132,14 @@ end dates and status. This one is "REQUESTED".
 
 {{<image src="img/docs/requesting-resources/file-gKtZB9giSE.png" caption="">}}
 
-Click "Submit for review" and the manager of the relevant consortium will be
+**Confirm** each set of requirements in its popup window, then **click "Submit for review" on the main form** in order to submit the request.
+The manager of the relevant consortium will then be
 notified that they need to review the request, with status updated to
 "REQUESTED".
+
+{{<alert alert-type="danger">}}
+Don't forget to click **"Submit for review"** once all requirements are confirmed, or your request will not be processed!
+{{</alert>}}
 
 Only a user with "OWNER" status on a project can submit the project for
 review. It's best if one person coordinates with the consortium manager once

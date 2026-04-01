@@ -5,7 +5,7 @@
     Access-Control-Allow-Origin = '*'
     Content-Security-Policy = """
         base-uri 'self'; \
-        connect-src 'self' *.analytics.google.com *.google.com *.google-analytics.com *.googletagmanager.com d3hb14vkzrxvla.cloudfront.net beaconapi.helpscout.net; \
+        connect-src 'self' *.analytics.google.com *.google.com *.google-analytics.com *.googletagmanager.com d3hb14vkzrxvla.cloudfront.net beaconapi.helpscout.net *.civiccomputing.com; \
         default-src 'none'; \
         font-src 'self' fonts.gstatic.com data:; \
         form-action 'self'; \
@@ -14,7 +14,7 @@
         manifest-src 'self'; \
         media-src 'self'; \
         object-src 'none'; \
-        script-src-elem 'self' 'unsafe-inline' *.google.com *.myfonts.net *.helpscout.net; \
+        script-src-elem 'self' 'unsafe-inline' *.googletagmanager.com *.google.com *.myfonts.net *.helpscout.net; \
         script-src 'self' 'unsafe-inline' *.google-analytics.com *.googletagmanager.com *.analytics.google.com googletagmanager.com tagmanager.google.com *.google.com player.vimeo.com; \
         style-src-elem 'unsafe-inline' 'self' *.google.com fonts.googleapis.com *.myfonts.net; \
         style-src 'self' googletagmanager.com tagmanager.google.com *.google.com fonts.googleapis.com www.youtube.com; \

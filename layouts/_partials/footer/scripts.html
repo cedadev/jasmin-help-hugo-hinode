@@ -209,3 +209,42 @@
 <!-- helpscout beacon -->
 <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
 <script type="text/javascript">window.Beacon('init', 'a108cc24-88df-4d59-9e84-17ba328fc105')</script>
+
+<!-- civic cookie control-->
+<script>
+    var config = {
+    apiKey: '94659ce343c70fcc0e2b702a8aeb52f594aefb67',
+    product: 'PRO_MULTISITE',
+    position: 'left',
+    //ccCookie: 'cookiecontrol-ceda',
+    subdomains: false,
+
+    statement : {
+        url: '/privacy-and-cookies/',
+        updated : '05/12/2024' // need DD/MM/YYYY format (inc trailing zeros)
+    },
+
+    necessaryCookies: [],
+
+    optionalCookies: [
+        {
+            name: 'analytics',
+            label: 'Google Analytics',
+            description: 'Analytical cookies help us to improve our website by collecting and reporting information on its usage.',
+            cookies: ['_ga', '_ga*', '_gid', '_gat', '__utma', '__utmt', '__utmb', '__utmc', '__utmz', '__utmv'],
+                onAccept: function(){
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                    });
+                },
+                onRevoke: function(){
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'denied'
+                    });
+                }
+        }
+    ]
+    }
+
+    CookieControl.load( config );
+    </script>

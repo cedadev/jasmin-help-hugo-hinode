@@ -92,7 +92,5 @@ defaultContentLanguageInSubdir = false
        output = '{server}'
 
 [module]
-  #[[module.imports]]
-  #  path = "github.com/gethinode/mod-cookieyes/v2"
   [[module.imports]]
     path = "github.com/gethinode/hinode"

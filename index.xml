@@ -366,7 +366,20 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access &lt;
 
  &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0"&gt;SSH&lt;/abbr&gt;
 
-.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Workstations</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</guid><description>&lt;p&gt;&lt;strong&gt;The Linux Workstation platform&lt;/strong&gt; provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. These are aimed at:&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading "&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
+.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Workstations</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-workstation/</guid><description>&lt;p&gt;&lt;strong&gt;The Linux Workstation platform&lt;/strong&gt; provides a versatile cloud-based instance running Ubuntu 22.04. Users can access the graphical desktop environment or the command-line interface through a web browser. These are aimed at:&lt;/p&gt;</description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading "&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The Slurm queues in the LOTUS cluster are:&lt;/p&gt;</description></item><item><title>Get a login account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-login-account/</guid><description>&lt;h2 id="get-a-login-account" class="heading "&gt;Get a login account&lt;a href="#get-a-login-account" aria-labelledby="get-a-login-account"&gt;
 
 
 
@@ -436,7 +449,24 @@ Users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role can access &lt;
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;the LOTUS batch cluster&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Login problems</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</guid><description>&lt;p&gt;Having problems connecting to a host on JASMIN? Details of how to login to
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;the LOTUS batch cluster&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;h2 id="what-is-a-batch-job" class="heading "&gt;What is a batch job?&lt;a href="#what-is-a-batch-job" aria-labelledby="what-is-a-batch-job"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;A batch job is a task that, once submitted to the scheduler, can run without further interaction
+from the user. A user writes a script containing both the
+command(s) to be run and directives for the scheduler as to how the job should be run.
+The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
+this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p&gt;</description></item><item><title>Login problems</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/</guid><description>&lt;p&gt;Having problems connecting to a host on JASMIN? Details of how to login to
 JASMIN can be found 
  
 
@@ -500,7 +530,23 @@ environment.&lt;/p&gt;</description></item><item><title>Graphical linux desktop 
  &lt;div class="flex-grow-1 my-auto"&gt;
  &lt;p&gt;&lt;strong&gt;Update 5 Nov 2025&lt;/strong&gt;: Recent updates to the service
 software mean that while the &lt;strong&gt;agent&lt;/strong&gt; method should now work for all platforms (Mac,
-Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>Platforms In Depth - JupyterHub, DaskHub, BinderHub</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</guid><description>&lt;h2 id="jupyterhub" class="heading "&gt;JupyterHub&lt;a href="#jupyterhub" aria-labelledby="jupyterhub"&gt;
+Windows 11 and Linux), the &lt;strong&gt;key&lt;/strong&gt; method may not.&lt;/p&gt;</description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading "&gt;Job information&lt;a href="#job-information" aria-labelledby="job-information"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Information on all running and pending batch jobs managed by Slurm can be
+obtained from the Slurm command &lt;code&gt;squeue&lt;/code&gt;. Note that information on completed
+jobs is only retained for a limited period. Information on jobs that ran in
+the past is via &lt;code&gt;sacct&lt;/code&gt;. A (simplified) example of the output &lt;code&gt;squeue&lt;/code&gt; is shown below.&lt;/p&gt;</description></item><item><title>Platforms In Depth - JupyterHub, DaskHub, BinderHub</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-jupyterhub/</guid><description>&lt;h2 id="jupyterhub" class="heading "&gt;JupyterHub&lt;a href="#jupyterhub" aria-labelledby="jupyterhub"&gt;
 
 
 
@@ -520,7 +566,22 @@ research. It allows users access to a consistent computing environment from any 
 efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.&lt;/p&gt;</description></item><item><title>How to contact us about JASMIN issues</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-contact-us-about-jasmin-issues/</guid><description>&lt;p&gt;If you are experiencing difficulties or slow performance and are unsure why,
 please first consult all relevant documentation, then if needed, contact our Helpdesk
 using the help beacon below, but please include the following
-information with your initial query:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading "&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
+information with your initial query:&lt;/p&gt;</description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;h2 id="what-is-an-mpi-parallel-job" class="heading "&gt;What is an MPI parallel job?&lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;An MPI parallel job runs on more than one core and more than one host using
+the Message Passing Interface (MPI) library for communication between all
+cores. A simple script, such as the one given below could be saved as &lt;code&gt;my_script_name.sbatch&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Scientific analysis servers</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/sci-servers/</guid><description>&lt;h2 id="intro" class="heading "&gt;Intro&lt;a href="#intro" aria-labelledby="intro"&gt;
 
 
 
@@ -599,7 +660,22 @@ The sci servers are not directly accessible outside the firewall of the STFC net
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading "&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is updated regularly to announce or track current and upcoming incidents which may affect JASMIN and CEDA services. Please check for known incidents or announced shceduled maintenance before contacting the helpdesk.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading "&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p&gt;</description></item><item><title>Example Job 2: Calculating MD5 Checksums on many files</title><link>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</guid><description>&lt;p&gt;This page records some early CEDA usage of the LOTUS cluster for various
+relatively simple tasks. Others may wish to use these examples as a starting
+point for developing their own workflows on LOTUS.&lt;/p&gt;</description></item><item><title>JASMIN training accounts</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-training-accounts/</guid><description>&lt;h2 id="what-are-training-accounts" class="heading "&gt;What are training accounts?&lt;a href="#what-are-training-accounts" aria-labelledby="what-are-training-accounts"&gt;
 
 
 
@@ -673,7 +749,26 @@ they can be used.&lt;/p&gt;
 
 
 &lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>tips-for-new-users</title><link>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</guid><description>&lt;p&gt;These tips for new users are based on users&amp;rsquo; queries encountered by our helpdesk. They are not exhaustive but may help solve some initial problems and set out best practice.&lt;/p&gt;</description></item><item><title>How to login</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</guid><description>&lt;p&gt;The instructions below cover the process of logging in using a terminal client
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading "&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;LOTUS is a cluster of over 260 nodes/hosts and over 53,000 CPU cores. A node/host is
+an individual computer in the cluster with more than 1 processor. Each
+node/host belongs to a specific host group. The exact number of cores available varies
+as occasionally nodes/hosts are taken
+out of the cluster for special purposes. The number of processors (CPUs or
+cores) per host is listed in Table 1 with the corresponding processor model
+and the size of the physical memory RAM available per node/host.&lt;/p&gt;</description></item><item><title>tips-for-new-users</title><link>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/tips-for-new-users/</guid><description>&lt;p&gt;These tips for new users are based on users&amp;rsquo; queries encountered by our helpdesk. They are not exhaustive but may help solve some initial problems and set out best practice.&lt;/p&gt;</description></item><item><title>How to login</title><link>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/how-to-login/</guid><description>&lt;p&gt;The instructions below cover the process of logging in using a terminal client
 only. For a graphical Linux desktop, please see alternative instructions using
 
  
@@ -713,7 +808,85 @@ Project-specific servers are no longer provided on request, as most use cases ca
 a tenancy in the JASMIN cloud.
  &lt;/div&gt;
  &lt;/div&gt;
-&lt;p&gt;This article introduces the project specific servers. It covers:&lt;/p&gt;</description></item><item><title>Multiple account types</title><link>https://help.jasmin.ac.uk/docs/getting-started/multiple-account-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/multiple-account-types/</guid><description>&lt;p&gt;This article defines the types of account available on JASMIN and their
+&lt;p&gt;This article introduces the project specific servers. It covers:&lt;/p&gt;</description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading "&gt;Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ &lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow"&gt;Slurm&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the job scheduler deployed on JASMIN. It
+allows users to submit, monitor, and control jobs on the 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;LOTUS&lt;/a&gt; (CPU)
+and 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/"&gt;ORCHID&lt;/a&gt; (GPU) clusters.&lt;/p&gt;</description></item><item><title>Multiple account types</title><link>https://help.jasmin.ac.uk/docs/getting-started/multiple-account-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/multiple-account-types/</guid><description>&lt;p&gt;This article defines the types of account available on JASMIN and their
 purpose. It covers:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;STANDARD accounts (with note about training accounts)&lt;/li&gt;
@@ -740,7 +913,29 @@ purpose. It covers:&lt;/p&gt;
 &lt;/h2&gt;
 &lt;p&gt;For some time, we have been asked by user communities to cater for legitimate
 use cases where accounts need to be shared by a small, known and pre-arranged
-set of users, or by services or functions.&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+set of users, or by services or functions.&lt;/p&gt;</description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p&gt;The 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+ &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/jasmin-status#jasmin-dashboard"&gt;JASMIN dashboard&lt;/a&gt; includes an overview of:
+LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p&gt;</description></item><item><title>Access from VSCode</title><link>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/interactive-computing/access-from-vscode/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1564,9 +1759,7 @@ links to articles that describe them in more detail.&lt;/p&gt;</description></it
 
  &lt;/div&gt;
  &lt;/div&gt;
-&lt;p&gt;This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p&gt;</description></item><item><title>Example Job 2: Calculating MD5 Checksums on many files</title><link>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/example-job-2-calc-md5s/</guid><description>&lt;p&gt;This page records some early CEDA usage of the LOTUS cluster for various
-relatively simple tasks. Others may wish to use these examples as a starting
-point for developing their own workflows on LOTUS.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQ</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -1918,55 +2111,7 @@ methods:&lt;/p&gt;</description></item><item><title>GWS Scanner</title><link>htt
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;To access data held in the Met Office MASS archive, you will need:&lt;/p&gt;</description></item><item><title>How to monitor Slurm jobs</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-monitor-slurm-jobs/</guid><description>&lt;h2 id="job-information" class="heading "&gt;Job information&lt;a href="#job-information" aria-labelledby="job-information"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;Information on all running and pending batch jobs managed by Slurm can be
-obtained from the Slurm command &lt;code&gt;squeue&lt;/code&gt;. Note that information on completed
-jobs is only retained for a limited period. Information on jobs that ran in
-the past is via &lt;code&gt;sacct&lt;/code&gt;. A (simplified) example of the output &lt;code&gt;squeue&lt;/code&gt; is shown below.&lt;/p&gt;</description></item><item><title>How to submit a job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-a-job/</guid><description>&lt;h2 id="what-is-a-batch-job" class="heading "&gt;What is a batch job?&lt;a href="#what-is-a-batch-job" aria-labelledby="what-is-a-batch-job"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;A batch job is a task that, once submitted to the scheduler, can run without further interaction
-from the user. A user writes a script containing both the
-command(s) to be run and directives for the scheduler as to how the job should be run.
-The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term &amp;ldquo;job&amp;rdquo; is used throughout
-this documentation to mean a &amp;ldquo;batch job&amp;rdquo;.&lt;/p&gt;</description></item><item><title>How to submit an MPI parallel job</title><link>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/how-to-submit-an-mpi-parallel-job/</guid><description>&lt;h2 id="what-is-an-mpi-parallel-job" class="heading "&gt;What is an MPI parallel job?&lt;a href="#what-is-an-mpi-parallel-job" aria-labelledby="what-is-an-mpi-parallel-job"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;An MPI parallel job runs on more than one core and more than one host using
-the Message Passing Interface (MPI) library for communication between all
-cores. A simple script, such as the one given below could be saved as &lt;code&gt;my_script_name.sbatch&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading "&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
+&lt;p&gt;To access data held in the Met Office MASS archive, you will need:&lt;/p&gt;</description></item><item><title>IDL</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/idl/</guid><description>&lt;h2 id="what-is-idl" class="heading "&gt;What is IDL?&lt;a href="#what-is-idl" aria-labelledby="what-is-idl"&gt;
 
 
 
@@ -2248,26 +2393,7 @@ for more information about using JDMA.&lt;/strong&gt;&lt;/p&gt;</description></i
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.&lt;/p&gt;</description></item><item><title>LOTUS cluster specification</title><link>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/lotus-cluster-specification/</guid><description>&lt;h2 id="current-cluster-specification" class="heading "&gt;Current cluster specification&lt;a href="#current-cluster-specification" aria-labelledby="current-cluster-specification"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;LOTUS is a cluster of over 260 nodes/hosts and over 53,000 CPU cores. A node/host is
-an individual computer in the cluster with more than 1 processor. Each
-node/host belongs to a specific host group. The exact number of cores available varies
-as occasionally nodes/hosts are taken
-out of the cluster for special purposes. The number of processors (CPUs or
-cores) per host is listed in Table 1 with the corresponding processor model
-and the size of the physical memory RAM available per node/host.&lt;/p&gt;</description></item><item><title>Managing a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</guid><description>&lt;p&gt;This article explains the responsibilities of the Group Workspace (GWS)
+&lt;p&gt;This is the old way of creating keys which still works, but the new way above is accessible outside JASMIN on the public internet.&lt;/p&gt;</description></item><item><title>Managing a GWS</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/managing-a-gws/</guid><description>&lt;p&gt;This article explains the responsibilities of the Group Workspace (GWS)
 manager.&lt;/p&gt;
 
 
@@ -2491,20 +2617,7 @@ serve the growing demand for storage in the most cost effective manner.&lt;/p&gt
  &lt;svg class="svg-inline--fa fa fa-lightbulb fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 384 512"&gt;&lt;use href="#fa-lightbulb"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
  &lt;div class="flex-grow-1 my-auto"&gt;
  &lt;p&gt;In January 2026, we introduced a a simpler method of setting up the NLDS
-client on JASMIN.&lt;/p&gt;</description></item><item><title>Object Store Tools</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</guid><description>&lt;p&gt;S3 object store has many different tools which can be used to access and managed it. This page goes through some examples of tools.&lt;/p&gt;</description></item><item><title>Orchid GPU cluster</title><link>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/</guid><description>&lt;h2 id="gpu-cluster-spec" class="heading "&gt;GPU cluster spec&lt;a href="#gpu-cluster-spec" aria-labelledby="gpu-cluster-spec"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The JASMIN GPU cluster is composed of 16 GPU nodes:&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+client on JASMIN.&lt;/p&gt;</description></item><item><title>Object Store Tools</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/object-store/s3-tools/</guid><description>&lt;p&gt;S3 object store has many different tools which can be used to access and managed it. This page goes through some examples of tools.&lt;/p&gt;</description></item><item><title>Postgres databases on request</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/postgres-databases-on-request/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
 
 
 
@@ -3013,120 +3126,7 @@ environments already available on the system. See the
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt; for examples of these.&lt;/p&gt;</description></item><item><title>Slurm queues</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-queues/</guid><description>&lt;h2 id="queue-names" class="heading "&gt;Queue names&lt;a href="#queue-names" aria-labelledby="queue-names"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The Slurm queues in the LOTUS cluster are:&lt;/p&gt;</description></item><item><title>Slurm quick reference</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-quick-reference/</guid><description>&lt;h2 id="slurm-scheduler" class="heading "&gt;Slurm Scheduler&lt;a href="#slurm-scheduler" aria-labelledby="slurm-scheduler"&gt;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://slurm.schedmd.com/" target="_blank" rel="noopener noreferrer nofollow"&gt;Slurm&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; is the job scheduler deployed on JASMIN. It
-allows users to submit, monitor, and control jobs on the 
- 
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
- 
-
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/lotus-overview/"&gt;LOTUS&lt;/a&gt; (CPU)
-and 
- 
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
- 
-
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/batch-computing/orchid-gpu-cluster/"&gt;ORCHID&lt;/a&gt; (GPU) clusters.&lt;/p&gt;</description></item><item><title>Slurm status</title><link>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/batch-computing/slurm-status/</guid><description>&lt;p&gt;The 
- 
-
-
-
-
-
-
-
-
-
- 
-
-
- 
- 
-
- 
- 
-
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/jasmin-status#jasmin-dashboard"&gt;JASMIN dashboard&lt;/a&gt; includes an overview of:
-LOTUS queues/partitions status, including the number of running/completed/pending jobs and further information about the usage of the LOTUS and ORCHID clusters.&lt;/p&gt;</description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p&gt;JASMIN is a large platform where a range of software tools, packages and
+ &lt;a href="https://help.jasmin.ac.uk/docs/software-on-jasmin/jaspy-envs/"&gt;Jaspy page&lt;/a&gt; for examples of these.&lt;/p&gt;</description></item><item><title>Software Overview</title><link>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/software-on-jasmin/software-overview/</guid><description>&lt;p&gt;JASMIN is a large platform where a range of software tools, packages and
 environments are available. Many users employ software already installed on
 JASMIN whilst some need to install their own tools for a particular purpose.&lt;/p&gt;</description></item><item><title>Test doc</title><link>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/uncategorized/test-doc/</guid><description>&lt;p&gt;Test page showing additional features.
 Notes:&lt;/p&gt;

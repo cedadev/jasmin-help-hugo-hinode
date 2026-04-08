@@ -38,16 +38,16 @@
 
 - title: batch computing
   pages:
-    - title: example job 2 calc md5s
-    - title: how to monitor slurm jobs
-    - title: how to submit a job
-    - title: how to submit an mpi parallel job
-    - title: lotus cluster specification
     - title: lotus overview
-    - title: orchid gpu cluster
-    - title: slurm queues
-    - title: slurm quick reference
     - title: slurm scheduler overview
+    - title: slurm queues
+    - title: how to submit a job
+    - title: how to monitor slurm jobs
+    - title: how to submit an mpi parallel job
+    - title: orchid gpu cluster
+    - title: example job 2 calc md5s
+    - title: lotus cluster specification
+    - title: slurm quick reference
     - title: slurm status
 
 - title: software on jasmin

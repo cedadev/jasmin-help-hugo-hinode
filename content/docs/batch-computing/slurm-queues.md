@@ -9,6 +9,7 @@ tags:
 - lotus
 - orchid
 title: Slurm queues
+weight: 30
 ---
 
 ## Queue names
@@ -21,7 +22,7 @@ The Slurm queues in the LOTUS cluster are:
 
 Each queue has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources, such as run time
-limits and memory limits, is shown below in Table 1. 
+limits and memory limits, is shown below in Table 1.
 
 ## Queue details
 
@@ -127,7 +128,7 @@ A summary of the different QoS are below:
 {.table .table-striped .w-auto}
 
 Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive and
-specify the memory required in the `--mem=` directive.
+specify the memory required in the `--mem` directive.
 
 ## How to choose a QoS
 

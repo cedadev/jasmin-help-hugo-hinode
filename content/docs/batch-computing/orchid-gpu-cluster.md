@@ -5,6 +5,7 @@ aliases:
 description: Details of JASMIN's GPU cluster, ORCHID
 title: Orchid GPU cluster
 type: docs
+weight: 70
 ---
 
 ## GPU cluster spec

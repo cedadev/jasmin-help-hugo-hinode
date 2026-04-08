@@ -3,6 +3,7 @@ aliases: /article/3836-example-job-2-calc-md5s
 description: 'Sample workflows for LOTUS'
 slug: example-job-2-calc-md5s
 title: 'Example Job 2: Calculating MD5 Checksums on many files'
+weight: 80
 ---
 
 This page records some early CEDA usage of the LOTUS cluster for various

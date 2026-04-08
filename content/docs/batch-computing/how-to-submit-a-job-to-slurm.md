@@ -177,6 +177,39 @@ srun hostname
 
 -->
 
+### Interactive partition on LOTUS
+
+{{<alert alert-type="info">}}
+**New Slurm partition `inter` (March 2026)**
+
+It is possible now to work interactively on LOTUS in a similar way to being on a `sci` server, but with guaranteed resources via the new and high priority interactive partition.
+{{</alert>}}
+
+The new interactive partition has three runtime limits defined in QoS:
+- `inter` (3hrs)
+- `inter4h` (4hrs)
+- `inter6h` (6hrs).
+
+For convenience, three corresponding aliases have been set up: `inter` , `inter4`, and `inter6` to access the new partition with a specific Slurm job accounting/GWS membership.
+
+For example:
+
+{{<command host="sci-vm-02" user="user">}}
+inter --account=<GWS-name-membership>
+(out)salloc: Pending job allocation 1410784
+(out)salloc: job 1410784 queued and waiting for resources
+(out)salloc: job 1410784 has been allocated resources
+(out)salloc: Granted job allocation 1410784
+(out)salloc: Nodes host1182 are ready for job
+exit
+(out)salloc: Relinquishing job allocation 1410780
+{{</command>}}
+
+Notes:
+
+1. It is possible to SSH to the allocated LOTUS compute node (`host1182.jc.rl.ac.uk` in this example) from another terminal session from a `sci` server e.g. `ssh host1182.jc.rl.ac.uk`. Please note that exiting the interactive session will terminate all other SSH sessions on the allocated node.
+2. VSCode can be run within the interactive job session. This provides better control of memory resources compared to running VSCode on a `sci` server.
+
 ## Job array submission
 
 Job arrays are groups of jobs with the same executable and resource

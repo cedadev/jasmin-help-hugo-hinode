@@ -8,7 +8,7 @@ weight: 30
 
 ## JASMIN Accounts Portal
 
-The {{<link "jasmin_accounts_portal">}}JASMIN Accounts Portal{{</link>}} is where you manage your JASMIN account, apply for access to JASMIN services such as SSH access, and if you are a service manager or deputy, manage access to those services.
+The {{<link "jasmin_accounts_portal">}}JASMIN Accounts Portal{{</link>}} is where you manage your JASMIN account, apply for access to JASMIN services such as {{<abbr SSH>}} access, and if you are a service manager or deputy, manage access to those services.
 
 {{<alert alert-type="info">}}
 If you have an existing account but are unable to access JASMIN for any reason (e.g., forgotten password, changed email address or institution), **please do not reregister for a new JASMIN account**. If you have already created a new account, please do not apply for any services with the new account. Instead, [please contact the helpdesk](https://jasmin.ac.uk/help/contact/) to resolve the issue.

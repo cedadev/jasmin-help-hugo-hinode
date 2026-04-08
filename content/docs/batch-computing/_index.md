@@ -15,7 +15,7 @@ content_blocks:
     input:
       section: batch-computing
       reverse: false
-      sort: title
+      sort: weight
     hide-empty: false
     header-style: none
     more:

@@ -3,6 +3,7 @@ aliases: /article/4896-how-to-submit-an-mpi-parallel-job-to-slurm
 description: Submitting MPI parallel Slurm jobs
 slug: how-to-submit-an-mpi-parallel-job
 title: How to submit an MPI parallel job
+weight: 60
 ---
 
 ## What is an MPI parallel job?

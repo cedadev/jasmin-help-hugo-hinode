@@ -3,6 +3,7 @@ aliases: /article/4892-how-to-monitor-slurm-jobs
 description: Getting information about your Slurm jobs
 slug: how-to-monitor-slurm-jobs
 title: How to monitor Slurm jobs
+weight: 50
 ---
 
 ## Job information

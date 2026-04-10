@@ -12,7 +12,7 @@
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role.
-The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most* users will need to access them via a 
+The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most users will need to access them via a 
  
 
 
@@ -31,4 +31,4 @@ The sci servers are not directly accessible outside the firewall of the STFC net
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;. Users inside the STFC network (e.g. STFC staff on site, or remotely using the STFC VPN) should be able to access them directly.&lt;/p&gt;</description></item></channel></rss>

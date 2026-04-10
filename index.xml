@@ -626,7 +626,7 @@ cores. A simple script, such as the one given below could be saved as &lt;code&g
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;The scientific analysis (sci) servers are provided for general purpose use by all users with the &lt;code&gt;jasmin-login&lt;/code&gt; access role.
-The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most* users will need to access them via a 
+The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN&amp;rsquo;s host organisation) so most users will need to access them via a 
  
 
 
@@ -645,7 +645,7 @@ The sci servers are not directly accessible outside the firewall of the STFC net
  
 
  
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Azimuth Identity Provider</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</guid><description>&lt;p&gt;Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.&lt;/p&gt;</description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p&gt;This article lists sources of information about the status of JASMIN services.&lt;/p&gt;
+ &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-servers/"&gt;login server&lt;/a&gt;. Users inside the STFC network (e.g. STFC staff on site, or remotely using the STFC VPN) should be able to access them directly.&lt;/p&gt;</description></item><item><title>Azimuth Identity Provider</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</guid><description>&lt;p&gt;Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.&lt;/p&gt;</description></item><item><title>JASMIN status</title><link>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/jasmin-status/</guid><description>&lt;p&gt;This article lists sources of information about the status of JASMIN services.&lt;/p&gt;
 
 
 

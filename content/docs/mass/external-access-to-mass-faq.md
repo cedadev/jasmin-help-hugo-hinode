@@ -1,12 +1,12 @@
 ---
 aliases: /article/231-external-access-to-mass-faq
-description: External Access to MASS FAQs
+description: Answers to MASS & MOOSE frequently asked questions
 slug: external-access-to-mass-faq
 tags:
 - met office
 - moose
 - tape
-title: FAQs
+title: External Access to MASS FAQs
 ---
 
 ## Introduction

@@ -1,6 +1,6 @@
 ---
 aliases: /article/121-sci-servers
-description: Scientific analysis servers
+description: Details of the scientific analysis servers
 tags:
 - sci
 - arbiter
@@ -11,29 +11,25 @@ weight: 60
 ## Intro
 
 The scientific analysis (sci) servers are provided for general purpose use by all users with the `jasmin-login` access role.
-The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN's host organisation) so most* users will need to access them via a [login server]({{% ref "login-servers" %}}).
-
-Users inside the STFC network (e.g. STFC staff on site, or remotely using the STFC VPN) should be able to access them directly.
+The sci servers are not directly accessible outside the firewall of the STFC network (JASMIN's host organisation) so most users will need to access them via a [login server]({{% ref "login-servers" %}}). Users inside the STFC network (e.g. STFC staff on site, or remotely using the STFC VPN) should be able to access them directly.
 
 ## Available sci servers
 
 The following sci servers are available:
 
-| Server name | Virtual/Physical | Processor model                          | CPU Cores | RAM (GB) | /tmp max per user | /tmp size                         |
-|-------------|------------------|------------------------------------------|-----------|----------|-------------------|-----------------------------------|
-| `sci-vm-01` | virtual          | Intel(R) Xeon(R) Gold 6348 CPU @ 2.60GHz | 8         | 32 GB    | 512 MB            | 80 GB virtual disk                |
-| `sci-vm-02` | "                | "                                        | "         | "        | "                 | "                                 |
-| `sci-vm-03` | "                | "                                        | "         | "        | "                 | "                                 |
-| `sci-vm-04` | "                | "                                        | "         | "        | "                 | "                                 |
-| `sci-vm-05` | "                | "                                        | "         | "        | "                 | "                                 |
-| `sci-ph-01` | physical         | AMD EPYC 74F3                            | 48        | 2 TB     | 20 GB             | 2 x 446 GB SATA SSD               |
-| `sci-ph-02` | "                | "                                        | "         | "        | "                 | "                                 |
-| `sci-ph-03` | "                | "                                        | "         | 1.5 TB   | "                 | 480 GB SATA SSD + 800 GB NvMe SSD |
+| Server name | Virtual/Physical | Processor model | CPU Cores | RAM    | /tmp max per user |
+|-------------|------------------|-----------------|-----------|--------|-------------------|
+| `sci-vm-01` | virtual          | AMD EPYC 74F3   | 24        | 64 GB  | 512 MB            |
+| `sci-vm-02` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-03` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-04` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-05` | ''               | ''              | ''        | ''     | ''                |
+| `sci-ph-01` | physical         | ''              | 48        | 2 TB   | 20 GB             |
+| `sci-ph-02` | ''               | ''              | ''        | ''     | ''                |
+| `sci-ph-03` | ''               | ''              | ''        | 1.5 TB | ''                |
 {.table .table-striped}
 
-### Notes
-
-1. **Access**
+### Access
 
 Sci servers are not exposed outside the STFC network, so from external locations you need to access
 them via a login server.
@@ -44,7 +40,7 @@ should be accessible directly within that network without need to go via a login
 See [connecting to a sci server via a login server]({{% ref "login-servers#connecting-to-a-sci-server-via-a-login-server" %}})
 for some alternative methods of connecting.
 
-2. **Physical servers**
+### Physical servers
 
 Physical servers are actually re-configured nodes within the LOTUS cluster and as such have different a network
 configuration from the virtual `sci` servers, with limited outward connectivity.
@@ -53,12 +49,12 @@ Outbound internet access (via NAT) is only
 for HTTP(S), so **outbound SSH will not work (to hosts outside of
 JASMIN) on these machines**. This also applies to SSH-based transfer methods (scp, ftp, rsync) which anyway should be done instead on a [transfer server]({{%ref "transfer-servers"%}}). If you try to `git pull/clone` from external repositories e.g. Github using ssh, the operation will timeout with error `fatal: Could not read from remote repository`. The solution in this case is to access `git pull/clone` over **HTTPS** instead (check the repo for alternative access details).
 
-3. **/tmp on VMs**
+### /tmp on VMs
 
 The local `/tmp` of the virtual sci servers is not available (N/A) for users
 as this is used by the VM itself. It also provides no performance advantage as it is not local to the server.
 
-4. **Arbiter**
+### Arbiter
 
 A monitoring utility **Arbiter** is used across
 all sci machines to control CPU and memory usage. This utility
@@ -66,17 +62,16 @@ records the activity on the node, automatically sets limits on the resources
 available to each user. Users' processes are thus capped from
 using excessive resources, and can be slowed or have memory reduced in response to repeated violations.
 
-Below are the limits for the sci machines:
+Below are the CPU and memory limits set by Arbiter on the sci machines:
 
-| Server name  | CPU cores | Memory in GiB |
-|--------------|-----------|---------------|
-| sci-ph-01,02 | 24        | 800           |
-| sci-ph-03    | 64        | 400           |
-| sci-vm-*     | 8         | 15            |
+| Server name    | CPU cores | Memory in GiB |
+|----------------|-----------|---------------|
+| `sci-ph-01,02` | 24        | 800           |
+| `sci-ph-03`    | 64        | 400           |
+| `sci-vm-* `    | 8         | 15            |
 {.table .table-striped}
 
-
-5. **Privileges**
+### Privileges
 
 Users are **not permitted to execute commands which require
 administrative privileges.** This applies to all hosts in the managed part of
@@ -103,7 +98,7 @@ servers:
 - Check available resources before your process starts and choose a sci server that is suitable (check average load in the list displayed at the login screen on the login servers, or by using the Linux monitoring commands: `top`, or `free -h` )
 - Execution/processing time should be less than 1 hour
 - Serial jobs only
-- High memory jobs should be executed on the physical servers which have more memory (labelled P in [above table](#available-sci-servers)).
+- High memory jobs should be executed on the physical servers (`sci-ph-*`) which have more memory
 - Monitor your process on a sci server using `top` or `ps` Linux commands
 - Report if there is a user's process affecting the performance of a scientific server
 
@@ -118,12 +113,12 @@ Each sci server has the following features:
 - For a more richly-featured editor or Integrated Development Environment (IDE), consider using
 a remote editor locally, for example {{<link href="https://code.visualstudio.com/docs/remote/ssh">}}VSCode{{</link>}} or
 {{<link "https://www.jetbrains.com/pycharm/">}}PyCharm{{</link>}}: these can be installed and customised on your own machine
-rather than needing central installation and management on JASMIN. Watch this space for
+rather than needing central installation and management on JASMIN. See the [Access from VSCode page]({{% ref "access-from-vscode" %}}) for
 further advice about how to configure and use VSCode in this way.
 - Ability to run graphical applications: use the
 [NX graphical desktop service]({{% ref "graphical-linux-desktop-access-using-nx" %}}) for best performance.
 
-See [[Note 4]](#5-privileges) above about privileges: you can only install software for yourself if it can be done with user-level privileges.
+See [above about privileges](#privileges): you can only install software for yourself if it can be done with user-level privileges.
 
 ## Access to storage
 

@@ -1,12 +1,12 @@
 ---
 aliases: /article/231-external-access-to-mass-faq
-description: External Access to MASS FAQ
+description: Answers to MASS & MOOSE frequently asked questions
 slug: external-access-to-mass-faq
 tags:
 - met office
 - moose
 - tape
-title: External Access to MASS FAQ
+title: External Access to MASS FAQs
 ---
 
 ## Introduction
@@ -333,9 +333,9 @@ The following section contains information about the new MOOSE and MASS system. 
   {{< /accordion-item >}}
 
   {{< accordion-item title="Timeline and Switchover" >}}
-Timeline: Last update December 2025. This is a draft timeline and is potentially subject to further changes. We'll keep you updated via our usual communication channels.
-- User Acceptance Testing: Mid March
-- Service Commencement: 6th May
+Timeline: Last update February 2026. This is a draft timeline and is potentially subject to further changes. We'll keep you updated via our usual communication channels.
+- User Acceptance Testing: April 2026
+- Service Commencement: 20th May
 
 If you would like to be involved in the User Acceptance Testing (UAT) and have not already been contacted about it, please email: monsoon@metoffice.gov.uk. There will be limited places available but please do register your interest with us.
 

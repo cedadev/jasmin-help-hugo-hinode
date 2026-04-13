@@ -57,7 +57,7 @@ used for the NLDS cache, so this is now tied to your
 Installing the NLDS client in your home directory enables use of the NLDS client
 in the following recommended places on JASMIN:
 
-- [sci servers]({{% ref "sci-servers" %}}) 
+- [sci servers (VMs only)]({{% ref "sci-servers" %}}) (`sci-vm-0x` **NOT** `sci-ph-0x`)
 - [transfer servers]({{% ref "transfer-servers" %}}) (`xfer-vm-0x`)
 
 Please read the documentation about each type of server.

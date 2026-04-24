@@ -1,23 +1,23 @@
 ---
 aliases: /article/185-generate-ssh-key-pair
-description: Generate an SSH key pair
+description: How to create an SSH key pair for logging in to JASMIN
 slug: generate-ssh-key-pair
 title: Generate an SSH key pair
 weight: 20
 ---
 
-This article explains how to create an SSH key pair for logging in to JASMIN.
+{{< alert alert-type="danger" >}}
+These instructions are intended for users setting up an SSH connection to JASMIN **for the first time, or on a new device**.
 
-You can also use this procedure to update an existing SSH key pair for JASMIN.
-However, if you are experiencing problems logging in to JASMIN you are advised
-to first check {{<link "../interactive-computing/login-problems">}}Login problems{{</link>}} before changing your
-key. Once you have created your SSH key pair, the public key will need to be uploaded to
-your {{<link "https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/">}}JASMIN profile{{</link>}}.
-If this is the first time you have created a key
-pair then this will be done when you create an account on the accounts portal (Step 2
-of {{<link "get-started-with-jasmin">}}Get Started with JASMIN{{</link>}}).
+If you could previously connect with your existing key on the same device and now can’t, **generating a new key pair is unlikely to solve the problem**, and may make it more difficult to troubleshoot.
+
+If you are having problems connecting to JASMIN via SSH, please see [Login problems](../interactive-computing/login-problems). If you are still unable to solve the problem, please contact the [JASMIN Helpdesk](mailto:support@jasmin.ac.uk) before attempting to update your key.
+{{< /alert >}}
 
 ## SSH client and terminal
+
+When you create an account on the JASMIN Accounts Portal (step 2
+of {{<link "get-started-with-jasmin">}}Get Started with JASMIN{{</link>}}), you will be asked to upload the public key of an SSH key pair you have generated.
 
 Generating an SSH key pair requires an SSH client, usually an application which functions as a terminal: 
 a text-based environment where you type commands to make things happen. Linux
@@ -25,11 +25,13 @@ and Mac users can use a standard terminal which is very likely to have SSH
 installed. Windows users are advised to find a suitable SSH client to use or
 install on their machine. Suggestions are:
 
-- {{<link "../uncategorized/mobaxterm">}}MobaXterm{{</link>}} (requires license), provides a Linux-style terminal
-with all the relevant command-line and some GUI utilities included. Figures 1 and 2, below, show example
-terminal windows on a Mac, and Windows (using MobaXterm).
 - {{<link "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement">}}Windows OpenSSH client{{</link>}} an optional feature in Windows 10 or 11, but usually installed by default.
 - {{<link "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">}}PuTTY{{</link>}} set of SSH tools (includes PuTTYgen GUI tool for generating keys, and Pageant ssh-agent)
+- {{<link "../uncategorized/mobaxterm">}}MobaXterm{{</link>}} (requires license), provides a Linux-style terminal
+with all the relevant command-line and some GUI utilities included. 
+
+Figures 1 and 2, below, show example
+terminal windows on a Mac, and Windows (using MobaXterm).
 
 There are many more, but if you stick to one of these three, which are known to us, then potentially we can help you if you run into difficulties.
 
@@ -78,7 +80,7 @@ Running `ssh-keygen` will generate two files in your `$HOME/.ssh/` directory:
 - `id_ecdsa_jasmin.pub` - public key file
 
 The **public** key file is the part that you need to share in order to access
-JASMIN. Windows may mistakenly associated the `*.pub` file with Microsoft Publisher so don't try to double-click it. When you need to copy & paste its contents to upload to your JASMIN profile, use a simple text editor (like Notepad).
+JASMIN. Windows may mistakenly associated the `*.pub` file with Microsoft Publisher so don't try to double-click it. When you need to copy & paste its contents to upload to your JASMIN profile, use a simple text editor (like Notepad). If you are updating an existing key, please follow the instructions in {{<link "update-a-jasmin-account/#update-ssh-public-key">}}Update a JASMIN account{{</link>}} to upload it to your profile.
 
 Make sure the file is stored in a directory called `.ssh` in your home directory (`~/.ssh`, `$HOME/.ssh` or `%USERPROFILE%\.ssh` on Windows, or `${env:UserProfile}\.ssh` in PowerShell). Storing it elsewhere sometimes causes problems with permissions, but it's also good to keep keys in one place so that they can be kept securely.
 
@@ -86,3 +88,5 @@ Make sure the file is stored in a directory called `.ssh` in your home directory
 The **private** key file should be protected and not shared with
 others. It should stay on your local machine: **Do not copy your private key to anywhere on JASMIN.**
 {{</alert>}}
+
+Once you have created your SSH key pair, please follow the instructions on {{<link "present-ssh-key">}}Present your SSH key{{</link>}} in order to connect to JASMIN.

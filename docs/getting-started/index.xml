@@ -50,10 +50,9 @@ access to the JASMIN environment.&lt;/p&gt;
  &lt;abbr title="secure shell - a protocol for connecting and sharing data with remote computing resources" tabindex="0"&gt;SSH&lt;/abbr&gt;
 
  access to
-the JASMIN login servers.&lt;/p&gt;</description></item><item><title>Generate an SSH key pair</title><link>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</guid><description>&lt;p&gt;This article explains how to create an SSH key pair for logging in to JASMIN.&lt;/p&gt;
-&lt;p&gt;You can also use this procedure to update an existing SSH key pair for JASMIN.
-However, if you are experiencing problems logging in to JASMIN you are advised
-to first check 
+the JASMIN login servers.&lt;/p&gt;</description></item><item><title>Generate an SSH key pair</title><link>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/generate-ssh-key-pair/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
 
 
 
@@ -62,71 +61,10 @@ to first check
 
 
 
-
-
-
- 
- 
- 
- 
-
-
-
- 
- 
-
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/interactive-computing/login-problems/"&gt;Login problems&lt;/a&gt; before changing your
-key. Once you have created your SSH key pair, the public key will need to be uploaded to
-your 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
- &lt;a href="https://accounts.jasmin.ac.uk/account/login/?next=/account/profile/" target="_blank" rel="noopener noreferrer nofollow"&gt;JASMIN profile&amp;nbsp;
-
-
-
-
-
-
-
-
-&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;.
-If this is the first time you have created a key
-pair then this will be done when you create an account on the accounts portal (Step 2
-of 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
- 
-
- 
- &lt;a href="https://help.jasmin.ac.uk/docs/getting-started/get-started-with-jasmin/"&gt;Get Started with JASMIN&lt;/a&gt;).&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading "&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ &lt;p&gt;These instructions are intended for users setting up an SSH connection to JASMIN &lt;strong&gt;for the first time, or on a new device&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Get a JASMIN portal account</title><link>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/getting-started/get-jasmin-portal-account/</guid><description>&lt;h2 id="jasmin-accounts-portal" class="heading "&gt;JASMIN Accounts Portal&lt;a href="#jasmin-accounts-portal" aria-labelledby="jasmin-accounts-portal"&gt;
 
 
 

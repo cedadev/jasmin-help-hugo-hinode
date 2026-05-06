@@ -37,7 +37,7 @@ Login servers have minimal resources and no software installed. They provide:
 ### Recent changes
 
 - With the single login service, connect to `login.jasmin.ac.uk` instead of choosing a numbered login server.  Your session will be assigned to one of the available numbered login servers on a load-sharing basis.  Your command prompt will show which server you are using, but note that you cannot connect to a numbered server directly.
-- Some users may need to run `ssh-keygen -R login.jasmin.ac.uk` first to remove previous host key entries for that name from their `~/.ssh/authorized_keys`.
+- Some users may need to run `ssh-keygen -R login.jasmin.ac.uk` first to remove previous host key entries for that name from their `~/.ssh/known_hosts` file.
 - There is no longer any requirement for forward/reverse DNS lookup or any restriction by
 institutional domain.
 - You no longer need to register non-`*.ac.uk` domains with the JASMIN team.

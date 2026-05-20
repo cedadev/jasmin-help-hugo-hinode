@@ -40,7 +40,7 @@ Step  |  Details  |  Comments
 ---|---|---
 5  |  Apply for access to additional services on JASMIN<br>(optional) |  JASMIN has a range of additional services, access to which is managed via the Accounts Portal. Search and apply for any services you require in the portal. In most cases, users will "belong" to a particular scientific project which may already have a presence on JASMIN, often in the form of a [Group Workspace]({{% ref "short-term-project-storage" %}}). See here how to [Apply for access to a Group Workspace]({{% ref "apply-for-access-to-a-gws" %}}).
 6  |  [Get a CEDA account]({{% ref "ceda-archive" %}})<br>(optional) |  If you will need to access data in the {{<link "ceda_archive">}}CEDA Archive{{</link>}} for your work, it's accessible read-only throughout JASMIN,  Some datasets on the CEDA Archive require specific agreements, and to apply for access to these, you will need a CEDA account.  
-7  |  {{<link "https://help.ceda.ac.uk/article/5105-linking-your-jasmin-account">}}Link your JASMIN and CEDA accounts{{</link>}} (optional)  |  The final step is to link your CEDA account to your JASMIN account. This lets you access CEDA data on JASMIN, with the same dataset access permissions that your linked CEDA account has.
+7  |  {{<link "https://help.ceda.ac.uk/article/5105-linking-your-jasmin-account">}}Link your JASMIN and CEDA accounts{{</link>}} (optional)  |  The final step is to link your CEDA account to your JASMIN account in the CEDA accounts portal. This lets you access CEDA data on JASMIN, with the same dataset access permissions that your linked CEDA account has.
 {.table .table-striped}
 
 ## Further information

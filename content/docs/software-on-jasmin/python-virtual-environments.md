@@ -95,6 +95,10 @@ python -m ipykernel install --user --name=name-of-environment
 The kernel will now appear in your list of available kernels and will persist
 across sessions.
 
+{{<alert alert-type="info">}}
+This method is for pip virtual environments. If you are using a conda environment, use `register-kernel` instead — see [Using Conda Environments in the JASMIN Notebook Service]({{% ref "creating-and-using-miniforge-environments" %}}).
+{{</alert>}}
+
 ### On Scientific Analysis Servers
 
 To create a virtual environment on the sci machines that will also work in
@@ -159,6 +163,8 @@ To use your virtual environment in Jupyter notebooks:
 1. The environment must have `ipykernel` installed (see notebook kernel creation steps above)
 2. Register it as a kernel with: `python -m ipykernel install --user --name=name-of-environment`
 3. The kernel will appear in your kernel list in JupyterLab
+
+If you are using a conda environment instead, use `register-kernel` — see [Using Conda Environments in the JASMIN Notebook Service]({{% ref "creating-and-using-miniforge-environments" %}}).
 
 To select the kernel:
 

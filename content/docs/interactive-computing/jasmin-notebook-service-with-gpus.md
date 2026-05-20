@@ -120,7 +120,7 @@ We recommend this approach:
 
 1. Create a virtual environment ("_venv_"), for example `ml-venv`. Follow the [Python virtual environments guide]({{% ref "python-virtual-environments" %}}) for detailed instructions.
 2. Install the packages you require into that _venv_. For example, if you needed `pytorch` and `torchvision`, you would run `pip install torch torchvision` (including specific versions if needed). **NOTE: Many ML packages are very large and can take several minutes to install. Ensure you have sufficient space in your home directory (see warnings below).**
-3. Be sure to follow the instructions for installing `ipykernel` into your _venv_ and running the relevant command to install the kernel so that JupyterHub can locate it and list it as one of the available kernels. Use the name of your _venv_ as the name of the _kernel_.
+3. Install `ipykernel` into your _venv_ and register it as a kernel: `python -m ipykernel install --user --name=ml-venv`. See the [kernel registration instructions]({{% ref "python-virtual-environments" %}}#using-your-virtual-environment-as-a-notebook-kernel) for details.
 4. Once you have installed your kernel, it should appear as an option in the Launcher as outlined in green in the diagram below. The Launcher is accessible from the File menu.
 
 ### Specific advice on installing TensorFlow for use with GPU Notebooks
@@ -138,7 +138,7 @@ and installing the GPU-enabled version there:
 pip install tensorflow[and-cuda] keras
 ```
 
-3. Register your environment as a kernel and select it when running your notebooks
+3. Register your environment as a kernel with `python -m ipykernel install --user --name=ml-venv` and select it when running your notebooks
 
 **Alternative (not recommended):** You can install TensorFlow directly using `!pip install`
 in a notebook cell, but this installs packages into `${HOME}/.local/lib/python*/site-packages/`
@@ -164,7 +164,7 @@ and installing PyTorch there:
 pip install torch torchvision
 ```
 
-3. Register your environment as a kernel and select it when running your notebooks
+3. Register your environment as a kernel with `python -m ipykernel install --user --name=ml-venv` and select it when running your notebooks
 
 **Alternative (not recommended):** You can install PyTorch directly using `!pip install`
 in a notebook cell, but this installs packages into `${HOME}/.local/lib/python*/site-packages/`

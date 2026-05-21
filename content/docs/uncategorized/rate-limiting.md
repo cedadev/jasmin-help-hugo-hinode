@@ -1,7 +1,10 @@
 ---
 description: Rate limiting applied to JASMIN web services
-slug: rate-limiting
 title: Rate Limiting
+tags:
+- automation
+- http
+- https
 ---
 
 To protect the JASMIN and CEDA web services from abuse and ensure fair access for all users, rate limiting is applied to all HTTP requests.

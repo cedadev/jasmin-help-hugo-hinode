@@ -7991,6 +7991,21 @@ function initIndex() {
       
       {
         id: 91,
+        href: "/docs/uncategorized/rate-limiting/",
+        title: "Rate Limiting",
+        description: "Rate limiting applied to JASMIN web services",
+        
+        
+        content: "To protect the JASMIN and CEDA web services from abuse and ensure fair access for all users, rate limiting is applied to all HTTP requests.\nThe specific limits listed below may be adjusted over time as we gain experience with usage patterns and as the needs of the JASMIN and CEDA communities evolve. Rather than relying on any particular threshold remaining fixed, the most important thing is that your code correctly handles 429 Too Many Requests responses by backing off and retrying. Code that does this will continue to work correctly regardless of how the limits change.\nLimits \u0026nbsp; Per-service request rate A maximum of 100 requests per second is permitted to any individual JASMIN web service.\nPer-service concurrent connections A maximum of 50 concurrent connections is permitted to any individual JASMIN web service.\nError rates Enforcement for error rates is significantly stricter than for request rates. Clients generating large numbers of HTTP 4xx or 5xx errors will be rate limited quickly. Users and developers should not attempt to discover valid URLs by walking unknown paths- only make requests to URLs you know to be valid.\nCluster wide requests Limits also exist for the total number of requests and connections across all CEDA and JASMIN services. Please do not make large amounts of connections to more than one of our services at once.\nWhat happens when a limit is exceeded \u0026nbsp; Requests that exceed these limits will receive an HTTP 429 Too Many Requests response. If the rate of requests is extreme, connections may be refused before an HTTP response can be sent.\nGuidance scripting \u0026nbsp; If you are writing scripts or applications that access JASMIN or CEDA web services, please ensure they do not make requests in tight loops without appropriate delays. If you receive a 429 response, you should back off and retry after a short delay.\nSupport \u0026nbsp; If you are having problems with rate limiting and need our support in acquiring the date you require, please don\u0026rsquo;t hesitate to contact us at support@jasmin.ac.uk or support@ceda.ac.uk as appropriate."
+      })
+      .add(
+      
+      
+      
+      
+      
+      {
+        id: 92,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -8007,7 +8022,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email...",
         description: "Reconfirm JASMIN account email address",
@@ -8022,7 +8037,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -8037,7 +8052,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -8052,7 +8067,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -8067,7 +8082,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -8082,7 +8097,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -8097,13 +8112,13 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
         
         
-        content: "This article explains how to schedule or automate data transfers. It covers:\nUsing Globus for transfer automation Scheduling download tasks using cron and LOTUS Overview \u0026nbsp; In many cases it can be useful to fetch data from an external source for processing/analysis on JASMIN on a regular basis, for example \u0026ldquo;every Monday at 11:00 fetch all last week\u0026rsquo;s data\u0026rdquo;. It can also be helpful to distribute the task downloading of some large datasets, or simply to be able rely on data being pulled in from some external source to an accumulating dataset used for periodic analysis.\nUsing Globus for transfer automation \u0026nbsp; It is easy to automate transfers using Globus. This method has the advantage that you do not need to remain connected or logged in to any JASMIN server for the automated transfers to take place on your behalf, and the transfer itself can be more efficient than other methods described below.\nSome introductory information about how to do this is available in this article Using the Globus command-line interface (with more to follow) but please also refer to the comprehensive Globus documentation and their automation examples\u0026nbsp; . You can choose whether to schedule/automate tasks via the Globus web interface\u0026nbsp; , command-line interface\u0026nbsp; , or use their Globus Python SDK\u0026nbsp; to build Python code that uses this functionality.\nScheduling download tasks using cron and LOTUS \u0026nbsp; While the cron server cron-01.jasmin.ac.uk is provided for scheduling general tasks, it should not be used for the work of executing those tasks itself, and not for transfer tasks.\nxfer-vm-03 - transfer machine with cron \u0026nbsp; The transfer server xfer-vm-03.jasmin.ac.uk is also provided with cron, and should be used where a task is primarily a transfer rather than a processing task and needs the functionality of a transfer server. Please refer to the above cron guidance for best practice advice.\nIn particular, you must use crontamer to manage your cron jobs.\nInvoking LOTUS from cron to carry out multiple download tasks \u0026nbsp; Sometimes we need a task to be invoked from cron but executed where there are lots of nodes to parallelise the tasks (i.e. the LOTUS cluster). In this case, we DO need to use the cron server rather than the cron-equipped transfer server xfer-vm-03, since we need to be able to submit jobs to LOTUS (the transfer server can\u0026rsquo;t do that).\nThis will only work where the download can happen over HTTP(S), so depends on how the remote data is made available.\nWe need it to:\ninvoke a job submission script at regular intervals have that script initiate downloads using LOTUS nodes In the examples below, we use the test queue (or partition, as queues are known in Slurm). You can use this for testing, but once you know roughly how long your download(s) should take, you should choose an appropriate queue so that the jobs can be scheduled in a fair way alongside other users\u0026rsquo; jobs.\n1. Single download script \u0026nbsp; The simple script below is used to download a single file from an external source via HTTP using wget. It initially uses the test partition (queue), but once you have tested it, you should use a more appropriate queue.\n#!/bin/bash #SBATCH --partition=test #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=00:30 # executable wget -q -O 1MB_$SLURM_JOBID.zip http://speedtest.tele2.net/1MB.zipIn this example, the file is labelled with the id of the job which downloaded it, e.g. 1MB_61117380.zip\nThe same could be also achieved using curl, or using a Python script making use of (for example) the requests library.\nA note about transfer tools: since we are delegating the actual download task to a LOTUS node, we are restricted to transfer tools already installed on those nodes or available in the user\u0026rsquo;s path at a location cross-mounted with nodes in the LOTUS cluster (see Table 1 in Access to Storage), such as $HOME or a group workspace. It is not possible for the JASMIN team to install specialist data transfer tools across the whole cluster, so you may be limited to downloading via HTTP(S), FTP, or via tools available via libraries in the Python environment such (which you do have access to and can easily customise to install additional libraries using virtual environments).\nDue to networking limitations, LOTUS nodes cannot perform downloads using SSH-based methods, i.e. scp/rsync/sftp.\nDownload tools installed on LOTUS nodes include:\nwget curl ftp (but not lftp) In our simple example above, we can subit this script to LOTUS from the command line with\nsbatch test_download.sh This could be invoked on a regular basis by adding a crontab entry like this\n30 * * * * sbatch /home/users/username/test_download.shHowever it would be safer to wrap this in a crontamer command like this to ensure one instance of the task had finished before the next started: (see Using cron for details)\n30 * * * * crontamer -t 2h \u0026#39;sbatch /home/users/username/test_download.sh\u0026#39; 2. Multi-node downloads \u0026nbsp; We could expand this example to download multiple items, perhaps 1 directory of data for each day of a month, and have 1 element of a job array handle the downloading of each day\u0026rsquo;s data.\nA few words of warning: Distributing download tasks as shown below can cause unintended side-effects. Here, we\u0026rsquo;re submitting an array of 10 download jobs, each initiating a request for a 1MB file which may well happen simultaneously. So we need to be confident that the systems and networks at either end can cope with that. It would be all too easy to submit a task to download several thousand large data files and cause problems for other users of JASMIN (and other users on its host institution\u0026rsquo;s network), or indeed at the other end. Taken to the extreme, this could appear over the network as a Distributed Denial-of-Service (DDoS) attack. As with all LOTUS tasks: start small, test, and increase to sensible scales when you are confident it will not cause a problem. A limit of 10 jobs would be a sensible maximum, for one user.\nWe\u0026rsquo;ll simulate this here by downloading the same external file to 10 different output files, but you could adapt this concept for your own purposes depending on the layout of the source and destination data.\n#!/bin/bash #SBATCH --partition=test #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --time=00:30 #SBATCH --array=1-10 #SBATCH --time=00:30 # executable wget -q -O 1MB_$SLURM_ARRAY_TASK_ID.zip http://speedtest.tele2.net/1MB.zip echo \u0026#34;script completed\u0026#34;In this (perhaps contrived) example, we\u0026rsquo;re setting up an array of 10 elements and using the SLURM_ARRAY_TASK_ID environment variable to name the output files (otherwise they\u0026rsquo;d all be the same). In a real-world example you could apply your own logic to divide up files or directories matching certain patterns to become elements of a job array.\nThe script could then be scheduled to be invoked at regular intervals as shown in (1).\nSome tools provide functionality for mirroring or synchronising directories, i.e. only downloading those files in a directory which are new have been added since the last time a task was run. These can be useful to avoid repeated downloads of the same data."
+        content: "This article explains how to schedule or automate data transfers. It covers:\nUsing Globus for transfer automation Scheduling download tasks using cron and LOTUS Overview \u0026nbsp; In many cases it can be useful to fetch data from an external source for processing/analysis on JASMIN on a regular basis, for example \u0026ldquo;every Monday at 11:00 fetch all last week\u0026rsquo;s data\u0026rdquo;. It can also be helpful to distribute the task downloading of some large datasets, or simply to be able rely on data being pulled in from some external source to an accumulating dataset used for periodic analysis.\n\u0026nbsp; Certain services in the CEDA and JASMIN infrastructure are rate-limited to protect against abuse. Make sure any code you write to consume HTTP(S) services is able to handle 429 Too Many Requests responses correctly.\nFor further details, please see this article on rate-limiting.\nUsing Globus for transfer automation \u0026nbsp; It is easy to automate transfers using Globus. This method has the advantage that you do not need to remain connected or logged in to any JASMIN server for the automated transfers to take place on your behalf, and the transfer itself can be more efficient than other methods described below.\nSome introductory information about how to do this is available in this article Using the Globus command-line interface (with more to follow) but please also refer to the comprehensive Globus documentation and their automation examples\u0026nbsp; . You can choose whether to schedule/automate tasks via the Globus web interface\u0026nbsp; , command-line interface\u0026nbsp; , or use their Globus Python SDK\u0026nbsp; to build Python code that uses this functionality.\nScheduling download tasks using cron and LOTUS \u0026nbsp; While the cron server cron-01.jasmin.ac.uk is provided for scheduling general tasks, it should not be used for the work of executing those tasks itself, and not for transfer tasks.\nxfer-vm-03 - transfer machine with cron \u0026nbsp; The transfer server xfer-vm-03.jasmin.ac.uk is also provided with cron, and should be used where a task is primarily a transfer rather than a processing task and needs the functionality of a transfer server. Please refer to the above cron guidance for best practice advice.\nIn particular, you must use crontamer to manage your cron jobs.\nInvoking LOTUS from cron to carry out multiple download tasks \u0026nbsp; Sometimes we need a task to be invoked from cron but executed where there are lots of nodes to parallelise the tasks (i.e. the LOTUS cluster). In this case, we DO need to use the cron server rather than the cron-equipped transfer server xfer-vm-03, since we need to be able to submit jobs to LOTUS (the transfer server can\u0026rsquo;t do that).\nThis will only work where the download can happen over HTTP(S), so depends on how the remote data is made available.\nWe need it to:\ninvoke a job submission script at regular intervals have that script initiate downloads using LOTUS nodes In the examples below, we use the test queue (or partition, as queues are known in Slurm). You can use this for testing, but once you know roughly how long your download(s) should take, you should choose an appropriate queue so that the jobs can be scheduled in a fair way alongside other users\u0026rsquo; jobs.\n1. Single download script \u0026nbsp; The simple script below is used to download a single file from an external source via HTTP using wget. It initially uses the test partition (queue), but once you have tested it, you should use a more appropriate queue.\n#!/bin/bash #SBATCH --partition=test #SBATCH -o %j.out #SBATCH -e %j.err #SBATCH --time=00:30 # executable wget -q -O 1MB_$SLURM_JOBID.zip http://speedtest.tele2.net/1MB.zipIn this example, the file is labelled with the id of the job which downloaded it, e.g. 1MB_61117380.zip\nThe same could be also achieved using curl, or using a Python script making use of (for example) the requests library.\nA note about transfer tools: since we are delegating the actual download task to a LOTUS node, we are restricted to transfer tools already installed on those nodes or available in the user\u0026rsquo;s path at a location cross-mounted with nodes in the LOTUS cluster (see Table 1 in Access to Storage), such as $HOME or a group workspace. It is not possible for the JASMIN team to install specialist data transfer tools across the whole cluster, so you may be limited to downloading via HTTP(S), FTP, or via tools available via libraries in the Python environment such (which you do have access to and can easily customise to install additional libraries using virtual environments).\nDue to networking limitations, LOTUS nodes cannot perform downloads using SSH-based methods, i.e. scp/rsync/sftp.\nDownload tools installed on LOTUS nodes include:\nwget curl ftp (but not lftp) In our simple example above, we can subit this script to LOTUS from the command line with\nsbatch test_download.sh This could be invoked on a regular basis by adding a crontab entry like this\n30 * * * * sbatch /home/users/username/test_download.shHowever it would be safer to wrap this in a crontamer command like this to ensure one instance of the task had finished before the next started: (see Using cron for details)\n30 * * * * crontamer -t 2h \u0026#39;sbatch /home/users/username/test_download.sh\u0026#39; 2. Multi-node downloads \u0026nbsp; We could expand this example to download multiple items, perhaps 1 directory of data for each day of a month, and have 1 element of a job array handle the downloading of each day\u0026rsquo;s data.\nA few words of warning: Distributing download tasks as shown below can cause unintended side-effects. Here, we\u0026rsquo;re submitting an array of 10 download jobs, each initiating a request for a 1MB file which may well happen simultaneously. So we need to be confident that the systems and networks at either end can cope with that. It would be all too easy to submit a task to download several thousand large data files and cause problems for other users of JASMIN (and other users on its host institution\u0026rsquo;s network), or indeed at the other end. Taken to the extreme, this could appear over the network as a Distributed Denial-of-Service (DDoS) attack. As with all LOTUS tasks: start small, test, and increase to sensible scales when you are confident it will not cause a problem. A limit of 10 jobs would be a sensible maximum, for one user.\nWe\u0026rsquo;ll simulate this here by downloading the same external file to 10 different output files, but you could adapt this concept for your own purposes depending on the layout of the source and destination data.\n#!/bin/bash #SBATCH --partition=test #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --time=00:30 #SBATCH --array=1-10 #SBATCH --time=00:30 # executable wget -q -O 1MB_$SLURM_ARRAY_TASK_ID.zip http://speedtest.tele2.net/1MB.zip echo \u0026#34;script completed\u0026#34;In this (perhaps contrived) example, we\u0026rsquo;re setting up an array of 10 elements and using the SLURM_ARRAY_TASK_ID environment variable to name the output files (otherwise they\u0026rsquo;d all be the same). In a real-world example you could apply your own logic to divide up files or directories matching certain patterns to become elements of a job array.\nThe script could then be scheduled to be invoked at regular intervals as shown in (1).\nSome tools provide functionality for mirroring or synchronising directories, i.e. only downloading those files in a directory which are new have been added since the last time a task was run. These can be useful to avoid repeated downloads of the same data."
       })
       .add(
       
@@ -8112,7 +8127,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Details of the scientific analysis servers",
@@ -8127,7 +8142,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8144,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8159,7 +8174,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8174,7 +8189,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8189,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8204,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8219,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8234,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8249,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8264,7 +8279,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8279,7 +8294,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8294,7 +8309,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8311,7 +8326,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8326,7 +8341,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8343,7 +8358,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8358,7 +8373,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/short-term-project-storage/object-store/jasmin-object-store/",
         title: "The JASMIN Object Store",
         description: "The JASMIN Object Store",
@@ -8373,7 +8388,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8388,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8403,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8418,7 +8433,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8433,7 +8448,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8448,7 +8463,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8463,7 +8478,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8480,7 +8495,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8495,7 +8510,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8512,7 +8527,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8527,7 +8542,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

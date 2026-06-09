@@ -20,7 +20,7 @@ This root partition usually uses the SSD on the hypervisor, meaning that access 
 
 ## Block Storage (Cinder)
 
-Block storage using Cinder is the traditional way of providing storage with OpenStack. Volume can be created through the advanced tab in the Azimuth portal. Kubernetes clusters can also use Cinder using the Cinder CSI Driver, which is installed on Azimuth Kubernetes clusters by default.
+Block storage using Cinder is the traditional way of providing storage with OpenStack. Volumes can be created through the advanced tab in the Azimuth portal. Kubernetes clusters can also use Cinder using the Cinder CSI Driver, which is installed on Azimuth Kubernetes clusters by default.
 
 Due to the limited amount of available block storage, we do not recommend that it is used for large volumes of data - fileshare should be used instead.
 
@@ -32,7 +32,7 @@ Fileshares are exposed as a Ceph Filesystem which can be mounted on multiple mac
 
 When tenancies are initially created, we will resize the created share to match the quota for the tenancy.
 
-To avoid having to do this, you can use an Azimuth [Workstation](platform-in-depth-workstation), or [Slurm cluster](platform-in-depth-slurm) where the share will be mounted under `/project/` on each platform. Note that this share can be mounted in multiple places at once, allowing cross-platform data sharing.
+To avoid having to mount the fileshare yourself, you can use an Azimuth [Workstation](platform-in-depth-workstation), or [Slurm cluster](platform-in-depth-slurm) where the share will be mounted under `/project/` on each platform. Note that this share can be mounted in multiple places at once, allowing cross-platform data sharing.
 
 We are currently working on adding fileshares as a CSI backend for Kubernetes persistent volumes (PVs) and allowing resizing, and surfacing information on the share through Azimuth.
 

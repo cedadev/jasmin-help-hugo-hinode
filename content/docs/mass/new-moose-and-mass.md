@@ -115,9 +115,8 @@ AZ-MOOSE and AZ-MASS is not yet operational. Continue to use the current MOOSE a
 
 **If you have a MONSooN3 AZ-MASS account, you do not need to request an AZ-MASS account for JASMIN.**
 
-You must be an existing user of MASS to request an AZ-MASS account (see 'How to apply for MASS access'). 
-
-Email: monsoon@metoffice.gov.uk 
+1. You must be an existing user of MASS to request an AZ-MASS account (see 'How to apply for MASS access') 
+2. Email monsoon@metoffice.gov.uk from the email address you registered your existing MASS account with 
 
 
 ## Resources and Further Reading 

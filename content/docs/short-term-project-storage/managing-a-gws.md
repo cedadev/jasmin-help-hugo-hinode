@@ -166,7 +166,7 @@ find /gws/nopw/j04/upscale/cache -type f -atime +365
 
 ...So we provide some tools to help with this:
 
-1. The {{<link "gws-scanner">}}GWS Scanner{{</link>}} runs this for you, centrally, on a roughly 2-week cycle, and stores all the output in a database from which results can be visualised in the {{<link "gws-scanner-ui">}}GWS Scanner User Interface{{</link>}}.
+1. The {{<link "gws-scanner">}}GWS Scanner{{</link>}} runs this for you, centrally, on a roughly 4 to 6 week cycle, and stores all the output in a database from which results can be visualised in the {{<link "gws-scanner-ui">}}GWS Scanner User Interface{{</link>}}.
 
 1. There is also a live view of GWSs and the available space left on the {{< link "https://mon.jasmin.ac.uk" >}}JASMIN Dashboard{{</link>}}. The “JASMIN Storage” tab shows many
 JASMIN storage volumes with information about current usage.

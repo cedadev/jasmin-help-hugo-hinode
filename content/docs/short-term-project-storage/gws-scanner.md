@@ -13,7 +13,7 @@ It is intended for GWS Managers and provides details about how to customise the 
 
 **It is run centrally, and is a very resource-intensive task, so please don't run similar tasks of your own, as you will be unnecessarily duplicating resource usage.**
 
-The scans occurs approximately fortnightly to check the contents of all GWSs. 
+The scans occurs approximately four to six weeks to check the contents of all GWS, though this isn't guaranteed. If you need your volume scanning urgently, please get in touch.
 
 ## Customisation
 
@@ -32,7 +32,7 @@ latter is from the **previous** incarnation of the scanner)
 ```ini
 [general]
 # GWS fullness threshold for which the GWS Alerts will send a warning email (default 90, in %)
-volume_warning_threshold = 83
+volume_warning_threshold = 90
 # Directories to check for largest sub-dir and filetypes below (comma separated list), these paths must be relative to the group workspace path i.e. path/to/dir, not /group/workspace/path/to/dir
   # Defaults to all top level directories inside volume
 dirs = dir1,path/to/dir2

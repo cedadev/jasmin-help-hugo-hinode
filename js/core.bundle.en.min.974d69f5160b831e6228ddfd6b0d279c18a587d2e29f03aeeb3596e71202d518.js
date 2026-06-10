@@ -7001,7 +7001,7 @@ function initIndex() {
         description: "Answers to MASS \u0026 MOOSE frequently asked questions",
         
         
-        content: "Introduction \u0026nbsp; The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.\nThis article provides answers to MASS frequently asked questions: Click on the link for each of the FAQs below to expand the answer.\nGeneral \u0026nbsp; Can I use my existing MASS account? No. You need a separate MASS account for use on the Met Office internal network (CDN), Monsoon, ECMWF HPCs, and JASMIN. With these different account types, you can have permission to access different datasets specific to these computing environments. How do I use MOOSE? Please see the MOOSE User Guide here Will my account expire? Yes. By default, MASS via JASMIN accounts will expire after 500 days and your account will be automatically disabled.\nShortly before your account is due to expire you will receive an email, and it will contain instructions for you and your sponsor about how to extend your access. If your account has already expired and you are looking to reactive it, please email: Monsoon@metoffice.gov.uk\nWhy am I asked for a password when logging in to mass-cli? There are two reasons that may result in you being prompted for a password when attempting to login to the MASS client machine (mass-cli.jasmin.ac.uk).\nThe first is if you do not have permission to access the machine. A quick method to check is to verify if you are a member of the moose user group. It should be listed when you use the ‘groups’ command:\ngroups moose If this happens, please contact: Monsoon@metoffice.gov.uk\nThe second is if you forget the -A option for agent forwarding when you ssh to a JASMIN login node. You can test for this condition by listing loaded identities on the login node, and finding you have none:\nssh-add -l Could not open a connection to your authentication agent. If this happens, please exit back to your local machine and ssh in again using the -A flag or tick the relevant box for \u0026ldquo;agent forwarding\u0026rdquo;.\nHow can I directly login to the MASS client machine? You can\u0026rsquo;t, but you can edit your ssh configuration so that it automatically enables you to jump through the intermediary login servers.\nAdd the following to your home institute ssh config file ($HOME/.ssh/config file):\nHost mass-cli User your_jasmin_userid HostName mass-cli.jasmin.ac.uk ProxyCommand ssh -YA -t your_jasmin_userid@login.jasmin.ac.uk -W %h:%p 2\u0026gt;/dev/nullYou should then be able to login directly using:\n$ ssh mass-cliPlease note that this only works if you are using OpenSSH version 5.4 or greater as earlier versions do not support the -W flag. You can check your version using: ssh -v\nCan I write to MASS from JASMIN? No, MASS access from JASMIN is strictly read-only. If you need to write to the MASS archive, contact monsoon@metoffice.gov.uk and ask to be put in touch with the relevant team. MOOSE messages and what to do \u0026nbsp; Is this process running in the correct environment? When running \u0026lsquo;moo install\u0026rsquo; you may get an error message similar to:\nCannot read file: /home/user/\u0026lt;userid\u0026gt;/.moosedir/moose - is this process running in the correct environment?This can be the result of the wrong combination of Unix user-id and UID having been used to encrypt the credentials file. If you encounter this error message, please type id on the command line whilst logged into JASMIN, and send the uid= section of the output to: Monsoon@metoffice.gov.uk\nYour credentials file will then be reissued.\nYour password is due to expire in X day(s). Occasionally on running a MOOSE command you will be told that your password is due to expire with a message of the form:\nYour password is due to expire in 6 day(s). A new password can be generated using 'moo passwd -r'. This refers specifically to your MASS via JASMIN, it does not affect any other MOOSE accounts you may have.\nYou need to run the command as advised in order to update your credentials whilst you are logged into mass-cli. You do not actually need to provide a new password, as this is generated and hidden from you by the command.\nIf you have a retrieval in progress, it is safe to run this command as it will not affect processes already running.\nERROR_SINGLE_COPY_UNAVAILABLE MOOSE - Single Copy Unavailable error\nOn occasion, a tape library needs to be taken down for maintenance. If a user is trying to retrieve a single-copy file stored on one of those tapes, the retrieval will temporarily fail with the message ERROR_SINGLE_COPY_UNAVAILABLE. As soon as the maintenance is completed, the file will be available again.\nTapes are taken out of MASS for copying to the new MASS system and become unavailable for roughly 14 days. The process is as follows:\nThursday (week one): Tapes are marked unavailable for indexing by the system. Tuesday (week two): Tapes get taken out for copying to the new MASS system. Following Thursday (week three): Tapes are returned to Met Office library and should be available again. So, if you find that data or files are unavailable due to the ERROR_SINGLE_COPY_UNAVAILABLE error, try reading the data again on Friday, and if still not available, try the following Friday when the migration should have completed.\nMOOSE basics \u0026nbsp; What is MOOSE? The software that allows you to interact with MASS. What is a project? A collection of access rules. What is an access rule? Permission to access an area in MASS. For example, project-random might have an access rule to moose:/crum/random-numbers\nBeing part of project-random would allow you to access the random-numbers set.\nHow do I see what projects I am a member of? You can use: moo prls How do I see what access rules a project has? You can use: moo projinfo -l projectname (Replace projectname with the name of one of your projects) How do I get access to a project, or add an access rule to one of my projects? Please contact your sponsor. They can then complete this form if they also agree you require access:\nhttps://metoffice.service-now.com/sp?id=sc_cat_item\u0026sys_id=5653331e1bbaf0d88ffa422ad34bcba0\u0026referrer=recent_items\u0026nbsp; Please note that the link above is only visible to those in the Met Office.\nWhy can I not access a set that I know is part of a project? If you are given access to a project but do not have access to all the sets associated with it, this can be due to the Access Control Lists (ACLs).\nThe project owner will be able to change the ACLs on sets to make them readable if it is appropriate.\nHow do I retrieve a file from MASS? Use moo get or moo select. More information about both commands is in the MOOSE User Guide. How do I make sure my directory has all the available data retrieved from MASS? The problem: You are running a model over a period of several days or weeks, and you need to analyse the output of the model as it runs. You have a moo get or moo select command that you run to fetch the data that is available. You want to be able to re-run it to fetch the files or fields that have been added to MASS since you last ran the command, but you do not want it to waste time re-fetching things you already have.\nThe solution: Use the -i or \u0026ndash;fill-gaps option when you run moo get or moo select. This option tells MOOSE that you only want to fetch files that don\u0026rsquo;t already exist in the specified local directory. Note that MASS works out where gaps are by doing checks to see if files of the expected name exist in your destination directory, so it won\u0026rsquo;t behave correctly if you rename files after you have retrieved them, or if you use the -C option with moo select which condenses all the matching fields into a single file.\nYou might also find the -g / --get-if-available option to moo get useful. This tells MOOSE to get every file from your moo get list that is available, but ignore ones that are not there rather than exit with an error. This could help if you are expecting files to be archived at some point but are not sure whether they will be there when your job runs. If you use this option MOOSE will get as much as it can from your list without bailing out.\nHow can I script my data retrieval from MASS? There are restrictions on how to login to JASMIN and use of Linux utilities such as ‘cron’ and ‘at’ but it is possible to remotely initiate a retrieval from MASS on to JASMIN, provided you have your ssh agent running on a machine local to you.\neval $(ssh-agent -s) ssh-add ~/.ssh/jasmin_id_rsa ssh -A -X sci1.jasmin.ac.uk \u0026#39;ssh mass-cli my_script.sh\u0026#39;If you have set up your $HOME/.ssh/config to allow more direct access, then the following should work:\nssh mass-cli my_script.shThis will run the script “my_script.sh” on the MASS client VM. You can put the moose retrieval commands into a script and it should work:\n#!/bin/bash SRC_URI=moose:/opfc/atm/global/SOMETHING moo get $SRC_URI jasmin_copy.pp exitIf you have access to an appropriate JASMIN workspace, then you can scp data from the workspace directly through one of the dedicated data transfer VMs. Again, you need the ssh-agent running locally:\neval $(ssh-agent -s) ssh-add ~/.ssh/jasmin_id_rsa scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/\u0026lt;project\u0026gt;/jasmin_file.pp my_local_copy.pp Can I run MASS retrievals on LOTUS or through a workload manager? In addition to the interactive mass-cli server there is also a node of the LOTUS batch processing cluster lotus-overview with the MASS client installed. To submit jobs to this, you must use the Slurm scheduler. You will need to specify:\nthe account mass partition mass and QOS mass for example:\nsbatch -A mass -p mass -q mass [\u0026lt;options\u0026gt;] \u0026lt;jobscript\u0026gt;where \u0026lt;jobscript\u0026gt; looks something like:\n#!/bin/bash SRC_URI=moose:/opfc/atm/global/SOMETHING moo get $SRC_URI jasmin_copy.pp exitIt is also easy to configure the Rose/Cylc workflow manager to submit jobs to moose1 through the Slurm scheduler by including the following lines in your suite.rc file:\n[[[job submission]]] method = slurm [[[directives]]] --partition=mass --account=mass --qos=mass [\u0026lt;options\u0026gt;] New MOOSE and MASS \u0026nbsp; The following section contains information about the new MOOSE and MASS system. For help with the current MOOSE client, please see the sections above.\nIntroduction MASS refers to the tape archive and MOOSE is the interface used to interact with MASS, allowing you to do GETs, SELECTs and other commands. The current MASS system is aging and a new version of MASS, and a new version of MOOSE, is being developed. We expect the new MOOSE commands to work in the same way as current MOOSE commands. However, there will be some differences with the new system, such as new commands to log into MOOSE. What do I need to do? Make your existing MOOSE commands (GETs, SELECTs) as \u0026rsquo;nice’ to current MASS as you can. For example, split single large GETs into several smaller GETs Review your workflows and jobs for those that use moo commands so that you know which ones to target for testing when the new MOOSE client becomes available. Make note of the timeline and switchover details below to assist with any planning. Timeline and Switchover Timeline: Last update February 2026. This is a draft timeline and is potentially subject to further changes. We\u0026rsquo;ll keep you updated via our usual communication channels.\nUser Acceptance Testing: April 2026 Service Commencement: 20th May If you would like to be involved in the User Acceptance Testing (UAT) and have not already been contacted about it, please email: monsoon@metoffice.gov.uk. There will be limited places available but please do register your interest with us.\nTo safely switchover to the new MASS system we need to pause all MASS access and invoke a MASS outage to complete the metadata migration. It is estimated that there will be between 36 and 48 hours of MASS service outage, during which time there will be no access available to either MASS system.\nTo de-risk the switchover, users may be asked to reduce MASS usage for a short period ahead of the outage. As we get closer to the switchover date, further details about this will be communicated.\nResources and Further Reading Please note that these links are only accessible to Met Office staff members.\nGetting ready for go live\u0026nbsp; Training and resource hub\u0026nbsp; (note that this does not yet contain training and resources for JASMIN MASS users) If you have any questions, please email monsoon@metoffice.gov.uk. However, please be aware that as the client is still being developed, we may be unable to answer some questions and advise that we are awaiting further information ourselves."
+        content: "\u0026nbsp; New MOOSE and MASS\nFor information about the new Azure MOOSE and MASS systems please see the page New MOOSE and MASS.\nHowever, these are not currently the operational versions of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows.\nIntroduction \u0026nbsp; The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.\nThis article provides answers to MASS frequently asked questions: Click on the link for each of the FAQs below to expand the answer.\nGeneral \u0026nbsp; Can I use my existing MASS account? No. You need a separate MASS account for use on the Met Office internal network (CDN), Monsoon, ECMWF HPCs, and JASMIN. With these different account types, you can have permission to access different datasets specific to these computing environments. How do I use MOOSE? Please see the MOOSE User Guide here Will my account expire? Yes. By default, MASS via JASMIN accounts will expire after 500 days and your account will be automatically disabled.\nShortly before your account is due to expire you will receive an email, and it will contain instructions for you and your sponsor about how to extend your access. If your account has already expired and you are looking to reactive it, please email: Monsoon@metoffice.gov.uk\nWhy am I asked for a password when logging in to mass-cli? There are two reasons that may result in you being prompted for a password when attempting to login to the MASS client machine (mass-cli.jasmin.ac.uk).\nThe first is if you do not have permission to access the machine. A quick method to check is to verify if you are a member of the moose user group. It should be listed when you use the ‘groups’ command:\ngroups moose If this happens, please contact: Monsoon@metoffice.gov.uk\nThe second is if you forget the -A option for agent forwarding when you ssh to a JASMIN login node. You can test for this condition by listing loaded identities on the login node, and finding you have none:\nssh-add -l Could not open a connection to your authentication agent. If this happens, please exit back to your local machine and ssh in again using the -A flag or tick the relevant box for \u0026ldquo;agent forwarding\u0026rdquo;.\nHow can I directly login to the MASS client machine? You can\u0026rsquo;t, but you can edit your ssh configuration so that it automatically enables you to jump through the intermediary login servers.\nAdd the following to your home institute ssh config file ($HOME/.ssh/config file):\nHost mass-cli User your_jasmin_userid HostName mass-cli.jasmin.ac.uk ProxyCommand ssh -YA -t your_jasmin_userid@login.jasmin.ac.uk -W %h:%p 2\u0026gt;/dev/nullYou should then be able to login directly using:\n$ ssh mass-cliPlease note that this only works if you are using OpenSSH version 5.4 or greater as earlier versions do not support the -W flag. You can check your version using: ssh -v\nCan I write to MASS from JASMIN? No, MASS access from JASMIN is strictly read-only. If you need to write to the MASS archive, contact monsoon@metoffice.gov.uk and ask to be put in touch with the relevant team. MOOSE messages and what to do \u0026nbsp; Is this process running in the correct environment? When running \u0026lsquo;moo install\u0026rsquo; you may get an error message similar to:\nCannot read file: /home/user/\u0026lt;userid\u0026gt;/.moosedir/moose - is this process running in the correct environment?This can be the result of the wrong combination of Unix user-id and UID having been used to encrypt the credentials file. If you encounter this error message, please type id on the command line whilst logged into JASMIN, and send the uid= section of the output to: Monsoon@metoffice.gov.uk\nYour credentials file will then be reissued.\nYour password is due to expire in X day(s). Occasionally on running a MOOSE command you will be told that your password is due to expire with a message of the form:\nYour password is due to expire in 6 day(s). A new password can be generated using 'moo passwd -r'. This refers specifically to your MASS via JASMIN, it does not affect any other MOOSE accounts you may have.\nYou need to run the command as advised in order to update your credentials whilst you are logged into mass-cli. You do not actually need to provide a new password, as this is generated and hidden from you by the command.\nIf you have a retrieval in progress, it is safe to run this command as it will not affect processes already running.\nERROR_SINGLE_COPY_UNAVAILABLE MOOSE - Single Copy Unavailable error\nOn occasion, a tape library needs to be taken down for maintenance. If a user is trying to retrieve a single-copy file stored on one of those tapes, the retrieval will temporarily fail with the message ERROR_SINGLE_COPY_UNAVAILABLE. As soon as the maintenance is completed, the file will be available again.\nTapes are taken out of MASS for copying to the new MASS system and become unavailable for roughly 14 days. The process is as follows:\nThursday (week one): Tapes are marked unavailable for indexing by the system. Tuesday (week two): Tapes get taken out for copying to the new MASS system. Following Thursday (week three): Tapes are returned to Met Office library and should be available again. So, if you find that data or files are unavailable due to the ERROR_SINGLE_COPY_UNAVAILABLE error, try reading the data again on Friday, and if still not available, try the following Friday when the migration should have completed.\nMOOSE basics \u0026nbsp; What is MOOSE? The software that allows you to interact with MASS. What is a project? A collection of access rules. What is an access rule? Permission to access an area in MASS. For example, project-random might have an access rule to moose:/crum/random-numbers\nBeing part of project-random would allow you to access the random-numbers set.\nHow do I see what projects I am a member of? You can use: moo prls How do I see what access rules a project has? You can use: moo projinfo -l projectname (Replace projectname with the name of one of your projects) How do I get access to a project, or add an access rule to one of my projects? Please contact your sponsor. They can then complete this form if they also agree you require access:\nhttps://metoffice.service-now.com/sp?id=sc_cat_item\u0026sys_id=5653331e1bbaf0d88ffa422ad34bcba0\u0026referrer=recent_items\u0026nbsp; Please note that the link above is only visible to those in the Met Office.\nWhy can I not access a set that I know is part of a project? If you are given access to a project but do not have access to all the sets associated with it, this can be due to the Access Control Lists (ACLs).\nThe project owner will be able to change the ACLs on sets to make them readable if it is appropriate.\nHow do I retrieve a file from MASS? Use moo get or moo select. More information about both commands is in the MOOSE User Guide. How do I make sure my directory has all the available data retrieved from MASS? The problem: You are running a model over a period of several days or weeks, and you need to analyse the output of the model as it runs. You have a moo get or moo select command that you run to fetch the data that is available. You want to be able to re-run it to fetch the files or fields that have been added to MASS since you last ran the command, but you do not want it to waste time re-fetching things you already have.\nThe solution: Use the -i or \u0026ndash;fill-gaps option when you run moo get or moo select. This option tells MOOSE that you only want to fetch files that don\u0026rsquo;t already exist in the specified local directory. Note that MASS works out where gaps are by doing checks to see if files of the expected name exist in your destination directory, so it won\u0026rsquo;t behave correctly if you rename files after you have retrieved them, or if you use the -C option with moo select which condenses all the matching fields into a single file.\nYou might also find the -g / --get-if-available option to moo get useful. This tells MOOSE to get every file from your moo get list that is available, but ignore ones that are not there rather than exit with an error. This could help if you are expecting files to be archived at some point but are not sure whether they will be there when your job runs. If you use this option MOOSE will get as much as it can from your list without bailing out.\nHow can I script my data retrieval from MASS? There are restrictions on how to login to JASMIN and use of Linux utilities such as ‘cron’ and ‘at’ but it is possible to remotely initiate a retrieval from MASS on to JASMIN, provided you have your ssh agent running on a machine local to you.\neval $(ssh-agent -s) ssh-add ~/.ssh/jasmin_id_rsa ssh -A -X sci1.jasmin.ac.uk \u0026#39;ssh mass-cli my_script.sh\u0026#39;If you have set up your $HOME/.ssh/config to allow more direct access, then the following should work:\nssh mass-cli my_script.shThis will run the script “my_script.sh” on the MASS client VM. You can put the moose retrieval commands into a script and it should work:\n#!/bin/bash SRC_URI=moose:/opfc/atm/global/SOMETHING moo get $SRC_URI jasmin_copy.pp exitIf you have access to an appropriate JASMIN workspace, then you can scp data from the workspace directly through one of the dedicated data transfer VMs. Again, you need the ssh-agent running locally:\neval $(ssh-agent -s) ssh-add ~/.ssh/jasmin_id_rsa scp userid@xfer-vm-01.jasmin.ac.uk:/group_workspaces/cems/\u0026lt;project\u0026gt;/jasmin_file.pp my_local_copy.pp Can I run MASS retrievals on LOTUS or through a workload manager? In addition to the interactive mass-cli server there is also a node of the LOTUS batch processing cluster lotus-overview with the MASS client installed. To submit jobs to this, you must use the Slurm scheduler. You will need to specify:\nthe account mass partition mass and QOS mass for example:\nsbatch -A mass -p mass -q mass [\u0026lt;options\u0026gt;] \u0026lt;jobscript\u0026gt;where \u0026lt;jobscript\u0026gt; looks something like:\n#!/bin/bash SRC_URI=moose:/opfc/atm/global/SOMETHING moo get $SRC_URI jasmin_copy.pp exitIt is also easy to configure the Rose/Cylc workflow manager to submit jobs to moose1 through the Slurm scheduler by including the following lines in your suite.rc file:\n[[[job submission]]] method = slurm [[[directives]]] --partition=mass --account=mass --qos=mass [\u0026lt;options\u0026gt;]"
       })
       .add(
       
@@ -7747,6 +7747,21 @@ function initIndex() {
       
       {
         id: 75,
+        href: "/docs/mass/new-moose-and-mass/",
+        title: "New MOOSE and MASS",
+        description: "New MOOSE and MASS system",
+        
+        
+        content: "This article contains information about the new Azure MOOSE and MASS system (AZ-MOOSE and AZ-MASS). These are not currently the operational versions of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows.\nMASS refers to the tape archive and MOOSE is the interface used to interact with MASS, allowing you to do GETs, SELECTs and other commands. The current MASS system is aging and a new version of MASS, and a new version of MOOSE, is being developed.\nWe expect the new AZ-MOOSE commands to work in the same way as current MOOSE commands. However, there will be some differences with the new system, such as new commands to log into AZ-MOOSE.\nWhat do I need to do? \u0026nbsp; Make your existing MOOSE commands (GETs, SELECTs etc.) as \u0026rsquo;nice\u0026rsquo; to current MASS as you can. For example, split single large GETs into several smaller GETs. Review your workflows and jobs for those that use moo commands so that you know which ones to target for testing when the AZ-MOOSE client becomes available. Make note of the timeline below to assist with planning of work. Request an account if you wish to explore the new system before it goes live. This page will be updated with additional information and advice as we receive it.\nTimeline and Switchover \u0026nbsp; \u0026nbsp; This is a draft timeline and is potentially subject to further changes. MASS Timeline (maximise window to expand image) If you would like to be involved in the User Acceptance Testing (UAT) and have not already been contacted about it, please email: monsoon@metoffice.gov.uk\nTo safely switchover to the new MASS system we need to pause all MASS access and invoke a MASS outage to complete the metadata migration. The minimum outage for all users is expected to be 48 hours, but most users should plan for impacts spanning a longer timeframe of up to 5 working days. The switchover date will be announced as soon possible after User Acceptance Testing to give all users as much notice as possible.\nTo de-risk the switchover, users may be asked to reduce MASS usage for a short period ahead of the outage. As we get closer to the switchover date, further details about this will be communicated.\nChanges to your MASS Account \u0026nbsp; AZ-MASS User Account Changes\nItem Old System New System Notes Account Name mon_user_jane.smith.mon/ext jane.smith You will have a single account for all MASS access. Currently, you will have separate accounts for JASMIN or Met Office systems. Data access Data access is specific to the platform Data access is the same on any platform Authentication .moosedir file moo login command You will be required to log into the MOOSE system using the command line which will prompt you to enter a code into a web browser. Note that although what you can access in AZ-MASS will remain the same regardless of what platform you are signing in from (Monsoon/JASMIN/other) the AZ-MOOSE commands you can perform will differ. JASMIN remains a read-only platform (GET/SELECT etc.).\nChanges to data access \u0026nbsp; There will be some changes to what data access you have for a period of time after service commencement.\nIf you access datasets that are not associated with any of your projects but are covered by a project access rule, you may lose access to it. We are taking action to prevent this from happening, but we do expect edge cases to arise. Where this happens, please contact: monsoon@metoffice.gov.uk\nRemoved and Altered MOOSE Commands \u0026nbsp; When the Met Office switches over to Azure MASS, some uncommon commands and options still in infrequent use today will no longer be available and for a few their behaviour has changed. The following aims to provide a definitive list of those commands and options as a reference for users.\nRemoved and Altered MOOSE Commands\nMOOSE Verb Option Notes (any) -k --conversion-threads not supported on Azure MASS (any) -j --transfer-threads not supported on Azure MASS (any) --usage not supported on Azure MASS filter -c --local-file-format not supported on Azure MASS filter -d --disable-resume not supported on Azure MASS filter -z --compressed-transfer not supported on Azure MASS select -c --local-file-format not supported on Azure MASS select -d --disable-resume not supported on Azure MASS select -a --append not supported on Azure MASS select -z --compressed-transfer not supported on Azure MASS select --licence-file added. --append removed. --regex added. Duplicate filename collisions now fail. get -d --disable-resume not supported on Azure MASS get -c --local-file-format not supported on Azure MASS get -z --compressed-transfer not supported on Azure MASS get --licence-file option added. --regex option added. Changed behaviour when duplicate filenames occur. ls -b --backup not supported on Azure MASS ls Cost column removed. Shows MD5 hash instead of Adler-32 checksum. Added --regex; extended --long/--full; --xml extended to show File System lock info. quality not supported on Azure MASS defer not supported on Azure MASS disable not supported on Azure MASS enable not supported on Azure MASS mdls -n --numberofatoms → --number-of-atoms The old option --numberofatoms is still supported but an alias --number-of-atoms has now been added for consistency. ownedsets Cost column and its GBP label removed from command output. Archiving Level replaced with Risk Level in command output. setinfo Cost column removed from command output. Archiving Level replaced with Risk Level in command output. si The output has been simplified and updated to reflect new MASS architecture. suspend Can now be used by administrators to suspend another user\u0026rsquo;s operation. Limitations to AZ-MOOSE and AZ-MASS \u0026nbsp; \u0026nbsp; This section contains information about limitations to AZ-MOOSE and AZ-MASS during the UAT period. It is subject to further updates and changes. Data availability Data in the Production classes, for example, moose:/crum/ is read only and only contains data up until 19th January 2026. Requesting an account \u0026nbsp; \u0026nbsp; AZ-MOOSE and AZ-MASS is not yet operational. Continue to use the current MOOSE and MASS system for your workflows. You are welcome to test your workflows with the new system. If you have a MONSooN3 AZ-MASS account, you do not need to request an AZ-MASS account for JASMIN.\nYou must be an existing user of MASS to request an AZ-MASS account (see How to apply for MASS access) Email monsoon@metoffice.gov.uk from the email address you registered your existing MASS account with. Resources and Further Reading \u0026nbsp; \u0026nbsp; These links will only be accessible by Met Office staff members. Getting ready for go live\u0026nbsp; Training and resource hub\u0026nbsp; If you have any questions, please email: monsoon@metoffice.gov.uk"
+      })
+      .add(
+      
+      
+      
+      
+      
+      {
+        id: 76,
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
         description: "New storage FAQs and issues",
@@ -7761,7 +7776,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 77,
         href: "/docs/short-term-project-storage/nlds-step-by-step/",
         title: "NLDS Step by step",
         description: "Step-by-Step guide to setting up the NLDS client on JASMIN",
@@ -7776,7 +7791,7 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 78,
         href: "/docs/short-term-project-storage/object-store/s3-tools/",
         title: "Object Store Tools",
         description: "Object Store Tools",
@@ -7791,7 +7806,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         href: "/docs/for-cloud-tenants/openstack/",
         title: "OpenStack",
         description: "OpenStack on the JASMIN Cloud",
@@ -7806,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Details of JASMIN's GPU cluster, ORCHID",
@@ -7821,7 +7836,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         href: "/docs/getting-started/permissions-and-groups/",
         title: "Permissions and groups",
         description: "How permissions and groups are used to manage access to data stored on JASMIN.",
@@ -7838,7 +7853,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         href: "/docs/for-cloud-tenants/platform-in-depth-jupyterhub/",
         title: "Platforms In Depth - JupyterHu...",
         description: "In depth look at the JupyterHub platforms",
@@ -7853,7 +7868,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         href: "/docs/for-cloud-tenants/platform-in-depth-k8s/",
         title: "Platforms In Depth - Kubernetes",
         description: "In depth look at the Kubernetes platforms",
@@ -7868,7 +7883,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         href: "/docs/for-cloud-tenants/platform-in-depth-slurm/",
         title: "Platforms In Depth - Slurm",
         description: "In depth look at the Slurm platform",
@@ -7883,7 +7898,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         href: "/docs/for-cloud-tenants/platform-in-depth-workstation/",
         title: "Platforms In Depth - Workstations",
         description: "In depth look at the workstation platforms",
@@ -7898,7 +7913,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7913,7 +7928,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7928,7 +7943,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7943,7 +7958,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7958,7 +7973,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments on JASMIN",
@@ -7975,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deac...",
         description: "Quickstart for activating/deactivating software environments",
@@ -7990,7 +8005,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         href: "/docs/uncategorized/rate-limiting/",
         title: "Rate Limiting",
         description: "Rate limiting applied to JASMIN web services",
@@ -8005,7 +8020,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -8022,7 +8037,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email...",
         description: "Reconfirm JASMIN account email address",
@@ -8037,7 +8052,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -8052,7 +8067,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -8067,7 +8082,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -8082,7 +8097,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -8097,7 +8112,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -8112,7 +8127,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -8127,7 +8142,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Details of the scientific analysis servers",
@@ -8142,7 +8157,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8159,7 +8174,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8174,7 +8189,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8189,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8204,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8219,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8234,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8249,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8264,7 +8279,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8279,7 +8294,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8294,7 +8309,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8309,7 +8324,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8326,7 +8341,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8341,7 +8356,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8358,7 +8373,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8373,7 +8388,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/short-term-project-storage/object-store/jasmin-object-store/",
         title: "The JASMIN Object Store",
         description: "The JASMIN Object Store",
@@ -8388,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8403,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8418,7 +8433,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8433,7 +8448,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8448,7 +8463,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8463,7 +8478,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8478,7 +8493,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8495,7 +8510,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8510,7 +8525,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8527,7 +8542,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8542,7 +8557,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

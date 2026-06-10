@@ -1728,7 +1728,9 @@ links to articles that describe them in more detail.&lt;/p&gt;</description></it
 
  &lt;/div&gt;
  &lt;/div&gt;
-&lt;p&gt;This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQs</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;h2 id="introduction" class="heading "&gt;Introduction&lt;a href="#introduction" aria-labelledby="introduction"&gt;
+&lt;p&gt;This article explains the return codes of certain Elastic Tape (ET) commands.&lt;/p&gt;</description></item><item><title>External Access to MASS FAQs</title><link>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/external-access-to-mass-faq/</guid><description>&lt;div class="d-flex alert alert-danger " 
+ role="alert"&gt;
+ &lt;div class="pt-1 pe-2"&gt;
 
 
 
@@ -1737,11 +1739,10 @@ links to articles that describe them in more detail.&lt;/p&gt;</description></it
 
 
 
-&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
- &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
- &lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.&lt;/p&gt;</description></item><item><title>ftp and lftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</guid><description>&lt;p&gt;This article provides information about FTP (File Transfer Protocol) as a data
+&lt;!-- &lt;i class="fas fa-triangle-exclamation fa-2x fa-fw"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-triangle-exclamation fa-2x fa-fw" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-triangle-exclamation"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&lt;/div&gt;
+ &lt;div class="flex-grow-1 my-auto"&gt;
+ &lt;p&gt;&lt;strong&gt;New MOOSE and MASS&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>ftp and lftp</title><link>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/data-transfer/ftp-and-lftp/</guid><description>&lt;p&gt;This article provides information about FTP (File Transfer Protocol) as a data
 transfer tool. In particular:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;what is FTP?&lt;/li&gt;
@@ -2549,7 +2550,7 @@ to that version
  &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
  &lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;The Near-Line Data Store is JASMIN&amp;rsquo;s new service to bridge the gap between disk and tape storage.&lt;/p&gt;</description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&lt;div class="d-flex alert alert-info " 
+&lt;p&gt;The Near-Line Data Store is JASMIN&amp;rsquo;s new service to bridge the gap between disk and tape storage.&lt;/p&gt;</description></item><item><title>New MOOSE and MASS</title><link>https://help.jasmin.ac.uk/docs/mass/new-moose-and-mass/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/mass/new-moose-and-mass/</guid><description>&lt;p&gt;This article contains information about the new Azure MOOSE and MASS system (AZ-MOOSE and AZ-MASS). These are not currently the operational versions of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows.&lt;/p&gt;</description></item><item><title>New storage FAQs and issues</title><link>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/short-term-project-storage/faqs-storage/</guid><description>&lt;div class="d-flex alert alert-info " 
  role="alert"&gt;
  &lt;div class="pt-1 pe-2"&gt;
 

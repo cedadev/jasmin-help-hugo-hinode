@@ -124,7 +124,7 @@ AZ-MOOSE and AZ-MASS is not yet operational. Continue to use the current MOOSE a
 These links will only be accessible by Met Office staff members.
 {{</alert>}}
 
-{{<link "https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Getting-ready-for-go-live.aspx">}}Getting ready for go live{{</link>}}
-{{<link "https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Training-Resource-hub.aspx">}}Training and resource hub{{</link>}}
+- {{<link "https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Getting-ready-for-go-live.aspx">}}Getting ready for go live{{</link>}}
+- {{<link "https://metoffice.sharepoint.com/sites/SupercomputingInvestmentCommsSite/SitePages/Training-Resource-hub.aspx">}}Training and resource hub{{</link>}}
 
 If you have any questions, please email: monsoon@metoffice.gov.uk

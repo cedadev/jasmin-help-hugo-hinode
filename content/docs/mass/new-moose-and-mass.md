@@ -7,7 +7,7 @@ tags:
 title: New MOOSE and MASS
 ---
 
-This article contains information about the new Azure MOOSE and MASS system (AZ-MOOSE and AZ-MASS). It is not currently the operational version of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows. 
+This article contains information about the new Azure MOOSE and MASS system (AZ-MOOSE and AZ-MASS). These are not currently the operational versions of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows.
 
 MASS refers to the tape archive and MOOSE is the interface used to interact with MASS, allowing you to do GETs, SELECTs and other commands. The current MASS system is aging and a new version of MASS, and a new version of MOOSE, is being developed.
 
@@ -15,20 +15,20 @@ We expect the new AZ-MOOSE commands to work in the same way as current MOOSE com
 
 ## What do I need to do? 
 
-1. Make your existing MOOSE commands (GETs, SELECTs etc.) as 'nice' to current MASS as you can. For example, split single large GETs into several smaller GETs. 
+1. Make your existing MOOSE commands (GETs, SELECTs etc.) as 'nice' to current MASS as you can. For example, split single large GETs into several smaller GETs.
 2. Review your workflows and jobs for those that use `moo` commands so that you know which ones to target for testing when the AZ-MOOSE client becomes available.  
-3. Make note of the timeline below to assist with planning of work. 
+3. Make note of the timeline below to assist with planning of work.
 4. Request an account if you wish to explore the new system before it goes live.
 
-This page will be updated with additional information and advice as we receive it.   
+This page will be updated with additional information and advice as we receive it.
 
 ## Timeline and Switchover
 
 {{<alert alert-type="info" >}}
-This is a draft timeline and is potentially subject to further changes. 
+This is a draft timeline and is potentially subject to further changes.
 {{</alert>}}
 
-{{<image src="img/docs/mass/mass_timeline.png" caption="MASS Timeline">}} 
+{{<image src="img/docs/mass/mass_timeline.png" caption="MASS Timeline (maximise window to expand image)">}}
 
 If you would like to be involved in the User Acceptance Testing (UAT) and have not already been contacted about it, please email: monsoon@metoffice.gov.uk 
 
@@ -42,7 +42,7 @@ AZ-MASS User Account Changes
     
 Item | Old System | New System | Notes
 ---|---|---|---
-Account Name | mon_user_jane.smith.mon/ext | jane.smith | You will have a single account for all MASS access. Currently, you will have separate accounts for JASMIN or Met Office systems."
+Account Name | `mon_user_jane.smith.mon/ext` | `jane.smith` | You will have a single account for all MASS access. Currently, you will have separate accounts for JASMIN or Met Office systems.
 Data access | Data access is specific to the platform | Data access is the same on any platform
 Authentication | `.moosedir` file | `moo login` command | You will be required to log into the MOOSE system using the command line which will prompt you to enter a code into a web browser. 
 {.table .table-striped}
@@ -85,7 +85,7 @@ defer | | not supported on Azure MASS
 disable | | not supported on Azure MASS
 enable | | not supported on Azure MASS
 mdls | `-n` `--numberofatoms` → `--number-of-atoms` | The old option `--numberofatoms` is still supported but an alias `--number-of-atoms` has now been added for consistency.
-ownedsets |  | Cost column and it's GBP label removed from command output. Archiving Level replaced with Risk Level in command output.
+ownedsets |  | Cost column and its GBP label removed from command output. Archiving Level replaced with Risk Level in command output.
 setinfo |  | Cost column removed from command output. Archiving Level replaced with Risk Level in command output.
 si |  | The output has been simplified and updated to reflect new MASS architecture.
 suspend |  | Can now be used by administrators to suspend another user's operation.
@@ -115,9 +115,8 @@ AZ-MOOSE and AZ-MASS is not yet operational. Continue to use the current MOOSE a
 
 **If you have a MONSooN3 AZ-MASS account, you do not need to request an AZ-MASS account for JASMIN.**
 
-1. You must be an existing user of MASS to request an AZ-MASS account (see 'How to apply for MASS access') 
-2. Email monsoon@metoffice.gov.uk from the email address you registered your existing MASS account with 
-
+1. You must be an existing user of MASS to request an AZ-MASS account (see [How to apply for MASS access](how-to-apply-for-mass-access)) 
+2. Email monsoon@metoffice.gov.uk from the email address you registered your existing MASS account with.
 
 ## Resources and Further Reading 
 

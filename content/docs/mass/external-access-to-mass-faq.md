@@ -9,6 +9,16 @@ tags:
 title: External Access to MASS FAQs
 ---
 
+{{<alert alert-type="danger">}}
+
+**New MOOSE and MASS**
+
+For information about the new Azure MOOSE and MASS systems please see the page [New MOOSE and MASS](new-moose-and-mass).
+
+
+However, these are not currently the operational versions of MOOSE and MASS, so please continue to refer to the other MASS pages for current workflows.
+{{</alert>}}
+
 ## Introduction
 
 The Managed Archive Storage System (MASS) provides storage and restore services for large volumes of Met Office data. It is a service operated by the UK Met Office.
@@ -315,8 +325,5 @@ including the following lines in your suite.rc file:
 
 {{< /accordion >}}
 
-## New MOOSE and MASS
-
-This information has been moved. Please see the page 'New MOOSE and MASS'.
 
 

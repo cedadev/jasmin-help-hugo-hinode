@@ -5,7 +5,6 @@ description: "App to alert GWS managers/deputies when their GWS is reaching capa
 
 The Group Workspace (GWS) Alert system is an app which runs a daily scan to check the capacity of volumes, then emails GWS managers if it is over the default threshold of 90% or the defined threshold in the GWS config file.
 
-{{<alert alert-type="info">}}Please note this service is under beta-testing so if you receive any emails in error please let us know (September 2025){{</alert>}}
 
 ## What is the GWS Alert System?
 
@@ -15,21 +14,15 @@ A GWS volume is collaborative storage made available to a group for a project. E
 
 The app gets a list of all GWS volumes from the {{<link jasmin_projects_portal />}}, gets the storage information - i.e. how much storage has been used and how much is available, then sends an email alert if the volume is over a certain percentage full. The managers and deputies are obtained from the {{<link jasmin_accounts_portal />}}.
 
-The GWS Alert System runs on a schedule at 11am daily.
+The GWS Alert System runs daily at roughly midday.
 
 ### Threshold value
 
-The threshold value at which alerts are sent is obtained from the file `{GWS_PATH}/.gws_scan/config.ini`.
-
-[See here for details of how to customize this file](gws-scanner/#customisation), including this alert threshold.
-
-If no file can be found, or the value not given, the default value of 90% is used, i.e. `volume_warning_threshold = 90`.
+The default threshold for alerts is when the volume is 90% full. Please get in touch if you want this to be a different value. (This used to be configurable in a file on the volume, but changes to the alert system means that we can't use it any more).
 
 ## Issues and questions
 
 If you receive an email in error, or you think the email may contain incorrect information, please let us know.
-
-If you'd like to change the threshold value, please update the `volume_warning_threshold` value in the `config.ini` file as described above. If the value hasn't been updated after 11:00 the following day, please let us know.
 
 If you make changes to your storage and these aren't reflected in the next alert, please let us know.
 

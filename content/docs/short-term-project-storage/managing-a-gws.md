@@ -161,6 +161,7 @@ find /gws/nopw/j04/upscale/cache -type f -atime +365
 ```
 
 **However**, this can
+
 - consume significant system resources in running the `du` command, for a long time, and
 - fail due to permission issues (as a regular user, you can't always "see" down all the directory branches)
 

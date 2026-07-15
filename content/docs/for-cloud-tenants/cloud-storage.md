@@ -63,4 +63,4 @@ Once done, you can access the fileshare at the mount point.
 
 ## Object store
 
-Openstack provides Swift in stfc cloud (see [here](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/267976766/Swift)), but we recommend that most users use the [JASMIN object store]({{% ref "using-the-jasmin-object-store" %}}).
+Openstack provides Swift in stfc cloud (see [here](https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/267976766/Swift)), but we recommend that most users use the [JASMIN object store]({{% ref "jasmin-object-store" %}}).

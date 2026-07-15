@@ -18,7 +18,56 @@ workstations to entire Slurm clusters and Kubernetes-based platforms like Jupyte
 It is designed to provide a standardised computing environment for groups, such as classes or research teams, by launching individual
 Jupyter notebook instances for each user. The primary purpose of JupyterHub is to facilitate collaborative and scalable data science and
 research. It allows users access to a consistent computing environment from any device with a web browser where they can share resources
-efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Azimuth Identity Provider</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</guid><description>&lt;p&gt;Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</guid><description>&lt;h2 id="patching" class="heading "&gt;Patching&lt;a href="#patching" aria-labelledby="patching"&gt;
+efficiently within a team or class. Administrators can manage user authentication and resource allocation centrally.&lt;/p&gt;</description></item><item><title>Platforms In Depth - Slurm</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/platform-in-depth-slurm/</guid><description>&lt;p&gt;The &lt;strong&gt;Slurm platform&lt;/strong&gt; empowers users with a high-performance computing environment, using the Slurm workload manager and Open OnDemand for seamless job scheduling and resource management. It also enables access to the platform effortlessly through a web browser via the Open OnDemand interface or directly using SSH.&lt;/p&gt;</description></item><item><title>Azimuth Identity Provider</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/azimuth-identity-provider/</guid><description>&lt;p&gt;Azimuth provides a Keycloak realm for each tenancy. The Kubernetes application platforms in Azimuth can use this Keycloak to manage access to the platforms by creating new users and adding those users to groups. External identity providers can also be added to the Keycloak realm to provide access. Any created users can be given access to Azimuth platforms, but not Azimuth itself, and not any manually created machines. Not all platforms can be signed into this way.&lt;/p&gt;</description></item><item><title>OpenStack</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/openstack/</guid><description>&lt;p&gt;While we expect most tenants to use Azimuth to interact with the cloud, some may find it beneficial to interact directly with OpenStack. The STFC Cloud team have documentation which contains more information about this.&lt;/p&gt;</description></item><item><title>JASMIN Cloud Storage</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cloud-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/cloud-storage/</guid><description>&lt;p&gt;There are a few different types of storage on the JASMIN Cloud, each with their own advantages. These include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VM root partitions&lt;/li&gt;
+&lt;li&gt;block storage, aka Cinder&lt;/li&gt;
+&lt;li&gt;fileshare, aka Manilla&lt;/li&gt;
+&lt;li&gt;object storage, aka Swift&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;h2 id="root-partitions" class="heading "&gt;Root Partitions&lt;a href="#root-partitions" aria-labelledby="root-partitions"&gt;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-link anchor"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-link anchor" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 576 512"&gt;&lt;use href="#fas-link"&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;When a VM is created, it comes with a root partition (usually mounted at &lt;code&gt;/&lt;/code&gt;). The size of this partition is defined by the flavor which was used for the VM. See the 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+ &lt;a href="https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211779756/VM&amp;#43;Flavors" target="_blank" rel="noopener noreferrer nofollow"&gt;STFC Cloud documentation&amp;nbsp;
+
+
+
+
+
+
+
+
+&lt;!-- &lt;i class="fas fa-up-right-from-square fa-2xs"&gt;&lt;/i&gt; --&gt;
+ &lt;svg class="svg-inline--fa fas fa-up-right-from-square fa-2xs" fill="currentColor" aria-hidden="true" role="img" viewBox="0 0 512 512"&gt;&lt;use href="#fas-up-right-from-square"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt; for up to date flavors.&lt;/p&gt;</description></item><item><title>Linux admin</title><link>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://help.jasmin.ac.uk/docs/for-cloud-tenants/linux-admin/</guid><description>&lt;h2 id="patching" class="heading "&gt;Patching&lt;a href="#patching" aria-labelledby="patching"&gt;
 
 
 

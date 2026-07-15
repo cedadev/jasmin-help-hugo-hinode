@@ -7395,7 +7395,7 @@ function initIndex() {
         description: "Introduction to the JASMIN Cloud",
         
         
-        content: "In addition to the traditional batch computing (LOTUS) and storage (Group Workspaces) services, JASMIN also provides a cloud computing service.\nMany users will already be familiar with cloud services through the use of one of the large public providers (e.g. Amazon AWS or Microsoft Azure). The JASMIN Cloud is similar in that it allows an institution or project to consume compute resources as a utility, with no need to provision and maintain the associated physical infrastructure. Users can provision their own virtual machines (VMs), allowing for greater flexibility. The JASMIN Cloud also allows users to provision clusters using the Azimuth Portal.\nCloud terminology \u0026nbsp; Different cloud providers have different terms for the users within their cloud and the chunks of resource they have been allocated. In the JASMIN Cloud documentation, we will use the following terminology:\nterm meaning Tenancy/Project An allocation of resources: virtual CPUs, RAM and block storage, within the cloud platform Tenant A group (institution or project) that has been allocated a tenancy in the cloud platform Tenancy Admin(istrator) The person designated as the administrator of a tenancy. There would usually also be a deputy administrator. JASMIN Cloud Architecture \u0026nbsp; The JASMIN Cloud is hosted on the STFC Cloud\u0026nbsp; , a dedicated cloud infrastructure provided by STFC for STFC staff and partner organisations. It is operated by the STFC Scientific Computing Department\u0026nbsp; .\nTenants are primarily expected to use the JASMIN Azimuth Portal to administer their tenancies for creating machines, volumes, clusters etc. Tenants can also log into STFC Cloud\u0026rsquo;s Horizon Portal\u0026nbsp; , and use the OpenStack API and CLI tools to manage resources.\nTenants are allowed root access and have complete responsibility for all system administration tasks. This means that tenants are able to provision their own infrastructure (e.g. web portals, remote desktop services), but it also means that tenants are responsible for the security of their machines (e.g. patching, firewall configuration) and for managing their own users. The Azimuth Platform also provides \u0026ldquo;Platforms\u0026rdquo; which are Platform-as-a-Service offerings that tenants can use to deploy clusters such as:\nKubernetes clusters Jupyter Notebooks VMs with a web browser accessible shell and desktop Each tenancy has its own local network, where machines have IP addresses in the range 192.168.3.0/24 - all machines in the tenancy can talk to each other on this network. In addition, each tenancy has an \u0026ldquo;edge device\u0026rdquo;, which is effectively a virtual router. Similar to your home broadband router, this allows machines within the tenancy to talk to machines outside the tenancy, and ensures packets coming back into the tenancy are forwarded to the correct machine. These \u0026ldquo;edge devices\u0026rdquo; also provide a Network Address Translation (NAT)\u0026nbsp; facility, which allows machines to be allocated an IP address that is visible outside of the tenancy.\nBecause we allow root access on cloud based VMs, tenancies in the JASMIN Cloud cannot access the JASMIN storage (including PFS, and SOF), and so there is no filesystem level access to the CEDA Archive or Group Workspaces - all access to these data is via the usual external interfaces (i.e. the Object Store, OpenDAP, HTTP).\nOur Expectations from Tenants \u0026nbsp; We expect Tenants to abide by the terms and conditions set out by JASMIN\u0026nbsp; , STFC Cloud\u0026nbsp; , and UKRI\u0026nbsp; . Importantly, this includes abiding by the patching policy\u0026nbsp; set out by UKRI.\n\u0026nbsp; In line with UKRI security policy, we expect tenants to react in a timely manner to any security vulnerabilities. This means critical vulnerabilities must be patched within 7 days, and high vulnerabilities patched within 14 days. Failure to comply may result in tenancy access being revoked and machines powered down. We also expect tenants to adhere to good practices around machine lifecycle: patching machines and updating clusters regularly, and working in a reproducible way; i.e. treating machines as \u0026ldquo;cattle\u0026rdquo; not \u0026ldquo;pets\u0026rdquo;.\nPatching and Machine Lifecycle \u0026nbsp; Machines should be kept up to date and patched regularly, and also rebooted where required so that updates can be applied. The suggested interval for this is 6 weeks.\nMachines should also be cycled out of production regularly. VMs should not be left to age for a number of reasons, primarily that older images are more vulnerable to security vulnerabilities. Older flavors are also cycled out of production, as is older hardware, so updating to newer images will improve the reliability of the machine.\nRegularly cycling machines out of production also encourages the use of reproducible deployment methods to make deployments easier and faster.\nReproducible Deployments \u0026nbsp; All services and workflows deployed in the JASMIN cloud should be deployed in a reproducible way. That is that the VMs themselves should be considered \u0026ldquo;cattle\u0026rdquo; rather than \u0026ldquo;pets\u0026rdquo;. There are a number of methods and technologies to do this which generally are considered Infrastructure-as-Code (IaC). These include: Ansible, Terraform, Docker, Cluster API, Kubernetes, and Helm.\nThe Azimuth Portal is able to provision Kubernetes Clusters which can be used to make machine lifecycle and reproducible deployments easier, including:\ndeployments can be deployed with Helm charts, meaning that a deployment is a single command away from being redeployed or updated in event of machine loss, Kubernetes will redeploy the workload to another worker Azimuth Kubernetes clusters auto-heal and can auto-scale to dynamically create and replace worker nodes More detail on suggested IaC technologies are available in the Best Practice section.\nDocumentation pages for some general advice are also available for Linux Administration, and OpenStack.\nGetting a JASMIN Cloud Tenancy \u0026nbsp; To start a conversation with us about getting a JASMIN Cloud Tenancy for your project, please contact JASMIN Support."
+        content: "In addition to the traditional batch computing (LOTUS) and storage (Group Workspaces) services, JASMIN also provides a cloud computing service.\nMany users will already be familiar with cloud services through the use of one of the large public providers (e.g. Amazon AWS or Microsoft Azure). The JASMIN Cloud is similar in that it allows an institution or project to consume compute resources as a utility, with no need to provision and maintain the associated physical infrastructure. Users can provision their own virtual machines (VMs), allowing for greater flexibility. The JASMIN Cloud also allows users to provision clusters using the Azimuth Portal.\nCloud terminology \u0026nbsp; Different cloud providers have different terms for the users within their cloud and the chunks of resource they have been allocated. In the JASMIN Cloud documentation, we will use the following terminology:\nterm meaning Tenancy/Project An allocation of resources: virtual CPUs, RAM and block storage, within the cloud platform Tenant A group (institution or project) that has been allocated a tenancy in the cloud platform Tenancy Admin(istrator) The person designated as the administrator of a tenancy. There would usually also be a deputy administrator. JASMIN Cloud Architecture \u0026nbsp; The JASMIN Cloud is hosted on the STFC Cloud\u0026nbsp; , a dedicated cloud infrastructure provided by STFC for STFC staff and partner organisations. It is operated by the STFC Scientific Computing Department\u0026nbsp; .\nTenants are primarily expected to use the JASMIN Azimuth Portal to administer their tenancies for creating machines, volumes, clusters etc. Tenants can also log into STFC Cloud\u0026rsquo;s Horizon Portal\u0026nbsp; , and use the OpenStack API and CLI tools to manage resources.\nTenants are allowed root access and have complete responsibility for all system administration tasks. This means that tenants are able to provision their own infrastructure (e.g. web portals, remote desktop services), but it also means that tenants are responsible for the security of their machines (e.g. patching, firewall configuration) and for managing their own users. The Azimuth Platform also provides \u0026ldquo;Platforms\u0026rdquo; which are Platform-as-a-Service offerings that tenants can use to deploy clusters such as:\nKubernetes clusters Jupyter Notebooks VMs with a web browser accessible shell and desktop Each tenancy has its own local network, where machines have IP addresses in the range 192.168.3.0/24 - all machines in the tenancy can talk to each other on this network. In addition, each tenancy has an \u0026ldquo;edge device\u0026rdquo;, which is effectively a virtual router. Similar to your home broadband router, this allows machines within the tenancy to talk to machines outside the tenancy, and ensures packets coming back into the tenancy are forwarded to the correct machine. These \u0026ldquo;edge devices\u0026rdquo; also provide a Network Address Translation (NAT)\u0026nbsp; facility, which allows machines to be allocated an IP address that is visible outside of the tenancy.\nBecause we allow root access on cloud based VMs, tenancies in the JASMIN Cloud cannot access the JASMIN storage (including PFS, and SOF), and so there is no filesystem level access to the CEDA Archive or Group Workspaces - all access to these data is via the usual external interfaces (i.e. the Object Store, OpenDAP, HTTP).\nOur Expectations from Tenants \u0026nbsp; We expect Tenants to abide by the terms and conditions set out by JASMIN\u0026nbsp; , STFC Cloud\u0026nbsp; , and UKRI\u0026nbsp; . Importantly, this includes abiding by the patching policy\u0026nbsp; set out by UKRI.\n\u0026nbsp; In line with UKRI security policy, we expect tenants to react in a timely manner to any security vulnerabilities. This means critical vulnerabilities must be patched within 7 days, and high vulnerabilities patched within 14 days. Failure to comply may result in tenancy access being revoked and machines powered down. We also expect tenants to adhere to good practices around machine lifecycle: patching machines and updating clusters regularly, and working in a reproducible way; i.e. treating machines as \u0026ldquo;cattle\u0026rdquo; not \u0026ldquo;pets\u0026rdquo;.\nPatching and Machine Lifecycle \u0026nbsp; Machines should be kept up to date and patched regularly, and also rebooted where required so that updates can be applied. The suggested interval for this is 6 weeks.\nMachines should also be cycled out of production regularly. VMs should not be left to age for a number of reasons, primarily that older images are more vulnerable to security vulnerabilities. Older flavors are also cycled out of production, as is older hardware, so updating to newer images will improve the reliability of the machine.\nRegularly cycling machines out of production also encourages the use of reproducible deployment methods to make deployments easier and faster.\nReproducible Deployments \u0026nbsp; All services and workflows deployed in the JASMIN cloud should be deployed in a reproducible way. That is that the VMs themselves should be considered \u0026ldquo;cattle\u0026rdquo; rather than \u0026ldquo;pets\u0026rdquo;. There are a number of methods and technologies to do this which generally are considered Infrastructure-as-Code (IaC). These include: Ansible, Terraform, Docker, Cluster API, Kubernetes, and Helm.\nThe Azimuth Portal is able to provision Kubernetes Clusters which can be used to make machine lifecycle and reproducible deployments easier, including:\ndeployments can be deployed with Helm charts, meaning that a deployment is a single command away from being redeployed or updated in event of machine loss, Kubernetes will redeploy the workload to another worker Azimuth Kubernetes clusters auto-heal and can auto-scale to dynamically create and replace worker nodes More detail on suggested IaC technologies are available in the Best Practice section.\nDocumentation pages for some general advice are also available for Linux Administration, and OpenStack.\nGetting a JASMIN Cloud Tenancy \u0026nbsp; To request a tenancy, or a change in quota please see Requesting Resources."
       })
       .add(
       
@@ -7405,6 +7405,21 @@ function initIndex() {
       
       {
         id: 53,
+        href: "/docs/for-cloud-tenants/cloud-storage/",
+        title: "JASMIN Cloud Storage",
+        description: "Storage on the JASMIN Cloud",
+        
+        
+        content: "There are a few different types of storage on the JASMIN Cloud, each with their own advantages. These include:\nVM root partitions block storage, aka Cinder fileshare, aka Manilla object storage, aka Swift Root Partitions \u0026nbsp; When a VM is created, it comes with a root partition (usually mounted at /). The size of this partition is defined by the flavor which was used for the VM. See the STFC Cloud documentation\u0026nbsp; for up to date flavors.\nThis root partition usually uses the SSD on the hypervisor, meaning that access is fast, though the size is limited. It is also ephemeral, meaning that it is deleted when the VM is deleted. For these reasons, we suggest that root partitions are not used to store data.\nBlock Storage (Cinder) \u0026nbsp; Block storage using Cinder is the traditional way of providing storage with OpenStack. Volumes can be created through the advanced tab in the Azimuth portal. Kubernetes clusters can also use Cinder using the Cinder CSI Driver, which is installed on Azimuth Kubernetes clusters by default.\nDue to the limited amount of available block storage, we do not recommend that it is used for large volumes of data - fileshare should be used instead.\nFileshare (Manila) \u0026nbsp; Fileshare (Manila) storage on the STFC cloud is the recommended way to store large data sets.\nCurrently Azimuth will provision a single fileshare for a tenancy, which we will resize to fill your fileshare quota. We are working on intergrating the management of fileshares with Azimuth more completely so that the size and quota can be viewed on the portal.\nFileshares are exposed as a Ceph Filesystem which can be mounted on multiple machines. In order to do this you need the Monitor IP address which can be found using the Openstack CLI, or given to you when your project was set up.\nWhen tenancies are initially created, we will resize the created share to match the quota for the tenancy.\nTo avoid having to mount the fileshare yourself, you can use an Azimuth Workstation, or Slurm cluster where the share will be mounted under /project/ on each platform. Note that this share can be mounted in multiple places at once, allowing cross-platform data sharing.\nWe are currently working on adding fileshares as a CSI backend for Kubernetes persistent volumes (PVs) and allowing resizing, and surfacing information on the share through Azimuth.\nNote that the only way to see the usage of a share is to check with df (or similar) on a machine where the share is mounted. This is an Openstack limitation and not something we have control over.\nSTFC Cloud has detailed documentation about fileshares\u0026nbsp; .\nMounting Instructions \u0026nbsp; The kernel client requires the ceph-common package to be installed. To access the filesystem on a share, we can use the mount command of the form:\n# Create a directory for your mount point mkdir /mnt/share # or any path you prefer # Mount command (see below for breakdown) mount -t ceph mon1 ip addr:6789,mon2 ip addr:6789,mon3 ip addr:6789/manilla-volume -o name=access-rule-name secret=access-key /mnt/path 130.246.208.244:6789,130.246.209.22:6789,130.246.209.142:6789/ is the Monitor IP address from the Openstack CLI. manilla-volume Manila volume UUID generated by Openstack. Obtainable through the Openstack CLI, and provided upon project creation. name=access-rule-name secret=access-key /mnt/path directory created above. Once done, you can access the fileshare at the mount point.\nObject store \u0026nbsp; Openstack provides Swift in stfc cloud (see here\u0026nbsp; ), but we recommend that most users use the JASMIN object store."
+      })
+      .add(
+      
+      
+      
+      
+      
+      {
+        id: 54,
         href: "/docs/uncategorized/jasmin-conditions-of-use/",
         title: "JASMIN Conditions of Use",
         description: "JASMIN Conditions of Use",
@@ -7419,7 +7434,7 @@ function initIndex() {
       
       
       {
-        id: 54,
+        id: 55,
         href: "/docs/interactive-computing/jasmin-notebooks-service/",
         title: "JASMIN Notebooks Service",
         description: "Jupyter Notebooks service on JASMIN",
@@ -7434,7 +7449,7 @@ function initIndex() {
       
       
       {
-        id: 55,
+        id: 56,
         href: "/docs/short-term-project-storage/object-store/s3-portal/",
         title: "JASMIN Object Store Portal",
         description: "JASMIN Object Store Portal",
@@ -7449,7 +7464,7 @@ function initIndex() {
       
       
       {
-        id: 56,
+        id: 57,
         href: "/docs/software-on-jasmin/jasmin-software-faqs/",
         title: "JASMIN software FAQs",
         description: "JASMIN software FAQs",
@@ -7464,7 +7479,7 @@ function initIndex() {
       
       
       {
-        id: 57,
+        id: 58,
         href: "/docs/getting-started/jasmin-status/",
         title: "JASMIN status",
         description: "JASMIN status",
@@ -7479,7 +7494,7 @@ function initIndex() {
       
       
       {
-        id: 58,
+        id: 59,
         href: "/docs/getting-started/jasmin-training-accounts/",
         title: "JASMIN training accounts",
         description: "JASMIN training accounts",
@@ -7496,7 +7511,7 @@ function initIndex() {
       
       
       {
-        id: 59,
+        id: 60,
         href: "/docs/software-on-jasmin/jaspy-envs/",
         title: "Jaspy Software Environments (P...",
         description: "Jaspy Software Environments (Python 3, R and other tools)",
@@ -7513,7 +7528,7 @@ function initIndex() {
       
       
       {
-        id: 60,
+        id: 61,
         href: "/docs/short-term-project-storage/jdma/",
         title: "Joint-storage Data Migration A...",
         description: "Joint-storage Data Migration App (JDMA)",
@@ -7530,7 +7545,7 @@ function initIndex() {
       
       
       {
-        id: 61,
+        id: 62,
         href: "/docs/short-term-project-storage/object-store/object-store-legacy/",
         title: "Legacy Content for the JASMIN ...",
         description: "Legacy Content for the JASMIN Object Store",
@@ -7545,7 +7560,7 @@ function initIndex() {
       
       
       {
-        id: 62,
+        id: 63,
         href: "/docs/for-cloud-tenants/linux-admin/",
         title: "Linux admin",
         description: "Linux administration for JASMIN Cloud",
@@ -7560,7 +7575,7 @@ function initIndex() {
       
       
       {
-        id: 63,
+        id: 64,
         href: "/docs/interactive-computing/login-problems/",
         title: "Login problems",
         description: "Login problems?",
@@ -7575,7 +7590,7 @@ function initIndex() {
       
       
       {
-        id: 64,
+        id: 65,
         href: "/docs/interactive-computing/login-servers/",
         title: "Login servers",
         description: "Login servers",
@@ -7590,7 +7605,7 @@ function initIndex() {
       
       
       {
-        id: 65,
+        id: 66,
         href: "/docs/batch-computing/lotus-cluster-specification/",
         title: "LOTUS cluster specification",
         description: "Details of the current LOTUS cluster",
@@ -7605,7 +7620,7 @@ function initIndex() {
       
       
       {
-        id: 66,
+        id: 67,
         href: "/docs/batch-computing/lotus-overview/",
         title: "LOTUS overview",
         description: "Overview of the LOTUS batch computing cluster, part of JASMIN",
@@ -7620,7 +7635,7 @@ function initIndex() {
       
       
       {
-        id: 67,
+        id: 68,
         href: "/docs/short-term-project-storage/managing-a-gws/",
         title: "Managing a GWS",
         description: "Managing a GWS",
@@ -7635,7 +7650,7 @@ function initIndex() {
       
       
       {
-        id: 68,
+        id: 69,
         href: "/docs/software-on-jasmin/name-dispersion-model/",
         title: "Met Office NAME Model",
         description: "Met Office NAME Model",
@@ -7652,7 +7667,7 @@ function initIndex() {
       
       
       {
-        id: 69,
+        id: 70,
         href: "/docs/getting-started/migrate-jasmin-account-from-ceda/",
         title: "Migrate a JASMIN account from ...",
         description: "Migrate a JASMIN account from CEDA",
@@ -7667,7 +7682,7 @@ function initIndex() {
       
       
       {
-        id: 70,
+        id: 71,
         href: "/docs/software-on-jasmin/rocky9-migration-2024/",
         title: "Migration to Rocky Linux 9 2024",
         description: "Software and operating system changes - migration to Rocky Linux 9 (Summer 2024)",
@@ -7684,7 +7699,7 @@ function initIndex() {
       
       
       {
-        id: 71,
+        id: 72,
         href: "/docs/uncategorized/mobaxterm/",
         title: "MobaXterm (Windows terminal cl...",
         description: "Using MobaXterm with JASMIN",
@@ -7701,7 +7716,7 @@ function initIndex() {
       
       
       {
-        id: 72,
+        id: 73,
         href: "/docs/mass/moose-the-mass-client-user-guide/",
         title: "MOOSE (the MASS client) User G...",
         description: "MOOSE (the MASS client) User Guide",
@@ -7716,7 +7731,7 @@ function initIndex() {
       
       
       {
-        id: 73,
+        id: 74,
         href: "/docs/getting-started/multiple-account-types/",
         title: "Multiple account types",
         description: "Multiple account types",
@@ -7731,7 +7746,7 @@ function initIndex() {
       
       
       {
-        id: 74,
+        id: 75,
         href: "/docs/short-term-project-storage/nlds/",
         title: "Near-Line Data Store (NLDS)",
         description: "Near-line storage for group workspace data",
@@ -7746,7 +7761,7 @@ function initIndex() {
       
       
       {
-        id: 75,
+        id: 76,
         href: "/docs/mass/new-moose-and-mass/",
         title: "New MOOSE and MASS",
         description: "New MOOSE and MASS system",
@@ -7761,7 +7776,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 77,
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "New storage FAQs and issues",
         description: "New storage FAQs and issues",
@@ -7776,7 +7791,7 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 78,
         href: "/docs/short-term-project-storage/nlds-step-by-step/",
         title: "NLDS Step by step",
         description: "Step-by-Step guide to setting up the NLDS client on JASMIN",
@@ -7791,7 +7806,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 79,
         href: "/docs/short-term-project-storage/object-store/s3-tools/",
         title: "Object Store Tools",
         description: "Object Store Tools",
@@ -7806,7 +7821,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 80,
         href: "/docs/for-cloud-tenants/openstack/",
         title: "OpenStack",
         description: "OpenStack on the JASMIN Cloud",
@@ -7821,7 +7836,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 81,
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Details of JASMIN's GPU cluster, ORCHID",
@@ -7836,7 +7851,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 82,
         href: "/docs/getting-started/permissions-and-groups/",
         title: "Permissions and groups",
         description: "How permissions and groups are used to manage access to data stored on JASMIN.",
@@ -7853,7 +7868,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 83,
         href: "/docs/for-cloud-tenants/platform-in-depth-jupyterhub/",
         title: "Platforms In Depth - JupyterHu...",
         description: "In depth look at the JupyterHub platforms",
@@ -7868,7 +7883,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 84,
         href: "/docs/for-cloud-tenants/platform-in-depth-k8s/",
         title: "Platforms In Depth - Kubernetes",
         description: "In depth look at the Kubernetes platforms",
@@ -7883,7 +7898,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 85,
         href: "/docs/for-cloud-tenants/platform-in-depth-slurm/",
         title: "Platforms In Depth - Slurm",
         description: "In depth look at the Slurm platform",
@@ -7898,7 +7913,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 86,
         href: "/docs/for-cloud-tenants/platform-in-depth-workstation/",
         title: "Platforms In Depth - Workstations",
         description: "In depth look at the workstation platforms",
@@ -7913,7 +7928,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 87,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7928,7 +7943,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 88,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7943,7 +7958,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 89,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7958,7 +7973,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 90,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7973,7 +7988,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 91,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments on JASMIN",
@@ -7990,7 +8005,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 92,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deac...",
         description: "Quickstart for activating/deactivating software environments",
@@ -8005,7 +8020,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 93,
         href: "/docs/uncategorized/rate-limiting/",
         title: "Rate Limiting",
         description: "Rate limiting applied to JASMIN web services",
@@ -8020,7 +8035,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 94,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -8037,7 +8052,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 95,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email...",
         description: "Reconfirm JASMIN account email address",
@@ -8052,7 +8067,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 96,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -8067,7 +8082,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 97,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -8082,7 +8097,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 98,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -8097,7 +8112,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 99,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -8112,7 +8127,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 100,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -8127,7 +8142,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 101,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -8142,7 +8157,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 102,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Details of the scientific analysis servers",
@@ -8157,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8174,7 +8189,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8189,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8204,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8219,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8234,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8249,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8264,7 +8279,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8279,7 +8294,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8294,7 +8309,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8309,7 +8324,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8324,7 +8339,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8341,7 +8356,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8356,7 +8371,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8373,7 +8388,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8388,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/short-term-project-storage/object-store/jasmin-object-store/",
         title: "The JASMIN Object Store",
         description: "The JASMIN Object Store",
@@ -8403,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8418,7 +8433,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8433,7 +8448,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8448,7 +8463,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8463,7 +8478,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8478,7 +8493,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8493,7 +8508,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8510,7 +8525,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8525,7 +8540,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8542,7 +8557,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8557,7 +8572,7 @@ function initIndex() {
       
       
       {
-        id: 128,
+        id: 129,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

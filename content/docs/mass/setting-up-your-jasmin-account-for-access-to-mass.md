@@ -66,59 +66,19 @@ either:
 
 Allow a couple of days for this process to happen after submitting your request for access to the VM.
 
-## Install your MOOSE credentials file
+## Logging in
 
-You should now copy your MOOSE credentials file from your local machine to your JASMIN home directory
-using `scp` via a JASMIN [transfer server]({{% ref "transfer-servers" %}}). Make sure the credentials file is called `moose` and in a directory with the correct permissions.
-
-Start on your local machine, where you should have the credentials file:
-
-{{<command user="user" host="localhost">}}
-scp moose <userid>@xfer-vm-01.jasmin.ac.uk:~/moose
-ssh -A -X <userid>@login.jasmin.ac.uk
-{{</command>}}
-{{<command user="user" host="login-NN">}}
-ssh -X <userid>@mass-cli.jasmin.ac.uk
-{{</command>}}
-
-Create a `.moosedir` directory and set the correct permissions:
+From the MASS client machine, run the following:
 
 {{<command user="user" host="mass-cli">}}
-mkdir .moosedir/
-chmod 700 .moosedir/
-{{</command>}}
-
-Move your moose credentials file into the directory and set permissions:
-
-{{<command user="user" host="mass-cli">}}
-mv moose .moosedir/
-chmod 600 .moosedir/moose
-{{</command>}}
-
-Run the following command:
-{{<command user="user" host="mass-cli">}}
-moo si -l
-{{</command>}}
-
-You will be prompted to run `moo passwd -r` next — please run this.
-
-To confirm you have the ability to run moose commands, run:
-
-{{<command user="user" host="mass-cli">}}
-moo si -l
+moo login --device-code
 {{</command>}}
 
 ## Test use of the locally installed MOOSE client
 
+Try running the following from the MASS client machine:
 {{<command user="user" host="mass-cli">}}
-which moo  
-(out)/opt/moose/external-client-version-wrapper/bin/moo   
-moo si  
-(out)<system information appears here>  
-moo help  
-(out)<help details appear here>      
-moo projlist  
-(out)<list of projects appears here>
+moo ls
 {{</command>}}
 
 You have now successfully accessed MASS from JASMIN!

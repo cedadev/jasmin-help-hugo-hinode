@@ -161,7 +161,10 @@ consider other users and remember to clean up after your jobs. **** Any data
 that you wish to keep should be written to a Group Workspace (but remember to
 change the group-ownership of the data if you do).
 
-{{<alert>}}**Update October 2025**: New scratch volumes `/work/scratch-pw4`, `/work/scratch-pw5` are now to be used in preference to old volumes `/work/scratch-pw2`, `/work/scratch-pw3`. The old volumes will be decommissioned on **Tuesday 2 December 2025**: please ensure you have dealt with any data you wish to retain before then.
+{{<alert>}}**Update July 2026**: New scratch volumes `/work/scratch-pw6`, `/work/scratch-pw7` are now now available for use (500 TB each).
+In due course we will decrease volumes `/work/scratch-pw4`, `/work/scratch-pw5` to match, making 4 volumes of size 500 TB each.
+
+Please make sure you create your own directory on **ONE** of the volumes, named as per your JASMIN username.
 {{</alert>}}
 
 There are 2 types of scratch storage available:

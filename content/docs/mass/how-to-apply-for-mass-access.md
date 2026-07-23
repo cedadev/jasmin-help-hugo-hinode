@@ -67,4 +67,4 @@ for what MOOSE commands are available on JASMIN.
 
 ## A note - Data Access
 
-Dataset access is controlled by dataset owners. Your sponsor will reach our to the relevant datasets owners to provide you with access; if you or your sponsor requires help or guidance with this process, please contact monsoon@metoffice.gov.uk 
+Dataset access is controlled by dataset owners. Your sponsor will reach our to the relevant datasets owners to provide you with access; if you or your sponsor requires help or guidance with this process, please contact [monsoon@metoffice.gov.uk](mailto:monsoon@metoffice.gov.uk).

@@ -68,13 +68,18 @@ Allow a couple of days for this process to happen after submitting your request 
 
 ## Logging in
 
-`moo login --device-code` 
+From the MASS client machine, run the following:
 
-
+{{<command user="user" host="mass-cli">}}
+moo login --device-code
+{{</command>}}
 
 ## Test use of the locally installed MOOSE client
 
-`moo ls` 
+Try running the following from the MASS client machine:
+{{<command user="user" host="mass-cli">}}
+moo ls
+{{</command>}}
 
 You have now successfully accessed MASS from JASMIN!
 

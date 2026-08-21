@@ -85,7 +85,7 @@ A snapshot backup is also provided for `/gws/smf` volumes (similar allocations o
 SSD storage for GWS groups to share): snapshots in this case are made hourly
 and kept for 10 hours, then daily snapshots are kept for 2 weeks. These can
 be retrieved in a similar manner to that shown above. In this case the
-relevant directories should be found at
+relevant directories should be found at:
 
 {{<command>}}
     /gws/smf/jNN/<gwsname>/.snapshot
@@ -107,8 +107,7 @@ they are accessible from and the type of access (read and/or write).
 
 **Table 1.** List of common disk mounts, types of storage and their
 availability on JASMIN
-
-Disk mount  
+  
 location |  login  |  sci  |  transfer  |  LOTUS  |  Type  |  Parallel-write  
 ---|---|---|---|---|---|---  
 /home/users  |  R/W  |  R/W  |  R/W  |  R/W  |  SSD  |  no
@@ -119,14 +118,12 @@ location |  login  |  sci  |  transfer  |  LOTUS  |  Type  |  Parallel-write
 /badc, /neodc (archives)  |  No  |  RO  |  RO  |  RO  |  n/a  |  n/a  
 {.table .table-striped}
   
-login = {{<link "../interactive-computing/login-servers">}}login servers{{</link>}}: login[1-4].jasmin.ac.uk  
-sci = {{<link "../interactive-computing/sci-servers">}}scientific analysis servers{{</link>}}:
-sci[1-6,8].jasmin.ac.uk  
-transfer = {{<link "../interactive-computing/transfer-servers">}}data transfer servers{{</link>}}:
-xfer[1-2].jasmin.ac.uk  
-LOTUS = {{<link "../batch-computing/lotus-overview">}}LOTUS batch processing cluster{{</link>}}(all cluster
+login = [login servers]({{% ref "login-servers" %}})  
+sci = [scientific analysis servers]({{% ref "sci-servers" %}})  
+transfer = [data transfer servers]({{% ref "transfer-servers" %}})  
+LOTUS = [LOTUS batch processing cluster]({{% ref "lotus-overview" %}}) (all cluster
 nodes)  
-Disks are mounted read/write (" **R/W** ") or read-only (" **RO** ").
+Disks are mounted read/write (**R/W**) or read-only (**RO**).
 
 **Note 1:** Please refer to issues related to writing small files and NetCDF3
 to SOF storage [here]({{% ref "faqs-storage" %}})
@@ -140,9 +137,9 @@ written. Please follow these general principles when deciding where to write
 your data:
 
 - HOME directories (`/home/users`) are relatively small (100GB) and should NOT be used for storing large data volumes or for sharing data with other users.
-0 Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
+- Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project>`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
   - `/gws/pw/j07` volumes are parallel-write-capable storage from Phase 7 (onwards) of JASMIN
-  - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwaards) of JASMIN: this storage is not parallel-write-capable
+  - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwards) of JASMIN: this storage is not parallel-write-capable
 - The "scratch" areas (`/work/scratch-pw*` and `/work/scratch-nopw*`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below).
 - The `/tmp` directory is **not usually an appropriate location to write your data (see next section below).**
 
@@ -151,17 +148,18 @@ your data:
 ### Scratch
 
 The scratch areas `/work/scratch-pw*` and
-`/work/scratch-nopw*` are a temporary file space shared across the entire LOTUS
-cluster and the scientific analysis servers.
+`/work/scratch-nopw*` are a **temporary** file space shared across the entire LOTUS
+cluster and the scientific analysis servers. Files saved to scratch are **deleted after 28 days** and are **not backed up**.
 
 These scratch areas are ideal for processes that generate _intermediate_ data
 files that are consumed by other parts of the processing before being deleted.
 Please remember that these volumes are resources shared between all users, so
-consider other users and remember to clean up after your jobs. **** Any data
-that you wish to keep should be written to a Group Workspace (but remember to
+consider other users and remember to clean up after your jobs.
+
+**Any data that you wish to keep should be written to a Group Workspace** (but remember to
 change the group-ownership of the data if you do).
 
-{{<alert>}}**Update July 2026**: New scratch volumes `/work/scratch-pw6`, `/work/scratch-pw7` are now now available for use (500 TB each).
+{{<alert alert-type="info">}}**Update July 2026**: New scratch volumes `/work/scratch-pw6`, `/work/scratch-pw7` are now now available for use (500 TB each).
 In due course we will decrease volumes `/work/scratch-pw4`, `/work/scratch-pw5` to match, making 4 volumes of size 500 TB each.
 
 Please make sure you create your own directory on **ONE** of the volumes, named as per your JASMIN username.
@@ -169,7 +167,7 @@ Please make sure you create your own directory on **ONE** of the volumes, named 
 
 There are 2 types of scratch storage available:
 
-- **PFS scratch** (lots of it, fast, less good for small files) as 2 x 1 PB volumes `/work/scratch-pw[4,5]` and particularly suitable for users with a need for storage capabale of shared-file writes with MPI-IO, but good for most purposes.
+- **PFS scratch** (lots of it, fast, less good for small files) as 2 x 1 PB volumes `/work/scratch-pw[4,5]` and particularly suitable for users with a need for storage capable of shared-file writes with MPI-IO, but good for most purposes.
 - **SSD scratch** (less of it, very fast, good for small files) `/work/scratch-nopw2` as 1 x 220 TB volume. Do not use for operations that attempt to write to multiple parts of a file simultaneously. Please be aware of this if your code (perhaps inadvertently?) writes to a shared log file.
 
 When using the "scratch" areas, please create a sub-directory (e.g.
@@ -185,8 +183,8 @@ therefore should not usually be used by users.
 
 ## Cleaning up the scratch and tmp directories
 
-**Please** make sure that your jobs delete any files under the `/tmp`and scratch
-directories when they are complete ( _especially_ if jobs have not been
+**Please** make sure that your jobs delete any files under the `/tmp` and scratch
+directories when they are complete (_especially_ if jobs have not been
 completed normally!).
 
 Please do this yourself so that you are not taken by surprise when automated 
@@ -196,16 +194,16 @@ deletion processes clear up any residual data:
 Automated cleanup processes run daily and
 delete files that are older than 28 days from the last time of being
 accessed. This applies to `/work/scratch-pw*` and
-`/work/scratch-nopw*`
+`/work/scratch-nopw*`.
 
 Please remember that shared temporary storage is for the use of all 2,000 users
 of JASMIN, not just you. If you persistently store large amounts (100s of TB) of data in scratch 
-for long periods of tine, you deny use of that storage to other users (so expect action from the JASMIN team).
+for long periods of time, you deny use of that storage to other users (so expect action from the JASMIN team).
 
 Please be a good JASMIN citizen!
 {{</alert>}}
 
-Any important data for keeping should be written to
+**Any important data for keeping should be written to
 a [Group Workspace]({{% ref "introduction-to-group-workspaces" %}})
 or to your home directory if appropriate.**
 
@@ -219,7 +217,7 @@ should over-ride this and use your group workspace or a username-labelled direct
 within the scratch space instead.
 
 To do this, please add the following lines (or
-similar) to your $HOME/.bashrc file:
+similar) to your `$HOME/.bashrc` file:
 
 ```bash
 export TMPDIR=/<path-to-your-GWS-or-scratch>/<your_username>/tmp
@@ -231,7 +229,7 @@ export TMPDIR=/<path-to-your-GWS-or-scratch>/<your_username>/tmp
 
 ## Access to the CEDA archive
 
-The CEDA Archive is mounted read-only under paths refleting the NERC data centres
+The CEDA Archive is mounted read-only under paths reflecting the NERC data centres
 which merged to form CEDA, i.e.
 - `/badc` (British Atmospheric Data Centre)
 - `/neodc` (NERC Earth Observation Data Centre).
@@ -268,7 +266,7 @@ use an alternative command e.g. `find`.
 This can be due to a number of reasons (see above advice regarding number of
 files in a single directory, and below regarding inter-volume symlinks). To
 speed up the response (useful if you want to count the number of files) it
-often helps to un-alias ls, e.g. by placing a backslash in front of the
+often helps to un-alias `ls`, e.g. by placing a backslash in front of the
 command: `\ls`.
 
 ## Advice on inter-volume symlinks in JASMIN storage
@@ -289,14 +287,14 @@ symlinks.
 
 **In more detail:**
 
-This issue is particularly apparent when `ls` is aliassed to `ls --color` (as
+This issue is particularly apparent when `ls` is aliased to `ls --color` (as
 is the default on 99% of JASMIN systems) AND one of the colorisation options
 specified is for an orphaned link. The `ls` on symlinks causes the metadata
 servers at the end of the symlink to be called (to provided the `stat`
 filesystem metadata), in addition to the metadata server for the home
 directory. If those metadata servers at the far end are under load, or have
 some other problem, the `ls` to the home directory can hang, but this also
-hangs other users who may be trying to ls their own home directory (even if
+hangs other users who may be trying to `ls` their own home directory (even if
 theirs contains no symlinks). The situation can then escalate out of control
 as more and more users try and fail.
 

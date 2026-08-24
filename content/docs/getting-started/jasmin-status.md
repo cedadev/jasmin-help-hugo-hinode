@@ -31,7 +31,8 @@ This is still under active development and further dashboards may be added in du
 
 ### JASMIN Users
 
-After you are granted access to JASMIN, you should be added to this Jiscmail mailing list. We will occasionally send updates about JASMIN services, including:
+After requesting access to [JASMIN login
+services]({{% ref "get-login-account" %}}) and being approved, you should be added to this Jiscmail mailing list. We will occasionally send updates about JASMIN services, including:
 
 - When specific machines or services will be temporarily unavailable
 - When new servers are available or old ones will be turned off

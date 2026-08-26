@@ -109,14 +109,18 @@ nvidia-smi
 
 ## Software Installed on the GPU cluster
   
-- CUDA version 13 (other versions will be available soon via the module environment)
-  - If you want to use CUDA Version 12.8, please add the following to your path:
+- To use CUDA version 13.3, please add the following to your path:
     ```bash
-    export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+    export PATH=/usr/local/cuda-13.3/bin${PATH:+:${PATH}}
     ```
-- CUDA DNN (Deep Neural Network Library) version 13
-- cuda-toolkit - version 13.1
-- Singularity-CE version 4.3.7-1.el9 - supports NVIDIA/GPU containers
-- podman version 5.6.0
+- For NVIDIA CC and Fortran compilers, please add the following to your path:
+    ```bash
+    export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/26.5/compilers/bin:$PATH
+    export MANPATH=$MANPATH:/opt/nvidia/hpc_sdk/Linux_x86_64/26.5/compilers/man
+    ```
+- CUDA DNN (Deep Neural Network Library) version 13.3
+- cuda-toolkit - version 13.3
+- Singularity-CE version 4.5.0-1.el9 - supports NVIDIA/GPU containers
+- podman version 5.8.2-4.el9_8
 
 Please note that the cluster may have newer software available. For example, you can check the current CUDA version by running `nvcc --version` (`nvidia-smi` also shows the CUDA version, see example above). You can also check the Singularity version with `singularity --version`.

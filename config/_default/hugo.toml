@@ -17,7 +17,7 @@ ignoreLogs = ["error-remote-getjson"] # , "warn-invalid-arguments"
 
 timeout = "600s"
 
-languageCode = "en-gb"
+locale = "en-gb"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 

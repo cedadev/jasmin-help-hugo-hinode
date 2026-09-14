@@ -11,7 +11,7 @@ These instructions are intended for users setting up an SSH connection to JASMIN
 
 If you could previously connect with your existing key on the same device and now can’t, **generating a new key pair is unlikely to solve the problem**, and may make it more difficult to troubleshoot.
 
-If you are having problems connecting to JASMIN via SSH, please see [Login problems](../interactive-computing/login-problems). If you are still unable to solve the problem, please contact the [JASMIN Helpdesk](mailto:support@jasmin.ac.uk) before attempting to update your key.
+If you are having problems connecting to JASMIN via SSH, please see [Login problems](../interactive-computing/login-problems) and [Present your SSH key]({{% ref "present-ssh-key" %}}). If you are still unable to solve the problem, please contact the [JASMIN Helpdesk](mailto:support@jasmin.ac.uk) before attempting to update your key.
 {{< /alert >}}
 
 ## SSH client and terminal

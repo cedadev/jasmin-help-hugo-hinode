@@ -48,7 +48,7 @@ If you manage a Group Workspace, you will also be added to this mailing list for
 
 ### JASMIN Cloud Admins
 
-If you manage a cloud tenancy, you will also be added to this mailing list to for important updates about the JASMIN Cloud.
+If you manage a cloud tenancy, you will also be added to this mailing list for important updates about the JASMIN Cloud.
 
 ### Unsubscribing
 

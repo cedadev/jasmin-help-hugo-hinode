@@ -61,10 +61,12 @@ retry automatically until some pre-set deadline.
 
 ### Get a Globus identity
 
-Go to https://app.globus.org and either:
+Go to https://app.globus.org and:
 
-- choose one of the listed identity providers (e.g. GitHub, Google, ...)
-- follow the link at the bottom to "use Globus ID to sign in"
+- Choose one of the listed identity providers
+  - Ideally this would be **your own institution** if it's listed in the drop down.
+  - Next best choice would be a generic ID provider (e.g. ORCID, GitHub, Google, ...), indicated by the icons.
+  - If you can't use any of those, Globus also operate an "Identity provider of last resort" "GlobusID", which is mentioned towards the bottom of the page.
 
 See also https://docs.globus.org/how-to/get-started/
 
@@ -74,8 +76,8 @@ Do the following on your own (local) machine.
 Make a Python virtual environment and activate it:
 
 {{<command host="localhost" user="localuser">}}
-python3 -m venv ./venv
-source ./venv/bin/activate
+python3 -m venv ./globus-cli-venv ## your choice of name for the directory
+source ./globus-cli-venv/bin/activate
 {{</command>}}
 
 Download the Globus CLI and install it into the virtual environment ( `venv`).
@@ -211,7 +213,7 @@ globus endpoint search "tutorial"
 (out)ID                                   | Owner                                                        | Display Name                                  
 (out)------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------
 (out)6c54cade-bde5-45c1-bdea-f4bd71dba2cc | 6df1b656-c953-40a3-91a9-e9e8ad5173ea@clients.auth.globus.org | Globus Tutorial Collection 1                  
-(out)31ce9ba0-176d-45a5-add3-f37d233ba47d | 6df1b656-c953-40a3-91a9-e9e8ad5173ea@clients.auth.globus.org | Globus Tutorial Collection 2 
+(out)31ce9ba0-176d-45a5-add3-f37d233ba47d | 6df1b656-c953-40a3-91a9-e9e8ad5173ea@clients.auth.globus.org | Globus Tutorial Collection 2
 {{</command>}}
 
 The 2 globus tutorial collections actually "see" the same filesystem, so we'll
@@ -239,22 +241,53 @@ globus ls $c1
 
 Copy & paste the command it gives you (don't copy the one above) and run it, which should open a web browser window. Follow the instructions which should complete the process, then return to your terminal session.
 
-Now let's find another collection, this time a public test collection which can be used for performance testing:
+Now let's find another collection, this time we'll try one of ESnet's Anonymous read-only test Data Transfer Nodes.
+These are available from any research and education network and ideal for performance testing:
 
 {{<command>}}
-globus endpoint search "star dtn"
-(out)ID                                   | Owner              | Display Name                                     
-(out)------------------------------------ | ------------------ | -------------------------------------------------
-(out)ff2ee779-54fb-4dac-ade2-57568c587ae3 | esnet@globusid.org | ESnet STAR DTN private collection                
-(out)ece400da-0182-4777-91d6-27a1808f8371 | esnet@globusid.org | ESnet Starlight DTN (Anonymous read only testing)
-(out)e9e0d9f4-c419-44e0-8198-017fd61bf0c4 | esnet@globusid.org | ESnet Starlight DTN (read-write testing)  
+globus endpoint search "ESnet DTN Anonymous"
+(out)╒══════════════════════════════════════╤════════════════════════════════════════════════════════╕
+(out)│ ID                                   ╎ Display Name                                           │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ Owner                                ╎ Domain                                                 │
+(out)╞══════════════════════════════════════╪════════════════════════════════════════════════════════╡
+(out)│ 722751ce-1264-43b8-9160-a9272f746d78 ╎ ESnet CERN DTN (Anonymous read-only testing)           │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-30c674.c6d9b7.08cc.data.globus.org                   │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ 6ccdf05a-57c0-42bb-a60c-e4f376128cf7 ╎ ESnet Denver DTN (Anonymous read only testing)         │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-4d8b46.4451d6.03c0.data.globus.org                   │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ 78f14af7-a8a3-488f-b42d-8c6fa4dfc2ac ╎ ESnet Houston DTN (Anonymous read-only testing)        │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-12aa16.a4bc9d.0ec8.data.globus.org                   │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ ece400da-0182-4777-91d6-27a1808f8371 ╎ ESnet Starlight DTN (Anonymous read only testing)      │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-3fa10a.9f846.0ec8.data.globus.org                    │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ 8409a10b-de09-4670-a886-2c0b33f0fe25 ╎ ESnet Sunnyvale DTN (Anonymous read-only testing)      │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-d558fb.ac6c3.a567.data.globus.org                    │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ 210fe88f-5cc7-4d88-ada3-367540aa9673 ╎ ESnet LBL-DEV-DTN (Anonymous read-only testing)        │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-6f1ac0.bce39.08cc.data.globus.org                    │
+(out)├──────────────────────────────────────┼────────────────────────────────────────────────────────┤
+(out)│ 64b7e306-edb7-4b17-8b25-9033517eca8b ╎ ESnet Washington, DC DTN (Anonymous read only testing) │
+(out)├─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┼─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─  ─┤
+(out)│ esnet@globusid.org                   ╎ g-2887f0.7367a7.75bc.data.globus.org                   │
+(out)└──────────────────────────────────────┴────────────────────────────────────────────────────────┘ 
 {{</command>}}
 
-We'll use the one labelled {{< mark >}}Anonymous read only testing{{</mark>}}.
-Set `stardtn` to the ID of this endpoint:
+In this example, we'll select the ID for *"ESnet Starlight DTN (Anonymous read only testing)"* ,
+**but if you find that doesn't work, try one of the others from the list above**.
+
+Set `$testdtn` to the ID of this endpoint:
 
 {{<command>}}
-export stardtn=ece400da-0182-4777-91d6-27a1808f8371
+export testdtn=ece400da-0182-4777-91d6-27a1808f8371
 {{</command>}}
 
 {{<alert alert-type="info">}}
@@ -265,11 +298,11 @@ we'll look at how to use one that does, later.
 
   2. **Listing files at a path on an collection**
 
-Use the `endpoint ls` command to list the contents of the `stardtn` endpoint,
-at the path `/`
+Use the `globus ls` command to list the contents of the `$testdtn` endpoint,
+at the path `/`. Note the `:` separator if we're specifying a path.
 
 {{<command>}}
-globus ls $stardtn:/
+globus ls $testdtn:/
 (out)500GB-in-large-files/
 (out)50GB-in-medium-files/
 (out)5GB-in-small-files/
@@ -297,10 +330,10 @@ test purposes.
 
   3. **Copy a file from one endpoint to another**
 
-Let's transfer the file `1M.dat` from the `stardtn` endpoint to `c1`:
+Let's transfer the file `1M.dat` from the `testdtn` endpoint to `c1`:
 
 {{<command>}}
-globus transfer $stardtn:/1M.dat $c1:/~/1M.dat
+globus transfer $testdtn:/1M.dat $c1:/~/1M.dat
 (out)Message: The transfer has been accepted and a task has been created and queued for execution
 (out)Task ID: 74cb181c-bf63-11ee-a90e-032e06ca0965
 {{</command>}}
@@ -367,15 +400,15 @@ globus ls $c1:/~/mydata/
 
   4. **Recursively copy a directory and its contents, from one endpoint to another**
 
-Now Let's copy a directory from the `stardtn` collection which contains some small
-files, to our destination endpoint `c1` (The Globus tutorial collections only
+Now Let's copy a directory from the `$testdtn` collection which contains some small
+files, to our destination endpoint `$c1` (The Globus tutorial collections only
 provide very limited storage space).
 
 The files we want to copy are at the path `/5MB-in-tiny-files/a/a/` on
-the `stardtn` endpoint, and are small, as their names suggest:
+the `$testdtn` endpoint, and are small, as their names suggest:
 
 {{<command>}}
-globus ls $stardtn:/5MB-in-tiny-files/a/a/
+globus ls $testdtn:/5MB-in-tiny-files/a/a/
 (out)a-a-1KB.dat
 (out)a-a-2KB.dat
 (out)a-a-5KB.dat
@@ -384,7 +417,7 @@ globus ls $stardtn:/5MB-in-tiny-files/a/a/
 Copy the parent directory recursively to `ep1`:
 
 {{<command>}}
-globus transfer -r $stardtn:/5MB-in-tiny-files/a/a $c1:/~/star-data
+globus transfer -r $testdtn:/5MB-in-tiny-files/a/a $c1:/~/test-date
 (out)Message: The transfer has been accepted and a task has been created and queued for execution
 (out)Task ID: 4ae9bab0-7d40-11ec-bef3-a18800fa5978
 {{</command>}}
@@ -394,9 +427,9 @@ Check destination content:
 {{<command>}}
 globus ls $c1
 (out)mydata1/
-(out)star-data/
+(out)test-data/
 (out)
-globus ls $c1:/~/star-data
+globus ls $c1:/~/test-data
 (out)a-a-1KB.dat
 (out)a-a-2KB.dat
 (out)a-a-5KB.dat
@@ -404,7 +437,7 @@ globus ls $c1:/~/star-data
 
 We could now delete one of the small files using the `globus delete` command:
 {{<command>}}
-globus delete $c1:/~/star-data/a-a-2KB.dat
+globus delete $c1:/~/test-data/a-a-2KB.dat
 (out)Message: The delete has been accepted and a task has been created and queued for execution
 (out)Task ID: be4d6934-7d40-11ec-891f-939ceb6dfaf1
 {{</command>}}
@@ -412,7 +445,7 @@ globus delete $c1:/~/star-data/a-a-2KB.dat
 And list contents again, to verify that it has been deleted:
 
 {{<command>}}
-globus ls $c1:/~/star-data
+globus ls $c1:/~/test-data
 (out)a-a-1KB.dat
 (out)a-a-5KB.dat
 {{</command>}}
@@ -425,7 +458,7 @@ now missing from the destination. The full set of sync options is
 `[exists|size|mtime|checksum]`.
 
 {{<command>}}
-globus transfer -s exists -r $stardtn:/5MB-in-tiny-files/a/a $c1:/~/star-data
+globus transfer -s exists -r $testdtn:/5MB-in-tiny-files/a/a $c1:/~/test-data
 (out)Message: The transfer has been accepted and a task has been created and queued for execution
 (out)Task ID: 759a3cac-7d41-11ec-bef3-a18800fa5978
 {{</command>}}
@@ -434,7 +467,7 @@ This should only copy the data that do not already exist at the desination: We
 end up with the same set of files at the destination:
 
 {{<command>}}
-globus ls $c1:/~/star-data
+globus ls $c1:/~/test-data
 (out)a-a-1KB.dat
 (out)a-a-2KB.dat
 (out)a-a-5KB.dat

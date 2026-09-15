@@ -3,7 +3,7 @@ title: "GWS Alert System"
 description: "App to alert GWS managers/deputies when their GWS is reaching capacity"
 ---
 
-The Group Workspace (GWS) Alert system is an app which runs a daily scan to check the capacity of volumes, then emails GWS managers if it is over the default threshold of 90% or the defined threshold in the GWS config file.
+The Group Workspace (GWS) Alert system is an app which runs a daily scan to check the capacity of volumes, then emails GWS managers if it is over the default threshold of 90%.
 
 
 ## What is the GWS Alert System?
@@ -18,7 +18,7 @@ The GWS Alert System runs daily at roughly midday.
 
 ### Threshold value
 
-The default threshold for alerts is when the volume is 90% full. Please get in touch if you want this to be a different value. (This used to be configurable in a file on the volume, but changes to the alert system means that we can't use it any more).
+The default threshold for alerts is when the volume is 90% full. Please get in touch if you want this to be a different value. (This used to be configurable in a file on the volume, but changes to the alert system means that we can't use it any more.)
 
 ## Issues and questions
 

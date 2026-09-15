@@ -78,6 +78,12 @@ The 'Platform details' page also allows for **updating**, **patching** or **dele
 
 {{<image src="img/docs/platform-in-depth-workstation/Azimuth-update-platform-Page.png" caption="Update platform pop up" wrapper="col-9 mx-auto text-center">}}
 
+{{<alert alert-type="danger">}}
+Platform patching and upgrades may recreate the workstation VM using a newer platform image. Software installed directly onto the workstation operating system, local configuration changes, and files stored outside persistent volumes may be lost.
+
+Store persistent data on the attached /data volume and consider using containers or automation scripts to recreate any custom software stack after an upgrade.
+{{</alert>}}
+
 The 'Platform details' page allows you navigate to the webconsole service (Apache guacamole), or the monitoring page as indicated earlier. For the GUI and webconsole, navigate to the 'All Connections' section after clicking 'Web console' on the 'Platform' tile. Here, you will be able to view any recent desktop or shell sessions.
 
 **Note**, you may need to allow your browser to use the clipboard for copying and pasting text from your PC/Mac to the console instance of the platform.

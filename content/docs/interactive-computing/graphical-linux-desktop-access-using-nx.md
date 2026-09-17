@@ -43,17 +43,17 @@ recommended over standard X11 graphics.
 The following servers have the NX service available and can be
 used as described below. These now have **identical configuration**, so you can use any one of them from any network location.
 
-name | notes
+host | 
 --- | ---
 `nx1.jasmin.ac.uk` |
 `nx2.jasmin.ac.uk` |
 `nx3.jasmin.ac.uk` |
-`nx4.jasmin.ac.uk` | (new server now available)
+`nx4.jasmin.ac.uk` |
 {.table .table-striped .w-auto}
 
 ### Notes
 
-- The `nx*` servers should only be used with Nomachine Enterprise Client as described below, other than for testing your connection, as this preserves system resources for their intended purpose.
+- The `nx*` servers should only be used as described below, as this preserves system resources for their intended purpose. Please do not run any resource-hungry processes on them.
 - Although the graphical desktop session should persist when you close the client (unless you specifically log out), you should not rely on this feature, so please don't report this as a problem: occasionally machines run out of resources and sessions get killed. Keeping sessions open consumes resources on the server even when you're not using the session, which may mean that other users can't use the service.
 
 ## Installing NoMachine Enterprise Client
@@ -66,8 +66,7 @@ There are several different NoMachine products:
 **the only one you need to install is NoMachine Enterprise Client.**
 
 Note that **NoMachine Enterprise Client** is a different application to the
-"NoMachine Enterprise Desktop" or "NoMachine" available from the more publicised download
-links on the NoMachine website or other applications in the NoMachine suite:
+"NoMachine Enterprise Desktop" or "NoMachine" which you may also come across:
 the desktop edition contains additional components to enable remote access to
 your **own** (local) machine from a remote location: perhaps convenient
 but not what we are trying to enable for you here.
@@ -86,62 +85,16 @@ Updates in the menu.
 
 ## Setting up your connection
 
-There are 2 methods of using your SSH key which should work with JASMIN, these affect how you set up the connection:
+Previously we recommended one of 2 methods for using your SSH key to connect. **We now recommend only the "agent" method, described below.**
 
-| Method | pros/cons |
-| ---|---|
-| 1. Specify the location of your SSH private key | {{< icon fas plus text-success >}} simple <br>{{< icon fas plus text-success >}} no admin permissions needed<br>{{< icon fas plus text-success >}} works for all platforms if you update your key to ECDSA |
-| 2. Use your key stored in a local ssh-agent | {{< icon fas plus text-success >}} useful if you use other applications which use SSH (e.g. VSCode)<br>{{< icon fas minus text-warning >}} may need admin permissions for 1st-time agent setup<br>{{< icon fas minus text-warning >}} careful editing of config file required in some cases |
-{.table .table-striped}
+Configurations where you specify the location of your key may work for the initial connection, but do not seem to work
+(with recent versions of the software) for the onward connection to a `sci` machine.
 
 For a simple terminal connection to JASMIN, you would follow the instructions in [presenting your ssh key]({{% ref "present-ssh-key/#1-specifying-the-key-location-each-time" %}}), but the NoMachine client needs you to do it a slightly different way. The same principles apply however.
 
-### Method 1: specifying key location
+### Using an agent
 
-Videos for each platform (click the tab for your operating system):
-
-{{< nav tab-type="tabs" id="tabs-create-key" >}}
-  {{< nav-item title="Windows" show="true" >}}
-    {{< video media-id="QVj05W9iFJE" >}}
-Notes:
-
-- This method has now been tested with Windows 10 and 11, but requires you to [update your SSH key to ECDSA]({{%ref "generate-ssh-key-pair"%}}).
-  {{< /nav-item >}}
-  {{< nav-item title="Mac" >}}
-    {{< video media-id="wXDhnP1Ut1c" >}}
-  {{< /nav-item >}}
-  {{< nav-item title="Linux" >}}
-    {{<video media-id="fsty4PC4Srk">}}
-  {{< /nav-item >}}
-{{< /nav >}}
-
-#### Step-by-step instructions
-
-{{< accordion id="accordion-create-with-key" >}}
-  {{< accordion-item title="Step by step instructions (click to expand)" show="false" >}}
-  1. Open the NX client
-      1. On Mac and Windows, click the NoMachine Icon
-      1. On Linux, the default location for the executable once installed is `/usr/NX/bin/nxplayer`, so you may want to add this to your `$PATH`. Your desktop environment may enable you to add an icon to your desktop.
-  1. In the "Machines" view, select "Add"
-      1. You're now in the "Address" tab. Type a name for this connection profile, and the full hostname, e.g. `nx1.jasmin.ac.uk`. Set the Protocol to "SSH", which will change the port to 22.
-  1. Go to the "Configuration" tab.
-      1. Choose **"Use key-based authentication with a key you provide"** , then click the Modify button to the right.
-      1. The default is "Use password authentication": **don't** use this.
-      1. Use the button to the right to navigate to your private key, or type the path in the box.
-      1. Your private key may be in a hidden directory e.g. `~/.ssh` (see {{<link "#cant-find-your-private-key">}}Troubleshooting{{</link>}})
-      1. For security, it is recommended NOT to "import the private key to the connection file" (store it in an **encrypted** password manager instead).
-      1. Make sure you tick the box "Forward Authentication" **IMPORTANT**
-
-  1. Go back to the "Add connection" dialog
-      1. If all is correct, click "Add"
-  {{< /accordion-item >}}
-{{</accordion>}}
-
-Once you have created the connection profile, go to [Connecting]({{% ref "#connecting" %}}), below, and continue from there.
-
-### Method 2: using an agent
-
-The alternative profile for using an agent instead, is very similar but we need to select option **"Use key-based authentication with a SSH agent"**.
+In the initial configuration of the connection profile, select the option **"Use key-based authentication with a SSH agent"**.
 
 Videos for each platform:
 
@@ -177,50 +130,7 @@ Once you have created the connection profile, go to [Connecting]({{% ref "#conne
 
 ## Connecting
 
-### Connecting with method 1 (key)
-
-Follow the steps in the video to show how to connect to the desktop on the `nx` server, and to make the onward connection to the `sci` server:
-
-{{< nav tab-type="tabs" id="tabs-connect-key" >}}
-  {{< nav-item title="Windows" show="true" >}}
-    {{< video media-id="Ox7S8LOfUwQ" >}}
-Notes:
-- This method has now been thoroughly tested with the new ECDSA keys and should work for Windows 10 and 11 users if you have updated your key.
-- Make sure you have returned your `~/.nx/config/player.cfg` file to its default state if you edited this previously. The relevant lines should be reset as follows, but remember to edit the file with the NoMachine Enterprise Client application **closed**:
-```xml
-<option key="SSH client mode" value="library">
-<option key="SSH Client" value="nxssh.exe">
-```
-- If it does not work for you particular setup however, please try one of [Methods 2: OpenSSH or 2: Pageant]({{% ref "#method-2-using-an-agent" %}}) instead.
-  {{< /nav-item >}}
-  {{< nav-item title="Mac" >}}
-    {{< video media-id="kNu4oInzEb8" >}}
-  {{< /nav-item >}}
-  {{< nav-item title="Linux" >}}
-    {{<video media-id="3ndUx8JFp0U">}}
-  {{< /nav-item >}}
-{{< /nav >}}
-
-#### Step-by-step instructions
-
-{{< accordion id="accordion-connect-with-key" >}}
-  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
-
-- You'll be asked for your username and the passphrase for your key. It is NOT recommended to save your passphrase in the connection file.
-- Click OK
-- You may see a list of all the other desktop sessions currently in progress from other users. Ignore these and click "New desktop".
-- Select "Create a new virtual desktop", then click "Create"
-- **Note the instructions for how to reach the NX menu once in the session, and select screen settings from the list of icons: Recommended setting is "Fit to window" (leftmost icon)**
-- Click OK on this and subsequent screens giving information about the NX and desktop environments.
-- You should be presented with a linux deskop on the server to which you connected, e.g. `nx1.jasmin.ac.uk`
-- You should be presented with a linux deskop on the server to which you connected, e.g. `nx1.jasmin.ac.uk`
-- Locate the icon to open the "Terminal" application (bottom of window in Rocky 9 desktop)
-- The video demonstrates making an onward connection to a `sci` server and testing the graphics functionality by opening the `xterm` application on that server, before exiting and logging out of the NX desktop.
-
-{{</accordion-item>}}
-{{</accordion>}}
-
-### Connecting with method 2 (agent)
+### Connecting with an agent
 
 **Overview of this method:**
 
@@ -338,6 +248,8 @@ After the first connection (particularly for Mac users), subsequent connections 
 
 Click the "settings" option (in the menu, top-right), then go to "settings" and search for "input" to look for alternative keyboard layouts.
 
+If this does not work, try removing and re-installing the NoMachine client software: [a full uninstall is described here](#cant-make-an-onward-connection)
+
 ### Connection timeout
 
 Please do not try and connect using the proprietary "NX" protocol. Select "SSH" as the protocol. If you mistakenly use "NX" as the protocol you may see an error similar to the following when you try to connect (The correct port for **SSH** connections is 22)
@@ -377,7 +289,7 @@ Windows users may need to switch on "show hidden files" which is normally an opt
 * Does your username have more than 8 characters?
   * Before we realised this was a problem, some users were not prevented from creating accounts with usernames over 8 characters. The names of the servers are now kept as short as possible e.g. `nx1`, `nx2` so this mitigates the problem in most cases. All the new Rocky 9 NX hosts are now the same in this respect. But if your username is very long (>13 characters) you may still run into problems here, in which case please contact the helpdesk.
 * [Update your key to ECDSA]({{%ref "generate-ssh-key-pair"%}}): this should solve the problem in most cases.
-* If it's still a problem 15 minutes after uploading your new public key, try:
+* If it's still a problem 15 minutes after uploading your new public key, try a full clean uninstall:
   * uninstalling the NoMachine Enterprise Client
   * deleting the `%USERPROFILE%\.nx` (Windows) or `~\.nx` (Mac/Linux) directory on your machine
   * deleting the `%USERPROFILE%\Documents\NoMachine` or `~\NoMachine` directory on your machine (beware this will remove **all** connection profiles)

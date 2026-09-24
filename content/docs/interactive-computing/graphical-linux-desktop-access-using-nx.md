@@ -2,104 +2,55 @@
 aliases:
 - /article/4810-graphical-linux-desktop-access-using-nx
 - nx-update-nov24
-description: Graphical linux desktop using NoMachine NX
+description: Graphical Linux desktop using NoMachine NX
 tags:
 - nx
 - nomachine
 - desktop
 - X11
-title: Graphical linux desktop using NoMachine NX
+title: Graphical Linux desktop using NoMachine NX
 weight: 50
 ---
 
-{{<alert alert-type="info">}}**Update 5 Nov 2025**: Recent updates to the service
-software mean that while the **agent** method should now work for all platforms (Mac,
-Windows 11 and Linux), the **key** method may not.
-
-Windows 10 clients are no longer supported.
-
-You are now recommended to use the **agent** method of presenting your key
-when creating your connection profile, see "Method 2" in details below.{{</alert>}}
-
 ## Introduction
 
-- This service provides a graphical Linux desktop on JASMIN, ideal
-for use with graphics-heavy tasks like interactive work with large images.
-- The desktop environment includes a Firefox web browser which can be used to access
-internal-only web resources.
+A graphical Linux desktop can be accessed within the JASMIN environment via the `nx` servers. This is ideal for use with graphics-heavy tasks like interactive work with large images, and is recommended over standard X11 graphics.
 
-Using graphical applications over a wide-area network can be very slow, and is
-not recommended or supported on JASMIN. This service provides a better alternative with
-graphical desktop **within** the JASMIN environment itself, rather than on the user's local machine.
+Using graphical applications over a wide-area network can be very slow, and is not recommended or supported on JASMIN. Using a client application to connect to the `nx` servers provides a graphical desktop **within** the JASMIN environment itself. This results in much better performance, particularly if you need to interact with what's being displayed. The desktop environment also includes a Firefox web browser which can be used to access internal-only web resources.
 
-A small client application, available for you to install on your local machine,
-enables you to connect to specific servers within JASMIN. Graphics are then relayed to the client
-application in a more efficient form, resulting in much better performance particularly if you need
-to interact with what's being displayed.
+### `nx` servers
 
-The service provides an improved user experience and is strongly
-recommended over standard X11 graphics.
+The following servers are available for accessing a graphical desktop. These servers have **identical configuration**, so you can use any one of them from any network location:
 
-The following servers have the NX service available and can be
-used as described below. These now have **identical configuration**, so you can use any one of them from any network location.
-
-host | 
---- | ---
+Server name |
+--- |
 `nx1.jasmin.ac.uk` |
 `nx2.jasmin.ac.uk` |
 `nx3.jasmin.ac.uk` |
 `nx4.jasmin.ac.uk` |
 {.table .table-striped .w-auto}
 
-### Notes
+## How to set up a connection using NoMachine Enterprise Client
 
-- The `nx*` servers should only be used as described below, as this preserves system resources for their intended purpose. Please do not run any resource-hungry processes on them.
-- Although the graphical desktop session should persist when you close the client (unless you specifically log out), you should not rely on this feature, so please don't report this as a problem: occasionally machines run out of resources and sessions get killed. Keeping sessions open consumes resources on the server even when you're not using the session, which may mean that other users can't use the service.
+The client application supported by JASMIN is **NoMachine Enterprise Client** (NOT "NoMachine Enterprise Desktop" or "NoMachine" which you may also come across). You can download the {{<link "https://downloads.nomachine.com/enterprise/?product=enterprise-client" >}}appropriate version for your local machine from the NoMachine website{{</link>}}. You may need to ask your organisation's IT helpdesk to install the software for you. Please note that JASMIN does not support any client applications for Windows 10.
 
-## Installing NoMachine Enterprise Client
+### Creating a connection profile
 
-Download the
-{{<link "https://downloads.nomachine.com/enterprise/?product=enterprise-client" >}}appropriate version of the NoMachine Enterprise Client{{</link>}}
-from NoMachine. The first time you click this link, you might be redirected to the homepage of the NoMachine download site. If you click the link a second time, you should be taken straight to the NoMachine Enterprise Client download page.
+1. Open NoMachine Enterprise Client.
+1. In the "Machines" view, select "Add" in the top left corner of the window.
+1. From the drop-down list, select "Add connection".
+1. You're now in the "Address" tab. Type a name for this connection profile, and the full hostname from the list of `nx` servers above, e.g. `nx1.jasmin.ac.uk`.
+1. From the drop-down list, set the Protocol to "SSH", which will change the port to 22.
+1. Go to the "Configuration" tab.
+1. Choose **"Use key-based authentication with a SSH agent"**, then click the "Modify" button to the right.
+1. **IMPORTANT:** Make sure you tick the box "Forward Authentication".
+1. Click the back button in the top left corner to go back to the "Configuration" tab.
+1. Click "Add" in the top right corner.
 
-There are several different NoMachine products: 
-**the only one you need to install is NoMachine Enterprise Client.**
-
-Note that **NoMachine Enterprise Client** is a different application to the
-"NoMachine Enterprise Desktop" or "NoMachine" which you may also come across:
-the desktop edition contains additional components to enable remote access to
-your **own** (local) machine from a remote location: perhaps convenient
-but not what we are trying to enable for you here.
-
-The **NoMachine Enterprise Client** is a cut-down client to which connects to a remote
-server: in your case, the server is at the JASMIN end, where the desktop session will exist.
-
-Versions are available for Windows, Mac and Linux. You may need privileges on
-your local machine in order to install the software so you may need to ask for
-help from your local IT helpdesk.
-
-Remember to check for updates for the enterprise client to ensure you always
-have the latest stable version. You can configure the application to check for
-updates (and optionally apply them automatically) by going to Settings /
-Updates in the menu.
-
-## Setting up your connection
-
-Previously we recommended one of 2 methods for using your SSH key to connect. **We now recommend only the "agent" method, described below.**
-
-Configurations where you specify the location of your key may work for the initial connection, but do not seem to work
-(with recent versions of the software) for the onward connection to a `sci` machine.
-
-For a simple terminal connection to JASMIN, you would follow the instructions in [presenting your ssh key]({{% ref "present-ssh-key/#1-specifying-the-key-location-each-time" %}}), but the NoMachine client needs you to do it a slightly different way. The same principles apply however.
-
-### Using an agent
-
-In the initial configuration of the connection profile, select the option **"Use key-based authentication with a SSH agent"**.
-
-Videos for each platform:
+Video instructions for creating a connection profile on each platform:
 
 {{< nav tab-type="tabs" id="tabs-create-agent" >}}
-  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+  {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
     {{< video media-id="CxNJz2rLZuA" >}}
   {{< /nav-item >}}
   {{< nav-item title="Mac" >}}
@@ -110,88 +61,84 @@ Videos for each platform:
   {{< /nav-item >}}
 {{< /nav >}}
 
-#### Step-by-step instructions
+### Specifying the SSH client
 
-{{< accordion id="accordion-create-with-agent" >}}
-  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
+1. Follow the [instructions in our Getting Started section]({{% ref "present-ssh-key/#1-loading-your-key-into-an-agent" %}}) to load your SSH private key into an agent.
 
-- In the "Machines" view, select "Add"
-- You're now in the "Address" tab. Type a name for this connection profile, and the full hostname, e.g. `nx1.jasmin.ac.uk`. Set the Protocol to "SSH", which will change the port to 22.
-- Go to the "Configuration" tab.
-- Choose **"Use key-based authentication with a SSH agent"** , then click the Modify button to the right.
-- Make sure you tick the box "Forward Authentication" **IMPORTANT**
-- Go back to the "Add connection" dialog
-- If all is correct, click "Add"
+   - **Note for Linux users:** You may find that a "local" ssh-agent does not work for connecting via NoMachine Enterprise Client. Please use the global one for your desktop environment, e.g., `gnome-keyring-daemon`.
+   - **Note for MobaXterm users:** MobAgent does not work for connecting via NoMachine Enterprise Client. You will need to use an alternative Windows 11 agent.
+   - **Note for Pageant users:**  If you are using Pageant from the PuTTY suite of SSH tools as your agent, skip the following steps and go straight to the {{<link "#connecting">}}connecting instructions{{</link>}}.
 
-  {{< /accordion-item >}}
-{{</accordion>}}
+1. Open the file `.nx/config/player.cfg` in a text editor. The `.nx` directory should be in your home directory.
+1. Towards the end of the file, you should see two lines like this:
 
-Once you have created the connection profile, go to [Connecting]({{% ref "#connecting" %}}), below, and continue from there.
+    ```xml
+    <option key="SSH client mode" value="library">
+    <option key="SSH Client" value="nxssh.exe">
+    ```
 
-## Connecting
+1. Change them according to your platform as follows:
 
-### Connecting with an agent
-
-**Overview of this method:**
-
-In summary, we need to:
-
-- Load the SSH private key into a local ssh-agent
-- Unless using **Pageant** as the agent, edit the NX configuration file to use the native ssh client instead of the NoMachine "library" one.
-- Use the connection profile we created earlier, to connect.
-
-1\. Load your SSH private key into your authentication agent
-
-- Follow the [instructions for your platform here]({{% ref "present-ssh-key/#1-loading-your-key-into-an-agent" %}}), then return once you have successfully loaded your key.
-  - for **Windows**, this can be either the **Windows "OpenSSH Client" optional feature**, or **Pageant**, which is part of the **PuTTY** suite of SSH tools, but not any other ssh-agent. The MobaXterm agent "MobAgent" will not work for this purpose. 
-  - for **Linux**, you may find that a "local" ssh-agent does not work: for example using Gnome desktop, you may need to use the global one for your desktop environment, e.g.  `gnome-keyring-daemon --start` instead, before doing `ssh-add <key>`
-
-2\. Edit the NX configuration file
-
-- Open the file `.nx/config/player.cfg` in a simple text editor (e.g. Windows Notepad). The `.nx` directory should be in your home directory.
-- Towards the end of the file, you should see two lines like this:
+    {{< nav tab-type="tabs" id="tabs-os2" >}}
+      {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
 
   ```xml
-  <option key="SSH client mode" value="library">
-  <option key="SSH Client" value="nxssh.exe">
-  ```
-
-  Change them as follows:
-  
-  (the changes are slightly different for each platform)
-{{< nav tab-type="tabs" id="tabs-os2" >}}
-  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
-```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="C:\Windows\System32\OpenSSH\ssh.exe" />
-```
-  {{< /nav-item >}}
-  {{< nav-item title="Windows (Pageant)" >}}
-  Leave the file unaltered, with the default settings, as above.
-  {{< /nav-item >}}
-  {{< nav-item title="Mac" >}}
-```xml
+  ```
+
+      {{< /nav-item >}}
+      {{< nav-item title="Mac" >}}
+
+  ```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="/usr/bin/ssh" />
-```
-  {{< /nav-item >}}
-  {{< nav-item title="Linux">}}
-```xml
+  ```
+
+      {{< /nav-item >}}
+      {{< nav-item title="Linux">}}
+
+  ```xml
   <option key="SSH client mode" value="native" />
   <option key="SSH Client" value="/usr/bin/ssh" />
-```
-  {{< /nav-item >}}
-{{< /nav >}}
+  ```
 
-  **Save** and **close** the file before opening NoMachine Enterprise Client.
+      {{< /nav-item >}}
+    {{< /nav >}}
 
-Next, follow the video below for actually connecting, or see the step-by-step instructions below:
+1. **Save** and **close** the file.
+
+### Connecting
+
+1. Open NoMachine Enterprise Client.
+1. In the "Machines" view, select the machine you created and named in the previous steps, and click "Connect".
+1. Enter your JASMIN username in the box and click "OK".
+1. You may see a list of all the other desktop sessions currently in progress from other users. Ignore these.
+1. Select "Create a new Red Hat virtual desktop", then click "Create". If you can't see the "Create a new Red Hat virtual desktop" option, click the "New desktop" button at the top of the screen and it should appear.
+1. Select a screen setting from the list of icons at the bottom. The recommended setting is "Fit to window" (leftmost icon).
+1. **Read the instructions for how to show the NX menu once in the session.** Click "OK" to dismiss the instructions.
+1. Read and dismiss the subsequent information about NX and desktop environments by clicking "OK".
+1. You should now see a Linux desktop on the server you are connected to.
+1. Open the "Terminal" application.
+1. To make an onward connection, e.g., to a `sci` server, run your SSH command with the `-X` option:
+
+    {{<command user="user" host="nx*">}}
+    ssh -X sci-*-*.jasmin.ac.uk
+    {{</command>}}
+
+1. You can test the graphics functionality by opening the `xterm` application:
+
+    {{<command user="user" host="sci-*-*">}}
+    xterm
+    {{</command>}}
+
+Video instructions for connecting on each platform:
 
 {{< nav tab-type="tabs" id="tabs-connect-agent" >}}
-  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+  {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
     {{< video media-id="VUZYOVbugRc" >}}
   {{< /nav-item >}}
-  {{< nav-item title="Windows (Pageant)">}}
+  {{< nav-item title="Windows 11 (Pageant)">}}
     {{< video media-id="4URCp5AcJdg" >}}
   This video covers the whole process, including how to convert the key using PuTTYgen and load it using Pageant, then set up a connection and use it to connect.
   {{< /nav-item >}}
@@ -203,56 +150,62 @@ Next, follow the video below for actually connecting, or see the step-by-step in
   {{< /nav-item >}}
 {{< /nav >}}
 
-#### Step-by-step instructions
+### Closing your connection
 
-{{< accordion id="accordion-connect-with-agent" >}}
-  {{< accordion-item title="Steps in more detail (click to expand)" show="false" >}}
+When you have finished working, please close down your session by clicking the power button in the top right corner of the desktop and clicking "Log out" (NOT "Shut Down").
 
-- Enter your JASMIN username in the box
-- Click OK
-- You may see a list of all the other desktop sessions currently in progress from other users. Ignore these and click "New desktop".
-- Select "Create a new virtual desktop", then click "Create"
-- **Note the instructions for how to reach the NX menu once in the session, and select screen settings from the list of icons: Recommended setting is "Fit to window" (leftmost icon)**
-- Click OK on this and subsequent screens giving information about the NX and desktop environments.
-- You should be presented with a linux deskop on the server to which you connected, e.g. `nx1.jasmin.ac.uk`
-- Locate the icon to open the "Terminal" application (bottom of window in Rocky 9 desktop)
-- The video demonstrates making an onward connection to a `sci` server and testing the graphics functionality by opening the `xterm` application on that server, before exiting and logging out of the NX desktop.
+{{<image class="img-fluid w-50" wrapper="text-center" src="img/docs/graphical-linux-desktop-access-using-nx/nx-log-out.png" caption="The power menu on the top right of the desktop showing the 'Log Out' option">}}
 
-{{</accordion-item>}}
-{{</accordion>}}
+## Notes
 
-## Using the graphical desktop environment
-
-Once you have set up the environment to your liking, you can
-
-  - use the web browser on that system to access web-based resources available only within JASMIN
-  - make SSH connections to other systems within JASMIN such as `sci-vm-01.jasmin.ac.uk`
-  - use graphical applications on other systems within JASMIN and send the output bask to this desktop
-  - the "connecting" videos above show the steps involved for this.
-
-### Notes
-
-  * The number of "virtual desktops" which can be created per user is limited to 1 in order to preserve system resources.
-  * Although in theory sessions and desktop windows should persist when you close down the NoMachine client and when you re-open it to the same connection, you should not rely on this feature. Keeping long-running sessions open reduces resources available to other users.
-  * The option to shut down the machine does not work for a "regular" user (only admins). Please just "Log out" instead.
+- The `nx*` servers are only for use with NoMachine Enterprise Client, as described above. Please only use them for this purpose, to help preserve system resources.
+- Please do not run any resource-hungry processes on the `nx*` servers.
+- Creation of virtual desktop sessions is limited to one session per user.
+- Remember to make sure you are using the correct and most recent stable version of **NoMachine Enterprise Client** (NOT NoMachine Enterprise Desktop or any other applications from NoMachine). To check which application you are using, go to Settings > Updates, and check the "Product" field says NoMachine Enterprise Client. You can also configure the application to check for updates and/or apply them automatically by going to Settings > Updates.
+- When prompted for a passphrase by NoMachine Enterprise Client, make sure to use the PASSPHRASE associated with your SSH private key, and not the PASSWORD associated with your JASMIN account.
 
 ## Troubleshooting
 
-### Authentication error (Windows users)
+### Can't find private key when setting up connection profile
 
-* Update your key to ECDSA (previous recommendation was RSA). This will solve most problems. See updated advice in [Generate SSH key pair]({{%ref "generate-ssh-key-pair"%}}). Remember to leave 15 minutes after uploading your new public key before trying again, so that the new key can be made available in all the places it needs to be.
+The location of your private key on your local machine may be in a hidden directory, usually `~/.ssh`. You may need to enable the display of hidden files/directories on your local machine before you can navigate to the right place and copy the location. To resolve this, according to your platform:
 
-### Transposed symbol keys
+{{< nav tab-type="tabs" id="tabs-os3" >}}
+  {{< nav-item title="Windows 11" show="true" >}}
+In File Explorer, go to View > Show and make sure "Hidden items" is ticked.
+  {{< /nav-item >}}
+  {{< nav-item title="Mac" >}}
+In Finder, your home directory may not be accessible by default. If you can't access the path (usually `/Users/<username>`), or can't see it in the list of locations:
 
-After the first connection (particularly for Mac users), subsequent connections to the same connection profile sometimes have some symbols keys e.g. `@` and `"` transposed.
+1. Go to Finder > Settings > Sidebar.
+1. You should see a list titled "Show these items in the sidebar".
+1. Make sure the box next to your username is ticked and close this menu.
 
-Click the "settings" option (in the menu, top-right), then go to "settings" and search for "input" to look for alternative keyboard layouts.
+Once you can access your home directory, you should be able to see the subdirectory `.ssh`. If not, you may need to use the keyboard shortcut {{<kbd "CMD+SHIFT+.">}}.
+  {{< /nav-item >}}
+{{< /nav >}}
 
-If this does not work, try removing and re-installing the NoMachine client software: [a full uninstall is described here](#cant-make-an-onward-connection)
+### Authentication errors (particularly for Windows 11 users)
+
+#### Check key type
+
+Using an ECDSA key pair rather than RSA will solve most problems. See further advice in [Generate SSH key pair]({{%ref "generate-ssh-key-pair"%}}). Remember to wait 15 minutes after uploading your new public key before trying to connect, so the new key can be made available in all the places it needs to be.
+
+#### Check key format (PuTTYgen users)
+
+If you created your SSH key pair using the "PuTTYgen" application, you may see "Authentication failed" when connecting using NoMachine Enterprise Client, even if the same key pair usually works for terminal connections. This can sometimes be resolved by converting your private key to "OpenSSH format" before using it with NoMachine Enterprise Client. Your public key will stay the same and does not need to be re-uploaded to the Accounts Portal.
+
+To convert your private key:
+
+1. Open PuTTYgen and "Load an existing private key file" (click "Load").
+1. Ignore the notice about saving it in PuTTY's own format (this is not necessary here) and click "OK".
+1. In the PuTTYgen menu, select "Conversions", then "Export OpenSSH key".
+1. Save the newly-formatted private key file locally. The passphrase needed to unlock it should not have changed.
+1. Use this newly-formatted key file with NoMachine NX.
 
 ### Connection timeout
 
-Please do not try and connect using the proprietary "NX" protocol. Select "SSH" as the protocol. If you mistakenly use "NX" as the protocol you may see an error similar to the following when you try to connect (The correct port for **SSH** connections is 22)
+Please make sure you have selected "SSH" as the protocol on port 22, rather than the proprietary "NX" protocol. If you select "NX" as the protocol, you may see an error similar to the following when you try to connect:
 
 ```console
 A connection timeout has occurred while trying to connect to 'nx1.jasmin.ac.uk' on port '4000'.
@@ -260,63 +213,65 @@ The issue could either be caused by a networking problem, by a firewall or NAT b
 traffic or by a wrong server address. Please verify your configuration and try again.
 ```
 
-### Client version
+### Can't connect or reconnect to a session
 
-Make sure you have installed and are using the correct and most recent version of the NoMachine Enterprise Client (not the NoMachine Enterprise Desktop or any other applications from NoMachine). [Check the instructions above]({{% ref "graphical-linux-desktop-access-using-nx#installing-nomachine-enterprise-client" %}}) to make sure you have downloaded the correct application.
+#### Check disk usage
 
-### Key format
+If disk usage of your JASMIN home directory is near or over the 100G limit, it may prevent you from writing any new temporary files. This can prevent NoMachine from starting a new session or reconnecting to an existing session. You may see the following error:
 
-If you created your SSH private key using the "PuTTYgen" application, and are getting "Authentication failed" for a key pair that you know works OK for simple terminal connections, it could be that you need to convert the private key to "OpenSSH format" for use here. By doing this you would be creating an alternately-formatted version of the same private key, so the public key stays the same (and you don't need to re-upload that to JASMIN).
+```console
+X11 connection rejected because of wrong authentication.
+```
 
-- Open PuTTYgen and "Load an existing private key file" (click "Load")
-- Ignore the notice about saving it in PuTTY's own format (this is not useful here) (click "OK")
-- In the PuTTYgen menu, select "Conversions", then "Export OpenSSH key"
-- Save the newly-formatted private key file locally. The passphrase needed to unlock it should not have changed.
-- Use this newly-formatted key file with NoMachine NX.
+You can check your disk usage by connecting to JASMIN via the terminal, and running `pdu -sh $HOME`. If you are near or over 100GB disk usage, delete some files from your home directory to clear space, and re-check until you are well below the limit.
 
-### Passphrase vs Password
+#### Terminate previous session
 
-Be sure to use the PASSPHRASE associated with your SSH private key, and not the PASSWORD associated with your JASMIN account, when prompted using the NX client.
+If a previous session fails to terminate correctly, it may prevent you from connecting or reconnecting. In this case, the client may get stuck with a "spinning wheel" before eventually timing out.
 
-### Can't find your private key?
+You can terminate your own previous session as follows:
 
-The location of your private key on your local machine may be in a hidden directory for example `~/.ssh`. In order to navigate to it to provide the location when setting up your connection profile, you may need to enable the display of hidden directories/files in your local desktop environment first. On a Mac you can do this with the shortcut {{<kbd "CMD+SHIFT+.">}}. In Windows this is under File Explorer / View / Hidden Items. It's also possible that your home directory itself (normally `/Users/<username>`) is not configured to be displayed by default in `Finder`. If this is case, go to Finder / Preferences / Sidebar / Show these items and tick the box next to the item representing your username: this should make it appear, and `.ssh` should be a subdirectory of this.
+1. Follow the instructions in {{<link "#connecting">}}Connecting{{</link>}}, up to the point where all the other users' sessions on the machine are displayed.
+1. Find the session corresponding to your username.
+1. Right-click the session and select "Terminate session".
 
-Windows users may need to switch on "show hidden files" which is normally an option in File Explorer windows, and/or where you're asked to choose from a list of files.
+Note that you may lose any unsaved work in the session that you terminate, but it should clear the stuck session and allow you to reconnect. Please try this before reporting an issue to the helpdesk, as it is the most likely solution.
 
-### Can't make an onward connection
+### Transposed keys (particularly for Mac users)
 
-* Does your username have more than 8 characters?
-  * Before we realised this was a problem, some users were not prevented from creating accounts with usernames over 8 characters. The names of the servers are now kept as short as possible e.g. `nx1`, `nx2` so this mitigates the problem in most cases. All the new Rocky 9 NX hosts are now the same in this respect. But if your username is very long (>13 characters) you may still run into problems here, in which case please contact the helpdesk.
-* [Update your key to ECDSA]({{%ref "generate-ssh-key-pair"%}}): this should solve the problem in most cases.
-* If it's still a problem 15 minutes after uploading your new public key, try a full clean uninstall:
-  * uninstalling the NoMachine Enterprise Client
-  * deleting the `%USERPROFILE%\.nx` (Windows) or `~\.nx` (Mac/Linux) directory on your machine
-  * deleting the `%USERPROFILE%\Documents\NoMachine` or `~\NoMachine` directory on your machine (beware this will remove **all** connection profiles)
-  * rebooting, then re-installing and trying again.
+After successfully making the first connection, some users find that in subsequent connections to the same connection profile, some keys are transposed or do not work at all. This is particularly the case for the arrow keys, and symbol keys like `@` and `"`. You can adjust the keyboard settings by going to Settings > Input. If this does not help, some users find this issue is resolved by updating, or completely re-installing NoMachine Enterprise Client.
 
-### Can't display graphics from sci machine or other onward connection
+For a full, clean re-installation of NoMachine Enterprise Client:
 
-Did you omit the `-X` option from the SSH command when you made the onward connection to that machine? Try `-Y` if `-X` doesn't work for you.
+1. Uninstall the NoMachine Enterprise Client.
+1. Delete the `%USERPROFILE%\.nx` (Windows 11) or `~\.nx` (Mac/Linux) directory on your machine.
+1. Delete the `%USERPROFILE%\Documents\NoMachine` or `~\NoMachine` directory on your machine (beware this will remove **all** connection profiles).
+1. Reboot your local machine, then [re-install NoMachine Enterprise Client](#how-to-set-up-a-connection-using-nomachine-enterprise-client) and try again.
 
-### Disk space
+### Can't make onward connections
 
-Check your disk usage in your JASMIN home directory: if this is over or near the 100G limit, you may not be able to write any temporary files and this could prevent NoMachine from being able to start a new session or even reconnect to an existing virtual desktop session.
+#### Check initial connection method
 
-You may see the error `X11 connection rejected because of wrong authentication.`.
+Previously, we recommended a method where you specify the location of your SSH key each time you connect. Configurations set up in this way may work for the initial connection, but do not seem to work for an onward connection to a `sci` machine (especially with more recent versions of NoMachine Enterprise Client). Please use the "agent" method to make your initial connection, [as described above](#how-to-set-up-a-connection-using-nomachine-enterprise-client).
 
-Clear out some space and re-check with `pdu -sh $HOME` to find out how much space you're using.
+#### Check key type
 
-### Can't connect or gets stuck connecting to a previous session
+Using an ECDSA key pair rather than RSA will solve most problems. See further advice in [Generate SSH key pair]({{%ref "generate-ssh-key-pair"%}}). Remember to wait 15 minutes after uploading your new public key before trying to connect, so the new key can be made available in all the places it needs to be.
 
-Sometimes, you can't connect because you have a previous session which did not terminate correctly, or you might have problems reconnecting to a previous desktop session. Sometimes the client will get stuck with a "spinning wheel" before eventually timing out. You can terminate your own previous session as follows:
+If this is still a problem 15 minutes after updating your public key, try a [full, clean re-installation, as described above](#transposed-keys-particularly-for-mac-users).
 
-- Follow instructions in {{<link "#connecting">}}Connecting{{</link>}} until the point where all the other users' sessions on the machine are displayed.
-- Find the one corresponding to your username
-- Right-click it and select "Terminate session"
+#### JASMIN account with long username
 
-Note that you may lose any unsaved work in the session that you terminate, but it should clear the stuck session and allow you to reconnect. Please try this first before asking the support team, as this is the first thing that they will try in order to clear your session.
+JASMIN account usernames have been limited to 8 characters since 2017, as long usernames can cause problems with the NX service. Server names are also kept short for this reason. If your username is over this limit (especially if it is longer than 13 characters) and you are facing problems when using NoMachine Enterprise Client, [please contact the helpdesk](https://jasmin.ac.uk/help/contact/).
+
+### Can't display graphics from `sci` machine or other onward connection
+
+Make sure to use the `-X` option in the SSH command when you make an onward connection to another machine. If you are using `-X` and it still doesn't work, try using `-Y` instead.
+
+### Session doesn't persist when closing and reopening the client
+
+Open sessions consume resources even when not in use, meaning sessions are sometimes killed when machines run out of resources. Please do not report this as an issue to the helpdesk. Save your work frequently and log out of your session when you are finished to free up resources for other users.
 
 ### "It worked yesterday"
 
-For occasions where "it worked last time I tried to connect, but now doesn't", please first try the above step to clear any previous session which might have got stuck, otherwise the time-honoured IT support advice of "turning it off and on again" is applicable: try restarting the machine where you are using NoMachine Enterprise Client, as this can sometimes clear issues with the client, your machine or your network connection. Don't forget to re-connect via your VPN if available.
+For occasions where "it worked last time I tried to connect, but now doesn't", please first try {{<link "#terminate-previous-session">}}the above steps to terminate any previous session{{</link>}} which might have got stuck. Otherwise, the time-honoured IT support advice of "turning it off and on again" is applicable: try restarting the machine where you are using NoMachine Enterprise Client, as this can sometimes clear issues with the client, your machine, or your network connection. Don't forget to reconnect via your VPN if available.

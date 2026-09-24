@@ -32,7 +32,7 @@ Server name |
 
 ## How to set up a connection using NoMachine Enterprise Client
 
-The client application supported by JASMIN is **NoMachine Enterprise Client** (NOT "NoMachine Enterprise Desktop" or "NoMachine"). You can download the {{<link "https://downloads.nomachine.com/enterprise/?product=enterprise-client" >}}appropriate version for your local machine from the NoMachine website{{</link>}}. You may need to ask your organisation's IT helpdesk to install the software for you. Please note that JASMIN does not support any client applications for Windows 10.
+The client application supported by JASMIN is **NoMachine Enterprise Client** (NOT "NoMachine Enterprise Desktop" or "NoMachine" which you may also come across). You can download the {{<link "https://downloads.nomachine.com/enterprise/?product=enterprise-client" >}}appropriate version for your local machine from the NoMachine website{{</link>}}. You may need to ask your organisation's IT helpdesk to install the software for you. Please note that JASMIN does not support any client applications for Windows 10.
 
 ### Creating a connection profile
 
@@ -50,7 +50,7 @@ The client application supported by JASMIN is **NoMachine Enterprise Client** (N
 Video instructions for creating a connection profile on each platform:
 
 {{< nav tab-type="tabs" id="tabs-create-agent" >}}
-  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+  {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
     {{< video media-id="CxNJz2rLZuA" >}}
   {{< /nav-item >}}
   {{< nav-item title="Mac" >}}
@@ -66,7 +66,7 @@ Video instructions for creating a connection profile on each platform:
 1. Follow the [instructions in our Getting Started section]({{% ref "present-ssh-key/#1-loading-your-key-into-an-agent" %}}) to load your SSH private key into an agent.
 
    - **Note for Linux users:** You may find that a "local" ssh-agent does not work for connecting via NoMachine Enterprise Client. Please use the global one for your desktop environment, e.g., `gnome-keyring-daemon`.
-   - **Note for MobaXterm users:** MobAgent does not work for connecting via NoMachine Enterprise Client. You will need to use an alternative Windows agent.
+   - **Note for MobaXterm users:** MobAgent does not work for connecting via NoMachine Enterprise Client. You will need to use an alternative Windows 11 agent.
    - **Note for Pageant users:**  If you are using Pageant from the PuTTY suite of SSH tools as your agent, skip the following steps and go straight to the {{<link "#connecting">}}connecting instructions{{</link>}}.
 
 1. Open the file `.nx/config/player.cfg` in a text editor. The `.nx` directory should be in your home directory.
@@ -80,7 +80,7 @@ Video instructions for creating a connection profile on each platform:
 1. Change them according to your platform as follows:
 
     {{< nav tab-type="tabs" id="tabs-os2" >}}
-      {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+      {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
 
   ```xml
   <option key="SSH client mode" value="native" />
@@ -135,10 +135,10 @@ Video instructions for creating a connection profile on each platform:
 Video instructions for connecting on each platform:
 
 {{< nav tab-type="tabs" id="tabs-connect-agent" >}}
-  {{< nav-item title="Windows (OpenSSH)" show="true" >}}
+  {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
     {{< video media-id="VUZYOVbugRc" >}}
   {{< /nav-item >}}
-  {{< nav-item title="Windows (Pageant)">}}
+  {{< nav-item title="Windows 11 (Pageant)">}}
     {{< video media-id="4URCp5AcJdg" >}}
   This video covers the whole process, including how to convert the key using PuTTYgen and load it using Pageant, then set up a connection and use it to connect.
   {{< /nav-item >}}
@@ -158,7 +158,8 @@ When you have finished working, please close down your session by clicking the p
 
 ## Notes
 
-- The `nx*` servers are only for use with NoMachine Enterprise Client. Please only use them for this purpose, to help preserve system resources.
+- The `nx*` servers are only for use with NoMachine Enterprise Client, as described above. Please only use them for this purpose, to help preserve system resources.
+- Please do not run any resource-hungry processes on the `nx*` servers.
 - Creation of virtual desktop sessions is limited to one session per user.
 - Remember to make sure you are using the correct and most recent stable version of **NoMachine Enterprise Client** (NOT NoMachine Enterprise Desktop or any other applications from NoMachine). To check which application you are using, go to Settings > Updates, and check the "Product" field says NoMachine Enterprise Client. You can also configure the application to check for updates and/or apply them automatically by going to Settings > Updates.
 - When prompted for a passphrase by NoMachine Enterprise Client, make sure to use the PASSPHRASE associated with your SSH private key, and not the PASSWORD associated with your JASMIN account.
@@ -184,7 +185,7 @@ Once you can access your home directory, you should be able to see the subdirect
   {{< /nav-item >}}
 {{< /nav >}}
 
-### Authentication errors (particularly Windows users)
+### Authentication errors (particularly for Windows 11 users)
 
 #### Check key type
 
@@ -216,7 +217,11 @@ traffic or by a wrong server address. Please verify your configuration and try a
 
 #### Check disk usage
 
-If disk usage of your JASMIN home directory is near or over the 100G limit, it may prevent you from writing any new temporary files. This can prevent NoMachine from starting a new session or reconnecting to an existing session. You may see the error `X11 connection rejected because of wrong authentication`.
+If disk usage of your JASMIN home directory is near or over the 100G limit, it may prevent you from writing any new temporary files. This can prevent NoMachine from starting a new session or reconnecting to an existing session. You may see the following error:
+
+```console
+X11 connection rejected because of wrong authentication.
+```
 
 You can check your disk usage by connecting to JASMIN via the terminal, and running `pdu -sh $HOME`. If you are near or over 100GB disk usage, delete some files from your home directory to clear space, and re-check until you are well below the limit.
 
@@ -232,22 +237,28 @@ You can terminate your own previous session as follows:
 
 Note that you may lose any unsaved work in the session that you terminate, but it should clear the stuck session and allow you to reconnect. Please try this before reporting an issue to the helpdesk, as it is the most likely solution.
 
-### Transposed keys (particularly Mac users)
+### Transposed keys (particularly for Mac users)
 
-After successfully making the first connection, some users find that in subsequent connections to the same connection profile, some keys are transposed or do not work at all. This is particularly the case for the arrow keys, and symbol keys like `@` and `"`. You can adjust the keyboard settings by going to Settings > Input; alternatively, some users find this issue is resolved by updating, or removing and completely re-installing NoMachine Enterprise Client.
+After successfully making the first connection, some users find that in subsequent connections to the same connection profile, some keys are transposed or do not work at all. This is particularly the case for the arrow keys, and symbol keys like `@` and `"`. You can adjust the keyboard settings by going to Settings > Input. If this does not help, some users find this issue is resolved by updating, or completely re-installing NoMachine Enterprise Client.
+
+For a full, clean re-installation of NoMachine Enterprise Client:
+
+1. Uninstall the NoMachine Enterprise Client.
+1. Delete the `%USERPROFILE%\.nx` (Windows 11) or `~\.nx` (Mac/Linux) directory on your machine.
+1. Delete the `%USERPROFILE%\Documents\NoMachine` or `~\NoMachine` directory on your machine (beware this will remove **all** connection profiles).
+1. Reboot your local machine, then [re-install NoMachine Enterprise Client](#how-to-set-up-a-connection-using-nomachine-enterprise-client) and try again.
 
 ### Can't make onward connections
+
+#### Check initial connection method
+
+Previously, we recommended a method where you specify the location of your SSH key each time you connect. Configurations set up in this way may work for the initial connection, but do not seem to work for an onward connection to a `sci` machine (especially with more recent versions of NoMachine Enterprise Client). Please use the "agent" method to make your initial connection, [as described above](#how-to-set-up-a-connection-using-nomachine-enterprise-client).
 
 #### Check key type
 
 Using an ECDSA key pair rather than RSA will solve most problems. See further advice in [Generate SSH key pair]({{%ref "generate-ssh-key-pair"%}}). Remember to wait 15 minutes after uploading your new public key before trying to connect, so the new key can be made available in all the places it needs to be.
 
-If this is still a problem 15 minutes after updating your public key, try:
-
-1. Uninstalling the NoMachine Enterprise Client
-1. Deleting the `%USERPROFILE%\.nx` (Windows) or `~\.nx` (Mac/Linux) directory on your machine.
-1. Deleting the `%USERPROFILE%\Documents\NoMachine` or `~\NoMachine` directory on your machine (beware this will remove **all** connection profiles).
-1. Rebooting your local machine, then re-installing NoMachine Enterprise Client and trying again.
+If this is still a problem 15 minutes after updating your public key, try a [full, clean re-installation, as described above](#transposed-keys-particularly-for-mac-users).
 
 #### JASMIN account with long username
 
@@ -263,4 +274,4 @@ Open sessions consume resources even when not in use, meaning sessions are somet
 
 ### "It worked yesterday"
 
-For occasions where "it worked last time I tried to connect, but now doesn't", please first try {{<link "#terminate-previous-session">}}the above steps to clear any previous session{{</link>}} which might have got stuck. Otherwise, the time-honoured IT support advice of "turning it off and on again" is applicable: try restarting the machine where you are using NoMachine Enterprise Client, as this can sometimes clear issues with the client, your machine, or your network connection. Don't forget to reconnect via your VPN if available.
+For occasions where "it worked last time I tried to connect, but now doesn't", please first try {{<link "#terminate-previous-session">}}the above steps to terminate any previous session{{</link>}} which might have got stuck. Otherwise, the time-honoured IT support advice of "turning it off and on again" is applicable: try restarting the machine where you are using NoMachine Enterprise Client, as this can sometimes clear issues with the client, your machine, or your network connection. Don't forget to reconnect via your VPN if available.

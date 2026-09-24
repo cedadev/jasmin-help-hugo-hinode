@@ -35,6 +35,10 @@ Click **Details** to access the Slurm cluster:
 
 This provides a command-line example to access the Slurm cluster, but also the ability to **update**, **patch** and **delete** the cluster, along with details such creation date.
 
+{{<alert alert-type="danger">}}
+Patching or upgrading a Slurm platform may replace cluster instances with new VMs built from updated images. Software installed directly on login or compute nodes should not be considered persistent unless managed through containers, configuration management, or automated provisioning.
+{{</alert>}}
+
 There are two services accessible from the **Details** page: the **Open onDemand** and the **Monitoring** service.
 
 Click **Open OnDemand** to access and manage the Slurm cluster.

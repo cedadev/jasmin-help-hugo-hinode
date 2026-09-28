@@ -78,7 +78,7 @@ Video instructions for creating a connection profile on each platform:
 1. Read and dismiss the subsequent information about NX and desktop environments by clicking "OK".
 1. You should now see a Linux desktop on the server you are connected to.
 1. Open the "Terminal" application.
-1. To make an onward connection, e.g., to a `sci` server, run your SSH command with the `-X` option:
+1. To make an onward connection, e.g., to a `sci` server, run your SSH command with the `-X` option as shown in the command below **BUT** replacing `sci-*-*` with the name of a specific sci server ([see list of available servers here](sci-servers#available-sci-servers)):
 
     {{<command user="user" host="nx*">}}
     ssh -X sci-*-*.jasmin.ac.uk
@@ -228,7 +228,7 @@ Make sure to use the `-X` option in the SSH command when you make an onward conn
 
 ### Session doesn't persist when closing and reopening the client
 
-Open sessions consume resources even when not in use, meaning sessions are sometimes killed when machines run out of resources. Please do not report this as an issue to the helpdesk. Save your work frequently and log out of your session when you are finished to free up resources for other users.
+Open sessions consume resources even when not in use, meaning sessions are sometimes killed when machines run out of resources. Please do not report this as an issue to the helpdesk. Save your work frequently and log out of your session when you are finished: this frees up resources for other users.
 
 ### "It worked yesterday"
 

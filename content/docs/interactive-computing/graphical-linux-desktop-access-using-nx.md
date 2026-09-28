@@ -61,54 +61,12 @@ Video instructions for creating a connection profile on each platform:
   {{< /nav-item >}}
 {{< /nav >}}
 
-### Specifying the SSH client
+### Connecting
 
 1. Follow the [instructions in our Getting Started section]({{% ref "present-ssh-key/#1-loading-your-key-into-an-agent" %}}) to load your SSH private key into an agent.
 
    - **Note for Linux users:** You may find that a "local" ssh-agent does not work for connecting via NoMachine Enterprise Client. Please use the global one for your desktop environment, e.g., `gnome-keyring-daemon`.
    - **Note for MobaXterm users:** MobAgent does not work for connecting via NoMachine Enterprise Client. You will need to use an alternative Windows 11 agent.
-   - **Note for Pageant users:**  If you are using Pageant from the PuTTY suite of SSH tools as your agent, skip the following steps and go straight to the {{<link "#connecting">}}connecting instructions{{</link>}}.
-
-1. Open the file `.nx/config/player.cfg` in a text editor. The `.nx` directory should be in your home directory.
-1. Towards the end of the file, you should see two lines like this:
-
-    ```xml
-    <option key="SSH client mode" value="library">
-    <option key="SSH Client" value="nxssh.exe">
-    ```
-
-1. Change them according to your platform as follows:
-
-    {{< nav tab-type="tabs" id="tabs-os2" >}}
-      {{< nav-item title="Windows 11 (OpenSSH)" show="true" >}}
-
-  ```xml
-  <option key="SSH client mode" value="native" />
-  <option key="SSH Client" value="C:\Windows\System32\OpenSSH\ssh.exe" />
-  ```
-
-      {{< /nav-item >}}
-      {{< nav-item title="Mac" >}}
-
-  ```xml
-  <option key="SSH client mode" value="native" />
-  <option key="SSH Client" value="/usr/bin/ssh" />
-  ```
-
-      {{< /nav-item >}}
-      {{< nav-item title="Linux">}}
-
-  ```xml
-  <option key="SSH client mode" value="native" />
-  <option key="SSH Client" value="/usr/bin/ssh" />
-  ```
-
-      {{< /nav-item >}}
-    {{< /nav >}}
-
-1. **Save** and **close** the file.
-
-### Connecting
 
 1. Open NoMachine Enterprise Client.
 1. In the "Machines" view, select the machine you created and named in the previous steps, and click "Connect".

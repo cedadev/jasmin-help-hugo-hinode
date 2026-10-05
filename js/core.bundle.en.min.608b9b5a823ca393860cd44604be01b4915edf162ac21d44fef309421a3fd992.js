@@ -7320,7 +7320,7 @@ function initIndex() {
         description: "How to submit a batch job to Slurm",
         
         
-        content: "What is a batch job? \u0026nbsp; A batch job is a task that, once submitted to the scheduler, can run without further interaction from the user. A user writes a script containing both the command(s) to be run and directives for the scheduler as to how the job should be run. The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term \u0026ldquo;job\u0026rdquo; is used throughout this documentation to mean a \u0026ldquo;batch job\u0026rdquo;.\nThere are two ways of submitting a job to Slurm:\nSubmit via a Slurm job script - create a bash script that includes directives to the Slurm scheduler Submit via command-line options - provide directives to Slurm via command-line arguments Both options are described below.\nWhich servers can you submit jobs from? \u0026nbsp; Jobs can be submitted to Slurm from any of the sci servers. Check the current list of servers on that page.\nMethod 1: Submit via a Slurm job script \u0026nbsp; The Slurm job submission command is:\nsbatch myjobscript The job script is a Bash script of user\u0026rsquo;s application and includes a list of Slurm directives, prefixed with #SBATCH as shown in this example:\n\u0026nbsp; Remove any trailing whitespace Choose values for account, partition and qos that are valid for you. #!/bin/bash #SBATCH --job-name=\u0026#34;My test job\u0026#34; #SBATCH --time=00:01:00 #SBATCH --mem=1M #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %j.out #SBATCH -e %j.err # executable sleep 5sExplanation:\nSubmitting the above script (if you had access to the mygws account) creates a job named My test job with an estimated run time of 00:01:00 (1 minute), memory requirement of 1M (1 Megabyte), run against the account mygws on the partition debug using QoS debug, and writing its STDOUT (standard output) to file %j.out and its STDERR to file %j.err (where %j represents the job ID that the scheduler assigns to the job).\nThe task itself is the command sleep 5s which just pauses for 5 seconds before exiting. This is what you would replace with your actual processing command(s), so you need to have an idea of how long it will take to run (TIP: run it manually first with time \u0026lt;cmd\u0026gt; to find out!)\nFor details about how to pick the right partition, QoS, and account, please read about the Slurm queues on LOTUS. For further submission parameters, see the quick reference about job specification. Method 2: Submit via command-line options \u0026nbsp; If you have an existing script, written in any language, that you wish to submit to LOTUS then you can do so by providing Slurm directives as command-line arguments. For example, if you have a script my-script.py that takes a single argument -f \u0026lt;filepath\u0026gt;, you can submit it using sbatch as follows:\nsbatch -A mygws -p debug -q debug -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txtThis approach allows you to submit jobs without writing additional job scripts to wrap your existing code.\nCheck the official documentation for sbatch, its arguments and their syntax here\u0026nbsp; .\nMethod 3: Submit an interactive session via salloc \u0026nbsp; Testing a job on LOTUS can be carried out in an interactive manner by obtaining a Slurm job allocation or resources (a set of nodes) via the Slurm command salloc. The code/application is executed and the allocation is released after a specific time - default 30 mins - when the testing is finished.\nInteractive execution with pseudo-shell terminal on the compute LOTUS node \u0026nbsp; The job is executed on the LOTUS compute node by allocating resources with salloc. See the example below:\nsalloc -p standard -q high -A mygws --ntasks-per-node=2 salloc: Pending job allocation 23506 salloc: job 23506 queued and waiting for resources salloc: job 23506 has been allocated resources salloc: Granted job allocation 23506 salloc: Nodes host580 are ready for job Official documentation for the salloc command is available here\u0026nbsp; .\nAt this point, your shell prompt will change to the LOTUS compute node. You will have the allocated compute that you requested at this shell. For example the command hostname is executed twice as there are 2 CPUs and each outputs the name of the node:\nsrun hostname host580.jc.rl.ac.uk host580.jc.rl.ac.uk Official documentation for the srun command is available here\u0026nbsp; .\nThe job allocation ID 23506 has 2 CPUs on the compute node host580 and can be checked from another terminal as shown below:\nsqueue -u fred -o\u0026#34;%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R\u0026#34; JOBID PARTITION NAME USER ST TIME NODES CPUS NODELIST(REASON) 23506 standard interactive fred R 1:32 1 2 host580 \u0026nbsp; squeue --me is equivalent to squeue -u fred \u0026nbsp; Please DO NOT use watch or equivalent polling utilities with Slurm as they are wasteful of resources and cause communication issues for the scheduler.\nYour process may be killed if this is detected.\nOfficial documentation for the squeue command is available here\u0026nbsp; .\nOnce you\u0026rsquo;re finished, type exit to relinquish the allocation. This will happen automatically once the time limit on the job runs out.\nInteractive partition on LOTUS \u0026nbsp; \u0026nbsp; New Slurm partition inter (March 2026)\nIt is possible now to work interactively on LOTUS in a similar way to being on a sci server, but with guaranteed resources via the new and high priority interactive partition.\nThe new interactive partition has three runtime limits defined in QoS:\ninter (3hrs) inter4h (4hrs) inter6h (6hrs). For convenience, three corresponding aliases have been set up: inter , inter4, and inter6 to access the new partition with a specific Slurm job accounting/GWS membership.\nFor example:\ninter --account=\u0026lt;GWS-name-membership\u0026gt; salloc: Pending job allocation 1410784 salloc: job 1410784 queued and waiting for resources salloc: job 1410784 has been allocated resources salloc: Granted job allocation 1410784 salloc: Nodes host1182 are ready for job exit salloc: Relinquishing job allocation 1410780 Notes:\nIt is possible to SSH to the allocated LOTUS compute node (host1182.jc.rl.ac.uk in this example) from another terminal session from a sci server e.g. ssh host1182.jc.rl.ac.uk. Please note that exiting the interactive session will terminate all other SSH sessions on the allocated node. VSCode can be run within the interactive job session. This provides better control of memory resources compared to running VSCode on a sci server. Job array submission \u0026nbsp; Job arrays are groups of jobs with the same executable and resource requirements, but different input files. Job arrays can be submitted, controlled, and monitored as a single unit or as individual jobs or groups of jobs. Each job submitted from a job array shares the same job ID as the job array and is uniquely referenced using an array index. This approach is useful for ‘high throughput\u0026rsquo; tasks, for example where you want to run your simulation with different driving data or run the same processing task on multiple data files.\nImportant note: The maximum job array size that Slurm is configured for is MaxArraySize = 10000. If a Job array of size is greater than 10000 is submitted, Slurm will reject the job submission with the following error message: \u0026ldquo;Job array index too large. Job not submitted.\u0026rdquo;\nTaking a simple R submission script as an example:\n#!/bin/bash #SBATCH --job-name=myRtest #SBATCH --time=30:00 #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %j.out #SBATCH -e %j.err module add jasr Rscript TestRFile.R dataset1.csvIf you want to run the same script TestRFile.R with input file dataset2.csv through to dataset10.csv, you could create and submit a job script for each dataset. However, by setting up an array job, you could create and submit a single job script.\nThe corresponding job array script to process 10 input files in a single job submission would look something like this:\n#!/bin/bash #SBATCH --job-name=myRarray #SBATCH --time=30:00 #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --array=1-10 module add jasr Rscript TestRFile.R datset$SLURM_ARRAY_TASK_ID.csvHere the important differences are :\nThe array is created by Slurm directive --array=1-10 by including elements numbered [1-10] to represent our 10 variations The error and output file have the array index %a included in the name and %A is the job ID. The environment variable $SLURM_ARRAY_TASK_ID in the Rscript command is expanded to give the job index When the job is submitted, Slurm will create 10 tasks under the single job ID. The job array script is submitted in the usual way:\nsbatch myRarray.sbatch If you use the squeue -u \u0026lt;username\u0026gt; command to list your active jobs, you will see 10 tasks with the same Job ID. The tasks can be distinguished by the [index] e.g. jobID_index. Note that individual tasks may be allocated to a range of different hosts on LOTUS.\nTroubleshooting \u0026nbsp; If you have only recently requested access to JASMIN login services and had this approved, there can sometimes be a delay (typically up to a day, but in rare cases can be longer) before the necessary configuration is created for you on LOTUS. You will not be able to submit jobs to LOTUS until this has been completed. Typically, you would see an error message such as this, after an unsuccessful attempt to submit a job:\nsbatch: error: Batch job submission failed: Invalid account or account/partition combination specifiedIf this occurs, please try again in 24 hours before contacting the JASMIN helpdesk."
+        content: "What is a batch job? \u0026nbsp; A batch job is a task that, once submitted to the scheduler, can run without further interaction from the user. A user writes a script containing both the command(s) to be run and directives for the scheduler as to how the job should be run. The batch system then selects the resources required by the job and decides when and where to run the job. Note: the term \u0026ldquo;job\u0026rdquo; is used throughout this documentation to mean a \u0026ldquo;batch job\u0026rdquo;.\nThere are two ways of submitting a job to Slurm:\nSubmit via a Slurm job script - create a bash script that includes directives to the Slurm scheduler Submit via command-line options - provide directives to Slurm via command-line arguments Both options are described below.\nWhich servers can you submit jobs from? \u0026nbsp; Jobs can be submitted to Slurm from any of the sci servers. Check the current list of servers on that page.\nMethod 1: Submit via a Slurm job script \u0026nbsp; The Slurm job submission command is:\nsbatch myjobscript The job script is a Bash script of user\u0026rsquo;s application and includes a list of Slurm directives, prefixed with #SBATCH as shown in this example:\n\u0026nbsp; Remove any trailing whitespace Choose values for account, partition and qos that are valid for you. #!/bin/bash #SBATCH --job-name=\u0026#34;My test job\u0026#34; #SBATCH --time=00:01:00 #SBATCH --mem=1M #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %j.out #SBATCH -e %j.err # executable sleep 5sExplanation:\nSubmitting the above script (if you had access to the mygws account) creates a job named My test job with an estimated run time of 00:01:00 (1 minute), memory requirement of 1M (1 Megabyte), run against the account mygws on the partition debug using QoS debug, and writing its STDOUT (standard output) to file %j.out and its STDERR to file %j.err (where %j represents the job ID that the scheduler assigns to the job).\nThe task itself is the command sleep 5s which just pauses for 5 seconds before exiting. This is what you would replace with your actual processing command(s), so you need to have an idea of how long it will take to run (TIP: run it manually first with time \u0026lt;cmd\u0026gt; to find out!)\nFor details about how to pick the right partition, QoS, and account, please read about the Slurm queues on LOTUS. For further submission parameters, see the quick reference about job specification. Method 2: Submit via command-line options \u0026nbsp; If you have an existing script, written in any language, that you wish to submit to LOTUS then you can do so by providing Slurm directives as command-line arguments. For example, if you have a script my-script.py that takes a single argument -f \u0026lt;filepath\u0026gt;, you can submit it using sbatch as follows:\nsbatch -A mygws -p debug -q debug -t 03:00 -o job01.out -e job01.err my-script.py -f myfile.txtThis approach allows you to submit jobs without writing additional job scripts to wrap your existing code.\nCheck the official documentation for sbatch, its arguments and their syntax here\u0026nbsp; .\nMethod 3: Submit an interactive session via salloc \u0026nbsp; Testing a job on LOTUS can be carried out in an interactive manner by obtaining a Slurm job allocation or resources (a set of nodes) via the Slurm command salloc. The code/application is executed and the allocation is released after a specific time - default 30 mins - when the testing is finished.\nInteractive execution with pseudo-shell terminal on the compute LOTUS node \u0026nbsp; The job is executed on the LOTUS compute node by allocating resources with salloc. See the example below:\nsalloc -p standard -q high -A mygws --ntasks-per-node=2 salloc: Pending job allocation 23506 salloc: job 23506 queued and waiting for resources salloc: job 23506 has been allocated resources salloc: Granted job allocation 23506 salloc: Nodes host580 are ready for job Official documentation for the salloc command is available here\u0026nbsp; .\nAt this point, your shell prompt will change to the LOTUS compute node. You will have the allocated compute that you requested at this shell. For example the command hostname is executed twice as there are 2 CPUs and each outputs the name of the node:\nsrun hostname host580.jc.rl.ac.uk host580.jc.rl.ac.uk Official documentation for the srun command is available here\u0026nbsp; .\nThe job allocation ID 23506 has 2 CPUs on the compute node host580 and can be checked from another terminal as shown below:\nsqueue -u fred -o\u0026#34;%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R\u0026#34; JOBID PARTITION NAME USER ST TIME NODES CPUS NODELIST(REASON) 23506 standard interactive fred R 1:32 1 2 host580 \u0026nbsp; squeue --me is equivalent to squeue -u fred \u0026nbsp; Please DO NOT use watch or equivalent polling utilities with Slurm as they are wasteful of resources and cause communication issues for the scheduler.\nYour process may be killed if this is detected.\nOfficial documentation for the squeue command is available here\u0026nbsp; .\nOnce you\u0026rsquo;re finished, type exit to relinquish the allocation. This will happen automatically once the time limit on the job runs out.\nInteractive partition on LOTUS \u0026nbsp; \u0026nbsp; New Slurm partition inter (March 2026)\nIt is possible now to work interactively on LOTUS in a similar way to being on a sci server, but with guaranteed resources via the new and high priority interactive partition.\nThe new interactive partition has three runtime limits defined in QoS:\ninter (3hrs) inter4h (4hrs) inter6h (6hrs). For convenience, three corresponding aliases have been set up: inter , inter4, and inter6 to access the new partition with a specific Slurm job accounting/GWS membership.\nFor example:\ninter --account=\u0026lt;GWS-name-membership\u0026gt; salloc: Pending job allocation 1410784 salloc: job 1410784 queued and waiting for resources salloc: job 1410784 has been allocated resources salloc: Granted job allocation 1410784 salloc: Nodes host1182 are ready for job exit salloc: Relinquishing job allocation 1410780 Notes:\nIt is possible to SSH to the allocated LOTUS compute node (host1182.jc.rl.ac.uk in this example) from another terminal session from a sci server e.g. ssh host1182.jc.rl.ac.uk. Please note that exiting the interactive session will terminate all other SSH sessions on the allocated node. VSCode can be run within the interactive job session. This provides better control of memory resources compared to running VSCode on a sci server. Job array submission \u0026nbsp; Job arrays are groups of jobs with the same executable and resource requirements, but different input files. Job arrays can be submitted, controlled, and monitored as a single unit or as individual jobs or groups of jobs. Each job submitted from a job array shares the same job ID as the job array and is uniquely referenced using an array index. This approach is useful for ‘high throughput\u0026rsquo; tasks, for example where you want to run your simulation with different driving data or run the same processing task on multiple data files.\nImportant note: The maximum job array size that Slurm is configured for is MaxArraySize = 10000. If a Job array of size is greater than 10000 is submitted, Slurm will reject the job submission with the following error message: \u0026ldquo;Job array index too large. Job not submitted.\u0026rdquo;\nTaking a simple R submission script as an example:\n#!/bin/bash #SBATCH --job-name=myRtest #SBATCH --time=30:00 #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %j.out #SBATCH -e %j.err module add jasr Rscript TestRFile.R dataset1.csvIf you want to run the same script TestRFile.R with input file dataset2.csv through to dataset10.csv, you could create and submit a job script for each dataset. However, by setting up an array job, you could create and submit a single job script.\nThe corresponding job array script to process 10 input files in a single job submission would look something like this:\n#!/bin/bash #SBATCH --job-name=myRarray #SBATCH --time=30:00 #SBATCH --account=mygws #SBATCH --partition=debug #SBATCH --qos=debug #SBATCH -o %A_%a.out #SBATCH -e %A_%a.err #SBATCH --array=1-10 module add jasr Rscript TestRFile.R datset$SLURM_ARRAY_TASK_ID.csvHere the important differences are :\nThe array is created by Slurm directive --array=1-10 by including elements numbered [1-10] to represent our 10 variations The error and output file have the array index %a included in the name and %A is the job ID. The environment variable $SLURM_ARRAY_TASK_ID in the Rscript command is expanded to give the job index When the job is submitted, Slurm will create 10 tasks under the single job ID. The job array script is submitted in the usual way:\nsbatch myRarray.sbatch If you use the squeue -u \u0026lt;username\u0026gt; command to list your active jobs, you will see 10 tasks with the same Job ID. The tasks can be distinguished by the [index] e.g. jobID_index. Note that individual tasks may be allocated to a range of different hosts on LOTUS.\nTroubleshooting \u0026nbsp; Invalid account or account/partition combination specified \u0026nbsp; If you have only recently requested access to JASMIN login services and had this approved, there can sometimes be a delay (typically up to a day, but in rare cases can be longer) before the necessary configuration is created for you on LOTUS. You will not be able to submit jobs to LOTUS until this has been completed. Typically, you would see an error message such as this, after an unsuccessful attempt to submit a job:\nsbatch: error: Batch job submission failed: Invalid account or account/partition combination specifiedIf this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.\nCluster downtime \u0026nbsp; If you were previously able to submit jobs and no longer can, there may be a wider issue with the LOTUS/ORCHID cluster. Please check the CEDA Status page\u0026nbsp; for any current incidents or scheduled maintenance before contacting the JASMIN helpdesk."
       })
       .add(
       
@@ -8143,6 +8143,21 @@ function initIndex() {
       
       {
         id: 101,
+        href: "/docs/uncategorized/scheduled-maintenance/",
+        title: "Scheduled maintenance",
+        description: "About regular maintenance for JASMIN \u0026 CEDA services",
+        
+        
+        content: "JASMIN undergoes regular scheduled maintenance about one day every 3 months. It usually means that all JASMIN and CEDA services will be down that day. We recommend you plan your work around maintenance days accordingly.\nWhy we do this \u0026nbsp; It\u0026rsquo;s important to keep the underlying software running JASMIN and CEDA services up-to-date. Although some software can be updated in the background, occasionally it can be more disruptive. To cause as little unexpected disruption as possible, these updates are applied on regular maintenance days.\nWhat happens \u0026nbsp; In advance, usually soon after the previous maintenance day, we will announce the next maintenance day on the CEDA status page\u0026nbsp; .\nThe week before, we usually send out a reminder email to users on the JASMIN Users mailing list.\nOn the day, expect all JASMIN and CEDA services to be unavailable. Some services may come back online sooner or later than others, depending on the amount of maintenance needed.\nAfter maintenance is complete, we will update the CEDA status page by marking the incident as resolved. If certain services have still not recovered after the maintenance day, we will update the incident with details of which services are affected.\nInteractive services \u0026nbsp; All interactive machines (e.g., login, sci, xfer servers) will be unavailable on a maintenance day. Even if you are able to connect to a machine, they will be restarted throughout the day without warning as updates are applied. Please do not log in to do any work as you may lose data.\nAll web services may be unavailable, including the JASMIN Accounts Portal, the JASMIN Notebooks Service, and the CEDA Archive Catalogue.\nLOTUS/ORCHID \u0026nbsp; The LOTUS and ORCHID batch processing cluster will be unavailable for the duration of a maintenance day, to avoid jobs being adversely affected. A reservation will start at 05:00 UK time until 23:59 on the day. Any job submitted before 04:00 UK time on a maintenance day with a run time that goes over the reservation period will not start until after the reservation has finished.\nIf you regularly submit long-running jobs, you may find that during the week before the scheduled maintenance day, Slurm won\u0026rsquo;t schedule jobs immediately. For example, if there are 6 days left before the reservation starts, a 7 day job will not be queued until after the maintenance window."
+      })
+      .add(
+      
+      
+      
+      
+      
+      {
+        id: 102,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -8157,7 +8172,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 103,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Details of the scientific analysis servers",
@@ -8172,7 +8187,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 104,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8189,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 105,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8204,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 106,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8219,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 107,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8234,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 108,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8249,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 109,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8264,7 +8279,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 110,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8279,7 +8294,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 111,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8294,7 +8309,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 112,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8309,7 +8324,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 113,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8324,7 +8339,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 114,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8339,7 +8354,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 115,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8356,7 +8371,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 116,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8371,7 +8386,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 117,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8388,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 118,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8403,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 119,
         href: "/docs/short-term-project-storage/object-store/jasmin-object-store/",
         title: "The JASMIN Object Store",
         description: "The JASMIN Object Store",
@@ -8418,7 +8433,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 120,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8433,7 +8448,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 121,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8448,7 +8463,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 122,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
@@ -8463,7 +8478,7 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 123,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
@@ -8478,7 +8493,7 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 124,
         href: "/docs/getting-started/understanding-new-jasmin-storage/",
         title: "Understanding new JASMIN storage",
         description: "Understanding new JASMIN storage",
@@ -8493,7 +8508,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 125,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8508,7 +8523,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 126,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8525,7 +8540,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 127,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8540,7 +8555,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 128,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8557,7 +8572,7 @@ function initIndex() {
       
       
       {
-        id: 128,
+        id: 129,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8572,7 +8587,7 @@ function initIndex() {
       
       
       {
-        id: 129,
+        id: 130,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

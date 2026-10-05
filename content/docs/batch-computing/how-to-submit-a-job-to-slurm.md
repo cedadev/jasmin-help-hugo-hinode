@@ -301,4 +301,4 @@ If this occurs, please try again in 24 hours before contacting the JASMIN helpde
 
 ### Cluster downtime
 
-If you are unable to submit any jobs and you were previously able to, there may be a wider issue with the LOTUS/ORCHID cluster. Please check the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} for any current incidents or [scheduled maintenance]({{% ref "scheduled-maintenance" %}}) before contacting the JASMIN helpdesk.
+If you were previously able to submit jobs and no longer can, there may be a wider issue with the LOTUS/ORCHID cluster. Please check the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} for any current incidents or [scheduled maintenance]({{% ref "scheduled-maintenance" %}}) before contacting the JASMIN helpdesk.

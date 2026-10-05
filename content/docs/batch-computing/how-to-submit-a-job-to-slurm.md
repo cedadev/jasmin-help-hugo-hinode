@@ -283,6 +283,8 @@ range of different hosts on LOTUS.
 
 ## Troubleshooting
 
+### Invalid account or account/partition combination specified
+
 If you have only recently requested access to [JASMIN login
 services]({{% ref "get-login-account" %}}) and had this approved, there can
 sometimes be a delay (typically up to a day, but in rare cases can be longer)
@@ -296,3 +298,7 @@ sbatch: error: Batch job submission failed: Invalid account or account/partition
 ```
 
 If this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.
+
+### Cluster downtime
+
+If you were previously able to submit jobs and no longer can, there may be a wider issue with the LOTUS/ORCHID cluster. Please check the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} for any current incidents or [scheduled maintenance]({{% ref "scheduled-maintenance" %}}) before contacting the JASMIN helpdesk.

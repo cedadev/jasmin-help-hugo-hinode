@@ -151,7 +151,7 @@ This makes an IDE such as VSCode a good choice to install locally, rather than u
 
 ### Permission denied
 
-If you get `permission denied` when connecting, you should troubleshoot this as you would any other SSH connection.
+If you get `Permission denied (publickey,gssapi-keyex,gssapi-with-mic)` when connecting, you should troubleshoot this as you would any other SSH connection.
 
 Open a terminal within VSCode and check that your SSH key is being presented correctly. If it's not listed when you do
 

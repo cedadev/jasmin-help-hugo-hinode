@@ -66,7 +66,7 @@ The Slurm command `sinfo` reports the state of queues and nodes
 managed by Slurm. It has a wide variety of filtering, sorting, and formatting
 options.
 
-{{<command shell="bash" user="user" host="sci-ph-01">}}
+{{<command shell="bash" user="user" host="sci-vm-01">}}
 sinfo
 (out)PARTITION AVAIL  TIMELIMIT  NODES STATE NODELIST
 (out)...
@@ -94,7 +94,7 @@ By default, the Slurm command `sinfo` displays the following information:
 The `sinfo` example below, reports more complete information about the
 partition/queue `debug`:
 
-{{<command user="user" host="sci-ph-01">}}
+{{<command user="user" host="sci-vm-01">}}
 sinfo --long --partition=debug
 (out)PARTITION AVAIL TIMELIMIT   JOB_SIZE ROOT OVERSUBS GROUPS  NODES STATE RESERVATION NODELIST
 (out)debug        up   1:00:00 1-infinite   no       NO    all      3  idle             host[1001-1003]
@@ -187,7 +187,7 @@ Slurm accounting by project has been introduced as a means of monitoring compute
 To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
 Output should be similar to one or more of the lines below.
 
-{{<command user="user" host="sci-ph-01">}}
+{{<command user="user" host="sci-vm-01">}}
 useraccounts
 (out)# sacctmgr show user fred withassoc format=user,account,qos%-50
 (out)User       Account        QOS

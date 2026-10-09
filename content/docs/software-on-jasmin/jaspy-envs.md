@@ -63,8 +63,7 @@ if [[ $(hostname) =~ ^(sci-vm-|cylc|host)[0-9]+\. ]] ; then
     module load jaspy
 fi
 ```
-(Note: this pattern is also valid for the physical sci nodes, because for
-example, `sci-ph-01` is an alias for the `host1000` LOTUS node, which has been
+(Note: this pattern is also valid for the physical sci nodes, because they were LOTUS nodes which have been
 repurposed for interactive use.)
 
 ## Discover which environments are available

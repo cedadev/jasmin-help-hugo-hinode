@@ -101,7 +101,7 @@ released after a specific time - default 30 mins - when the testing is finished.
 The job is executed on the LOTUS compute node by allocating resources with `salloc`.
 See the example below:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-01">}}
 salloc -p standard -q high -A mygws --ntasks-per-node=2
 (out)salloc: Pending job allocation 23506
 (out)salloc: job 23506 queued and waiting for resources
@@ -130,7 +130,7 @@ Official documentation for the `srun` command is available
 The job allocation ID `23506` has 2 CPUs on the compute node `host580` and can be
 checked from another terminal as shown below:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-01">}}
 squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)JOBID PARTITION           NAME       USER  ST       TIME  NODES   CPUS NODELIST(REASON)
 (out)23506 standard      interactive   fred   R       1:32      1      2 host580
@@ -170,7 +170,7 @@ A code/application can be executed on the LOTUS compute node without a shell
 session on the node itself. For example the command `hostname` is executed
 twice as there are 2 CPUs and this outputs the name of the node:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-01">}}
 srun hostname
 (out)host580.jc.rl.ac.uk
 (out)host580.jc.rl.ac.uk
@@ -272,7 +272,7 @@ Here the important differences are :
 When the job is submitted, Slurm will create 10 tasks under the single job
 ID. The job array script is submitted in the usual way:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-01">}}
 sbatch myRarray.sbatch
 {{</command>}}
 

@@ -165,8 +165,8 @@ access role via the {{<link "jasmin_accounts_portal">}}JASMIN accounts portal{{<
 **3) There is a problem with the host you are trying to connect to.**
 
 Occasionally there may be problems with the host (machine) which you are
-trying to connect to. The sci servers (particularly physical/high-memory hosts
-`sci-ph-[12]`) experience very high usage loads and occasionally run out of
+trying to connect to. The sci servers (particularly `sci-ph-*`, the physical/high-memory
+hosts) experience very high usage loads and occasionally run out of
 resources. This may prevent you from logging in. In some circumstances ask you
 for a password: this is normally a sign that something is wrong with the
 machine, since passwords are not used for SSH logins on JASMIN, so there is

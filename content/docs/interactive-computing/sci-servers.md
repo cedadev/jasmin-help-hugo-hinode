@@ -23,9 +23,7 @@ The following sci servers are available:
 | `sci-vm-02` | ''               | ''              | ''        | ''     | ''                |
 | `sci-vm-03` | ''               | ''              | ''        | ''     | ''                |
 | `sci-vm-04` | ''               | ''              | ''        | ''     | ''                |
-| `sci-vm-05` | ''               | ''              | ''        | ''     | ''                |
-| `sci-ph-01` | physical         | ''              | 48        | 2 TB   | 20 GB             |
-| `sci-ph-02` | ''               | ''              | ''        | ''     | ''                |
+| `sci-ph-02` | physical         | ''              | 48        | 2 TB   | 20 GB             |
 | `sci-ph-03` | ''               | ''              | ''        | 1.5 TB | ''                |
 {.table .table-striped}
 
@@ -66,9 +64,9 @@ Below are the CPU and memory limits set by Arbiter on the sci machines:
 
 | Server name    | CPU cores | Memory in GiB |
 |----------------|-----------|---------------|
-| `sci-ph-01,02` | 24        | 800           |
+| `sci-ph-02`    | 24        | 800           |
 | `sci-ph-03`    | 64        | 400           |
-| `sci-vm-* `    | 8         | 15            |
+| `sci-vm-*`     | 8         | 15            |
 {.table .table-striped}
 
 ### Privileges

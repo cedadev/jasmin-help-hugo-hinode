@@ -32,7 +32,7 @@ This is a simple case because:
 
 ### Workflow steps
 
-Log in to the `sci` server (use any of `sci-vm-0[1-6]`, access from a `login` server):
+Log in to a `sci` server (see [available sci servers]({{% ref "sci-servers" %}})):
 
 {{<command user="user" host="login-NN">}}
 ssh -A <username>@sci-vm-01.jasmin.ac.uk

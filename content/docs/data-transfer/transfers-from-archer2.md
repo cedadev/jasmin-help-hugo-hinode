@@ -197,7 +197,7 @@ Note that Globus transfers (and other actions) can be managed & monitored by:
 all of which interact with the same underlying service.
 
 NCAS-CMS users should note that work is currently underway to adopt Globus as a drop-in replacement for certificate-based gridftp
-in Rose suites currently in use for automating processing and transferring to JASMIN.
+in Cylc workflows currently in use for automating processing and transferring to JASMIN.
 
 ## 2nd choice method: Basic SSH transfer
 

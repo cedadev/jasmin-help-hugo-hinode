@@ -12,30 +12,20 @@ This article describes how to do data transfers to and from JASMIN using {{<link
 an online data transfer service designed specifically for moving large datasets
 between research institutions.
 
-{{<alert alert-type="info">}}
-**Globus** now replaces the previous certificate-based **gridftp** service.
+For a more general introduction to the Globus transfer service:
 
-Although gridftp transfers are currently still possible (using the perhaps confusingly-named `globus-url-copy` client tool
-still available on the
-transfer servers), this now only works with [ssh authentication]({{% ref "gridftp-ssh-auth" %}}).
-{{</alert>}}
+- See Globus' own tutorial {{<link "https://docs.globus.org/guides/tutorials/manage-files/transfer-files/">}}"how to log in and transfer files with Globus"{{</link>}}
 
-## Main differences
+## Key points
 
-JASMIN moved to a newer version of Globus in 2023, resulting in a few changes:
-
-- Users now interact with a **collection**
-  - **All users**: please use ["JASMIN Default Collection"](https://app.globus.org/file-manager/collections/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/overview) with ID `a2f53b7f-1b4e-4dce-9b7c-349ae760fee0`
-  - The previous ["STFC Internal Collection"](https://app.globus.org/file-manager/collections/9efc947f-5212-4b5f-8c9d-47b93ae676b7/overview) has now been disabled: all users please use the above "JASMIN Default Collection" collection instead.
-- You now use the JASMIN Accounts Portal to authenticate (using your JASMIN account credentials) via OpenID Connect (OIDC).
-- During the authentication process, you are redirected to the JASMIN Accounts Portal to link your Globus identity with your JASMIN account.
+- Users now interact with **collections** in Globus
+  - Please use ["JASMIN Default Collection"](https://app.globus.org/file-manager/collections/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/overview) with ID `a2f53b7f-1b4e-4dce-9b7c-349ae760fee0`
+  - To authenticate with that collection, you are redirected to the JASMIN Accounts Portal to link your Globus identity with your JASMIN account.
+  - The default lifetime of the authentication with that collection is **30 days**. After this, you may need to re-authenticate.
 - Consent needs to be granted at a number of points in the process to allow the Globus service to carry out actions on your behalf.
-- The default lifetime of the authentication granted to your JASMIN account is now **30 days**. After this, you may need to refresh the consent for your "session".
-- This service is now available to **all** users of JASMIN: you no longer need the `hpxfer` access role (now removed).
 
-The following examples show you how to authenticate with the new JASMIN
-Default Collection and list the contents of your home directory. As before,
-however, the following file systems are available via this collection
+The following examples show you how to authenticate with the JASMIN
+Default Collection and list the contents of your home directory. The following file systems are also available via this collection:
 
 File system  |  Access  
 ---|---  
@@ -51,8 +41,7 @@ File system  |  Access
 
 1\. Navigate to <https://app.globus.org>
 
-2\. Log in with your Globus identity (this could be a globusid.org or other
-identity)
+2\. Log in with your Globus identity. Normally, this is an identity associated with your **home institution**: you can create this during the login process using the drop-down list of institutions. It could also be a globusid.org or other identity. Once you are logged in, you should see the Globus **File Manager** app:
 
 {{<image src="img/docs/globus-transfers-with-jasmin/file-qEk9SPARZN.png" caption="log in">}}
 
@@ -90,86 +79,10 @@ that.
 
 ## List your home directory using the command-line interface (CLI)
 
-1\. Load the virtual environment where you have the Globus CLI installed:
+This is covered as one of the examples in our [Globus command-line interface](globus-command-line-interface/#6-interact-with-a-collection-that-requires-authentication)
+article.
 
-(in this example, a Python virtual environment named `~/.globus-cli-venv`
-already exists. If it doesn't create one with the command `python3 -m venv
-~/.globus-cli-venv` on your local machine). Activate this virtual environment
-as follows:
 
-{{<command>}}
-source ~/.globus-cli-venv/bin/activate
-{{</command>}}
-
-2\. It's recommended to update to the latest version of the CLI by doing the
-following:
-
-{{<command>}}
-pip install -U globus-cli
-{{</command>}}
-
-3\. Check that you have an active globus session and follow any instructions
-given, e.g.
-
-{{<command>}}
-globus login
-globus session show
-{{</command>}}
-
-4\. Use the "globus ls" command to list the collection using its ID, starting
-at the path of your home directory (/~/)
-
-{{<command>}}
-globus ls a2f53b7f-1b4e-4dce-9b7c-349ae760fee0:/~/
-{{</command>}}
-
-If you get an error like the following, please see [Globus CLI Troubleshooting](globus-command-line-interface/#cli-troubleshooting):
-
-{{<command>}}
-The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it.
-(out)
-(out)Please run:
-(out)
-(out)  globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
-(out)
-(out)to login with the required scopes.
-{{</command>}}
-
-run the suggested command, and follow the steps in the browser window that will open.
-
-{{<command>}}
-globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
-(out)You are running 'globus session consent', which should automatically open a browser window for you to authenticate with specific identities.
-(out)If this fails or you experience difficulty, try 'globus session consent --no-local-server'
-(out)---
-(out)
-(out)You have successfully updated your CLI session.
-(out)
-{{</command>}}
-
-Once the steps in the browser window have been completed successfully, you can close the browser window and try the `globus ls` command again.
-
-This authentication will last for 30 days (in the case of the JASMIN collection), but can be refreshed ahead of time by repeating that command.
-You will usually need to do an equivalent action for the collection at the other end of the transfer, too.
-
-TIP: you can set the ID of the collection to be an environment variable like
-this, for convenience:
-
-{{<command>}}
-export jdc=a2f53b7f-1b4e-4dce-9b7c-349ae760fee0
-globus ls $jdc:/~/
-{{</command>}}
-
-6\. You will be taken through an equivalent set of steps to those needed for
-the web app. First off, you will be asked to copy/paste a URL into your
-browser and copy/paste back the resulting authentication code.
-
-7\. Once the authentication/consent process has been completed, you should see
-a listing of your home directory.
-
-8\. Use the `globus transfer` command to copy data to/from another
-**collection** (previously known as endpoint) to your home directory, within
-the JASMIN Default Collection. (see `globus transfer --help` for details)
 
 ## Where to/from?
 
@@ -189,18 +102,12 @@ Windows, Mac and Linux.
 
 ### Transfer task reports errors while in progress
 
-This is normal, and Globus will automatically retry a transfer several times before giving up. If it's actually failed, it will report the final status as such. You can terminate a transfer task that has got stuck, if needed, either in the web interface, or by obtaining the task id and using the command `globus task 
+You do not normally need to re-submit a Globus task.
+
+Errors while in progress can happen, but **Globus will automatically retry a transfer several times before giving up**. If it's actually failed, it will report the final status as such. You can check on the progress of a transfer task that has got stuck, if needed, either in the web interface, or by obtaining the task id and using the command `globus task show [OPTIONS] TASK_ID` using the id of your task. {{<link "https://docs.globus.org/cli/reference/task_show/">}}(see reference){{</link>}}.
+
+If necessary, you can cancel a task with `globus task cancel [OPTIONS] TASK_ID`. {{<link "https://docs.globus.org/cli/reference/task_cancel/">}}(see reference){{</link>}}
 
 ### Other problems with command-line interface (CLI) in terminal environment
 
-Most issues can be resolved by resetting your local Globus environment:
-
-```
-globus logout
-rm -rf ~/.globus
-globus login
-globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
-# (repeat for any other collection IDs that you need to interact with)
-globus session show
-globus ls $jdc:/~/
-```
+Please see the [troubleshooting section in the Globus command line interface article](globus-command-line-interface/#cli-troubleshooting).

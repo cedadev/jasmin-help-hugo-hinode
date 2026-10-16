@@ -9,9 +9,8 @@ title: Access to storage
 weight: 150
 ---
 
-**IMPORTANT:** Please see also
-[Understanding new JASMIN storage]({{% ref"understanding-new-jasmin-storage" %}})
-which explains more about the different types of storage as of Phase 4 of JASMIN's history.
+See also [Understanding JASMIN storage]({{% ref "understanding-jasmin-storage" %}})
+which explains more about the different types of storage.
 
 ## Home directory
 
@@ -93,7 +92,7 @@ relevant directories should be found at:
 
 (where `NN` = `04` or `07` depending on where the volume is located)
 
-{{<alert alert-type="danger">}}All other group workspace volumes are **not backed up**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
+{{<alert alert-type="danger">}}**All other group workspace volumes are NOT BACKED UP**. The only exception to this is the snapshot backups for `smf` SSD volumes just described.
 {{</alert>}}
 
 Please also note the {{<link "#advice-on-inter-volume-symlinks-in-jasmin-storage">}}advice on inter-volume symlinks{{</link>}}, below: these are to be avoided.
@@ -108,74 +107,81 @@ they are accessible from and the type of access (read and/or write).
 **Table 1.** List of common disk mounts, types of storage and their
 availability on JASMIN
   
-location |  login  |  sci  |  transfer  |  LOTUS  |  Type  |  Parallel-write  
----|---|---|---|---|---|---  
-/home/users  |  R/W  |  R/W  |  R/W  |  R/W  |  SSD  |  no
-/gws/pw/j07<br>/gws/nopw/j04 (see note 1 below)<br>/gws/smf/j0[4,7] |  no<br>no<br>no | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | PFS<br>SOF<br>SSD | yes (hence "pw")<br>no (hence "nopw")<br>no
-/work/xfc/vol* (see note 2 below) |  no<br>no  |  R/W  |  R/W |  R/W  | PFS  | yes
-/work/scratch-pw*<br>/work/scratch-nopw*  |  no<br>no  |  R/W<br>R/W  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
-/apps/contrib  |  No  |  RO  |  No  |  RO  |  n/a  |  n/a  
-/badc, /neodc (archives)  |  No  |  RO  |  RO  |  RO  |  n/a  |  n/a  
+location | notes | login  |  sci  |  xfer  |  Globus | LOTUS  |  Type  |  Parallel-write  
+---|---|---|---|---|---|---|---|---  
+/home/users | Note 1 below | |  R/W  |  R/W  | R/W  |  R/W  |  R/W  |  SSD  |  no
+/gws/pw/j07<br>/gws/ssde/j25[ab]<br>/gws/smf/j0[4,7] | |  no<br>no<br>no | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | PFS<br>SOF<br>SSD | yes (hence "pw")<br>partial<br>no
+/work/xfc/vol* | Note 2 below |  no<br>no  |  R/W  |  R/W  | R/W |  R/W  | PFS  | yes
+/work/scratch-pw*<br>/work/scratch-nopw*  | |  no<br>no  |  R/W<br>R/W  | R/W<br>R/W  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
+/apps/contrib   | |  No  |  RO  |  No |  No |  RO  |  n/a  |  n/a  
+/badc, /neodc (archives)  | |  No  |  RO  | RO  | RO  |  RO  |  n/a  |  n/a  
 {.table .table-striped}
-  
-login = [login servers]({{% ref "login-servers" %}})  
-sci = [scientific analysis servers]({{% ref "sci-servers" %}})  
-transfer = [data transfer servers]({{% ref "transfer-servers" %}})  
-LOTUS = [LOTUS batch processing cluster]({{% ref "lotus-overview" %}}) (all cluster
-nodes)  
-Disks are mounted read/write (**R/W**) or read-only (**RO**).
 
-**Note 1:** Please refer to issues related to writing small files and NetCDF3
-to SOF storage [here]({{% ref "faqs-storage" %}})
+Abbreviations:
+-  login = [login servers]({{% ref "login-servers" %}})  
+- sci = [scientific analysis servers]({{% ref "sci-servers" %}})  
+- xfer = [data transfer servers (xfer, hpxfer)]({{% ref "transfer-servers" %}})  
+- Globus = [Globus data transfer service]({{% ref "globus-transfers-with-jasmin" %}})
+- LOTUS = [LOTUS batch processing cluster]({{% ref "lotus-overview" %}}) (all cluster
+  nodes)  
+- Disks are mounted read/write (**R/W**) or read-only (**RO**).
+
+**Note 1:** Please refer to issues related to parallel NetCDF
+to SSD/SSDE storage [here]({{% ref "faqs-storage" %}})
 
 **Note 2:** For details of how to use the Transfer Cache (XFC) service please see [here]({{% ref "xfc" %}})
 
 ## Where to write data
 
-As indicated in table 1 there are three main disk mounts where data can be
+As indicated in Table 1 there are three main disk mounts where data can be
 written. Please follow these general principles when deciding where to write
 your data:
 
 - HOME directories (`/home/users`) are relatively small (100GB) and should NOT be used for storing large data volumes or for sharing data with other users.
-- Group Workspaces (mostly `/gws/nopw/*/<project>` but some `/gws/pw/*/<project>`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
-  - `/gws/pw/j07` volumes are parallel-write-capable storage from Phase 7 (onwards) of JASMIN
-  - `/gws/nopw/j04` volumes are "Scale out Filesystem" (SOF) from Phase 4 (onwards) of JASMIN: this storage is not parallel-write-capable
-- The "scratch" areas (`/work/scratch-pw*` and `/work/scratch-nopw*`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below).
+- Group Workspaces (mostly `/gws/ssde/*/<project>` but some `/gws/pw/*/<project>`) are **usually the correct place to write your data**, although they are **not backed up**. Please refer to the [Group Workspace]({{% ref "short-term-project-storage" %}}) documentation for details.
+  - `/gws/ssde/j25[ab]/*` volumes are "SSDE" (Solid State Disk - Economy): this storage is now the main storage used for Group Workspaces and parallel-write-capable except for parallel netCDF.
+  - `/gws/pw/j07/*` volumes are "Parallel File System (PFS)" i.e. they fully support parallel write with parallel NetCDF and MPI, though not so good for small files.
+- The "scratch" areas (`/work/scratch-pw*` and `/work/scratch-nopw*`) are available as a temporary file space for jobs running on [LOTUS]({{% ref "lotus-overview" %}}) (see next section below). 
 - The `/tmp` directory is **not usually an appropriate location to write your data (see next section below).**
 
 ## How to use the temporary disk space
 
 ### Scratch
 
-The scratch areas `/work/scratch-pw*` and
-`/work/scratch-nopw*` are a **temporary** file space shared across the entire LOTUS
-cluster and the scientific analysis servers. Files saved to scratch are **deleted after 28 days** and are **not backed up**.
+JASMIN scratch volumes are summarised below:
+
+path | type | size | purpose | usage limit | deletion policy
+---|---|---|---|---|---
+`/work/scratch-pw[4567]` | PFS | 500 TB each | Intermediate storage for LOTUS jobs | 100 TB max across all 4 volumes | 28 days
+`/work/scratch-nopw2` | SSD | 200 TB | As above but where small-file performance is needed | 10 TB max | 28 days
+{.table .table-striped}
+
+- **PFS scratch** is suitable for users with a need for storage capable of writes with parallel netCDF and MPI-IO, but good for most purposes **except** where there are lots of small files.
+- **SSD scratch** (less capacity available hence smaller usage limit). Suitable for where performance with many small files is important. Not suitable for parallel netCDF writes (but other types of parallel write generally OK).
+
+These provide **temporary** file space shared across the entire LOTUS
+cluster and the scientific analysis servers. Files saved to scratch are
+**deleted after 28 days** and are **not backed up**.
 
 These scratch areas are ideal for processes that generate _intermediate_ data
 files that are consumed by other parts of the processing before being deleted.
 Please remember that these volumes are resources shared between all users, so
 consider other users and remember to clean up after your jobs.
 
+Please create a directory at the top-level of the volume, named as per your username:
+
+{{<command>}}
+mkdir /work/scratch-<NNNN>/<username> ## replace <NNNN> with specific volume, and <username> with your username
+{{</command>}}
+
 **Any data that you wish to keep should be written to a Group Workspace** (but remember to
-change the group-ownership of the data if you do).
+change the group-ownership of the data if you do, see [permissions and groups]({{% ref "permissions-groups" %}})
 
-{{<alert alert-type="info">}}**Update July 2026**: New scratch volumes `/work/scratch-pw6`, `/work/scratch-pw7` are now now available for use (500 TB each).
-In due course we will decrease volumes `/work/scratch-pw4`, `/work/scratch-pw5` to match, making 4 volumes of size 500 TB each.
-
-Please make sure you create your own directory on **ONE** of the volumes, named as per your JASMIN username.
-{{</alert>}}
-
-There are 2 types of scratch storage available:
-
-- **PFS scratch** (lots of it, fast, less good for small files) as 2 x 1 PB volumes `/work/scratch-pw[4,5]` and particularly suitable for users with a need for storage capable of shared-file writes with MPI-IO, but good for most purposes.
-- **SSD scratch** (less of it, very fast, good for small files) `/work/scratch-nopw2` as 1 x 220 TB volume. Do not use for operations that attempt to write to multiple parts of a file simultaneously. Please be aware of this if your code (perhaps inadvertently?) writes to a shared log file.
-
-When using the "scratch" areas, please create a sub-directory (e.g.
-`/work/scratch-????/<username>`) labelled with your username and write your data there.
+JASMIN's [Globus service]({{% ref "globus-transfers-with-jasmin" %}}) makes moving large volumes of data between scratch and other volumes very easy, whereas the scratch volumes are NOT mounted on the `xfer` and `hpxfer` servers.
 
 ### /tmp
 
-In contrast to the "scratch" space, `/tmp` directories on LOTUS nodes 
+In contrast to the scratch space, `/tmp` directories on LOTUS nodes
 and physical sci machines are all local to the machine. These can be used
 to store _small_ volumes of temporary data for a job that only needs to be
 read by the local process. But `/tmp` on virtual sci machines, are not local and
@@ -196,19 +202,13 @@ delete files that are older than 28 days from the last time of being
 accessed. This applies to `/work/scratch-pw*` and
 `/work/scratch-nopw*`.
 
-Please remember that shared temporary storage is for the use of all 2,000 users
-of JASMIN, not just you. If you persistently store large amounts (100s of TB) of data in scratch 
+Also, shared temporary storage is for the use of several thousand users
+of JASMIN, not just you. If you persistently store large amounts (100s of TB) of data in scratch
 for long periods of time, you deny use of that storage to other users (so expect action from the JASMIN team).
+The same applies if you are found to be persistently abusing `touch` or similar commands to circumvent auto-deletion rules.
 
 Please be a good JASMIN citizen!
 {{</alert>}}
-
-**Any important data for keeping should be written to
-a [Group Workspace]({{% ref "introduction-to-group-workspaces" %}})
-or to your home directory if appropriate.**
-
-The `/work/scratch-pw*` and `/work/scratch-nopw*` areas are NOT available on
-the xfer, login or nx-login servers, but ARE available via Globus.
 
 ### Avoid inadvertently writing to /tmp
 
@@ -246,11 +246,15 @@ responsibility to ensure that you have the correct permissions to access data
 any data in CEDA Archive from within JASMIN, even if file system permissions permit access.
 {{</alert>}}
 
-## Tape access
+## Near-line storage
 
-Group workspace managers also have access to near-line storage on tape, see [Elastic Tape
-service]({{% ref "secondary-copy-using-elastic-tape" %}}) for making
-secondary copies and managing storage between online and near-line storage.
+**All users have access to near-line storage**, see {{<link "/docs/short-term-project-storage/nlds">}}Near-Line Data Store (NLDS){{</link>}} for making
+secondary copies and managing your data between online and near-line storage.
+
+This is something we expect all users to consider. Ideally keep only those data
+that you need right now, online, and move other data to near-line storage, bringing it back when necessary.
+
+Near-line storage is cheaper and consumes less energy than online (disk) storage.
 
 ## Number of files in a single directory
 
@@ -259,7 +263,7 @@ single directory on any type of storage on JASMIN. Large numbers of files
 place unnecessary load on components of the file system and can be the source
 of slow performance for you and other storage volumes in the system. To count
 the number of files, please note the advice in {{<link "#slow-ls-response">}}slow `ls` response{{</link>}} below, or
-use an alternative command e.g. `find`.
+use an alternative command e.g. `find` (or its parallel equivalent, `pfind`, on SSD-based storage)
 
 ## Slow 'ls' response
 
@@ -280,10 +284,10 @@ environment variables** instead.
 
 Symlinks in users' home directories that point to other volumes (for example
 group workspaces) make matters worse _when_ there are problems on the
-`sci*.jasmin.ac.uk` servers and other shared machines, and/or when the
-metadata servers responsible for particular storage volumes themselves become
+`sci` servers and other shared machines, and/or when the
+systems responsible for particular storage volumes themselves become
 overloaded. The simplest advice we can currently give is to **avoid** using
-symlinks.
+inter-volume symlinks.
 
 **In more detail:**
 
@@ -298,5 +302,5 @@ hangs other users who may be trying to `ls` their own home directory (even if
 theirs contains no symlinks). The situation can then escalate out of control
 as more and more users try and fail.
 
-This is happens especially where one or more of the volumes involved
+This can happen especially where one or more of the volumes involved
 contains large numbers of small files.

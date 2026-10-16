@@ -17,7 +17,7 @@ These tips for new users are based on users' queries encountered by our helpdesk
 
 1. Check the current load and number of users on the sci machines, as shown by the login servers, to select a less-used sci machine. [The available Sci machines and their specifications are listed in the table of this help page]({{% ref "sci-servers" %}})
 2. The sci machines are not for running large, long-running tasks, or scripts that spawn multiple child processes. The batch processing cluster LOTUS is available for heavier processing. The sci machines are for development, testing, and light interactive use. Overloading these with processing seriously impairs performance for interactive use by others.
-3. Do not write to the temporary partition `/tmp`on sci machines. [Use your home directory, a scratch volume or a Group Workspace ]({{% ref "understanding-new-jasmin-storage" %}}). Any temporary data files can reside in a subdirectory of your group workspace instead of `/tmp`. To do this, please add the following lines (or similar) to your `$HOME/.bashrc` file:
+3. Do not write to the temporary partition `/tmp`on sci machines. [Use your home directory, a scratch volume or a Group Workspace ]({{% ref "understanding-jasmin-storage" %}}). Any temporary data files can reside in a subdirectory of your group workspace instead of `/tmp`. To do this, please add the following lines (or similar) to your `$HOME/.bashrc` file:
 
 ```bash
 export TMPDIR=/group_workspaces/jasmin/<your_project>/<your_username>/tmp

@@ -121,7 +121,7 @@ It is assumed that you've considered carefully how you will do your work on
 JASMIN, with some knowledge of its services and components. You may find the
 following helpful:
 
-- Article: [Understanding new JASMIN storage]({{% ref "understanding-new-jasmin-storage" %}})
+- Article: [Understanding new JASMIN storage]({{% ref "understanding-jasmin-storage" %}})
 - [JASMIN workshop](https://github.com/cedadev/jasmin-workshop) overview talk, explaining the main services offered by JASMIN
 - how your request will be [scrutinised]({{% ref "processing-requests-for-resources" %}}) by the relevant consortium manager.
 

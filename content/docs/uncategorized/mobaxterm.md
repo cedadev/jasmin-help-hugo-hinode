@@ -70,10 +70,11 @@ You need to enable MobAgent in `Settings > Configuration > SSH`:
 To do this:
 
 - Tick `Use internal SSH agent "MobAgent"`
-- **Un**-tick `Use external Pageant`
+- **Un**-tick `Use PuTTY agent` ( `external Pageant` in older versions)
 - Click the `+` symbol to locate your private key file (e.g. `id_ecdsa_jasmin`)
 - Click OK to save the settings. MobaXterm will now need to restart.
-- When you restart MobaXterm you will be prompted for the passphrase associated with your private key.
+
+When you restart MobaXterm you will be prompted for the passphrase associated with your private key.
 
 {{<image src="img/docs/mobaxterm/passphrase-prompt.png" caption="Private key passphrase prompt">}}
 
@@ -122,7 +123,7 @@ ssh -A <user_id>@login.jasmin.ac.uk
 
 Notes:
 
-- replace `<user_id>` with your own JASMIN username)
+- replace `<user_id>` with your own JASMIN username
 
 ## Logging in to JASMIN without storing your key in MobAgent
 
@@ -142,7 +143,7 @@ If your key is named something different, or stored at a different location
 than shown above, you will need to specify its location in the `ssh-add`
 command. Note that MobaXterm refers to Windows drives as e.g. `/drives/c/`
 (with forward slashes). So if you've put your key on your desktop, then the
-path to that **might** be `/drives/c/Users/fred/Desktop/id_ecdsa_jasmin` (if "**fred**"
+path to that **might** be `/drives/c/Users/username/Desktop/id_ecdsa_jasmin` (where "**username**"
 is your local username on Windows).
 
 You will need to do this each time you open a new terminal session. To connect

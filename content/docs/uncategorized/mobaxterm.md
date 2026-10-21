@@ -70,7 +70,7 @@ You need to enable MobAgent in `Settings > Configuration > SSH`:
 To do this:
 
 - Tick `Use internal SSH agent "MobAgent"`
-- **Un**-tick `Use PuTTY agent` ( `external Pageant` in older versions)
+- **Un**-tick `Use PuTTY agent` (`external Pageant` in older versions)
 - Click the `+` symbol to locate your private key file (e.g. `id_ecdsa_jasmin`)
 - Click OK to save the settings. MobaXterm will now need to restart.
 

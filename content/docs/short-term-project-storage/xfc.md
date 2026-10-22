@@ -15,15 +15,19 @@ Users are able to self-initiate the service for themselves, and will be granted
 folder on one of a number of **shared** storage volumes.
 
 {{<alert alert-type="danger">}}
-**March 2026**: The quota and auto-deletion system used with XFC is currently
-disabled and under review.
+**October 2026**: The quota system for XFC has been reinstated.  However, there is no
+longer any auto-deletion.  Users will receive an email notifying them when they are over
+the quota.  The onus is on users to clean up their XFC disk space, and to remain honest 
+and good colleagues of the others also using the XFC disks.
 
-Meanwhile, users **MUST** currently ensure that they clean up after any large
-transfer task and do not consume large amounts of space (multiple TB) beyond a
-few days - weeks (not months!), to ensure the service remains available to all
-users.
+Users **MUST** heed the notifications of when they are over quota, and clean up when they
+receive the notification.  It is a good idea to clean up after any large transfer task 
+and yo not consume large amounts of space (multiple TB) beyond a few days to weeks 
+(not months!), to ensure the service remains available to all users.  This is a shared
+system, relying on users to self-regulate, with reminders from the notification system.
+Please use it accordingly.
 
-Documentation below has been modified to reflect the current functionality.
+Documentation below has been modified to reflect the new functionality.
 {{</alert>}}
 
 Users interact with the XFC in two ways:
@@ -57,25 +61,41 @@ are for general-purpose interactive computing.
 The `xfc` client is used to initialise and then query the status of a user's
 XFC storage directory:
 
-To see all the available options: `xfc -h`
+To see all the available options: `xfc --help`
+
+{{<command user="user" host="sci-vm-01">}}
+xfc --help
+(out)usage: XFC [-h] [--version] [--email EMAIL] command
+(out)
+(out)JASMIN transfer cache (XFC) command line tool
+
+(out)positional arguments:
+(out)  command        Available commands are : 
+(out)                 init     : Initialize the transfer cache for your JASMIN login
+(out)                 email    : view, set or update email address
+(out)                 info     : Get the user info
+(out)                 notify   : Switch on / off email notifications of exceeding the quota (default is off)
+(out)                 path     : Get the path to your storage area in the transfer cache
+(out)                 quota    : Get the remaining free space in your quota
+(out)                 predict  : Predict when the quota will be exceeded based on the current files
+(out)
+(out)options:
+(out)  -h, --help     show this help message and exit
+(out)  --version      show program's version number and exit
+(out)  --email EMAIL  Email address for user in the init and email commands.
+{{</command>}}
 
 ### Initialise your XFC directory
 
 {{<command user="user" host="sci-vm-01">}}
 xfc init
-(out)** SUCCESS ** - user initiliazed with:
-(out)username: username  
-(out)email: user.name@stfc.ac.uk  
-(out)quota: 10TB  # IGNORE: quotas not currently active
-(out)path: /work/xfc/vol7/user_cache/username
+(out)** SUCCESS ** - user initialised with:
+(out)    Username            : username  
+(out)    Email               : user.name@stfc.ac.uk  
+(out)    Temporal Quota (TQ) : 300.0 TB days
+(out)    Hard Quota (HQ)     :  40.0 TB
+(out)    Path                : /work/xfc/vol7/user_cache/username
 {{</command>}}
-
-{{<alert alert-type="danger">}}
-**March 2026**: Please ignore any quota information for now while the system is 
-under review. The notification and auto-delete systems are currently inactive.
-
-Please clean up any data as soon as you have finished with the space.
-{{</alert>}}
 
 The `path` is the path on the JASMIN system to this user's XFC directory. Data
 can be put here using standard UNIX command-line tools `cp`, `mv`, `rsync` or
@@ -104,28 +124,22 @@ should not reside in the XFC folder for more than a few days/weeks.
 
 ### Check usage
 
-To check your current usage, use the command `pan_du -s`:
+To check your current usage, use the command `xfc quota`:
 
 {{<command user="user" host="sci-vm-01">}}
-pan_du -s /work/xfc/vol7/user_cache/username
-dir /work/xfc/vol7/user_cache/username: 2 files, 1220860 KiB
-{{</command>}}
-
-Note on reported sizes:
-- size is reported in binary kilobytes (KiB)
-- to convert to binary terabytes (TiB), divide by 1024**3
-- this needs to be divided by 1.3 for actual data size (for technical reasons to do with the storage system used)
-
-A handy utility to check how long your data has been there, is the additional `-a` option:
-
-{{<command user="user" host="sci-vm-01">}}
-pan_du -sa /work/xfc/vol7/user_cache/username
-(out)dir /work/xfc/vol7/user_cache/username: 2931 files, 424130252 KiB
-(out)age 30D: 0 files, 0 KiB
-(out)age 60D: 0 files, 0 KiB
-(out)age 90D: 0 files, 0 KiB
-(out)age 120D: 0 files, 0 KiB
-(out)age MAX: 2931 files, 424130252 KiB
+xfc quota
+(out)-----------------------------
+(out)Quota for user: username
+(out)-----------------------------
+(out)  Temporal Quota (TQ)
+(out)    Used      : 195.3 GB days
+(out)    Allocated : 180.0 TB days
+(out)    Remaining : 178.8 TB days
+(out)-----------------------------
+(out)  Hard Quota (HQ)
+(out)    Used      :  65.0 GB
+(out)    Allocated :  40.0 TB
+(out)    Remaining :  39.9 TB
 {{</command>}}
 
 This user has been storing data for far too long (MAX, i.e. beyond 120 days)!
@@ -133,6 +147,20 @@ Please aim to keep your usage WELL below 30 days for this service.
 
 Please DO NOT use `touch` or similar processes to alter the age of your files.
 Any use of this risks sanction from the JASMIN team.
+
+### Predict when the quota will be exceeded
+
+XFC allows you to predict when the quota will be exceeded if the current volume of data
+remains on the disk.  This is via using the `xfc predict` command.
+
+{{<command user="user" host="sci-vm-01">}}
+xfc predict
+(out)--------------------------------------------
+(out)Quota exceeded prediction for user: username
+(out)--------------------------------------------
+(out)    Over quota by :  80.3 GB days
+(out)    On date       : 2026-10-23
+{{</command>}}
 
 ### Check free space on shared volume
 

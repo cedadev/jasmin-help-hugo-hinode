@@ -98,11 +98,20 @@ at the following pages:
 
 ## Restricted software available on specific servers
 
-### Workflow Management with Rose and Cylc
+### Workflow Management with Cylc
 
-Rose and Cylc provide a suite of tools available for managing sophisticated
+Cylc provides a suite of tools available for managing sophisticated
 multi-step workflows. See full details on the 
-[Rose and Cylc page]({{% ref "rose-cylc-on-jasmin" %}}).
+[Cylc page]({{% ref "docs/workflow-management/cylc" %}}).
+
+Users of the JULES land surface model are advised to log
+into the Cylc server in order to launch the JULES workflow.
+
+### Met Office Science Repository Service
+
+Access to the Met Office Science Repository Service has been set up. Please see the Met Office website for {{<link "https://code.metoffice.gov.uk/trac/home/wiki/AuthenticationCaching#JASMIN">}}information about authentication to the repositories{{</link>}}.
+
+Following [the instructions on the Cylc page]({{% ref "docs/workflow-management/cylc" %}}) to add the Cylc executable to your `$PATH` will give you access to FCM executable.
 
 ### Graphical Linux desktop access using NoMachine NX
 

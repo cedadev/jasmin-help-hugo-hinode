@@ -1,14 +1,13 @@
 ---
 aliases: /article/4702-faqs-storage
-description: New storage FAQs and issues
+description: Storage FAQs and issues
 slug: faqs-storage
 tags:
-- netCDF3
 - small files
-title: New storage FAQs and issues
+title: Storage FAQs and issues
 ---
 
-{{<alert alert-type="info">}}This article was originally written in 2018/19 to introduce new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
+{{<alert alert-type="info">}}This article was originally written in 2018/19 to introduce (then) new forms of storage which were brought into production at that stage. Some of the information and terminology is now out of date, pending further review of JASMIN documentation.{{</alert>}}
 
 Workflows with some of the issues highlighted below will have a knock on
 effect for other users, so please take the time to check and change your code
@@ -31,7 +30,7 @@ _Parallel threads can update the same file concurrently on same or from
 different servers._
 
 **Suggested solution:** use a `/work/scratch-pw*` volume which is PFS (but not
-`/work/scratch-nopw*` !), then move output to SOF storage.
+`/work/scratch-nopw*` !), then move output to SSDE or other storage.
 
 ---
 
@@ -49,7 +48,7 @@ _This is a form of parallel write truncation_
 **Suggested solution:** take care to check for completion of 1 process before
 another process deletes or modifies a file. Be sure to check a job has
 completed before interactively deleting files from any server you are logged
-into (eg. sci1.jasmin.ac.uk)
+into.
 
 ---
 
@@ -91,7 +90,7 @@ be rebooted.
 
 ## 2\. Issues with small files
 
-The larger file systems in operation within JASMIN are suitable for storing
+Some storage systems in earlier operation within JASMIN were suitable for storing
 and manipulating large datasets and not currently optimised for handling small
 ( <64kBytes) files. These systems are not the same as those you would find on
 a desktop computer or even large server, and often involve many disks to store
@@ -102,8 +101,8 @@ examples of activities which can involve accessing large numbers of small
 files.
 
 Later versions of our PFS systems handled this by using SSD storage for small
-files, transparent to the user. SOF however, can’t do this (until later in
-2019), so in Phase 4, we introduced larger home directories based on SSD, as
+files, transparent to the user. SOF however, could not do this (until later in
+2019), so we introduced larger home directories based on SSD, as
 well as an additional and larger scratch area.
 
 **Suggested solution:** Please consider using your home directory for small-
@@ -112,22 +111,13 @@ intermediate job storage. It should be possible to share code, scripts and
 other small files from your home directory by changing the file and directory
 permissions yourself.
 
-We are planning to address this further in Phase 5 by deploying additional SSD
+We later introduced `/gws/smf` volumes, as additional SSD
 storage which could be made available in small amounts to GWSs as an
-additional type of storage. [Now available: please ask about adding an "SMF" volume to your workspace]
+additional type of storage.
 
-### Issues writing netCDF3 classic files to SOF storage type
-
-Writing netCDF3 classic files to SOF storage e.g. `/gws/nopw/j04/*` should be
-avoided. This is due to the fact that operations involving a lot of
-repositioning of the file pointer (as happens with netCDF3 writing) has
-similar issues from writing large numbers of small files to SOF storage (known
-as QB ).
-
-**Suggested solution:** It is more efficient to write netCDF3 classic files to
-another filesystem type (e.g. `/work/scratch/pw*` or `/work/scratch-nopw*`) and then move them to a SOF GWS, rather than writing directly to SOF.
-
----
+However, now that the SSDE storage (which copes fine with small files)
+is in operation as our bulk storage, these "SMF" volumes are largely superfluous,
+as it's unlikely that much benefit would be gained from SSD vs SSDE.
 
 ## 3\. "Everything's running slowly today"
 
@@ -138,34 +128,14 @@ actually doing the big processing. Please take this heavy-lifting or
 long-running work to the LOTUS batch processing cluster, leaving the
 interactive compute nodes responsive enough for everyone to use.
 
-**Suggested solution:** When you log in via one of the `login*.jasmin.ac.uk`
+When you log in via one of the `login.jasmin.ac.uk`
 nodes, you are shown a 'message of the day': a list of all the `sci*` machines,
 along with memory usage and the number of users on each node at that time.
 This can help you select a less-used machine (but don’t necessarily expect the
 same machine to be the right choice next time!).
 
+**Suggested solution:** As of summer 2026, can you can now instead initiate
+an interactive session to guarantee resources in an interactive session. This is
+now recommended above relying on the sci servers for interactive performance.
+
 ---
-
-## 4\. Transport endpoint not connected error
-
-This is a known issue with the SOF storage which provides the group workspace volumes. It happens when the server you are on loses connection to the main storage system, and can occur whenever you try to `cd`, `ls` a directory, or read a file. The error looks something like this:
-
-{{<command user="user" host="sci-vm-02">}}
-ls /gws/nopw/j04/my_gws/path/to/my/data/
-(out)ls: cannot access '/gws/nopw/j04/my_gws/path/to/my/data/': Transport endpoint is not connected
-{{</command>}}
-
-**Suggested solution:**
-
-If you encounter this issue, there are two things you should do:
-
-1. Try accessing the same directory/file on [another `sci` server]({{% ref "sci-servers"%}}). If that works, then the issue is just on the first server. If not, there might be a wider issue.
-2. [Report to the JASMIN helpdesk]({{% ref "how-to-contact-us-about-jasmin-issues"%}}) specifying **BOTH**:
-    - the **full path** of the directory/file that you can't access
-      - `/gws/nopw/j04/my_gws/path/to/my/data/` in this example, **and**
-    - the **hostname** of server that you are getting this error on
-      - `sci-vm-02` in this example
-
-If it's a wider issue, we will provide updates on the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} and in the MOTD (Message of the day) which appears when you log into JASMIN.
-
-Please make sure you include **BOTH** the items above in your report, otherwise the helpdesk team will need to ask you for them before the issue can be investigated, which can cause further delay.

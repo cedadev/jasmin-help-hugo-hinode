@@ -50,14 +50,15 @@ This is similar in interface terms to S3 storage offered by cloud providers, but
 #### What type of storage am I using?
 
 Path  |  Type |
----|---| 
+---|---|
 `/home/users/*`  |  SSD |
 `/gws/pw/j*/*`  |  PFS  |
 `/gws/smf/j*/*`  |  SSD  |
 `/gws/ssde/j*/*` | SSDE |
 `/work/scratch-pw*` |  PFS  |
 `/work/scratch-nopw*`  |  SSD  |
-`/work/xfc/*`  |  PFS  |
+`/work/xfc/vol*`  |  PFS  |
+`http[s]://<tenancy-o>.s3[-ext].jc.rl.ac.uk`  |  HPOS  |
 {.table .table-striped}
   
 **Automounted storage:** SSD and SSDE storage volumes on JASMIN (so all except PFS) are automounted.
@@ -72,5 +73,4 @@ throughout JASMIN.
 
 ## FAQs, issues and solutions
 
-Please read our collection of FAQs and known issues (and solutions!) which
-we've put together [HERE]({{% ref "faqs-storage" %}}).
+Please read our collection of [FAQs, known issues and solutions]({{% ref "faqs-storage" %}}).

@@ -17,6 +17,9 @@ data you have stored and how much of your quota(s) you are using.
 The following steps should be used to create a python virtual environment and
 pip to install the xfc client:
 
+NOTE: the install procedure changed on 22/10/2026.  PyPi is now used to make 
+installation much easier.
+
 NOTE: do these steps on one of the `sci` (not `xfer`) servers:
 
   1. Log into one of the sci machines: e.g. `sci-vm-01.jasmin.ac.uk` (1 - 8 is available)
@@ -32,29 +35,22 @@ Setup a virtual environment in your home directory:
 python -m venv ~/xfc_venv
 {{</command>}}
 
-  3. The following steps for Python 2 and Python 3 are now the same.
-  4. Activate the virtual environment:
+  3. Activate the virtual environment:
   
 {{<command user="user" host="sci-vm-01">}}
 source ~/xfc_venv/bin/activate
 {{</command>}}
 
-  5. Download the client software using git to your home directory:
+  4. Install the XFC client from PyPi:
 
 {{<command user="user" host="sci-vm-01">}}
-git clone https://github.com/cedadev/xfc_client.git
+pip install xfc-client
 {{</command>}}
 
-  6. pip install the xfc client
-
-{{<command user="user" host="sci-vm-01">}}
-pip install -e ~/xfc_client
-{{</command>}}
-
-  7. Use xfc on the command line
+  5. Use xfc on the command line
   
 {{<command user="user" host="sci-vm-01">}}
-xfc -h
+xfc --help
 {{</command>}}
 
 Users who already have a Python virtual environment can skip step 2 and
@@ -72,8 +68,7 @@ echo 'export PATH="$PATH:~/xfc_venv/bin"' >> "$HOME/.bashrc"
 {{</command>}}
 
 The `xfc` client can now be used by invoking `xfc` from the command line
-without activating the virtualenv. **Python 3** users   load jaspy
-using the command `module load jaspy`
+without activating the virtualenv.
 
 For instructions on how to use the xfc client, see the article [JASMIN
 Transfer Cache (XFC).]({{% ref "xfc" %}})

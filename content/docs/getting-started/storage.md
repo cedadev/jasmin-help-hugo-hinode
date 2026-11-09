@@ -112,7 +112,7 @@ location | notes | login  |  sci  |  xfer  |  Globus | LOTUS  |  Type  |  Parall
 /home/users | Note 1 below | |  R/W  |  R/W  | R/W  |  R/W  |  R/W  |  SSD  |  no
 /gws/pw/j07<br>/gws/ssde/j25[ab]<br>/gws/smf/j0[4,7] | |  no<br>no<br>no | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | R/W<br>R/W<br>R/W | PFS<br>SOF<br>SSD | yes (hence "pw")<br>partial<br>no
 /work/xfc/vol* | Note 2 below |  no<br>no  |  R/W  |  R/W  | R/W |  R/W  | PFS  | yes
-/work/scratch-pw*<br>/work/scratch-nopw*  | |  no<br>no  |  R/W<br>R/W  | no<br>no  |  no<br>no |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
+/work/scratch-pw*<br>/work/scratch-nopw*  | |  no<br>no  |  R/W<br>R/W  | no<br>no  |  R/W<br>R/W |  R/W<br>R/W  | PFS<br>SSD  | yes<br>no
 /apps/contrib   | |  No  |  RO  |  No |  No |  RO  |  n/a  |  n/a  
 /badc, /neodc (archives)  | |  No  |  RO  | RO  | RO  |  RO  |  n/a  |  n/a  
 {.table .table-striped}

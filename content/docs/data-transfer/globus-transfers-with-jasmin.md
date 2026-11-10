@@ -3,6 +3,7 @@ aliases:
 - /article/5106-globus-transfers-with-jasmin
 - /article/5008-data-transfer-tools-using-the-globus-web-interface
 - gridftp-cert-based-auth
+- gridftp-ssh-auth
 slug: globus-transfers-with-jasmin
 description: Globus transfers with JASMIN
 title: Globus transfers with JASMIN
@@ -18,11 +19,12 @@ For a more general introduction to the Globus transfer service:
 
 ## Key points
 
-- Users now interact with **collections** in Globus
+- Users interact with **collections** in Globus
   - Please use ["JASMIN Default Collection"](https://app.globus.org/file-manager/collections/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/overview) with ID `a2f53b7f-1b4e-4dce-9b7c-349ae760fee0`
   - To authenticate with that collection, you are redirected to the JASMIN Accounts Portal to link your Globus identity with your JASMIN account.
   - The default lifetime of the authentication with that collection is **30 days**. After this, you may need to re-authenticate.
 - Consent needs to be granted at a number of points in the process to allow the Globus service to carry out actions on your behalf.
+- Globus now replaces previous gridftp services on JASMIN, which used a tool called globus-url-copy.
 
 The following examples show you how to authenticate with the JASMIN
 Default Collection and list the contents of your home directory. The following file systems are also available via this collection:

@@ -14,7 +14,7 @@ might need to copy data files/directories from JASMIN to remote sites (such as
 your own PC, MONSooN or ARCHER2) or bring new data on to JASMIN. These data
 transfer articles explain how to use the basic
 {{<link "data-transfer-tools">}}transfer tools{{</link>}} such as `rsync` and `scp`
-as well as more sophisticated services such as Globus. They also cover which
+as well as more sophisticated services such as {{<link "globus-transfers-with-jasmin">}}Globus{{</link>}}. They also cover which
 transfer services and servers are available to JASMIN users.
 
 For many users, moving small amounts of data over short distances, the basic
@@ -26,19 +26,6 @@ is also provided about automating and scheduling data transfers, along with
 tips for different transfer workflows.
 
 ## Transfers to/from JASMIN
-
-### 1\. Transfers initiated from JASMIN
-
-When initiating a transfer from a transfer server on JASMIN you would usually
-start by logging on to the server (via SSH). Once you are logged in you can
-initiate a connection to the outside world in order to push/pull the data you
-require.
-
-### 2\. Transfers initiated from elsewhere
-
-When initiating a transfer from elsewhere you will transfer data files to/from
-a source machine (which may be inside or outside JASMIN) to the transfer
-server.
 
 ### Transfer directories
 

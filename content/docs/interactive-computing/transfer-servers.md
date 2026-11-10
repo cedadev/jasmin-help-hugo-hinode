@@ -73,6 +73,10 @@ Notes:
 - The software collection `jasmin-xfer` available as per [xfer servers, above]({{% ref "#xfer-servers" %}})
 - The `hpxfer` role, and the supplying of client IP addresses is no longer required for these **new** servers.
 
+### Globus
+
+To use Globus, you interact with the [Globus service]({{% ref "globus-transfers-with-jasmin" %}}) and a collection rather than a particular server.
+
 ### Avoid getting locked out with SSH transfers
 
 Access rules in place to enable secure SSH connections from any network are
@@ -92,15 +96,3 @@ particularly if you have multiple terminal windows open on your own computer,
 that you do not accidentally attempt `sudo`on a JASMIN machine: expect some
 follow-up from the JASMIN team if you do!
 {{</alert>}}
-
-### GridFTP server
-
-For users of the (now legacy), certificate-based GridFTP only (specifically, `gsiftp://` using the `globus-url-copy` client), there is a new server:
-
-Server  |  Purpose  |  Access requirements  |  Further information  
----|---|---|---  
-`gridftp1.jasmin.ac.uk` | Physical machine for legacy GridFTP transfers.  | No SSH login access.<br>Apply for additional access role [here](https://accounts.jasmin.ac.uk/services/additional_services/hpxfer). | Old machine, continue using for now
-`gridftp2.jasmin.ac.uk` | Physical machine for legacy GridFTP transfers. | No SSH login access.<br>`jasmin-login` access role | New machine, NOT YET AVAILABLE
-{.table .table-striped}
-
-**Users of this service are now strongly advised to migrate to using [Globus]({{% ref "globus-transfers-with-jasmin" %}}) instead.**

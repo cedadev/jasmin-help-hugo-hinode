@@ -83,7 +83,6 @@
     - title: globus command line interface
     - title: globus connect personal
     - title: globus transfers with jasmin
-    - title: gridftp ssh auth
     - title: rclone
     - title: rsync scp sftp
     - title: scheduling automating transfers

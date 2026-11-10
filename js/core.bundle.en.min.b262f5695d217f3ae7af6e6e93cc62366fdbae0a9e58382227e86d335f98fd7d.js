@@ -6714,12 +6714,12 @@ function initIndex() {
       
       {
         id: 8,
-        href: "/docs/uncategorized/article-under-review/",
-        title: "Article under review",
-        description: "Article under review",
+        href: "/docs/uncategorized/article-under-review-or-removed/",
+        title: "Article under review or removed",
+        description: "Article under review or removed",
         
         
-        content: "The article which you are trying to access has been removed, pending reorganisation of the JASMIN documentation and training materials.\nHopefully you can find what you\u0026rsquo;re looking for in other articles using the search tool or sidebar navigation."
+        content: "The article which you are trying to access has been removed. Periodically we update JASMIN documentation and training materials to keep them in line with details of current services.\nHopefully you can find what you\u0026rsquo;re looking for in other articles using the search tool or sidebar navigation."
       })
       .add(
       
@@ -6741,26 +6741,11 @@ function initIndex() {
       
       
       
-      
-      {
-        id: 10,
-        href: "/docs/data-transfer/bbcp/",
-        title: "bbcp (deprecated)",
-        description: "Data transfer tool bbcp",
-        
-        
-        content: "\u0026nbsp; This tool is no longer maintained and its use is no longer recommended. Please see Globus Transfers with JASMIN as our recommended method for transferring data into/out of JASMIN. This article provides information about the bbcp data transfer tool.\nWhat is bbcp? \u0026nbsp; bbcp\u0026nbsp; is a simple command-line tool which can use your SSH connection to transfer data in and out of JASMIN efficiently. It works in a similar way to GridFTP over SSH in that it connects to the transfer server using your usual SSH credentials but then can set up parallel data streams for transferring data. One advantage of bbcp that it is provided as a single binary executable which is easy to download and use.\nUsing bbcp on JASMIN \u0026nbsp; Check with your local administrator to see if it is installed centrally on your own system. If it isn\u0026rsquo;t, you may need to download the correct binary from the bbcp download site\u0026nbsp; and simply place it in your path on your local filesystem: this can be done as a regular/unprivileged user. At the JASMIN end, you can put the same executable in your home directory (somewhere in your $PATH e.g. in your ~/bin directory, and make sure you give the file execute permission). Once you have the bbcp command you can access any file which is readable by you when logged into JASMIN, or write to a Group Workspace that you have access to.\nConfiguring bbcp for JASMIN \u0026nbsp; When contacting hpxfer[34].jasmin.ac.uk you will need to set a couple of important options for it to work. The exact options depend on whether you are moving data into or out of JASMIN, and from where the transfer is initiated.\nThe bbcp protocol, in common with most high-bandwidth transfer tools, requires a set of ports to be open at one or both ends in order to establish data connections. Due to firewall restrictions this range of ports needs to be agreed in advance. In the case of hpxfer[34].jasmin.ac.uk the range of ports is 50000:51000. Therefore all bbcp commands must contain the option --port 50000:51000.\nAlso, hpxfer[34] will only allow incoming connections on these ports, therefore hpxfer[34] must be the server which listens for data connections. By default bbcp will listen for data connections at the end receiving data and connect from the end sending data. Therefore, with the default options, bbcp will succeed when pushing data to hpxfer[34] but fail when pulling data from it. In order to pull data, with the transfer initiated on the remote server, you must include the -z flag. Therefore the recommended commands for transferring in either direction are:\nInitiate on JASMIN: Pull Data from remote server \u0026nbsp; bbcp -v -4 -P 5 -F --port 50000:51000 username@remote-server:\u0026lt;PATH-TO-SOURCE-FILE\u0026gt; \u0026lt;PATH-TO-TARGET-FILE\u0026gt; Initiate on JASMIN: Push Data \u0026nbsp; bbcp -v -4 -P 5 --port 50000:51000 \u0026lt;PATH-TO-SOURCE-FILE\u0026gt; username@remote-server:\u0026lt;PATH-TO-TARGET-FILE\u0026gt; Initiate on remote server: Pull Data from JASMIN \u0026nbsp; bbcp -v -z -4 -P 5 --port 50000:51000 username@hpxfer3.jasmin.ac.uk:\u0026lt;PATH-TO-SOURCE-FILE\u0026gt; \u0026lt;PATH-TO-TARGET-FILE\u0026gt; Initiate on remote server: Push Data to JASMIN \u0026nbsp; bbcp -v -4 -P 5 -F --port 50000:51000 \u0026lt;PATH-TO-SOURCE-FILE\u0026gt; username@hpxfer3.jasmin.ac.uk:\u0026lt;PATH-TO-TARGET-FILE\u0026gt; In this case the -v flag produces verbose output .-V can be used for even more verbose output. The -4 option forces use of IP version 4 instead of IPv6 (essential for transfers to and from hpxfer3 or other JASMIN hosts. Note: this option may not be available in some older versions of bbcp), and the -P option reports the status of the transfer every n seconds. The default behaviour will print nothing. The -F option skips a check on the target host to check if there is enough disk space. This overcomes occasional problems where free space is not correctly reported to bbcp by the JASMIN file system.\nFor the full set of options, see: https://www.slac.stanford.edu/~abh/bbcp/\u0026nbsp; Note: the bbcp command must be in your $PATH on both the source and target machine.\nInitiate on JASMIN: Pull Data from remote server, specifying SSH command to start bbcp \u0026nbsp; bbcp -v -4 -P 5 -F --port 50000:51000 -S \u0026#34;/usr/bin/ssh %I -l %U %H /path/to/bbcp\u0026#34; username@remote-server:\u0026lt;PATH-TO-SOURCE-FILE\u0026gt; \u0026lt;PATH-TO-TARGET-FILE\u0026gt; The path /path/to/bbcp can be replaced by module load bbcp; bbcp (or whatever is the appropriate local requirement) in environments where bbcp is a module which needs to be loaded first.\nbbcp -v -4 -P 5 -F --port 50000:51000 -S \u0026#34;/usr/bin/ssh %I -l %U %H module load bbcp; bbcp\u0026#34; username@remote-server:\u0026lt;PATH-TO-SOURCE-FILE\u0026gt; \u0026lt;PATH-TO-TARGET-FILE\u0026gt; For specifying the SSH command to start bbcp on the TARGET node, use the -T option.\nThe bbcp site\u0026nbsp; has good documentation on further options, including the -r option for recursive transfers. A number of useful tutorials are also available elsewhere on the web.\nTuning Recommendations \u0026nbsp; We recommend you tune your connection by trying various different options on a few GBs of data.\nBy default 4 streams are opened. Try 1 stream first, particularly on fast connections, it may be faster. This is achieved with the option -s 1. We ask users of JASMIN to tune up to a maximum of 16 streams (-s 16). Do not tune the window size unless you continue to get very poor bandwidth after adjusting the number of streams. Most modern operating systems will auto-tune this parameter. bbcp is not ideal for large directory trees of small files. If you have thousands of small files you may be better off with rsync or possibly GridFTP/Globus, depending on the network. Another simpler option is tarring/zipping the data first before transferring. Troubleshooting \u0026nbsp; bbcp uses SSH to establish the control connection so you need to set up your SSH key in the same way as you would to SSH into hpxfer[12].jasmin.ac.uk. If bbcp isn\u0026rsquo;t working you should first check you can SSH to hpxfer[34].jasmin.ac.uk. If you can\u0026rsquo;t, please review the steps in the Getting Started section before contacting the JASMIN Helpdesk. Make that you have logged in (via SSH) to both the JASMIN transfer server and the remote server with the -A option (agent-forwarding enabled), to ensure that your credentials are used by SSH as it invokes bbcp on the other server. Try adding the -Foption to disable bbcp\u0026rsquo;s filesystem checking if you get the following error: bbcp: Insufficient space to copy all the files from \u0026lt;hostname\u0026gt;. If you see the following error message: Address family not supported by protocol creating inet socketthis is most likely because the -4 flag was not specified. This may happen with commands that once worked, as a previously installed version of bbcp on JASMIN defaulted to IPv4. Currently there is no support for IPv6 on JASMIN. If the version of bbcp you have available on your system is old and does not have the -4 option, consider downloading the appropriate (newer) version from the link above. It is also possible to compile the executable from source."
-      })
-      .add(
-      
-      
-      
-      
           
       
       
       {
-        id: 11,
+        id: 10,
         href: "/docs/getting-started/beginners-training-workshop/",
         title: "beginners training workshop - ...",
         description: "Beginners training workshop - materials",
@@ -6775,7 +6760,7 @@ function initIndex() {
       
       
       {
-        id: 12,
+        id: 11,
         href: "/docs/for-cloud-tenants/best-practice/",
         title: "Best Practice",
         description: "Best practice with the JASMIN Cloud",
@@ -6790,7 +6775,7 @@ function initIndex() {
       
       
       {
-        id: 13,
+        id: 12,
         href: "/docs/long-term-archive-storage/ceda-archive/",
         title: "CEDA Archive",
         description: "Accessing the CEDA Archive from JASMIN",
@@ -6805,7 +6790,7 @@ function initIndex() {
       
       
       {
-        id: 14,
+        id: 13,
         href: "/docs/software-on-jasmin/community-software-checksit/",
         title: "Community Software: checksit",
         description: "Community Software: checksit",
@@ -6820,7 +6805,7 @@ function initIndex() {
       
       
       {
-        id: 15,
+        id: 14,
         href: "/docs/software-on-jasmin/community-software-esmvaltool/",
         title: "Community Software: ESMValTool",
         description: "Community Software: ESMValTool",
@@ -6835,7 +6820,7 @@ function initIndex() {
       
       
       {
-        id: 16,
+        id: 15,
         href: "/docs/software-on-jasmin/compiling-and-linking/",
         title: "Compiling and linking",
         description: "Compiling and linking code which uses libraries provided on JASMIN",
@@ -6852,7 +6837,7 @@ function initIndex() {
       
       
       {
-        id: 17,
+        id: 16,
         href: "/docs/software-on-jasmin/conda-environments-and-python-virtual-environments/",
         title: "Conda environments and Python ...",
         description: "Conda environments and Python virtual environments",
@@ -6867,7 +6852,7 @@ function initIndex() {
       
       
       {
-        id: 18,
+        id: 17,
         href: "/docs/software-on-jasmin/conda-removal/",
         title: "Conda removal",
         description: "Removal of packages from anaconda \"defaults\" channel in user environments on JASMIN",
@@ -6884,7 +6869,7 @@ function initIndex() {
       
       
       {
-        id: 19,
+        id: 18,
         href: "/docs/short-term-project-storage/object-store/configuring-cors-for-object-storage/",
         title: "Configuring CORS for object st...",
         description: "Configuring cross-origin resource sharing (CORS) for object storage.",
@@ -6901,7 +6886,7 @@ function initIndex() {
       
       
       {
-        id: 20,
+        id: 19,
         href: "/docs/software-on-jasmin/creating-and-using-miniforge-environments/",
         title: "Creating and using miniforge e...",
         description: "Creating and using miniforge environments",
@@ -6916,7 +6901,7 @@ function initIndex() {
       
       
       {
-        id: 21,
+        id: 20,
         href: "/docs/interactive-computing/dask-gateway/",
         title: "Dask Gateway",
         description: "Introduction \u0026nbsp; Dask Gateway\u0026nbsp; is a service which manages Dask\u0026nbsp; clusters for users. On JASMIN, it creates a Dask cluster in LOTUS, our batch computing cluster. It automatically creates a Dask for you, scheduling Slurm jobs to create Dask schedulers and workers as appropriate.\n",
@@ -6931,13 +6916,13 @@ function initIndex() {
       
       
       {
-        id: 22,
+        id: 21,
         href: "/docs/data-transfer/data-transfer-overview/",
         title: "Data transfer overview",
         description: "Overview of data transfer",
         
         
-        content: "This article introduces the topic of data transfer to/from JASMIN.\nIntroduction to Data Transfer on JASMIN \u0026nbsp; As a JASMIN user you are very likely to be involved in data transfer. You might need to copy data files/directories from JASMIN to remote sites (such as your own PC, MONSooN or ARCHER2) or bring new data on to JASMIN. These data transfer articles explain how to use the basic transfer tools such as rsync and scp as well as more sophisticated services such as Globus. They also cover which transfer services and servers are available to JASMIN users.\nFor many users, moving small amounts of data over short distances, the basic tools will meet their requirements. However, data transfer is a complicated topic so we also provide articles about how you can improve your transfer rates to make the most of the available bandwidth. We include details about transfers over connections to specific sites (such as the Met Office). Advice is also provided about automating and scheduling data transfers, along with tips for different transfer workflows.\nTransfers to/from JASMIN \u0026nbsp; 1. Transfers initiated from JASMIN \u0026nbsp; When initiating a transfer from a transfer server on JASMIN you would usually start by logging on to the server (via SSH). Once you are logged in you can initiate a connection to the outside world in order to push/pull the data you require.\n2. Transfers initiated from elsewhere \u0026nbsp; When initiating a transfer from elsewhere you will transfer data files to/from a source machine (which may be inside or outside JASMIN) to the transfer server.\nTransfer directories \u0026nbsp; You will typically transfer data to/from a Group Workspace that you have been granted access to. If you are copying data from JASMIN you might want to copy data from the CEDA archive (mounted on JASMIN) to a remote site. You might also wish to copy small volumes of data to/from your $HOME directory. All of these locations are available on the transfer servers.\nJASMIN Transfer servers \u0026nbsp; JASMIN provides specific servers for managing data transfers. Please read about the different servers available for particular data transfer needs, and about the various data transfer tools available.\nImproving your transfer rates \u0026nbsp; To achieve better transfer rates, for large transfers or where speed and reliability are important, you are recommended to:\nuse the Globus data transfer service (recommended as the best method), or use the high-performance data transfer servers (physical equivalents of the transfer VMs, located in a special network zone) use other parallel-capable transfer tools such as lftp (parallel-capable ftp client) Transfer rates depend on many factors, so try to consider all of these:\ndo you really need to transfer some/all of the data? is the data in the CEDA Archive already (don\u0026rsquo;t copy it, if so, just process it in-place!) can your workflow deal with processing just smaller \u0026ldquo;chunks\u0026rdquo; at a time (streaming)? do you really need to have/keep all the source data, if it\u0026rsquo;s stored somewhere else? the network path all the way from where the source data resides, to the destination file system high-performance data transfer tools are great, but is the \u0026ldquo;last mile\u0026rdquo; over WiFi to your laptop? what is the length of the network path? If it\u0026rsquo;s international or intercontinental, SSH-based methods won\u0026rsquo;t work well. Consider Globus. the host at each end what sort of host is it (laptop, departmental server, virtual machine, physical machine) and what is its network connectivity? the file systems at each end not all file systems perform the same, for given types of data or transfer methods the size and number of files involved large numbers of small files can take a long time to transfer are the data in deep directory trees? These can take a long time to recreate on the destination file system consider creating a tar/zip archive to transfer fewer but larger files, or at least a method that copes well with many files in parallel or \u0026ldquo;in flight\u0026rdquo; at once. checking data integrity some methods will verify data integrity at source and destination to ensure integrity. This can be resource-heavy and slow. time of day would scheduling your transfer to happen at quieter times, mean that it completes more efficiently and/or without impacting others? Consider source and destination time zones!"
+        content: "This article introduces the topic of data transfer to/from JASMIN.\nIntroduction to Data Transfer on JASMIN \u0026nbsp; As a JASMIN user you are very likely to be involved in data transfer. You might need to copy data files/directories from JASMIN to remote sites (such as your own PC, MONSooN or ARCHER2) or bring new data on to JASMIN. These data transfer articles explain how to use the basic transfer tools such as rsync and scp as well as more sophisticated services such as Globus. They also cover which transfer services and servers are available to JASMIN users.\nFor many users, moving small amounts of data over short distances, the basic tools will meet their requirements. However, data transfer is a complicated topic so we also provide articles about how you can improve your transfer rates to make the most of the available bandwidth. We include details about transfers over connections to specific sites (such as the Met Office). Advice is also provided about automating and scheduling data transfers, along with tips for different transfer workflows.\nTransfers to/from JASMIN \u0026nbsp; Transfer directories \u0026nbsp; You will typically transfer data to/from a Group Workspace that you have been granted access to. If you are copying data from JASMIN you might want to copy data from the CEDA archive (mounted on JASMIN) to a remote site. You might also wish to copy small volumes of data to/from your $HOME directory. All of these locations are available on the transfer servers.\nJASMIN Transfer servers \u0026nbsp; JASMIN provides specific servers for managing data transfers. Please read about the different servers available for particular data transfer needs, and about the various data transfer tools available.\nImproving your transfer rates \u0026nbsp; To achieve better transfer rates, for large transfers or where speed and reliability are important, you are recommended to:\nuse the Globus data transfer service (recommended as the best method), or use the high-performance data transfer servers (physical equivalents of the transfer VMs, located in a special network zone) use other parallel-capable transfer tools such as lftp (parallel-capable ftp client) Transfer rates depend on many factors, so try to consider all of these:\ndo you really need to transfer some/all of the data? is the data in the CEDA Archive already (don\u0026rsquo;t copy it, if so, just process it in-place!) can your workflow deal with processing just smaller \u0026ldquo;chunks\u0026rdquo; at a time (streaming)? do you really need to have/keep all the source data, if it\u0026rsquo;s stored somewhere else? the network path all the way from where the source data resides, to the destination file system high-performance data transfer tools are great, but is the \u0026ldquo;last mile\u0026rdquo; over WiFi to your laptop? what is the length of the network path? If it\u0026rsquo;s international or intercontinental, SSH-based methods won\u0026rsquo;t work well. Consider Globus. the host at each end what sort of host is it (laptop, departmental server, virtual machine, physical machine) and what is its network connectivity? the file systems at each end not all file systems perform the same, for given types of data or transfer methods the size and number of files involved large numbers of small files can take a long time to transfer are the data in deep directory trees? These can take a long time to recreate on the destination file system consider creating a tar/zip archive to transfer fewer but larger files, or at least a method that copes well with many files in parallel or \u0026ldquo;in flight\u0026rdquo; at once. checking data integrity some methods will verify data integrity at source and destination to ensure integrity. This can be resource-heavy and slow. time of day would scheduling your transfer to happen at quieter times, mean that it completes more efficiently and/or without impacting others? Consider source and destination time zones!"
       })
       .add(
       
@@ -6946,13 +6931,13 @@ function initIndex() {
       
       
       {
-        id: 23,
+        id: 22,
         href: "/docs/data-transfer/data-transfer-tools/",
         title: "Data Transfer Tools",
         description: "Data Transfer Tools",
         
         
-        content: "This article lists the data transfer tools available on JASMIN and provides links to articles that describe them in more detail.\nData Transfer tools \u0026nbsp; The are many tools that you can use for transferring data to/from JASMIN. See the articles linked below for more details.\nTool Info Globus An efficient, secure data transfer service available to all JASMIN users (recommended). Includes capability to schedule, repeat and orchestrate transfers between third-party hosts and receive notifications of job status. Has web and command-line interfaces. Efficient for moving large volumes and/or numbers of files, especially over long distances. scp A basic transfer tool that works over the SSH protocol. Similar to \u0026ldquo;cp\u0026rdquo; but copies between remote servers. rsync (over SSH) Like scp but more sophisticated. Allows synchronisation between remote directory trees. sftp SSH FTP - works over SSH. GridFTP (over SSH) An old but comprehensive data transfer tool. Highly configurable and able to transfer over multiple parallel streams. Used over SSH in this case. Superseded by Globus FTP File Transfer Protocol. An aged transfer protocol suitable for small file transfers but limited. LFTP Parallel-capable FTP client. wget, curl Download tools for accessing resources over HTTP primarily. (see 3rd party documentation) sharing GWS data via http for exposing part(s) of a Group Workspace via HTTP to users without JASMIN accounts. Python transfer tools Methods of managing/scripting data transfer tasks using Python. You can use libraries such as requests in a Python 3 virtual environment on the transfer servers. MASS client (Met Office) A specific command-line tool installed on the mass-cli server on JASMIN. Enables extractions from the Met Office MASS Archive. OPeNDAP A transfer protocol for extracting subsets of files from a remote server (over HTTP) rclone A 3rd party, open-source command-line utility which can interface to, and synchronise data between, a wide variety of cloud and other storage backends, such as Google Drive and AWS S3 compatible object stores. It can also sync data over SSH. This utility is not installed on JASMIN but is well-documented and trivial for users to download and configure themselves on one of the data transfer servers Please note install instructions, and dos and don\u0026rsquo;tsfor rclone on JASMIN."
+        content: "This article lists the data transfer tools available on JASMIN and provides links to articles that describe them in more detail.\nData Transfer tools \u0026nbsp; The are many tools that you can use for transferring data to/from JASMIN. See the articles linked below for more details.\nTool Info Globus An efficient, secure data transfer service available to all JASMIN users (recommended). Includes capability to schedule, repeat and orchestrate transfers between third-party hosts and receive notifications of job status. Has web and command-line interfaces. Efficient for moving large volumes and/or numbers of files, especially over long distances. scp A basic transfer tool that works over the SSH protocol. Similar to \u0026ldquo;cp\u0026rdquo; but copies between remote servers. rsync (over SSH) Like scp but more sophisticated. Allows synchronisation between remote directory trees. sftp SSH FTP - works over SSH. FTP File Transfer Protocol. An aged transfer protocol suitable for small file transfers but limited. LFTP Parallel-capable FTP client. wget, curl Download tools for accessing resources over HTTP primarily. (see 3rd party documentation) sharing GWS data via http for exposing part(s) of a Group Workspace via HTTP to users without JASMIN accounts. Python transfer tools Methods of managing/scripting data transfer tasks using Python. You can use libraries such as requests in a Python 3 virtual environment on the transfer servers. MASS client (Met Office) A specific command-line tool installed on the mass-cli server on JASMIN. Enables extractions from the Met Office MASS Archive. OPeNDAP A transfer protocol for extracting subsets of files from a remote server (over HTTP) rclone A 3rd party, open-source command-line utility which can interface to, and synchronise data between, a wide variety of cloud and other storage backends, such as Google Drive and AWS S3 compatible object stores. It can also sync data over SSH. This utility is not installed on JASMIN but is well-documented and trivial for users to download and configure themselves on one of the data transfer servers Please note install instructions, and dos and don\u0026rsquo;tsfor rclone on JASMIN."
       })
       .add(
       
@@ -6963,7 +6948,7 @@ function initIndex() {
       
       
       {
-        id: 24,
+        id: 23,
         href: "/docs/short-term-project-storage/elastic-tape-command-line-interface-hints/",
         title: "Elastic Tape command-line inte...",
         description: "Elastic Tape command-line interface hints",
@@ -6980,7 +6965,7 @@ function initIndex() {
       
       
       {
-        id: 25,
+        id: 24,
         href: "/docs/batch-computing/example-job-2-calc-md5s/",
         title: "Example Job 2: Calculating MD5...",
         description: "Sample workflows for LOTUS",
@@ -6995,7 +6980,7 @@ function initIndex() {
       
       
       {
-        id: 26,
+        id: 25,
         href: "/docs/mass/external-access-to-mass-faq/",
         title: "External Access to MASS FAQs",
         description: "Answers to MASS \u0026 MOOSE frequently asked questions",
@@ -7010,7 +6995,7 @@ function initIndex() {
       
       
       {
-        id: 27,
+        id: 26,
         href: "/docs/data-transfer/ftp-and-lftp/",
         title: "ftp and lftp",
         description: "Data Transfer Tools: ftp and lftp",
@@ -7025,7 +7010,7 @@ function initIndex() {
       
       
       {
-        id: 28,
+        id: 27,
         href: "/docs/getting-started/generate-ssh-key-pair/",
         title: "Generate an SSH key pair",
         description: "How to create an SSH key pair for logging in to JASMIN",
@@ -7040,7 +7025,7 @@ function initIndex() {
       
       
       {
-        id: 29,
+        id: 28,
         href: "/docs/software-on-jasmin/geocat-replaces-ncl/",
         title: "Geocat replaces NCL",
         description: "GeoCat - replaces NCAR Command Language (NCL)",
@@ -7055,7 +7040,7 @@ function initIndex() {
       
       
       {
-        id: 30,
+        id: 29,
         href: "/docs/getting-started/get-jasmin-portal-account/",
         title: "Get a JASMIN portal account",
         description: "How to register on the JASMIN Accounts Portal",
@@ -7070,7 +7055,7 @@ function initIndex() {
       
       
       {
-        id: 31,
+        id: 30,
         href: "/docs/getting-started/get-login-account/",
         title: "Get a login account",
         description: "Applying for access to JASMIN servers",
@@ -7085,7 +7070,7 @@ function initIndex() {
       
       
       {
-        id: 32,
+        id: 31,
         href: "/docs/getting-started/get-started-with-jasmin/",
         title: "Get Started with JASMIN",
         description: "Basic steps to gain access",
@@ -7100,7 +7085,7 @@ function initIndex() {
       
       
       {
-        id: 33,
+        id: 32,
         href: "/docs/data-transfer/globus-command-line-interface/",
         title: "Globus Command-Line Interface",
         description: "Data Transfer Tools: Using the Globus Command-Line Interface",
@@ -7115,7 +7100,7 @@ function initIndex() {
       
       
       {
-        id: 34,
+        id: 33,
         href: "/docs/data-transfer/globus-connect-personal/",
         title: "Globus Connect Personal",
         description: "Globus Connect Personal",
@@ -7130,13 +7115,13 @@ function initIndex() {
       
       
       {
-        id: 35,
+        id: 34,
         href: "/docs/data-transfer/globus-transfers-with-jasmin/",
         title: "Globus transfers with JASMIN",
         description: "Globus transfers with JASMIN",
         
         
-        content: "This article describes how to do data transfers to and from JASMIN using Globus\u0026nbsp; , an online data transfer service designed specifically for moving large datasets between research institutions.\nFor a more general introduction to the Globus transfer service:\nSee Globus\u0026rsquo; own tutorial \u0026ldquo;how to log in and transfer files with Globus\u0026rdquo;\u0026nbsp; Key points \u0026nbsp; Users now interact with collections in Globus Please use \u0026ldquo;JASMIN Default Collection\u0026rdquo;\u0026nbsp; with ID a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 To authenticate with that collection, you are redirected to the JASMIN Accounts Portal to link your Globus identity with your JASMIN account. The default lifetime of the authentication with that collection is 30 days. After this, you may need to re-authenticate. Consent needs to be granted at a number of points in the process to allow the Globus service to carry out actions on your behalf. The following examples show you how to authenticate with the JASMIN Default Collection and list the contents of your home directory. The following file systems are also available via this collection:\nFile system Access $HOME (/home/users/\u0026lt;username\u0026gt;) Read-write /gws (group workspaces) Read-write /work/scratch-* (scratch volumes) Read-write /work/xfc (transfer cache) Read-write /badc (CEDA Archive) Read-only /neodc (CEDA Archive) Read-only List your home directory using the web app \u0026nbsp; 1. Navigate to https://app.globus.org\u0026nbsp; 2. Log in with your Globus identity. Normally, this is an identity associated with your home institution: you can create this during the login process using the drop-down list of institutions. It could also be a globusid.org or other identity. Once you are logged in, you should see the Globus File Manager app:\nlog in 3. In File Manager, use the search tool to search for \u0026ldquo;JASMIN Default Collection\u0026rdquo;. Select it.\nFind JASMIN Default Collection 4. In the transfer pane, you are told that Authentication/Consent is required. Click Continue.\nConsent 5. Click the link to use the JASMIN Accounts Portal OIDC server to link your JASMIN identity\n6. You are taken to a page on the JASMIN Accounts portal, where you are invited to \u0026ldquo;Authorise\u0026rdquo; the external application to authenticate and access your essential account information.\nAuthorise application 7. If successful, you are taken back to the Globus web app, where you are invited to \u0026ldquo;Allow\u0026rdquo; the app to use the listed information and services.\nAllow the app to use the info 8. The directory listing of your home directory should now appear in the transfer pane.\n9. Try navigating to another collection known to you (previously known as endpoint) in the other pane and transferring some data. If you have Globus Connect Personal running locally, you should be able to transfer files to/from that.\nList your home directory using the command-line interface (CLI) \u0026nbsp; This is covered as one of the examples in our Globus command-line interface article.\nWhere to/from? \u0026nbsp; Don\u0026rsquo;t forget that to actually transfer data to/from JASMIN (e.g. step 8, above), you\u0026rsquo;ll need another collection somewhere else. If you\u0026rsquo;re transferring data from ARCHER2, you can use their ARCHER2 filesystems collection (id: 3e90d018-0d05-461a-bbaf-aab605283d21)\u0026nbsp; If not, unless your institution runs a Globus collection, you\u0026rsquo;ll need to install a small piece of software called Globus Connect Personal on a machine at that end that is able to read/write the data that you want to transfer. A good idea is to try this on your own desktop/laptop first.\nOur help doc guides you through how to do this and some examples of how to use it. Versions available for Windows, Mac and Linux.\nTroubleshooting \u0026nbsp; Transfer task reports errors while in progress \u0026nbsp; You do not normally need to re-submit a Globus task.\nErrors while in progress can happen, but Globus will automatically retry a transfer several times before giving up. If it\u0026rsquo;s actually failed, it will report the final status as such. You can check on the progress of a transfer task that has got stuck, if needed, either in the web interface, or by obtaining the task id and using the command globus task show [OPTIONS] TASK_ID using the id of your task. (see reference)\u0026nbsp; .\nIf necessary, you can cancel a task with globus task cancel [OPTIONS] TASK_ID. (see reference)\u0026nbsp; Other problems with command-line interface (CLI) in terminal environment \u0026nbsp; Please see the troubleshooting section in the Globus command line interface article."
+        content: "This article describes how to do data transfers to and from JASMIN using Globus\u0026nbsp; , an online data transfer service designed specifically for moving large datasets between research institutions.\nFor a more general introduction to the Globus transfer service:\nSee Globus\u0026rsquo; own tutorial \u0026ldquo;how to log in and transfer files with Globus\u0026rdquo;\u0026nbsp; Key points \u0026nbsp; Users interact with collections in Globus Please use \u0026ldquo;JASMIN Default Collection\u0026rdquo;\u0026nbsp; with ID a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 To authenticate with that collection, you are redirected to the JASMIN Accounts Portal to link your Globus identity with your JASMIN account. The default lifetime of the authentication with that collection is 30 days. After this, you may need to re-authenticate. Consent needs to be granted at a number of points in the process to allow the Globus service to carry out actions on your behalf. Globus now replaces previous gridftp services on JASMIN, which used a tool called globus-url-copy. The following examples show you how to authenticate with the JASMIN Default Collection and list the contents of your home directory. The following file systems are also available via this collection:\nFile system Access $HOME (/home/users/\u0026lt;username\u0026gt;) Read-write /gws (group workspaces) Read-write /work/scratch-* (scratch volumes) Read-write /work/xfc (transfer cache) Read-write /badc (CEDA Archive) Read-only /neodc (CEDA Archive) Read-only List your home directory using the web app \u0026nbsp; 1. Navigate to https://app.globus.org\u0026nbsp; 2. Log in with your Globus identity. Normally, this is an identity associated with your home institution: you can create this during the login process using the drop-down list of institutions. It could also be a globusid.org or other identity. Once you are logged in, you should see the Globus File Manager app:\nlog in 3. In File Manager, use the search tool to search for \u0026ldquo;JASMIN Default Collection\u0026rdquo;. Select it.\nFind JASMIN Default Collection 4. In the transfer pane, you are told that Authentication/Consent is required. Click Continue.\nConsent 5. Click the link to use the JASMIN Accounts Portal OIDC server to link your JASMIN identity\n6. You are taken to a page on the JASMIN Accounts portal, where you are invited to \u0026ldquo;Authorise\u0026rdquo; the external application to authenticate and access your essential account information.\nAuthorise application 7. If successful, you are taken back to the Globus web app, where you are invited to \u0026ldquo;Allow\u0026rdquo; the app to use the listed information and services.\nAllow the app to use the info 8. The directory listing of your home directory should now appear in the transfer pane.\n9. Try navigating to another collection known to you (previously known as endpoint) in the other pane and transferring some data. If you have Globus Connect Personal running locally, you should be able to transfer files to/from that.\nList your home directory using the command-line interface (CLI) \u0026nbsp; This is covered as one of the examples in our Globus command-line interface article.\nWhere to/from? \u0026nbsp; Don\u0026rsquo;t forget that to actually transfer data to/from JASMIN (e.g. step 8, above), you\u0026rsquo;ll need another collection somewhere else. If you\u0026rsquo;re transferring data from ARCHER2, you can use their ARCHER2 filesystems collection (id: 3e90d018-0d05-461a-bbaf-aab605283d21)\u0026nbsp; If not, unless your institution runs a Globus collection, you\u0026rsquo;ll need to install a small piece of software called Globus Connect Personal on a machine at that end that is able to read/write the data that you want to transfer. A good idea is to try this on your own desktop/laptop first.\nOur help doc guides you through how to do this and some examples of how to use it. Versions available for Windows, Mac and Linux.\nTroubleshooting \u0026nbsp; Transfer task reports errors while in progress \u0026nbsp; You do not normally need to re-submit a Globus task.\nErrors while in progress can happen, but Globus will automatically retry a transfer several times before giving up. If it\u0026rsquo;s actually failed, it will report the final status as such. You can check on the progress of a transfer task that has got stuck, if needed, either in the web interface, or by obtaining the task id and using the command globus task show [OPTIONS] TASK_ID using the id of your task. (see reference)\u0026nbsp; .\nIf necessary, you can cancel a task with globus task cancel [OPTIONS] TASK_ID. (see reference)\u0026nbsp; Other problems with command-line interface (CLI) in terminal environment \u0026nbsp; Please see the troubleshooting section in the Globus command line interface article."
       })
       .add(
       
@@ -7147,7 +7132,7 @@ function initIndex() {
       
       
       {
-        id: 36,
+        id: 35,
         href: "/docs/interactive-computing/graphical-linux-desktop-access-using-nx/",
         title: "Graphical Linux desktop using ...",
         description: "Graphical Linux desktop using NoMachine NX",
@@ -7162,22 +7147,7 @@ function initIndex() {
       
       
       {
-        id: 37,
-        href: "/docs/data-transfer/gridftp-ssh-auth/",
-        title: "GridFTP (SSH authentication)",
-        description: "Data Transfer Tools: GridFTP (SSH authentication)",
-        
-        
-        content: "This article describes how to transfer data using GridFTP with SSH authentication.\n\u0026nbsp; The globus-url-copy command used here should not be confused with the Globus online data transfer service. They used to be associated, but no longer. If you are starting out and looking for a reliable, high-performance transfer method, the recommendation now is to learn about Globus Transfers with JASMIN (using the Globus online data transfer service) instead of command-line gridftp as described in this document. Introduction \u0026nbsp; GridFTP is the recommended tool for transferring large files or groups of files across high-speed Wide-Area Networks (WANs). It is commonly used with certificate-based authentication, but can also take place between suitably configured* server and client using SSH as the authentication mechanism.\nThe client may need to have certain ports enabled on the host or institutional firewall if present. Consult your local IT support desk for details and direct them to Configuring GridFTP\u0026nbsp; .\nSSH-based GridFTP does not enable the full feature set provided by certificate-based GridFTP and in particular does not work with Globus Online, which provides useful interfaces and APIs for managing large-scale data transfers, but still provides a major step up in performance by \u0026ldquo;filling the pipe\u0026rdquo; more efficiently than scp/rsync/sftp, particularly over longer distances and can do verification and sync operations as part of the transfer.\nSee also:\nTransfer servers for details on which servers within JASMIN have GridFTP available. Transfers from ARCHER2 for details of different routes affecting your choice of server (since this is the one of the most likely places to which JASMIN users will want to transfer data to/from) Establishing a connection \u0026nbsp; Since you will be using SSH as the authentication mechanism, you should ensure that your initial connection to the JASIMN transfer server is made with the -A option enabled, to enable agent forwarding:\nssh -A username1@hpxfer3.jasmin.ac.uk Use the globus-url-copy command to list the contents of your home directory on the remote server (This will only work if you already know that that server supports GridFTP over SSH). In this case, we are making the connection to a fictitious server gridftp.remotesite.ac.uk:\nglobus-url-copy -vb -list sshftp://username2@gridftp.remotesite.ac.uk/ If username and username2 are the same (on the different systems), the username@ part of the sshftp URI can be omitted.\nNote that the URI of the server, in this case sshftp://username2@gridftp.remotesite.ac.uk must come immediately after (as it is an argument to) the -list option. This is particularly important if you are combining this command with other options.\nExample GridFTP usage \u0026nbsp; Once you have successfully established that you can connect to the server (as above), then you should be able to transfer data between the remote end (server) and local end (client) with commands such as shown below:\nAs above, if you have the same username on both local and remote systems, then the username@ part of the sshftp URI can be omitted.\nPlease consult the documentation for the globus-url-copy command for the full range of options and arguments.\nglobus-url-copy -help See also http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp/user/#gridftp-user-basic\u0026nbsp; 2. Download a file from remote directory /home/users/USERNAME to destination on the local (client) machine, for example a group workspace on JASMIN:\nglobus-url-copy -vb sshftp://username@gridftp.remotesite.ac.uk/home/users/USERNAME/myfile /group_workspaces/jasmin/myworkspace/myfile The -p N and -fast options can additionally be used in combination to enable N parallel streams at once, as shown below. You can experiment with N in the range 4 to 32 to obtain the best performance, but please be aware that many parallel transfers can draw heavily on shared resources and degrade performance for other users:\nglobus-url-copy -vb -p 16 -fast sshftp://username@gridftp.remotesite.ac.uk/home/users/USERNAME/myfile /group_workspaces/jasmin/myworkspace/myfile 3. Test performance with large files by downloading from /dev/zero on the remote server to /dev/null locally. This excludes any interaction with either filesystem and gives an upper limit to the performance that can be achieved at the time. Repeat with values of N in the range 4 to 32 to compare rates. Note that the performance takes a while to \u0026ldquo;ramp up\u0026rdquo;, so you will not see the best rates if transferring small files individually as the process never gets up to full speed:\nglobus-url-copy -vb -p 16 -fast sshftp://username@gridftp.remotesite.ac.uk/dev/zero /dev/null Press CTRL-C to interrupt the transfer. Alternatively you can specify that the transfer should continue for a fixed duration in seconds using the -t option. In this example, data is transferred from the remote host gridftp.remotesite.ac.uk to jasmin-xfer2.ceda.ac.uk.\nglobus-url-copy -p 16 -fast -t 10 -vb sshftp://username2@gridftp.remotesite.ac.uk/dev/zero /dev/null Source: sshftp://username2@gridftp.remotesite.ac.uk/dev/ Dest: file:///dev/ zero -\u0026gt; null 7797473280 bytes 929.52 MB/sec avg 1024.49 MB/sec inst Cancelling copy... Note the transfer rate achieved in Megabytes/second (MB/sec), although for various reasons this is not to be relied upon as an accurate expectation of speed for real transfers. However, you are unlikely to achieve even half of this data rate viascp, rsync or sftp over the same route.\n4. Recursively download the contents of a directory on a remote location to a local destination.\nglobus-url-copy -vb -p 4 -fast -cc 4 -cd -r sshftp://username2@gridftp.remotesite.ac.uk/home/users/USERNAME/mydir/ /group_workspaces/jasmin/myworkspace/mydir/ Where:\n-cc N requests N concurrent transfers (in this case, each with p=4 parallel streams) -cd requests creation of the destination directory if this does not already exist -r denotes recursive transfer of directories -sync and -sync-level options can be used to synchronise data between the two locations, where destination files do not exist or differ (by criteria that can be selected) from corresponding source files. See -help option for details. Upload data (push data from JASMIN to remote server) \u0026nbsp; The above commands can also be adapted to invoke transfers from a local source to a remote destination, i.e. uploading data, since the commands all take the following general form:\nglobus-url-copy [OPTIONS] source-uri desination-uri Be sure to check your connection with the remote machine via a simple SSH login and then a directory listing as shown above.\nJASMIN host as remote server \u0026nbsp; So far the examples have used a server within JASMIN as the client in the GridFTP transfer. The transfer can be reversed so that the client is elsewhere and the JASMIN host is the server specified in the destination URI. The following command should work connecting to one of the xfer or hpxfer servers (consult those pages for current list).\nPush data to JASMIN from a remote server:\nglobus-url-copy -vb -p 8 -fast mydir/myfile sshftp://username@hpxfer3.jasmin.ac.uk/group_workspaces/jasmin/myworkspace/mydir/ Note that for this to work, you need to be able to authenticate over SSH to the JASMIN host. This should be possible if you can log in interactively, but will NOT work if you are using the command in a cron job or other situation where your ssh-agent (on the host remote to JASMIN) is not running and/or does not have access to your private key.\nInstead, for those situations, use Globus"
-      })
-      .add(
-      
-      
-      
-      
-      
-      {
-        id: 38,
+        id: 36,
         href: "/docs/short-term-project-storage/gws-alert-system/",
         title: "GWS Alert System",
         description: "App to alert GWS managers/deputies when their GWS is reaching capacity",
@@ -7192,7 +7162,7 @@ function initIndex() {
       
       
       {
-        id: 39,
+        id: 37,
         href: "/docs/short-term-project-storage/gws-etiquette/",
         title: "GWS etiquette",
         description: "GWS  etiquette",
@@ -7207,7 +7177,7 @@ function initIndex() {
       
       
       {
-        id: 40,
+        id: 38,
         href: "/docs/short-term-project-storage/gws-scanner/",
         title: "GWS Scanner",
         description: "GWS Scanner",
@@ -7222,7 +7192,7 @@ function initIndex() {
       
       
       {
-        id: 41,
+        id: 39,
         href: "/docs/short-term-project-storage/gws-scanner-ui/",
         title: "GWS Scanner UI",
         description: "User interface to GWS scanner",
@@ -7237,7 +7207,7 @@ function initIndex() {
       
       
       {
-        id: 42,
+        id: 40,
         href: "/docs/for-cloud-tenants/hosting-services/",
         title: "Hosting services",
         description: "Hosting Services on JASMIN",
@@ -7252,7 +7222,7 @@ function initIndex() {
       
       
       {
-        id: 43,
+        id: 41,
         href: "/docs/mass/how-to-apply-for-mass-access/",
         title: "How to apply for MASS access",
         description: "How to apply for MASS access",
@@ -7269,7 +7239,7 @@ function initIndex() {
       
       
       {
-        id: 44,
+        id: 42,
         href: "/docs/getting-started/how-to-contact-us-about-jasmin-issues/",
         title: "How to contact us about JASMIN...",
         description: "How to contact us about JASMIN issues",
@@ -7284,7 +7254,7 @@ function initIndex() {
       
       
       {
-        id: 45,
+        id: 43,
         href: "/docs/getting-started/how-to-login/",
         title: "How to login",
         description: "How to login to JASMIN",
@@ -7299,7 +7269,7 @@ function initIndex() {
       
       
       {
-        id: 46,
+        id: 44,
         href: "/docs/batch-computing/how-to-monitor-slurm-jobs/",
         title: "How to monitor Slurm jobs",
         description: "Getting information about your Slurm jobs",
@@ -7314,7 +7284,7 @@ function initIndex() {
       
       
       {
-        id: 47,
+        id: 45,
         href: "/docs/batch-computing/how-to-submit-a-job/",
         title: "How to submit a job",
         description: "How to submit a batch job to Slurm",
@@ -7329,7 +7299,7 @@ function initIndex() {
       
       
       {
-        id: 48,
+        id: 46,
         href: "/docs/batch-computing/how-to-submit-an-mpi-parallel-job/",
         title: "How to submit an MPI parallel job",
         description: "Submitting MPI parallel Slurm jobs",
@@ -7344,7 +7314,7 @@ function initIndex() {
       
       
       {
-        id: 49,
+        id: 47,
         href: "/docs/software-on-jasmin/idl/",
         title: "IDL",
         description: "Using IDL on JASMIN",
@@ -7359,7 +7329,7 @@ function initIndex() {
       
       
       {
-        id: 50,
+        id: 48,
         href: "/docs/short-term-project-storage/install-xfc-client/",
         title: "Install XFC client",
         description: "Install XFC client",
@@ -7374,7 +7344,7 @@ function initIndex() {
       
       
       {
-        id: 51,
+        id: 49,
         href: "/docs/interactive-computing/interactive-computing-overview/",
         title: "Interactive computing overview",
         description: "Interactive computing overview",
@@ -7389,7 +7359,7 @@ function initIndex() {
       
       
       {
-        id: 52,
+        id: 50,
         href: "/docs/for-cloud-tenants/introduction-to-the-jasmin-cloud/",
         title: "Introduction to the JASMIN Cloud",
         description: "Introduction to the JASMIN Cloud",
@@ -7404,7 +7374,7 @@ function initIndex() {
       
       
       {
-        id: 53,
+        id: 51,
         href: "/docs/for-cloud-tenants/cloud-storage/",
         title: "JASMIN Cloud Storage",
         description: "Storage on the JASMIN Cloud",
@@ -7419,7 +7389,7 @@ function initIndex() {
       
       
       {
-        id: 54,
+        id: 52,
         href: "/docs/uncategorized/jasmin-conditions-of-use/",
         title: "JASMIN Conditions of Use",
         description: "JASMIN Conditions of Use",
@@ -7434,7 +7404,7 @@ function initIndex() {
       
       
       {
-        id: 55,
+        id: 53,
         href: "/docs/interactive-computing/jasmin-notebooks-service/",
         title: "JASMIN Notebooks Service",
         description: "Jupyter Notebooks service on JASMIN",
@@ -7449,7 +7419,7 @@ function initIndex() {
       
       
       {
-        id: 56,
+        id: 54,
         href: "/docs/short-term-project-storage/object-store/s3-portal/",
         title: "JASMIN Object Store Portal",
         description: "JASMIN Object Store Portal",
@@ -7464,7 +7434,7 @@ function initIndex() {
       
       
       {
-        id: 57,
+        id: 55,
         href: "/docs/software-on-jasmin/jasmin-software-faqs/",
         title: "JASMIN software FAQs",
         description: "JASMIN software FAQs",
@@ -7479,7 +7449,7 @@ function initIndex() {
       
       
       {
-        id: 58,
+        id: 56,
         href: "/docs/getting-started/jasmin-status/",
         title: "JASMIN status",
         description: "Sources of information about the status of JASMIN services",
@@ -7494,7 +7464,7 @@ function initIndex() {
       
       
       {
-        id: 59,
+        id: 57,
         href: "/docs/getting-started/jasmin-training-accounts/",
         title: "JASMIN training accounts",
         description: "JASMIN training accounts",
@@ -7511,7 +7481,7 @@ function initIndex() {
       
       
       {
-        id: 60,
+        id: 58,
         href: "/docs/software-on-jasmin/jaspy-envs/",
         title: "Jaspy Software Environments (P...",
         description: "Jaspy Software Environments (Python 3, R and other tools)",
@@ -7528,7 +7498,7 @@ function initIndex() {
       
       
       {
-        id: 61,
+        id: 59,
         href: "/docs/short-term-project-storage/jdma/",
         title: "Joint-storage Data Migration A...",
         description: "Joint-storage Data Migration App (JDMA)",
@@ -7545,7 +7515,7 @@ function initIndex() {
       
       
       {
-        id: 62,
+        id: 60,
         href: "/docs/short-term-project-storage/object-store/object-store-legacy/",
         title: "Legacy Content for the JASMIN ...",
         description: "Legacy Content for the JASMIN Object Store",
@@ -7560,7 +7530,7 @@ function initIndex() {
       
       
       {
-        id: 63,
+        id: 61,
         href: "/docs/for-cloud-tenants/linux-admin/",
         title: "Linux admin",
         description: "Linux administration for JASMIN Cloud",
@@ -7575,7 +7545,7 @@ function initIndex() {
       
       
       {
-        id: 64,
+        id: 62,
         href: "/docs/interactive-computing/login-problems/",
         title: "Login problems",
         description: "Login problems?",
@@ -7590,7 +7560,7 @@ function initIndex() {
       
       
       {
-        id: 65,
+        id: 63,
         href: "/docs/interactive-computing/login-servers/",
         title: "Login servers",
         description: "Login servers",
@@ -7605,7 +7575,7 @@ function initIndex() {
       
       
       {
-        id: 66,
+        id: 64,
         href: "/docs/batch-computing/lotus-cluster-specification/",
         title: "LOTUS cluster specification",
         description: "Details of the current LOTUS cluster",
@@ -7620,7 +7590,7 @@ function initIndex() {
       
       
       {
-        id: 67,
+        id: 65,
         href: "/docs/batch-computing/lotus-overview/",
         title: "LOTUS overview",
         description: "Overview of the LOTUS batch computing cluster, part of JASMIN",
@@ -7635,7 +7605,7 @@ function initIndex() {
       
       
       {
-        id: 68,
+        id: 66,
         href: "/docs/short-term-project-storage/managing-a-gws/",
         title: "Managing a GWS",
         description: "Managing a GWS",
@@ -7650,7 +7620,7 @@ function initIndex() {
       
       
       {
-        id: 69,
+        id: 67,
         href: "/docs/software-on-jasmin/name-dispersion-model/",
         title: "Met Office NAME Model",
         description: "Met Office NAME Model",
@@ -7667,7 +7637,7 @@ function initIndex() {
       
       
       {
-        id: 70,
+        id: 68,
         href: "/docs/getting-started/migrate-jasmin-account-from-ceda/",
         title: "Migrate a JASMIN account from ...",
         description: "Migrate a JASMIN account from CEDA",
@@ -7682,7 +7652,7 @@ function initIndex() {
       
       
       {
-        id: 71,
+        id: 69,
         href: "/docs/software-on-jasmin/rocky9-migration-2024/",
         title: "Migration to Rocky Linux 9 2024",
         description: "Software and operating system changes - migration to Rocky Linux 9 (Summer 2024)",
@@ -7699,7 +7669,7 @@ function initIndex() {
       
       
       {
-        id: 72,
+        id: 70,
         href: "/docs/uncategorized/mobaxterm/",
         title: "MobaXterm (Windows terminal cl...",
         description: "Using MobaXterm with JASMIN",
@@ -7716,7 +7686,7 @@ function initIndex() {
       
       
       {
-        id: 73,
+        id: 71,
         href: "/docs/mass/moose-the-mass-client-user-guide/",
         title: "MOOSE (the MASS client) User G...",
         description: "MOOSE (the MASS client) User Guide",
@@ -7731,7 +7701,7 @@ function initIndex() {
       
       
       {
-        id: 74,
+        id: 72,
         href: "/docs/getting-started/multiple-account-types/",
         title: "Multiple account types",
         description: "Multiple account types",
@@ -7746,7 +7716,7 @@ function initIndex() {
       
       
       {
-        id: 75,
+        id: 73,
         href: "/docs/short-term-project-storage/nlds/",
         title: "Near-Line Data Store (NLDS)",
         description: "Near-line storage for group workspace data",
@@ -7761,7 +7731,7 @@ function initIndex() {
       
       
       {
-        id: 76,
+        id: 74,
         href: "/docs/mass/new-moose-and-mass/",
         title: "New MOOSE and MASS",
         description: "New MOOSE and MASS system",
@@ -7776,7 +7746,7 @@ function initIndex() {
       
       
       {
-        id: 77,
+        id: 75,
         href: "/docs/short-term-project-storage/nlds-step-by-step/",
         title: "NLDS Step by step",
         description: "Step-by-Step guide to setting up the NLDS client on JASMIN",
@@ -7791,7 +7761,7 @@ function initIndex() {
       
       
       {
-        id: 78,
+        id: 76,
         href: "/docs/short-term-project-storage/object-store/s3-tools/",
         title: "Object Store Tools",
         description: "Object Store Tools",
@@ -7806,7 +7776,7 @@ function initIndex() {
       
       
       {
-        id: 79,
+        id: 77,
         href: "/docs/for-cloud-tenants/openstack/",
         title: "OpenStack",
         description: "OpenStack on the JASMIN Cloud",
@@ -7821,7 +7791,7 @@ function initIndex() {
       
       
       {
-        id: 80,
+        id: 78,
         href: "/docs/batch-computing/orchid-gpu-cluster/",
         title: "Orchid GPU cluster",
         description: "Details of JASMIN's GPU cluster, ORCHID",
@@ -7836,7 +7806,7 @@ function initIndex() {
       
       
       {
-        id: 81,
+        id: 79,
         href: "/docs/getting-started/permissions-and-groups/",
         title: "Permissions and groups",
         description: "How permissions and groups are used to manage access to data stored on JASMIN.",
@@ -7853,7 +7823,7 @@ function initIndex() {
       
       
       {
-        id: 82,
+        id: 80,
         href: "/docs/for-cloud-tenants/platform-in-depth-jupyterhub/",
         title: "Platforms In Depth - JupyterHu...",
         description: "In depth look at the JupyterHub platforms",
@@ -7868,7 +7838,7 @@ function initIndex() {
       
       
       {
-        id: 83,
+        id: 81,
         href: "/docs/for-cloud-tenants/platform-in-depth-k8s/",
         title: "Platforms In Depth - Kubernetes",
         description: "In depth look at the Kubernetes platforms",
@@ -7883,7 +7853,7 @@ function initIndex() {
       
       
       {
-        id: 84,
+        id: 82,
         href: "/docs/for-cloud-tenants/platform-in-depth-slurm/",
         title: "Platforms In Depth - Slurm",
         description: "In depth look at the Slurm platform",
@@ -7898,7 +7868,7 @@ function initIndex() {
       
       
       {
-        id: 85,
+        id: 83,
         href: "/docs/for-cloud-tenants/platform-in-depth-workstation/",
         title: "Platforms In Depth - Workstations",
         description: "In depth look at the workstation platforms",
@@ -7913,7 +7883,7 @@ function initIndex() {
       
       
       {
-        id: 86,
+        id: 84,
         href: "/docs/software-on-jasmin/postgres-databases-on-request/",
         title: "Postgres databases on request",
         description: "Postgres databases on request",
@@ -7928,7 +7898,7 @@ function initIndex() {
       
       
       {
-        id: 87,
+        id: 85,
         href: "/docs/getting-started/present-ssh-key/",
         title: "Present your SSH key",
         description: "Present your SSH key for an SSH connection",
@@ -7943,7 +7913,7 @@ function initIndex() {
       
       
       {
-        id: 88,
+        id: 86,
         href: "/docs/uncategorized/processing-requests-for-resources/",
         title: "Processing requests for resources",
         description: "Processing requests for resources",
@@ -7958,7 +7928,7 @@ function initIndex() {
       
       
       {
-        id: 89,
+        id: 87,
         href: "/docs/interactive-computing/project-specific-servers/",
         title: "Project-specific servers",
         description: "Project-specific servers",
@@ -7973,7 +7943,7 @@ function initIndex() {
       
       
       {
-        id: 90,
+        id: 88,
         href: "/docs/software-on-jasmin/python-virtual-environments/",
         title: "Python Virtual Environments",
         description: "Python Virtual Environments on JASMIN",
@@ -7990,7 +7960,7 @@ function initIndex() {
       
       
       {
-        id: 91,
+        id: 89,
         href: "/docs/software-on-jasmin/quickstart-software-envs/",
         title: "Quickstart for activating/deac...",
         description: "Quickstart for activating/deactivating software environments",
@@ -8005,7 +7975,7 @@ function initIndex() {
       
       
       {
-        id: 92,
+        id: 90,
         href: "/docs/uncategorized/rate-limiting/",
         title: "Rate Limiting",
         description: "Rate limiting applied to JASMIN web services",
@@ -8020,7 +7990,7 @@ function initIndex() {
       
       
       {
-        id: 93,
+        id: 91,
         href: "/docs/data-transfer/rclone/",
         title: "rclone",
         description: "A \"Swiss army knife\" tool for data transfers",
@@ -8037,7 +8007,7 @@ function initIndex() {
       
       
       {
-        id: 94,
+        id: 92,
         href: "/docs/getting-started/reconfirm-email-address/",
         title: "Reconfirm JASMIN account email...",
         description: "Reconfirm JASMIN account email address",
@@ -8052,7 +8022,7 @@ function initIndex() {
       
       
       {
-        id: 95,
+        id: 93,
         href: "/docs/uncategorized/requesting-resources/",
         title: "Requesting resources",
         description: "Requesting resources",
@@ -8067,7 +8037,7 @@ function initIndex() {
       
       
       {
-        id: 96,
+        id: 94,
         href: "/docs/getting-started/reset-jasmin-account-password/",
         title: "Reset JASMIN account password",
         description: "Reset JASMIN account password",
@@ -8082,7 +8052,7 @@ function initIndex() {
       
       
       {
-        id: 97,
+        id: 95,
         href: "/docs/data-transfer/rsync-scp-sftp/",
         title: "rsync, scp, sftp",
         description: "Data Transfer Tools: rsync, scp, sftp",
@@ -8097,7 +8067,7 @@ function initIndex() {
       
       
       {
-        id: 98,
+        id: 96,
         href: "/docs/software-on-jasmin/running-python-on-jasmin/",
         title: "Running python on JASMIN",
         description: "Running python on JASMIN",
@@ -8112,7 +8082,7 @@ function initIndex() {
       
       
       {
-        id: 99,
+        id: 97,
         href: "/docs/software-on-jasmin/running-r-on-jasmin/",
         title: "Running R on JASMIN",
         description: "Running R on JASMIN",
@@ -8127,7 +8097,7 @@ function initIndex() {
       
       
       {
-        id: 100,
+        id: 98,
         href: "/docs/uncategorized/scheduled-maintenance/",
         title: "Scheduled maintenance",
         description: "About regular maintenance for JASMIN \u0026 CEDA services",
@@ -8142,7 +8112,7 @@ function initIndex() {
       
       
       {
-        id: 101,
+        id: 99,
         href: "/docs/data-transfer/scheduling-automating-transfers/",
         title: "Scheduling/Automating Transfers",
         description: "Scheduling/Automating Transfers",
@@ -8157,7 +8127,7 @@ function initIndex() {
       
       
       {
-        id: 102,
+        id: 100,
         href: "/docs/interactive-computing/sci-servers/",
         title: "Scientific analysis servers",
         description: "Details of the scientific analysis servers",
@@ -8172,7 +8142,7 @@ function initIndex() {
       
       
       {
-        id: 103,
+        id: 101,
         href: "/docs/short-term-project-storage/secondary-copy-using-elastic-tape/",
         title: "Secondary copy using Elastic Tape",
         description: "Secondary copy using Elastic Tape",
@@ -8189,7 +8159,7 @@ function initIndex() {
       
       
       {
-        id: 104,
+        id: 102,
         href: "/docs/mass/setting-up-your-jasmin-account-for-access-to-mass/",
         title: "Setting up your JASMIN account...",
         description: "Steps to access MASS from JASMIN",
@@ -8204,7 +8174,7 @@ function initIndex() {
       
       
       {
-        id: 105,
+        id: 103,
         href: "/docs/short-term-project-storage/share-gws-data-on-jasmin/",
         title: "Sharing GWS data on JASMIN",
         description: "Sharing GWS data with other users elsewhere on JASMIN",
@@ -8219,7 +8189,7 @@ function initIndex() {
       
       
       {
-        id: 106,
+        id: 104,
         href: "/docs/short-term-project-storage/share-gws-data-via-http/",
         title: "Sharing GWS data via HTTP",
         description: "Sharing GWS data via HTTP",
@@ -8234,7 +8204,7 @@ function initIndex() {
       
       
       {
-        id: 107,
+        id: 105,
         href: "/docs/software-on-jasmin/share-software-envs/",
         title: "Sharing software environments",
         description: "Sharing software environments",
@@ -8249,7 +8219,7 @@ function initIndex() {
       
       
       {
-        id: 108,
+        id: 106,
         href: "/docs/batch-computing/slurm-queues/",
         title: "Slurm queues",
         description: "Slurm queues/partitions for batch job submissions to the LOTUS \u0026 ORCHID clusters",
@@ -8264,7 +8234,7 @@ function initIndex() {
       
       
       {
-        id: 109,
+        id: 107,
         href: "/docs/batch-computing/slurm-quick-reference/",
         title: "Slurm quick reference",
         description: "Slurm commands and environment variables",
@@ -8279,7 +8249,7 @@ function initIndex() {
       
       
       {
-        id: 110,
+        id: 108,
         href: "/docs/batch-computing/slurm-scheduler-overview/",
         title: "Slurm scheduler overview",
         description: "Overview of the LOTUS batch scheduler, Slurm",
@@ -8294,7 +8264,7 @@ function initIndex() {
       
       
       {
-        id: 111,
+        id: 109,
         href: "/docs/batch-computing/slurm-status/",
         title: "Slurm status",
         description: "LOTUS/ORCHID Slurm scheduler status",
@@ -8309,7 +8279,7 @@ function initIndex() {
       
       
       {
-        id: 112,
+        id: 110,
         href: "/docs/software-on-jasmin/software-overview/",
         title: "Software Overview",
         description: "Overview of software on JASMIN",
@@ -8324,7 +8294,7 @@ function initIndex() {
       
       
       {
-        id: 113,
+        id: 111,
         href: "/docs/getting-started/ssh-auth/",
         title: "SSH public key authentication",
         description: "SSH public key authentication",
@@ -8339,7 +8309,7 @@ function initIndex() {
       
       
       {
-        id: 114,
+        id: 112,
         href: "/docs/short-term-project-storage/faqs-storage/",
         title: "Storage FAQs and issues",
         description: "Storage FAQs and issues",
@@ -8354,7 +8324,7 @@ function initIndex() {
       
       
       {
-        id: 115,
+        id: 113,
         href: "/docs/uncategorized/test-doc/",
         title: "Test doc",
         description: "Test doc",
@@ -8371,7 +8341,7 @@ function initIndex() {
       
       
       {
-        id: 116,
+        id: 114,
         href: "/docs/software-on-jasmin/jasmin-sci-software-environment/",
         title: "The \"jasmin-sci\" software envi...",
         description: "The \"jasmin-sci\" software environment",
@@ -8386,7 +8356,7 @@ function initIndex() {
       
       
       {
-        id: 117,
+        id: 115,
         href: "/docs/for-cloud-tenants/azimuth-cloud-portal/",
         title: "The Azimuth Cloud Portal",
         description: "Introduction to the Azimuth cloud portal",
@@ -8403,7 +8373,7 @@ function initIndex() {
       
       
       {
-        id: 118,
+        id: 116,
         href: "/docs/interactive-computing/jasmin-notebooks-service-with-gpus/",
         title: "The JASMIN Notebooks Service w...",
         description: "JASMIN Notebooks Service with GPUs enabled",
@@ -8418,7 +8388,7 @@ function initIndex() {
       
       
       {
-        id: 119,
+        id: 117,
         href: "/docs/short-term-project-storage/object-store/jasmin-object-store/",
         title: "The JASMIN Object Store",
         description: "The JASMIN Object Store",
@@ -8433,7 +8403,7 @@ function initIndex() {
       
       
       {
-        id: 120,
+        id: 118,
         href: "/docs/getting-started/tips-for-new-users/",
         title: "tips-for-new-users",
         description: "Tips for new users",
@@ -8448,7 +8418,7 @@ function initIndex() {
       
       
       {
-        id: 121,
+        id: 119,
         href: "/docs/short-term-project-storage/xfc/",
         title: "Transfer Cache (XFC)",
         description: "Transfer Cache (XFC)",
@@ -8463,13 +8433,13 @@ function initIndex() {
       
       
       {
-        id: 122,
+        id: 120,
         href: "/docs/interactive-computing/transfer-servers/",
         title: "Transfer servers",
         description: "Transfer servers",
         
         
-        content: "This article lists the JASMIN data transfer servers and provides links to how they can be used.\nPlease see further articles in the Data Transfer category for details on managing your data transfers.\nThe standard transfer servers provide a basic and functional service for moving small amounts of data over relatively short distances. However, the high-performance data transfer servers shown above are also available for those with particular requirements.\n\u0026nbsp; Please make sure you use the dedicated transfer servers and not the scientific analysis or login servers for any significant data transfers. The transfer servers have been configured to achieve the best transfer rates and will perform significantly better than other servers on jasmin, while maintaining the performance of analysis servers for interactive use by other users. JASMIN provides specific servers for managing data transfers. These are:\nxfer servers \u0026nbsp; Server Purpose Access requirements Further information xfer-vm-01.jasmin.ac.uk Virtual machine for general purpose data transfers. jasmin-login Accessible from any network xfer-vm-02.jasmin.ac.uk Virtual machine for general purpose data transfers. jasmin-login Accessible from any network xfer-vm-03.jasmin.ac.uk Virtual machine for general purpose data transfers.\nHas cron for scheduled transfers, see notes. jasmin-login Accessible from any network. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same advice applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; Server Purpose Access requirements Further information hpxfer3.jasmin.ac.uk Physical machine for higher-performance data transfers jasmin-login access role hpxfer4.jasmin.ac.uk Physical machine for higher-performance data transfers jasmin-login access role Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above The hpxfer role, and the supplying of client IP addresses is no longer required for these new servers. Avoid getting locked out with SSH transfers \u0026nbsp; Access rules in place to enable secure SSH connections from any network are sensitive to repeated, rapid connection attempts, which can result in being \u0026ldquo;locked out\u0026rdquo;. This may happen when attempting the transfer of several small files in quick succession with separate SSH connections for each. All the above servers behave the same way in this respect, so please be aware of this when managing your transfers.\n\u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx-login, sci, xfer and hpxfer machines). In other words, the use ofsu or sudo is not permitted. Please be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudoon a JASMIN machine: expect some follow-up from the JASMIN team if you do! GridFTP server \u0026nbsp; For users of the (now legacy), certificate-based GridFTP only (specifically, gsiftp:// using the globus-url-copy client), there is a new server:\nServer Purpose Access requirements Further information gridftp1.jasmin.ac.uk Physical machine for legacy GridFTP transfers. No SSH login access.\nApply for additional access role here\u0026nbsp; . Old machine, continue using for now gridftp2.jasmin.ac.uk Physical machine for legacy GridFTP transfers. No SSH login access.\njasmin-login access role New machine, NOT YET AVAILABLE Users of this service are now strongly advised to migrate to using Globus instead."
+        content: "This article lists the JASMIN data transfer servers and provides links to how they can be used.\nPlease see further articles in the Data Transfer category for details on managing your data transfers.\nThe standard transfer servers provide a basic and functional service for moving small amounts of data over relatively short distances. However, the high-performance data transfer servers shown above are also available for those with particular requirements.\n\u0026nbsp; Please make sure you use the dedicated transfer servers and not the scientific analysis or login servers for any significant data transfers. The transfer servers have been configured to achieve the best transfer rates and will perform significantly better than other servers on jasmin, while maintaining the performance of analysis servers for interactive use by other users. JASMIN provides specific servers for managing data transfers. These are:\nxfer servers \u0026nbsp; Server Purpose Access requirements Further information xfer-vm-01.jasmin.ac.uk Virtual machine for general purpose data transfers. jasmin-login Accessible from any network xfer-vm-02.jasmin.ac.uk Virtual machine for general purpose data transfers. jasmin-login Accessible from any network xfer-vm-03.jasmin.ac.uk Virtual machine for general purpose data transfers.\nHas cron for scheduled transfers, see notes. jasmin-login Accessible from any network. Notes:\nSimilar config on all 3 (no domain or reverse DNS restrictions now) Same advice applies re. SSH client version, see login nodes If using cron on xfer-vm-03, you must use crontamer Throttle any automated transfers to avoid many SSH connections in quick succession, otherwise you may get blocked. Consider using Globus for any data transfer in or out of JASMIN A new software collection jasmin-xfer has now been added to these servers, providing these tools: emacs-nox ftp lftp parallel python3-requests python3.11 python3.11-requests rclone rsync s3cmd screen xterm hpxfer servers \u0026nbsp; Server Purpose Access requirements Further information hpxfer3.jasmin.ac.uk Physical machine for higher-performance data transfers jasmin-login access role hpxfer4.jasmin.ac.uk Physical machine for higher-performance data transfers jasmin-login access role Notes:\nTested with sshftp (GridFTP over SSH) from ARCHER2 Same applies re. SSH client version, see login nodes The software collection jasmin-xfer available as per xfer servers, above The hpxfer role, and the supplying of client IP addresses is no longer required for these new servers. Globus \u0026nbsp; To use Globus, you interact with the Globus service and a collection rather than a particular server.\nAvoid getting locked out with SSH transfers \u0026nbsp; Access rules in place to enable secure SSH connections from any network are sensitive to repeated, rapid connection attempts, which can result in being \u0026ldquo;locked out\u0026rdquo;. This may happen when attempting the transfer of several small files in quick succession with separate SSH connections for each. All the above servers behave the same way in this respect, so please be aware of this when managing your transfers.\n\u0026nbsp; Users are not permitted to execute commands which require administrative privileges. This applies to all hosts in the managed part of JASMIN where users have SSH login access (for example login, nx-login, sci, xfer and hpxfer machines). In other words, the use ofsu or sudo is not permitted. Please be careful when typing commands, particularly if you have multiple terminal windows open on your own computer, that you do not accidentally attempt sudoon a JASMIN machine: expect some follow-up from the JASMIN team if you do!"
       })
       .add(
       
@@ -8478,13 +8448,13 @@ function initIndex() {
       
       
       {
-        id: 123,
+        id: 121,
         href: "/docs/data-transfer/transfers-from-archer2/",
         title: "Transfers from ARCHER2",
         description: "Transferring data from ARCHER2 to JASMIN, efficiently",
         
         
-        content: "Choice of available Tools/Routes \u0026nbsp; See Data Transfer Tools for general information.\nUsers transferring data between ARCHER2 and JASMIN are often transferring relatively large sets of data, so it is important to choose the most appropriate route, method and tools to ensure you get the most efficient and reliable transfer experience. This can vary depending on system and network conditions.\nThe recommended option (as of mid-2024) is now Globus.\nSee here for a quick-start guide to using Globus with JASMIN. Further aspects specific to transfers between ARCHER2 and JASMIN are covered below. Common requirements to all of the methods are:\nan account with the jasmin-login\u0026nbsp; access role on JASMIN. a login account at ARCHER2 Please note:\nEnquiries about access to or use of ARCHER2 should be directed to ARCHER2 support ( support@archer2.ac.uk) Enquiries about access to or use of JASMIN should be directed to JASMIN support (use beacon, below-right or support@jasmin.ac.uk) Available transfer methods \u0026nbsp; Globus (recommended) Basic SSH transfer (slow but convenient) Gridftp using SSH authentication (efficient, currently still available but now superceded in convenience/reliability by Globus) 1st choice method: Globus \u0026nbsp; This is now the recommended method, because:\nit always ensures the best performance it is a managed transfer service, less prone to overloading and system issues it is actively maintained it is easy to use Please read our quick-start guide to using Globus with JASMIN first, then come back here.\nBecause Globus can do transfers between two third-party locations, you don\u0026rsquo;t necessarily need to invoke the transfers from a machine on JASMIN, or ARCHER2 (even though it\u0026rsquo;s those two locations which will be involved as source and destination for the transfer). This could be done from your laptop or desktop, but could also be done from within a workflow that\u0026rsquo;s running somewhere (e.g. ARCHER2 or JASMIN). So, first think about where you want to control the process from.\nIn that location, follow the steps below:\n1. Set up the Globus Command Line interface\nfollow the steps described here 2. Identify the collections that you want to transfer between, for your transfer:\nIn this case, these are likely to be:\nthe ARCHER2 filesystems collection\u0026nbsp; , with ID 3e90d018-0d05-461a-bbaf-aab605283d21 the JASMIN default collection\u0026nbsp; , with ID a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 Set an environment variable for each of these, to avoid having to type the ID each time: export a2c=3e90d018-0d05-461a-bbaf-aab605283d21 export jdc=a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 3. Check access to these collections\nThese collections are restricted-access rather than public, so your access to them is via a series of authentication/authorisation/consent steps which the following actions will guide you through:\nglobus ls $a2c:/~/ (ARCHER2 home directory file listing should appear) globus ls $jdc:/~/ (JASMIN home directory file listing should appear) The steps above establish your ability to interact with each of the specified collections using Globus. Once you\u0026rsquo;ve completed each one, you should see a directory listing.\nIn both cases, if you don\u0026rsquo;t yet have consent and authentication for that particular collection, you will be provided with the suggested command to run in your terminal environment:\nglobus ls $a2c$: The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it. Please run: globus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]\u0026#39; to login with the required scopes. Run the suggested command: globus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]\u0026#39; You are running \u0026#39;globus session consent\u0026#39;, which should automatically open a browser window for you to authenticate with specific identities. If this fails or you experience difficulty, try \u0026#39;globus session consent --no-local-server\u0026#39; --- and complete the authentication process in the browser window.\nThe equivalent command for the JASMIN Default Collection is this:\nglobus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]\u0026#39; Once you\u0026rsquo;ve completed these steps for both source and destination collections, the globus ls commands you tried earlier should now work, and you are now ready to try a transfer.\n\u0026nbsp; Authentication with each collection is valid for 30 days. To avoid this expiring at an inconvenient time (e.g. if you have repeating transfers in some automated workflow but know that you will be away on leave etc), you can run the 2 commands above to refresh authentication with each collection in advance. 4. Initiate a simple transfer\nglobus transfer $a2c:/~/1M.dat $jdc:/~/1M.dat Message: The transfer has been accepted and a task has been created and queued for execution Task ID: aa0597a4-80a7-11ef-b36b-a1206a7ee65f This should complete quite quickly for a small file, but for a larger file you can check the progress using the task ID.\nglobus task show aa0597a4-80a7-11ef-b36b-a1206a7ee65f Label: None Task ID: aa0597a4-80a7-11ef-b36b-a1206a7ee65f Is Paused: False Type: TRANSFER Directories: 0 Files: 1 Status: SUCCEEDED Request Time: 2024-10-02T10:18:32+00:00 Faults: 0 Total Subtasks: 2 Subtasks Succeeded: 2 Subtasks Pending: 0 Subtasks Retrying: 0 Subtasks Failed: 0 Subtasks Canceled: 0 Subtasks Expired: 0 Subtasks with Skipped Errors: 0 Completion Time: 2024-10-02T10:18:39+00:00 Source Endpoint: Archer2 file systems Source Endpoint ID: 3e90d018-0d05-461a-bbaf-aab605283d21 Destination Endpoint: JASMIN Default Collection Destination Endpoint ID: a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 Bytes Transferred: 1000000 Bytes Per Second: 148452 If you wanted to use the above in a script, and block/wait for the transfer task to complete before continuing, you can use globus task wait \u0026lt;taskid\u0026gt;, for example:\nglobus task wait aa0597a4-80a7-11ef-b36b-a1206a7ee65f will now return control immediately, since the task has completed.\nGlobus transfer tasks are asynchronous, submitted to your own mini-queue, where you can have as many queued tasks as you like but only 3 in progress at any one time. This ensures good performance for all users, but your tasks do not linger in long multi-user queues. The best way to reassure yourself of this is to try it out.\nFor help with any globus command you can do globus \u0026lt;command\u0026gt; --help.\nFurther examples including sync and automation are given in Globus command line interface, with further examples in the Globus documentation at https://\u0026nbsp; .\nRelevant examples:\nsync with wait\u0026nbsp; using the CLI. Repeatable transfer\u0026nbsp; using the PythonSDK (more advanced) Note that Globus transfers (and other actions) can be managed \u0026amp; monitored by:\na web interface the command-line interface, and a Python library all of which interact with the same underlying service.\nNCAS-CMS users should note that work is currently underway to adopt Globus as a drop-in replacement for certificate-based gridftp in Rose suites currently in use for automating processing and transferring to JASMIN.\n2nd choice method: Basic SSH transfer \u0026nbsp; scp/rsync/sftp: Simple transfers using easy method, pushing data to general purpose xfer nodes. Convenient, but limited performance.\nsource dest notes login.archer2.ac.uk xfer-vm-0[123].jasmin.ac.uk to virtual machine at JASMIN end login.archer2.ac.uk hpxfer[34].jasmin.ac.uk to high-performance physical machine at JASMIN end 3rd choice method: gridftp over SSH \u0026nbsp; GridFTP over SSH: GridFTP performance with convenience of SSH. Requires persistent ssh agent on local machine where you have your JASMIN key.\nsource dest login.archer2.ac.uk hpxfer[34].jasmin.ac.uk The next-best method for transfers between ARCHER2 and JASMIN is using the globus-url-copy client tool with SSH authentication, as described below: (This is not Globus, however, despite the tool name!)\n1. Load your SSH keys for both JASMIN and ARCHER2 on your local machine, then log in to ARCHER2.\nYou will need to have loaded into your SSH agent:\nThe SSH key associated with your JASMIN account The SSH key associated with your ARCHER2 account, if you have one (it is recommended to use a different one than for JASMIN, if so) You also need to ensure that you connect with the -A option for agent forwarding, to enable the JASMIN key to be available for the onward authentication with the JASMIN server.\nNote that you do not (and should not) copy your JASMIN private key to ARCHER2. It should stay on your local machine. This does mean that you need an ssh- agent running on your local machine, so this method may not work for long- running continuous processes that need to spawn transfers.\nssh-add \u0026lt;jasmin ssh key\u0026gt; (path to your JASMIN ssh key file on your local machine) ssh-add \u0026lt;archer2 ssh key\u0026gt; (path to your ARCHER2 ssh key if you have one, on on your local machine) ssh-add -l check both keys are loaded (are both key signatures listed in the output?) ssh -A \u0026lt;archer2-username\u0026gt;@login.archer2.ac.uk #(ARCHER2 now uses multi-factor auth at this stage) 2. Load the gct module (to make the current globus-url-copy command available in the path)\nmodule load gct which globus-url-copy /work/y07/shared/gct/v6.2.20201212/bin/globus-url-copy 3. Transfer a single file to your home directory on JASMIN (limited space, but to check things work)\nglobus-url-copy -vb \u0026lt;file\u0026gt; sshftp://\u0026lt;jasmin-username\u0026gt;@hpxfer3.jasmin.ac.uk/~/\u0026lt;file\u0026gt; Obviously, replace \u0026lt;file\u0026gt; with the path to the file you want to transfer.\n4. Recursively transfer a directory of files, using the concurrency option for multiple parallel transfers\nglobus-url-copy -vb -cd -r -cc 4 SRC/DATA/ sshftp://\u0026lt;jasmin-username\u0026gt;@hpxfer3.jasmin.ac.uk/DEST/DATA/ NOTE: - The -cc option initiates the parallel transfer of several files at a time, which achieves good overall transfer rates for recursive directory transfers. This is different from using the -p N -fast options which use parallel network streams to parallelism the transfer of each file. A sensible value for -cc is 2 or 4, whereas a sensible value for -p is between 2 and 16. In both cases, try first and avoid numbers at the higher end, which can increase resource usage without further performance gains.\nHere, the options used are (see man globus-url-copy for full details):\n-vb | -verbose-perf During the transfer, display the number of bytes transferred and the transfer rate per second. Show urls being transferred -concurrency | -cc Number of concurrent ftp connections to use for multiple transfers. -cd | -create-dest Create destination directory if needed -r | -recurse Copy files in subdirectories5. Use the sync option to synchronise 2 directories between source and target file systems:\nglobus-url-copy -vb -cd -r -cc 4 -sync SRC/DATA/ sshftp://\u0026lt;jasmin-username\u0026gt;@hpxfer3.jasmin.ac.uk/DEST/DATA/ where SRC/DATA/ and /DEST/DATA/ are source and destination paths, respectively (include trailing slash).\nOptions are as before but with:\n-sync Only transfer files where the destination does not exist or differs from the source. -sync-level controls how to determine if files differNote that the default sync level is 2, see level descriptions below, which only compares time stamps. If you want to include a file integrity check using checksums, you need to use-sync-level 3 but there may be a performance cost.\n-sync-level Choose criteria for determining if files differ when performing a sync transfer. Level 0 will only transfer if the destination does not exist. Level 1 will transfer if the size of the destination does not match the size of the source. Level 2 will transfer if the timestamp of the destination is older than the timestamp of the source, or the sizes do not match. Level 3 will perform a checksum of the source and destination and transfer if the checksums do not match, or the sizes do not match. The default sync level is 2.So a full sync including comparison of checksums would be:\nglobus-url-copy -vb -cd -r -cc 4 -sync -sync-level 3 SRC/DATA/ sshftp://\u0026lt;jasmin-username\u0026gt;@hpxfer3.jasmin.ac.uk/DEST/DATA/"
+        content: "Choice of available Tools/Routes \u0026nbsp; See Data Transfer Tools for general information.\nUsers transferring data between ARCHER2 and JASMIN are often transferring relatively large sets of data, so it is important to choose the most appropriate route, method and tools to ensure you get the most efficient and reliable transfer experience. This can vary depending on system and network conditions.\nThe recommended option (as of mid-2024) is now Globus.\nSee here for a quick-start guide to using Globus with JASMIN. Further aspects specific to transfers between ARCHER2 and JASMIN are covered below. Common requirements to all of the methods are:\nan account with the jasmin-login\u0026nbsp; access role on JASMIN. a login account at ARCHER2 Please note:\nEnquiries about access to or use of ARCHER2 should be directed to ARCHER2 support ( support@archer2.ac.uk) Enquiries about access to or use of JASMIN should be directed to JASMIN support (use beacon, below-right or support@jasmin.ac.uk) Available transfer methods \u0026nbsp; Globus (recommended) Basic SSH transfer (slow but convenient) 1st choice method: Globus \u0026nbsp; This is now the recommended method, because:\nit always ensures the best performance it is a managed transfer service, less prone to overloading and system issues it is actively maintained it is easy to use Please read our quick-start guide to using Globus with JASMIN first, then come back here.\nBecause Globus can do transfers between two third-party locations, you don\u0026rsquo;t necessarily need to invoke the transfers from a machine on JASMIN, or ARCHER2 (even though it\u0026rsquo;s those two locations which will be involved as source and destination for the transfer). This could be done from your laptop or desktop, but could also be done from within a workflow that\u0026rsquo;s running somewhere (e.g. ARCHER2 or JASMIN). So, first think about where you want to control the process from.\nIn that location, follow the steps below:\n1. Set up the Globus Command Line interface\nfollow the steps described here 2. Identify the collections that you want to transfer between, for your transfer:\nIn this case, these are likely to be:\nthe ARCHER2 filesystems collection\u0026nbsp; , with ID 3e90d018-0d05-461a-bbaf-aab605283d21 the JASMIN default collection\u0026nbsp; , with ID a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 Set an environment variable for each of these, to avoid having to type the ID each time: export a2c=3e90d018-0d05-461a-bbaf-aab605283d21 export jdc=a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 3. Check access to these collections\nThese collections are restricted-access rather than public, so your access to them is via a series of authentication/authorisation/consent steps which the following actions will guide you through:\nglobus ls $a2c:/~/ (ARCHER2 home directory file listing should appear) globus ls $jdc:/~/ (JASMIN home directory file listing should appear) The steps above establish your ability to interact with each of the specified collections using Globus. Once you\u0026rsquo;ve completed each one, you should see a directory listing.\nIn both cases, if you don\u0026rsquo;t yet have consent and authentication for that particular collection, you will be provided with the suggested command to run in your terminal environment:\nglobus ls $a2c$: The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it. Please run: globus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]\u0026#39; to login with the required scopes. Run the suggested command: globus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/3e90d018-0d05-461a-bbaf-aab605283d21/data_access]\u0026#39; You are running \u0026#39;globus session consent\u0026#39;, which should automatically open a browser window for you to authenticate with specific identities. If this fails or you experience difficulty, try \u0026#39;globus session consent --no-local-server\u0026#39; --- and complete the authentication process in the browser window.\nThe equivalent command for the JASMIN Default Collection is this:\nglobus session consent \u0026#39;urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]\u0026#39; Once you\u0026rsquo;ve completed these steps for both source and destination collections, the globus ls commands you tried earlier should now work, and you are now ready to try a transfer.\n\u0026nbsp; Authentication with each collection is valid for 30 days. To avoid this expiring at an inconvenient time (e.g. if you have repeating transfers in some automated workflow but know that you will be away on leave etc), you can run the 2 commands above to refresh authentication with each collection in advance. 4. Initiate a simple transfer\nglobus transfer $a2c:/~/1M.dat $jdc:/~/1M.dat Message: The transfer has been accepted and a task has been created and queued for execution Task ID: aa0597a4-80a7-11ef-b36b-a1206a7ee65f This should complete quite quickly for a small file, but for a larger file you can check the progress using the task ID.\nglobus task show aa0597a4-80a7-11ef-b36b-a1206a7ee65f Label: None Task ID: aa0597a4-80a7-11ef-b36b-a1206a7ee65f Is Paused: False Type: TRANSFER Directories: 0 Files: 1 Status: SUCCEEDED Request Time: 2024-10-02T10:18:32+00:00 Faults: 0 Total Subtasks: 2 Subtasks Succeeded: 2 Subtasks Pending: 0 Subtasks Retrying: 0 Subtasks Failed: 0 Subtasks Canceled: 0 Subtasks Expired: 0 Subtasks with Skipped Errors: 0 Completion Time: 2024-10-02T10:18:39+00:00 Source Endpoint: Archer2 file systems Source Endpoint ID: 3e90d018-0d05-461a-bbaf-aab605283d21 Destination Endpoint: JASMIN Default Collection Destination Endpoint ID: a2f53b7f-1b4e-4dce-9b7c-349ae760fee0 Bytes Transferred: 1000000 Bytes Per Second: 148452 If you wanted to use the above in a script, and block/wait for the transfer task to complete before continuing, you can use globus task wait \u0026lt;taskid\u0026gt;, for example:\nglobus task wait aa0597a4-80a7-11ef-b36b-a1206a7ee65f will now return control immediately, since the task has completed.\nGlobus transfer tasks are asynchronous, submitted to your own mini-queue, where you can have as many queued tasks as you like but only 3 in progress at any one time. This ensures good performance for all users, but your tasks do not linger in long multi-user queues. The best way to reassure yourself of this is to try it out.\nFor help with any globus command you can do globus \u0026lt;command\u0026gt; --help.\nFurther examples including sync and automation are given in Globus command line interface, with further examples in the Globus documentation at https://\u0026nbsp; .\nRelevant examples:\nsync with wait\u0026nbsp; using the CLI. Repeatable transfer\u0026nbsp; using the PythonSDK (more advanced) Note that Globus transfers (and other actions) can be managed \u0026amp; monitored by:\na web interface the command-line interface, and a Python library all of which interact with the same underlying service.\nNCAS-CMS users should note that work is currently underway to adopt Globus as a drop-in replacement for certificate-based gridftp in Rose suites currently in use for automating processing and transferring to JASMIN.\n2nd choice method: Basic SSH transfer \u0026nbsp; scp/rsync/sftp: Simple transfers using easy method, pushing data to general purpose xfer nodes. Convenient, but limited performance.\nsource dest notes login.archer2.ac.uk xfer-vm-0[123].jasmin.ac.uk to virtual machine at JASMIN end login.archer2.ac.uk hpxfer[34].jasmin.ac.uk to high-performance physical machine at JASMIN end"
       })
       .add(
       
@@ -8493,7 +8463,7 @@ function initIndex() {
       
       
       {
-        id: 124,
+        id: 122,
         href: "/docs/getting-started/understanding-jasmin-storage/",
         title: "Understanding JASMIN storage",
         description: "Understanding JASMIN storage",
@@ -8508,7 +8478,7 @@ function initIndex() {
       
       
       {
-        id: 125,
+        id: 123,
         href: "/docs/getting-started/update-a-jasmin-account/",
         title: "Update a JASMIN account",
         description: "Updating your JASMIN account profile",
@@ -8523,7 +8493,7 @@ function initIndex() {
       
       
       {
-        id: 126,
+        id: 124,
         href: "/docs/workflow-management/using-cron/",
         title: "Using Cron",
         description: "Using Cron",
@@ -8540,7 +8510,7 @@ function initIndex() {
       
       
       {
-        id: 127,
+        id: 125,
         href: "/docs/software-on-jasmin/matplotlib/",
         title: "Using Matplotlib for visualisa...",
         description: "Using Matplotlib for visualisation on JASMIN",
@@ -8555,7 +8525,7 @@ function initIndex() {
       
       
       {
-        id: 128,
+        id: 126,
         href: "/docs/short-term-project-storage/introduction-to-group-workspaces/",
         title: "What is a Group Workspace?",
         description: "What is a Group Workspace?",
@@ -8572,7 +8542,7 @@ function initIndex() {
       
       
       {
-        id: 129,
+        id: 127,
         href: "/docs/workflow-management/rose-cylc-on-jasmin/",
         title: "Workflow Management with rose/...",
         description: "Workflow Management with rose/cylc",
@@ -8587,7 +8557,7 @@ function initIndex() {
       
       
       {
-        id: 130,
+        id: 128,
         href: "/docs/uncategorized/working-with-many-linux-groups/",
         title: "Working with many Linux groups",
         description: "working with many Linux groups",

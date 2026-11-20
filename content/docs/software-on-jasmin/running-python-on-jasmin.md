@@ -18,20 +18,20 @@ operating system. This is different to the one you shoud use for your work,
 and we recommend using the [Jaspy environments]({{% ref "jaspy-envs" %}}). In this example, we
 activate the current Jaspy environment before running Python.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 {{</command>}}
 
 Check the Python version:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python -V
 (out)Python 3.11.9
 {{</command>}}
 
 Run a script:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python your_script.py
 {{</command>}}
 
@@ -45,7 +45,7 @@ then the recommended line to put at the top of the script would be:
 after which you should set "write" permission, and then you can run it without
 the "python " prefix:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 chmod 755 your_script.py
 ./your_script.py
 {{</command>}}

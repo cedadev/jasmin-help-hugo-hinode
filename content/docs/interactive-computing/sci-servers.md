@@ -19,10 +19,10 @@ The following sci servers are available:
 
 | Server name | Virtual/Physical | Processor model | CPU Cores | RAM    | /tmp max per user |
 |-------------|------------------|-----------------|-----------|--------|-------------------|
-| `sci-vm-01` | virtual          | AMD EPYC 74F3   | 24        | 64 GB  | 512 MB            |
-| `sci-vm-02` | ''               | ''              | ''        | ''     | ''                |
-| `sci-vm-03` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-02` | virtual          | AMD EPYC 74F3   | 24        | 64 GB  | 512 MB            |
 | `sci-vm-04` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-06` | ''               | ''              | ''        | ''     | ''                |
+| `sci-vm-07` | ''               | ''              | ''        | ''     | ''                |
 | `sci-ph-02` | physical         | ''              | 48        | 2 TB   | 20 GB             |
 | `sci-ph-03` | ''               | ''              | ''        | 1.5 TB | ''                |
 {.table .table-striped}

@@ -24,10 +24,10 @@ The following servers are available for accessing a graphical desktop. These ser
 
 Server name |
 --- |
-`nx1.jasmin.ac.uk` |
 `nx2.jasmin.ac.uk` |
-`nx3.jasmin.ac.uk` |
 `nx4.jasmin.ac.uk` |
+`nx5.jasmin.ac.uk` |
+`nx6.jasmin.ac.uk` |
 {.table .table-striped .w-auto}
 
 ## How to set up a connection using NoMachine Enterprise Client

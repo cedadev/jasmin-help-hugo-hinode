@@ -62,13 +62,13 @@ package-specific documentation (including how to build the python bindings for M
 
 To **activate** the jasmin-sci environment, use the command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jasmin-sci
 {{</command>}}  
 
 and to **deactivate** it, use the command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module unload jasmin-sci
 {{</command>}}
 
@@ -89,7 +89,7 @@ its additional resource files.
 To activate both jasmin-sci and Jaspy, it is best to activate them in the
 following order:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jasmin-sci
 module load jaspy
 {{</command>}}

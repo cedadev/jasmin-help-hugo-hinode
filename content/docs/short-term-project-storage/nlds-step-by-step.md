@@ -68,7 +68,7 @@ it is available from both types of server.
 1. Log into your chosen server:
 
     {{<command user="localuser" host="localhost">}}
-    ssh <user>@sci-vm-01.jasmin.ac.uk
+    ssh <user>@sci-vm-02.jasmin.ac.uk
     {{</command>}}
 
     Sci servers usually need to be accessed via a login server if you are outside 
@@ -83,7 +83,7 @@ it is available from both types of server.
 
     The essential steps are reproduced below:
 
-    {{<command user="user" host="sci-vm-01">}}
+    {{<command user="user" host="sci-vm-02">}}
     cd $HOME           ## ensure that you are in your home directory
     module load jaspy  ## ensure that you're using the current Python environment
     python3 -m venv ~/nlds-client

@@ -105,10 +105,10 @@ the list presented on the login screen to select a `sci` server which is not
 under heavy usage.
 
 For example, from the JASMIN login server, you might choose to login to
-`sci-vm-01`:
+`sci-vm-02`:
 
 {{<command user="user" host="login-NN">}}
-ssh <user>@sci-vm-01.jasmin.ac.uk
+ssh <user>@sci-vm-02.jasmin.ac.uk
 {{</command>}}
 
 If you are asked for a password when trying to login to this second machine,
@@ -131,12 +131,12 @@ is no harm in including it.
 Remember to log out of the login server in addition to the sci server when you
 have finished your work, to get back to your own (local) machine:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 exit
 (out)logout
 {{</command>}}
 {{<command user="user" host="login-NN">}}
-(out)Connection to sci-vm-01.jasmin.ac.uk closed.
+(out)Connection to sci-vm-02.jasmin.ac.uk closed.
 exit
 (out)logout
 {{</command>}}

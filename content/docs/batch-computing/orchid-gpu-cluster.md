@@ -38,7 +38,7 @@ on the software and the workflow that you will use/run on ORCHID.
 
 Use the following Slurm command to submit a GPU batch job:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 sbatch --gres=gpu:1 --partition=orchid --account=orchid --qos=orchid gpujobscript.sbatch
 {{</command>}}
 

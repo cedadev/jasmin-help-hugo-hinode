@@ -59,14 +59,14 @@ A list of the user IDs that have access to a given GWS can be found by using
 the "getent group" command and piping it through "grep" to select only your
 GWS. For example:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 getent group | grep gws_cedaproc
 (out)gws_cedaproc:*:26015:fbloggs,jdoe
 {{</command>}}
 
 You can lookup a specific user ID with the following:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 getent passwd | grep fbloggs
 (out)fbloggs:*:29775:26030:Fred Bloggs:/home/users/fbloggs:/bin/bash
 {{</command>}}
@@ -88,7 +88,7 @@ they can follow the procedure here using the "umask" command:
 Make a directory (and set it the permission so that the group can read/write
 to it):
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 mkdir --mode=u+rwx,g+rws,o-rwx testdir
 ls -l testdir
 (out)drwxrws--- 2 jdoe gws_cedaproc 4096 Jan 26 14:36 testdir
@@ -96,7 +96,7 @@ ls -l testdir
 
 Or (as separate steps):
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 mkdir testdir
 chgrp g+rws testdir
 chgrp o-rwx testdir
@@ -108,7 +108,7 @@ However, please also see {{<link "#security" />}}, below (and make sure your use
 
 Check your umask:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 umask
 (out)0022
 {{</command>}}
@@ -116,7 +116,7 @@ umask
 Modify your "umask" so that any new file or directory that you create will be
 writable anyone with the group permission:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 umask 002
 touch testdir/newfile
 ls -l testdir
@@ -130,7 +130,7 @@ If you want the `umask` setting to persist, you should set it for yourself in yo
 The overall usage of a GWS can be determined with the `df` (SOF) or `pan_df`
 (PFS) command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pan_df -H /gws/pw/j07/workshop/
 (out)Filesystem             				Size   Used  Avail Use% Mounted on
 (out)panfs://panmanager03.jc.rl.ac.uk/gws/pw/j07     2.6T    16G   2.6T   1% /gws/pw/j07/workshop/
@@ -257,7 +257,7 @@ JASMIN now has a command-line tool, `gwschown`, which allows managers or deputie
 
 The command provides usage information via the `-h` or `--help` option, as shown:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 gwschown --help
 (out)usage: gwschown [-h] [-R] [-v] [-n] [--no-warn] user path [path ...]
 (out)
@@ -277,7 +277,7 @@ gwschown --help
 
 For example, replace `exampleuser` with the username of the user who will take ownership of the files, and substituting in your own path. A good idea is to run it with `--dry-run` first just to check everything is working.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 gwschown exampleuser /gws/nopw/j04/workshop/myfile --dry-run
 {{</command>}}
 

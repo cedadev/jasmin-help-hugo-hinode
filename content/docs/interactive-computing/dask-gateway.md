@@ -78,19 +78,19 @@ It is very important that your API token is not shared between users and remains
 
 1. Make a Dask configuration folder in your home directory
 
-    {{<command user="user" host="sci-vm-01">}}
+    {{<command user="user" host="sci-vm-02">}}
     mkdir -p ~/.config/dask
     {{</command>}}
 
 2. Create a configuration file for `dask-gateway`
 
-    {{<command user="user" host="sci-vm-01">}}
+    {{<command user="user" host="sci-vm-02">}}
     touch ~/.config/dask/gateway.yaml
     {{</command>}}
 
 3. Change the permissions on the file so that only you can read it
 
-    {{<command user="user" host="sci-vm-01">}}
+    {{<command user="user" host="sci-vm-02">}}
     chmod 600 ~/.config/dask/gateway.yaml
     {{</command>}}
 

@@ -19,7 +19,7 @@ access different versions.
 To activate an environment containing the "current" common software packages
 (including a modern Python):
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 {{</command>}}
 
@@ -27,7 +27,7 @@ or for a specific version, see [how to discover what versions are available]({{%
 
 To activate additional packages (known as "jasmin-sci"):
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jasmin-sci
 {{</command>}}
 
@@ -36,7 +36,7 @@ module load jasmin-sci
 If you want to deactivate an environment that you have previously activated,
 do:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 module unload <env-id>
 {{</command>}}
 

@@ -66,9 +66,9 @@ starting another.
 Here’s an example of how this shows up using “lsof” and by listing user
 processes with “ps”. The same file “ISIMIPnc_to_SDGVMtxt.py” is being edited
 in 2 separate “vim” editors. In this case, the system team was unable to kill
-the processes on behalf of the user, so the only solution was to reboot sci1.
+the processes on behalf of the user, so the only solution was to reboot the sci server.
  
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 lsof /gws/nopw/j04/gwsnnn/
 (out)COMMAND   PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 (out)vim     20943 fbloggs  cwd    DIR   0,43        0 2450 /gws/nopw/j04/gwsnnn/fbloggs/sdgvm/ISIMIP

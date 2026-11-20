@@ -39,7 +39,7 @@ of the `#SBATCH` input  options, and many more besides, can be found in the
 To submit the job, do not run the script, but rather use it as the standard
 input to `sbatch`, like so:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 sbatch my_script_name.sbatch
 {{</command>}}
 

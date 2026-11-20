@@ -94,7 +94,7 @@ which you are entering into the terminal.
 You don't need to type the '$' or anything before it!
 
 The rest of the documentation will use this format to show whether you should
-run the command on your local machine (`user@localhost`) or on JASMIN (`user@sci-vm-01`).
+run the command on your local machine (`user@localhost`) or on JASMIN (`user@sci-vm-02`).
 {{</alert>}}
 
 {{<command user="user" host="mobaxterm">}}

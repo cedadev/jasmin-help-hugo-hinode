@@ -18,8 +18,8 @@ content_blocks:
       section: long-term-archive-storage
       reverse: false
       sort: title
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More docs
     padding: 3

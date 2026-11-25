@@ -5,24 +5,23 @@
     Access-Control-Allow-Origin = '*'
     Content-Security-Policy = """
         base-uri 'self'; \
-        connect-src 'self' *.analytics.google.com *.google.com *.google-analytics.com *.googletagmanager.com d3hb14vkzrxvla.cloudfront.net beaconapi.helpscout.net *.civiccomputing.com; \
+        connect-src 'self' *.analytics.google.com *.google.com *.google-analytics.com *.googletagmanager.com cedadev.github.io d3hb14vkzrxvla.cloudfront.net beaconapi.helpscout.net *.civiccomputing.com; \
         default-src 'none'; \
         font-src 'self' fonts.gstatic.com data:; \
         form-action 'self'; \
-        frame-src *.googletagmanager.com player.cloudinary.com www.youtube-nocookie.com www.youtube.com player.vimeo.com *.google.com; \
-        img-src 'self' *.google-analytics.com *.googletagmanager.com googletagmanager.com ssl.gstatic.com www.gstatic.com *.google.com  beaconapi.helpscout.net data: *.imgix.net *.imagekit.io *.cloudinary.com i.ytimg.com tile.openstreetmap.org i.vimeocdn.com; \
+        frame-ancestors 'self' http://localhost:1313 gethinode.com; \
+        frame-src *.googletagmanager.com player.cloudinary.com www.youtube-nocookie.com www.youtube.com player.vimeo.com; \
+        img-src 'self' *.google-analytics.com *.googletagmanager.com googletagmanager.com ssl.gstatic.com www.gstatic.com beaconapi.helpscout.net data: *.imgix.net *.imagekit.io *.cloudinary.com i.ytimg.com tile.openstreetmap.org i.vimeocdn.com; \
         manifest-src 'self'; \
         media-src 'self'; \
         object-src 'none'; \
-        script-src-elem 'self' 'unsafe-inline' *.googletagmanager.com *.google.com *.myfonts.net *.helpscout.net; \
-        script-src 'self' 'unsafe-inline' *.google-analytics.com *.googletagmanager.com *.analytics.google.com googletagmanager.com tagmanager.google.com *.google.com player.vimeo.com; \
+        script-src 'self' 'unsafe-inline' cc.cdn.civiccomputing.com cdn.jsdelivr.net code.jquery.com *.google-analytics.com *.googletagmanager.com *.analytics.google.com googletagmanager.com tagmanager.google.com player.vimeo.com *.myfonts.net *.helpscout.net; \
         style-src-elem 'unsafe-inline' 'self' *.google.com fonts.googleapis.com *.myfonts.net; \
-        style-src 'self' googletagmanager.com tagmanager.google.com *.google.com fonts.googleapis.com www.youtube.com; \
+        style-src 'self' googletagmanager.com tagmanager.google.com fonts.googleapis.com www.youtube.com 'unsafe-inline'; \
         """
     Permissions-Policy = 'geolocation=(), midi=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), fullscreen=(), payment=() '
     Referrer-Policy = 'strict-origin'
     Strict-Transport-Security = 'max-age=31536000; includeSubDomains; preload'
     X-Content-Type-Options = 'nosniff'
-    X-Frame-Options = 'SAMEORIGIN'
     X-XSS-Protection = '1; mode=block'
     cache-control = 'max-age=0, no-cache, no-store, must-revalidate '

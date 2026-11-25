@@ -2,7 +2,7 @@
 author: Matt Pritchard
 title: TEST JASMIN Help site
 description: Documentation and training resources for JASMIN - the UK's data analysis facility for environmental science.
-type: docs
+
 content_blocks:
   - _bookshop_name: hero
     heading:
@@ -43,8 +43,8 @@ content_blocks:
       reverse: true
       sort: date
       #keywords: featured
-    hide-empty: true
-    header-style: none
+    hide_empty: true
+    header_style: none
     more:
       title: More Docs
     padding: 3

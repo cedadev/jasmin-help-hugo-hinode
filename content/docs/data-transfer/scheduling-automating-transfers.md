@@ -19,6 +19,15 @@ task downloading of some large datasets, or simply to be able rely on data
 being pulled in from some external source to an accumulating dataset used for
 periodic analysis.
 
+{{<alert alert-type="danger">}}
+Certain services in the CEDA and JASMIN infrastructure are rate-limited to protect
+against abuse. Make sure any code you write to consume HTTP(S) services is able to handle
+`429 Too Many Requests` responses correctly.
+
+For further details, please see this article on 
+[rate-limiting]({{% ref "rate-limiting" %}}).
+{{</alert>}}
+
 ## Using Globus for transfer automation
 
 It is easy to automate transfers using [Globus]({{% ref "globus-transfers-with-jasmin" %}}). This method has the advantage that you

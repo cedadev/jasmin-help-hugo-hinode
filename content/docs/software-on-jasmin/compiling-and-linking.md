@@ -223,7 +223,7 @@ A runnable example script that demonstrates these with some test programs from U
    /apps/jasmin/supported/libs/netcdf/intel2024.2.0/intel_netcdf_examples.sh
 ```
 
-If running the parallel test, ensure that you are using a [filesystem]({{% ref "understanding-new-jasmin-storage/#understanding-the-four-types-of-jasmin-disk" %}}) that supports parallel writes.
+If running the parallel test, ensure that you are using a [filesystem]({{% ref "understanding-jasmin-storage/#understanding-the-four-types-of-jasmin-disk" %}}) that **fully** supports parallel writes, i.e. Parallel File System storage (PFS).
 
 ### Using the *-config scripts
 

@@ -98,12 +98,12 @@ Notes:
 - Create a connection profile
   - start by entering the one-liner command you would use to connect to a sci server via the login service, i.e.
     ```bash
-    ssh -A username@sci-vm-01.jasmin.ac.uk -J username@login.jasmin.ac.uk
+    ssh -A username@sci-vm-02.jasmin.ac.uk -J username@login.jasmin.ac.uk
     ```
     This is now a single login service name, rather than the name of a particular login server.
   - this creates an entry in `~/.ssh/config` (it's recommended to choose that location)
 - This entry can be customised, by editing that file
-  - note that the `Host` is a "friendly name" which you can define, whereas `HostName` is the actual full name of the host including domain, e.g. `sci-vm-01.jasmin.ac.uk`
+  - note that the `Host` is a "friendly name" which you can define, whereas `HostName` is the actual full name of the host including domain, e.g. `sci-vm-02.jasmin.ac.uk`
 - Add other entries as needed
   - in this case, we added a second profile for `xfer-vm-01` which, being an `xfer` server, is directly accessible so does not need the `ProxyJump`
 - Save the file `~/.ssh/config` and restart VSCode
@@ -123,8 +123,8 @@ Alternative method if you can't get the "agent" method to work (but means that y
 - edit `~/.ssh/config` and add the line with `IdentityFile` as shown:
 
 ```config
-Host sci-vm-01-via-login
-  Hostname sci-vm-01.jasmin.ac.uk
+Host sci-vm-02-via-login
+  Hostname sci-vm-02.jasmin.ac.uk
   User username
   ProxyJump username@login.jasmin.ac.uk
   ForwardAgent yes

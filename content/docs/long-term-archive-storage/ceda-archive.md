@@ -94,7 +94,7 @@ In the example below, the logged-in user is listing the contents of the CRU
 data sets within the BADC archive. These are "open" so all logged-in users can
 access them:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 ls -l /badc/cru/data
 (out)total 320
 (out)-rw-r-----  1 badc open  396 Feb 18  2015 00README

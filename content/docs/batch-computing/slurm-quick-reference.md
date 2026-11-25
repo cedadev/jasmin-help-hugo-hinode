@@ -9,6 +9,7 @@ tags:
 - orchid
 - slurm
 title: Slurm quick reference
+weight: 100
 ---
 
 ## Slurm Scheduler

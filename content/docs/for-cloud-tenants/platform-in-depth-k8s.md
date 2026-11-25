@@ -63,6 +63,10 @@ Available **Update** options include: the ability to change to a different contr
 
 Additionally you can **Upgrade** the images in the cluster and potentially the Kubernetes version to a newer one. Note that the version of Kubernetes can not be downgraded. If you need to go back to an earlier version of Kubernetes, you would need to create a new cluster.
 
+{{<alert alert-type="danger">}}
+Kubernetes platform upgrades may roll or replace cluster nodes with instances built from newer images. Changes made directly to worker or control-plane node operating systems are not guaranteed to persist after an upgrade. Applications should store data in persistent volumes and cluster customisation should be managed through Kubernetes manifests, Helm charts, or GitOps workflows.
+{{</alert>}}
+
 {{<alert alert-type="info">}}
 Upgrading a Kubernetes cluster is a long-running and potentially disruptive operation that may affect workloads running on the cluster. Once started, an upgrade cannot be stopped.
 {{</alert>}}

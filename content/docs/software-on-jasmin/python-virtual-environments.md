@@ -95,6 +95,10 @@ python -m ipykernel install --user --name=name-of-environment
 The kernel will now appear in your list of available kernels and will persist
 across sessions.
 
+{{<alert alert-type="info">}}
+This method is for pip virtual environments. If you are using a conda environment, use `register-kernel` instead — see [Using Conda Environments in the JASMIN Notebook Service]({{% ref "creating-and-using-miniforge-environments" %}}).
+{{</alert>}}
+
 ### On Scientific Analysis Servers
 
 To create a virtual environment on the sci machines that will also work in
@@ -105,20 +109,20 @@ before following the instructions below.**
 
 Load the Jaspy module:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 {{</command>}}
 
 Create a directory for your virtual environments:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 mkdir ~/my_venvs
 cd ~/my_venvs
 {{</command>}}
 
 Create the virtual environment with access to Jaspy packages:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python -m venv name-of-environment --system-site-packages
 {{</command>}}
 
@@ -128,13 +132,13 @@ only have the standard Python library available.
 
 Activate your new environment:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 source name-of-environment/bin/activate
 {{</command>}}
 
 Install any packages you need:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip install your_package_name
 {{</command>}}
 
@@ -160,6 +164,8 @@ To use your virtual environment in Jupyter notebooks:
 2. Register it as a kernel with: `python -m ipykernel install --user --name=name-of-environment`
 3. The kernel will appear in your kernel list in JupyterLab
 
+If you are using a conda environment instead, use `register-kernel` — see [Using Conda Environments in the JASMIN Notebook Service]({{% ref "creating-and-using-miniforge-environments" %}}).
+
 To select the kernel:
 
 - When creating a new notebook, choose it from the kernel picker
@@ -184,7 +190,7 @@ jupyter kernelspec uninstall kernel-name-here
 Before a virtual environment can be used in a terminal or script, it needs to be
 **activated**. This is done by running the `activate` script using the `source` command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 source /path/to/my_virtual_env/bin/activate
 {{</command>}}
 
@@ -198,7 +204,7 @@ environment.
 You can see that `python` points to the Python executable in the virtual
 environment, with:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 which python
 (out)/home/users/my_username/my_virtual_env/bin/python
 {{</command>}}
@@ -219,13 +225,13 @@ packages. This is also reflected in the shell prompt.
 To export a list of packages installed in your virtual environment (useful for
 sharing or recreating environments):
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip freeze > requirements.txt
 {{</command>}}
 
 To install packages from a requirements file:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip install -r requirements.txt
 {{</command>}}
 
@@ -243,7 +249,7 @@ Once you have activated a virtual environment, the `pip` utility will be
 available. This allows package installation into the environment using the
 command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip install your_package
 {{</command>}}
 
@@ -275,7 +281,7 @@ please [follow this advice]({{% ref "storage#avoid-inadvertently-writing-to-tmp"
 
 To upgrade an existing package, use:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip install --upgrade your_package
 {{</command>}}
 
@@ -283,13 +289,13 @@ If your Python package cannot be installed with `pip` for any reason, it can
 also be installed directly from the `setup.py` file after activating the
 virtual environment.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python setup.py install
 {{</command>}}
 
 To install a specific version of a package, this can be specified with:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pip install your_package==1.2.3
 {{</command>}}
 
@@ -298,7 +304,7 @@ pip install your_package==1.2.3
 To list the packages installed into the virtual environment, with their
 version numbers, type:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
  pip freeze
 {{</command>}}
 
@@ -310,7 +316,7 @@ After you have activated the virtual environment in your shell, any packages
 that you have installed into it can be imported into an interactive Python
 session.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python # automatically uses Python in your virtualenv
 {{</command>}}
 The prompt changes to `>>>`:
@@ -325,7 +331,7 @@ If a script is run using the `python` command on the command-line in a similar
 way to when starting an interactive Python session, this will use any virtual
 environment that has been activated in the calling shell.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 python my_script.py
 {{</command>}}
 
@@ -334,7 +340,7 @@ the script has the hard-coded path to the executable in the virtual
 environment, then it is not necessary to activate the virtual environment in
 the calling shell.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 head -n 1 myscript.py  # show the first line
 (out)#!/path/to/my_virtual_env/bin/python3.7
 (out)
@@ -350,7 +356,7 @@ run using any virtual environment that has been activated in the calling
 shell. This makes the script more portable, although at the expense of having
 to source the activate script.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 head -n 1 myscript.py
 (out)#!/usr/bin/env python3.7
 (out)
@@ -378,6 +384,6 @@ variable_name=value python`) rather than using `export`.
 
 - if you use `cartopy` (also used by `iris`), you may need to create a symbolic link into your virtual environment to allow the correct loading of `libgeos_c.so` during `import cartopy` or `import iris`. To do this:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 ln -s $CONDA_PREFIX/lib/libgeos_c.so /path/to/my_virtual_env/lib/
 {{</command>}}

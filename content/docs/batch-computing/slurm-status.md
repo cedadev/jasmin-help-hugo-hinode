@@ -2,6 +2,7 @@
 aliases: /article/4894-lotus-slurm-status
 description: LOTUS/ORCHID Slurm scheduler status
 title: Slurm status
+weight: 110
 ---
 
 The [JASMIN dashboard]({{% ref "jasmin-status#jasmin-dashboard" %}}) includes an overview of:

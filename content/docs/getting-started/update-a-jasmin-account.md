@@ -66,23 +66,4 @@ Re-enter the new password to confirm, then click "Change password"
 Linking your CEDA account to your JASMIN account allows you filesystem access
 to data on CEDA Archive. If you need to access data on the CEDA Archive and
 you do not have an account, you will need to apply for a
-[CEDA account]({{% ref "ceda-archive#register" %}}).
-
-**Step 1** : On the profile page, select "Link now" which is next to the
-field "Linked CEDA Account". This will take you to the CEDA accounts portal
-page where you need to login.
-
-{{<image src="img/docs/update-a-jasmin-account/ceda-account-login.png" caption="CEDA accounts portal login page">}}
-
-**Step 2** : You will be directed to the page below to authorise the CEDA
-accounts portal to link your JASMIN account.
-
-{{<image src="img/docs/update-a-jasmin-account/ceda-link-account.png" caption="CEDA accounts portal linking page">}}
-
-**Step 3** : Then you will be sent to the page below to authorise the JASMIN accounts portal to grant the CEDA accounts portal information about your JASMIN profile.
-
-{{<image src="img/docs/update-a-jasmin-account/jasmin-link-account.png" caption="JASMIN accounts portal linking page">}}
-
-**Step 4** : Finally, a box confirming you've linked your accounts is shown in the CEDA accounts portal. As shown below, a field stating "Linked to JASMIN account: `<JASMIN username>`" should show the name of the account you have linked.
-
-{{<image src="img/docs/update-a-jasmin-account/ceda-link-success.png" caption="CEDA accounts portal showing a successful link">}}
+[CEDA account]({{% ref "ceda-archive#register" %}}). Once you have a CEDA account, instructions for linking it with your JASMIN account can be found on {{<link "https://help.ceda.ac.uk/article/5105-linking-your-jasmin-account">}}the CEDA help site{{</link>}}.

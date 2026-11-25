@@ -17,7 +17,7 @@ PNG file using matplotlib.
 
 Load the Jaspy Python 3 environment, and start a Python session:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 python
 {{</command>}}

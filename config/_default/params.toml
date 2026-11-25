@@ -246,6 +246,10 @@
     [videos.youtube]
         host = "youtube"
 
-#[modules.cookieyes]
-    #url = "https://cdn-cookieyes.com/client_data/NNNN/script.js" # need client ID?
-    #local = false
+[modules.GoogleAnalytics]
+  integration = "core" 
+  state = "immediate"
+  category = "analytics"
+  gcm = true
+  nonce = false
+  force = true

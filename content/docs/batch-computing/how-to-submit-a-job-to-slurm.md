@@ -3,6 +3,7 @@ aliases: /article/4890-how-to-submit-a-job-to-slurm
 description: How to submit a batch job to Slurm
 slug: how-to-submit-a-job
 title: How to submit a job
+weight: 40
 ---
 
 ## What is a batch job?
@@ -29,7 +30,7 @@ Check the current list of servers on that page.
 
 The Slurm job submission command is:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 sbatch myjobscript
 {{</command>}}
 
@@ -100,7 +101,7 @@ released after a specific time - default 30 mins - when the testing is finished.
 The job is executed on the LOTUS compute node by allocating resources with `salloc`.
 See the example below:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 salloc -p standard -q high -A mygws --ntasks-per-node=2
 (out)salloc: Pending job allocation 23506
 (out)salloc: job 23506 queued and waiting for resources
@@ -129,7 +130,7 @@ Official documentation for the `srun` command is available
 The job allocation ID `23506` has 2 CPUs on the compute node `host580` and can be
 checked from another terminal as shown below:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 squeue -u fred -o"%.18i %.9P %.11j %.8u %.2t %.10M %.6D %.6C %R"
 (out)JOBID PARTITION           NAME       USER  ST       TIME  NODES   CPUS NODELIST(REASON)
 (out)23506 standard      interactive   fred   R       1:32      1      2 host580
@@ -169,13 +170,46 @@ A code/application can be executed on the LOTUS compute node without a shell
 session on the node itself. For example the command `hostname` is executed
 twice as there are 2 CPUs and this outputs the name of the node:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 srun hostname
 (out)host580.jc.rl.ac.uk
 (out)host580.jc.rl.ac.uk
 {{</command>}}
 
 -->
+
+### Interactive partition on LOTUS
+
+{{<alert alert-type="info">}}
+**New Slurm partition `inter` (March 2026)**
+
+It is possible now to work interactively on LOTUS in a similar way to being on a `sci` server, but with guaranteed resources via the new and high priority interactive partition.
+{{</alert>}}
+
+The new interactive partition has three runtime limits defined in QoS:
+- `inter` (3hrs)
+- `inter4h` (4hrs)
+- `inter6h` (6hrs).
+
+For convenience, three corresponding aliases have been set up: `inter` , `inter4`, and `inter6` to access the new partition with a specific Slurm job accounting/GWS membership.
+
+For example:
+
+{{<command host="sci-vm-02" user="user">}}
+inter --account=<GWS-name-membership>
+(out)salloc: Pending job allocation 1410784
+(out)salloc: job 1410784 queued and waiting for resources
+(out)salloc: job 1410784 has been allocated resources
+(out)salloc: Granted job allocation 1410784
+(out)salloc: Nodes host1182 are ready for job
+exit
+(out)salloc: Relinquishing job allocation 1410780
+{{</command>}}
+
+Notes:
+
+1. It is possible to SSH to the allocated LOTUS compute node (`host1182.jc.rl.ac.uk` in this example) from another terminal session from a `sci` server e.g. `ssh host1182.jc.rl.ac.uk`. Please note that exiting the interactive session will terminate all other SSH sessions on the allocated node.
+2. VSCode can be run within the interactive job session. This provides better control of memory resources compared to running VSCode on a `sci` server.
 
 ## Job array submission
 
@@ -238,7 +272,7 @@ Here the important differences are :
 When the job is submitted, Slurm will create 10 tasks under the single job
 ID. The job array script is submitted in the usual way:
 
-{{<command user="fred" host="sci-ph-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 sbatch myRarray.sbatch
 {{</command>}}
 
@@ -248,6 +282,8 @@ will see 10 tasks with the same Job ID. The tasks can be distinguished by  the
 range of different hosts on LOTUS.
 
 ## Troubleshooting
+
+### Invalid account or account/partition combination specified
 
 If you have only recently requested access to [JASMIN login
 services]({{% ref "get-login-account" %}}) and had this approved, there can
@@ -262,3 +298,7 @@ sbatch: error: Batch job submission failed: Invalid account or account/partition
 ```
 
 If this occurs, please try again in 24 hours before contacting the JASMIN helpdesk.
+
+### Cluster downtime
+
+If you were previously able to submit jobs and no longer can, there may be a wider issue with the LOTUS/ORCHID cluster. Please check the {{< link "ceda_status" >}}CEDA Status page{{< /link >}} for any current incidents or [scheduled maintenance]({{% ref "scheduled-maintenance" %}}) before contacting the JASMIN helpdesk.

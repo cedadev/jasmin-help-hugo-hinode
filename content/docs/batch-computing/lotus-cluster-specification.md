@@ -6,6 +6,7 @@ tags:
 - intel
 - amd
 title: LOTUS cluster specification
+weight: 90
 ---
 
 ## Current cluster specification

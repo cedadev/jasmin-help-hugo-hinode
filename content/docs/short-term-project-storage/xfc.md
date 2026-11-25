@@ -61,7 +61,7 @@ To see all the available options: `xfc -h`
 
 ### Initialise your XFC directory
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 xfc init
 (out)** SUCCESS ** - user initiliazed with:
 (out)username: username  
@@ -84,14 +84,14 @@ the directories and files using `chmod`, etc.
 
 ### Find out the path of your XFC directory:
   
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 xfc path
 (out)/work/xfc/vol7/user_cache/username
 {{</command>}}
 
 Once you know the path, you can `ls` it, for example to check the permissions:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 ls -ld /work/xfc/vol7/user_cache/username
 (out)drwx------ 13 username    users        4096 Oct 15 14:52 username
 {{</command>}}
@@ -106,7 +106,7 @@ should not reside in the XFC folder for more than a few days/weeks.
 
 To check your current usage, use the command `pan_du -s`:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pan_du -s /work/xfc/vol7/user_cache/username
 dir /work/xfc/vol7/user_cache/username: 2 files, 1220860 KiB
 {{</command>}}
@@ -118,7 +118,7 @@ Note on reported sizes:
 
 A handy utility to check how long your data has been there, is the additional `-a` option:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 pan_du -sa /work/xfc/vol7/user_cache/username
 (out)dir /work/xfc/vol7/user_cache/username: 2931 files, 424130252 KiB
 (out)age 30D: 0 files, 0 KiB
@@ -139,7 +139,7 @@ Any use of this risks sanction from the JASMIN team.
 To check the amount of space free on the shared volume where your XFC folder sits:
 (using this command, sizes are reported in decimal terabytes)
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 $ pan_df -H /work/xfc/vol7
 (out)Filesystem             Size   Used  Avail Use% Mounted on
 (out)panfs://panmanager04.jc.rl.ac.uk//work/xfc/vol7

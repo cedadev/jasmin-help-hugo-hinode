@@ -19,7 +19,7 @@
     - title: storage
     - title: permissions and groups
     - title: tips for new users
-    - title: understanding new jasmin storage
+    - title: understanding jasmin storage
     - title: update a jasmin account
 
 - title: interactive computing
@@ -38,16 +38,16 @@
 
 - title: batch computing
   pages:
-    - title: example job 2 calc md5s
-    - title: how to monitor slurm jobs
-    - title: how to submit a job
-    - title: how to submit an mpi parallel job
-    - title: lotus cluster specification
     - title: lotus overview
-    - title: orchid gpu cluster
-    - title: slurm queues
-    - title: slurm quick reference
     - title: slurm scheduler overview
+    - title: slurm queues
+    - title: how to submit a job
+    - title: how to monitor slurm jobs
+    - title: how to submit an mpi parallel job
+    - title: orchid gpu cluster
+    - title: example job 2 calc md5s
+    - title: lotus cluster specification
+    - title: slurm quick reference
     - title: slurm status
 
 - title: software on jasmin
@@ -83,7 +83,6 @@
     - title: globus command line interface
     - title: globus connect personal
     - title: globus transfers with jasmin
-    - title: gridftp ssh auth
     - title: rclone
     - title: rsync scp sftp
     - title: scheduling automating transfers
@@ -126,6 +125,7 @@
     - title: how to apply for mass access
     - title: moose the mass client user guide
     - title: setting up your jasmin account for access to mass
+    - title: new moose and mass
 
 - title: for cloud tenants
   pages:
@@ -138,6 +138,7 @@
     - title: platform in depth - slurm
     - title: azimuth identity provider
     - title: best practice
+    - title: cloud storage
     - title: linux admin
     - title: openstack
 
@@ -149,6 +150,7 @@
 - title: uncategorized
   pages:
     - title: acknowledging jasmin
+    - title: rate limiting
     - title: approving requests for access
     - title: jasmin conditions of use
     - title: mobaxterm

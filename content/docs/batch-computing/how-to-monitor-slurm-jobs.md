@@ -3,6 +3,7 @@ aliases: /article/4892-how-to-monitor-slurm-jobs
 description: Getting information about your Slurm jobs
 slug: how-to-monitor-slurm-jobs
 title: How to monitor Slurm jobs
+weight: 50
 ---
 
 ## Job information
@@ -12,7 +13,7 @@ obtained from the Slurm command `squeue`. Note that information on completed
 jobs is only retained for a limited period. Information on jobs that ran in
 the past is via `sacct`. A (simplified) example of the output `squeue` is shown below.
 
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 squeue -u fred
 (out)JOBID PARTITION       QOS   NAME   USER  ST   TIME  NODES NODELIST(REASON)
 (out)18957  standard  standard   mean   fred   R   0:01      1 host147
@@ -71,14 +72,14 @@ Slurm Command  |  Description
 
 An example of the job record from a simple job submitted to Slurm:
 
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 sbatch -A mygws -q debug -p debug --wrap="sleep 2m"
 (out)Submitted batch job 18973  
 {{</command>}}
 
 Then we can take the job ID from Slurm for the next command:
 
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 scontrol show job 18973
 (out)JobId=18973 JobName=wrap
 (out)   UserId=fred(26458) GroupId=users(26030) MCS_label=N/A
@@ -110,7 +111,7 @@ scontrol show job 18973
 
 ## History of jobs
 
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 sacct
 (out)        JobID    JobName  Partition    Account  AllocCPUS      State ExitCode
 (out)------------ ---------- ---------- ---------- ---------- ---------- --------

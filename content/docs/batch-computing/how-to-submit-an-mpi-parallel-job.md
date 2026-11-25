@@ -3,6 +3,7 @@ aliases: /article/4896-how-to-submit-an-mpi-parallel-job-to-slurm
 description: Submitting MPI parallel Slurm jobs
 slug: how-to-submit-an-mpi-parallel-job
 title: How to submit an MPI parallel job
+weight: 60
 ---
 
 ## What is an MPI parallel job?
@@ -38,7 +39,7 @@ of the `#SBATCH` input  options, and many more besides, can be found in the
 To submit the job, do not run the script, but rather use it as the standard
 input to `sbatch`, like so:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 sbatch my_script_name.sbatch
 {{</command>}}
 

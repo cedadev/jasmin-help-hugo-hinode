@@ -15,7 +15,7 @@ the cron job table).
 ## Cron on JASMIN
 
 Generally cron is disabled on the JASMIN general access machines such as
-`sci-vm-01.jasmin.ac.uk`. This is to avoid people killing the machine by setting up
+`sci-vm-02.jasmin.ac.uk`. This is to avoid people killing the machine by setting up
 lots of processing jobs when better alternatives, e.g. Lotus, are available.
 However, there are times when it is appropriate to use cron and so a generic
 cron service machine is provided. `cron-01.jasmin.ac.uk` is configured like

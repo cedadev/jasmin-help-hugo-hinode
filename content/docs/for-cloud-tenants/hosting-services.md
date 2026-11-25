@@ -28,6 +28,9 @@ To request changes to the firewall and allow external access to services deploye
 7) Confirm you have read the {{<link "https://accounts.jasmin.ac.uk/account/conditions/">}}JASMIN terms and conditions{{</link>}} and {{<link "https://stfc.atlassian.net/wiki/spaces/CLOUDKB/pages/211845257/Terms+Of+Service">}}STFC Cloud terms and conditions{{</link>}}
 8) Confirm what security precautions you have in place (e.g. SSL/TLS, Fail2Ban or similar automatic blocking tool, host based firewalls in use)
 9) Confirm that you have not removed the following from the image: Pakiti (package vulnerability tracking), ROOT user SSH keys, and automatic updates
+10) What services / daemons will be listening on the ports requested?
+11) If applicable, what type of data will be will be read / written and what is the data for?
+12) Who are the user communities that will be using this service ?
 
 Your request will go through various security checks before the firewall hole is opened, and we will log details of the service.
 

@@ -3,6 +3,7 @@ aliases: /article/3836-example-job-2-calc-md5s
 description: 'Sample workflows for LOTUS'
 slug: example-job-2-calc-md5s
 title: 'Example Job 2: Calculating MD5 Checksums on many files'
+weight: 80
 ---
 
 This page records some early CEDA usage of the LOTUS cluster for various
@@ -31,15 +32,15 @@ This is a simple case because:
 
 ### Workflow steps
 
-Log in to the `sci` server (use any of `sci-vm-0[1-6]`, access from a `login` server):
+Log in to a `sci` server (see [available sci servers]({{% ref "sci-servers" %}})):
 
 {{<command user="user" host="login-NN">}}
-ssh -A <username>@sci-vm-01.jasmin.ac.uk
+ssh -A <username>@sci-vm-02.jasmin.ac.uk
 {{</command>}}
 
 Split the big file:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 split -l 10000 -d file_list.txt # Produces 22 files called "x00"..."x21"
 {{</command>}}
 
@@ -81,7 +82,7 @@ done
 
 Monitor the jobs by running:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 squeue -u <username>
 {{</command>}}
 
@@ -140,7 +141,7 @@ if __name__ == '__main__':
 If you have a file containing a list of dataset ids you can submit each as a
 separate job by invoking the above script as follows:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 ./checksum_dataset.py $(cat datasets_to_checksum.dat)
 (out)sbatch -A mygws -p standard -q standard -J cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128 -o cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.checksums -e cmip5.output1.MOHC.HadGEM2-ES.rcp85.day.seaIce.day.r1i1p1.v20111128.err --wrap "srun /usr/bin/md5sum /badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/rcp85/day/seaIce/day/r1i1p1/v20111128/*/*.nc"
 (out)Submitted batch job 40898728

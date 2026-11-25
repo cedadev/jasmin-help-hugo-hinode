@@ -9,6 +9,7 @@ tags:
 - lotus
 - orchid
 title: Slurm queues
+weight: 30
 ---
 
 ## Queue names
@@ -21,7 +22,7 @@ The Slurm queues in the LOTUS cluster are:
 
 Each queue has attributes of run-length limits (e.g. short, long) and
 resources. A full breakdown of each queue and its associated resources, such as run time
-limits and memory limits, is shown below in Table 1. 
+limits and memory limits, is shown below in Table 1.
 
 ## Queue details
 
@@ -65,7 +66,7 @@ The Slurm command `sinfo` reports the state of queues and nodes
 managed by Slurm. It has a wide variety of filtering, sorting, and formatting
 options.
 
-{{<command shell="bash" user="user" host="sci-ph-01">}}
+{{<command shell="bash" user="user" host="sci-vm-02">}}
 sinfo
 (out)PARTITION AVAIL  TIMELIMIT  NODES STATE NODELIST
 (out)...
@@ -93,7 +94,7 @@ By default, the Slurm command `sinfo` displays the following information:
 The `sinfo` example below, reports more complete information about the
 partition/queue `debug`:
 
-{{<command user="user" host="sci-ph-01">}}
+{{<command user="user" host="sci-vm-02">}}
 sinfo --long --partition=debug
 (out)PARTITION AVAIL TIMELIMIT   JOB_SIZE ROOT OVERSUBS GROUPS  NODES STATE RESERVATION NODELIST
 (out)debug        up   1:00:00 1-infinite   no       NO    all      3  idle             host[1001-1003]
@@ -127,7 +128,7 @@ A summary of the different QoS are below:
 {.table .table-striped .w-auto}
 
 Once you've chosen the partition and QoS you need, in your job script, provide the partition in the `--partition` directive and the QoS in the `--qos` directive and
-specify the memory required in the `--mem=` directive.
+specify the memory required in the `--mem` directive.
 
 ## How to choose a QoS
 
@@ -186,7 +187,7 @@ Slurm accounting by project has been introduced as a means of monitoring compute
 To find what Slurm accounts and quality of services (QoS) that you have access to, use the `useraccounts` command on any `sci` machine.
 Output should be similar to one or more of the lines below.
 
-{{<command user="user" host="sci-ph-01">}}
+{{<command user="user" host="sci-vm-02">}}
 useraccounts
 (out)# sacctmgr show user fred withassoc format=user,account,qos%-50
 (out)User       Account        QOS

@@ -16,8 +16,8 @@ content_blocks:
       section: batch-computing
       reverse: false
       sort: weight
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More docs
     padding: 3

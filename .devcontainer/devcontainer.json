@@ -10,9 +10,10 @@
 			// Update VERSION to pick a specific hugo version.
 			// Example versions: latest, 0.73.0, 0,71.1
 			// Rebuild the container if it already exists to update.
-			"VERSION": "0.165.0",
-			// Update NODE_VERSION to pick the Node.js version: 12, 14
-			"NODE_VERSION": "22"
+			"VERSION": "0.169.0",
+			// Update NODE_VERSION to pick a Node.js image tag.
+			"NODE_VERSION": "26-bookworm",
+			"DART_SASS_VERSION": "1.98.0"
 		}
 	},
 	"features": {
@@ -71,12 +72,8 @@
 		1313
 	],
 
-	// Use `updateContentCommand` to run commands in the prebuild
-	// "updateContentCommand": "npm install",
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-
+	// Install project dependencies when the Codespace/container is created.
+	"postCreateCommand": "npm install --no-audit --no-fund",
 
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"

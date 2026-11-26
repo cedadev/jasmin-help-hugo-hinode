@@ -1,10 +1,10 @@
-title = "TEST JASMIN Help Site"
-copyright = "Copyright © 2025 Science and Technology Facilities Council."
+title = "JASMIN Help Site"
+copyright = "Copyright © 2026 Science and Technology Facilities Council."
 enableGitInfo = true #true #for production
 
 # additional settings
-baseURL = 'https://jasmin-help-test.jasmin.ac.uk' # temp value until we have a domain
-canonifyURLs = false
+baseURL = 'https://help.jasmin.ac.uk' # change this for testing elsewhere
+canonifyURLs = false # true if deployed to a subdirectory, e.g. https://help.jasmin.ac.uk/hugo-hinode/
 enableEmoji = true
 enableRobotsTXT = true
 enableInlineShortcodes = true
@@ -92,7 +92,7 @@ defaultContentLanguageInSubdir = false
   [services.x]
     disableInlineCSS = true
   [services.googleAnalytics]
-    #ID = "G-JJZZ5F2KN4"
+    ID = "G-JJZZ5F2KN4"
 
 [minify]
   [minify.tdewolff.js]

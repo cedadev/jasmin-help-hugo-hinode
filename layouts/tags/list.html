@@ -1,0 +1,31 @@
+{{ define "main" }}
+    {{- $page := . -}}
+    {{- $layout := $page.Params.layout -}}
+    {{- $breakpoint := partialCached "utilities/GetBreakpoint.html" site -}}
+    {{- $padding := partial "utilities/GetPadding.html" -}}
+    {{- $pageTitle := .Page.Title }}
+    {{ $pageTitle = partial "utilities/TitleCase.html" (dict "page" .Page "text" $pageTitle) }}
+        <div class="container-xxl flex-fill {{ partial "utilities/PaddingClasses.html" (dict "padding" $padding "axis" "y") }} {{ partial "utilities/PaddingClasses.html" (dict "padding" $padding "axis" "x") }} px-xxl-0">
+            <div class="row row-cols-1 row-cols-{{ $breakpoint.current }}-2 row-cols-{{ $breakpoint.next }}-3">
+                <div class="col col-{{ $breakpoint.next }}-2 d-none d-{{ $breakpoint.next }}-block">
+                </div>
+                <div class="container col-12 col-{{ $breakpoint.current }}-9 col-{{ $breakpoint.next }}-8 mb-5">
+                    {{- if ne $layout "featured" -}}
+                        {{ if and (not $page.IsHome) site.Params.navigation.breadcrumb }}
+                            <div>{{ partial "assets/breadcrumb.html" (dict "page" $page) }}</div>
+                        {{ end -}}
+                    {{- end -}}
+
+                    {{ if eq .Kind "taxonomy" }}
+                        <h1 class="display-4 mt-5 mb-3">{{ $pageTitle }}</mark></h1>
+                        {{- partial "page/taxonomy-list.html" . -}}
+                    {{ else }}
+                        <h1 class="display-4 mt-5 mb-3">Pages with tag: <mark>{{ $pageTitle }}</mark></h1>
+                        {{- partial "page/taxonomy-tag-nodates.html" . -}}
+                    {{ end }}
+                </div>
+                <div class="col col-{{ $breakpoint.current }}-3 col-{{ $breakpoint.next }}-2 d-none d-{{ $breakpoint.current }}-block">
+                </div>
+            </div>
+        </div>
+{{ end }}

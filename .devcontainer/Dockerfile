@@ -1,13 +1,14 @@
-# Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
-ARG NODE_VERSION=22
+# Update the NODE_VERSION arg to pick a Node.js major version.
+ARG NODE_VERSION=26-bookworm
 FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo_extended
 # VERSION can be either 'latest' or a specific version number
-ARG VERSION=0.165.0
+ARG VERSION=0.169.0
+ARG DART_SASS_VERSION=1.98.0
 
-# Download Hugo
+# Download Hugo and Dart Sass
 RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
     rm -rf /var/lib/apt/lists/* && \
     case ${VERSION} in \
@@ -16,15 +17,24 @@ RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
     esac && \
     echo ${VERSION} && \
     case $(uname -m) in \
-    aarch64) \
-    export ARCH=ARM64 ;; \
+    aarch64|arm64) \
+    export HUGO_ARCH=arm64; export SASS_ARCH=linux-arm64 ;; \
     *) \
-    export ARCH=64bit ;; \
+    export HUGO_ARCH=64bit; export SASS_ARCH=linux-x64 ;; \
     esac && \
-    echo ${ARCH} && \
-    wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
+    echo ${HUGO_ARCH} && \
+    if [ "${HUGO_ARCH}" = "arm64" ]; then \
+      HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_linux-${HUGO_ARCH}.tar.gz; \
+    else \
+      HUGO_URL=https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${HUGO_ARCH}.tar.gz; \
+    fi && \
+    wget -O ${VERSION}.tar.gz "${HUGO_URL}" && \
     tar xf ${VERSION}.tar.gz && \
-    mv hugo /usr/bin/hugo
+    mv hugo /usr/bin/hugo && \
+    rm ${VERSION}.tar.gz && \
+    curl -fsSL "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-${SASS_ARCH}.tar.gz" \
+      | tar -xz -C /opt && \
+    ln -s /opt/dart-sass/sass /usr/local/bin/sass
 
 # Hugo dev server port
 EXPOSE 1313

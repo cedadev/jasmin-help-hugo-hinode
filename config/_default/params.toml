@@ -3,25 +3,26 @@
     description = "Help documentation for JASMIN, the UK's environmental data analysis facility"
     enableLanguageSelectionStorage = false
     canonifyAssetsURLs = false
+    endorse = true
     footerBelowFold = true
     loading = "lazy"
+    breakpoint = "md"
     titleCase = false # keep this false to avoid issues with inline code in headings
-    [main.padding]
-        x = 1
-        y = 1
+    #[main.padding]
+    #    x = 1
+    #    y = 1
+    [main.colorMode]
+        enabled = true
+        modes = ["light", "dark"]
+        toggle = false
+    [main.internalLinks]
+        validate = true
+        pretty = false
     [main.externalLinks]
         cue = true
-        tab = true
-    #[main.build]
-    #    transpiler = "dartsass"
-    #    silenceDeprecations = true
-    #endorse = true
-    #breakpoint = "md"
+        tab = false
     [main.build]
-        transpiler = "libsass"
-    [main.colorMode]
-        modes = ["light", "dark"]
-        toggle = false # setting seems wrong way round!
+        transpiler = "dartsass"
 
 [debugging]
     showJS = false
@@ -29,9 +30,7 @@
     purgeHTMLComments = true
 
 [docs]
-    #basePath = "_vendor/github.com/gethinode/hinode"
     github = "https://github.com/cedadev/jasmin-help-hugo-hinode"
-    #release = "https://github.com/gethinode/hinode/releases/tag/"
 
 [home]
     sections = ["docs", "guides", "training"]
@@ -46,16 +45,17 @@
 
 [navigation]
     anchor = true
-    logo = "/img/logos/jasmin-logo.svg" # store -light and -dark variants "/img/logo_var.svg#logo"
+    logo = "img/logos/jasmin-logo.svg" # store -light and -dark variants "/img/logo_var.svg#logo"
+    logo-mode = false
     logo-height = 40 # now a built-in param (changed name) to control size of logo in layouts/partials/assets/navbar.html
     color = "success"
     fixed = true
     #offset = "5em"
     #overlay = false
     #overlayMode = "dark"
-    [search]
-        search.enabled = true
-        search.modal = true
+    [navigation.search]
+        enabled = true
+        modal = true
     breadcrumb = true
     toc = true
     sidebar = true
@@ -67,6 +67,19 @@
     [navigation.padding]
         x = 1
         y = 4
+
+#[home]
+#    sections = ["docs", "guides", "training"]
+#    fullCover = false
+#    centerHeadline = false
+#    style = "" # "gradient-featured"
+#    #[home.feature] # new
+#    #    orientation = "stacked"
+#    #    color = ""
+#    #    width = 6
+#    #    align = "start"
+
+
 
 [messages]
     placement = "bottom-right"
@@ -155,7 +168,7 @@
     #themeFontPath = "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" # external path
     themeFontPath = "/fonts" # local path
     fontSizeBase = "1rem"
-    #purge = false
+    purge = false
 
 [schema]
     type = "Organization"
@@ -237,14 +250,12 @@
 
 [statusData]
     # URL for publicly-shared CSV view of Google Sheet with CEDA status updates
-    "sourceURL" = "https://raw.githubusercontent.com/cedadev/ceda-status/main/status.json"
-
-[beacon]
-    html = "<p>Beacon</p><script src=\"/static/js/beacon.js\" type=\"text/javascript\">"
-
-[videos]
-    [videos.youtube]
-        host = "youtube"
+    #"sourceURL" = "https://cedadev.github.io/ceda-status/status.json"
+    #"sourceURL" = "http://127.0.0.1:8080/status.json"
+    "sourceURL" = "https://cedadev.github.io/ceda-status/status.json"
+    #"sourceURL" = "https://raw.githubusercontent.com/mjpritchard/mjp-status/refs/heads/main/status.json"
+    # https://stackoverflow.com/a/25373840/20939086
+    "viewURL" = "https://github.com/cedadev/ceda-status/blob/main/status.json"
 
 [modules.GoogleAnalytics]
   integration = "core" 

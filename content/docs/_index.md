@@ -13,8 +13,8 @@ content_blocks:
       section: docs
       reverse: false
       sort: weight
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More docs
       link: /docs

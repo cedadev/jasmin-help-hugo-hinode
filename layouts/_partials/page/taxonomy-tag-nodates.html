@@ -1,0 +1,15 @@
+{{- $breakpoint := partialCached "utilities/GetBreakpoint.html" site -}}
+{{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
+{{ $.Scratch.Set "lastYear" ""}}
+
+{{ range .Pages.ByTitle }}
+    {{- $page := . -}}
+    {{- $layout := $page.Params.layout -}}
+    {{- $title := .Title }}
+    {{ $title = partial "utilities/TitleCase.html" (dict "page" $.Page "text" $title) }}
+    <div class="row mt-2">
+        <div class="d-none d-{{ $breakpoint.prev }}-block col-{{ $breakpoint.prev }}-3 mt-auto text-start">
+            <a href="{{ .Page.RelPermalink }}">{{ if .Draft }}{{ T "draft" | upper }}: {{ end }}{{ $title | .Page.RenderString }}</a>
+        </div>
+    </div>
+{{ end }}

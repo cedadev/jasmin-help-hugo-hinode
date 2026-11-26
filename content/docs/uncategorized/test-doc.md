@@ -26,7 +26,7 @@ As an example, the following shortcode displays a responsive table that uses adv
 
 <!-- markdownlint-disable MD037 MD058 -->
 {{< example lang="markdown" >}}
-{{</* table sortable="true" paging="true" searchable="true" pagingOptionPerPage=5 */>}}
+{{</* table sortable="true" searchable="true" paginate="true" pagination=5 */>}}
 |  #  | Heading |
 |-----|---------|
 |  1. | Item 1  |

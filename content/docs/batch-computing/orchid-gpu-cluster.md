@@ -4,7 +4,6 @@ aliases:
 - /article/4951-gpu-testing
 description: Details of JASMIN's GPU cluster, ORCHID
 title: Orchid GPU cluster
-type: docs
 weight: 70
 ---
 

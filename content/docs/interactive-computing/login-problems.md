@@ -11,12 +11,7 @@ weight: 40
 
 Having problems connecting to a host on JASMIN? Details of how to login to
 JASMIN can be found [here]({{% ref "how-to-login" %}}), but this article may help to
-resolve login problems. It provides information for the following issues:
-
-- Unable to login to a `login` server
-- Can login to `login` server but can't login to a subsequent server
-- `ssh-add` command gives error: "Could not open a connection to your authentication agent."
-- Errors when trying to connect with MobaXterm
+resolve login problems.
 
 ## Unable to login to login server
 
@@ -24,7 +19,7 @@ If you are unable to login to the login service on `login.jasmin.ac.uk` then
 look carefully at any error messages displayed as this can help diagnose what
 is wrong:
 
-**1) "Connection reset by peer"**
+### "Connection reset by peer"
 
 This suggests a problem with the configuration of your machine or local
 network. We no longer restrict access to JASMIN by network domain, and no longer
@@ -32,7 +27,13 @@ require registration of non-`*.ac.uk` domains, so you should be able to connect 
 anywhere. If your local admin team is not able to resolve the issue, please
 contact JASMIN support.
 
-**2) "Permission denied"**
+### "Connection closed by x.x.x.x port xx"
+
+You might get this error if there is a problem with the server you're trying to connect to, e.g. the server is overloaded. Please try connecting again or via another server.
+
+You may also get this error if the connection times out, which can happen on a slow network connection or if you are physically far from JASMIN servers. You can extend this timeout in your SSH config by adding the `ConnectTimeout` option followed by a number of seconds.
+
+### "Permission denied (publickey,gssapi-keyex,gssapi-with-mic)"
 
 Here, the most likely cause is that the SSH key which your client is
 presenting does not match the one in your JASMIN account. This can be for a
@@ -49,12 +50,10 @@ number of reasons:
   * **You don't have your key presented or loaded in your local authentication agent (e.g. ssh-agent).**
     * Check that you are following the method suitable for your operating system
       * Please see the [presenting your SSH key]({{%ref "present-ssh-key" %}}) article for the recommended methods depending on what type of machine you are using.
-    * Note that connections using the [NoMachine client]({{% ref "graphical-linux-desktop-access-using-nx" %}}) don't require an authentication agent: this can be a good alternative if you're having problems.
   * **You have not yet been granted `jasmin-login` access or your access has expired.**
-    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that `Login Services : jasmin-login` is listed with a green box and a tick like this: {{<icon fas square-check text-success>}} `USER`. If not, then you either need to [apply for or extend your `jasmin-login` access](https://accounts.jasmin.ac.uk/account/login/?next=/services/login_services/jasmin-login/). If you have already done this recently, you may simply need to wait for it to be approved. Note, that if you have been granted access to a group workspace, you still need `jasmin-login` access in order to connect to JASMIN machines.
+    * To check, go to [My services](https://accounts.jasmin.ac.uk/services/my_services/?page=1&active=1&_apply_filters=1) on the JASMIN accounts portal and check that `Login Services : jasmin-login` is listed with a green box and a tick like this: {{<icon fas square-check text-success>}} `USER`. If not, then you either need to [apply for or extend your `jasmin-login` access](https://accounts.jasmin.ac.uk/services/login_services/jasmin-login/). If you have already done this recently, you may simply need to wait for it to be approved. Note, that if you have been granted access to a group workspace, you still need `jasmin-login` access in order to connect to JASMIN machines.
 
-**3) "The authenticity of host 'nnnn (<ip address>)' can't be established."
-or "key for host nnnn has changed"**
+### "The authenticity of host 'nnnn (x.x.x.x)' can't be established." or "key for host nnnn has changed"
 
 Your local computer stores a list of all the other SSH hosts which it has
 successfully connected to in the past. If you use an intermediate host like a
@@ -167,7 +166,7 @@ access role via the {{<link "jasmin_accounts_portal">}}JASMIN accounts portal{{<
 Occasionally there may be problems with the host (machine) which you are
 trying to connect to. The sci servers (particularly `sci-ph-*`, the physical/high-memory
 hosts) experience very high usage loads and occasionally run out of
-resources. This may prevent you from logging in. In some circumstances ask you
+resources. This may prevent you from logging in. In some circumstances they may ask you
 for a password: this is normally a sign that something is wrong with the
 machine, since passwords are not used for SSH logins on JASMIN, so there is
 no point in trying to enter your account password or SSH passphrase at this

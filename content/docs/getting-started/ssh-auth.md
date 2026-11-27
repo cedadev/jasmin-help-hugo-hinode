@@ -1,7 +1,6 @@
 ---
 aliases: 
  - /article/166-ssh-auth
- - /docs/
 description: SSH public key authentication
 slug: ssh-auth
 title: SSH public key authentication

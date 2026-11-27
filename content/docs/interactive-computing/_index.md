@@ -2,7 +2,6 @@
 author: Matt Pritchard
 title: Interactive computing
 description: How to use interactive computing resources
-type: docs
 icon: fas desktop
 weight: 20
 aliases: /category/108-interactive-computing
@@ -18,8 +17,8 @@ content_blocks:
       section: interactive-computing
       reverse: false
       sort: title
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More docs
     padding: 3

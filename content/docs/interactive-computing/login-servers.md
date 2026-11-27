@@ -80,38 +80,38 @@ The connection via a login server can be done either with 2 hops, or using a log
 ssh -A fred@login.jasmin.ac.uk
 {{</command>}}
 {{<command user="fred" host="login-NN">}}
-ssh fred@sci-vm-01.jasmin.ac.uk
+ssh fred@sci-vm-02.jasmin.ac.uk
 ## no -A needed for this step, if no onward connections from sci server
 {{</command>}}
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 ## now on sci server
 {{</command>}}
 
 - Jump Host method:
 
 {{<command user="user" host="localhost">}}
-ssh -A fred@sci-vm-01.jasmin.ac.uk -J fred@login.jasmin.ac.uk
+ssh -A fred@sci-vm-02.jasmin.ac.uk -J fred@login.jasmin.ac.uk
 {{</command>}}
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 ## now on sci server
 {{</command>}}
 
 Alternatively, the same effect can be achieved with a `ProxyJump` directive in your local `~/.ssh/config` file:
 
 ```config
-Host Sci1ViaLogin
+Host SciViaLogin
   User fred
   ForwardAgent yes
-  HostName sci-vm-01.jasmin.ac.uk
+  HostName sci-vm-02.jasmin.ac.uk
   ProxyJump fred@login.jasmin.ac.uk
 ```
 
-You could then simply connect to `Sci1ViaLogin`:
+You could then simply connect to `SciViaLogin`:
 
 {{<command user="user" host="localhost">}}
-ssh Sci1ViaLogin
+ssh SciViaLogin
 {{</command>}}
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 ## now on sci server
 {{</command>}}
 
@@ -129,13 +129,13 @@ Host *.jasmin.ac.uk !login*.jasmin.ac.uk !xfer*.jasmin.ac.uk !nx*.jasmin.ac.uk
 Then you when you connect to any JASMIN host (other than a login or transfer host), it will go via `login.jasmin.ac.uk`:
 
 {{<command user="user" host="localhost">}}
-ssh sci-vm-01.jasmin.ac.uk
+ssh sci-vm-02.jasmin.ac.uk
 {{</command>}}
-{{<command user="fred" host="sci-vm-01">}}
+{{<command user="fred" host="sci-vm-02">}}
 ## now on sci server
 {{</command>}}
 
-If on your local machine you have also set up a domain search path for hostname lookups that includes `jasmin.ac.uk` so that you can use short hostnames e.g. `ssh sci-vm-01`, then you will also need to add the following lines so that ssh converts these to full hostnames -- otherwise the above wildcard will not match when you do this.
+If on your local machine you have also set up a domain search path for hostname lookups that includes `jasmin.ac.uk` so that you can use short hostnames e.g. `ssh sci-vm-02`, then you will also need to add the following lines so that ssh converts these to full hostnames -- otherwise the above wildcard will not match when you do this.
 
 ```config
 CanonicalizeHostname yes
@@ -149,10 +149,10 @@ An alternative is to include a line specifying
 the location of your key, so you'll then be prompted for your passphrase whenever you connect:
 
 ```config
-Host Sci1ViaLogin
+Host SciViaLogin
   User fred
   ForwardAgent yes
-  HostName sci-vm-01.jasmin.ac.uk
+  HostName sci-vm-02.jasmin.ac.uk
   ProxyJump fred@login.jasmin.ac.uk
   IdentityFile ~/.ssh/id_ecdsa_jasmin
 ```

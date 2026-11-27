@@ -1,25 +1,68 @@
 title = "JASMIN Help Site"
-copyright = "Copyright © 2025 Science and Technology Facilities Council."
+copyright = "Copyright © 2026 Science and Technology Facilities Council."
 enableGitInfo = true #true #for production
 
 # additional settings
-baseURL = 'https://help.jasmin.ac.uk' # temp value until we have a domain
-canonifyURLs = false
+baseURL = 'https://help.jasmin.ac.uk' # change this for testing elsewhere
+canonifyURLs = false # true if deployed to a subdirectory, e.g. https://help.jasmin.ac.uk/hugo-hinode/
 enableEmoji = true
 enableRobotsTXT = true
 enableInlineShortcodes = true
 summaryLength = 20
-Parser.wrapStandAloneImageWithinParagraph = false # see https://gethinode.com/docs/content/images-and-figures/
+#Parser.wrapStandAloneImageWithinParagraph = false # see https://gethinode.com/docs/content/images-and-figures/
 
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
-ignoreLogs = ["error-remote-getjson"] # , "warn-invalid-arguments"
+ignoreErrors = ["error-remote-getjson", "warn-missing-page-argument"] # , "warn-invalid-arguments"
+#ignoreLogs = ['warn-missing-page-argument']
 
 timeout = "600s"
 
 locale = "en-gb"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+
+[outputFormats]
+  [outputFormats.server]
+    mediaType = "application/toml"
+    baseName = "server"
+    isPlainText = true
+    notAlternative = true
+    permalinkable = true
+    root = true
+  [outputFormats.XML]
+    isPlainText = false
+    mediaType = "application/xml"
+    isHtml = false
+    noUgly = true
+    permalinkable = false
+    name = "xml"
+  [outputFormats.llmstxt]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+    rel = "alternate"
+    root = true
+  [outputFormats.markdown]
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+    isHTML = false
+    noUgly = false
+    rel = "alternate"
+  # Optional: add llmscomponents for Hinode documentation sites
+  #[outputFormats.llmscomponents]
+  #  mediaType = "application/json"
+  #  baseName = "llms-components"
+  #  isPlainText = true
+  #  notAlternative = true
+  #  root = true
+
+[outputs]
+  home = ["HTML", "RSS", "server"] #, "llmstxt", "markdown"]   # add "llmscomponents" for documentation sites
+  #page = ["HTML", "markdown"]
+  #section = ["HTML", "markdown"]
 
 [build]
   writeStats = true
@@ -51,46 +94,47 @@ defaultContentLanguageInSubdir = false
   [services.googleAnalytics]
     ID = "G-JJZZ5F2KN4"
 
-[outputFormats]
-  [outputFormats.server]
-    mediaType = "application/toml"
-    baseName = "server"
-    isPlainText = true
-    notAlternative = true
-    permalinkable = true
-    root = true
-  [outputFormats.XML]
-    isPlainText = false
-    mediaType = "application/xml"
-    isHtml = false
-    noUgly = true
-    permalinkable = false
-    name = "xml"
+[minify]
+  [minify.tdewolff.js]
+    precision = 0
+    version = 2022
+  [minify.tdewolff.html]
+    keepWhitespace = true
 
-[outputs]
-  home = ["HTML", "RSS", "server"]
-
-[minify] # see https://discourse.gohugo.io/t/minify-config-tutorials/28179/5
-  disableHTML = false
-  disableJS = true
-  disableJSON = false
-  disableSVG = false
-  disableXML = false
-  minifyOutput = true
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepWhitespace = true
-    [minify.tdewolff.js]
-      keepVarNames = true
-      precision = 0
-      keepWhitespace = true
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.158.0"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.imports]]
+    path = "github.com/gethinode/mod-blocks/v2"
+  [[module.imports]]
+    path = "github.com/gethinode/hinode/v3"
+  [[module.imports]]
+    path = "github.com/gethinode/mod-llm/v2"
 
 [segments]
   [segments.headers]
     [[segments.headers.includes]]
        kind = '{home}'
        output = '{server}'
-
-[module]
-  [[module.imports]]
-    path = "github.com/gethinode/hinode"

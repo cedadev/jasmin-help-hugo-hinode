@@ -106,7 +106,7 @@ This can happen when:
 
 - machines are re-installed (as part of maintenance by the JASMIN team)
 - when you modify your `~/.ssh/known_hosts` file  
-- when you access a "known" host but via a different name (e.g. `sci-vm-01` vs `sci-vm-01.jasmin.ac.uk`)
+- when you access a "known" host but via a different name (e.g. `sci-vm-02` vs `sci-vm-02.jasmin.ac.uk`)
 
 Message 1 means that you don't have an entry for that host in your
 `~/.ssh/known_hosts` file. In most cases, you can safely reply "yes" and the
@@ -114,8 +114,8 @@ SSH connection should proceed as normal from then on.
 
 If you get message 2, and are confident that the change is for a legitimate
 reason, the solution is to modify your `~/.ssh/known_hosts` file, removing the
-entries for that host (there may be more than one, as above for `sci1` vs
-`sci-vm-01.jasmin.ac.uk`) by deleting those lines. Next time you try and connect,
+entries for that host (there may be more than one, as above for `sci-vm-02` vs
+`sci-vm-02.jasmin.ac.uk`) by deleting those lines. Next time you try and connect,
 you will get message 1, but can reply "yes" and the SSH connection should
 proceed as normal.
 
@@ -164,8 +164,8 @@ access role via the {{<link "jasmin_accounts_portal">}}JASMIN accounts portal{{<
 **3) There is a problem with the host you are trying to connect to.**
 
 Occasionally there may be problems with the host (machine) which you are
-trying to connect to. The sci servers (particularly physical/high-memory hosts
-`sci-ph-[12]`) experience very high usage loads and occasionally run out of
+trying to connect to. The sci servers (particularly `sci-ph-*`, the physical/high-memory
+hosts) experience very high usage loads and occasionally run out of
 resources. This may prevent you from logging in. In some circumstances they may ask you
 for a password: this is normally a sign that something is wrong with the
 machine, since passwords are not used for SSH logins on JASMIN, so there is

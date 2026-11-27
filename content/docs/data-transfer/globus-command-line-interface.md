@@ -5,10 +5,6 @@ slug: globus-command-line-interface
 title: 'Globus Command-Line Interface'
 ---
 
-{{<alert alert-type="info">}}
-Updated for new JASMIN Default Collection (replaces previous JASMIN Globus Endpoint)
-{{</alert>}}
-
 Please read {{<link "globus-transfers-with-jasmin"/>}} first for a wider introduction to Globus on JASMIN.
 
 This article describes
@@ -169,7 +165,7 @@ globus  --help
 
 ## Examples
 
-  1. **Find an endpoint (aka collection)**
+  ### 1. Find an endpoint (aka collection)
 
 We will use the `globus endpoint search` subcommand. Find help on the
 particular options for that with
@@ -216,10 +212,11 @@ globus endpoint search "tutorial"
 (out)31ce9ba0-176d-45a5-add3-f37d233ba47d | 6df1b656-c953-40a3-91a9-e9e8ad5173ea@clients.auth.globus.org | Globus Tutorial Collection 2
 {{</command>}}
 
-The 2 globus tutorial collections actually "see" the same filesystem, so we'll
-just use the first one.
+With both of these tutorial collections, your default location is the same automcatically-assigned home directory, e.g. `/home/u_jgg6svmke5gcxnlyymlopdfebu/`. This is used for demonstration and tutorials only, so it has limited capacity and data may be deleted by Globus at any point in time.
 
-For convenience, let's set environment variables representing the ID of this collection:
+To enable transfer between the 2 collections, you could first use the example files which exist at the path `/home/share/godata`.
+
+For convenience, let's set environment variables representing the ID of the first collection:
 
 {{<command>}}
 export c1=6c54cade-bde5-45c1-bdea-f4bd71dba2cc
@@ -241,8 +238,22 @@ globus ls $c1
 
 Copy & paste the command it gives you (don't copy the one above) and run it, which should open a web browser window. Follow the instructions which should complete the process, then return to your terminal session.
 
+Try the same with Tutorial Collection 2, but this time specify the path of the example files:
+
+First, set an environment variable corresponding to the ID of "Globus Tutorial Collection 2":
+{{<command>}}
+export c2=31ce9ba0-176d-45a5-add3-f37d233ba47d
+{{</command>}}
+
+{{<command>}}
+globus ls $c2:/home/share/godata/
+(out) file1.txt
+(out) file2.txt
+(out) file3.txt
+{{</command>}}
+
 Now let's find another collection, this time we'll try one of ESnet's Anonymous read-only test Data Transfer Nodes.
-These are available from any research and education network and ideal for performance testing:
+These are available from any research and education network (but probably not from your home broadband) but are useful for performance testing.
 
 {{<command>}}
 globus endpoint search "ESnet DTN Anonymous"
@@ -296,7 +307,7 @@ order to use them. This makes demonstrating basic functionality simpler, but
 we'll look at how to use one that does, later.
 {{</alert>}}
 
-  2. **Listing files at a path on an collection**
+  ### 2. Listing files at a path on an collection
 
 Use the `globus ls` command to list the contents of the `$testdtn` endpoint,
 at the path `/`. Note the `:` separator if we're specifying a path.
@@ -328,7 +339,7 @@ globus ls $testdtn:/
 These are files and directories containing dummy data which can be used for
 test purposes.
 
-  3. **Copy a file from one endpoint to another**
+  ### 3. Copy a file from one endpoint to another
 
 Let's transfer the file `1M.dat` from the `testdtn` endpoint to `c1`:
 
@@ -398,7 +409,7 @@ globus ls $c1:/~/mydata/
 (out)    1M.dat
 {{</command>}}
 
-  4. **Recursively copy a directory and its contents, from one endpoint to another**
+  ### 4. Recursively copy a directory and its contents, from one endpoint to another
 
 Now Let's copy a directory from the `$testdtn` collection which contains some small
 files, to our destination endpoint `$c1` (The Globus tutorial collections only
@@ -450,7 +461,7 @@ globus ls $c1:/~/test-data
 (out)a-a-5KB.dat
 {{</command>}}
 
-  5. **Sync a source directory to a target (repeatable)**
+  ### 5. Sync a source directory to a target (repeatable)
 
 We could now repeat the copying of the source data, but this time using the
 `-s` or `--sync-level exists` command so that we only copy the data that is
@@ -508,7 +519,9 @@ This task could be repeated in a shell script, cron job or even using the
 Globus timer functionality, for either a source or destination directory that
 is expected to change.
 
-  6. **Interact with a collection that requires authentication**
+  ### 6. Interact with a collection that requires authentication
+
+  **Or, how to interact with your JASMIN home directory**
 
 Most Globus Connect Server endpoints are configured to require some form of authentication & authorization process. 
 In the case of the JASMIN Default Collection, you link your Globus identity to your JASMIN identity.
@@ -543,6 +556,8 @@ globus ls $jdc:/~/
 (out)...
 {{</command>}}
 
+You can now perform transfers to/from your home directory (or any other location on JASMIN that you have access to) using `globus transfer` commands as above or as per the {{<link "https://docs.globus.org/cli/reference/transfer/">}}Globus transfer CLI reference{{</link>}}
+
 The authentication via your JASMIN account lasts for 30 days, so you can run and re-run transfers during that period without
 needing to repeat the process (hence without any human interaction, if you have scheduled/automated transfers, see below).
 
@@ -551,15 +566,38 @@ If this needs to be renewed, then:
 the simple way to do this is to either:
 
 - (manually) visit the Globus web interface and access the JASMIN Default Collection again
-- (manuall) use the CLI to list the collection again
+- (manually) use the CLI to list the collection again
 
 In either case, if the authentication has timed out, you will be prompted to follow instructions to renew it,
 then the action (listing the directory) should complete successfully.
 
-There are ways to do use a "refresh token" programatically to renew the authentication. Watch this space for 
-details of how to do that (or f)
+If you get an message like the following, please see [Troubleshooting](#cli-troubleshooting):
 
-### Automation
+{{<command>}}
+The collection you are trying to access data on requires you to grant consent for the Globus CLI to access it.
+(out)
+(out)Please run:
+(out)
+(out)  globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+(out)
+(out)to login with the required scopes.
+{{</command>}}
+
+run the suggested command, and follow the steps in the browser window that will open.
+
+{{<command>}}
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+(out)You are running 'globus session consent', which should automatically open a browser window for you to authenticate with specific identities.
+(out)If this fails or you experience difficulty, try 'globus session consent --no-local-server'
+(out)---
+(out)
+(out)You have successfully updated your CLI session.
+(out)
+{{</command>}}
+
+Once the steps in the browser window have been completed successfully, you can close the browser window and try the `globus ls` command again.
+
+## Automation
 
 The functionality demonstrated above can be combined into scripts which can perform
 useful, repeatable tasks such as:
@@ -650,6 +688,7 @@ You could then consider how to repeat the task automatically. For example:
   - transferring the output of that analysis to elsewhere, and cleaning up
 
 ## CLI Troubleshooting
+
 ### Missing data_access consent
 
 If you get an error like the following:
@@ -674,3 +713,15 @@ globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https
 {{</command>}}
 
 This should take you through the steps to add the required consent to your session.
+
+Another approach is to remove your `~/.globus` directory to reset your local environment
+
+{{<command>}}
+globus logout
+rm -rf ~/.globus
+globus login
+globus session consent 'urn:globus:auth:scope:transfer.api.globus.org:all[*https://auth.globus.org/scopes/a2f53b7f-1b4e-4dce-9b7c-349ae760fee0/data_access]'
+## (repeat for any other collection IDs that you need to interact with)
+globus session show
+globus ls $jdc:/~/
+{{</command>}}

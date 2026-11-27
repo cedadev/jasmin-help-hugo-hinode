@@ -19,7 +19,7 @@ do as follows:
 
 Check which versions are available:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module avail idl
 (out)
 (out)-------------------------------------------- /apps/jasmin/modulefiles -----------------------------------------------
@@ -32,7 +32,7 @@ module avail idl
 The current default version is labelled with `(D)` and can be loaded using just `module load idl`. Alternatively, load a specific version by
 adding its version string to the command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load idl ## or idl/8.9 to specify the version
 idl
 (out)IDL 8.9.0 (linux x86_64 m64).
@@ -52,7 +52,7 @@ exit
 
 For help on the `idl` module you can type the following:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module help idl
 (out)----------- Module Specific Help for 'idl/8.9' --------------------
 (out)         Adds IDL 8.9 to your environment variables,  
@@ -146,7 +146,7 @@ save, /routines, file='foo.sav'
 
 4\. To run the program, using a run-time licence only:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 idl -rt=foo.sav 
 (out)IDL Version 8.5 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
 (out)Installation number: 406672.
@@ -196,7 +196,7 @@ argsarray = command_line_args(count = nparams)
 
 Call the code with `-args` flag:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 idl -rt=foo.sav -args 10 20 30
 {{</command>}}
 
@@ -206,7 +206,7 @@ idl -rt=foo.sav -args 10 20 30
 
 It is possible to call IDL from Python using the `idlpy` library as illustrated in the following example:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 module load idl
 python

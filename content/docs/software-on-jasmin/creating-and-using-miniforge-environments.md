@@ -331,8 +331,7 @@ If you are creating a conda environment for very short-term testing only, you
 may find best performance using `/tmp` due to the large number of files.
 However, you may need several gigabytes, which is too big for the `/tmp` areas
 on most of the `sci` machines at time of writing, although the physical
-sci machines (currently `sci-ph-01` and `sci-ph-02` for Rocky 9)
-have larger `/tmp` areas.
+sci machines have larger `/tmp` areas.
 Choose an appropriate machine, make use of the `df`
 command to check available disk space, and ensure that you do not fill up `/tmp`
 as this would impact negatively on other users.

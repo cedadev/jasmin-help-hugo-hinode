@@ -1,5 +1,5 @@
 [en]
-    languageName = "English"
+    label = "English"
     contentDir = "content"
     weight = 1
     [en.params.head]
@@ -8,10 +8,4 @@
         title = "Follow us" 
         caption = "Social media & development"
     [en.params.footer]
-    license = "<a href='https://gethinode.com' class='link-secondary' target='_blank' rel='noopener noreferrer'>Hinode</a> theme for <a href='https://gohugo.io' class='link-secondary' target='_blank' rel='noopener noreferrer'>Hugo</a> licensed under Creative Commons (<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' class='link-secondary' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a>)."
-    [en.params.sections.news]
-        reference = "More News"
-    [en.params.sections.events]
-        reference = "More Events"
-    [en.params.sections.projects]
-        reference = "More Projects"
+        license = "<a href='https://gethinode.com' class='link-secondary' target='_blank' rel='noopener noreferrer'>Hinode</a> theme for <a href='https://gohugo.io' class='link-secondary' target='_blank' rel='noopener noreferrer'>Hugo</a> licensed under Creative Commons (<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' class='link-secondary' target='_blank' rel='noopener noreferrer'>CC BY-NC-SA 4.0</a>)."

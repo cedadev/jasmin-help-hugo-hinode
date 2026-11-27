@@ -77,13 +77,13 @@ ESMValTool has the following features:
 The latest version of ESMValTool is available for users on JASMIN and can be
 accessed via a standard module:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 module load esmvaltool
 {{</command>}}
 
 To run a yaml-formatted recipe:
 
-{{<command user="user" host="sci1">}}
+{{<command user="user" host="sci-vm-02">}}
 esmvaltool run recipe.yml
 {{</command>}}
 

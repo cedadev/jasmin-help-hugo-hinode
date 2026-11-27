@@ -11,7 +11,7 @@ please first consult all relevant documentation, then if needed, contact our Hel
 using the help beacon below, but please include the following
 information with your initial query:
 
-- What is the full name of the JASMIN server you were using? ( e.g. `sci-vm-01.jasmin.ac.uk`)
+- What is the full name of the JASMIN server you were using? ( e.g. `sci-vm-02.jasmin.ac.uk`)
 - The full path of your current working directory e.g. `/gws/nopw/j04/mygws`
 - Date & time that the issue occurred
 - Your JASMIN account username

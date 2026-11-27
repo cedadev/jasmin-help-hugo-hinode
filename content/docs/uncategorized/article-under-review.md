@@ -6,11 +6,14 @@ aliases:
 - /article/4859-centos7-sci-login-xfer-servers
 - /article/3844-copy-service
 - /docs/data-transfer/jasmin-external-connections
-description: Article under review
-slug: article-under-review
-title: Article under review
+- /docs/data-transfer/bbcp
+- /docs/article-under-review
+description: Article under review or removed
+slug: article-under-review-or-removed
+title: Article under review or removed
 ---
 
-The article which you are trying to access has been removed, pending reorganisation of the JASMIN documentation and training materials.
+The article which you are trying to access has been removed. Periodically we update JASMIN documentation and training materials
+to keep them in line with details of current services.
 
 Hopefully you can find what you're looking for in other articles using the search tool or sidebar navigation.

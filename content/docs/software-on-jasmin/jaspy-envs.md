@@ -36,7 +36,7 @@ If you want to get on, you can select a Jaspy environment to "activate". This
 means that once you have run these commands then the various tools and
 libraries will be available in your current session.
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 {{</command>}}
 
@@ -63,15 +63,14 @@ if [[ $(hostname) =~ ^(sci-vm-|cylc|host)[0-9]+\. ]] ; then
     module load jaspy
 fi
 ```
-(Note: this pattern is also valid for the physical sci nodes, because for
-example, `sci-ph-01` is an alias for the `host1000` LOTUS node, which has been
+(Note: this pattern is also valid for the physical sci nodes, because they were LOTUS nodes which have been
 repurposed for interactive use.)
 
 ## Discover which environments are available
 
 You can list the currently available Jaspy environments using:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module avail jaspy
 -------------------------------- /apps/jasmin/modulefiles ----------------------------------
    jaspy/3.10/v20230718    jaspy/3.11/v20240508        snappy/8.0/jaspy-3.7-r20210320
@@ -124,7 +123,7 @@ jasr/4.3/v20240815  |  [List of packages including versions](https://github.com/
 
 The available R environments can be listed with:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module avail jasr
 {{</command>}}
 
@@ -133,21 +132,21 @@ module avail jasr
 Jaspy environments are labelled as "jaspy/<python_version>/<release>". The
 environment is selected and activated using the "module load" command:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy/3.10/v20230718
 {{</command>}}
 
 However, if you wish to get the latest environment for a given Python version
 you can omit the "<release>", as follows:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy/3.10
 {{</command>}}
 
 And if you just want the most up-to-date Python you can even omit the
 `<python_version>`, as follows:
 
-{{<command user="user" host="sci-vm-01">}}
+{{<command user="user" host="sci-vm-02">}}
 module load jaspy
 {{</command>}}
 

@@ -2,7 +2,6 @@
 title: Batch Computing
 description: How to use the LOTUS (CPU) and ORCHID (GPU) clusters for batch processing
 weight: 30
-type: docs
 icon: fas server
 aliases: /category/4889-slurm
 
@@ -16,8 +15,8 @@ content_blocks:
       section: batch-computing
       reverse: false
       sort: weight
-    hide-empty: false
-    header-style: none
+    hide_empty: false
+    header_style: none
     more:
       title: More docs
     padding: 3

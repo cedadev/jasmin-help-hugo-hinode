@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo_extended
 # VERSION can be either 'latest' or a specific version number
-ARG VERSION=0.169.0
+ARG VERSION=0.170.0
 ARG DART_SASS_VERSION=1.98.0
 
 # Download Hugo and Dart Sass

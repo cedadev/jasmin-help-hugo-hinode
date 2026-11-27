@@ -84,6 +84,6 @@
   "overrides": {
     "adm-zip": "^0.6.1",
     "katex": "^0.18.2",
-    "glob": "^8"
+    "glob": "^14"
   }
 }
